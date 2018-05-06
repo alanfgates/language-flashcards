@@ -27,8 +27,8 @@ public class GreekNoun extends Noun {
   }
 
   @Override
-  public void flipOver() {
-    System.out.println(english + " " + gender.name() + " " + declension.name() + " " + number.name());
+  public Enum[] getModifiers() {
+    return new Enum[] {gender, declension, number};
   }
 
   public static GreekNounBuilder builder() {

@@ -39,9 +39,9 @@ public class Flashcard implements Serializable {
     words.get(0).showFront();
     input.readLine();
     for (Word word : words) word.flipOver();
-    System.out.println("Success?");
+    System.out.println("Success?[y]");
     String answer = input.readLine();
-    return answer.length() > 0 && answer.toLowerCase().startsWith("y");
+    return answer.length() == 0 || answer.toLowerCase().startsWith("y");
 
   }
 }

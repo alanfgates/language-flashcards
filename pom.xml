@@ -19,7 +19,7 @@
   <version>1</version>
   <packaging>jar</packaging>
 
-  <name>Lectionary</name>
+  <name>flashcards</name>
   <prerequisites>
     <maven>2.2.1</maven>
   </prerequisites>
@@ -89,7 +89,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>alan.bible.languages.Main</mainClass>
+              <mainClass>com.github.gates.language.flashcards.Main</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

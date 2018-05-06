@@ -39,12 +39,12 @@ public class CardDeck implements Serializable {
   private Deque<Flashcard> cards;
 
   public CardDeck() {
-    Map<Word, Flashcard> m = new HashMap<>();
+    Map<String, Flashcard> m = new HashMap<>();
     for (Word w : GreekBuilder.buildGreek()) {
-      Flashcard f = m.get(w);
+      Flashcard f = m.get(w.other);
       if (f == null) {
         f = new Flashcard(w);
-        m.put(w, f);
+        m.put(w.other, f);
       } else {
         f.addWord(w);
       }

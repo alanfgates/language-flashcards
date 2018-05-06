@@ -37,7 +37,7 @@ public class Main {
     options.addOption("n", "number-to-test", true, "Number of cards to test, defaults to " + TEST_NUMBER);
     options.addOption("s", "shuffle", false,
         "Shuffle the cards.  This puts all of the cards back in the deck");
-    options.addOption("t", "test", true, "Do daily test");
+    options.addOption("t", "test", false, "Do daily test");
 
     try {
       CommandLine cli = new GnuParser().parse(options, args);

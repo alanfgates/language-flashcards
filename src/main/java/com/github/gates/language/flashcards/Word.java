@@ -32,12 +32,15 @@ public abstract class Word implements Serializable {
     System.out.println(other);
   }
 
-  public abstract void flipOver();
-
-  // equals chosen so that two words with the same 'other' will be equal
-  @Override
-  public boolean equals(Object obj) {
-    if (!(obj instanceof Word)) return false;
-    return other.equals(((Word)obj).other);
+  public final void flipOver() {
+    StringBuilder buf = new StringBuilder(english)
+        .append(" ");
+    for (Enum modifier : getModifiers()) {
+      buf.append(modifier.name().toLowerCase())
+          .append(' ');
+    }
+    System.out.println(buf.toString());
   }
+
+  protected abstract Enum[] getModifiers();
 }
