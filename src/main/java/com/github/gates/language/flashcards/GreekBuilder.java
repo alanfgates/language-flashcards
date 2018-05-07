@@ -17,6 +17,8 @@
  */
 package com.github.gates.language.flashcards;
 
+import com.oracle.jrockit.jfr.ValueDefinition;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,9 +31,10 @@ import static com.github.gates.language.flashcards.Person.*;
 import static com.github.gates.language.flashcards.Tense.*;
 import static com.github.gates.language.flashcards.Voice.*;
 
-public class GreekBuilder {
+public class GreekBuilder implements LanguageBuilder {
 
-  public static List<Word> buildGreek() {
+  @Override
+  public List<Word> buildWords() {
     return Arrays.asList(
         // frequency 19904
         new Word("ὁ", "the", MASCULINE, NOMINATIVE, SINGULAR),
@@ -153,7 +156,19 @@ public class GreekBuilder {
         new Word("λύετε", "loosen!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL)
 
     );
+  }
 
-
+  @Override
+  public List<GrammarRule> buildRules() {
+    return Arrays.asList(
+    new GrammarRule("First noun rule:  Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the third."),
+    new GrammarRule("Second noun rule: Every neuter word has the same form in the nominative and accusative."),
+    new GrammarRule("Third noun rule: Almost all neuter words end in α in the nominative and accusative plural."),
+    new GrammarRule("Fourth noun rule: In the dative singular, the ι subscripts if possible."),
+    new GrammarRule("Fifth noun rule: Vowels often change their length ('ablaut’)."),
+    new GrammarRule("Sixth noun rule: In the genitive and dative, the masculine and neuter will always be identical."),
+    new GrammarRule("Seventh noun rule: Square of stops (see below)"),
+    new GrammarRule("Eighth noun rule: A tau cannot stand at the end of the word and will drop off")
+    );
   }
 }

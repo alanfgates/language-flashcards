@@ -19,29 +19,15 @@ package com.github.gates.language.flashcards;
 
 import java.io.Serializable;
 
-public class Word implements Serializable {
-  private final String english;
-  final String other;
-  private final Enum[] modifiers;
+public class GrammarRule implements Serializable {
+  private final String rule;
 
-
-  public Word(String other, String english, Enum... modifiers) {
-    this.english = english;
-    this.other = other;
-    this.modifiers = modifiers;
+  public GrammarRule(String rule) {
+    this.rule = rule;
   }
 
-  public void showFront() {
-    System.out.println(other);
-  }
-
-  public final void flipOver() {
-    StringBuilder buf = new StringBuilder(english)
-        .append(" ");
-    for (Enum modifier : modifiers) {
-      buf.append(modifier.name().toLowerCase())
-          .append(' ');
-    }
-    System.out.println(buf.toString());
+  public void show() {
+    System.out.println("Grammar rule of the day:");
+    System.out.println(rule);
   }
 }

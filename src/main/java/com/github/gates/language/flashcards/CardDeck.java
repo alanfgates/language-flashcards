@@ -33,23 +33,28 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class CardDeck implements Serializable {
 
   private Deque<Flashcard> cards;
+  private List<GrammarRule> rules;
 
   public CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
-    List<Word> words = new ArrayList<>(GreekBuilder.buildGreek());
-    words.addAll(HebrewBuilder.buildHebrew());
-    for (Word w : words) {
-      Flashcard f = m.get(w.other);
-      if (f == null) {
-        f = new Flashcard(w);
-        m.put(w.other, f);
-      } else {
-        f.addWord(w);
+    rules = new ArrayList<>();
+    LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
+    for (LanguageBuilder builder : builders) {
+      for (Word w : builder.buildWords()) {
+        Flashcard f = m.get(w.other);
+        if (f == null) {
+          f = new Flashcard(w);
+          m.put(w.other, f);
+        } else {
+          f.addWord(w);
+        }
       }
+      rules.addAll(builder.buildRules());
     }
     List<Flashcard> tmp = new ArrayList<>(m.values());
     Collections.shuffle(tmp);
@@ -57,8 +62,12 @@ public class CardDeck implements Serializable {
   }
 
   public void daily(int numToTest) throws IOException {
-    List<Flashcard> missed = new ArrayList<>();
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+    rules.get(new Random().nextInt(rules.size())).show();
+    input.readLine();
+
+    List<Flashcard> missed = new ArrayList<>();
     for (int i = 0; i < numToTest && !cards.isEmpty(); i++) {
       Flashcard f = cards.pop();
       if (!f.test(input)) {

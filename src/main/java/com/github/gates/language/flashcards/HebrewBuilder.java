@@ -26,8 +26,9 @@ import static com.github.gates.language.flashcards.Person.*;
 import static com.github.gates.language.flashcards.VerbRoot.*;
 import static com.github.gates.language.flashcards.Tense.*;
 
-public class HebrewBuilder {
-  public static List<Word> buildHebrew() {
+public class HebrewBuilder implements LanguageBuilder {
+  @Override
+  public List<Word> buildWords() {
     return Arrays.asList(
         // 50524
         new Word("וְ", "and"),
@@ -63,6 +64,20 @@ public class HebrewBuilder {
 
         /*
     */
+    );
+  }
+
+  @Override
+  public List<GrammarRule> buildRules() {
+    return Arrays.asList(
+        new GrammarRule("אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
+        new GrammarRule("        x  a-class x i-class x i-class x u-class x u-class\n" +
+                        "----------------------------------------------------------\n" +
+                        "        x  a       x   e     x  i      x   o     x  u     \n" +
+                        "----------------------------------------------------------\n" +
+                        "long    x  בָּ       x   בֵּ     x         x   בֹּ     x        \n" +
+                        "short   x  בַּ       x   בֶּ     x  בִּ      x   בָּ     x  בֻּ     \n" +
+                        "reduced x  בֲּ       x   בֱּ     x         x   בֳּ     x        \n ")
     );
   }
 }

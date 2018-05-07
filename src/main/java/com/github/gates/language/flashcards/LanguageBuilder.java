@@ -17,31 +17,10 @@
  */
 package com.github.gates.language.flashcards;
 
-import java.io.Serializable;
+import java.util.List;
 
-public class Word implements Serializable {
-  private final String english;
-  final String other;
-  private final Enum[] modifiers;
+public interface LanguageBuilder {
 
-
-  public Word(String other, String english, Enum... modifiers) {
-    this.english = english;
-    this.other = other;
-    this.modifiers = modifiers;
-  }
-
-  public void showFront() {
-    System.out.println(other);
-  }
-
-  public final void flipOver() {
-    StringBuilder buf = new StringBuilder(english)
-        .append(" ");
-    for (Enum modifier : modifiers) {
-      buf.append(modifier.name().toLowerCase())
-          .append(' ');
-    }
-    System.out.println(buf.toString());
-  }
+  List<Word> buildWords();
+  List<GrammarRule> buildRules();
 }
