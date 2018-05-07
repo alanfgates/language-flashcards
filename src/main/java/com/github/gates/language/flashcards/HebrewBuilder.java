@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.github.gates.language.flashcards.Gender.*;
+import static com.github.gates.language.flashcards.Mood.*;
 import static com.github.gates.language.flashcards.Number.*;
 import static com.github.gates.language.flashcards.Person.*;
 import static com.github.gates.language.flashcards.VerbRoot.*;
@@ -60,7 +61,29 @@ public class HebrewBuilder implements LanguageBuilder {
         // 15632
         new Word("בְּ", "in, at, with"),
         // 10970
-        new Word("אֶת", "direct object marker")
+        new Word("אֶת", "direct object marker"),
+        // 7586
+        new Word("מִן", "from"),
+        // 5778
+        new Word("עַל", "upon, over, above"),
+        // 5518
+        new Word("אֶל", "to, toward"),
+        // 5518
+        new Word("לֹא", "not, permanent"),
+        // 5503
+        new Word("אֲשֶׁר", "which"),
+        // 5415
+        new Word("כֹּל", "all"),
+        new Word("כָּל", "all"),
+        // 5317
+        new Word("אָמַר", "he said"),
+        // 5040
+        new Word("שׁוֹמֵר", "guarding-Gams", QAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("שׁוֹמֶרֶת", "guarding-Gafs", QAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("שׁוֹמְרִים", "guarding", QAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("שׁוֹמְרִוֹת", "guarding", QAL, PARTICIPLE, FEMININE, PLURAL)
+        // 5040
+        // TODO imperative, cohortative, and jussive, waiting until I get that far in the grammer
 
         /*
     */

@@ -145,8 +145,25 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
-
-        // Start at 2500
+        // 2462
+        new Word("εἰμί", "I am", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("εἶ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("ἐστίν", "s/he is", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("ἐσμέν", "we are", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("ἐστέ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("εἰσίν", "they are", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("εσομαι", "I will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        // 2357
+        new Word("λεγω", "I say", ACTIVE, PRESENT),
+        new Word("ερω", "I will say λεγω", ACTIVE, FUTURE),
+        new Word("ειπον", "I said λεγω", ACTIVE, AORIST),
+        new Word("ειρηκα", "I have said λεγω", ACTIVE, PERFECT),
+        new Word("ειρημαι", "I have been said λεγω", MIDDLE, PERFECT),
+        new Word("ειρημαι", "I have been said λεγω", PASSIVE, PERFECT),
+        new Word("ερρεθην", "I was said λεγω", PASSIVE, AORIST),
+        // 1768
+        new Word("εἰς accusative", "into"),
     /*
 
 
