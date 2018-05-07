@@ -40,7 +40,9 @@ public class CardDeck implements Serializable {
 
   public CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
-    for (Word w : GreekBuilder.buildGreek()) {
+    List<Word> words = new ArrayList<>(GreekBuilder.buildGreek());
+    words.addAll(HebrewBuilder.buildHebrew());
+    for (Word w : words) {
       Flashcard f = m.get(w.other);
       if (f == null) {
         f = new Flashcard(w);

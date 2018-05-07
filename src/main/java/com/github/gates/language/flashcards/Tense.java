@@ -17,13 +17,6 @@
  */
 package com.github.gates.language.flashcards;
 
-public abstract class Noun extends Word {
-  public final Gender gender;
-  public final Number number;
-
-  protected Noun(String english, String other, Gender gender, Number number) {
-    super(english, other);
-    this.gender = gender;
-    this.number = number;
-  }
+public enum Tense {
+  PRESENT, FUTURE, AORIST, SECOND_AORIST, PERFECT, IMPERFECT, PLUPERFECT, JUSSIVE, COHORTATIVE
 }

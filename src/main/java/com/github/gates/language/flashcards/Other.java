@@ -17,30 +17,6 @@
  */
 package com.github.gates.language.flashcards;
 
-import java.io.Serializable;
-
-public class Word implements Serializable {
-  public final String english;
-  public final String other;
-  public final Enum[] modifiers;
-
-  public Word(String other, String english, Enum... modifiers) {
-    this.english = english;
-    this.other = other;
-    this.modifiers = modifiers;
-  }
-
-  public void showFront() {
-    System.out.println(other);
-  }
-
-  public final void flipOver() {
-    StringBuilder buf = new StringBuilder(english)
-        .append(" ");
-    for (Enum modifier : modifiers) {
-      buf.append(modifier.name().toLowerCase())
-          .append(' ');
-    }
-    System.out.println(buf.toString());
-  }
+public enum Other {
+  EMPHATIC
 }
