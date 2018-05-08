@@ -15,8 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
-public enum Other {
-  EMPHATIC
+public enum Declension {
+  NOMINATIVE, VOCATIVE, GENITIVE, DATIVE, ACCUSATIVE
 }

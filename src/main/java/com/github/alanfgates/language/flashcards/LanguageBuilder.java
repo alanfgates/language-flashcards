@@ -15,8 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
-public enum Voice {
-  ACTIVE, MIDDLE, PASSIVE
+import java.util.List;
+
+public interface LanguageBuilder {
+
+  List<Word> buildWords();
+  List<GrammarRule> buildRules();
 }

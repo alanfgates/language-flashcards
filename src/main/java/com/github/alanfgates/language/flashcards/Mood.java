@@ -15,33 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
-import java.io.Serializable;
-
-public class Word implements Serializable {
-  private final String english;
-  final String other;
-  private final Enum[] modifiers;
-
-
-  public Word(String other, String english, Enum... modifiers) {
-    this.english = english;
-    this.other = other;
-    this.modifiers = modifiers;
-  }
-
-  public void showFront() {
-    System.out.println(other);
-  }
-
-  public final void flipOver() {
-    StringBuilder buf = new StringBuilder(english)
-        .append(" ");
-    for (Enum modifier : modifiers) {
-      buf.append(modifier.name().toLowerCase())
-          .append(' ');
-    }
-    System.out.println(buf.toString());
-  }
+public enum Mood {
+  INDICATIVE, SUBJUNCTIVE, IMPERATIVE, INFINITIVE, PARTICIPLE, OPTATIVE
 }

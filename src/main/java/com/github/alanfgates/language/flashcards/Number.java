@@ -15,8 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
-public enum VerbRoot {
-  QAL, HIPHIL, HITHPAEL, HOPHAL, NIPHAL, PIEL, PUAL
+public enum Number {
+  SINGULAR, PLURAL
 }

@@ -15,33 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-public class Flashcard implements Serializable {
-  final private List<Word> words;
-
-  public Flashcard(Word word) {
-    this.words = new ArrayList<>();
-    words.add(word);
-  }
-
-  public void addWord(Word word) {
-    words.add(word);
-  }
-
-  public boolean test(BufferedReader input) throws IOException {
-    words.get(0).showFront();
-    input.readLine();
-    for (Word word : words) word.flipOver();
-    System.out.println("Success?[y]");
-    String answer = input.readLine();
-    return answer.length() == 0 || answer.toLowerCase().startsWith("y");
-
-  }
+public enum Tense {
+  PRESENT, FUTURE, AORIST, SECOND_AORIST, PERFECT, IMPERFECT, PLUPERFECT, JUSSIVE, COHORTATIVE
 }

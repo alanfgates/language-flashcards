@@ -15,17 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.gates.language.flashcards;
+package com.github.alanfgates.language.flashcards;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static com.github.gates.language.flashcards.Gender.*;
-import static com.github.gates.language.flashcards.Mood.*;
-import static com.github.gates.language.flashcards.Number.*;
-import static com.github.gates.language.flashcards.Person.*;
-import static com.github.gates.language.flashcards.VerbRoot.*;
-import static com.github.gates.language.flashcards.Tense.*;
+import static com.github.alanfgates.language.flashcards.Gender.*;
+import static com.github.alanfgates.language.flashcards.Number.*;
+import static com.github.alanfgates.language.flashcards.Mood.*;
+import static com.github.alanfgates.language.flashcards.Person.*;
+import static com.github.alanfgates.language.flashcards.Tense.*;
+import static com.github.alanfgates.language.flashcards.VerbRoot.*;
 
 public class HebrewBuilder implements LanguageBuilder {
   @Override
@@ -94,13 +94,12 @@ public class HebrewBuilder implements LanguageBuilder {
   public List<GrammarRule> buildRules() {
     return Arrays.asList(
         new GrammarRule("אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
-        new GrammarRule("        x  a-class x i-class x i-class x u-class x u-class\n" +
-                        "----------------------------------------------------------\n" +
-                        "        x  a       x   e     x  i      x   o     x  u     \n" +
-                        "----------------------------------------------------------\n" +
-                        "long    x  בָּ       x   בֵּ     x         x   בֹּ     x        \n" +
-                        "short   x  בַּ       x   בֶּ     x  בִּ      x   בָּ     x  בֻּ     \n" +
-                        "reduced x  בֲּ       x   בֱּ     x         x   בֳּ     x        \n ")
+        new GrammarRule("vowels: long    a  בָּ  e   בֵּ  o  בֹּ \n" +
+                        "vowels: short   a  בַּ  e   בֶּ  i  בִּ  o   בָּ  u  בֻּ \n" +
+                        "vowels: reduced a  בֲּ  e   בֱּ  o  בֳּ "),
+        new GrammarRule("Rules of Syllabification p18\n" +
+        "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
+        "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant.")
     );
   }
 }
