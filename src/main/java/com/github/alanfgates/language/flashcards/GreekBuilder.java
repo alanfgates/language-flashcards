@@ -338,11 +338,146 @@ public class GreekBuilder implements LanguageBuilder {
                     "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
                     "7. Square of stops\n" +
                     "8. A tau cannot stand at the end of the word and will drop off"),
+
         new GrammarRule("Square of stops:\n" +
             "Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
             "Velar (Palatals) Unvoiced κ  Voiced γ  Aspirates χ  Velar + σ = ξ\n" +
-            "Dental           Unvoiced τ  Voiced δ  Aspirates θ  Dental + σ = σ")
+            "Dental           Unvoiced τ  Voiced δ  Aspirates θ  Dental + σ = σ"),
 
+        new GrammarRule("1st Declension Paradigm, Feminine\n" +
+            "Nomanative  Singular: none  Plural: ι\n" +
+            "Genitive    Singular: ς     Plural: ων\n" +
+            "Dative      Singular: ι     Plural: ις\n" +
+            "Accusative  Singular: ν     Plural: ς\n"),
+
+        new GrammarRule("2nd Declension Paradigm, Masculine\n" +
+            "Nomanative  Singular: ς     Plural: ι\n" +
+            "Genitive    Singular: υ     Plural: ων\n" +
+            "Dative      Singular: ι     Plural: ις\n" +
+            "Accusative  Singular: ν     Plural: υς\n"),
+
+        new GrammarRule("2nd Declension Paradigm, Neuter\n" +
+            "Nomanative  Singular: ν     Plural: α\n" +
+            "Genitive    Singular: υ     Plural: ων\n" +
+            "Dative      Singular: ι     Plural: ις\n" +
+            "Accusative  Singular: ν     Plural: α\n"),
+
+        new GrammarRule("Uses of Genitive\n" +
+            " * descriptive: Let us put on the armor of light ενδθσμεθα τα οπλα του φωτος\n" +
+            " * possessive\n" +
+            " * showing apposition to the head noun: You will receive the gift, the Holy Spirit\n" +
+            "   λημψεσθε την δωρεαν του αγιου πνευματος\n" +
+            " * showing separation from the head noun: being alienated from the commonwealth of\n" +
+            "   Israel απελλοτριωμενοι της πολιτειας του Ισραηλ\n" +
+            " * subjective, expanding on the idea of the head noun: Who will separate us from\n" +
+            "   Christ’s love τισ ημας χωρισει απο της αγαπης του Χπριστου\n" +
+            " * objective, receiving the action of the head noun: The blasphemy against the\n" +
+            "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται\n" +
+            " * plenary, being both subjective and objective: For the love of Christ compels us η\n" +
+            "   γαρ αγαπη του Χριστου συνεχει ημας\n" +
+            " * relationship: Simon, son of John Σιμων Ιωαννου\n" +
+            " * partitive, where the subject is a part of the whole, which is genitive: some of\n" +
+            "   the branches τινες των κλαδων"),
+
+        new GrammarRule("Uses of Dative\n" +
+            " * Dative Proper (‘to’)\n" +
+            " * indirect object: He has given him authority to execute judgment εξουσιαν εδωκεν\n" +
+            "   αυτω κρισιν ποιεν\n" +
+            " * dative of interest, expression “for”:  Your wife Elizabeth will bear a son for\n" +
+            "   you η γυνη σου Ελισαβετ γεννησει υιον σοι (called the “dative of advantage” when\n" +
+            "   the idea is to the subject’s advantage and “dative of disadvantage” when the idea\n" +
+            "   is not to the subject’s advantage)\n" +
+            " * reference or respect (English, with respect to): Consider yourselves dead to sin\n" +
+            "   λογιζεσθε εαυτους ειναι νεκρους τη αμαρτια\n" +
+            " * Locative (‘in’, ‘with’)\n" +
+            " * sphere or realm in which something occurs: Blessed are the pure in heart μακαριοι\n" +
+            "   οι καθαροι τη καρδια\n" +
+            " * A time designation in the dative specifies when something occurs: On the third\n" +
+            "   day he will be raised τη τριτη ημερα εγερθησεται\n" +
+            " * Association, indicating “with”: Do not be unequally yoked with unbelievers μη\n" +
+            "   γινεσθε ετεροζυγουντες απιστοις\n" +
+            " * Instrumental (‘by’)\n" +
+            " * The  manner in which something is done: He speaks boldly παρρησια λαλει\n" +
+            " * The means or instrument by which an action is accomplished:  For it is by grace\n" +
+            "    you have been saved Τη γαρ χαριτι εστε σεσωσμενοι"),
+
+        new GrammarRule("Functions of the Adjective\n" +
+            " * Attributive - gives a quality or attribute to the word it modifies: ο αγαθος\n" +
+            "   λογος εστιν - in this situation adjective agrees with word it modifies in case,\n" +
+            "   number, and gender.\n" +
+            " * Substantival - when an adjective functions as a noun: ο αγαθος εστιν “the good\n" +
+            "   (person) is” - in this situation case is determined by its function (subject,\n" +
+            "   object, etc.) its gender and number by what it stands for.\n" +
+            " * Predicate - asserts (predicates) something about the subject. ο ανθρωπος αγαθος\n" +
+            "   verb ειμι may be implied"),
+
+        new GrammarRule("Determining adjective function:\n" +
+            " * If there is an article immediately before the adjective, it is either attributive\n" +
+            "   (if there is a noun to modify) or substantival.  In attributive case, adjective\n" +
+            "   may be before or after the noun: ο αγαθος ανθρωπος or ο ανθρωπος ο αγαθος\n" +
+            " * If the noun has an article and the adjective does not (called anarthrous) then\n" +
+            "   the adjective is functioning as a predicate: ο ανθρωπος αγαθος\n" +
+            " * When there is no article context is your only guide."),
+
+        new GrammarRule("Adjective Declensions p86\n" +
+            "2-1-2:  masculine and neuter in 2nd, feminine in 1st\n" +
+            "3-1-3:  masculine and neuter in 3rd, feminine in 1st\n" +
+            "2-2:    all in 2nd (masculine and feminine have same endings)\n" +
+            "3-3:    all in 3rd (masculine and feminine have same endings)\n" +
+            "2-2 are listed in the lexicon with just 2nd declension masculine and neuter endings."),
+
+        new GrammarRule("Article & a Prepositional Phrase\n" +
+            "Articles can proceed prepositional phrases:\n" +
+            " * Usually turning them into relative clauses:\n" +
+            "     τους παιδας τους εν βηθλεεμ\n" +
+            "     The children who are in Bethlehem\n" +
+            " * Sometimes turning it into a substantive: The spoke the word of the Lord to all\n" +
+            "     ελαλησαν τον λογον του κυριου πασιν τοις εν τῃ οικιᾳ\n" +
+            "     who were in the house "),
+
+        new GrammarRule("Neuter Plural Subjects\n" +
+            "Greek normally uses a singular verb when the subject is neuter plural.  Indicates\n" +
+            "the writer is viewing the subject as a group rather than as individuals.  In English\n" +
+            "this will require a plural verb:\n" +
+            "  δοκιμαζετε τα πνευματα ει εκ του θεου εστιν\n" +
+            "  Test the spirits and see if they are from God."),
+
+        new GrammarRule("Uses of Article in Greek\n" +
+            " 1. Definite article\n" +
+            " 2. Attaching adjective to preceding noun μετα των αγγελων των αγιων\n" +
+            " 3. Is often used with proper names and other nouns that English would not use it with\n" +
+            " 4. Can be used with participle or adjective to make it into a noun.\n" +
+            " 5. Is sometimes omitted when English would use it: Εν αρχη ην ο λογος\n" +
+            " 6. Can function as a personal or possessive pronoun: Οι δε ειπαν προς αυτον And they said to him\n" +
+            " 7. Can govern two nouns together, linking them:\n" +
+            "    προσδεχομενοι την μακαριαν ελπιδα και επιφανειαν της δοξης του μεγαλου θεου και " +
+            "      σωτηρος ημων Ιησου Χριστου\n" +
+            "    waiting for our blessed hope, the appearing of the glory of our great God and " +
+            "      Savior Jesus Christ."),
+
+        new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
+            "Nomanative  Singular: ς     Plural: ες\n" +
+            "Genitive    Singular: ος    Plural: ων\n" +
+            "Dative      Singular: ι     Plural: σι(ν)\n" +
+            "Accusative  Singular: α/ν   Plural: ας\n"),
+
+        new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
+            "Nomanative  Singular:       Plural: α\n" +
+            "Genitive    Singular: ος    Plural: ων\n" +
+            "Dative      Singular: ι     Plural: σι(ν)\n" +
+            "Accusative  Singular:       Plural: α\n"),
+
+        new GrammarRule("The Three Uses of αὐτος\n" +
+           " 1. Personal pronoun.\n" +
+           " 2. Adjectival intensive.  This is used to modify another word and is placed in the\n" +
+           "    predicate position.  This is usually translated into English with a reflexive\n" +
+           "    pronoun: αὐτος ὁ ἀποστολος the apostle himself.  When functioning as an intensive,\n" +
+           "    αὐτος is usually in the nominative case and modifies the subject.\n" +
+           " 3. Identical adjective, meaning “the same”.  Usually in the attributive position.\n" +
+           "    και παλιν απελθων προσηυξατο τον αυτον λογον\n" +
+           "    And again after going away he prayed the same word.")
+
+        // Continue with 13 page 106
 
     );
   }
