@@ -322,7 +322,16 @@ public class GreekBuilder implements LanguageBuilder {
         // 1283
         new Word("πᾶς", "all every each", MASCULINE),
         new Word("πᾶσα", "all every each", FEMININE),
-        new Word("πᾶν", "all every each", NEUTER)
+        new Word("πᾶν", "all every each", NEUTER),
+        // 1042
+        new Word("γάρ", "for, because"),
+        // 916
+        new Word("ἐκ genitive", "out of, from"),
+        new Word("ἐξ genitive", "out of, from"),
+        // 891
+        new Word("ἐπί accusative", "onto"),
+        new Word("ἐπί genitive", "over"),
+        new Word("ἐπί dative", "at")
     );
   }
 
@@ -346,18 +355,21 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("1st Declension Paradigm, Feminine\n" +
             "Nomanative  Singular: none  Plural: ι\n" +
+            "Vocative    Singular: none  Plural: ι\n" +
             "Genitive    Singular: ς     Plural: ων\n" +
             "Dative      Singular: ι     Plural: ις\n" +
             "Accusative  Singular: ν     Plural: ς\n"),
 
         new GrammarRule("2nd Declension Paradigm, Masculine\n" +
             "Nomanative  Singular: ς     Plural: ι\n" +
+            "Vocative    Singular: ε     Plural: ι\n" +
             "Genitive    Singular: υ     Plural: ων\n" +
             "Dative      Singular: ι     Plural: ις\n" +
             "Accusative  Singular: ν     Plural: υς\n"),
 
         new GrammarRule("2nd Declension Paradigm, Neuter\n" +
             "Nomanative  Singular: ν     Plural: α\n" +
+            "Vocative    Singular: ν     Plural: α\n" +
             "Genitive    Singular: υ     Plural: ων\n" +
             "Dative      Singular: ι     Plural: ις\n" +
             "Accusative  Singular: ν     Plural: α\n"),
@@ -415,6 +427,7 @@ public class GreekBuilder implements LanguageBuilder {
             " * If there is an article immediately before the adjective, it is either attributive\n" +
             "   (if there is a noun to modify) or substantival.  In attributive case, adjective\n" +
             "   may be before or after the noun: ο αγαθος ανθρωπος or ο ανθρωπος ο αγαθος\n" +
+            "  (Exception:  demonstrative pronouns are attributive without the article: ουτος ὁ ἀνθρωπος \"this man\")\n" +
             " * If the noun has an article and the adjective does not (called anarthrous) then\n" +
             "   the adjective is functioning as a predicate: ο ανθρωπος αγαθος\n" +
             " * When there is no article context is your only guide."),
@@ -457,12 +470,14 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
             "Nomanative  Singular: ς     Plural: ες\n" +
+            "Vocative    Singular:       Plural: ες\n" +
             "Genitive    Singular: ος    Plural: ων\n" +
             "Dative      Singular: ι     Plural: σι(ν)\n" +
             "Accusative  Singular: α/ν   Plural: ας\n"),
 
-        new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
+        new GrammarRule("3rd Declension Paradigm, Neuter:\n" +
             "Nomanative  Singular:       Plural: α\n" +
+            "Vocative    Singular:       Plural: α\n" +
             "Genitive    Singular: ος    Plural: ων\n" +
             "Dative      Singular: ι     Plural: σι(ν)\n" +
             "Accusative  Singular:       Plural: α\n"),
@@ -475,9 +490,19 @@ public class GreekBuilder implements LanguageBuilder {
            "    αὐτος is usually in the nominative case and modifies the subject.\n" +
            " 3. Identical adjective, meaning “the same”.  Usually in the attributive position.\n" +
            "    και παλιν απελθων προσηυξατο τον αυτον λογον\n" +
-           "    And again after going away he prayed the same word.")
+           "    And again after going away he prayed the same word."),
 
-        // Continue with 13 page 106
+        new GrammarRule("The demonstratives οὑτος and ἐκεινος can be used as pronouns or\n" +
+            "adjectives.  Can also be used as a personal pronoun at times."),
+
+        new GrammarRule("Degrees of an adjective:\n" +
+            " * Positive: uncompared e.g μεγας large\n" +
+            " * Comparative: greater of two items: e.g. μειζων larger\n" +
+            " * Superlative: greatest, or comparison of 3 or more e.g. μεγιστος largest\n" +
+            "   (Note, superlative was dying off in Koine Greek and thus we often see comparative\n" +
+            "    where English would expect a superlative")
+
+        // Continue with chapter 14 page 113
 
     );
   }

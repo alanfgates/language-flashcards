@@ -18,5 +18,5 @@
 package com.github.alanfgates.language.flashcards;
 
 public enum Number {
-  SINGULAR, PLURAL
+  SINGULAR, PLURAL, DUAL
 }

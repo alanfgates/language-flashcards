@@ -91,8 +91,133 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("כֹּל", "all"),
         new Word("כָּל", "all"),
         // 5317
-        new Word("אָמַר", "he said")
+        new Word("אָמַר", "he said"),
 
+        // 4942
+        new Word("בֵּן", "son", MASCULINE, SINGULAR),
+        new Word("בָּנִים", "son", MASCULINE, PLURAL),
+        // 4487
+        new Word("כִּי", "that, because, when"),
+        // 3576
+        new Word("הָיָה",	"he was"),
+        // 2909
+        new Word("כְּ", "as, like"),
+        // 2632
+        new Word("עָשַׂה", "he did, he made"),
+        // 2602
+        new Word("אֱלֹהִים", "God", MASCULINE, SINGULAR),
+        new Word("אֱלֹהִים", "gods", MASCULINE, PLURAL),
+        // 2579
+        new Word("בָא", "he came"),
+        // 2530
+        new Word("מֶלֶך", "king", MASCULINE, SINGULAR),
+        new Word("מְלָכִים", "kings", MASCULINE, PLURAL),
+        // 2529
+        new Word("זֶה",	"this", MASCULINE),
+        new Word("זֹאת", "this", FEMININE),
+        new Word("אֵלָה", "these"),
+        // 2505
+        new Word("אֶרֶץ", "land, earth", FEMININE, SINGULAR),
+        new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
+        // 2452
+        new Word("הוּא", "he"),
+        new Word("הִיא", "she"),
+        new Word("הֵם", "they", MASCULINE),
+        new Word("הֵנָּה", "they", FEMININE),
+        // 2303
+        new Word("יוֹם", "day", MASCULINE, SINGULAR),
+        new Word("יָמִים", "days", MASCULINE, PLURAL),
+        // 2187
+        new Word("אִיש", "man", MASCULINE, SINGULAR),
+        new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
+        // 2128
+        new Word("פָּנִים", "face", MASCULINE, SINGULAR),
+        new Word("פָּנִים", "faces", MASCULINE, PLURAL),
+        new Word("פְּנֵי", "before, in the presence of"),
+        // 2046
+        new Word("בַּיִת", "house", MASCULINE, SINGULAR),
+        new Word("בָּתִּים", "houses", MASCULINE, PLURAL),
+        // 2014
+        new Word("נָתַן", "he gave, put, set"),
+        // 1867
+        new Word("עַם", "people, nation", MASCULINE, SINGULAR),
+        new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
+        // 1627
+        new Word("יָד", "hand", FEMININE, SINGULAR),
+        new Word("יָדַיִם", "hands", FEMININE, DUAL),
+        // 1554
+        new Word("הָלַךּ",	"he walked"),
+        // 1494
+        new Word("דָּבָר", "word, speech", MASCULINE, SINGULAR),
+        new Word("דְּבָרִים", "words, speechs", MASCULINE, PLURAL),
+        // 1310
+        new Word("רָאָה", "he saw"),
+        // 1263
+        new Word("עַד", "until, as far as"),
+        // 1239
+        new Word("אֲנִי", "I, myself"),
+        new Word("אָנֹכִי", "I, myself"),
+        new Word("אֲנַחְנוּ", "we"),
+        new Word("נַחְנו", "we"),
+        // 1210
+        new Word("אָב", "father", MASCULINE, SINGULAR),
+        new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
+        // 1165
+        new Word("שָׁמַע",	 "he heard"),
+        // 1135
+        new Word("דִּבֶּר",	"he spoke", PIEL),
+        // 1104
+        new Word("אַתָּה", "you", MASCULINE, SINGULAR),
+        new Word("אַתְּ", "you", FEMININE, SINGULAR),
+        new Word("אַתֶּם", "you", MASCULINE, PLURAL),
+        new Word("אַתֶּן", "you", FEMININE, PLURAL),
+        // 1094
+        new Word("עִיר", "city", FEMININE, SINGULAR),
+        new Word("עָרִים", "cities", FEMININE, PLURAL),
+        // 1087
+        new Word("יָשַׁב",	"he sat, he dwelt"),
+        // 1075
+        new Word("יָצָא", 	"he went out"),
+        new Word("שָׁב", "he returned"),
+        // 1070
+        new Word("אִם", "if"),
+        // 1061
+        new Word("הִנַּה", "behold"),
+        // 1048
+        new Word("עִם", "with"),
+        // 976
+        new Word("אֶחָד", "one", MASCULINE),
+        new Word("אַחַת", "one", FEMININE),
+        // 966
+        new Word("לָקַח", "he took"),
+        // 952
+        new Word("יָדַע", "he knew"),
+        // 896
+        new Word("עַיִן", "eye", FEMININE, SINGULAR),
+        new Word("עֵינַים", "eyes", FEMININE, DUAL),
+        new Word("עַיִן", "spring", FEMININE, SINGULAR),
+        new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
+        // 898
+        new Word("אֵת", "with"),
+        // 894
+        new Word("עָלָה", "he went up"),
+        // 879
+        new Word("שָׁנָה", "year", FEMININE, SINGULAR),
+        new Word("שׁנִים", "years", FEMININE, PLURAL),
+        // 864
+        new Word("שֵׁם", "name", MASCULINE, SINGULAR),
+        new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
+        // 847
+        new Word("שָׁלַח", "he sent"),
+        // 845
+        new Word("מֵת", "he died"),
+        // 835
+        new Word("שָׁם", "there"),
+        // 814
+        new Word("אָכַל", "he ate"),
+        // 803
+        new Word("עֶבֶד", "servant, slave", MASCULINE, SINGULAR),
+        new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL)
     );
   }
 
@@ -204,9 +329,22 @@ public class HebrewBuilder implements LanguageBuilder {
           " 2. Vocal schewa cannot proceed a guttural with a reduced vowel.  The first vocal\n" +
           "    schewa converts to the short vowel that corresponds to the reduced vowel it\n" +
           "    proceeds.  חֲלוֹם plus בְּ becomes בַּחֲלוֹם\n" +
-          "    Exception: In אֱלֹהִים  the shortened vowel under א  is removed.  Thus אֱלֹהִים plus לְ becomes לֵאלֹהִים")
+          "    Exception: In אֱלֹהִים  the shortened vowel under א  is removed.  Thus אֱלֹהִים plus לְ becomes לֵאלֹהִים"),
 
-        // Continue chapter 5, p40
+        new GrammarRule("Definite Article\n" +
+          " * Definite Article is הַ plus a Dagesh Forte in the first consonant of the noun\n" +
+          " * When the first consant in a begadkephat consonant the Dagesh Lene in the begadkephat\n" +
+          "   becomes a Dagesh Forte\n" +
+          " * When first consontant is a guttural, Dagesh Forte is rejected\n" +
+          "   * When the first consonant is א or ע or ר the Patach lengthens to a Qamets, הָ\n" +
+          "   * When the first consonant is ה or ח the Dagesh Forte is dropped.  This is\n" +
+          "     referred to as \"virtual doubling\"" +
+          "   * Before nouns that begin with an unaccented עָ or הָ or חָ (last can also be\n" +
+          "     accented), the definite article becomes Seghol הֶ\n" +
+          " * With initial יְ or מְ the Dagesh Forte is usually dropped\n" +
+          " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ")
+
+        // Continue 5.7, p43
     );
   }
 }
