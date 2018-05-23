@@ -20,6 +20,7 @@ package com.github.alanfgates.language.flashcards;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.github.alanfgates.language.flashcards.Declension.*;
 import static com.github.alanfgates.language.flashcards.Gender.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
 import static com.github.alanfgates.language.flashcards.Mood.*;
@@ -217,7 +218,42 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אָכַל", "he ate"),
         // 803
         new Word("עֶבֶד", "servant, slave", MASCULINE, SINGULAR),
-        new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL)
+        new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
+        // 783
+        new Word("אַיִן", "nothing, there is not"),
+        // 781
+        new Word("אִשָּׁה", "woman, wife", FEMININE, SINGULAR),
+        new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
+        new Word("נָשׁים", "women, wives", FEMININE, PLURAL),
+        new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT),
+        // 774
+        new Word("אָדוֹן", "lord, master", MASCULINE, SINGULAR),
+        new Word("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL),
+        // 769
+        new Word("שְׁנַיִם", "two", MASCULINE),
+        new Word("שְׁתַּים", "two", FEMININE),
+        new Word("גַּם", "also"),
+        // 757
+        new Word("נֶפֶש", "soul, person", FEMININE, SINGULAR),
+        new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
+        // 754
+        new Word("מָה", "what?"),
+        // 750
+        new Word("כֹּהַן", "priest", MASCULINE, SINGULAR),
+        new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
+        // 748
+        new Word("הֲ", "indicates interrogative"),
+        // 743
+        new Word("כֵּן", "so, thus"),
+        // 736
+        new Word("קָרָא", "he called"),
+        // 729
+        new Word("אַל", "no, not temporary"),
+        // 712
+        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE, SINGULAR),
+        new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
+        // 707
+        new Word( "אַחַר", "after")
     );
   }
 

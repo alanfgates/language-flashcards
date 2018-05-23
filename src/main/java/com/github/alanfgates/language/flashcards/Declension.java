@@ -18,5 +18,5 @@
 package com.github.alanfgates.language.flashcards;
 
 public enum Declension {
-  NOMINATIVE, VOCATIVE, GENITIVE, DATIVE, ACCUSATIVE
+  NOMINATIVE, VOCATIVE, GENITIVE, DATIVE, ACCUSATIVE, CONSTRUCT
 }

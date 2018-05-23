@@ -331,7 +331,15 @@ public class GreekBuilder implements LanguageBuilder {
         // 891
         new Word("ἐπί accusative", "onto"),
         new Word("ἐπί genitive", "over"),
-        new Word("ἐπί dative", "at")
+        new Word("ἐπί dative", "at"),
+        // 719
+        new Word("κύριος", "lord", MASCULINE, NOMINATIVE),
+        new Word("κύριου", "lord", MASCULINE, GENITIVE),
+        // 708
+        new Word("ἐχω",	"I have", ACTIVE, PRESENT),
+        new Word("ἑξω",	"I will have ἐχω", ACTIVE, FUTURE),
+        new Word("ἐσχον", "I had ἐχω", ACTIVE, AORIST),
+        new Word("ἐσχηκα", "I have had ἐχω", ACTIVE, PERFECT)
     );
   }
 
