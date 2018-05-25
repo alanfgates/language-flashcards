@@ -29,6 +29,12 @@ import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.VerbRoot.*;
 
 public class HebrewBuilder implements LanguageBuilder {
+
+  @Override
+  public String getLanguageName() {
+    return "Hebrew";
+  }
+
   @Override
   public List<Word> buildWords() {
     return Arrays.asList(
@@ -95,7 +101,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אָמַר", "he said"),
 
         // 4942
-        new Word("בֵּן", "son", MASCULINE, SINGULAR),
+        new Word("בֵּן", "son", MASCULINE),
         new Word("בָּנִים", "son", MASCULINE, PLURAL),
         // 4487
         new Word("כִּי", "that, because, when"),
@@ -106,19 +112,19 @@ public class HebrewBuilder implements LanguageBuilder {
         // 2632
         new Word("עָשַׂה", "he did, he made"),
         // 2602
-        new Word("אֱלֹהִים", "God", MASCULINE, SINGULAR),
+        new Word("אֱלֹהִים", "God", MASCULINE),
         new Word("אֱלֹהִים", "gods", MASCULINE, PLURAL),
         // 2579
         new Word("בָא", "he came"),
         // 2530
-        new Word("מֶלֶך", "king", MASCULINE, SINGULAR),
+        new Word("מֶלֶך", "king", MASCULINE),
         new Word("מְלָכִים", "kings", MASCULINE, PLURAL),
         // 2529
         new Word("זֶה",	"this", MASCULINE),
         new Word("זֹאת", "this", FEMININE),
         new Word("אֵלָה", "these"),
         // 2505
-        new Word("אֶרֶץ", "land, earth", FEMININE, SINGULAR),
+        new Word("אֶרֶץ", "land, earth", FEMININE),
         new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
         // 2452
         new Word("הוּא", "he"),
@@ -126,30 +132,30 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("הֵם", "they", MASCULINE),
         new Word("הֵנָּה", "they", FEMININE),
         // 2303
-        new Word("יוֹם", "day", MASCULINE, SINGULAR),
+        new Word("יוֹם", "day", MASCULINE),
         new Word("יָמִים", "days", MASCULINE, PLURAL),
         // 2187
-        new Word("אִיש", "man", MASCULINE, SINGULAR),
+        new Word("אִיש", "man", MASCULINE),
         new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
         // 2128
-        new Word("פָּנִים", "face", MASCULINE, SINGULAR),
+        new Word("פָּנִים", "face", MASCULINE),
         new Word("פָּנִים", "faces", MASCULINE, PLURAL),
         new Word("פְּנֵי", "before, in the presence of"),
         // 2046
-        new Word("בַּיִת", "house", MASCULINE, SINGULAR),
+        new Word("בַּיִת", "house", MASCULINE),
         new Word("בָּתִּים", "houses", MASCULINE, PLURAL),
         // 2014
         new Word("נָתַן", "he gave, put, set"),
         // 1867
-        new Word("עַם", "people, nation", MASCULINE, SINGULAR),
+        new Word("עַם", "people, nation", MASCULINE),
         new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
         // 1627
-        new Word("יָד", "hand", FEMININE, SINGULAR),
+        new Word("יָד", "hand", FEMININE),
         new Word("יָדַיִם", "hands", FEMININE, DUAL),
         // 1554
         new Word("הָלַךּ",	"he walked"),
         // 1494
-        new Word("דָּבָר", "word, speech", MASCULINE, SINGULAR),
+        new Word("דָּבָר", "word, speech", MASCULINE),
         new Word("דְּבָרִים", "words, speechs", MASCULINE, PLURAL),
         // 1310
         new Word("רָאָה", "he saw"),
@@ -161,19 +167,19 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אֲנַחְנוּ", "we"),
         new Word("נַחְנו", "we"),
         // 1210
-        new Word("אָב", "father", MASCULINE, SINGULAR),
+        new Word("אָב", "father", MASCULINE),
         new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
         // 1165
         new Word("שָׁמַע",	 "he heard"),
         // 1135
         new Word("דִּבֶּר",	"he spoke", PIEL),
         // 1104
-        new Word("אַתָּה", "you", MASCULINE, SINGULAR),
-        new Word("אַתְּ", "you", FEMININE, SINGULAR),
+        new Word("אַתָּה", "you", MASCULINE),
+        new Word("אַתְּ", "you", FEMININE),
         new Word("אַתֶּם", "you", MASCULINE, PLURAL),
         new Word("אַתֶּן", "you", FEMININE, PLURAL),
         // 1094
-        new Word("עִיר", "city", FEMININE, SINGULAR),
+        new Word("עִיר", "city", FEMININE),
         new Word("עָרִים", "cities", FEMININE, PLURAL),
         // 1087
         new Word("יָשַׁב",	"he sat, he dwelt"),
@@ -194,19 +200,19 @@ public class HebrewBuilder implements LanguageBuilder {
         // 952
         new Word("יָדַע", "he knew"),
         // 896
-        new Word("עַיִן", "eye", FEMININE, SINGULAR),
+        new Word("עַיִן", "eye", FEMININE),
         new Word("עֵינַים", "eyes", FEMININE, DUAL),
-        new Word("עַיִן", "spring", FEMININE, SINGULAR),
+        new Word("עַיִן", "spring", FEMININE),
         new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 898
         new Word("אֵת", "with"),
         // 894
         new Word("עָלָה", "he went up"),
         // 879
-        new Word("שָׁנָה", "year", FEMININE, SINGULAR),
+        new Word("שָׁנָה", "year", FEMININE),
         new Word("שׁנִים", "years", FEMININE, PLURAL),
         // 864
-        new Word("שֵׁם", "name", MASCULINE, SINGULAR),
+        new Word("שֵׁם", "name", MASCULINE),
         new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
         // 847
         new Word("שָׁלַח", "he sent"),
@@ -217,29 +223,29 @@ public class HebrewBuilder implements LanguageBuilder {
         // 814
         new Word("אָכַל", "he ate"),
         // 803
-        new Word("עֶבֶד", "servant, slave", MASCULINE, SINGULAR),
+        new Word("עֶבֶד", "servant, slave", MASCULINE),
         new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
         // 783
         new Word("אַיִן", "nothing, there is not"),
         // 781
-        new Word("אִשָּׁה", "woman, wife", FEMININE, SINGULAR),
+        new Word("אִשָּׁה", "woman, wife", FEMININE),
         new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
         new Word("נָשׁים", "women, wives", FEMININE, PLURAL),
         new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT),
         // 774
-        new Word("אָדוֹן", "lord, master", MASCULINE, SINGULAR),
+        new Word("אָדוֹן", "lord, master", MASCULINE),
         new Word("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL),
         // 769
         new Word("שְׁנַיִם", "two", MASCULINE),
         new Word("שְׁתַּים", "two", FEMININE),
         new Word("גַּם", "also"),
         // 757
-        new Word("נֶפֶש", "soul, person", FEMININE, SINGULAR),
+        new Word("נֶפֶש", "soul, person", FEMININE),
         new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
         // 754
         new Word("מָה", "what?"),
         // 750
-        new Word("כֹּהַן", "priest", MASCULINE, SINGULAR),
+        new Word("כֹּהַן", "priest", MASCULINE),
         new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
         new Word("הֲ", "indicates interrogative"),
@@ -250,14 +256,14 @@ public class HebrewBuilder implements LanguageBuilder {
         // 729
         new Word("אַל", "no, not temporary"),
         // 712
-        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE, SINGULAR),
+        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE),
         new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
         // 707
         new Word("אַחַר", "after"),
         // 658
         new Word("נָשָׂא", "he lifted, carried, took"),
         // 629
-        new Word("אָח", "brother", MASCULINE, SINGULAR),
+        new Word("אָח", "brother", MASCULINE),
         new Word("אַחִים", "brothers", MASCULINE, PLURAL),
         // 627
         new Word("קָם", "he arose, stood"),
@@ -265,18 +271,18 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("שָׁלשׁ", "three", FEMININE),
         new Word("שׁלֹשָׁה", "three", MASCULINE),
         // 601
-        new Word("לֵב", "heart", MASCULINE, SINGULAR),
+        new Word("לֵב", "heart", MASCULINE),
         new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
-        new Word("לֵבָב", "heart", MASCULINE, SINGULAR),
+        new Word("לֵבָב", "heart", MASCULINE),
         new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
         // 600
-        new Word("רֹאשׁ", "head", MASCULINE, SINGULAR),
+        new Word("רֹאשׁ", "head", MASCULINE),
         new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
         // 588
-        new Word("בַּת", "daughter", FEMININE, SINGULAR),
+        new Word("בַּת", "daughter", FEMININE),
         new Word("בָּנוֹת", "daughters", FEMININE, PLURAL),
         // 583
-        new Word("מָיִם", "water", MASCULINE, SINGULAR),
+        new Word("מָיִם", "water", MASCULINE),
         new Word("מָיִם", "water", MASCULINE, PLURAL),
         new Word("מֵי", "water", MASCULINE, SINGULAR, CONSTRUCT),
         new Word("מֵי", "water", MASCULINE, PLURAL, CONSTRUCT),
@@ -284,15 +290,15 @@ public class HebrewBuilder implements LanguageBuilder {
         // 577
         new Word("כֹּה", "thus, here"),
         // 560
-        new Word("גּוֹי", "nation", MASCULINE, SINGULAR),
+        new Word("גּוֹי", "nation", MASCULINE),
         new Word("גּוֹיִם", "nations", MASCULINE, PLURAL),
         // 559
-        new Word("הַר", "mountain", MASCULINE, SINGULAR),
+        new Word("הַר", "mountain", MASCULINE),
         new Word("הָרִים", "mountains", MASCULINE, PLURAL),
         // 554
         new Word("עָבַר", "he passed over, passed through, passed by"),
         // 545
-        new Word("אָדָם", "man, humankind", MASCULINE, SINGULAR),
+        new Word("אָדָם", "a man, humankind", MASCULINE),
         // 528
         new Word("שָׂם", "he put, set"),
         // 526
@@ -305,10 +311,88 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חָמַשׁ", "five", FEMININE),
         new Word("חֲמִשָּׁה", "five", MASCULINE),
         // 505
-        new Word("קוֹל", "voice, sound", MASCULINE, SINGULAR),
+        new Word("קוֹל", "voice, sound", MASCULINE),
         new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
         // 501
-        new Word("הִכָּה", "he hit", HIPHIL)
+        new Word("הִכָּה", "he hit", HIPHIL),
+        // 498
+        new Word("פֶה", "mouth", MASCULINE),
+        new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT),
+        new Word("פִּיּוֹת", "mouths", MASCULINE, PLURAL),
+        // 496
+        new Word("צָבָא", "host, army, war, service", MASCULINE),
+        new Word("צְבָאוֹת", "hosts, armies, wars, services", MASCULINE, PLURAL),
+        // 496
+        new Word("צִוָּה", "he commanded"),
+        // 495
+        new Word("יָלַד", "he bore, he begat"),
+        // 494
+        new Word("אֶלֶף", "thousand"),
+        // 492
+        new Word("עֶשֶׁר", "ten", FEMININE),
+        new Word("עֲשָׂרָה", "ten", MASCULINE),
+        // 491
+        new Word("שֶׁבַע", "seven", FEMININE),
+        new Word("שִׁבְעָה", "seven", MASCULINE),
+        // 491
+        new Word("עוֹד", "again, still, long"),
+        // 470
+        new Word("קֹדֶש", "holiness, apartness, sacredness", MASCULINE),
+        new Word("קֳדָשִׁים", "holiness, apartness, sacredness", MASCULINE, PLURAL),
+        // 469
+        new Word("שָׁמַר", "he guarded, watched, preserved"),
+        // 457
+        new Word("מָצַה", "he found"),
+        // 456
+        new Word("אַרְבַּע", "four", FEMININE),
+        new Word("אַרְבָּעָה", "four", MASCULINE),
+        // 439
+        new Word("עוֹלָם", "forever", MASCULINE),
+        new Word("עוֹלָמִים", "forever", MASCULINE, PLURAL),
+        // 435
+        new Word("נָפַל", "he fell"),
+        new Word("עַתָּה", "now"),
+        // 424
+        new Word("מִשְׁפָת", "judgement, law", MASCULINE),
+        new Word("מִשׁפָּטִים", "judgements, laws", MASCULINE, PLURAL),
+        new Word("מִי", "who?"),
+        // 421
+        new Word("שַׂר", "prince, chief", MASCULINE),
+        new Word("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL),
+        new Word("שָׁמַיִם", "heavens, sky", MASCULINE),
+        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, PLURAL),
+        new Word("שְׁמֵי", "heavens, sky", MASCULINE, CONSTRUCT),
+        // 420
+        new Word("תָּוֶךּ", "midst"),
+        // 413
+        new Word("חֶרֶב", "sword", FEMININE),
+        new Word("חֲרָבוֹת", "swords", FEMININE, PLURAL),
+        // 409
+        new Word("רַב", "great, many", MASCULINE),
+        new Word("רַבָּה", "great, many", FEMININE),
+        new Word("בַּין", "between"),
+        // 405
+        new Word("נָא", "please, now"),
+        // 403
+        new Word("כֶּסֶף", "silver, money", MASCULINE),
+        new Word("מִזְבֵּחַ", "alter", MASCULINE),
+        new Word("מִזְבְּחוֹת", "alters", MASCULINE, PLURAL),
+        // 401
+        new Word("מָקוֹם", "place", MASCULINE),
+        new Word("מְקוֹמוֹת", "places", MASCULINE, PLURAL),
+        // 396
+        new Word("יָם", "sea", MASCULINE),
+        new Word("יַמִּים", "seas", MASCULINE, PLURAL),
+        // 389
+        new Word("זָהָב", "gold", MASCULINE),
+        // 382
+        new Word("יָרַד", "he went down"),
+        // 377
+        new Word("בָּנָה", "he built"),
+        new Word("אַשׁ", "fire", FEMININE),
+        // 376
+        new Word("נְאֻם", "utterance-m", MASCULINE)
+
     );
   }
 

@@ -32,6 +32,11 @@ import static com.github.alanfgates.language.flashcards.Tense.*;
 public class GreekBuilder implements LanguageBuilder {
 
   @Override
+  public String getLanguageName() {
+    return "Greek";
+  }
+
+  @Override
   public List<Word> buildWords() {
     return Arrays.asList(
         //----------------------------------------------------------------------------------------
@@ -276,10 +281,10 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("εσομαι", "I will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
         new Word("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         // 2357
-        new Word("λεγω", "I say", ACTIVE, PRESENT),
-        new Word("ερω", "I will say λεγω", ACTIVE, FUTURE),
-        new Word("ειπον", "I said λεγω", ACTIVE, AORIST),
-        new Word("ειρηκα", "I have said λεγω", ACTIVE, PERFECT),
+        new Word("λεγω", "I say"),
+        new Word("ερω", "I will say λεγω", FUTURE),
+        new Word("ειπον", "I said λεγω", AORIST),
+        new Word("ειρηκα", "I have said λεγω", PERFECT),
         new Word("ειρημαι", "I have been said λεγω", MIDDLE, PERFECT),
         new Word("ειρημαι", "I have been said λεγω", PASSIVE, PERFECT),
         new Word("ερρεθην", "I was said λεγω", PASSIVE, AORIST),
@@ -333,20 +338,20 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐπί genitive", "over"),
         new Word("ἐπί dative", "at"),
         // 719
-        new Word("κύριος", "lord", MASCULINE, NOMINATIVE),
+        new Word("κύριος", "lord", MASCULINE),
         new Word("κύριου", "lord", MASCULINE, GENITIVE),
         // 708
-        new Word("ἐχω",	"I have", ACTIVE, PRESENT),
-        new Word("ἑξω",	"I will have ἐχω", ACTIVE, FUTURE),
-        new Word("ἐσχον", "I had ἐχω", ACTIVE, AORIST),
-        new Word("ἐσχηκα", "I have had ἐχω", ACTIVE, PERFECT),
+        new Word("ἐχω",	"I have"),
+        new Word("ἑξω",	"I will have ἐχω", FUTURE),
+        new Word("ἐσχον", "I had ἐχω", AORIST),
+        new Word("ἐσχηκα", "I have had ἐχω", PERFECT),
         // 699
         new Word("πρός accusative", "to, towards"),
         // 669
-        new Word("γινομαι",	"I become, I am", ACTIVE, PRESENT),
-        new Word("γενησομαι", "I will become γινομαι", ACTIVE, FUTURE),
-        new Word("εγενομην", "I became γινομαι", ACTIVE, AORIST),
-        new Word("γεγονα", "I have become γινομαι", ACTIVE, PERFECT),
+        new Word("γινομαι",	"I become, I am"),
+        new Word("γενησομαι", "I will become γινομαι", FUTURE),
+        new Word("εγενομην", "I became γινομαι", AORIST),
+        new Word("γεγονα", "I have become γινομαι", PERFECT),
         new Word("γεγενημαι", "I have been become γινομαι", MIDDLE, PERFECT), // TODO  figure out what this means
         new Word("γεγενημαι", "I have been become γινομαι", PASSIVE, PERFECT), // TODO  figure out what this means
         new Word("εγενηθην", "it became γινομαι", PASSIVE, AORIST), // TODO  figure out what this means
@@ -360,10 +365,10 @@ public class GreekBuilder implements LanguageBuilder {
         // 638
         new Word("ἀλλά", "but (strong)"),
         // 634
-        new Word("ἐρχομαι", "I come, I go", ACTIVE, PRESENT),
-        new Word("ελευσομαι", "I will come/go 'ερχομαι", ACTIVE, FUTURE),
-        new Word("ηλθον", "I came/went, 'ερχομαι", ACTIVE, AORIST),
-        new Word("εληλθυα", "I have come/gone 'ερχομαι", ACTIVE, PERFECT),
+        new Word("ἐρχομαι", "I come, I go"),
+        new Word("ελευσομαι", "I will come/go 'ερχομαι", FUTURE),
+        new Word("ηλθον", "I came/went, 'ερχομαι", AORIST),
+        new Word("εληλθυα", "I have come/gone 'ερχομαι", PERFECT),
         // 579
         new Word("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR),
         new Word("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR),
@@ -390,14 +395,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
         new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
         // 572
-        new Word("ποιω", "I do, I make ποιεω", ACTIVE, PRESENT),
-        new Word("ποιησω", "I will make/do ποιεω", ACTIVE, FUTURE),
-        new Word("εποιησα", "I did/made ποιεω", ACTIVE, AORIST),
-        new Word("πεποιηκα", "I have done/made ποιεω", ACTIVE, PERFECT),
+        new Word("ποιω", "I do, I make ποιεω"),
+        new Word("ποιησω", "I will make/do ποιεω", FUTURE),
+        new Word("εποιησα", "I did/made ποιεω", AORIST),
+        new Word("πεποιηκα", "I have done/made ποιεω", PERFECT),
         new Word("πεποιημαι", "I have been done/made ποιεω", MIDDLE, PERFECT),
         new Word("πεποιημαι", "I have been done/made ποιεω", PASSIVE, PERFECT),
         // 550
-        new Word("ἄνθρωπος", "human being", MASCULINE, NOMINATIVE),
+        new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
         // 538
         new Word("τις", "someone something", MASCULINE, NOMINATIVE, SINGULAR),
@@ -425,12 +430,57 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τισι", "someone something", NEUTER, DATIVE, PLURAL),
         new Word("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL),
         // 531
-        new Word("Χριστός", "Christ", MASCULINE, NOMINATIVE),
+        new Word("Χριστός", "Christ", MASCULINE),
         new Word("Χριστοῦ", "Christ", MASCULINE, GENITIVE),
         // 504
         new Word("ὡς", "as"),
         // 502
-        new Word("εἰ", "if")
+        new Word("εἰ", "if"),
+        // 499
+        new Word("οὖν", "therefore"),
+        // 476
+        new Word("κατά accusative", "according to"),
+        new Word("κατά genitive", "down from"),
+        // 473
+        new Word("μετά accusative", "after"),
+        new Word("μετά genitive", "with"),
+        // 455
+        new Word("ὁρω",	"I see ὁραω"),
+        new Word("ὀψομαι",	"I will see ὁραω", FUTURE),
+        new Word("εἰδον",	"I saw ὁραω", AORIST),
+        new Word("ἑωρακα",	"I have seen ὁραω", PERFECT),
+        new Word("ὠφθην",	"I was seen ὁραω", PASSIVE, AORIST),
+        // 428
+        new Word("ακουω", "I hear"),
+        new Word("ακουσω", "I will hear, ακουω", FUTURE),
+        new Word("ηκουσα", "I heard, ακουω", AORIST),
+        new Word("ακηκοα", "I have heard, ακουω", PERFECT),
+        new Word("ηκουσθην", "I was heard, ακουω", PASSIVE, AORIST),
+        // 418
+        new Word("πολύς", "many, much", MASCULINE),
+        new Word("πολλή", "many, much", FEMININE),
+        new Word("πολύ", "many, much", NEUTER),
+        // 417
+        new Word("διδωμι", "I give"),
+        new Word("δωσω", "I will give, διδωμι", FUTURE),
+        new Word("εδωκα", "I gave, διδωμι", AORIST),
+        new Word("δεδωκα", "I have given, διδωμι-Az", PERFECT),
+        new Word("δεδομαι", "I have given myself, διδωμι", MIDDLE, PERFECT),
+        new Word("δεδομαι", "I have been given, διδωμι", PASSIVE, PERFECT),
+        new Word("εδοθην", "I was given, διδωμι passive", PASSIVE, AORIST),
+        // 414
+        new Word("πατήρ", "father", MASCULINE),
+        new Word("πατρός", "father", MASCULINE, GENITIVE),
+        // 389
+        new Word("ἡμέρα", "day", FEMININE),
+        new Word("ἡμέρας", "day", FEMININE, GENITIVE),
+        // 379
+        new Word("πνεῦμα", "spirit, wind, breath", NEUTER),
+        new Word("πνεύματος", "spirit, wind, breath", NEUTER, GENITIVE),
+        // 377
+        new Word("υἱός", "son", MASCULINE),
+        new Word("υἱοῦ", "son", MASCULINE, GENITIVE)
+
     );
   }
 

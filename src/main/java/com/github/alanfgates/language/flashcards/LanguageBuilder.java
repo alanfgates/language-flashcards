@@ -21,6 +21,7 @@ import java.util.List;
 
 public interface LanguageBuilder {
 
+  String getLanguageName();
   List<Word> buildWords();
   List<GrammarRule> buildRules();
 }

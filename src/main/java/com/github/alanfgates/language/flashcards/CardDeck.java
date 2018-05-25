@@ -54,8 +54,10 @@ public class CardDeck implements Serializable {
         }
       }
       rules.addAll(builder.buildRules());
+      System.out.println("After adding " + builder.getLanguageName() + " deck size is " + m.size());
     }
     List<Flashcard> tmp = new ArrayList<>(m.values());
+    System.out.println("After shuffle have " + tmp.size() + " flashcards");
     Collections.shuffle(tmp);
     cards = new ArrayDeque<>(tmp);
   }
