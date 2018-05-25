@@ -339,7 +339,98 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐχω",	"I have", ACTIVE, PRESENT),
         new Word("ἑξω",	"I will have ἐχω", ACTIVE, FUTURE),
         new Word("ἐσχον", "I had ἐχω", ACTIVE, AORIST),
-        new Word("ἐσχηκα", "I have had ἐχω", ACTIVE, PERFECT)
+        new Word("ἐσχηκα", "I have had ἐχω", ACTIVE, PERFECT),
+        // 699
+        new Word("πρός accusative", "to, towards"),
+        // 669
+        new Word("γινομαι",	"I become, I am", ACTIVE, PRESENT),
+        new Word("γενησομαι", "I will become γινομαι", ACTIVE, FUTURE),
+        new Word("εγενομην", "I became γινομαι", ACTIVE, AORIST),
+        new Word("γεγονα", "I have become γινομαι", ACTIVE, PERFECT),
+        new Word("γεγενημαι", "I have been become γινομαι", MIDDLE, PERFECT), // TODO  figure out what this means
+        new Word("γεγενημαι", "I have been become γινομαι", PASSIVE, PERFECT), // TODO  figure out what this means
+        new Word("εγενηθην", "it became γινομαι", PASSIVE, AORIST), // TODO  figure out what this means
+        // 668
+        new Word("διά accusative", "on account of"),
+        new Word("διά genitive", "through"),
+        // 663
+        new Word("ἵνα", "in order that"),
+        // 646
+        new Word("ἀπό genitive", "from"),
+        // 638
+        new Word("ἀλλά", "but (strong)"),
+        // 634
+        new Word("ἐρχομαι", "I come, I go", ACTIVE, PRESENT),
+        new Word("ελευσομαι", "I will come/go 'ερχομαι", ACTIVE, FUTURE),
+        new Word("ηλθον", "I came/went, 'ερχομαι", ACTIVE, AORIST),
+        new Word("εληλθυα", "I have come/gone 'ερχομαι", ACTIVE, PERFECT),
+        // 579
+        new Word("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR),
+        new Word("τίνι", "who? what?", MASCULINE, DATIVE, SINGULAR),
+        new Word("τίνα", "who? what?", MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("τίς", "who? what?", FEMININE, NOMINATIVE, SINGULAR),
+        new Word("τίνος", "who? what?", FEMININE, GENITIVE, SINGULAR),
+        new Word("τίνι", "who? what?", FEMININE, DATIVE, SINGULAR),
+        new Word("τίνα", "who? what?", FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("τί", "who? what?", NEUTER, NOMINATIVE, SINGULAR),
+        new Word("τίνος", "who? what?", NEUTER, GENITIVE, SINGULAR),
+        new Word("τίνι", "who? what?", NEUTER, DATIVE, SINGULAR),
+        new Word("τί", "who? what?", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("τίνες", "who? what?", MASCULINE, NOMINATIVE, PLURAL),
+        new Word("τίνων", "who? what?", MASCULINE, GENITIVE, PLURAL),
+        new Word("τίσι", "who? what?", MASCULINE, DATIVE, PLURAL),
+        new Word("τίνας", "who? what?", MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("τίνες", "who? what?", FEMININE, NOMINATIVE, PLURAL),
+        new Word("τίνων", "who? what?", FEMININE, GENITIVE, PLURAL),
+        new Word("τίσι", "who? what?", FEMININE, DATIVE, PLURAL),
+        new Word("τίνας", "who? what?", FEMININE, ACCUSATIVE, PLURAL),
+        new Word("τίνα", "who? what?", NEUTER, NOMINATIVE, PLURAL),
+        new Word("τίνων", "who? what?", NEUTER, GENITIVE, PLURAL),
+        new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
+        new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
+        // 572
+        new Word("ποιω", "I do, I make ποιεω", ACTIVE, PRESENT),
+        new Word("ποιησω", "I will make/do ποιεω", ACTIVE, FUTURE),
+        new Word("εποιησα", "I did/made ποιεω", ACTIVE, AORIST),
+        new Word("πεποιηκα", "I have done/made ποιεω", ACTIVE, PERFECT),
+        new Word("πεποιημαι", "I have been done/made ποιεω", MIDDLE, PERFECT),
+        new Word("πεποιημαι", "I have been done/made ποιεω", PASSIVE, PERFECT),
+        // 550
+        new Word("ἄνθρωπος", "human being", MASCULINE, NOMINATIVE),
+        new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
+        // 538
+        new Word("τις", "someone something", MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("τινος", "someone something", MASCULINE, GENITIVE, SINGULAR),
+        new Word("τινα", "someone something", MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("τινι", "someone something", MASCULINE, DATIVE, SINGULAR),
+        new Word("τις", "someone something", FEMININE, NOMINATIVE, SINGULAR),
+        new Word("τινος", "someone something", FEMININE, GENITIVE, SINGULAR),
+        new Word("τινι", "someone something", FEMININE, DATIVE, SINGULAR),
+        new Word("τινα", "someone something", FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("τι", "someone something", NEUTER, NOMINATIVE, SINGULAR),
+        new Word("τινος", "someone something", NEUTER, GENITIVE, SINGULAR),
+        new Word("τινι", "someone something", NEUTER, DATIVE, SINGULAR),
+        new Word("τι", "someone something", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("τινες", "someone something", MASCULINE, NOMINATIVE, PLURAL),
+        new Word("τινων", "someone something", MASCULINE, GENITIVE, SINGULAR),
+        new Word("τισι", "someone something", MASCULINE, DATIVE, PLURAL),
+        new Word("τινας", "someone something", MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("τινες", "someone something", FEMININE, NOMINATIVE, PLURAL),
+        new Word("τινων", "someone something", FEMININE, GENITIVE, SINGULAR),
+        new Word("τισι", "someone something", FEMININE, DATIVE, PLURAL),
+        new Word("τινας", "someone something", FEMININE, ACCUSATIVE, PLURAL),
+        new Word("τινα", "someone something", NEUTER, NOMINATIVE, PLURAL),
+        new Word("τινων", "someone something", NEUTER, GENITIVE, SINGULAR),
+        new Word("τισι", "someone something", NEUTER, DATIVE, PLURAL),
+        new Word("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL),
+        // 531
+        new Word("Χριστός", "Christ", MASCULINE, NOMINATIVE),
+        new Word("Χριστοῦ", "Christ", MASCULINE, GENITIVE),
+        // 504
+        new Word("ὡς", "as"),
+        // 502
+        new Word("εἰ", "if")
     );
   }
 

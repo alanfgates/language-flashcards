@@ -253,7 +253,62 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE, SINGULAR),
         new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
         // 707
-        new Word( "אַחַר", "after")
+        new Word("אַחַר", "after"),
+        // 658
+        new Word("נָשָׂא", "he lifted, carried, took"),
+        // 629
+        new Word("אָח", "brother", MASCULINE, SINGULAR),
+        new Word("אַחִים", "brothers", MASCULINE, PLURAL),
+        // 627
+        new Word("קָם", "he arose, stood"),
+        // 606
+        new Word("שָׁלשׁ", "three", FEMININE),
+        new Word("שׁלֹשָׁה", "three", MASCULINE),
+        // 601
+        new Word("לֵב", "heart", MASCULINE, SINGULAR),
+        new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
+        new Word("לֵבָב", "heart", MASCULINE, SINGULAR),
+        new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
+        // 600
+        new Word("רֹאשׁ", "head", MASCULINE, SINGULAR),
+        new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
+        // 588
+        new Word("בַּת", "daughter", FEMININE, SINGULAR),
+        new Word("בָּנוֹת", "daughters", FEMININE, PLURAL),
+        // 583
+        new Word("מָיִם", "water", MASCULINE, SINGULAR),
+        new Word("מָיִם", "water", MASCULINE, PLURAL),
+        new Word("מֵי", "water", MASCULINE, SINGULAR, CONSTRUCT),
+        new Word("מֵי", "water", MASCULINE, PLURAL, CONSTRUCT),
+        new Word("מֵאָה", "hundred"),
+        // 577
+        new Word("כֹּה", "thus, here"),
+        // 560
+        new Word("גּוֹי", "nation", MASCULINE, SINGULAR),
+        new Word("גּוֹיִם", "nations", MASCULINE, PLURAL),
+        // 559
+        new Word("הַר", "mountain", MASCULINE, SINGULAR),
+        new Word("הָרִים", "mountains", MASCULINE, PLURAL),
+        // 554
+        new Word("עָבַר", "he passed over, passed through, passed by"),
+        // 545
+        new Word("אָדָם", "man, humankind", MASCULINE, SINGULAR),
+        // 528
+        new Word("שָׂם", "he put, set"),
+        // 526
+        new Word("גָּדוֹל", "great"),
+        // 524
+        new Word("עָמַד", "he stood"),
+        // 511
+        new Word("תַּחַת", "under, instead of"),
+        // 508
+        new Word("חָמַשׁ", "five", FEMININE),
+        new Word("חֲמִשָּׁה", "five", MASCULINE),
+        // 505
+        new Word("קוֹל", "voice, sound", MASCULINE, SINGULAR),
+        new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
+        // 501
+        new Word("הִכָּה", "he hit", HIPHIL)
     );
   }
 
