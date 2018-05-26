@@ -20,10 +20,10 @@ package com.github.alanfgates.language.flashcards;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.github.alanfgates.language.flashcards.Declension.*;
 import static com.github.alanfgates.language.flashcards.Gender.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
 import static com.github.alanfgates.language.flashcards.Mood.*;
+import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
 import static com.github.alanfgates.language.flashcards.Person.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.VerbRoot.*;
@@ -65,8 +65,8 @@ public class HebrewBuilder implements LanguageBuilder {
         // TODO QAL imperative, cohortative, and jussive, waiting until I get that far in the grammer
 
         // QAL Participle
-        new Word("שׁוֹמֵר", "guarding-Gams", QAL, PARTICIPLE, MASCULINE, SINGULAR),
-        new Word("שׁוֹמֶרֶת", "guarding-Gafs", QAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("שׁוֹמֵר", "guarding", QAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("שׁוֹמֶרֶת", "guarding", QAL, PARTICIPLE, FEMININE, SINGULAR),
         new Word("שׁוֹמְרִים", "guarding", QAL, PARTICIPLE, MASCULINE, PLURAL),
         new Word("שׁוֹמְרִוֹת", "guarding", QAL, PARTICIPLE, FEMININE, PLURAL),
 
@@ -102,7 +102,7 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 4942
         new Word("בֵּן", "son", MASCULINE),
-        new Word("בָּנִים", "son", MASCULINE, PLURAL),
+        new Word("בָּנִים", "sons", MASCULINE, PLURAL),
         // 4487
         new Word("כִּי", "that, because, when"),
         // 3576
@@ -391,7 +391,29 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בָּנָה", "he built"),
         new Word("אַשׁ", "fire", FEMININE),
         // 376
-        new Word("נְאֻם", "utterance-m", MASCULINE)
+        new Word("נְאֻם", "utterance-m", MASCULINE),
+        // 373
+        new Word("שַׁעַר", "gate", MASCULINE),
+        new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
+        new Word("טוֹב", "good", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("טוֹבָה", "good", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
+        // 371
+        new Word("הִגִיד", "he told, declared - נגד", HIPHIL),
+        // 363
+        new Word("רוּחַ", "spirit, breath, wind", FEMININE),
+        new Word("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL),
+        // 361
+        new Word("דָּם", "blood", MASCULINE),
+        new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
+        // 357
+        new Word("רַע", "bad, evils", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רָעָה", "bad, evils", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("רָעִים", "bad, evilp", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רָעוֹת", "bad, evilp", ADJECTIVE, FEMININE, PLURAL),
+        // 350
+        new Word("מָלַךּ", "he reigned")
 
     );
   }

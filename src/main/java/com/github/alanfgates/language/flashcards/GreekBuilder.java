@@ -479,7 +479,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πνεύματος", "spirit, wind, breath", NEUTER, GENITIVE),
         // 377
         new Word("υἱός", "son", MASCULINE),
-        new Word("υἱοῦ", "son", MASCULINE, GENITIVE)
+        new Word("υἱοῦ", "son", MASCULINE, GENITIVE),
+        // 353
+        new Word("εἷς", "one", MASCULINE),
+        new Word("μία", "one", FEMININE),
+        new Word("ἕν", "one", NEUTER)
 
     );
   }
