@@ -483,7 +483,24 @@ public class GreekBuilder implements LanguageBuilder {
         // 353
         new Word("εἷς", "one", MASCULINE),
         new Word("μία", "one", FEMININE),
-        new Word("ἕν", "one", NEUTER)
+        new Word("ἕν", "one", NEUTER),
+        // 343
+        new Word("ἀδελφός", "brother", MASCULINE),
+        new Word("ἀδελφοῦ", "brother", MASCULINE, GENITIVE),
+        new Word("ἤ", "or"),
+        // 333
+        new Word("ἐάν", "if"),
+        new Word("περί accusative", "around"),
+        new Word("περί genitive", "concerning, about"),
+        // 330
+        new Word("λόγος", "word", MASCULINE),
+        new Word("λόγου", "word", MASCULINE, GENITIVE),
+        // 324
+        new Word("οἶδα", "I know"),
+        // 319
+        new Word("ἑαυτοῦ", "himself", MASCULINE, GENITIVE),
+        new Word("ἑαυτῆς", "herself", FEMININE, GENITIVE),
+        new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE)
 
     );
   }

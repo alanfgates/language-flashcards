@@ -314,7 +314,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("קוֹל", "voice, sound", MASCULINE),
         new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
         // 501
-        new Word("הִכָּה", "he hit", HIPHIL),
+        new Word("הִכָּה", "he hit - נכה (he smote)", HIPHIL),
         // 498
         new Word("פֶה", "mouth", MASCULINE),
         new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT),
@@ -400,7 +400,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
         new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
         // 371
-        new Word("הִגִיד", "he told, declared - נגד", HIPHIL),
+        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL),
         // 363
         new Word("רוּחַ", "spirit, breath, wind", FEMININE),
         new Word("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL),
@@ -408,13 +408,47 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("דָּם", "blood", MASCULINE),
         new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
-        new Word("רַע", "bad, evils", ADJECTIVE, MASCULINE, SINGULAR),
-        new Word("רָעָה", "bad, evils", ADJECTIVE, FEMININE, SINGULAR),
-        new Word("רָעִים", "bad, evilp", ADJECTIVE, MASCULINE, PLURAL),
-        new Word("רָעוֹת", "bad, evilp", ADJECTIVE, FEMININE, PLURAL),
+        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רָעָה", "bad, evil", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL),
         // 350
-        new Word("מָלַךּ", "he reigned")
-
+        new Word("מָלַךּ", "he reigned"),
+        // 348
+        new Word("אֹהֶל", "tent", MASCULINE),
+        new Word("אֹהָלִים", "tents", MASCULINE, PLURAL),
+        // 338
+        new Word("סָבִיב", "all around"),
+        // 337
+        new Word("עֲשָׂרה", "ten", MASCULINE),
+        new Word("עָשָׂר", "ten", FEMININE),
+        // 330
+        new Word("עֵץ", "tree", MASCULINE),
+        new Word("עֵצִים", "trees", MASCULINE, PLURAL),
+        // 327
+        new Word("בֵּרֵךּ", "he blessed - ברך (he kenlt, he blessed)", PIEL),
+        // 325
+        new Word("כְּלִי", "utensil, weapon", MASCULINE),
+        new Word("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL),
+        // 321
+        new Word("שָׂדֶה", "open field, country", MASCULINE),
+        new Word("שָׂדוֹת", "open fields, country", MASCULINE, PLURAL),
+        new Word("אוֹ", "or"),
+        // 319
+        new Word("מִלְחָמָה", "war, battle", FEMININE),
+        new Word("מִלְחָמוֹת", "wars, battles", FEMININE, PLURAL),
+        // 318
+        new Word("יָרֵא", "he feared"),
+        // 317
+        new Word("עָנָה", "he answered"),
+        new Word("נָבִיא", "prophet", MASCULINE),
+        new Word("נְבִיאִים", "prophets", MASCULINE, PLURAL),
+        // 311
+        new Word("רָעָה", "evil, misery, distress", NOUN, FEMININE),
+        // 304
+        new Word("פָּקַד", "he attended to, appointed, mustered, visited"),
+        new Word("מִשְׁפָּחָה", "family", FEMININE),
+        new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL)
     );
   }
 
