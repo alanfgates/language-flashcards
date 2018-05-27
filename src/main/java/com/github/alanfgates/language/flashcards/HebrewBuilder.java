@@ -448,7 +448,33 @@ public class HebrewBuilder implements LanguageBuilder {
         // 304
         new Word("פָּקַד", "he attended to, appointed, mustered, visited"),
         new Word("מִשְׁפָּחָה", "family", FEMININE),
-        new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL)
+        new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL),
+        // 298
+        new Word("סָר", "he turned aside - סור"),
+        new Word("חַטָּאת", "sin, sin offering", FEMININE),
+        new Word("לֶחֶם", "bread, food", MASCULINE),
+        new Word("מְאֹד", "very"),
+        // 296
+        new Word("עַת", "time", FEMININE),
+        // 290
+        new Word("חָזַק", "he was strong"),
+        // 289
+        new Word("כָּרַת", "he cut off"),
+        new Word("עָבַד", "he worked, he served"),
+        // 288
+        new Word("עֹלָה", "burnt offering", FEMININE),
+        new Word("עֹלוֹת", "burnt offerings", FEMININE, PLURAL),
+        // 287
+        new Word("חָיָה", "he lived"),
+        // 284
+        new Word("אָיַב", "he was hostile"),
+        new Word("בְּרִית", "covenant", FEMININE),
+        // 283
+        new Word("חֹדֶשׁ", "month", MASCULINE),
+        new Word("חֳדָשִׁים", "months", MASCULINE, PLURAL),
+        // 280
+        new Word("קָרַב", "he came near, he offered")
+
     );
   }
 

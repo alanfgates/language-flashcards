@@ -500,7 +500,16 @@ public class GreekBuilder implements LanguageBuilder {
         // 319
         new Word("ἑαυτοῦ", "himself", MASCULINE, GENITIVE),
         new Word("ἑαυτῆς", "herself", FEMININE, GENITIVE),
-        new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE)
+        new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE),
+        // 296
+        new Word("λαλω", "I speak"),
+        new Word("λαλησω", "I will speak, λαλεω", FUTURE),
+        new Word("ελαλησα", "I spoke, λαλεω", AORIST),
+        new Word("λελαληκα", "I have spoken, λαλεω", PERFECT),
+        new Word("λελαλημαι", "I have spoken myself, λαλεω", MIDDLE, PERFECT),
+        new Word("λελαλημαι", "I have been spoken, λαλεω", PASSIVE, PERFECT),
+        new Word("ελαληθην", "I was spoken, λαλεω", PASSIVE, AORIST)
+
 
     );
   }
