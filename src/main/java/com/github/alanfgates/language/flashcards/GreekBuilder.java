@@ -508,7 +508,21 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λελαληκα", "I have spoken, λαλεω", PERFECT),
         new Word("λελαλημαι", "I have spoken myself, λαλεω", MIDDLE, PERFECT),
         new Word("λελαλημαι", "I have been spoken, λαλεω", PASSIVE, PERFECT),
-        new Word("ελαληθην", "I was spoken, λαλεω", PASSIVE, AORIST)
+        new Word("ελαληθην", "I was spoken, λαλεω", PASSIVE, AORIST),
+        // 273
+        new Word("οὐρανός", "heaven", MASCULINE),
+        new Word("οὐρανοῦ", "heaven", MASCULINE, GENITIVE),
+        // 261
+        new Word("μαθητής", "student, disciple", MASCULINE),
+        new Word("μαθητοῦ", "student, disciple", MASCULINE, GENITIVE),
+        // 258
+        new Word("λαμβανω", "I take, I receive"),
+        new Word("λημψομαι", "I will take/receive, λαμβανω", PRESENT),
+        new Word("ελαβον", "I took/received, λαμβανω", AORIST),
+        new Word("ειληφα", "I have taken/received, λαμβανω", PERFECT),
+        // 250
+        new Word("γῆ", "land, earth", FEMININE),
+        new Word("γῆς", "land, earth", FEMININE, GENITIVE)
 
 
     );

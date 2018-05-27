@@ -214,6 +214,11 @@ public class HebrewBuilder implements LanguageBuilder {
         // 864
         new Word("שֵׁם", "name", MASCULINE),
         new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
+        // 853 (601 for לב and 252 for לבב )
+        new Word("לֵב", "heart", MASCULINE),
+        new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
+        new Word("לֵבָב", "heart", MASCULINE),
+        new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
         // 847
         new Word("שָׁלַח", "he sent"),
         // 845
@@ -270,11 +275,6 @@ public class HebrewBuilder implements LanguageBuilder {
         // 606
         new Word("שָׁלשׁ", "three", FEMININE),
         new Word("שׁלֹשָׁה", "three", MASCULINE),
-        // 601
-        new Word("לֵב", "heart", MASCULINE),
-        new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
-        new Word("לֵבָב", "heart", MASCULINE),
-        new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
         // 600
         new Word("רֹאשׁ", "head", MASCULINE),
         new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
@@ -473,7 +473,41 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חֹדֶשׁ", "month", MASCULINE),
         new Word("חֳדָשִׁים", "months", MASCULINE, PLURAL),
         // 280
-        new Word("קָרַב", "he came near, he offered")
+        new Word("קָרַב", "he came near, he offered"),
+        // 277
+        new Word("אַף", "nose, anger", MASCULINE),
+        new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
+        // 274
+        new Word("צֹאן", "flock, sheep", FEMININE),
+        new Word("צֹאן", "flock, sheep", FEMININE, PLURAL),
+        new Word("שִׁשָׁה", "six", MASCULINE),
+        new Word("שַׁשׁ", "six", FEMININE),
+        // 272
+        new Word("אֶבֶן", "stone", FEMININE),
+        new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
+        new Word("לְמַעַן", "because of, in order to, for the sake of"),
+        // 270
+        new Word("בָּשָׂר", "flesh", MASCULINE),
+        new Word("בְּשָׂרִים", "fleshes", MASCULINE, PLURAL),
+        new Word("מִדְבָּר", "wilderness", MASCULINE),
+        // 268
+        new Word("חַיִּים", "life", MASCULINE),
+        new Word("חַיִּים", "lifes", MASCULINE, PLURAL),
+        // 264
+        new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רְשָׁעָה", "wicked", ADJECTIVE, FEMININE, SINGULAR),
+        // 252
+        new Word("מַטֶּה", "tribe, staff", MASCULINE), // TODO double check this is masculine
+        new Word("מָטּוֹת", "tribes, staffs", MASCULINE, PLURAL),
+        // 251
+        new Word("רֶגֶל", "foot", FEMININE),
+        new Word("רַגְלַיִם", "feet", FEMININE, DUAL),
+        // 250
+        new Word("מָלֵא", "he filled"),
+        new Word("אַמָּה", "cubit", FEMININE),
+        new Word("אַמּוֹת", "cubits", FEMININE, PLURAL)
+
 
     );
   }

@@ -47,11 +47,12 @@ public class Main {
       if (cli.hasOption("h")) {
         usage(options);
       } else if (cli.hasOption("s")) {
-        CardDeck.storeDeck(filename, new CardDeck());
+        CardDeck deck = new CardDeck();
+        deck.storeDeck(filename);
       } else if (cli.hasOption("t")) {
-        CardDeck deck = CardDeck.readDeck(filename);
+        CardDeck deck = new CardDeck(filename);
         deck.daily(testNumber);
-        CardDeck.storeDeck(filename, deck);
+        deck.storeDeck(filename);
       } else {
         System.err.println("I'm not really sure what you're looking for here, my friend.");
         usage(options);

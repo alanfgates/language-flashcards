@@ -34,12 +34,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class CardDeck implements Serializable {
+class CardDeck implements Serializable {
 
   private Deque<Flashcard> cards;
   private List<GrammarRule> rules;
 
-  public CardDeck() {
+  CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
     rules = new ArrayList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
@@ -62,7 +62,14 @@ public class CardDeck implements Serializable {
     cards = new ArrayDeque<>(tmp);
   }
 
-  public void daily(int numToTest) throws IOException {
+  CardDeck(String filename) throws IOException, ClassNotFoundException {
+    ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
+    cards = (Deque<Flashcard>)in.readObject();
+    rules = (List<GrammarRule>)in.readObject();
+    in.close();
+  }
+
+  void daily(int numToTest) throws IOException {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     rules.get(new Random().nextInt(rules.size())).show();
@@ -82,14 +89,11 @@ public class CardDeck implements Serializable {
     }
   }
 
-  public static void storeDeck(String filename, CardDeck deck) throws IOException {
+  void storeDeck(String filename) throws IOException {
     ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename));
-    out.writeObject(deck);
+    out.writeObject(cards);
+    out.writeObject(rules);
     out.close();
   }
 
-  public static CardDeck readDeck(String filename) throws IOException, ClassNotFoundException {
-    ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
-    return (CardDeck)in.readObject();
-  }
 }
