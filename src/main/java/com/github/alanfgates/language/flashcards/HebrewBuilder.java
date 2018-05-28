@@ -506,9 +506,91 @@ public class HebrewBuilder implements LanguageBuilder {
         // 250
         new Word("מָלֵא", "he filled"),
         new Word("אַמָּה", "cubit", FEMININE),
-        new Word("אַמּוֹת", "cubits", FEMININE, PLURAL)
-
-
+        new Word("אַמּוֹת", "cubits", FEMININE, PLURAL),
+        // 249
+        new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE),
+        new Word("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL),
+        // 245
+        new Word("חַיַל", "strength, wealth, army", MASCULINE),
+        new Word("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL),
+        // 241
+        new Word("גְּבוּל", "border", MASCULINE),
+        // 240
+        new Word("נַעַר", "boy, youth", MASCULINE),
+        new Word("נְעָרִים", "boys, youths-mp", MASCULINE, PLURAL),
+        // 239
+        new Word("חָטָא", "he sinned, he missed"),
+        // 237
+        new Word("שָׁלוֹם", "peace, completeness", MASCULINE),
+        // 236
+        new Word("אֵל", "god", MASCULINE),
+        // 235
+        new Word("םַעֲשֶׂה", "work, deed", MASCULINE),
+        new Word("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL),
+        // 233
+        new Word("עָוֹן", "iniquity", MASCULINE),
+        new Word("עֲוֹנוֹת", "iniquities", MASCULINE, PLURAL),
+        // 232
+        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed"),
+        // 229
+        new Word("זֶרַע", "seed", MASCULINE),
+        // 227
+        new Word("לַיְלָה", "night", MASCULINE),
+        new Word("לֵילוֹת", "nights", MASCULINE, PLURAL),
+        new Word("קֶרֶב", "midst, inward part", MASCULINE),
+        // 225
+        new Word("בִּקֵּשׁ", "he sought", PIEL),
+        new Word("זָכַר", "he remembered"),
+        new Word("כָּתַב", "he wrote"),
+        // 223
+        new Word("מוֹעַד", "appointed time, place", MASCULINE),
+        new Word("מוֹעֲדִים", "appointed times, places", MASCULINE, PLURAL),
+        new Word("תּוֹרָה", "law, instruction", FEMININE),
+        new Word("תּוֹרוֹת", "laws, instructions", FEMININE, PLURAL),
+        // 222
+        new Word("נַחֲלָה", "possession", FEMININE),
+        new Word("נְחָלוֹת", "possessions", FEMININE, PLURAL),
+        new Word("אֲדָמָה", "land, ground, earth", FEMININE),
+        new Word("אֲדָמוֹת", "lands, groundsp", FEMININE, PLURAL),
+        // 220
+        new Word("אֵם", "mother", FEMININE),
+        // 219
+        new Word("נָכְוֹן", "he was firm, established, prepared", NIPHAL),
+        // 217
+        new Word("אָהַב", "he loved"),
+        new Word("שָׁתָה", "he drank"),
+        // 216
+        new Word("נָטָה", "he stretched out"),
+        new Word("בֶּגֶד", "garmet", MASCULINE),
+        new Word("בְּגָדִים", "garmets", MASCULINE, PLURAL),
+        // 215
+        new Word("יָסַף", "he added, he did again"),
+        new Word("מַחֲנֶה", "camp", MASCULINE),
+        new Word("מַחֲנֶה", "camp", FEMININE),
+        new Word("מַחַנוֹת", "camps", MASCULINE, PLURAL),
+        new Word("מַחַנוֹת", "camps", FEMININE, PLURAL),
+        // 214
+        new Word("עָזַב", "he forsook, left"),
+        // 213
+        new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL),
+        new Word("שָׁכַב", "he layed down"),
+        new Word("בֹּקֶר", "morning", MASCULINE),
+        new Word("בְּקָרִים", "mornings", MASCULINE, PLURAL),
+        new Word("מַלְאָךּ", "messenger", MASCULINE),
+        new Word("מַלְאָכִים", "messengers", MASCULINE, PLURAL),
+        // 211
+        new Word("מִנְחָה", "gift, tribute, offering", FEMININE),
+        // 208
+        new Word("כָּלָה", "he completed"),
+        // 206
+        new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE),
+        new Word("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL),
+        // 204
+        new Word("שָׁפַת", "he judged"),
+        // 202
+        new Word("אֲרוֹן", "ark, chest", MASCULINE),
+        // 200
+        new Word("אָסַף", "he gathered")
     );
   }
 

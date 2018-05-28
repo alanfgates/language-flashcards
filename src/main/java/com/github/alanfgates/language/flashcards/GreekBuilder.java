@@ -26,6 +26,7 @@ import static com.github.alanfgates.language.flashcards.Mood.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
 import static com.github.alanfgates.language.flashcards.Other.*;
 import static com.github.alanfgates.language.flashcards.Person.*;
+import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 
@@ -522,7 +523,68 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ειληφα", "I have taken/received, λαμβανω", PERFECT),
         // 250
         new Word("γῆ", "land, earth", FEMININE),
-        new Word("γῆς", "land, earth", FEMININE, GENITIVE)
+        new Word("γῆς", "land, earth", FEMININE, GENITIVE),
+        // 249
+        new Word("πιστεύω", "I believe"),
+        new Word("πιστεύσω", "I will believe, πιστευω", FUTURE),
+        new Word("ἐπίστευσα", "I believed, πιστευω", AORIST),
+        new Word("πεπίστευκα", "I have believed, πιστευω", PERFECT),
+        new Word("πεπίστευμαι", "I have believed myself, πιστευω", MIDDLE, PERFECT),
+        new Word("πεπίστευμαι", "I have been believed, πιστευω", PASSIVE, PERFECT),
+        new Word("ἐπιστεύθην", "I was believed, πιστευω", PASSIVE, AORIST),
+        // 245
+        new Word("μέγας", "large, great", MASCULINE),
+        new Word("μεγάλη", "large, great", FEMININE),
+        new Word("μέγα", "large, great", NEUTER),
+        // 243
+        new Word("πίστις", "faith, trust", FEMININE),
+        new Word("πίστεως", "faith, trust", FEMININE, GENITIVE),
+        // 242
+        new Word("γινώσκω", "I know"),
+        new Word("γνώσομαι", "I will know γινωσκω", FUTURE),
+        new Word("ἔγνων", "I knew γινωσκω", AORIST),
+        new Word("ἔγνωσκα", "I have known γινωσκω", PERFECT),
+        new Word("ἔγνωσμαι", "I have known myself γινωσκω", MIDDLE, PERFECT),
+        new Word("ἔγνωσμαι", "I have been known γινωσκω", PASSIVE, PERFECT),
+        new Word("ἐγνώσθην", "I was known γινωσκω", PASSIVE, AORIST),
+        // 234
+        new Word("ὄνομα", "name", MASCULINE),
+        new Word("ὄνοματος", "name", MASCULINE, GENITIVE),
+        // 233
+        new Word("ἅγιος", "holy", ADJECTIVE, MASCULINE),
+        new Word("ἅγια", "holy", ADJECTIVE, FEMININE),
+        new Word("ἅγιον", "holy", ADJECTIVE, NEUTER),
+        // 231
+        new Word("ἀποκρίνομαι", "I answer"),
+        new Word("ἀπεκρινἀμην", "I answered αποκρινομαιa", AORIST),
+        new Word("ἀπεκρίθην", "I was answered αποκρινομαιa", PASSIVE, AORIST),
+        // 220
+        new Word("ὑπό accusaive", "under"),
+        new Word("ὑπό genitive", "by"),
+        // 220
+        new Word("ὑπό accusaive", "under"),
+        new Word("ὑπό genitive", "by"),
+        // 218
+        new Word("ἐξέρχομαι", "I go out"),
+        new Word("ἐξελεὐσομαι", "I will go out εξερχομαι", FUTURE),
+        new Word("ἐξῆλθον", "I went out εξερχομαι", AORIST),
+        new Word("ἐξελήλυθα", "I have gone out εξερχομαι", PERFECT),
+        // 216
+        new Word("ἀνήρ", "man", MASCULINE),
+        new Word("ἀνδρός", "man", MASCULINE, GENITIVE),
+        // 215
+        new Word("γυνή", "woman", FEMININE),
+        new Word("γυναικός", "woman", FEMININE, GENITIVE),
+        new Word("τέ", "and, so"),
+        // 210
+        new Word("δύναμαι", "I am able"),
+        new Word("δυνήσομαι", "I will be able, δυναμαι", FUTURE),
+        new Word("ἠδυνήθην",	"I was enabled (?) δυναμαι", PASSIVE, AORIST),
+        // 208
+        new Word("θέλω", "I want"),
+        new Word("ἠθέλησα", "I wanted θελω", AORIST),
+        new Word("ὅυτω", "thus"),
+        new Word("ὅυτως", "thus")
 
 
     );
@@ -692,7 +754,6 @@ public class GreekBuilder implements LanguageBuilder {
             " * Positive: uncompared e.g μεγας large\n" +
             " * Comparative: greater of two items: e.g. μειζων larger\n" +
             " * Superlative: greatest, or comparison of 3 or more e.g. μεγιστος largest\n" +
-            "   (Note, superlative was dying off in Koine Greek and thus we often see comparative\n" +
             "    where English would expect a superlative")
 
         // Continue with chapter 14 page 113
