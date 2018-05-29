@@ -584,9 +584,32 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("θέλω", "I want"),
         new Word("ἠθέλησα", "I wanted θελω", AORIST),
         new Word("ὅυτω", "thus"),
-        new Word("ὅυτως", "thus")
-
-
+        new Word("ὅυτως", "thus"),
+        // 195
+        new Word("Ἰοὐδαῖος", "jewish", ADJECTIVE, MASCULINE),
+        new Word("Ἰοὐδαῖα", "jewish", ADJECTIVE, FEMININE),
+        new Word("Ἰοὐδαῖον", "jewish", ADJECTIVE, NEUTER),
+        // 194
+        new Word("παρά accusative", "alongside of"),
+        new Word("παρά genitive", "from"),
+        new Word("παρά dative", "in the presence of"),
+        new Word("εισερχομαι", "I enter"),
+        new Word("εἰσελεύσομαι", "I will enter εισερχομαι", FUTURE),
+        new Word("εἰσῆλθον", "I entered εισερχομαι", AORIST),
+        new Word("εἰσελήλυθα", "I have entered εισερχομαι", PERFECT),
+        // 191
+        new Word("γραφω", "I write"),
+        new Word("γράψω", "I will write γραφω", FUTURE),
+        new Word("ἔγραψα", "I wrote γραφω", AORIST),
+        new Word("γέγραφα", "I have written γράφω", PERFECT),
+        new Word("γέγραμμαι", "I have written myself γράφω", MIDDLE, PERFECT),
+        new Word("γέγραμμαι", "I have been written γράφω", PASSIVE, PERFECT),
+        new Word("ἐγράφην", "I was written γράφω", PASSIVE, AORIST),
+        // 186
+        new Word("κόσμος", "world", MASCULINE),
+        new Word("κόσμου", "world", MASCULINE, GENITIVE),
+        // 182
+        new Word("καθώς", "just as")
     );
   }
 

@@ -17,6 +17,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import jdk.nashorn.api.scripting.AbstractJSObject;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -391,7 +393,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בָּנָה", "he built"),
         new Word("אַשׁ", "fire", FEMININE),
         // 376
-        new Word("נְאֻם", "utterance-m", MASCULINE),
+        new Word("נְאֻם", "utterance", MASCULINE),
         // 373
         new Word("שַׁעַר", "gate", MASCULINE),
         new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
@@ -517,7 +519,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("גְּבוּל", "border", MASCULINE),
         // 240
         new Word("נַעַר", "boy, youth", MASCULINE),
-        new Word("נְעָרִים", "boys, youths-mp", MASCULINE, PLURAL),
+        new Word("נְעָרִים", "boys, youths", MASCULINE, PLURAL),
         // 239
         new Word("חָטָא", "he sinned, he missed"),
         // 237
@@ -590,7 +592,50 @@ public class HebrewBuilder implements LanguageBuilder {
         // 202
         new Word("אֲרוֹן", "ark, chest", MASCULINE),
         // 200
-        new Word("אָסַף", "he gathered")
+        new Word("אָסַף", "he gathered"),
+        // 199
+        new Word("כָּבוֹד", "abundance, honor, glory", MASCULINE),
+        // 195
+        new Word("רוּם", "he was high, exalted"),
+        new Word("כַּף", "palm of the hand, sole of the foot", FEMININE),
+        new Word("כַּפוֹת", "palms of the hands, soles of the feet", FEMININE, PLURAL),
+        // 194
+        new Word("יָכוֹל", "he was able"),
+        // 193
+        new Word("שֶׁמֶן", "fat, oil", MASCULINE),
+        new Word("שְמָנִים", "fats, oils", MASCULINE, PLURAL),
+        // 191
+        new Word("חֲצֵרִים", "settlements, villages", MASCULINE),
+        new Word("חֲצֵרִים", "settlements, villages", MASCULINE, PLURAL),
+        // 190
+        new Word("בְּהֵמָה", "beast", FEMININE),
+        new Word("בְּהֵמוֹת", "beasts", FEMININE, PLURAL),
+        new Word("שָׁבֶט", "scepter, rod, tribe", MASCULINE),
+        new Word("שְׁבָטִים", "scepters, rods, tribes", MASCULINE, PLURAL),
+        // 188
+        new Word("אֹזֶן", "ear", FEMININE),
+        new Word("אָזְנַיִם", "ears", FEMININE, DUAL),
+        // 187
+        new Word("גָלָה", "he removed, uncovered, departed"),
+        new Word("סֵפֶר", "document, book", MASCULINE),
+        new Word("סְפָרִים", "documents, books", MASCULINE, PLURAL),
+        new Word("רֵעַ", "friend, companion, fellow", MASCULINE),
+        new Word("רֵעִים", "friends, companions, fellows", MASCULINE, PLURAL),
+        // 186
+        new Word("שָׁבַע", "he swore"),
+        // 185
+        new Word("אָבַד", "he perished"),
+        // 184
+        new Word("מִצְוָה", "commandment", FEMININE),
+        new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
+        // 183
+        new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
+        new Word("בּקָרִים", "herds, oxen", MASCULINE, PLURAL),
+        // 182
+        new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
+        new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רִאשֹׁנָה", "first, former", ADJECTIVE, FEMININE),
+        new Word("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL)
     );
   }
 
