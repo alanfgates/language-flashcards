@@ -635,7 +635,33 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
         new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רִאשֹׁנָה", "first, former", ADJECTIVE, FEMININE),
-        new Word("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL)
+        new Word("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL),
+        // 179
+        new Word("זָקֵן", "old", ADJECTIVE, MASCULINE),
+        new Word("זְקֵנִים", "old", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("זְקֵנוֹת", "old", ADJECTIVE, FEMININE, PLURAL),
+        // 178
+        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL),
+        new Word("רָבָה", "he was(became) great/many"),
+        new Word("שָֹפָה", "lip", FEMININE),
+        new Word("שְׂפָתַיִם", "lips,", FEMININE, DUAL),
+        // 174
+        new Word("שָאַל", "he asked"),
+        // 173
+        new Word("שָׁחָה", "he bowed down"),
+        // 171
+        new Word("בִּין", "he discerned, understood"),
+        new Word("לָחַם", "he fought, did battle"),
+        new Word("קָדַשׁ", "he was consecrated, he consecrated"),
+        // 170
+        new Word("בָּחַר", "he chose"),
+        // 167
+        new Word("חָרַב", "he attacked, he slew"),
+        new Word("רָעָה", "he pastured, tended, grazed"),
+        new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
+        new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
+        new Word("מְלָאכָה", "work, occupation", FEMININE),
+        new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL)
     );
   }
 
