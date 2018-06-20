@@ -286,8 +286,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ερω", "I will say λεγω", FUTURE),
         new Word("ειπον", "I said λεγω", AORIST),
         new Word("ειρηκα", "I have said λεγω", PERFECT),
-        new Word("ειρημαι", "I have been said λεγω", MIDDLE, PERFECT),
-        new Word("ειρημαι", "I have been said λεγω", PASSIVE, PERFECT),
+        new Word("ειρημαι", "I have been said λεγω", MIDDLE, PASSIVE, PERFECT),
         new Word("ερρεθην", "I was said λεγω", PASSIVE, AORIST),
         // 1768
         new Word("εἰς accusative", "into"),
@@ -353,9 +352,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γενησομαι", "I will become γινομαι", FUTURE),
         new Word("εγενομην", "I became γινομαι", AORIST),
         new Word("γεγονα", "I have become γινομαι", PERFECT),
-        new Word("γεγενημαι", "I have been become γινομαι", MIDDLE, PERFECT), // TODO  figure out what this means
-        new Word("γεγενημαι", "I have been become γινομαι", PASSIVE, PERFECT), // TODO  figure out what this means
-        new Word("εγενηθην", "it became γινομαι", PASSIVE, AORIST), // TODO  figure out what this means
+        new Word("γεγενημαι", "I have been made, caused to happen γινομαι", MIDDLE, PASSIVE, PERFECT),
+        new Word("εγενηθην", "it happened γινομαι", PASSIVE, AORIST),
         // 668
         new Word("διά accusative", "on account of"),
         new Word("διά genitive", "through"),
@@ -400,8 +398,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ποιησω", "I will make/do ποιεω", FUTURE),
         new Word("εποιησα", "I did/made ποιεω", AORIST),
         new Word("πεποιηκα", "I have done/made ποιεω", PERFECT),
-        new Word("πεποιημαι", "I have been done/made ποιεω", MIDDLE, PERFECT),
-        new Word("πεποιημαι", "I have been done/made ποιεω", PASSIVE, PERFECT),
+        new Word("πεποιημαι", "I have been done/made ποιεω", MIDDLE, PASSIVE, PERFECT),
         // 550
         new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
@@ -466,8 +463,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("δωσω", "I will give, διδωμι", FUTURE),
         new Word("εδωκα", "I gave, διδωμι", AORIST),
         new Word("δεδωκα", "I have given, διδωμι", PERFECT),
-        new Word("δεδομαι", "I have given myself, διδωμι", MIDDLE, PERFECT),
-        new Word("δεδομαι", "I have been given, διδωμι", PASSIVE, PERFECT),
+        new Word("δεδομαι", "I have been given, διδωμι", MIDDLE, PASSIVE, PERFECT),
         new Word("εδοθην", "I was given, διδωμι passive", PASSIVE, AORIST),
         // 414
         new Word("πατήρ", "father", MASCULINE),
@@ -507,8 +503,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λαλησω", "I will speak, λαλεω", FUTURE),
         new Word("ελαλησα", "I spoke, λαλεω", AORIST),
         new Word("λελαληκα", "I have spoken, λαλεω", PERFECT),
-        new Word("λελαλημαι", "I have spoken myself, λαλεω", MIDDLE, PERFECT),
-        new Word("λελαλημαι", "I have been spoken, λαλεω", PASSIVE, PERFECT),
+        new Word("λελαλημαι", "I have been spoken, λαλεω", MIDDLE, PASSIVE, PERFECT),
         new Word("ελαληθην", "I was spoken, λαλεω", PASSIVE, AORIST),
         // 273
         new Word("οὐρανός", "heaven", MASCULINE),
@@ -529,8 +524,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πιστεύσω", "I will believe, πιστευω", FUTURE),
         new Word("ἐπίστευσα", "I believed, πιστευω", AORIST),
         new Word("πεπίστευκα", "I have believed, πιστευω", PERFECT),
-        new Word("πεπίστευμαι", "I have believed myself, πιστευω", MIDDLE, PERFECT),
-        new Word("πεπίστευμαι", "I have been believed, πιστευω", PASSIVE, PERFECT),
+        new Word("πεπίστευμαι", "I have been believed, πιστευω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐπιστεύθην", "I was believed, πιστευω", PASSIVE, AORIST),
         // 245
         new Word("μέγας", "large, great", MASCULINE),
@@ -544,8 +538,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γνώσομαι", "I will know γινωσκω", FUTURE),
         new Word("ἔγνων", "I knew γινωσκω", AORIST),
         new Word("ἔγνωσκα", "I have known γινωσκω", PERFECT),
-        new Word("ἔγνωσμαι", "I have known myself γινωσκω", MIDDLE, PERFECT),
-        new Word("ἔγνωσμαι", "I have been known γινωσκω", PASSIVE, PERFECT),
+        new Word("ἔγνωσμαι", "I have been known γινωσκω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐγνώσθην", "I was known γινωσκω", PASSIVE, AORIST),
         // 234
         new Word("ὄνομα", "name", MASCULINE),
@@ -558,9 +551,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀποκρίνομαι", "I answer"),
         new Word("ἀπεκρινἀμην", "I answered αποκρινομαιa", AORIST),
         new Word("ἀπεκρίθην", "I was answered αποκρινομαιa", PASSIVE, AORIST),
-        // 220
-        new Word("ὑπό accusaive", "under"),
-        new Word("ὑπό genitive", "by"),
         // 220
         new Word("ὑπό accusaive", "under"),
         new Word("ὑπό genitive", "by"),
@@ -602,8 +592,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γράψω", "I will write γραφω", FUTURE),
         new Word("ἔγραψα", "I wrote γραφω", AORIST),
         new Word("γέγραφα", "I have written γράφω", PERFECT),
-        new Word("γέγραμμαι", "I have written myself γράφω", MIDDLE, PERFECT),
-        new Word("γέγραμμαι", "I have been written γράφω", PASSIVE, PERFECT),
+        new Word("γέγραμμαι", "I have been written γράφω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐγράφην", "I was written γράφω", PASSIVE, AORIST),
         // 186
         new Word("κόσμος", "world", MASCULINE),
@@ -664,8 +653,8 @@ public class GreekBuilder implements LanguageBuilder {
         // 155
         new Word("ἱστημι", "Transitive: I set, put, place Intransitive: I stand, I appear, I stop"),
         new Word("στήσω", "I will stand, ἱστημι", FUTURE),
-        new Word("ἔστησα", "I put, set ἱστημι", SECOND_AORIST),
-        new Word("ἔστην", "I stood ἱστημι", AORIST), // TODO check I got AORIST & SECOND_AORIST right here
+        new Word("ἔστησα", "I put, set ἱστημι", AORIST),
+        new Word("ἔστην", "I stood ἱστημι", SECOND_AORIST),
         new Word("ἔστηκα", "I have stood ἱστημι", PERFECT),
         new Word("ἐστάθην", "I was put ἱστημιa", PASSIVE, AORIST),
         new Word("ἀλλος", "other", ADJECTIVE, MASCULINE),
@@ -676,8 +665,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 153
         new Word("πορευομαι", "I go"),
         new Word("πορεύσομαι", "I will go πορευομαι", FUTURE),
-        new Word("πεπόρευμαι", "I have taken myself πορευομαι", MIDDLE, PERFECT),
-        new Word("πεπόρευμαι", "I have been taken πορευομαι", PASSIVE, PERFECT),
+        new Word("πεπόρευμαι", "I have been taken πορευομαι", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐπορεὐθην", "I was taken πορευομαι", PASSIVE, AORIST),
         // 152
         new Word("φημι", "I say"),
@@ -689,8 +677,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("καλἐσω", "I will call καλεω", FUTURE),
         new Word("ἐκάλεσα", "I called καλεω", AORIST),
         new Word("κέκληκα", "I have called καλεω", PERFECT),
-        new Word("κέκλημαι", "I have called myself καλεω", MIDDLE, PERFECT),
-        new Word("κέκλημαι", "I have been called καλεω", PASSIVE, PERFECT),
+        new Word("κέκλημαι", "I have been called καλεω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐκλήθην", "I was called καλεω", PASSIVE, AORIST),
         // 147
         new Word("σαρξ", "flesh", FEMININE),
@@ -699,8 +686,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀγαπήσω", "I will love ἀγαπαω", FUTURE),
         new Word("ἠγάπησα", "I loved ἀγαπαω", AORIST),
         new Word("ἠγάπηκα", "I have loved ἀγαπαω", PERFECT),
-        new Word("ἠγάπημαι", "I have loved myself ἀγαπαω", MIDDLE, PERFECT),
-        new Word("ἠγάπημαι", "I have been loved ἀγαπαω", PASSIVE, PERFECT),
+        new Word("ἠγάπημαι", "I have been loved ἀγαπαω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἠγαπἠθην", "I was loved ἀγαπαω", PASSIVE, AORIST),
         new Word("νυν", "now"),
         // 144
@@ -709,16 +695,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐγειρω", "I raise"),
         new Word("ἐγερῶ", "I will raise ἐγειρω", FUTURE),
         new Word("ἤγειρα", "I raised ἐγειρω", AORIST),
-        new Word("ἐγήγερμαι", "I have raised myself ἐγειρω", MIDDLE, PERFECT),
-        new Word("ἐγήγερμαι", "I have been raised ἐγειρω", PASSIVE, PERFECT),
+        new Word("ἐγήγερμαι", "I have been raised ἐγειρω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἠγέρθην", "I was raised ἐγειρω", PASSIVE, AORIST),
         // 143
         new Word("ὀυδε", "and not, neither"),
         new Word("ἀφιημι", "I let go, divorce, forgive"),
         new Word("ἀφήσω", "I will forgive ἀφιημι", FUTURE),
         new Word("ἀφῆκα", "I forgave ἀφιημι", AORIST),
-        new Word("ἀφέωμαι", "I have forgiven myself ἀφιημι", MIDDLE, PERFECT),
-        new Word("ἀφέωμαι", "I have been forgiven ἀφιημι", PASSIVE, PERFECT),
+        new Word("ἀφέωμαι", "I have been forgiven ἀφιημι", MIDDLE, PASSIVE, PERFECT),
         new Word("ἀφέθην", "I was forgiven ἀφιημι", PASSIVE, AORIST),
         // 142
         new Word("λαος", "people", MASCULINE),
@@ -745,8 +729,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀποστελῶ", "I will send ἀποστέλλω", FUTURE),
         new Word("άπέστειλα", "I sent ἀποστέλλω", AORIST),
         new Word("ἀπέσταλκα", "I have sent ἀποστέλλω", PERFECT),
-        new Word("ἀπέσταλμαι", "I have sent myself ἀποστέλλω", MIDDLE, PERFECT),
-        new Word("ἀπέσταλμαι", "I have been sent ἀποστέλλω", PASSIVE, PERFECT),
+        new Word("ἀπέσταλμαι", "I have been sent ἀποστέλλω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἀπεστάλην", "I was sent ἀποστέλλω", PASSIVE, AORIST),
         // 129
         new Word("ἀμήν", "truly"),
@@ -769,8 +752,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("βαλῶ", "I will throw", FUTURE),
         new Word("ἔβαλον", "I threw", AORIST),
         new Word("βέβληκα", "I have thrown", PERFECT),
-        new Word("βέβλημαι", "I have thrown myself", MIDDLE, PERFECT),
-        new Word("βέβλημαι", "I have been thrown", PASSIVE, PERFECT),
+        new Word("βέβλημαι", "I have been thrown", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐβλήθην", "I was thrown", PASSIVE, AORIST),
         // 120
         new Word("θάνατος", "death", MASCULINE),
@@ -782,8 +764,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("παραδώσω", "I will hand over παραδιδωμι", FUTURE),
         new Word("παρέδωκα", "I handed over παραδιδωμι", AORIST),
         new Word("παραδέδωκα", "I have handed over παραδιδωμι", PERFECT),
-        new Word("παραδέδομαι", "I have handed over myself παραδιδωμι", MIDDLE, PERFECT),
-        new Word("παραδέδομαι", "I have been handed over παραδιδωμι", PASSIVE, PERFECT),
+        new Word("παραδέδομαι", "I have been handed over παραδιδωμι", MIDDLE, PASSIVE, PERFECT),
         new Word("παρεδόθην", "I was handed over παραδιδωμι", PASSIVE, AORIST),
         // 118
         new Word("μένω", "I remain"),
@@ -820,16 +801,16 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κρινῶ", "I will judge κρίνω", FUTURE),
         new Word("ἔκρινα", "I judged κρίνω", AORIST),
         new Word("κέκρικα", "I have judged κρίνω", PERFECT),
-        new Word("κέκριμαι", "I have judged κρίνω", MIDDLE, PERFECT),
-        new Word("κέκριμαι", "I have been judged κρίνω", PASSIVE, PERFECT),
+        new Word("κέκριμαι", "I have been judged κρίνω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐκρίθην", "I was judged κρίνω", PASSIVE, AORIST),
         // 111
         new Word("ἀποθνῃσκω", "I die"),
         new Word("ἀποθανοῦμαι", "I will die ἀποθνῃσκω", FUTURE),
         new Word("άπέθανον", "I died ἀποθνῃσκω", AORIST),
         // 110
-        new Word("ὁσος", "as much, how much, as many", FEMININE),  // TODO is this really a noun?
-        new Word("ὁσον", "as much, how much, as many", FEMININE, GENITIVE),
+        new Word("ὁσος", "as/how much/great/far/long", ADJECTIVE, MASCULINE),
+        new Word("ὁση", "as/how much/great/far/long", ADJECTIVE, FEMININE),
+        new Word("ὁσον", "as/how much/great/far/long", ADJECTIVE, NEUTER),
         // 109
         new Word("ἀληθεια", "truth", FEMININE),
         new Word("ἀληθειας", "truth", FEMININE, GENITIVE),
@@ -840,8 +821,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ὁλον", "whole, entire", ADJECTIVE, NEUTER),
         new Word("παρακαλῶ", "I call, I beseech παρακαλέω"),
         new Word("παρεκάλεσα", "I beseeched παρακαλέω", AORIST),
-        new Word("παρακέκλημαι", "I have beseeched myself παρακαλέω", MIDDLE, PERFECT),
-        new Word("παρακέκλημαι", "I have been beseeched παρακαλέω", PASSIVE, PERFECT),
+        new Word("παρακέκλημαι", "I have been beseeched παρακαλέω", MIDDLE, PASSIVE, PERFECT),
         new Word("παρεκλήθην", "I was beseeched παρακαλέω", PASSIVE, AORIST),
         // 108
         new Word("ἀνίστημι", "I raise, I stand up"),
@@ -853,8 +833,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("σώζω", "I will save σῴζω", FUTURE),
         new Word("ἔσωσα", "I saved σῴζω", AORIST),
         new Word("σέσωκα", "I have saved σῴζω", PERFECT),
-        new Word("σέσῳσμαι", "I have saved myself σῴζω", MIDDLE, PERFECT),
-        new Word("σέσῳσμαι", "I have been saved σῴζω", PASSIVE, PERFECT),
+        new Word("σέσῳσμαι", "I have been saved σῴζω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐσώθην", "I was saved σῴζω", PASSIVE, AORIST),
         new Word("ὤρα", "the hour", FEMININE),
         new Word("ὤρας", "the hour", FEMININE, GENITIVE),
@@ -876,8 +855,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀρω", "I will take up αἴρω", FUTURE),
         new Word("ἦρα", "I took up αἴρω", AORIST),
         new Word("ἦρκα", "I have taken up αἴρω", PERFECT),
-        new Word("ἦρμαι", "I have taken myself up αἴρω", MIDDLE, PERFECT),
-        new Word("ἦρμαι", "I have been taken up αἴρω", PASSIVE, PERFECT),
+        new Word("ἦρμαι", "I have been taken up αἴρω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἤρθην", "I was taken up αἴρω", PASSIVE, AORIST),
         new Word("δει", "it is necessary"),
         new Word("ὁδος", "way, road", FEMININE),
@@ -893,8 +871,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("θήσω", "I will put τίθημι", FUTURE),
         new Word("ἔθηκα", "I placed τίθημι", AORIST),
         new Word("τέθεικα", "I have put τίθημι", PERFECT),
-        new Word("τέθειμαι", "I have put myself τίθημι", MIDDLE, PERFECT),
-        new Word("τέθειμαι", "I have been put τίθημι", PASSIVE, PERFECT),
+        new Word("τέθειμαι", "I have been put τίθημι", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐτέθην", "I was put τίθημι", PASSIVE, AORIST),
         // 98
         new Word("φαρισαιος", "Pharisee", MASCULINE),
@@ -968,8 +945,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πληρώσω", "I will fill πληρόω", FUTURE),
         new Word("ἐπλήρωσα", "I filled πληρόω", AORIST),
         new Word("πεπλήρωκα", "I have filled πληρόω", PERFECT),
-        new Word("πεπλήρωμαι", "I have filled myself πληρόω", MIDDLE, PERFECT),
-        new Word("πεπλήρωμαι", "I have been filled πληρόω", PASSIVE, PERFECT),
+        new Word("πεπλήρωμαι", "I have been filled πληρόω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐπληρώθην", "I was filled πληρόω passive", PASSIVE, AORIST),
         new Word("προσέρχομαι", "I come to"),
         new Word("προσήλθον", "I came to προσέρχομαι", AORIST),
@@ -1014,8 +990,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐπέμφθην", "I was sent πέμπω", PASSIVE, AORIST),
         new Word("ὑπάγω", "I go away, I draw off"),
         new Word("δίκαιος", "upright, just, righteous", ADJECTIVE, MASCULINE),
-        new Word("δικαία", "upright, just, righteous (adj)", ADJECTIVE, FEMININE),
-        new Word("δικαιον", "upright, just, righteous (adj)", ADJECTIVE, NEUTER),
+        new Word("δικαία", "upright, just, righteous", ADJECTIVE, FEMININE),
+        new Word("δικαιον", "upright, just, righteous", ADJECTIVE, NEUTER),
         // 78
         new Word("στόµα", "mouth", NEUTER),
         new Word("στόματος", "mouth", NEUTER, GENITIVE),
@@ -1029,14 +1005,30 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀνοίξω", "I will open, unlock, disclose, ἀνοίγω", FUTURE),
         new Word("ἤνοιξα", "I opened, unlocked, disclosed, ἀνοίγω", AORIST),
         new Word("ἀνέωγα", "I have opened, unlocked, disclosed, ἀνοίγω", PERFECT),
-        new Word("ἀνέῳγμαι", "I have opened, unlocked, disclosed myself ἀνοίγω", MIDDLE, PERFECT),
-        new Word("ἀνέῳγμαι", "I have been opened, unlocked, disclosed, ἀνοίγω", PASSIVE, PERFECT),
+        new Word("ἀνέῳγμαι", "I have been opened, unlocked, disclosed, ἀνοίγω", MIDDLE, PASSIVE, PERFECT),
         new Word("ἠνοίγην", "I was opened, unlocked, disclosed, ἀνοίγω", PASSIVE, AORIST),
         new Word("βαπτίζω", "I baptize, wash, dip"),
         new Word("βαπτίσω", "I will baptize, wash, dip, βαπτίζω", FUTURE),
         new Word("ἐβαπτισα", "I baptized, washed, dipped, βαπτίζω", AORIST),
         new Word("βεβάπτισμαι", "I have been baptized, washed, dipped, βαπτίζω", PASSIVE, PERFECT),
-        new Word("ἐβαπτίσθην", "I was baptized, washed, dipped, βαπτίζω", PASSIVE, AORIST)
+        new Word("ἐβαπτίσθην", "I was baptized, washed, dipped, βαπτίζω", PASSIVE, AORIST),
+        // 76
+        new Word("εὐαγγέλιον", "good news, gospel", NEUTER),
+        new Word("εὐαγγέλιου", "good news, gospel", NEUTER, GENITIVE),
+        new Word("πρόσωπον", "face, countenance", NEUTER),
+        new Word("πρόσωπου", "face, countenance", NEUTER, GENITIVE),
+        new Word("ὕδωρ", "water", NEUTER),
+        new Word("ὕδατος", "water", NEUTER, GENITIVE),
+        new Word("μαρτυρῶ", "I bear witness - μαρτυρέω"),
+        new Word("μαρτυρήσω", "I will bear witness - μαρτυρέω", FUTURE),
+        new Word("ἐμαρτύρησα", "I bore witness - μαρτυρέω", AORIST),
+        new Word("μεμαρτύρηκα", "I have born witness - μαρτυρέω", PERFECT),
+        new Word("μεμαρτύρημαι", "I have been witnessed - μαρτυρέω", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐμαρτυρήθην", "I was witnessed - μαρτυρέω", PASSIVE, AORIST),
+        // 75
+        new Word("κεφαλή", "head", FEMININE),
+        new Word("κεφαλῆς", "head", FEMININE, GENITIVE),
+        new Word("δώδεκα", "twelve")
         );
   }
 
@@ -1168,9 +1160,9 @@ public class GreekBuilder implements LanguageBuilder {
             " 5. Is sometimes omitted when English would use it: Εν αρχη ην ο λογος\n" +
             " 6. Can function as a personal or possessive pronoun: Οι δε ειπαν προς αυτον And they said to him\n" +
             " 7. Can govern two nouns together, linking them:\n" +
-            "    προσδεχομενοι την μακαριαν ελπιδα και επιφανειαν της δοξης του μεγαλου θεου και " +
+            "    προσδεχομενοι την μακαριαν ελπιδα και επιφανειαν της δοξης του μεγαλου θεου και\n" +
             "      σωτηρος ημων Ιησου Χριστου\n" +
-            "    waiting for our blessed hope, the appearing of the glory of our great God and " +
+            "    waiting for our blessed hope, the appearing of the glory of our great God and\n" +
             "      Savior Jesus Christ."),
 
         new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
@@ -1204,9 +1196,29 @@ public class GreekBuilder implements LanguageBuilder {
             " * Positive: uncompared e.g μεγας large\n" +
             " * Comparative: greater of two items: e.g. μειζων larger\n" +
             " * Superlative: greatest, or comparison of 3 or more e.g. μεγιστος largest\n" +
-            "    where English would expect a superlative")
+            "    where English would expect a superlative"),
 
-        // Continue with chapter 14 page 113
+        new GrammarRule("ἀν used in conjunction with a relative pronoun makes it indefinite\n" +
+            "e.g. ὅς who ὅς ἀν whoever"),
+
+        new GrammarRule("Attraction: Occasionally the case of the relative pronoun is determined\n" +
+            "not by its function in the relative clause but by its antecedent.  This usually\n" +
+            "happens when it is in the immediate proximity of its antecedent, when the the\n" +
+            "antecedent is dative or genitive and the relative pronoun normally would be\n" +
+            "accusative."),
+
+        new GrammarRule("Present active indicative paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "1sg  λυ    ο                   λυω\n" +
+            "2sg  λυ    ε          ς        λυεις\n" +
+            "3sg  λυ    ε          ι        λυει\n" +
+            "1pl  λυ    ο          μεν      λυομεν\n" +
+            "2pl  λυ    ε          τε       λυετε\n" +
+            "3pl  λυ    ο          νσι      λυουσι(ν)\n"
+        )
+
+        // Continue with chapter 17 page 139
 
     );
   }

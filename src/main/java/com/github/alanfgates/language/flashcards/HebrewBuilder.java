@@ -77,7 +77,7 @@ public class HebrewBuilder implements LanguageBuilder {
         //----------------------------------------------------------------------------------------
         // VOCABULARY, with frequency noted in comments
         // 50524
-        new Word("וְ", "and"),
+        new Word("וְ", "and, but, also, even"),
         // 23968
         new Word("הַ", "the"),
         // 20435
@@ -140,8 +140,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אִיש", "man", MASCULINE),
         new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
         // 2128
-        new Word("פָּנִים", "face", MASCULINE),
-        new Word("פָּנִים", "faces", MASCULINE, PLURAL),
+        new Word("פָּנִים", "face, faces", MASCULINE, SINGULAR, PLURAL),
         new Word("פְּנֵי", "before, in the presence of"),
         // 2046
         new Word("בַּיִת", "house", MASCULINE),
@@ -284,10 +283,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בַּת", "daughter", FEMININE),
         new Word("בָּנוֹת", "daughters", FEMININE, PLURAL),
         // 583
-        new Word("מָיִם", "water", MASCULINE),
-        new Word("מָיִם", "water", MASCULINE, PLURAL),
-        new Word("מֵי", "water", MASCULINE, SINGULAR, CONSTRUCT),
-        new Word("מֵי", "water", MASCULINE, PLURAL, CONSTRUCT),
+        new Word("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL),
+        new Word("מֵי", "water", MASCULINE, SINGULAR, PLURAL, CONSTRUCT),
         new Word("מֵאָה", "hundred"),
         // 577
         new Word("כֹּה", "thus, here"),
@@ -361,8 +358,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 421
         new Word("שַׂר", "prince, chief", MASCULINE),
         new Word("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL),
-        new Word("שָׁמַיִם", "heavens, sky", MASCULINE),
-        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, PLURAL),
+        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, SINGULAR, PLURAL),
         new Word("שְׁמֵי", "heavens, sky", MASCULINE, CONSTRUCT),
         // 420
         new Word("תָּוֶךּ", "midst"),
@@ -480,8 +476,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אַף", "nose, anger", MASCULINE),
         new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
         // 274
-        new Word("צֹאן", "flock, sheep", FEMININE),
-        new Word("צֹאן", "flock, sheep", FEMININE, PLURAL),
+        new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL),
         new Word("שִׁשָׁה", "six", MASCULINE),
         new Word("שַׁשׁ", "six", FEMININE),
         // 272
@@ -493,8 +488,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בְּשָׂרִים", "fleshes", MASCULINE, PLURAL),
         new Word("מִדְבָּר", "wilderness", MASCULINE),
         // 268
-        new Word("חַיִּים", "life", MASCULINE),
-        new Word("חַיִּים", "lifes", MASCULINE, PLURAL),
+        new Word("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL),
         // 264
         new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR),
         new Word("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL),
@@ -527,7 +521,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 236
         new Word("אֵל", "god", MASCULINE),
         // 235
-        new Word("םַעֲשֶׂה", "work, deed", MASCULINE),
+        new Word("מַעֲשֶׂה", "work, deed", MASCULINE),
         new Word("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL),
         // 233
         new Word("עָוֹן", "iniquity", MASCULINE),
@@ -567,10 +561,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בְּגָדִים", "garmets", MASCULINE, PLURAL),
         // 215
         new Word("יָסַף", "he added, he did again"),
-        new Word("מַחֲנֶה", "camp", MASCULINE),
-        new Word("מַחֲנֶה", "camp", FEMININE),
-        new Word("מַחַנוֹת", "camps", MASCULINE, PLURAL),
-        new Word("מַחַנוֹת", "camps", FEMININE, PLURAL),
+        new Word("מַחֲנֶה", "camp", MASCULINE, FEMININE),
+        new Word("מַחַנוֹת", "camps", MASCULINE, FEMININE, PLURAL),
         // 214
         new Word("עָזַב", "he forsook, left"),
         // 213
@@ -661,7 +653,14 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
         new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
         new Word("מְלָאכָה", "work, occupation", FEMININE),
-        new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL)
+        new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL),
+        // 166
+        new Word("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("אֲחֵרִים", "another", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL),
+        // 165
+        new Word("דָּרַשׁ", "he sought")
     );
   }
 
@@ -726,7 +725,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new GrammarRule("Vowel Syllable Preferences\n" +
           " * Short vowels prefer closed, unaccented syllables or open, accented syllables. Both syllables in עֶבֶד\n" +
           " * Long vowels prefer closed, accented syllables or open, pretonic syllables.  Both syllables in" + " דָּבָר\n" +
-          " * Vocal Shewa and reduced hateph vowels prefer open, prertonic syllables.  The\n" +
+          " * Vocal Shewa and reduced hateph vowels prefer open, propretonic syllables.  The\n" +
           "   reduced vowels appear with guttural consonants in the open, propretonic position.\n" +
           "   First syllable in דְּבָרִים  and אֱלֹהִים"),
 
@@ -782,13 +781,34 @@ public class HebrewBuilder implements LanguageBuilder {
           " * When first consontant is a guttural, Dagesh Forte is rejected\n" +
           "   * When the first consonant is א or ע or ר the Patach lengthens to a Qamets, הָ\n" +
           "   * When the first consonant is ה or ח the Dagesh Forte is dropped.  This is\n" +
-          "     referred to as \"virtual doubling\"" +
+          "     referred to as \"virtual doubling\"\n" +
           "   * Before nouns that begin with an unaccented עָ or הָ or חָ (last can also be\n" +
           "     accented), the definite article becomes Seghol הֶ\n" +
           " * With initial יְ or מְ the Dagesh Forte is usually dropped\n" +
-          " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ")
+          " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ"),
 
-        // Continue 5.7, p43
+        new GrammarRule("Concjuncton ו (and, but, also, even)\n" +
+            " * Most frequently spelled וְ\n" +
+            " * Become Shureq וּ \n" +
+            "   * before ב, מ, פ (bump rule), ב פ loose Dagesh lene in this case בּיִת becomes וּבַיִת \n" +
+            "   * and before a vocal Shewa נְעָרִים becomes וּנְעָרִים\n" +
+            " * Before Hateph vowel, conjuction takes the corresponding short vowel אֲנָשׁים becomes וַאֲנָשׁים  \n" +
+            "   * Exception, does not apply to אלהים\n" +
+            " * May be spelled with Qamets before monosyllabic words or words with initialaccent צֹאן becomes וָצֹאן "),
+
+        new GrammarRule("Additional uses of definite article:\n" +
+            " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day\n" +
+            " * Vocative, indicating direct address: ויקרא לאמר המלך - And he called saying the[O] king\n" +
+            " * Superlative with an adjective: הטוב והישׁר - the good[best] and the upright[most upgright]\n" +
+            " * Possessive pronoun: ולקח דוד הכנור - And David took the[his] harp"),
+
+        new GrammarRule("Inseparable prepositions:\n" +
+            "* Before most consonants will appear with a vocal Shewa ּּּבְשָדֶה\n" +
+            "* Before a Hateph vowel will take the corresponding short vowel כַּאֲנָשִׁים\n" +
+            "* Before a vocal Shewa will take a Hireq לִנְבִיאִים\n" +
+            "* When combined with a definite article replaces the ה and takes its vowel ּבַשָּׂדֶה\n")
+
+        // Continue 6.5, p 52
     );
   }
 }
