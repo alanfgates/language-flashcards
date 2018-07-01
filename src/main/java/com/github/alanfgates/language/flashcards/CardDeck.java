@@ -54,12 +54,11 @@ class CardDeck implements Serializable {
         }
       }
       rules.addAll(builder.buildRules());
-      System.out.println("After adding " + builder.getLanguageName() + " deck size is " + m.size());
     }
     List<Flashcard> tmp = new ArrayList<>(m.values());
-    System.out.println("After shuffle have " + tmp.size() + " flashcards");
     Collections.shuffle(tmp);
     cards = new ArrayDeque<>(tmp);
+    System.out.println("Found a total of " + cards.size() + " words and " + rules.size() + " rules");
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
@@ -72,18 +71,28 @@ class CardDeck implements Serializable {
   void daily(int numToTest) throws IOException {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
-    rules.get(new Random().nextInt(rules.size())).show();
-    input.readLine();
+    if (rules.size() > 0) {
+      GrammarRule rule = rules.get(new Random().nextInt(rules.size()));
+      rule.show();
+      input.readLine();
+      rules.remove(rule);
+    } else {
+      System.out.println("Done with the rules\n");
+    }
 
     List<Flashcard> missed = new ArrayList<>();
+    int succeeded = 0;
     for (int i = 0; i < numToTest && !cards.isEmpty(); i++) {
       Flashcard f = cards.pop();
-      if (!f.test(input)) {
+      if (f.test(input)) {
+        succeeded++;
+      } else {
         missed.add(f);
       }
     }
     // Put back the ones we missed so we see them tomorrow.
     for (Flashcard f : missed) cards.push(f);
+    System.out.println("Total right: " + succeeded + ", wrong: " + missed.size());
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
     }

@@ -85,7 +85,8 @@ public class HebrewBuilder implements LanguageBuilder {
         // 15632
         new Word("בְּ", "in, at, with"),
         // 10970
-        new Word("אֶת", "direct object marker"),
+        new Word("אֶת–", "definite direct object marker"),
+        new Word("אֵת", "definite direct object marker"),
         // 7586
         new Word("מִן", "from"),
         // 5778
@@ -174,6 +175,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("שָׁמַע",	 "he heard"),
         // 1135
         new Word("דִּבֶּר",	"he spoke", PIEL),
+        // 1119
+        new Word("ָה", "to, toward, directional ending"),
         // 1104
         new Word("אַתָּה", "you", MASCULINE),
         new Word("אַתְּ", "you", FEMININE),
@@ -207,6 +210,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 898
         new Word("אֵת", "with"),
+        new Word("אֶת–", "with"),
         // 894
         new Word("עָלָה", "he went up"),
         // 879
@@ -660,7 +664,13 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR),
         new Word("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL),
         // 165
-        new Word("דָּרַשׁ", "he sought")
+        new Word("דָּרַשׁ", "he sought"),
+        // 164
+        new Word("חוּץ", "outside", NOUN, MASCULINE),
+        new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE),
+        new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
+        // 163
+        new Word("סָבַב", "he turned around, went around, surrounded")
     );
   }
 
@@ -806,9 +816,44 @@ public class HebrewBuilder implements LanguageBuilder {
             "* Before most consonants will appear with a vocal Shewa ּּּבְשָדֶה\n" +
             "* Before a Hateph vowel will take the corresponding short vowel כַּאֲנָשִׁים\n" +
             "* Before a vocal Shewa will take a Hireq לִנְבִיאִים\n" +
-            "* When combined with a definite article replaces the ה and takes its vowel ּבַשָּׂדֶה\n")
+            "* When combined with a definite article replaces the ה and takes its vowel ּבַשָּׂדֶה\n"),
 
-        // Continue 6.5, p 52
+        new GrammarRule("The preposition מִן\n" +
+            " * Frequently is joined to its object via a Maqqef (-)\n" +
+            " * Can occur as an inseparable preposition, in which case the first consontant of\n" +
+            "   the noun to which it is prefixed usually takes a dagesh forte: מִמֶּלֶך\n" +
+            "   * When the first letter is a begadkephat letter with a dagesh lene, the dagesh\n" +
+            "     lene becomes a dagesh forte\n" +
+            "   * When the first letter is a gutteral, the hireq under מ lengthens to a tsere\n" +
+            "     e.g. מֵאִישׁ\n" +
+            "   * When the first letter is ח there is not usually vowel lengthening."),
+
+        new GrammarRule("Special uses of מִן (beyond \"from\")\n" +
+            " * Comparative use: applied to adjective to make it comparative\n" +
+            "   e.g. טוֹבָה חָכְמָה מִזָּהָב wisdom is better than gold\n" +
+            " * Superlative use: used with כּל to express superlative\n" +
+            "   e.g. עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה the most clever living thing of the field\n" +
+            " * Partitive use: Can mean a part of something: מֵהָאֲנָשִׁים some of the men"),
+
+        new GrammarRule("Compound prepositions:\n" +
+            " * preposition plus פנה (face)\n" +
+            "   * before, in the precense of: לִפְנֵי\n" +
+            "   * away from, out from, from before, on account of: מִפְּנֵי and מִלִּפְנֵי\n" +
+            "   * in the face, in the sight of, before, up against, opposite to: עַלֿֿ-פְּנֵי\n" +
+            " * preoposition plus דבר\n:" +
+            "   * on account of עַל-דְּבַר"),
+
+        new GrammarRule("Use of adjectives:\n" +
+            " * Attributive: modifies a noun.  Attributive adjectives follow the noun they\n" +
+            "   modify and agree in gender, number, and definiteness.\n" +
+            " * Predicative: asserts something about the noun, e.g. the book is big.\n" +
+            "   No verb is used.  Predicative adjects agree with the noun in gender and number\n" +
+            "   but not definiteness.  They may proceed or follow the noun.\n" +
+            " * Sustantive: no noun present, stands for those who have the trait (e.g. the wise)")
+
+
+
+        // Continue 7.9, p 66
     );
   }
 }

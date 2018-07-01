@@ -431,7 +431,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("Χριστός", "Christ", MASCULINE),
         new Word("Χριστοῦ", "Christ", MASCULINE, GENITIVE),
         // 504
-        new Word("ὡς", "as"),
+        new Word("ὡς", "as, like, when, that, how, approximately"),
         // 502
         new Word("εἰ", "if"),
         // 499
@@ -637,9 +637,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τοτε", "then"),
         new Word("ἕως", "until"),
         // ?
-        new Word("ὅστις", "whoever, everyone", ADJECTIVE, MASCULINE),
-        new Word("ἥτις", "whoever, everyone", ADJECTIVE, FEMININE),
-        new Word("ὅτι", "whoever, everyone", ADJECTIVE, NEUTER),
+        new Word("ὅστις", "whoever, everyone (ὅς + τις both parts decline)", ADJECTIVE, MASCULINE),
+        new Word("ἥτις", "whoever, everyone (ἥ + τις both parts decline)", ADJECTIVE, FEMININE),
+        new Word("ὅτι", "whoever, everyone (ὅ + τις both parts decline)", ADJECTIVE, NEUTER),
         // 159
         new Word("προτος", "first", ADJECTIVE, MASCULINE),
         new Word("προτη", "first", ADJECTIVE, FEMININE),
@@ -1028,7 +1028,24 @@ public class GreekBuilder implements LanguageBuilder {
         // 75
         new Word("κεφαλή", "head", FEMININE),
         new Word("κεφαλῆς", "head", FEMININE, GENITIVE),
-        new Word("δώδεκα", "twelve")
+        new Word("δώδεκα", "twelve"),
+        // 74
+        new Word("ἀποκτείνω", "I kill"),
+        new Word("ἀποκτενῶ", "I will kill - ἀποκτείνω", FUTURE),
+        new Word("ἀπέκτεινα", "I killed - ἀποκτείνω", AORIST),
+        new Word("ἀπεκτάθην", "I was killed - ἀποκτείνω", PASSIVE, AORIST),
+        new Word("χαίρω", "I rejoice, I hail"),
+        new Word("χαρήσομαι", "I will rejoice, I will hail - χαίρω (deponent)", FUTURE),
+        new Word("ἐχάρην", "I was hailed - χαίρω", PASSIVE, AORIST),
+        // 73
+        new Word("φῶς", "light", NEUTER),
+        new Word("φωτός", "light", NEUTER, GENITIVE),
+        new Word("πίνω", "I drink"),
+        new Word("πίομαι", "I will drink - πίνω", FUTURE),
+        new Word("ἔπιον", "I drank - πίνω", AORIST),
+        new Word("πέπωκα", "I have drunk - πίνω", PERFECT),
+        new Word("ἐπόθην", "I was drunk - πίνω", PASSIVE, AORIST)
+
         );
   }
 
@@ -1215,10 +1232,42 @@ public class GreekBuilder implements LanguageBuilder {
             "3sg  λυ    ε          ι        λυει\n" +
             "1pl  λυ    ο          μεν      λυομεν\n" +
             "2pl  λυ    ε          τε       λυετε\n" +
-            "3pl  λυ    ο          νσι      λυουσι(ν)\n"
-        )
+            "3pl  λυ    ο          νσι      λυουσι(ν)\n"),
 
-        // Continue with chapter 17 page 139
+        new GrammarRule("Contract verbs are verbs that end in α, ε, or ο.  In the present and\n" +
+            "imperfect tenses the final vowel contracts with the connecting vowel as follows:\n" +
+            " * two like vowels combine to the associated long vowel (except following two)" +
+            "   * ο + ο = ου\n" +
+            "   * ε + ε = ει\n" +
+            " * (anything but ε) + ο = ω (commutative)\n" +
+            "   * ε + ο = ου (commutative)\n" +
+            " * anything + ω = ω (commutative)\n" +
+            " * α + ε/η = α\n" +
+            " * ε/η + α  = η\n" +
+            " * α + ε + ι = ᾳ\n" +
+            " * ε + α + ι = ῃ\n" +
+            " * ο + ε + ι = οι\n" +
+            " * Dipthongs:  if the contract vowel and the first vowel of the dipthong are the\n" +
+            "   same, they combine to a single instance of the vowel.  Otherwise they contract.\n" +
+            "   If the second vowel of the dipthong is a ι it subscripts if possible.\n"),
+
+        new GrammarRule("Present middle/passive indicative paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "1sg  λυ    ο          μαι      λυομαι\n" +
+            "2sg  λυ    ε          σαι      λυῃ\n" +
+            "3sg  λυ    ε          ται      λυεται\n" +
+            "1pl  λυ    ο          μεθα     λυομεθα\n" +
+            "2pl  λυ    ε          σθε      λυεσθε\n" +
+            "3pl  λυ    ο          νται     λυονται\n"),
+
+        new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
+            "in meaning.  I does not take a middle or passive meaning.\n" +
+            "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in " +
+            "the present but non in the aorist.\n" +
+            "75% of middle forms in the NT are deponent.")
+
+        // Continue with 19 page 156
 
     );
   }
