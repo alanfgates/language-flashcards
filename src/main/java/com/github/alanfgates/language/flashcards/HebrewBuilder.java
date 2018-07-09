@@ -22,6 +22,7 @@ import jdk.nashorn.api.scripting.AbstractJSObject;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.github.alanfgates.language.flashcards.Declension.NOMINATIVE;
 import static com.github.alanfgates.language.flashcards.Gender.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
 import static com.github.alanfgates.language.flashcards.Mood.*;
@@ -96,7 +97,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 5518
         new Word("לֹא", "not, permanent"),
         // 5503
-        new Word("אֲשֶׁר", "which"),
+        new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)"),
         // 5415
         new Word("כֹּל", "all"),
         new Word("כָּל", "all"),
@@ -106,6 +107,27 @@ public class HebrewBuilder implements LanguageBuilder {
         // 4942
         new Word("בֵּן", "son", MASCULINE),
         new Word("בָּנִים", "sons", MASCULINE, PLURAL),
+        // 4795
+        new Word("אֲנִי", "I, myself", NOMINATIVE),
+        new Word("אָנֹכִי", "I, myself", NOMINATIVE),
+        new Word("אֲנַחְנוּ", "we", NOMINATIVE),
+        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE),
+        new Word("אַתְּ", "you", NOMINATIVE, FEMININE),
+        new Word("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL),
+        new Word("הוּא", "he", NOMINATIVE),
+        new Word("הוּא", "that", MASCULINE),
+        new Word("הִיא", "she", NOMINATIVE),
+        new Word("הִיא", "that", FEMININE),
+        new Word("הִוא", "she", NOMINATIVE),
+        new Word("הֵם", "they", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("הֵם", "those", MASCULINE, PLURAL),
+        new Word("הֵמָּה", "they", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("הֵמָּה", "those", MASCULINE, PLURAL),
+        new Word("הֵן", "they", NOMINATIVE, FEMININE, PLURAL),
+        new Word("הֵנָּה", "they", NOMINATIVE, FEMININE, PLURAL),
+        new Word("הֵן", "those", FEMININE, PLURAL),
+        new Word("הֵנָּה", "those", FEMININE, PLURAL),
         // 4487
         new Word("כִּי", "that, because, when"),
         // 3576
@@ -129,11 +151,6 @@ public class HebrewBuilder implements LanguageBuilder {
         // 2505
         new Word("אֶרֶץ", "land, earth", FEMININE),
         new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
-        // 2452
-        new Word("הוּא", "he"),
-        new Word("הִיא", "she"),
-        new Word("הֵם", "they", MASCULINE),
-        new Word("הֵנָּה", "they", FEMININE),
         // 2303
         new Word("יוֹם", "day", MASCULINE),
         new Word("יָמִים", "days", MASCULINE, PLURAL),
@@ -163,11 +180,6 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("רָאָה", "he saw"),
         // 1263
         new Word("עַד", "until, as far as"),
-        // 1239
-        new Word("אֲנִי", "I, myself"),
-        new Word("אָנֹכִי", "I, myself"),
-        new Word("אֲנַחְנוּ", "we"),
-        new Word("נַחְנו", "we"),
         // 1210
         new Word("אָב", "father", MASCULINE),
         new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
@@ -177,11 +189,6 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("דִּבֶּר",	"he spoke", PIEL),
         // 1119
         new Word("ָה", "to, toward, directional ending"),
-        // 1104
-        new Word("אַתָּה", "you", MASCULINE),
-        new Word("אַתְּ", "you", FEMININE),
-        new Word("אַתֶּם", "you", MASCULINE, PLURAL),
-        new Word("אַתֶּן", "you", FEMININE, PLURAL),
         // 1094
         new Word("עִיר", "city", FEMININE),
         new Word("עָרִים", "cities", FEMININE, PLURAL),
@@ -254,11 +261,13 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
         // 754
         new Word("מָה", "what?"),
+        new Word("מַה", "what?"),
+        new Word("מֶה", "what?"),
         // 750
         new Word("כֹּהַן", "priest", MASCULINE),
         new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
-        new Word("הֲ", "indicates interrogative"),
+        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentance"),
         // 743
         new Word("כֵּן", "so, thus"),
         // 736
@@ -670,7 +679,12 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE),
         new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
         // 163
-        new Word("סָבַב", "he turned around, went around, surrounded")
+        new Word("סָבַב", "he turned around, went around, surrounded"),
+        // 163
+        new Word("טָמֵא", "he was unclean"),
+        new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
+        // 139
+        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed")
     );
   }
 
@@ -804,7 +818,7 @@ public class HebrewBuilder implements LanguageBuilder {
             "   * and before a vocal Shewa נְעָרִים becomes וּנְעָרִים\n" +
             " * Before Hateph vowel, conjuction takes the corresponding short vowel אֲנָשׁים becomes וַאֲנָשׁים  \n" +
             "   * Exception, does not apply to אלהים\n" +
-            " * May be spelled with Qamets before monosyllabic words or words with initialaccent צֹאן becomes וָצֹאן "),
+            " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן "),
 
         new GrammarRule("Additional uses of definite article:\n" +
             " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day\n" +
@@ -849,11 +863,29 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Predicative: asserts something about the noun, e.g. the book is big.\n" +
             "   No verb is used.  Predicative adjects agree with the noun in gender and number\n" +
             "   but not definiteness.  They may proceed or follow the noun.\n" +
-            " * Sustantive: no noun present, stands for those who have the trait (e.g. the wise)")
+            " * Sustantive: no noun present, stands for those who have the trait (e.g. the wise)"),
+
+        new GrammarRule("Demonstratives as adjectives and pronouns:\n" +
+            " * When a demonstrative is functioning as an adjective, it will follow the noun\n" +
+            "   it modifies and agree in gender, number, and definiteness. האיש הזה\n" +
+            "   * Attributive adjective (if present) will be between the noun and the following\n" +
+            "     demonstrative: האיש הטוב הזה\n" +
+            " * When a demonstrative is functioning as a pronoun, it will procede the noun and\n" +
+            "   agree in gender and number but not definiteness. זה האיש\n" +
+            "   * Attributive adjective (if present) will still follow the noun: זה האיש הטוב"),
+
+        new GrammarRule("Spelling for interrogative particle הֲ\n" +
+            " * Prefixed to a guttural consonant or any consonant with a shewa: הַ\n" +
+            " * Prefixed to a guttural consonant followed by a qamets: הֶ"),
+
+        new GrammarRule("Disambiguating the definite article and the interrogative particle:\n" +
+            " * The interrogative particle does not usually have a dagesh forte in the next consonant\n" +
+            " * The interrogative particle is often attached to a verb or another particle\n" +
+            " * The definite article is never spelled with a hateph patach")
 
 
 
-        // Continue 7.9, p 66
+        // Continue 8.11, p 76
     );
   }
 }

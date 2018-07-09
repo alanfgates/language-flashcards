@@ -43,7 +43,7 @@ public class GreekBuilder implements LanguageBuilder {
         //----------------------------------------------------------------------------------------
         // VERB FORMS
         //
-        // Indicative active present
+        // Indicative Active Present
         new Word("λύω", "I loosen", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύεις", "you loosen", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύει", "s/he loosens", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
@@ -52,7 +52,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύουσι", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         new Word("λύουσιν", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         //
-        // Indicative active aorist
+        /*
+        // Indicative Active Aorist
         new Word("ἔλυσα", "I loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("ἔλυσας", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("ἔλυσε", "s/he loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
@@ -60,7 +61,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐλύσατε", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("ἔλυσαν", "they loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
         //
-        // Indicative active second aorist
+        // Indicative Active Second Aorist
         new Word("ἔβαλον", "I threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("ἔβαλες", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("ἔβαλε", "s/he threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
@@ -68,7 +69,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
-        // Indicative active imperfect
+        // Indicative Active Imperfect
         new Word("ἔλυον", "I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
         new Word("ἔλυες", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
         new Word("ἔλυε", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
@@ -76,8 +77,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐλύομεν", "we were loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("ἐλύετε", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, PLURAL),
         new Word("ἔλυον", "they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
+        */
 
-        // Indicative active future
+        // Indicative Active Future
         new Word("λύσω", "I will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
         new Word("λύσεις", "you will loosen", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, SINGULAR),
         new Word("λύσει", "s/he will loosen", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, SINGULAR),
@@ -94,6 +96,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύεσθε", "you loosen yourselves", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
+        // Indicative Middle Future
+        new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύσῃ", "you will loosen yourself", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύσεται", "s/he will loosen him/herself", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λυσόμεθα", "we will loosen ourselves", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύσεσθε", "you will loosen yourselves", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύσονται", "they will loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+
         // Indicative Passive Present
         new Word("λύομαι", "I was loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
@@ -102,6 +112,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύεσθε", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they were loosened", INDICATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
+        /*
         // Subjunctive active present
         new Word("λύω", "I might loosen", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "s/he might loosen", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
@@ -207,6 +218,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
+        */
 
         //
         //----------------------------------------------------------------------------------------
@@ -280,6 +292,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐστέ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("εἰσίν", "they are", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         new Word("εσομαι", "I will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("ἔσῃ", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, SINGULAR),
+        new Word("ἔσται", "S/He will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, SINGULAR),
+        new Word("ἐσόμεθα", "We will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, PLURAL),
+        new Word("ἔσεσθε", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, PLURAL),
+        new Word("ἔσονται", "They will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
         new Word("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         // 2357
         new Word("λεγω", "I say"),
@@ -1044,7 +1061,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πίομαι", "I will drink - πίνω", FUTURE),
         new Word("ἔπιον", "I drank - πίνω", AORIST),
         new Word("πέπωκα", "I have drunk - πίνω", PERFECT),
-        new Word("ἐπόθην", "I was drunk - πίνω", PASSIVE, AORIST)
+        new Word("ἐπόθην", "I was drunk - πίνω", PASSIVE, AORIST),
+        // 71
+        new Word("ἱερόν", "temple", NEUTER),
+        new Word("ἱεροῦ", "temple", NEUTER, GENITIVE),
+        new Word("πῦρ", "fire", NEUTER),
+        new Word("πυρός", "fire", NEUTER, GENITIVE),
+        new Word("αἰώνος", "eternal", ADJECTIVE, NEUTER),
+        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER, GENITIVE)
 
         );
   }
@@ -1265,9 +1289,19 @@ public class GreekBuilder implements LanguageBuilder {
             "in meaning.  I does not take a middle or passive meaning.\n" +
             "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in " +
             "the present but non in the aorist.\n" +
-            "75% of middle forms in the NT are deponent.")
+            "75% of middle forms in the NT are deponent."),
 
-        // Continue with 19 page 156
+        new GrammarRule("Four patterns for forming the future tense:\n" +
+            "1. Same stem as present + σ (the tense formative) + connecting vowel (same as\n" +
+            "   present tense) + primary active personal endings.\n" +
+            "   * Contract verbs (ending in α, ε, ο), final vowel elongates: α, ε to η, ο to ω\n" +
+            "   * Verbs ending in a stop, final consonant contracts with σ per the rules\n" +
+            "     of square of stops.\n"),
+
+        new GrammarRule("Future middle uses future active tense stem + σ (tense formative) +\n" +
+            "connecting vowel + primary passive personal endings.")
+
+        // Continue with 20 page 166
 
     );
   }
