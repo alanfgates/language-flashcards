@@ -1070,12 +1070,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),  // TODO check I have this right
         new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER)
 
-        // TODO - change so that word records number of times it needs to be gotten right to be
-        // removed from the deck.  Each time it is missed 2 is added to this number, so that
-        // words I'm missing frequently are seen frequently.
-        // TODO - change rules to be in a deque just like words
-        // TODO - change daily word presentation to randomize order so missed words are all up
-        // front.
         );
   }
 

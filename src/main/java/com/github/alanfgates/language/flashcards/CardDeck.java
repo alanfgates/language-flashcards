@@ -25,23 +25,22 @@ import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
 class CardDeck implements Serializable {
 
-  private Deque<Flashcard> cards;
-  private List<GrammarRule> rules;
+  private LinkedList<Flashcard> cards;
+  private LinkedList<GrammarRule> rules;
 
   CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
-    rules = new ArrayList<>();
+    rules = new LinkedList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
       for (Word w : builder.buildWords()) {
@@ -55,16 +54,16 @@ class CardDeck implements Serializable {
       }
       rules.addAll(builder.buildRules());
     }
-    List<Flashcard> tmp = new ArrayList<>(m.values());
-    Collections.shuffle(tmp);
-    cards = new ArrayDeque<>(tmp);
+    cards = new LinkedList<>(m.values());
+    Collections.shuffle(cards);
+    Collections.shuffle(rules);
     System.out.println("Found a total of " + cards.size() + " words and " + rules.size() + " rules");
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
     ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
-    cards = (Deque<Flashcard>)in.readObject();
-    rules = (List<GrammarRule>)in.readObject();
+    cards = (LinkedList<Flashcard>)in.readObject();
+    rules = (LinkedList<GrammarRule>)in.readObject();
     in.close();
   }
 
