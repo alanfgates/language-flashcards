@@ -93,6 +93,7 @@ class CardDeck implements Serializable {
     // Put back the ones we missed so we see them tomorrow.
     for (Flashcard f : missed) cards.push(f);
     System.out.println("Total right: " + succeeded + ", wrong: " + missed.size());
+    System.out.println("Remaining cards: " + cards.size() + ", remaining rules: " + rules.size());
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
     }

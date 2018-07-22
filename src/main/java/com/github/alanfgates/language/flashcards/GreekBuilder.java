@@ -97,12 +97,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύονται", "they loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Future
-        new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("λύσῃ", "you will loosen yourself", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("λύσεται", "s/he will loosen him/herself", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λυσόμεθα", "we will loosen ourselves", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("λύσεσθε", "you will loosen yourselves", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("λύσονται", "they will loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("λύσῃ", "you will loosen yourself", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, SINGULAR),
+        new Word("λύσεται", "s/he will loosen him/herself", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, SINGULAR),
+        new Word("λυσόμεθα", "we will loosen ourselves", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, PLURAL),
+        new Word("λύσεσθε", "you will loosen yourselves", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, PLURAL),
+        new Word("λύσονται", "they will loosen themselves", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, PLURAL),
 
         // Indicative Passive Present
         new Word("λύομαι", "I was loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -530,7 +530,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("μαθητοῦ", "student, disciple", MASCULINE, GENITIVE),
         // 258
         new Word("λαμβανω", "I take, I receive"),
-        new Word("λημψομαι", "I will take/receive, λαμβανω", PRESENT),
+        new Word("λημψομαι", "I will take/receive, λαμβανω", FUTURE),
         new Word("ελαβον", "I took/received, λαμβανω", AORIST),
         new Word("ειληφα", "I have taken/received, λαμβανω", PERFECT),
         // 250
@@ -569,7 +569,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀπεκρινἀμην", "I answered αποκρινομαιa", AORIST),
         new Word("ἀπεκρίθην", "I was answered αποκρινομαιa", PASSIVE, AORIST),
         // 220
-        new Word("ὑπό accusaive", "under"),
+        new Word("ὑπό accusative", "under"),
         new Word("ὑπό genitive", "by"),
         // 218
         new Word("ἐξέρχομαι", "I go out"),
@@ -917,7 +917,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("περιπατήσω", "I will walk around περιπατω", FUTURE),
         new Word("περιεπάτησα", "I walked around περιπατω", AORIST),
         new Word("φοβῶ", "I fear"),
-        new Word("ἐφοβήθην", "I have been feared φοβέω", PASSIVE, AORIST),
+        new Word("ἐφοβήθην", "I was feared φοβέω", PASSIVE, AORIST),
         // 93
         new Word("ἔτι", "still, yet"),
         new Word("οἰκία", "house, family", FEMININE),
@@ -1067,9 +1067,15 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἱεροῦ", "temple", NEUTER, GENITIVE),
         new Word("πῦρ", "fire", NEUTER),
         new Word("πυρός", "fire", NEUTER, GENITIVE),
-        new Word("αἰώνος", "eternal", ADJECTIVE, NEUTER),
-        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER, GENITIVE)
+        new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),  // TODO check I have this right
+        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER)
 
+        // TODO - change so that word records number of times it needs to be gotten right to be
+        // removed from the deck.  Each time it is missed 2 is added to this number, so that
+        // words I'm missing frequently are seen frequently.
+        // TODO - change rules to be in a deque just like words
+        // TODO - change daily word presentation to randomize order so missed words are all up
+        // front.
         );
   }
 
@@ -1129,6 +1135,9 @@ public class GreekBuilder implements LanguageBuilder {
             " * partitive, where the subject is a part of the whole, which is genitive: some of\n" +
             "   the branches τινες των κλαδων"),
 
+        // TODO - add subscript iotas to this as it is hard to tell which words are dative.
+        // TODO - I think this needs better indentation as some of the bullet points are
+        // subpoints of the other.
         new GrammarRule("Uses of Dative\n" +
             " * Dative Proper (‘to’)\n" +
             " * indirect object: He has given him authority to execute judgment εξουσιαν εδωκεν\n" +

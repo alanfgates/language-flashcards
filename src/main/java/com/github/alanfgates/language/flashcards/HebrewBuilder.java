@@ -17,8 +17,6 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import jdk.nashorn.api.scripting.AbstractJSObject;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -65,7 +63,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("יִשְׁמְרוּ", "They will guard", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
         new Word("תִּשְׁמֹרְנָה", "They will guard", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
 
-        // TODO QAL imperative, cohortative, and jussive, waiting until I get that far in the grammer
+        // TODO QAL imperative, cohortative, and jussive, waiting until I get that far in the grammar
 
         // QAL Participle
         new Word("שׁוֹמֵר", "guarding", QAL, PARTICIPLE, MASCULINE, SINGULAR),
@@ -175,7 +173,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("הָלַךּ",	"he walked"),
         // 1494
         new Word("דָּבָר", "word, speech", MASCULINE),
-        new Word("דְּבָרִים", "words, speechs", MASCULINE, PLURAL),
+        new Word("דְּבָרִים", "words, speeches", MASCULINE, PLURAL),
         // 1310
         new Word("רָאָה", "he saw"),
         // 1263
@@ -267,7 +265,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("כֹּהַן", "priest", MASCULINE),
         new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
-        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentance"),
+        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence"),
         // 743
         new Word("כֵּן", "so, thus"),
         // 736
@@ -437,7 +435,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עֵץ", "tree", MASCULINE),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
         // 327
-        new Word("בֵּרֵךּ", "he blessed - ברך (he kenlt, he blessed)", PIEL),
+        new Word("בֵּרֵךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
         // 325
         new Word("כְּלִי", "utensil, weapon", MASCULINE),
         new Word("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL),
@@ -560,7 +558,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("נַחֲלָה", "possession", FEMININE),
         new Word("נְחָלוֹת", "possessions", FEMININE, PLURAL),
         new Word("אֲדָמָה", "land, ground, earth", FEMININE),
-        new Word("אֲדָמוֹת", "lands, groundsp", FEMININE, PLURAL),
+        new Word("אֲדָמוֹת", "lands, grounds", FEMININE, PLURAL),
         // 220
         new Word("אֵם", "mother", FEMININE),
         // 219
