@@ -25,10 +25,12 @@ import java.util.List;
 
 public class Flashcard implements Serializable {
   final private List<Word> words;
+  private int needToGetRight;
 
   public Flashcard(Word word) {
     this.words = new ArrayList<>();
     words.add(word);
+    needToGetRight = 1;
   }
 
   public void addWord(Word word) {
@@ -41,7 +43,16 @@ public class Flashcard implements Serializable {
     for (Word word : words) word.flipOver();
     System.out.println("Success?[y]");
     String answer = input.readLine();
-    return answer.length() == 0 || answer.toLowerCase().startsWith("y");
+    if (answer.length() == 0 || answer.toLowerCase().startsWith("y")) {
+      needToGetRight--;
+      return true;
+    } else {
+      needToGetRight++;
+      return false;
+    }
+  }
 
+  public boolean needToDoAgain() {
+    return needToGetRight > 0;
   }
 }

@@ -79,19 +79,21 @@ class CardDeck implements Serializable {
       System.out.println("Done with the rules\n");
     }
 
-    List<Flashcard> missed = new ArrayList<>();
+    List<Flashcard> doAgain = new ArrayList<>();
     int succeeded = 0;
+    int failed = 0;
     for (int i = 0; i < numToTest && !cards.isEmpty(); i++) {
       Flashcard f = cards.pop();
       if (f.test(input)) {
         succeeded++;
       } else {
-        missed.add(f);
+        failed++;
       }
+      if (f.needToDoAgain()) doAgain.add(f);
     }
-    // Put back the ones we missed so we see them tomorrow.
-    for (Flashcard f : missed) cards.push(f);
-    System.out.println("Total right: " + succeeded + ", wrong: " + missed.size());
+    // Put back the ones that need to be done again
+    cards.addAll(0, doAgain);
+    System.out.println("Total right: " + succeeded + ", wrong: " + failed);
     System.out.println("Remaining cards: " + cards.size() + ", remaining rules: " + rules.size());
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
