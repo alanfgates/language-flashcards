@@ -127,7 +127,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("הֵן", "those", FEMININE, PLURAL),
         new Word("הֵנָּה", "those", FEMININE, PLURAL),
         // 4487
-        new Word("כִּי", "that, because, when"),
+        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"),
+        new Word("כִּי–אִם", "but, except"),
         // 3576
         new Word("הָיָה",	"he was"),
         // 2909
@@ -648,6 +649,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("רָבָה", "he was(became) great/many"),
         new Word("שָֹפָה", "lip", FEMININE),
         new Word("שְׂפָתַיִם", "lips,", FEMININE, DUAL),
+        new Word("לָמָּה", "why?"),
         // 174
         new Word("שָאַל", "he asked"),
         // 173
@@ -682,7 +684,15 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("טָמֵא", "he was unclean"),
         new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
         // 139
-        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed")
+        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
+        // 138
+        new Word("סוּס", "horse", MASCULINE),
+        new Word("סוּסִים", "horses", MASCULINE, PLURAL),
+        new Word("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL)
+
     );
   }
 
@@ -811,7 +821,7 @@ public class HebrewBuilder implements LanguageBuilder {
 
         new GrammarRule("Concjuncton ו (and, but, also, even)\n" +
             " * Most frequently spelled וְ\n" +
-            " * Become Shureq וּ \n" +
+            " * Becomes Shureq וּ \n" +
             "   * before ב, מ, פ (bump rule), ב פ loose Dagesh lene in this case בּיִת becomes וּבַיִת \n" +
             "   * and before a vocal Shewa נְעָרִים becomes וּנְעָרִים\n" +
             " * Before Hateph vowel, conjuction takes the corresponding short vowel אֲנָשׁים becomes וַאֲנָשׁים  \n" +
@@ -879,11 +889,34 @@ public class HebrewBuilder implements LanguageBuilder {
         new GrammarRule("Disambiguating the definite article and the interrogative particle:\n" +
             " * The interrogative particle does not usually have a dagesh forte in the next consonant\n" +
             " * The interrogative particle is often attached to a verb or another particle\n" +
-            " * The definite article is never spelled with a hateph patach")
+            " * The definite article is never spelled with a hateph patach"),
+
+        new GrammarRule("Pronominal suffixes:\n" +
+            " * When attached to a noun they indicate possessive.\n" +
+            " * When attached to a preposition or the definite direct object marker they are objective\n." +
+            " * Come in types 1 and 2:\n" +
+            "   * Type 1 is used with singular nouns, some prepositions, and the direct object marker.\n" +
+            "   * Type 2 is used with plural nouns and some prepositions.\n" +
+            " * Singular nouns can take plural pronominal suffixes (e.g. our horse) and vice versa."),
+
+        new GrammarRule("Type 1 pronominal suffixes (singular nouns, some prepositions, direct\n" +
+            "object marker) (א in all cases just to give letter to put vowel under):\n" +
+            " x אִי  me/my          נוּ   us/our\n" +
+            " x ךָ   you/your (ms)  כֶם  you/your (mp)\n" +
+            " x :ך you/your (fs)   כֶן  you/your (fp)\n" +
+            " x וֹ   he/his         הֶם they/theirs (m)\n" +
+            " x אָהּ she/hers       הֶן  they/theirs (f)"),
+
+        new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
+            "all cases just to give letter to put vowel under):\n" +
+            " x אַי me/my          אֵינוּ us/our\n" +
+            " x אֶיךָ you/your (ms) אֵיכֶם you/your (mp)\n" +
+            " x אַיִך you/your (fs) אֵיכֶן you/your (fp)\n" +
+            " x אָיו he/his        אֵיהֶם they/theirs (m)\n" +
+            " x אֶיהָ she/hers     אֵיהֶן  they/theirs (f)")
 
 
-
-        // Continue 8.11, p 76
+        // Continue 9.3, p 81
     );
   }
 }

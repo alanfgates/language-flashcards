@@ -18,5 +18,6 @@
 package com.github.alanfgates.language.flashcards;
 
 public enum Other {
-  EMPHATIC
+  EMPHATIC,
+  DEPONENT
 }
