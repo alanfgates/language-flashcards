@@ -109,8 +109,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אֲנִי", "I, myself", NOMINATIVE),
         new Word("אָנֹכִי", "I, myself", NOMINATIVE),
         new Word("אֲנַחְנוּ", "we", NOMINATIVE),
-        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE),
-        new Word("אַתְּ", "you", NOMINATIVE, FEMININE),
+        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR),
+        new Word("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR),
         new Word("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL),
         new Word("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL),
         new Word("הוּא", "he", NOMINATIVE),
@@ -862,7 +862,7 @@ public class HebrewBuilder implements LanguageBuilder {
             "   * before, in the precense of: לִפְנֵי\n" +
             "   * away from, out from, from before, on account of: מִפְּנֵי and מִלִּפְנֵי\n" +
             "   * in the face, in the sight of, before, up against, opposite to: עַלֿֿ-פְּנֵי\n" +
-            " * preoposition plus דבר\n:" +
+            " * preposition plus דבר\n" +
             "   * on account of עַל-דְּבַר"),
 
         new GrammarRule("Use of adjectives:\n" +
