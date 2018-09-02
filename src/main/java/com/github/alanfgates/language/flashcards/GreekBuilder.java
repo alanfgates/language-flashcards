@@ -69,6 +69,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
+        */
         // Indicative Active Imperfect
         new Word("ἔλυον", "I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
         new Word("ἔλυες", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
@@ -77,7 +78,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐλύομεν", "we were loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("ἐλύετε", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, PLURAL),
         new Word("ἔλυον", "they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
-        */
 
         // Indicative Active Future
         new Word("λύσω", "I will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
@@ -111,6 +111,22 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυόμεθα", "we were loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύεσθε", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they were loosened", INDICATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Imperfect
+        new Word("ἐλυόμην", "I was loosing myself", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλύου", "You were loosing yourself", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύετο", "S/he was loosing her/himself", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλυόμεθα", "We were loosing ourselves", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλύεσθε", "You were loosing yourselves", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἐλύοντο", "They were loosing themselves", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Imperfect
+        new Word("ἐλυόμην", "I was being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλύου", "You were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύετο", "S/he was being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλυόμεθα", "We were being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλύεσθε", "You were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἐλύοντο", "They were being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, PLURAL),
 
         /*
         // Subjunctive active present
@@ -220,6 +236,51 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
         */
 
+        //----------------------------------------------------------------------------------------
+        // NOUN FORMS
+        new Word("λόγος", "word - root λόγο", MASCULINE, NOMINATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("λόγε", "word - root λόγο", MASCULINE, VOCATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("λόγου", "word - root λόγο", MASCULINE, GENITIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("λόγῳ", "word - root λόγο", MASCULINE, DATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("λόγον", "word - root λόγο", MASCULINE, ACCUSATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("λόγοι", "words - root λόγο", MASCULINE, NOMINATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("λόγοι", "words - root λόγο", MASCULINE, VOCATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("λόγων", "words - root λόγο", MASCULINE, GENITIVE, PLURAL, SECOND_DECLENSION),
+        new Word("λόγοις", "words - root λόγο", MASCULINE, DATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("λόγους", "words - root λόγο", MASCULINE, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
+
+        new Word("γραφή", "writing - root γραφή", FEMININE, NOMINATIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφή", "writing - root γραφή", FEMININE, VOCATIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφῆς", "writing - root γραφή", FEMININE, GENITIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφῇ", "writing - root γραφή", FEMININE, DATIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφήν", "writing - root γραφή", FEMININE, ACCUSATIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφαί", "writings - root γραφή", FEMININE, NOMINATIVE, PLURAL, FIRST_DECLENSION),
+        new Word("γραφαί", "writings - root γραφή", FEMININE, VOCATIVE, PLURAL, FIRST_DECLENSION),
+        new Word("γραφῶν", "writings - root γραφή", FEMININE, GENITIVE, PLURAL, FIRST_DECLENSION),
+        new Word("γραφαῖς", "writings - root γραφή", FEMININE, DATIVE, PLURAL, FIRST_DECLENSION),
+        new Word("γραφάς", "writings - root γραφή", FEMININE, ACCUSATIVE, PLURAL, FIRST_DECLENSION),
+
+        new Word("ἔργον", "work - root ἔργο", NEUTER, NOMINATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("ἔργου", "work - root ἔργο", NEUTER, GENITIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("ἔργῳ", "work - root ἔργο", NEUTER, DATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("ἔργον", "work - root ἔργο", NEUTER, ACCUSATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("ἔργα", "works - root ἔργο", NEUTER, NOMINATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("ἔργων", "works - root ἔργο", NEUTER, GENITIVE, PLURAL, SECOND_DECLENSION),
+        new Word("ἔργοις", "works - root ἔργο", NEUTER, DATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("ἔργα", "works - root ἔργο", NEUTER, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
+
+        new Word("σάρξ", "flesh - root σάρκ", NOMINATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκ", "flesh - root σάρκ", VOCATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σαρκός", "flesh - root σάρκ", GENITIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σαρκί", "flesh - root σάρκ", DATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκα", "flesh - root σάρκ", ACCUSATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", NOMINATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", VOCATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρκῶν", "fleshes - root σάρκ", GENITIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξί", "fleshes - root σάρκ", DATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξίν", "fleshes - root σάρκ", DATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκας", "fleshes - root σάρκ", ACCUSATIVE, PLURAL, THIRD_DECLENSION),
+
         //
         //----------------------------------------------------------------------------------------
         // VOCABULARY, with frequency noted in comments
@@ -297,7 +358,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐσόμεθα", "We will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, PLURAL),
         new Word("ἔσεσθε", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, PLURAL),
         new Word("ἔσονται", "They will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
+        new Word("ἤμην", "I was", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἦς", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἦμεν", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἤμεθα", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἦτε", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἦσαν", "They were", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
         // 2357
         new Word("λέγω", "I say - root *λεγ"),
         new Word("ἐρῶ", "I will say - λεγω root *ερ", FUTURE),
@@ -1076,8 +1143,23 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἱεροῦ", "temple", NEUTER, GENITIVE),
         new Word("πῦρ", "fire", NEUTER),
         new Word("πυρός", "fire", NEUTER, GENITIVE),
-        new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),  // TODO check I have this right
-        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER)
+        new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),
+        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER),
+        // 70
+        new Word("αἰτέω", "I ask - root *αἰτε"),
+        new Word("αἰτήσω", "I will ask - root *αἰτε", FUTURE),
+        new Word("ᾔτησα", "I was asked - root *αἰτε", AORIST),
+        new Word("ᾔτηκα", "I have asked - root *αἰτε", PERFECT),
+        new Word("ᾔτημαι", "I have been asked - root *αἰτε", MIDDLE, PASSIVE, PERFECT),
+        new Word("τηρέω", "I keep, I guard - root *τηρε"),
+        new Word("τηρήσω", "I will keep, I will guard - root *τηρε", FUTURE),
+        new Word("ἐτήρησα", "I kept, I guarded - root *τηρε", AORIST),
+        new Word("τετήρηκα", "I have kept, I have guarded - root *τηρε", PERFECT),
+        new Word("τετήρημαι", "I have been kept, I have been guarded - root *τηρε", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
+        // 69
+        new Word("τρεῖς", "three", MASCULINE, FEMININE),
+        new Word("τρία", "three", NEUTER)
 
         );
   }
@@ -1316,11 +1398,90 @@ public class GreekBuilder implements LanguageBuilder {
             " * γενναω always has double ν and is completely regular.\n" +
             " * γινωσκω, except in the present tense, does not have a vowel between the γ and the ν."),
 
-        new GrammarRule("Verb roots and stems, pattern 1: root not modified.  Example: *ἀκου")
+        new GrammarRule("Verb roots and stems,\n" +
+            " * Pattern 1: root not modified.  Example: *ἀκου\n" +
+            " * Pattern 2: different roots in different stems\n" +
+            " * Pattern 3: verbs with roots ending in a liquid (λ, μ, ν, ρ)"),
 
-        // MAJOR TODO - go back and put the verb root in each verb rather than present tense, 200
-        // and less.
-        // Continue with 20 page 166
+        new GrammarRule("Liquid verbs:\n" +
+            " * Tense formative for future is εσ instead of just σ but σ often drops out\n" +
+            "   when placed between two vowels resulting in future without σ.\n" +
+            "   The contracted vowels always have a circumflex (except in 1st plural middle).\n" +
+            "   For example: μεν + εσ + ω = μεν + ε + ω = μενῶ"),
+
+        new GrammarRule("Common verb root modifications:\n" +
+            " * When the present tense stem ends in ιζω or αζω the root generally ends in a\n" +
+            "   dental (τ, δ, θ) *βαπτδ -> βαπτιζω\n" +
+            " * When the present tense stem ends in ασσω the root generally ends in a\n" +
+            "   velar ( κ, γ, χ) *ταραχ -> ταρασσω\n" +
+            " * When the present tense stem ends in a double consonant the root often ends in\n" +
+            "   a single consonant: *βαλ -> βαλλω\n" +
+            " * Some roots add a iota in the present stem: *αρ -> αἴρω\n" +
+            " * Some roots add σκ or ισκ to form the present: *γνω -> γινωσκω\n" +
+            " * Some stem vowels ablaut."),
+
+        new GrammarRule("Verbs that have second aorists are normally verbs that alter their\n" +
+            "root in the formation of their present tense stem."),
+
+        new GrammarRule("Imperfect active paradigm:\n" +
+            "       form       connecting vowel  ending\n" +
+            "1sg    ἔλυον      ο                 ν\n" +
+            "2sg    ἔλυες      ε                 ς\n" +
+            "3sg    ἔλυε(ν)    ε                 - (ν)\n" +
+            "1pl    ἐλύομεν    ο                 μεν\n" +
+            "2pl    ἐλὐετε     ε                 τε\n" +
+            "3pl    ἔλυον      ο                 ν"),
+
+        new GrammarRule("Imperfect middle/passive paradigm:\n" +
+            "       form       connecting vowel  ending\n" +
+            "1sg    ἐλυόμην    ο                 μην\n" +
+            "2sg    ἐλύου      ε                 σο\n" +
+            "3sg    ἐλύετο     ε                 το\n" +
+            "1pl    ἐλυόμεθα   ο                 μεθα\n" +
+            "2pl    ἐλύεσθε    ε                 σθε\n" +
+            "3pl    ἐλύοντο    ο                 ντο"),
+
+        new GrammarRule("Augments for imperfect and aorist:\n" +
+            "* If the word begins with a consonant, an ε is prepended.\n" +
+            "* If the word begins with a vowel the vowel lengthens:\n" +
+            "  α + ε = η\n" +
+            "  ε + ε = η\n" +
+            "  ο + ε = ω\n" +
+            "  η + ε = η\n" +
+            "  ι + ε = ι\n" +
+            "  υ + ε = υ\n" +
+            "  ω + ε = ω\n" +
+            "* If the verb begins with a dipthong then either the first letter lengthens,\n" +
+            "  and if the second letter is a ι it subscripts, or the verb does not show an augment."),
+
+        new GrammarRule("The present tense stem is used to form the imperfect tense.\n" +
+            "Implies: if a verb is deponent in the present it will also be deponent in the imperfect.\n"),
+
+        new GrammarRule("In a compound verb the augment comes after the preposition.\n" +
+            "* If the preposition ends in a vowel it does not contract with the augment\n" +
+            "  * Usually the final vowel of the preposition drops off.\n" +
+            "  * Sometimes it remains but does not contract.\n" +
+            "* When a compound verb with a preposition that ends in κ augments the κ\n" +
+            "  changes to ξ."),
+
+        new GrammarRule("Imperfect can describe:\n" +
+            " * An ongoing action in the past (most common), called progressive, durative.\n" +
+            "   ἐδιδασκεν τους μαθητας αυτου He was teaching his disciples\n" +
+            " * Can place emphasis on the beginning of an action, called ingressive, inceptive.\n" +
+            "   ἀγγελοι προσηλθον και διηκονουν αυτῳ Angles came and begin to minister to him\n" +
+            " * Can stress the repetitive nature of an action, called iterative.\n" +
+            "   ἠρχετο προσ αὐτον [the widow] kept coming to him\n" +
+            " * Used to desribe actions that occur regularly, called customary.\n" +
+            "   Κατα δε ἑορτην _ἀπελυεν_ αὐτοις ἑνα δεσμιον\n" +
+            "   Now at the feast _he used to release_ for them any one prisoner" +
+            " * Can be used to describe a wish (voluntative)\n" +
+            "   _ηὐχομην_ γαρ ἀναθεμα εἰναι αὐτος ἐγω For _I could wish_ that I myself were accursed\n" +
+            " * Can be used to describe an attempt (conative)\n" +
+            "   και ἐπορθουν αὐτην and I tried to destroy it\n" +
+            " * Can describe something almost done (tendential)\n" +
+            "   ὁ δε Ἰωαννης διεκωλυεν αὐτον John would have prevented him")
+
+        // Continue with 22 page 194
 
     );
   }

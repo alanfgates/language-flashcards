@@ -74,6 +74,30 @@ public class HebrewBuilder implements LanguageBuilder {
         // TODO QAL infinitive
 
         //----------------------------------------------------------------------------------------
+        // PRONOMINAL SUFFIXES
+        new Word("סוּסִי", "my horse"),
+        new Word("סוּסְךָ", "your horse", MASCULINE, SINGULAR),
+        new Word("סוּסֵך:", "your horse", FEMININE, SINGULAR),
+        new Word("סוּסוֹ", "his horse"),
+        new Word("סוּסָהּ", "her horse"),
+        new Word("סוּסֵנוּ", "our horse"),
+        new Word("סוּסְכֶם", "your horse", MASCULINE, PLURAL),
+        new Word("סוּסְכֶן", "your horse", FEMININE, PLURAL),
+        new Word("סוּסָם", "their horse", MASCULINE),
+        new Word("סוּסָן", "their horse", FEMININE),
+
+        new Word("סוּסַי", "my horses"),
+        new Word("סוּסֶיךָ", "your horses", MASCULINE, SINGULAR),
+        new Word("סוּסַיִך:", "your horses", FEMININE, SINGULAR),
+        new Word("סוּסָיו", "his horses"),
+        new Word("סוּסֶיהָ", "her horses"),
+        new Word("סוּסֵינוּ", "our horses"),
+        new Word("סוּסֵיכֶם", "your horses", MASCULINE, PLURAL),
+        new Word("סוּסֵיכֶן", "your horses", FEMININE, PLURAL),
+        new Word("סוּסֵיהֶם", "their horses", MASCULINE),
+        new Word("סוּסֵיהֶן", "their horses", FEMININE),
+
+        //----------------------------------------------------------------------------------------
         // VOCABULARY, with frequency noted in comments
         // 50524
         new Word("וְ", "and, but, also, even"),
@@ -98,12 +122,13 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)"),
         // 5415
         new Word("כֹּל", "all"),
-        new Word("כָּל", "all"),
+        new Word("כָּל", "all of", CONSTRUCT),
         // 5317
         new Word("אָמַר", "he said"),
 
         // 4942
         new Word("בֵּן", "son", MASCULINE),
+        new Word("בֶּן", "son of", MASCULINE, CONSTRUCT),
         new Word("בָּנִים", "sons", MASCULINE, PLURAL),
         // 4795
         new Word("אֲנִי", "I, myself", NOMINATIVE),
@@ -161,6 +186,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("פְּנֵי", "before, in the presence of"),
         // 2046
         new Word("בַּיִת", "house", MASCULINE),
+        new Word("בֵּּּית", "house of", MASCULINE, CONSTRUCT),
         new Word("בָּתִּים", "houses", MASCULINE, PLURAL),
         // 2014
         new Word("נָתַן", "he gave, put, set"),
@@ -168,7 +194,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עַם", "people, nation", MASCULINE),
         new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
         // 1627
-        new Word("יָד", "hand", FEMININE),
+        new Word("יָד", "hand, (metaphorically) side, power", FEMININE),
+        new Word("יַד", "hand of", FEMININE, CONSTRUCT),
         new Word("יָדַיִם", "hands", FEMININE, DUAL),
         // 1554
         new Word("הָלַךּ",	"he walked"),
@@ -181,6 +208,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עַד", "until, as far as"),
         // 1210
         new Word("אָב", "father", MASCULINE),
+        new Word("אֲבִי", "father of", MASCULINE, CONSTRUCT),
         new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
         // 1165
         new Word("שָׁמַע",	 "he heard"),
@@ -210,9 +238,9 @@ public class HebrewBuilder implements LanguageBuilder {
         // 952
         new Word("יָדַע", "he knew"),
         // 896
-        new Word("עַיִן", "eye", FEMININE),
+        new Word("עַיִן", "eye, spring", FEMININE),
+        new Word("עֵין", "eye of, spring of", FEMININE, CONSTRUCT),
         new Word("עֵינַים", "eyes", FEMININE, DUAL),
-        new Word("עַיִן", "spring", FEMININE),
         new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 898
         new Word("אֵת", "with"),
@@ -221,7 +249,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עָלָה", "he went up"),
         // 879
         new Word("שָׁנָה", "year", FEMININE),
-        new Word("שׁנִים", "years", FEMININE, PLURAL),
+        new Word("שׁנִים", "years", FEMININE, PLURAL),  // TODO - figure out vowel under ש
         // 864
         new Word("שֵׁם", "name", MASCULINE),
         new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
@@ -282,6 +310,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("נָשָׂא", "he lifted, carried, took"),
         // 629
         new Word("אָח", "brother", MASCULINE),
+        new Word("אֲחִי", "brother of", MASCULINE, CONSTRUCT),
         new Word("אַחִים", "brothers", MASCULINE, PLURAL),
         // 627
         new Word("קָם", "he arose, stood"),
@@ -465,23 +494,25 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("לֶחֶם", "bread, food", MASCULINE),
         new Word("מְאֹד", "very"),
         // 296
-        new Word("עַת", "time", FEMININE),
+        new Word("עַת", "time, point in time", FEMININE),
         // 290
         new Word("חָזַק", "he was strong"),
         // 289
         new Word("כָּרַת", "he cut off"),
         new Word("עָבַד", "he worked, he served"),
         // 288
-        new Word("עֹלָה", "burnt offering", FEMININE),
-        new Word("עֹלוֹת", "burnt offerings", FEMININE, PLURAL),
+        new Word("עֹלָה", "whole burnt offering", FEMININE),
+        new Word("עֹלוֹת", "whole burnt offerings", FEMININE, PLURAL),
         // 287
         new Word("חָיָה", "he lived"),
+        // 285
+        new Word("אֹיֵב", "enemy", MASCULINE),
         // 284
         new Word("אָיַב", "he was hostile"),
         new Word("בְּרִית", "covenant", FEMININE),
         // 283
-        new Word("חֹדֶשׁ", "month", MASCULINE),
-        new Word("חֳדָשִׁים", "months", MASCULINE, PLURAL),
+        new Word("חֹדֶשׁ", "month, new moon", MASCULINE),
+        new Word("חֳדָשִׁים", "months, new moons", MASCULINE, PLURAL),
         // 280
         new Word("קָרַב", "he came near, he offered"),
         // 277
@@ -496,9 +527,9 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
         new Word("לְמַעַן", "because of, in order to, for the sake of"),
         // 270
-        new Word("בָּשָׂר", "flesh", MASCULINE),
-        new Word("בְּשָׂרִים", "fleshes", MASCULINE, PLURAL),
-        new Word("מִדְבָּר", "wilderness", MASCULINE),
+        new Word("בָּשָׂר", "flesh, meat, skin", MASCULINE),
+        new Word("בְּשָׂרִים", "fleshes, meats, skins", MASCULINE, PLURAL),
+        new Word("מִדְבָּר", "wilderness, desert, pasture", MASCULINE),
         // 268
         new Word("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL),
         // 264
@@ -522,7 +553,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חַיַל", "strength, wealth, army", MASCULINE),
         new Word("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL),
         // 241
-        new Word("גְּבוּל", "border", MASCULINE),
+        new Word("גְּבוּל", "border, boundary, territory", MASCULINE),
         // 240
         new Word("נַעַר", "boy, youth", MASCULINE),
         new Word("נְעָרִים", "boys, youths", MASCULINE, PLURAL),
@@ -680,9 +711,22 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
         // 163
         new Word("סָבַב", "he turned around, went around, surrounded"),
-        // 163
+        // 162
         new Word("טָמֵא", "he was unclean"),
         new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
+        // 161
+        new Word("אַיִל", "ram", NOUN, MASCULINE),
+        new Word("בַּד", "alone"),
+        new Word("אַך:", "only, surely, nevertheless"),
+        // 160
+        new Word("נוּס", "he fled, he escaped"),
+        new Word("גִּּבּוֹר", "mighty man, hero, warrior"),
+        new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
+
+        // 153
+        new Word("מָוֶת", "death, dying", MASCULINE),
+        new Word("מוֹת", "death of", MASCULINE, CONSTRUCT),
+
         // 139
         new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
         // 138
@@ -692,6 +736,9 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL)
+
+        // Back up and fill in from 162 - 138
+
 
     );
   }
@@ -896,27 +943,75 @@ public class HebrewBuilder implements LanguageBuilder {
             " * When attached to a preposition or the definite direct object marker they are objective\n." +
             " * Come in types 1 and 2:\n" +
             "   * Type 1 is used with singular nouns, some prepositions, and the direct object marker.\n" +
-            "   * Type 2 is used with plural nouns and some prepositions.\n" +
-            " * Singular nouns can take plural pronominal suffixes (e.g. our horse) and vice versa."),
+            "   * Type 2 is used with plural nouns and some prepositions.\n"),
+
+        new GrammarRule("Spelling changes for pronominal suffixes:" +
+            " * Singular nouns can take plural pronominal suffixes (e.g. our horse) and vice versa.\n" +
+            " * When attached to masculine (or feminine endingless) plural nouns, the ים is dropped\n" +
+            " * Nouns ending segol ה (e.g. שָׂדֶה ) will drop the segol ה before adding the " +
+            "   pronominal suffix: שׂדִי my field\n" +
+            " * Feminine singular nouns ending in patach ה the ה changes to ת before the ending " +
+            "   is applied.\n" +
+            " * Many monosyllabic nouns add י to their stem before a pronominal suffix.  Can be\n" +
+            "   distinguished in the singular (type 1) by the hireq before the י\n" +
+            " * The preposition כְּ changes to כָּמוֹ in singular and first person plural when\n" +
+            "   taking a pronominal suffix.\n" +
+            " * The preposition מִן changes to מִמֶ in singular and first person plural when\n" +
+            "   taking a pronominal suffix.\n" +
+            ""),
 
         new GrammarRule("Type 1 pronominal suffixes (singular nouns, some prepositions, direct\n" +
             "object marker) (א in all cases just to give letter to put vowel under):\n" +
-            " x אִי  me/my          נוּ   us/our\n" +
-            " x ךָ   you/your (ms)  כֶם  you/your (mp)\n" +
-            " x :ך you/your (fs)   כֶן  you/your (fp)\n" +
-            " x וֹ   he/his         הֶם they/theirs (m)\n" +
-            " x אָהּ she/hers       הֶן  they/theirs (f)"),
+            " x אִי  or נִי me/my          נוּ   us/our\n" +
+            " x ךָ   you/your (ms)       כֶם  you/your (mp)\n" +
+            " x :ך you/your (fs)        כֶן  you/your (fp)\n" +
+            " x וֹ or הוּ  he/his         הֶם or אָם they/theirs (m)\n" +
+            " x אָהּ or הָ she/hers       הֶן  or אָן they/theirs (f)"),
 
         new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
-            "all cases just to give letter to put vowel under):\n" +
+            "all cases just to give letter to put vowel under).  All type 2 have י in them.\n" +
             " x אַי me/my          אֵינוּ us/our\n" +
             " x אֶיךָ you/your (ms) אֵיכֶם you/your (mp)\n" +
             " x אַיִך you/your (fs) אֵיכֶן you/your (fp)\n" +
             " x אָיו he/his        אֵיהֶם they/theirs (m)\n" +
-            " x אֶיהָ she/hers     אֵיהֶן  they/theirs (f)")
+            " x אֶיהָ she/hers     אֵיהֶן  they/theirs (f)"),
+
+        new GrammarRule("Distinguishing similar words with pronominal suffixes:\n" +
+            " * Direct object marker and אֵת/אֶת are the same alone but differ with pronominal\n" +
+            "   suffix.  Direct object marker has a holem: אֹתֵי while the preposition has hireq\n" +
+            "   and dagesh forte: אִתִּי\n" +
+            " * Preposition עִם and noun עַם both keep their first vowels throughout, both add\n" +
+            "   dagesh forte in mem."),
+
+        new GrammarRule("Construct chains:\n" +
+            " * Roughly equivalent to Greek genitive case.\n" +
+            " * Last noun in the chain is in an absolute state, all others are in construct state.\n" +
+            " * No other words can come between the nouns in a construct chain.\n" +
+            " * A construct chain is either entirely definite or entirely indefinite.  When\n" +
+            "   definite only the abosolute noun takes the definite article or has a\n" +
+            "   pronominal suffix or is a proper noun.\n" +
+            " * Adjectives that modify any noun in the chain come after the chain.  Number and\n" +
+            "   gender of the adjective can sometimes determine which noun it modifies, sometimes\n" +
+            "   you must use context.  This applies to demonstratives adjectives (this, that) as well.\n" +
+            " * Substantive adjectives functioning as a noun can form part of the construct chain.\n" +
+            " * Inseparable prepositions can be attached to construct nouns."),
+
+        new GrammarRule("Spelling in construct state:\n" +
+            " * A construct noun surrenders its primary accent.  A construct chain is pronounced\n" +
+            "   as a single word, with the accent on the absolute noun.  This is sometimes\n" +
+            "   marked with a maqqef (-).\n" +
+            " * Vowel reduction:\n" +
+            "   * Qamets (and sometimes tsere) change to patach in a final closed syllable:\n" +
+            "     e.g. מִשְׁפָּט changes to מִשְׁפַּט\n" +
+            "   * Qamets or tsere change to vocal shewa in open, unaccented syllable:\n" +
+            "     (or a hateph vowel under a gutteral): נָבִִיא changes to נְבִיא \n" +
+            " * Masculine plural and both dual endings change to אֵי: e.g. אֱלֹהִים changes to אֱלֹהֵי \n" +
+            " * Feminine singular nouns ending in אָה changes to אַת:\n" +
+            "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
+            " * Some monosyllabic nouns add a hireq yod in the contruct state.")
 
 
-        // Continue 9.3, p 81
+        // Continue 10.9, p 111
     );
   }
 }
