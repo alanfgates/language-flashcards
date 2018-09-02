@@ -369,8 +369,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λέγω", "I say - root *λεγ"),
         new Word("ἐρῶ", "I will say - λεγω root *ερ", FUTURE),
         new Word("εἶπον", "I said - λεγω root *ιπ", SECOND_AORIST),
-        new Word("εἴρηκα", "I have said - λεγω root *ιπ", PERFECT),
-        new Word("εἴρημαι", "I have been said - λεγω root *ιπ", MIDDLE, PASSIVE, PERFECT),
+        new Word("εἴρηκα", "I have said - λεγω root *ερ", PERFECT),
+        new Word("εἴρημαι", "I have been said - λεγω root *ερ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐρρέθην", "I was said - λεγω root *ερ", PASSIVE, AORIST),
         // 1768
         new Word("εἰς accusative", "into"),
@@ -427,7 +427,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 708
         new Word("ἔχω",	"I have - root *σεχ"),
         new Word("ἕξω",	"I will have - ἐχω root *σεχ", FUTURE),
-        new Word("ἔσχον", "I had - ἐχω root *σεχ", AORIST),
+        new Word("ἔσχον", "I had - ἐχω root *σεχ", SECOND_AORIST),
         new Word("ἔσχηκα", "I have had - ἐχω root *σεχ", PERFECT),
         // 699
         new Word("πρός accusative", "to, towards"),
@@ -448,8 +448,8 @@ public class GreekBuilder implements LanguageBuilder {
         // 638
         new Word("ἀλλά", "but (strong)"),
         // 634
-        new Word("ἔρχομαι", "I come, I go - root *ερχ"),
-        new Word("ἐλεύσομαι", "I will come/go - ἔρχομαι root *ελευθ", FUTURE),
+        new Word("ἔρχομαι", "I come, I go - root *ερχ", DEPONENT),
+        new Word("ἐλεύσομαι", "I will come/go - ἔρχομαι root *ελευθ", FUTURE, DEPONENT),
         new Word("ἦλθον", "I came/went, - ἔρχομαι root *ελευθ", SECOND_AORIST),
         new Word("ἐλήλυθα", "I have come/gone - ἔρχομαι root *ελευθ", PERFECT),
         // 579
@@ -533,11 +533,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἑώρακα",	"I have seen - ὁραω root *ορα", PERFECT),
         new Word("ὤφθην",	"I was seen - ὁραω root *οπ", PASSIVE, AORIST),
         // 428
-        new Word("ἀκούω", "I hear - root ακου"),
-        new Word("ἀκούσω", "I will hear, - root ακου", FUTURE),
-        new Word("ἤκουσα", "I heard, - root ακου", AORIST),
-        new Word("ἀκήκοα", "I have heard, - root ακου", PERFECT),
-        new Word("ἠκούσθην", "I was heard, - root ακου", PASSIVE, AORIST),
+        new Word("ἀκούω", "I hear - root *ακου"),
+        new Word("ἀκούσω", "I will hear - root *ακου", FUTURE),
+        new Word("ἤκουσα", "I heard - root *ακου", AORIST),
+        new Word("ἀκήκοα", "I have heard - root *ακου", PERFECT),
+        new Word("ἠκούσθην", "I was heard - root *ακου", PASSIVE, AORIST),
         // 418
         new Word("πολύς", "many, much", MASCULINE),
         new Word("πολλή", "many, much", FEMININE),
@@ -636,7 +636,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 231
         new Word("ἀποκρίνομαι", "I answer - root *αποκριν", DEPONENT),
         new Word("ἀπεκρινἀμην", "I answered - αποκρινομαιa root *αποκριν", AORIST, DEPONENT),
-        new Word("ἀπεκρίθην", "I was answered - αποκρινομαιa root *αποκριν", PASSIVE, AORIST, DEPONENT),
+        new Word("ἀπεκρίθην", "I was answered - αποκρινομαιa root *αποκριν", PASSIVE, AORIST),
         // 220
         new Word("ὑπό accusative", "under"),
         new Word("ὑπό genitive", "by"),
@@ -1394,7 +1394,7 @@ public class GreekBuilder implements LanguageBuilder {
             "connecting vowel + primary passive personal endings."),
 
         new GrammarRule("Separating γινομαι, γενναω and γινωσκω:\n" +
-            " * γινομαι will always have a vowel between the γ and the ν.  Usually an ε\n." +
+            " * γινομαι will always have a vowel between the γ and the ν.  Usually an ε.\n" +
             " * γενναω always has double ν and is completely regular.\n" +
             " * γινωσκω, except in the present tense, does not have a vowel between the γ and the ν."),
 
