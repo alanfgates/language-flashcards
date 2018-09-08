@@ -51,33 +51,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύετε", "you loosen", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύουσι", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         new Word("λύουσιν", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
-        //
-        /*
-        // Indicative Active Aorist
-        new Word("ἔλυσα", "I loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
-        new Word("ἔλυσας", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("ἔλυσε", "s/he loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
-        new Word("ἐλύσαμεν", "we loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
-        new Word("ἐλύσατε", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
-        new Word("ἔλυσαν", "they loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
-        //
-        // Indicative Active Second Aorist
-        new Word("ἔβαλον", "I threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
-        new Word("ἔβαλες", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
-        new Word("ἔβαλε", "s/he threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("ἐβάλομεν", "we threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
-        new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
-        new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
-
-        */
-        // Indicative Active Imperfect
-        new Word("ἔλυον", "I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("ἔλυες", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἔλυε", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἔλυεν", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλύομεν", "we were loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, PLURAL),
-        new Word("ἐλύετε", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἔλυον", "they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Active Future
         new Word("λύσω", "I will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
@@ -88,10 +61,36 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύσουσι", "they will loosen", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
         new Word("λύσουσιν", "they will loosen", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
 
+        // Indicative Active Imperfect
+        new Word("ἔλυον", "I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἔλυες", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἔλυε", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἔλυεν", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλύομεν", "we were loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλύετε", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἔλυον", "they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
+
+        // Indicative Active Aorist
+        new Word("ἔλυσα", "I loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἔλυσας", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἔλυσε", "s/he loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἔλυσεν", "s/he loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐλύσαμεν", "we loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐλύσατε", "you loosened", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἔλυσαν", "they loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Indicative Active Second Aorist
+        new Word("ἔβαλον", "I threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἔβαλες", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἔβαλε", "s/he threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐβάλομεν", "we threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you loosen yourself", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("λύεται", "s/he loosens him/herself", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύεται", "s/he loosens her/himself", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λυόμεθα", "we loosen ourselves", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύεσθε", "you loosen yourselves", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
@@ -99,10 +98,34 @@ public class GreekBuilder implements LanguageBuilder {
         // Indicative Middle Future
         new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, SINGULAR),
         new Word("λύσῃ", "you will loosen yourself", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, SINGULAR),
-        new Word("λύσεται", "s/he will loosen him/herself", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, SINGULAR),
+        new Word("λύσεται", "s/he will loosen her/himself", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, SINGULAR),
         new Word("λυσόμεθα", "we will loosen ourselves", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, PLURAL),
         new Word("λύσεσθε", "you will loosen yourselves", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, PLURAL),
         new Word("λύσονται", "they will loosen themselves", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Imperfect
+        new Word("ἐλυόμην", "I was loosing myself", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλύου", "you were loosing yourself", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύετο", "S/he was loosing her/himself", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλυόμεθα", "We were loosing ourselves", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλύεσθε", "You were loosing yourselves", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἐλύοντο", "They were loosing themselves", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Aorist
+        new Word("ἐλυσάμην", "I loosed myself", INDICATIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἐλύσω", "you loosed yourself", INDICATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύσατο", "s/he loosed her/himself", INDICATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐλυσάμεθα", "we loosed ourselves", INDICATIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐλύσασθε", "you loosed yourselves", INDICATIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἐλύσαντο", "they loosed themselves", INDICATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Second Arorist
+        new Word("ἐγενόμην", "I became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἐγένου", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἐγένετο", "s/he became", INDICATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐγενόμεθα", "we became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἐγένεσθε", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐγένοντο", "they became", INDICATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Indicative Passive Present
         new Word("λύομαι", "I was loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -112,15 +135,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύεσθε", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they were loosened", INDICATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
-        // Indicative Middle Imperfect
-        new Word("ἐλυόμην", "I was loosing myself", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("ἐλύου", "You were loosing yourself", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἐλύετο", "S/he was loosing her/himself", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλυόμεθα", "We were loosing ourselves", INDICATIVE, MIDDLE, IMPERFECT, FIRST_PERSON, PLURAL),
-        new Word("ἐλύεσθε", "You were loosing yourselves", INDICATIVE, MIDDLE, IMPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἐλύοντο", "They were loosing themselves", INDICATIVE, MIDDLE, IMPERFECT, THIRD_PERSON, PLURAL),
-
-        // Indicative Middle Imperfect
+        // Indicative Passive Imperfect
         new Word("ἐλυόμην", "I was being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
         new Word("ἐλύου", "You were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
         new Word("ἐλύετο", "S/he was being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
@@ -1159,7 +1174,23 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
         // 69
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
-        new Word("τρία", "three", NEUTER)
+        new Word("τρία", "three", NEUTER),
+
+        // 61
+        new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
+        new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
+        new Word("ἐδόξασω", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
+        new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐδοξάσθην", "I praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
+        new Word("κηρύσσω", "I proclaim, preach - root *κηρυγ"),
+        new Word("ἐκήρυξα", "I proclaimed, preached κηρύσσω - root *κηρυγ", AORIST),
+        new Word("ἐκηρύχθην", "I was proclaimed, preached - root *κηρυγ", PASSIVE, AORIST),
+
+        // 53
+        new Word("διό", "therefore, for this reason")
+
+
+        // Go back and fill in blanks
 
         );
   }
@@ -1479,9 +1510,69 @@ public class GreekBuilder implements LanguageBuilder {
             " * Can be used to describe an attempt (conative)\n" +
             "   και ἐπορθουν αὐτην and I tried to destroy it\n" +
             " * Can describe something almost done (tendential)\n" +
-            "   ὁ δε Ἰωαννης διεκωλυεν αὐτον John would have prevented him")
+            "   ὁ δε Ἰωαννης διεκωλυεν αὐτον John would have prevented him"),
 
-        // Continue with 22 page 194
+        new GrammarRule("Second aorist active paradigm:\n" +
+            "       form       connecting vowel  ending\n" +
+            "1sg    ἔλαβον     ο                 ν\n" +
+            "2sg    ἔλαβες     ε                 ς\n" +
+            "3sg    ἔλαβε(ν)   ε                 - (ν)\n" +
+            "1pl    ἐλαβομεν   ο                 μεν\n" +
+            "2pl    ἐλαβετε    ε                 τε\n" +
+            "3pl    ἔλαβον     ο                 ν"),
+
+        new GrammarRule("Second aorist middle paradigm:\n" +
+            "       form        connecting vowel  ending\n" +
+            "1sg    ἐγενόμην    ο                 μην\n" +
+            "2sg    ἐγένου      ε                 σο\n" +
+            "3sg    ἐγένετο     ε                 το\n" +
+            "1pl    ἐγενόμεθα   ο                 μεθα\n" +
+            "2pl    ἐγένεσθε    ε                 σθε\n" +
+            "3pl    ἐγένοντο    ο                 ντο"),
+
+        new GrammarRule("Aorist stems:\n" +
+            " * In the active voice, a second aorist will always have a different stem from\n" +
+            "   the present because the root will always have been modified to form the\n" +
+            "   present stem.\n" +
+            " * Almost always the second aorist stem is identical to the root.\n" +
+            " * For first aorist the tense stem is normally identical to the present tense stem" +
+            "."),
+
+        new GrammarRule("Aorist meaning:\n" +
+            " * Aorist is undefined, just says that an action happened, nothing about when or\n" +
+            "   how long.  It is often used for punctiliar (point in time) as in English\n" +
+            "   past tense, but that is not always what it means.\n" +
+            " * Aorist can refer to an action as a whole (constative)\n" +
+            " * It can refer to the beginning of an action (ingressive)\n" +
+            " * It can refer to a timeless truth (gnomic)\n" +
+            " * It can refer to a future action that will certainly occur (proleptic)."),
+
+        new GrammarRule("First aorist active paradigm:\n" +
+            "    augment  stem tense formative  secondary active personal endings  form\n" +
+            "1sg ε        λυ   σα               -                                  ἔλυσα" +
+            "2sg ε        λυ   σα               ς                                  ἔλυσας" +
+            "3sg ε        λυ   σε               - (ν)                              ἔλυσε(ν)" +
+            "1pl ε        λυ   σα               μεν                                ἐλύσαμεν" +
+            "2pl ε        λυ   σα               τε                                 ἐλύσατε" +
+            "3pl ε        λυ   σα               ν                                  ἔλυσαν"),
+
+        new GrammarRule("First aorist endings and verb types:\n" +
+            " * Contract verbs lengthen the contract vowel before the tense formative:\n" +
+            "   ἀγαπάω becomes ἠγάπησα\n" +
+            " * Stems that end in a stop combine the stop with the sigma, as per the rules.\n" +
+            " * Liquid verbs us α/ε as a tense formative rather than σα."),
+
+        new GrammarRule("First aorist middle paradigm:\n" +
+            "    augment  stem tense formative  secondary active personal endings  form\n" +
+            "1sg ε        λυ   σα               μην                                ἐλυσάμην" +
+            "2sg ε        λυ   σα               σο                                 ἐλύσω" +
+            "3sg ε        λυ   σα               το                                 ἐλύσατο" +
+            "1pl ε        λυ   σα               μεθα                               ἐλυσάμεθα" +
+            "2pl ε        λυ   σα               σθε                                ἐλύσασθε" +
+            "3pl ε        λυ   σα               ντο                                ἐλύσαντο")
+
+
+        // Continue with 24 page 212
 
     );
   }

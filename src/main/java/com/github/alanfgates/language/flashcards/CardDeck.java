@@ -70,12 +70,14 @@ class CardDeck implements Serializable {
   void daily(int numToTest) throws IOException {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
-    if (rules.size() > 0) {
+    for (int i = 0; i < 2 && rules.size() > 0; i++) {
       GrammarRule rule = rules.get(new Random().nextInt(rules.size()));
       rule.show();
       input.readLine();
       rules.remove(rule);
-    } else {
+    }
+    
+    if (rules.size() == 0) {
       System.out.println("Done with the rules\n");
     }
 
