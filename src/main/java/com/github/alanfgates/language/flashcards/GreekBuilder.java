@@ -1218,6 +1218,7 @@ public class GreekBuilder implements LanguageBuilder {
             "    waiting for our blessed hope, the appearing of the glory of our great God and\n" +
             "      Savior Jesus Christ."),
 
+        // TODO switch these to have words in them as examples
         new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
             "Nomanative  Singular: ς     Plural: ες\n" +
             "Vocative    Singular:       Plural: ες\n" +
