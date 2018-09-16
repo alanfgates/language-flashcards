@@ -36,11 +36,11 @@ import java.util.Random;
 class CardDeck implements Serializable {
 
   private LinkedList<Flashcard> cards;
-  private LinkedList<GrammarRule> rules;
+  private Map<String, List<GrammarRule>> rules;
 
   CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
-    rules = new LinkedList<>();
+    rules = new HashMap<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
       for (Word w : builder.buildWords()) {
@@ -52,33 +52,32 @@ class CardDeck implements Serializable {
           f.addWord(w);
         }
       }
-      rules.addAll(builder.buildRules());
+      // Have to make a copy of the rules list because Arrays.asList returns an implementation of
+      // List that doesn't support remove.
+      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
     }
     cards = new LinkedList<>(m.values());
     Collections.shuffle(cards);
-    Collections.shuffle(rules);
-    System.out.println("Found a total of " + cards.size() + " words and " + rules.size() + " rules");
+    printStatus();
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
     ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
     cards = (LinkedList<Flashcard>)in.readObject();
-    rules = (LinkedList<GrammarRule>)in.readObject();
+    rules = (Map<String, List<GrammarRule>>)in.readObject();
     in.close();
   }
 
   void daily(int numToTest) throws IOException {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
-    for (int i = 0; i < 2 && rules.size() > 0; i++) {
-      GrammarRule rule = rules.get(new Random().nextInt(rules.size()));
-      rule.show();
-      input.readLine();
-      rules.remove(rule);
-    }
-
-    if (rules.size() == 0) {
-      System.out.println("Done with the rules\n");
+    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+      if (e.getValue().size() > 0) {
+        System.out.println("Rule for " + e.getKey());
+        e.getValue().get(0).show();
+        input.readLine();
+        e.getValue().remove(0);
+      }
     }
 
     List<Flashcard> doAgain = new ArrayList<>();
@@ -96,7 +95,7 @@ class CardDeck implements Serializable {
     // Put back the ones that need to be done again
     cards.addAll(0, doAgain);
     System.out.println("Total right: " + succeeded + ", wrong: " + failed);
-    System.out.println("Remaining cards: " + cards.size() + ", remaining rules: " + rules.size());
+    printStatus();
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
     }
@@ -107,6 +106,19 @@ class CardDeck implements Serializable {
     out.writeObject(cards);
     out.writeObject(rules);
     out.close();
+  }
+
+  private void printStatus() {
+    StringBuilder buf = new StringBuilder("Remaining cards: ")
+        .append(cards.size())
+        .append(", remaining rules: ");
+    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+      buf.append(e.getKey())
+          .append(": ")
+          .append(e.getValue().size())
+          .append(" ");
+    }
+    System.out.println(buf.toString());
   }
 
 }

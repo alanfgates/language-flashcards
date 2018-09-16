@@ -27,7 +27,6 @@ public class GrammarRule implements Serializable {
   }
 
   public void show() {
-    System.out.println("Grammar rule of the day:");
     System.out.println(rule);
   }
 }

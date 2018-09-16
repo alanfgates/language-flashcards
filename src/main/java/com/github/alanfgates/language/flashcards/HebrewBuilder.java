@@ -797,7 +797,11 @@ public class HebrewBuilder implements LanguageBuilder {
           " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
           "   * A Schewa is silent when immediately preceded by a short vowel. פַּרְעֹה\n" +
           "   * The first of two contiguous Schewas is silent. מִשְׁפְּטֵי\n" +
-          "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n" +
+          "   * A Schewa at the end of a word is silent. כָּתַבְתְּ"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (continued)\n" +
+            "The Vocal Schewa will always occur in an open syllable.\n" +
+            "The Silent Schewa will always come at the end of a closed syllable.\n" +
           " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
           "   * Initial Schewa is always vocal. בְּרָכָה\n" +
           "   * The second of two contiguous Schewas is vocal.\n" +
@@ -842,7 +846,7 @@ public class HebrewBuilder implements LanguageBuilder {
           " 4. Some nouns go through irregular stem change in the plural:  אנשים איש  נשים אשה\n" +
           " 5. Some feminine pluralizations will appear with defective spelling תֹ instead of וֹת"),
 
-    new GrammarRule("Patterns of Pluralization p 32\n" +
+        new GrammarRule("Patterns of Pluralization p 32\n" +
           " 1. Pluralization with no change: some nouns do not change their vowels when being\n" +
           "    made plural.  Often happens with monosyllabic words with an unchangeable long\n" +
           "    vowel: שִׁיר to שִׁירִים Also happens with two syllable words with shewa or hateph\n" +
@@ -851,7 +855,9 @@ public class HebrewBuilder implements LanguageBuilder {
           "    Tsere pretonic syllable will experience propretonic reduction.  Qamets/Tsere will\n" +
           "    be replaced by Shewa.  דָּבָר -> דְּבָרִים and לֵבָב -> לְבָבוֹת\n" +
           "    If the initial consonant is gutteral it will move to Hateph Patach.  עָנָן –> עֲנָנִים\n" +
-          "    Nouns with vowel letters do not experience propretonic reduction.\n" +
+          "    Nouns with vowel letters do not experience propretonic reduction."),
+
+        new GrammarRule("Patterns of Pluralization (continued)\n" +
           " 3. Segholate nouns are nouns with accent on the first syllable, so called because in\n" +
           "    most cases one or both vowels are a Seghol.  These pluralize with a Shewa in the\n" +
           "    first syllable (or Hateph vowel for gutturals) and a Qamets in the second:  מֶלֶךּ –> מְלָכִים and חֶרֶב –> חֲרָבוֹת\n" +
@@ -882,7 +888,6 @@ public class HebrewBuilder implements LanguageBuilder {
           "     referred to as \"virtual doubling\"\n" +
           "   * Before nouns that begin with an unaccented עָ or הָ or חָ (last can also be\n" +
           "     accented), the definite article becomes Seghol הֶ\n" +
-          " * With initial יְ or מְ the Dagesh Forte is usually dropped\n" +
           " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ"),
 
         new GrammarRule("Concjuncton ו (and, but, also, even)\n" +
@@ -970,7 +975,9 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Nouns ending segol ה (e.g. שָׂדֶה ) will drop the segol ה before adding the " +
             "   pronominal suffix: שׂדִי my field\n" +
             " * Feminine singular nouns ending in patach ה the ה changes to ת before the ending " +
-            "   is applied.\n" +
+            "   is applied."),
+
+        new GrammarRule("Spelling changes for pronominal suffixes (continued):" +
             " * Many monosyllabic nouns add י to their stem before a pronominal suffix.  Can be\n" +
             "   distinguished in the singular (type 1) by the hireq before the י\n" +
             " * The preposition כְּ changes to כָּמוֹ in singular and first person plural when\n" +
@@ -1008,7 +1015,9 @@ public class HebrewBuilder implements LanguageBuilder {
             " * No other words can come between the nouns in a construct chain.\n" +
             " * A construct chain is either entirely definite or entirely indefinite.  When\n" +
             "   definite only the abosolute noun takes the definite article or has a\n" +
-            "   pronominal suffix or is a proper noun.\n" +
+            "   pronominal suffix or is a proper noun."),
+
+        new GrammarRule("Construct chains continued:\n" +
             " * Adjectives that modify any noun in the chain come after the chain.  Number and\n" +
             "   gender of the adjective can sometimes determine which noun it modifies, sometimes\n" +
             "   you must use context.  This applies to demonstratives adjectives (this, that) as well.\n" +
@@ -1019,12 +1028,14 @@ public class HebrewBuilder implements LanguageBuilder {
             " * A construct noun surrenders its primary accent.  A construct chain is pronounced\n" +
             "   as a single word, with the accent on the absolute noun.  This is sometimes\n" +
             "   marked with a maqqef (-).\n" +
+            " * Masculine plural and both dual endings change to אֵי: e.g. אֱלֹהִים changes to אֱלֹהֵי "),
+
+        new GrammarRule("Spelling in construct state continued:\n" +
             " * Vowel reduction:\n" +
             "   * Qamets (and sometimes tsere) change to patach in a final closed syllable:\n" +
             "     e.g. מִשְׁפָּט changes to מִשְׁפַּט\n" +
             "   * Qamets or tsere change to vocal shewa in open, unaccented syllable:\n" +
             "     (or a hateph vowel under a gutteral): נָבִִיא changes to נְבִיא \n" +
-            " * Masculine plural and both dual endings change to אֵי: e.g. אֱלֹהִים changes to אֱלֹהֵי \n" +
             " * Feminine singular nouns ending in אָה changes to אַת:\n" +
             "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
             " * Some monosyllabic nouns add a hireq yod in the contruct state."),

@@ -1273,13 +1273,17 @@ public class GreekBuilder implements LanguageBuilder {
             " * descriptive: Let us put on the armor of light ενδθσμεθα τα οπλα του φωτος\n" +
             " * possessive\n" +
             " * showing apposition to the head noun: You will receive the gift, the Holy Spirit\n" +
-            "   λημψεσθε την δωρεαν του αγιου πνευματος\n" +
+            "   λημψεσθε την δωρεαν του αγιου πνευματος"),
+
+        new GrammarRule("Uses of genitive continued:\n" +
             " * showing separation from the head noun: being alienated from the commonwealth of\n" +
             "   Israel απελλοτριωμενοι της πολιτειας του Ισραηλ\n" +
             " * subjective, expanding on the idea of the head noun: Who will separate us from\n" +
             "   Christ’s love τισ ημας χωρισει απο της αγαπης του Χπριστου\n" +
             " * objective, receiving the action of the head noun: The blasphemy against the\n" +
-            "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται\n" +
+            "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται"),
+
+        new GrammarRule("Uses of genitive continued:\n" +
             " * plenary, being both subjective and objective: For the love of Christ compels us η\n" +
             "   γαρ αγαπη του Χριστου συνεχει ημας\n" +
             " * relationship: Simon, son of John Σιμων Ιωαννου\n" +
@@ -1296,14 +1300,18 @@ public class GreekBuilder implements LanguageBuilder {
             " * dative of interest, expression “for”:  Your wife Elizabeth will bear a son for\n" +
             "   you η γυνη σου Ελισαβετ γεννησει υιον σοι (called the “dative of advantage” when\n" +
             "   the idea is to the subject’s advantage and “dative of disadvantage” when the idea\n" +
-            "   is not to the subject’s advantage)\n" +
+            "   is not to the subject’s advantage)"),
+
+        new GrammarRule("Uses of dative continued\n" +
             " * reference or respect (English, with respect to): Consider yourselves dead to sin\n" +
             "   λογιζεσθε εαυτους ειναι νεκρους τη αμαρτια\n" +
             " * Locative (‘in’, ‘with’)\n" +
             " * sphere or realm in which something occurs: Blessed are the pure in heart μακαριοι\n" +
             "   οι καθαροι τη καρδια\n" +
             " * A time designation in the dative specifies when something occurs: On the third\n" +
-            "   day he will be raised τη τριτη ημερα εγερθησεται\n" +
+            "   day he will be raised τη τριτη ημερα εγερθησεται"),
+
+        new GrammarRule("Uses of dative continued\n" +
             " * Association, indicating “with”: Do not be unequally yoked with unbelievers μη\n" +
             "   γινεσθε ετεροζυγουντες απιστοις\n" +
             " * Instrumental (‘by’)\n" +
@@ -1353,11 +1361,13 @@ public class GreekBuilder implements LanguageBuilder {
             "  δοκιμαζετε τα πνευματα ει εκ του θεου εστιν\n" +
             "  Test the spirits and see if they are from God."),
 
-        new GrammarRule("Uses of Article in Greek\n" +
+        new GrammarRule("Uses of article\n" +
             " 1. Definite article\n" +
             " 2. Attaching adjective to preceding noun μετα των αγγελων των αγιων\n" +
             " 3. Is often used with proper names and other nouns that English would not use it with\n" +
-            " 4. Can be used with participle or adjective to make it into a noun.\n" +
+            " 4. Can be used with participle or adjective to make it into a noun."),
+
+        new GrammarRule("Uses of article continued\n" +
             " 5. Is sometimes omitted when English would use it: Εν αρχη ην ο λογος\n" +
             " 6. Can function as a personal or possessive pronoun: Οι δε ειπαν προς αυτον And they said to him\n" +
             " 7. Can govern two nouns together, linking them:\n" +
@@ -1551,7 +1561,9 @@ public class GreekBuilder implements LanguageBuilder {
             " * Can place emphasis on the beginning of an action, called ingressive, inceptive.\n" +
             "   ἀγγελοι προσηλθον και διηκονουν αυτῳ Angles came and begin to minister to him\n" +
             " * Can stress the repetitive nature of an action, called iterative.\n" +
-            "   ἠρχετο προσ αὐτον [the widow] kept coming to him\n" +
+            "   ἠρχετο προσ αὐτον [the widow] kept coming to him"),
+
+        new GrammarRule("Imperfect can describe (continued):\n" +
             " * Used to desribe actions that occur regularly, called customary.\n" +
             "   Κατα δε ἑορτην _ἀπελυεν_ αὐτοις ἑνα δεσμιον\n" +
             "   Now at the feast _he used to release_ for them any one prisoner" +
