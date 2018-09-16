@@ -135,13 +135,44 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύεσθε", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they were loosened", INDICATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
+        // Indicative Passive Future
+        new Word("λυθήσομαι", "I will be loosed", INDICATIVE, PASSIVE, FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("λυθήσῃ", "you will be loosed", INDICATIVE, PASSIVE, FUTURE, SECOND_PERSON, SINGULAR),
+        new Word("λυθήσεται", "s/he will be loosed", INDICATIVE, PASSIVE, FUTURE, THIRD_PERSON, SINGULAR),
+        new Word("λυθησόμεθα", "we will be loosed", INDICATIVE, PASSIVE, FUTURE, FIRST_PERSON, PLURAL),
+        new Word("λυθήσεσθε", "you will be loosed", INDICATIVE, PASSIVE, FUTURE, SECOND_PERSON, PLURAL),
+        new Word("λυθήσονται", "they will be loosed", INDICATIVE, PASSIVE, FUTURE, THIRD_PERSON, PLURAL),
+
+        new Word("ἀποσταλθήσομαι", "I will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("ἀποσταλήσῃ", "you will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, SECOND_PERSON, SINGULAR),
+        new Word("ἀποσταλήσεται", "s/he will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, THIRD_PERSON, SINGULAR),
+        new Word("ἀποσταλησόμεθα", "we will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, PLURAL),
+        new Word("ἀποσταλήσεσθε", "you will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, SECOND_PERSON, PLURAL),
+        new Word("ἀποσταλήσονται", "they will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, THIRD_PERSON, PLURAL),
+
         // Indicative Passive Imperfect
         new Word("ἐλυόμην", "I was being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("ἐλύου", "You were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἐλύετο", "S/he was being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλυόμεθα", "We were being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, PLURAL),
-        new Word("ἐλύεσθε", "You were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἐλύοντο", "They were being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, PLURAL),
+        new Word("ἐλύου", "you were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύετο", "s/he was being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλυόμεθα", "we were being loosed", INDICATIVE, PASSIVE, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλύεσθε", "you were being loosed", INDICATIVE, PASSIVE, IMPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἐλύοντο", "they were being loosed", INDICATIVE, PASSIVE, IMPERFECT, THIRD_PERSON, PLURAL),
+
+        // Indicative Passive Aorist
+        new Word("ἐλύθην", "I was loosed", INDICATIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἐλύθης", "you were loosed", INDICATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἐλύθη", "s/he was loosed", INDICATIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐλύθημεν", "we were loosed", INDICATIVE, PASSIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐλύθητε", "you were loosed", INDICATIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἐλύθησαν", "they were loosed", INDICATIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Indicative Passive Second Aorist
+        new Word("ἐγράφην", "I was written", INDICATIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἐγράφης", "you were written", INDICATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἐγράφη", "s/he was written", INDICATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("ἐγράφημεν", "we were written", INDICATIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐγράφητε", "you were written", INDICATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἐγράφησαν", "they were written", INDICATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         /*
         // Subjunctive active present
@@ -770,7 +801,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐπορεὐθην", "I went, lived - πορευομαι root *πορευ", PASSIVE, AORIST, DEPONENT),
         // 152
         new Word("φημί", "I say - root *φη"),
-        new Word("ἔφη", "I said - φημί root *φη"),
+        new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 150
         new Word("ὑπερ accusative", "above"),
         new Word("ὑπερ genitive", "in behalf of"),
@@ -1143,8 +1174,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀποκτενῶ", "I will kill - ἀποκτείνω compound απο + *κτεν", FUTURE),
         new Word("ἀπέκτεινα", "I killed - ἀποκτείνω compound απο + *κτεν", AORIST),
         new Word("ἀπεκτάθην", "I was killed - ἀποκτείνω compound απο + *κτεν", PASSIVE, AORIST),
-        new Word("χαίρω", "I rejoice, I hail - root *χαρ"),
-        new Word("ἐχάρην", "I was hailed - χαίρω root *χαρ", PASSIVE, SECOND_AORIST),
+        new Word("χαίρω", "I rejoice (infinitive used as a greeting) - root *χαρ"),
+        new Word("ἐχάρην", "I rejoiced - χαίρω root *χαρ", PASSIVE, SECOND_AORIST, DEPONENT),
         // 73
         new Word("φῶς", "light", NEUTER),
         new Word("φωτός", "light", NEUTER, GENITIVE),
@@ -1175,6 +1206,10 @@ public class GreekBuilder implements LanguageBuilder {
         // 69
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
+
+        //63
+        new Word("ὄρος", "mountain, hill", NEUTER),
+        new Word("ὄρους", "mountain, hill", NEUTER, GENITIVE),
 
         // 61
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
@@ -1208,7 +1243,7 @@ public class GreekBuilder implements LanguageBuilder {
                     "7. Square of stops\n" +
                     "8. A tau cannot stand at the end of the word and will drop off"),
 
-        new GrammarRule("Square of stops:\n" +
+        new GrammarRule("Square of stops (applies to stops before a θ as well):\n" +
             "Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
             "Velar (Palatals) Unvoiced κ  Voiced γ  Aspirates χ  Velar + σ = ξ\n" +
             "Dental           Unvoiced τ  Voiced δ  Aspirates θ  Dental + σ = σ"),
@@ -1385,7 +1420,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Contract verbs are verbs that end in α, ε, or ο.  In the present and\n" +
             "imperfect tenses the final vowel contracts with the connecting vowel as follows:\n" +
-            " * two like vowels combine to the associated long vowel (except following two)" +
+            " * two like vowels combine to the associated long vowel (except following two)\n" +
             "   * ο + ο = ου\n" +
             "   * ε + ε = ει\n" +
             " * (anything but ε) + ο = ω (commutative)\n" +
@@ -1416,13 +1451,28 @@ public class GreekBuilder implements LanguageBuilder {
             "the present but non in the aorist.\n" +
             "75% of middle forms in the NT are deponent."),
 
-        new GrammarRule("Four patterns for forming the future tense:\n" +
-            "1. Same stem as present + σ (the tense formative) + connecting vowel (same as\n" +
-            "   * Verbs ending in a stop, final consonant contracts with σ per the rules\n" +
-            "     of square of stops.\n"),
+        new GrammarRule("Future stems:\n" +
+            " * Future active has its own stems.\n" +
+            " * Future middle uses future active tense stem.\n" +
+            " * Future passive uses aorist passive tense stem."),
 
-        new GrammarRule("Future middle uses future active tense stem + σ (tense formative) +\n" +
-            "connecting vowel + primary passive personal endings."),
+        new GrammarRule("Future active indicative paradigm:\n" +
+            "     Stem  tense formative   connecting vowel  ending  form\n" +
+            "1sg  λυ    σ                 ο                 -       λύσω\n" +
+            "2sg  λυ    σ                 ε                 ς       λύσεις\n" +
+            "3sg  λυ    σ                 ε                 ι       λύσει\n" +
+            "1pl  λυ    σ                 ο                 μεν     λύσομεν\n" +
+            "2pl  λυ    σ                 ε                 τε      λύσετε\n" +
+            "3pl  λυ    σ                 ο                 νσι     λύσουσι(ν)\n"),
+
+        new GrammarRule("Future middle indicative paradigm:\n" +
+            "     Stem  tense formative   connecting vowel  ending  form\n" +
+            "1sg  λυ    σ                 ο                 μαι     λύσομαι\n" +
+            "2sg  λυ    σ                 ε                 σαι     λύσῃ\n" +
+            "3sg  λυ    σ                 ε                 ται     λύσεται\n" +
+            "1pl  λυ    σ                 ο                 μεθα    λυσόμεθα\n" +
+            "2pl  λυ    σ                 ε                 σθε     λύσεσθε\n" +
+            "3pl  λυ    σ                 ο                 νται    λύσονται\n"),
 
         new GrammarRule("Separating γινομαι, γενναω and γινωσκω:\n" +
             " * γινομαι will always have a vowel between the γ and the ν.  Usually an ε.\n" +
@@ -1535,8 +1585,7 @@ public class GreekBuilder implements LanguageBuilder {
             "   the present because the root will always have been modified to form the\n" +
             "   present stem.\n" +
             " * Almost always the second aorist stem is identical to the root.\n" +
-            " * For first aorist the tense stem is normally identical to the present tense stem" +
-            "."),
+            " * For first aorist the tense stem is normally identical to the present tense stem."),
 
         new GrammarRule("Aorist meaning:\n" +
             " * Aorist is undefined, just says that an action happened, nothing about when or\n" +
@@ -1549,11 +1598,11 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("First aorist active paradigm:\n" +
             "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   σα               -                                  ἔλυσα" +
-            "2sg ε        λυ   σα               ς                                  ἔλυσας" +
-            "3sg ε        λυ   σε               - (ν)                              ἔλυσε(ν)" +
-            "1pl ε        λυ   σα               μεν                                ἐλύσαμεν" +
-            "2pl ε        λυ   σα               τε                                 ἐλύσατε" +
+            "1sg ε        λυ   σα               -                                  ἔλυσα\n" +
+            "2sg ε        λυ   σα               ς                                  ἔλυσας\n" +
+            "3sg ε        λυ   σε               - (ν)                              ἔλυσε(ν)\n" +
+            "1pl ε        λυ   σα               μεν                                ἐλύσαμεν\n" +
+            "2pl ε        λυ   σα               τε                                 ἐλύσατε\n" +
             "3pl ε        λυ   σα               ν                                  ἔλυσαν"),
 
         new GrammarRule("First aorist endings and verb types:\n" +
@@ -1564,15 +1613,50 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("First aorist middle paradigm:\n" +
             "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   σα               μην                                ἐλυσάμην" +
-            "2sg ε        λυ   σα               σο                                 ἐλύσω" +
-            "3sg ε        λυ   σα               το                                 ἐλύσατο" +
-            "1pl ε        λυ   σα               μεθα                               ἐλυσάμεθα" +
-            "2pl ε        λυ   σα               σθε                                ἐλύσασθε" +
-            "3pl ε        λυ   σα               ντο                                ἐλύσαντο")
+            "1sg ε        λυ   σα               μην                                ἐλυσάμην\n" +
+            "2sg ε        λυ   σα               σο                                 ἐλύσω\n" +
+            "3sg ε        λυ   σα               το                                 ἐλύσατο\n" +
+            "1pl ε        λυ   σα               μεθα                               ἐλυσάμεθα\n" +
+            "2pl ε        λυ   σα               σθε                                ἐλύσασθε\n" +
+            "3pl ε        λυ   σα               ντο                                ἐλύσαντο"),
 
+        new GrammarRule("First aorist passive paradigm:\n" +
+            "    augment  stem tense formative  secondary active personal endings  form\n" +
+            "1sg ε        λυ   θη               ν                                  ἐλύθην\n" +
+            "2sg ε        λυ   θη               ς                                  ἐλύθης\n" +
+            "3sg ε        λυ   θη               -                                  ἐλύθη\n" +
+            "1pl ε        λυ   θη               μεν                                ἐλύθημεν\n" +
+            "2pl ε        λυ   θη               τε                                 ἐλύθητε\n" +
+            "3pl ε        λυ   θη               σαν                                ἐλύθησαν"),
 
-        // Continue with 24 page 212
+        new GrammarRule("Second aorist passive paradigm:\n" +
+            "    augment  stem tense formative  secondary active personal endings  form\n" +
+            "1sg ε        λυ   η                ν                                  ἐγράφην\n" +
+            "2sg ε        λυ   η                ς                                  ἐγράφης\n" +
+            "3sg ε        λυ   η                -                                  ἐγράφη\n" +
+            "1pl ε        λυ   η                μεν                                ἐγράφημεν\n" +
+            "2pl ε        λυ   η                τε                                 ἐγράφητε\n" +
+            "3pl ε        λυ   η                σαν                                ἐγράφησαν"),
+
+        new GrammarRule("Future passive paradigm:\n" +
+            "     Stem  tense formative   connecting vowel  ending  form\n" +
+            "1sg  λυ    θησ               ο                 μαι     λυθήσομαι\n" +
+            "2sg  λυ    θησ               ε                 σαι     λυθήσῃ\n" +
+            "3sg  λυ    θησ               ε                 ται     λυθήσεται\n" +
+            "1pl  λυ    θησ               ο                 μεθα    λυθησόμεθα\n" +
+            "2pl  λυ    θησ               ε                 σθε     λυθήσεσθε\n" +
+            "3pl  λυ    θησ               ο                 νται    λυθήσονται\n"),
+
+        new GrammarRule("Second future passive paradigm:\n" +
+            "     Stem      tense formative   connecting vowel  ending  form\n" +
+            "1sg  ἀποσταλ   ησ                ο                 μαι     ἀποσταλθήσομαι\n" +
+            "2sg  ἀποσταλ   ησ                ε                 σαι     ἀποσταλήσῃ\n" +
+            "3sg  ἀποσταλ   ησ                ε                 ται     ἀποσταλήσεται\n" +
+            "1pl  ἀποσταλ   ησ                ο                 μεθα    ἀποσταλησόμεθα\n" +
+            "2pl  ἀποσταλ   ησ                ε                 σθε     ἀποσταλήσεσθε\n" +
+            "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n")
+
+        // Continue with 25 page 222
 
     );
   }

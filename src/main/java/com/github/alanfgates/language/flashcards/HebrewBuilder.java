@@ -282,6 +282,8 @@ public class HebrewBuilder implements LanguageBuilder {
         // 769
         new Word("שְׁנַיִם", "two", MASCULINE),
         new Word("שְׁתַּים", "two", FEMININE),
+        new Word("שֵׁנִי", "second", MASCULINE),
+        new Word("שֵׁנִית", "second", FEMININE),
         new Word("גַּם", "also"),
         // 757
         new Word("נֶפֶש", "soul, person", FEMININE),
@@ -315,8 +317,9 @@ public class HebrewBuilder implements LanguageBuilder {
         // 627
         new Word("קָם", "he arose, stood"),
         // 606
-        new Word("שָׁלשׁ", "three", FEMININE),
-        new Word("שׁלֹשָׁה", "three", MASCULINE),
+        new Word("שָׁלשׁ", "three", MASCULINE),
+        new Word("שְׁלֹשִׁים", "thirty"),
+        new Word("שְׁלִישִׁי", "third"),
         // 600
         new Word("רֹאשׁ", "head", MASCULINE),
         new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
@@ -348,8 +351,8 @@ public class HebrewBuilder implements LanguageBuilder {
         // 511
         new Word("תַּחַת", "under, instead of"),
         // 508
-        new Word("חָמַשׁ", "five", FEMININE),
-        new Word("חֲמִשָּׁה", "five", MASCULINE),
+        new Word("חָמַשׁ", "five", MASCULINE),
+        new Word("חֲמִשִּׁים", "fifty"),
         // 505
         new Word("קוֹל", "voice, sound", MASCULINE),
         new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
@@ -371,9 +374,10 @@ public class HebrewBuilder implements LanguageBuilder {
         // 492
         new Word("עֶשֶׁר", "ten", FEMININE),
         new Word("עֲשָׂרָה", "ten", MASCULINE),
+        new Word("עֶשְׂרִים", "twenty"),
         // 491
-        new Word("שֶׁבַע", "seven", FEMININE),
-        new Word("שִׁבְעָה", "seven", MASCULINE),
+        new Word("שֶׁבַע", "seven", MASCULINE),
+        new Word("שִׁבְעִים", "seventy"),
         // 491
         new Word("עוֹד", "again, still, long"),
         // 470
@@ -384,8 +388,9 @@ public class HebrewBuilder implements LanguageBuilder {
         // 457
         new Word("מָצַה", "he found"),
         // 456
-        new Word("אַרְבַּע", "four", FEMININE),
-        new Word("אַרְבָּעָה", "four", MASCULINE),
+        new Word("אַרְבַּע", "four", MASCULINE),
+        new Word("אַרְבָּעִים", "forty"),
+        new Word("רְבִיעִי", "fourth", MASCULINE),
         // 439
         new Word("עוֹלָם", "forever", MASCULINE),
         new Word("עוֹלָמִים", "forever", MASCULINE, PLURAL),
@@ -458,9 +463,6 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אֹהָלִים", "tents", MASCULINE, PLURAL),
         // 338
         new Word("סָבִיב", "all around"),
-        // 337
-        new Word("עֲשָׂרה", "ten", MASCULINE),
-        new Word("עָשָׂר", "ten", FEMININE),
         // 330
         new Word("עֵץ", "tree", MASCULINE),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
@@ -520,8 +522,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
         // 274
         new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL),
-        new Word("שִׁשָׁה", "six", MASCULINE),
-        new Word("שַׁשׁ", "six", FEMININE),
+        new Word("שַׁשׁ", "six", MASCULINE),
+        new Word("שׁשִּׁים", "sixty"),
         // 272
         new Word("אֶבֶן", "stone", FEMININE),
         new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
@@ -544,8 +546,8 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("רַגְלַיִם", "feet", FEMININE, DUAL),
         // 250
         new Word("מָלֵא", "he filled"),
-        new Word("אַמָּה", "cubit", FEMININE),
-        new Word("אַמּוֹת", "cubits", FEMININE, PLURAL),
+        new Word("אַמָּה", "cubit, forearm", FEMININE),
+        new Word("אַמּוֹת", "cubits, forearms", FEMININE, PLURAL),
         // 249
         new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE),
         new Word("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL),
@@ -727,6 +729,10 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("מָוֶת", "death, dying", MASCULINE),
         new Word("מוֹת", "death of", MASCULINE, CONSTRUCT),
 
+        // 147
+        new Word("שְׁמֹנֶה", "eight", MASCULINE),
+        new Word("שְׁמֹנִים", "eighty"),
+
         // 139
         new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
         // 138
@@ -735,7 +741,20 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR),
         new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
-        new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL)
+        new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
+
+        // 109
+        new Word("רַק", "only, still, but, however"),
+
+        // 104
+        new Word("תָּמִיד", "continually"),
+
+        // 78
+        new Word("תֵּשַׁע", "nine", MASCULINE),
+        new Word("תִּשְׁעִים", "ninety"),
+
+        // 18
+        new Word("רְבָבָה", "ten thousand")
 
         // Back up and fill in from 162 - 138
 
@@ -1008,10 +1027,58 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Masculine plural and both dual endings change to אֵי: e.g. אֱלֹהִים changes to אֱלֹהֵי \n" +
             " * Feminine singular nouns ending in אָה changes to אַת:\n" +
             "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
-            " * Some monosyllabic nouns add a hireq yod in the contruct state.")
+            " * Some monosyllabic nouns add a hireq yod in the contruct state."),
+
+        new GrammarRule("An noun can be made superlative by placing it in a construct chain\n" +
+            "with the construct noun singular and the absolute noun plural and definite:\n" +
+            "e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
+
+        new GrammarRule("Cardinal numbers:\n" +
+            " * 'one' acts as an adjective and comes after the noun and agrees in gender and\n" +
+            "   definiteness.  Can be used in a construct in which case it means 'one of'.\n" +
+            " * 'two' is a noun, agrees in gender with the modified noun, and can be used in\n" +
+            "   absolute or construct state with no change in meaning.\n" +
+            " * 3-10 are nouns but take opposite gender from what they are modifying.  Can also\n" +
+            "   be absolute or construct.\n" +
+            " * 2-10 can have a pronominal suffix, meaning 'x of y', e.g. שְׁנֵיהֶם 'two of them'"),
+
+        new GrammarRule("Patterns of cardinal numbers above 10:\n" +
+            " * 11-19: x 10, e.g. אַחַתּי עָשָׂר is 11\n" +
+            " * 11-19: 10 agrees with modified noun in gender, while other number is opposite.\n" +
+            " * 20: Masculine plural of 10\n" +
+            " * 30-90: Masculine plural of 3-9\n" +
+            " * 21-99: x and y: עֶשְׂרִים וְאַחַת twenty and one\n" +
+            " * 200: one hundred dual: מָאתַים\n" +
+            " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred\n" +
+            " * 2000: one thousand dual: אַלְפַּיִם\n" +
+            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֲלָפִים\n" +
+            " * 20,000: one thousand dual: רִבּוֹתַיִם\n" +
+            " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת"),
+
+        new GrammarRule("Ordinal numbers:\n" +
+            " * Classified as adjectives, when attributive they follow the noun they modify\n" +
+            "   and usually agree in gender and definiteness.\n" +
+            " * For ordinals greather than tenth, cardinal numbers are used."),
+
+        new GrammarRule("Basic verbal stem meaning:\n" +
+            "           Simple    Intensive   Causative\n" +
+            "Active     qal       piel        hiphil\n" +
+            "Passive    niphal    pual        hophal\n" +
+            "Reflexive  niphal    hithpael"),
+
+        new GrammarRule("Hebrew verb conjugations:\n" +
+            " * Perfect:  completed action, state of being.\n" +
+            " * Imperfect:  incomplete action, habitual or customary actions, subjunctive.\n" +
+            " * Imperative: direct command, sometimes request, second person only.\n" +
+            " * Cohortative: wish, request, or command, can express purpose or result, first person only\n" +
+            " * Jussive:  mild command or strong wish, third person only\n" +
+            " * Infinitive construct: like an English infinitive, a verbal noun.\n" +
+            " * Infinitive absolute: used with other verbs to emphasize or itensify action or to\n" +
+            "   express contemporaneous action.  Can be used as an imperative.\n" +
+            " * Participle:  verbal adjective.")
 
 
-        // Continue 10.9, p 111
+        // Continue 12.12, p 132
     );
   }
 }

@@ -76,7 +76,7 @@ class CardDeck implements Serializable {
       input.readLine();
       rules.remove(rule);
     }
-    
+
     if (rules.size() == 0) {
       System.out.println("Done with the rules\n");
     }
