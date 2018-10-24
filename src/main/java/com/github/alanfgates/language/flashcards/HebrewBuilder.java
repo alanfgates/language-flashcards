@@ -1083,7 +1083,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Imperfect:  incomplete action, habitual or customary actions, subjunctive.\n" +
             " * Imperative: direct command, sometimes request, second person only.\n" +
             " * Cohortative: wish, request, or command, can express purpose or result, first person only"),
-        j
+        
         new GrammarRule("Hebrew verb conjugations (continued):\n" +
             " * Jussive:  mild command or strong wish, third person only\n" +
             " * Infinitive construct: like an English infinitive, a verbal noun.\n" +
