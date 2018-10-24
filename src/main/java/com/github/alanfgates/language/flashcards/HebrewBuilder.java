@@ -41,16 +41,17 @@ public class HebrewBuilder implements LanguageBuilder {
     return Arrays.asList(
         // VERBS
         // Qal perfect
-        new Word("שָׁמַרְתִּי", "I guarded", QAL, PERFECT, FIRST_PERSON, SINGULAR),
-        new Word("שָׁמַרְתָּ", "you guarded", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("שָׁמַרְתּ", "you guarded", QAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("שָׁמַר", "he guarded", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("שָׁמַרָה", "she guarded", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("שָׁמַרְנוּ", "We guarded", QAL, PERFECT, FIRST_PERSON, PLURAL),
-        new Word("שָׁמַרְתֶּם", "you guarded", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("שָׁמַרְתֶּן", "you guarded", QAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
-        new Word("שָׁמַרוּ", "They guarded", QAL, PERFECT, THIRD_PERSON, PLURAL),
+        new Word("קָטַלְתִּי", "I killed", QAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קָטַלְתָּ", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קָטַלְתְּ", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קָטַל", "he killed", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קָטְלָה", "she killed", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קָטַלְנוּ", "we killed", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קְטַלְתֶּם", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קְטַלְתֶּן", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קָטְלוּ", "they killed", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
+        /*
         // Qal Imperfect
         new Word("אֶשְׁמֹר", "I will guard", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
         new Word("תִּשְׁמֹר", "you will guard", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
@@ -70,6 +71,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("שׁוֹמֶרֶת", "guarding", QAL, PARTICIPLE, FEMININE, SINGULAR),
         new Word("שׁוֹמְרִים", "guarding", QAL, PARTICIPLE, MASCULINE, PLURAL),
         new Word("שׁוֹמְרִוֹת", "guarding", QAL, PARTICIPLE, FEMININE, PLURAL),
+        */
 
         // TODO QAL infinitive
 
@@ -117,7 +119,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 5518
         new Word("אֶל", "to, toward"),
         // 5518
-        new Word("לֹא", "not, permanent"),
+        new Word("לֹא", "no, not, used with perfect, used with imperfect = never"),
         // 5503
         new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)"),
         // 5415
@@ -302,7 +304,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 736
         new Word("קָרָא", "he called"),
         // 729
-        new Word("אַל", "no, not temporary"),
+        new Word("אַל", "no, not (with imperfect) not at this time"),
         // 712
         new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE),
         new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
@@ -744,6 +746,9 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
 
+        // 111
+        new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
+
         // 109
         new Word("רַק", "only, still, but, however"),
 
@@ -753,6 +758,9 @@ public class HebrewBuilder implements LanguageBuilder {
         // 78
         new Word("תֵּשַׁע", "nine", MASCULINE),
         new Word("תִּשְׁעִים", "ninety"),
+
+        // 71
+        new Word("שָׁבַת", "he stopped, ceased, rested"),
 
         // 18
         new Word("רְבָבָה", "ten thousand")
@@ -768,6 +776,8 @@ public class HebrewBuilder implements LanguageBuilder {
     return Arrays.asList(
         new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
+
+        new GrammarRule("Gutterals:  אעהח"),
 
         new GrammarRule("Vowels:\n" +
           "long    a  בָּ  e   בֵּ  o  בֹּ \n" +
@@ -1089,10 +1099,26 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Infinitive construct: like an English infinitive, a verbal noun.\n" +
             " * Infinitive absolute: used with other verbs to emphasize or itensify action or to\n" +
             "   express contemporaneous action.  Can be used as an imperative.\n" +
-            " * Participle:  verbal adjective.")
+            " * Participle:  verbal adjective."),
+
+        new GrammarRule("Strong verbs have three strong consonants.  Weak verbs classified as follows:\n" +
+            " * I-Gutteral\n" +
+            " * II-Guteral\n" +
+            " * III-ח/ע\n" +
+            " * III-א\n" +
+            " * III-ה" +
+            " * I-י\n" +
+            " * I-נ\n" +
+            " * Doubly weak (two of the above)" +
+            " * Binconsonantal (also called hollow or II-ו/י\n" +
+            " * Geminate - identical 2nd and 3rd consonants."),
+
+        new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
+            " Qal: 50,699")
 
 
-        // Continue 12.12, p 132
+
+        // Continue 13.13, p 146
     );
   }
 }
