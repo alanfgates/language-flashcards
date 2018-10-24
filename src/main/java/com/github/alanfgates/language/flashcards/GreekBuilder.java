@@ -143,6 +143,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθήσεσθε", "you will be loosed", INDICATIVE, PASSIVE, FUTURE, SECOND_PERSON, PLURAL),
         new Word("λυθήσονται", "they will be loosed", INDICATIVE, PASSIVE, FUTURE, THIRD_PERSON, PLURAL),
 
+        // TODO - this looks wrong the way the theta is only in first person
         new Word("ἀποσταλθήσομαι", "I will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, SINGULAR),
         new Word("ἀποσταλήσῃ", "you will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, SECOND_PERSON, SINGULAR),
         new Word("ἀποσταλήσεται", "s/he will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, THIRD_PERSON, SINGULAR),
@@ -546,15 +547,15 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τινι", "someone something", NEUTER, DATIVE, SINGULAR),
         new Word("τι", "someone something", NEUTER, ACCUSATIVE, SINGULAR),
         new Word("τινες", "someone something", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", MASCULINE, GENITIVE, SINGULAR),
+        new Word("τινων", "someone something", MASCULINE, GENITIVE, PLURAL),
         new Word("τισι", "someone something", MASCULINE, DATIVE, PLURAL),
         new Word("τινας", "someone something", MASCULINE, ACCUSATIVE, PLURAL),
         new Word("τινες", "someone something", FEMININE, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", FEMININE, GENITIVE, SINGULAR),
+        new Word("τινων", "someone something", FEMININE, GENITIVE, PLURAL),
         new Word("τισι", "someone something", FEMININE, DATIVE, PLURAL),
         new Word("τινας", "someone something", FEMININE, ACCUSATIVE, PLURAL),
         new Word("τινα", "someone something", NEUTER, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", NEUTER, GENITIVE, SINGULAR),
+        new Word("τινων", "someone something", NEUTER, GENITIVE, PLURAL),
         new Word("τισι", "someone something", NEUTER, DATIVE, PLURAL),
         new Word("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL),
         // 531
@@ -832,6 +833,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἠγέρθην", "I was raised - ἐγειρω root *εγερ", PASSIVE, AORIST),
         // 143
         new Word("ὀυδε", "and not, neither"),
+        // TODO I don't understand why the following appears to have two roots
         new Word("ἀφιημι", "I let go, divorce, forgive - compound verb απο + ιημι root *σε"),
         new Word("ἀφήσω", "I will forgive - ἀφιημι compound verb απο + ιημι root *σε", FUTURE),
         new Word("ἀφῆκα", "I forgave - ἀφιημι compound verb απο + ιημι root *σε", AORIST),
@@ -1094,6 +1096,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("καιροῦ", "time (point and period)", MASCULINE, GENITIVE),
         new Word("προσεύχομαι", "I pray - root *προσευχ", DEPONENT),
         new Word("προσεύξομαι", "I will pray - προσεύχομαι root *προσευχ", FUTURE, DEPONENT),
+        // TODO fairly sure this should start with an epsilon
         new Word("προσηυξάμην", "I prayed - προσεύχομαι root *προσευχ", AORIST, DEPONENT),
         // 83
         new Word("μήτηρ", "mother", FEMININE),
@@ -1194,7 +1197,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 70
         new Word("αἰτέω", "I ask - root *αἰτε"),
         new Word("αἰτήσω", "I will ask - root *αἰτε", FUTURE),
-        new Word("ᾔτησα", "I was asked - root *αἰτε", AORIST),
+        new Word("ᾔτησα", "I asked - root *αἰτε", AORIST),
         new Word("ᾔτηκα", "I have asked - root *αἰτε", PERFECT),
         new Word("ᾔτημαι", "I have been asked - root *αἰτε", MIDDLE, PASSIVE, PERFECT),
         new Word("τηρέω", "I keep, I guard - root *τηρε"),
@@ -1216,7 +1219,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
         new Word("ἐδόξασω", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
         new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐδοξάσθην", "I praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
+        new Word("ἐδοξάσθην", "I was praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
         new Word("κηρύσσω", "I proclaim, preach - root *κηρυγ"),
         new Word("ἐκήρυξα", "I proclaimed, preached κηρύσσω - root *κηρυγ", AORIST),
         new Word("ἐκηρύχθην", "I was proclaimed, preached - root *κηρυγ", PASSIVE, AORIST),
@@ -1457,7 +1460,7 @@ public class GreekBuilder implements LanguageBuilder {
             "3pl  λυ    ο          νται     λυονται\n"),
 
         new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
-            "in meaning.  I does not take a middle or passive meaning.\n" +
+            "in meaning.  It does not take a middle or passive meaning.\n" +
             "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in " +
             "the present but non in the aorist.\n" +
             "75% of middle forms in the NT are deponent."),
@@ -1567,7 +1570,7 @@ public class GreekBuilder implements LanguageBuilder {
         new GrammarRule("Imperfect can describe (continued):\n" +
             " * Used to desribe actions that occur regularly, called customary.\n" +
             "   Κατα δε ἑορτην _ἀπελυεν_ αὐτοις ἑνα δεσμιον\n" +
-            "   Now at the feast _he used to release_ for them any one prisoner" +
+            "   Now at the feast _he used to release_ for them any one prisoner\n" +
             " * Can be used to describe a wish (voluntative)\n" +
             "   _ηὐχομην_ γαρ ἀναθεμα εἰναι αὐτος ἐγω For _I could wish_ that I myself were accursed\n" +
             " * Can be used to describe an attempt (conative)\n" +
@@ -1670,6 +1673,8 @@ public class GreekBuilder implements LanguageBuilder {
             "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n")
 
         // Continue with 25 page 222
+
+        // TODO Build master chart of which tenses use which stems
 
     );
   }
