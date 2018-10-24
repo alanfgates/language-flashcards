@@ -87,6 +87,16 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
+        // Indicative Active Perfect
+        new Word("λέλυκα", "I have loosened", INDICATIVE, ACTIVE, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("λέλυκας", "you have loosened", INDICATIVE, ACTIVE, PERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λέλυκε", "s/he has loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λέλυκεν", "s/he has loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκαμεν", "we have loosened", INDICATIVE, ACTIVE, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύκατε", "you have loosened", INDICATIVE, ACTIVE, PERFECT, SECOND_PERSON, PLURAL),
+        new Word("λέλυκασι", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
+        new Word("λέλυκασιν", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
+
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you loosen yourself", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
@@ -126,6 +136,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐγενόμεθα", "we became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἐγένεσθε", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("ἐγένοντο", "they became", INDICATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
+        // Indicative Middle Perfect
+        new Word("λέλυμαι", "I have loosened myself", INDICATIVE, MIDDLE, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("λέλυσαι", "you have loosened yourself", INDICATIVE, MIDDLE, PERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λέλυται", "s/he has loosened her/himself", INDICATIVE, MIDDLE, PERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύμεθα", "we have loosened ourseleves", INDICATIVE, MIDDLE, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύσθε", "you have loosened yourselves", INDICATIVE, MIDDLE, PERFECT, SECOND_PERSON, PLURAL),
+        new Word("λέλυνται", "they have loosened themselves", INDICATIVE, MIDDLE, PERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Passive Present
         new Word("λύομαι", "I was loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -174,6 +192,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐγράφητε", "you were written", INDICATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἐγράφησαν", "they were written", INDICATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
+        // Indicative Passive Perfect been
+        new Word("λέλυμαι", "I have been loosened", INDICATIVE, PASSIVE, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("λέλυσαι", "you have been loosened", INDICATIVE, PASSIVE, PERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λέλυται", "s/he has been loosened", INDICATIVE, PASSIVE, PERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύμεθα", "we have been loosened", INDICATIVE, PASSIVE, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύσθε", "you have been loosened", INDICATIVE, PASSIVE, PERFECT, SECOND_PERSON, PLURAL),
+        new Word("λέλυνται", "they have been loosened", INDICATIVE, PASSIVE, PERFECT, THIRD_PERSON, PLURAL),
         /*
         // Subjunctive active present
         new Word("λύω", "I might loosen", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -497,7 +522,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἔρχομαι", "I come, I go - root *ερχ", DEPONENT),
         new Word("ἐλεύσομαι", "I will come/go - ἔρχομαι root *ελευθ", FUTURE, DEPONENT),
         new Word("ἦλθον", "I came/went, - ἔρχομαι root *ελευθ", SECOND_AORIST),
-        new Word("ἐλήλυθα", "I have come/gone - ἔρχομαι root *ελευθ", PERFECT),
+        new Word("ἐλήλυθα", "I have come/gone - ἔρχομαι root *ελευθ", SECOND_PERFECT),
         // 579
         new Word("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR),
         new Word("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR),
@@ -582,7 +607,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀκούω", "I hear - root *ακου"),
         new Word("ἀκούσω", "I will hear - root *ακου", FUTURE),
         new Word("ἤκουσα", "I heard - root *ακου", AORIST),
-        new Word("ἀκήκοα", "I have heard - root *ακου", PERFECT),
+        new Word("ἀκήκοα", "I have heard - root *ακου", SECOND_PERFECT),
         new Word("ἠκούσθην", "I was heard - root *ακου", PASSIVE, AORIST),
         // 418
         new Word("πολύς", "many, much", MASCULINE),
@@ -723,7 +748,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γραφω", "I write - root *γραφ"),
         new Word("γράψω", "I will write - root *γραφ", FUTURE),
         new Word("ἔγραψα", "I wrote - root *γραφ", AORIST),
-        new Word("γέγραφα", "I have written - root *γράφ", PERFECT),
+        new Word("γέγραφα", "I have written - root *γράφ", SECOND_PERFECT),
         new Word("γέγραμμαι", "I have been written - root *γράφ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐγράφην", "I was written - root *γράφ", PASSIVE, AORIST),
         // 186
@@ -1666,9 +1691,34 @@ public class GreekBuilder implements LanguageBuilder {
             "3sg  ἀποσταλ   ησ                ε                 ται     ἀποσταλήσεται\n" +
             "1pl  ἀποσταλ   ησ                ο                 μεθα    ἀποσταλησόμεθα\n" +
             "2pl  ἀποσταλ   ησ                ε                 σθε     ἀποσταλήσεσθε\n" +
-            "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n")
+            "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n"),
 
-        // Continue with 25 page 222
+        new GrammarRule("Perfect tense describes an action that was brought to completion\n" +
+            "and whose effects are felt in the present.  Can be translated with have/has\n" +
+            " or present, e.g. it is written, the kingdom of heaven is near."),
+
+        new GrammarRule("Perfect tense reduplication:\n" +
+            " * If the word starts with a single consonant, that consonant is doubled with\n" +
+            "   and ε placed between.\n" +
+            "   * φ goes to π   χ goes to κ    θ goes to τ\n" +
+            " * If the word starts with a vowel or dipthong, the vowel is lengthened.\n" +
+            "   * Dipthongs often do not change." +
+            " * If the word starts with two consonants, just the ε will usually be prepended,\n" +
+            "   no reduplication.  Does not usually apply to words where λ or ρ are the second\n" +
+            "   letter.\n" +
+            " * Compound verbs reduplicate the verb portion of the word.\n" +
+            " * Contract verbs lengthen their contract vowel (ending vowel).\n" +
+            " * Second perfect has α instead of κα for the tense formative."),
+
+        new GrammarRule("Middle voice:\n" +
+            " * Indirect middle: the action of the verb in some way affects the subject.\n" +
+            "   Example: ὁ Πιλατος ... λαβων ὕδωρ ἀπενιψατο τας χειρας\n" +
+            "   Pilate took water and washed his hands.  Emphasizes Pilate's attempt to absolve himself.\n" +
+            "   δεξασθε τον ἐμφυτον λογον receive the implanted word, receiving is something done for the self.\n" +
+            " * Reflexive middle:  the subject does the action and receives it.\n" +
+            "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself")
+
+         // Continue with 25.23 page 234
 
     );
   }
