@@ -133,8 +133,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐγενόμην", "I became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("ἐγένου", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("ἐγένετο", "s/he became", INDICATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("ἐγενόμεθα", "we became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
-        new Word("ἐγένεσθε", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐγενόμεθα", "we became", INDICATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("ἐγένεσθε", "you became", INDICATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἐγένοντο", "they became", INDICATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Perfect
@@ -340,17 +340,17 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἔργοις", "works - root ἔργο", NEUTER, DATIVE, PLURAL, SECOND_DECLENSION),
         new Word("ἔργα", "works - root ἔργο", NEUTER, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
 
-        new Word("σάρξ", "flesh - root σάρκ", NOMINATIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκ", "flesh - root σάρκ", VOCATIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σαρκός", "flesh - root σάρκ", GENITIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σαρκί", "flesh - root σάρκ", DATIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκα", "flesh - root σάρκ", ACCUSATIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", NOMINATIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", VOCATIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρκῶν", "fleshes - root σάρκ", GENITIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρξί", "fleshes - root σάρκ", DATIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρξίν", "fleshes - root σάρκ", DATIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σάρκας", "fleshes - root σάρκ", ACCUSATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρξ", "flesh - root σάρκ", NOMINATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκ", "flesh - root σάρκ", VOCATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
+        new Word("σαρκός", "flesh - root σάρκ", GENITIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
+        new Word("σαρκί", "flesh - root σάρκ", DATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκα", "flesh - root σάρκ", ACCUSATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", NOMINATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", VOCATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρκῶν", "fleshes - root σάρκ", GENITIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξί", "fleshes - root σάρκ", DATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξίν", "fleshes - root σάρκ", DATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκας", "fleshes - root σάρκ", ACCUSATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
 
         //
         //----------------------------------------------------------------------------------------
@@ -890,7 +890,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("άπέστειλα", "I sent - ἀποστέλλω root *αποστελ", AORIST),
         new Word("ἀπέσταλκα", "I have sent - ἀποστέλλω root *αποστελ", PERFECT),
         new Word("ἀπέσταλμαι", "I have been sent - ἀποστέλλω root *αποστελ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἀπεστάλην", "I was sent - ἀποστέλλω root *αποστελ", PASSIVE, AORIST),
+        new Word("ἀπεστάλην", "I was sent - ἀποστέλλω root *αποστελ", PASSIVE, SECOND_AORIST),
         // 129
         new Word("ἀμήν", "truly"),
         // 128
@@ -1375,9 +1375,9 @@ public class GreekBuilder implements LanguageBuilder {
             " * Usually turning them into relative clauses:\n" +
             "     τους παιδας τους εν βηθλεεμ\n" +
             "     The children who are in Bethlehem\n" +
-            " * Sometimes turning it into a substantive: The spoke the word of the Lord to all\n" +
+            " * Sometimes turning it into a substantive: \n" +
             "     ελαλησαν τον λογον του κυριου πασιν τοις εν τῃ οικιᾳ\n" +
-            "     who were in the house "),
+            "     They spoke the word of the Lord to all who were in the house "),
 
         new GrammarRule("Neuter Plural Subjects\n" +
             "Greek normally uses a singular verb when the subject is neuter plural.  Indicates\n" +
@@ -1401,6 +1401,7 @@ public class GreekBuilder implements LanguageBuilder {
             "    waiting for our blessed hope, the appearing of the glory of our great God and\n" +
             "      Savior Jesus Christ."),
 
+        // TODO switch these to have words in them as examples
         new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
             "Nomanative  Singular: ς     Plural: ες\n" +
             "Vocative    Singular:       Plural: ες\n" +
