@@ -97,6 +97,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λέλυκασι", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
         new Word("λέλυκασιν", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
 
+        // Omitting indicative active plu-perfect as it occurs only 79 times
+
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you loosen yourself", INDICATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
@@ -145,6 +147,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λελύσθε", "you have loosened yourselves", INDICATIVE, MIDDLE, PERFECT, SECOND_PERSON, PLURAL),
         new Word("λέλυνται", "they have loosened themselves", INDICATIVE, MIDDLE, PERFECT, THIRD_PERSON, PLURAL),
 
+        // Omitting indicative middle/passive plu-perfect as it occurs only 7 times
+
         // Indicative Passive Present
         new Word("λύομαι", "I was loosened", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you were loosened", INDICATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
@@ -161,8 +165,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθήσεσθε", "you will be loosed", INDICATIVE, PASSIVE, FUTURE, SECOND_PERSON, PLURAL),
         new Word("λυθήσονται", "they will be loosed", INDICATIVE, PASSIVE, FUTURE, THIRD_PERSON, PLURAL),
 
-        // TODO - this looks wrong the way the theta is only in first person
-        new Word("ἀποσταλθήσομαι", "I will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, SINGULAR),
+        // Indicative Passive Second Future
+        new Word("ἀποσταλήσομαι", "I will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, SINGULAR),
         new Word("ἀποσταλήσῃ", "you will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, SECOND_PERSON, SINGULAR),
         new Word("ἀποσταλήσεται", "s/he will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, THIRD_PERSON, SINGULAR),
         new Word("ἀποσταλησόμεθα", "we will be sent", INDICATIVE, PASSIVE, SECOND_FUTURE, FIRST_PERSON, PLURAL),
@@ -223,6 +227,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         // Imperative passive present
         new Word("λύεσθε", "be loosened!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        */
 
         // Participle active present
         new Word("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
@@ -251,6 +256,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+
         // Participle active aorist
         new Word("λύσας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, SINGULAR),
@@ -306,7 +312,141 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
-        */
+
+        // Participle middle present
+        new Word("λυόμενος", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λυομένου", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λυομένῳ", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, DATIVE, SINGULAR),
+        new Word("λυόμενον", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυόμενοι", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, GENITIVE, PLURAL),
+        new Word("λυομένοις", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, DATIVE, PLURAL),
+        new Word("λυομένους", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λυομένη", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λυομένης", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, GENITIVE, SINGULAR),
+        new Word("λυομένῃ", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, DATIVE, SINGULAR),
+        new Word("λυομένην", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λυόμεναι", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, GENITIVE, PLURAL),
+        new Word("λυομέναις", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, DATIVE, PLURAL),
+        new Word("λυομένας", "loosening", PARTICIPLE, MIDDLE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λυόμενον", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λυομένου", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυομένῳ", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("λυόμενον", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λυόμενα", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        new Word("λυομένοις", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("λυόμενα", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+
+        // Participle middle aorist
+        new Word("λυσάμενος", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, SINGULAR),
+        new Word("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυσάμενοι", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, PLURAL),
+        new Word("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, PLURAL),
+        new Word("λυσαμένους", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λυσαμένη", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λυσαμένης", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, SINGULAR),
+        new Word("λυσαμένῃ", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, SINGULAR),
+        new Word("λυσαμένην", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λυσάμεναι", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, PLURAL),
+        new Word("λυσαμέναις", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, PLURAL),
+        new Word("λυσαμένας", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
+
+        // Participle middle second aorist ουῳονωνοιςα
+        new Word("γενόμενος", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("γενομένου", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, GENITIVE, SINGULAR),
+        new Word("γενομένῳ", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, DATIVE, SINGULAR),
+        new Word("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("γενόμενοι", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("γενομένων", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, GENITIVE, PLURAL),
+        new Word("γενομένοις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL),
+        new Word("γενομένους", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("γενομένη", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("γενομένης", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, GENITIVE, SINGULAR),
+        new Word("γενομένῃ", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, DATIVE, SINGULAR),
+        new Word("γενομένην", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("γενόμεναι", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, PLURAL),
+        new Word("γενομένων", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, GENITIVE, PLURAL),
+        new Word("γενομέναις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, DATIVE, PLURAL),
+        new Word("γενομένας", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("γενομένου", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("γενομένῳ", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, PLURAL),
+        new Word("γενομένων", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("γενομένοις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
+
+        // Participle passive present
+        new Word("λυόμενος", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λυομένου", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λυομένῳ", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, DATIVE, SINGULAR),
+        new Word("λυόμενον", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυόμενοι", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, PLURAL),
+        new Word("λυομένοις", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
+        new Word("λυομένους", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λυομένη", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λυομένης", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, GENITIVE, SINGULAR),
+        new Word("λυομένῃ", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, DATIVE, SINGULAR),
+        new Word("λυομένην", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λυόμεναι", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, GENITIVE, PLURAL),
+        new Word("λυομέναις", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, DATIVE, PLURAL),
+        new Word("λυομένας", "loosening", PARTICIPLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λυόμενον", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λυομένου", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυομένῳ", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("λυόμενον", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λυόμενα", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λυομένων", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        new Word("λυομένοις", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("λυόμενα", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+
+        // Participle passive aorist
+        new Word("λυθείς", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, SINGULAR),
+        new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυθέντες", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, PLURAL),
+        new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL),
+        new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυθέντας", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λυθείσης", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, SINGULAR),
+        new Word("λυθείσῃ", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, DATIVE, SINGULAR),
+        new Word("λυθεῖσαν", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λυθεῖσαι", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λυθεισῶν", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, PLURAL),
+        new Word("λυθείσαις", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, DATIVE, PLURAL),
+        new Word("λυθείσας", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυθεντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
+
+        // No verb occurring 50 or more times in the NT has 2nd passive participle
 
         //----------------------------------------------------------------------------------------
         // NOUN FORMS
@@ -399,7 +539,8 @@ public class GreekBuilder implements LanguageBuilder {
         // 2801
         new Word("δε", "weak but/yet, and"),
         // 2757
-        new Word("ἐν dative", "in"),
+        //new Word("ἐν dative", "in"),
+        new Word("ἐν", "dative: in"),
         // 2666
         new Word("ἐγώ", "I", NOMINATIVE, SINGULAR),
         new Word("μου", "my", GENITIVE, SINGULAR),
@@ -437,6 +578,35 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἤμεθα", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("ἦτε", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("ἦσαν", "They were", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        new Word("ὤν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR),
+        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("ὄντες", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL),
+        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
+        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
+        new Word("ὄντας", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
+
+        new Word("οὖσα", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("οὔσης", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, SINGULAR),
+        new Word("οὔσῃ", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, SINGULAR),
+        new Word("οὖσαν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("οὖσαι", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("οὐσῶν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, PLURAL),
+        new Word("οὔσαις", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, PLURAL),
+        new Word("οὔσας", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
+
+        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
         // 2357
         new Word("λέγω", "I say - root *λεγ"),
         new Word("ἐρῶ", "I will say - λεγω root *ερ", FUTURE),
@@ -445,7 +615,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("εἴρημαι", "I have been said - λεγω root *ερ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐρρέθην", "I was said - λεγω root *ερ", PASSIVE, AORIST),
         // 1768
-        new Word("εἰς accusative", "into"),
+        //new Word("εἰς accusative", "into"),
+        new Word("εἰς", "accusative: into"),
         // 1391
         new Word("οὗτος", "this", MASCULINE),
         new Word("αὕτη", "this", FEMININE),
@@ -487,12 +658,15 @@ public class GreekBuilder implements LanguageBuilder {
         // 1042
         new Word("γάρ", "for, because"),
         // 916
-        new Word("ἐκ genitive", "out of, from"),
-        new Word("ἐξ genitive", "out of, from"),
+        //new Word("ἐκ genitive", "out of, from"),
+        //new Word("ἐξ genitive", "out of, from"),
+        new Word("ἐκ", "genitive: out of, from"),
+        new Word("ἐξ", "genitive: out of, from"),
         // 891
-        new Word("ἐπί accusative", "onto"),
-        new Word("ἐπί genitive", "over"),
-        new Word("ἐπί dative", "at"),
+        //new Word("ἐπί accusative", "onto"),
+        //new Word("ἐπί genitive", "over"),
+        //new Word("ἐπί dative", "at"),
+        new Word("ἐπί", "accusative: onto, genitive: over, dative: at"),
         // 719
         new Word("κύριος", "lord", MASCULINE),
         new Word("κύριου", "lord", MASCULINE, GENITIVE),
@@ -502,7 +676,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἔσχον", "I had - ἐχω root *σεχ", SECOND_AORIST),
         new Word("ἔσχηκα", "I have had - ἐχω root *σεχ", PERFECT),
         // 699
-        new Word("πρός accusative", "to, towards"),
+        //new Word("πρός accusative", "to, towards"),
+        new Word("πρός", "accusative: to, towards"),
         // 669
         new Word("γίνομαι",	"I become, I am - root *γεν", DEPONENT),
         new Word("γενήσομαι", "I will become - γινομαι root *γεν", FUTURE, DEPONENT),
@@ -511,12 +686,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γεγένημαι", "I have been made, caused to happen - γινομαι root *γεν", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐγεννήθην", "I happened, became - γινομαι root *γεν", PASSIVE, AORIST),
         // 668
-        new Word("διά accusative", "on account of"),
-        new Word("διά genitive", "through"),
+        //new Word("διά accusative", "on account of"),
+        //new Word("διά genitive", "through"),
+        new Word("διά", "accusative: on account of, genitive: through"),
         // 663
         new Word("ἵνα", "in order that"),
         // 646
-        new Word("ἀπό genitive", "from"),
+        //new Word("ἀπό genitive", "from"),
+        new Word("ἀπό", "genitive: from"),
         // 638
         new Word("ἀλλά", "but (strong)"),
         // 634
@@ -593,11 +770,13 @@ public class GreekBuilder implements LanguageBuilder {
         // 499
         new Word("οὖν", "therefore"),
         // 476
-        new Word("κατά accusative", "according to"),
-        new Word("κατά genitive", "down from"),
+        //new Word("κατά accusative", "according to"),
+        //new Word("κατά genitive", "down from"),
+        new Word("κατά", "accusative: according to, genitive: down from"),
         // 473
-        new Word("μετά accusative", "after"),
-        new Word("μετά genitive", "with"),
+        //new Word("μετά accusative", "after"),
+        //new Word("μετά genitive", "with"),
+        new Word("μετά", "accusative: after, genitive: with"),
         // 455
         new Word("ὁρω",	"I see - ὁραω root *ορα"),
         new Word("ὄψομαι",	"I will see - ὁραω root *οπ", FUTURE, DEPONENT),
@@ -643,8 +822,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἤ", "or"),
         // 333
         new Word("ἐάν", "if"),
-        new Word("περί accusative", "around"),
-        new Word("περί genitive", "concerning, about"),
+        //new Word("περί accusative", "around"),
+        //new Word("περί genitive", "concerning, about"),
+        new Word("περί", "accusative: around, genitive: concerning, about"),
         // 330
         new Word("λόγος", "word", MASCULINE),
         new Word("λόγου", "word", MASCULINE, GENITIVE),
@@ -710,8 +890,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀπεκρινἀμην", "I answered - αποκρινομαιa root *αποκριν", AORIST, DEPONENT),
         new Word("ἀπεκρίθην", "I was answered - αποκρινομαιa root *αποκριν", PASSIVE, AORIST),
         // 220
-        new Word("ὑπό accusative", "under"),
-        new Word("ὑπό genitive", "by"),
+        //new Word("ὑπό accusative", "under"),
+        //new Word("ὑπό genitive", "by"),
+        new Word("ὑπό", "accusative: under, genitive: by"),
         // 218
         new Word("ἐξέρχομαι", "I go out"),
         new Word("ἐξελεὐσομαι", "I will go out εξερχομαι", FUTURE),
@@ -738,9 +919,10 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("Ἰοὐδαῖα", "jewish", ADJECTIVE, FEMININE),
         new Word("Ἰοὐδαῖον", "jewish", ADJECTIVE, NEUTER),
         // 194
-        new Word("παρά accusative", "alongside of"),
-        new Word("παρά genitive", "from"),
-        new Word("παρά dative", "in the presence of"),
+        //new Word("παρά accusative", "alongside of"),
+        //new Word("παρά genitive", "from"),
+        //new Word("παρά dative", "in the presence of"),
+        new Word("παρά", "accusative: alongside of, genitive: from, dative: in the presence of"),
         new Word("εισερχομαι", "I enter"),
         new Word("εἰσελεύσομαι", "I will enter εισερχομαι", FUTURE),
         new Word("εἰσῆλθον", "I entered εισερχομαι", AORIST),
@@ -829,8 +1011,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("φημί", "I say - root *φη"),
         new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 150
-        new Word("ὑπερ accusative", "above"),
-        new Word("ὑπερ genitive", "in behalf of"),
+        //new Word("ὑπερ accusative", "above"),
+        //new Word("ὑπερ genitive", "in behalf of"),
+        new Word("ὑπερ", "accusative: above, genitive: in behalf of"),
         // 148
         new Word("καλέω", "I call - root *καλεϝ"),
         new Word("καλἐσω", "I will call - καλεω root *καλεϝ", FUTURE),
@@ -899,7 +1082,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("νεκρός", "dead", ADJECTIVE, MASCULINE),
         new Word("νεκρά", "dead", ADJECTIVE, FEMININE),
         new Word("νεκρόν", "dead", ADJECTIVE, NEUTER),
-        new Word("συν dative", "with"),
+        //new Word("συν dative", "with"),
+        new Word("συν", "dative: with"),
         // 124
         new Word("δοῦλος", "slave", MASCULINE),
         new Word("δοῦλου", "slave", MASCULINE, GENITIVE),
@@ -1235,9 +1419,14 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
 
-        //63
+        // 63
         new Word("ὄρος", "mountain, hill", NEUTER),
         new Word("ὄρους", "mountain, hill", NEUTER, GENITIVE),
+        new Word("γραμματεύς", "scribe", MASCULINE),
+        new Word("γραμματέως", "scribe", MASCULINE, GENITIVE),
+
+        // 62
+        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER, PLURAL),
 
         // 61
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
@@ -1248,10 +1437,48 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κηρύσσω", "I proclaim, preach - root *κηρυγ"),
         new Word("ἐκήρυξα", "I proclaimed, preached κηρύσσω - root *κηρυγ", AORIST),
         new Word("ἐκηρύχθην", "I was proclaimed, preached - root *κηρυγ", PASSIVE, AORIST),
+        new Word("εὐαγγελίζω", "I bring good news - root *εὐαγγελιδ, often occurs in middle voice with same meaning"),
+        new Word("εὐηγγέλισα", "I brought good news εὐαγγελίζω - root *εὐαγγελιδ", AORIST),
+        new Word("εὐηγγέλισμαι", "I have been brought good news εὐαγγελίζω - root *εὐαγγελιδ", MIDDLE, PASSIVE, PERFECT),
+        new Word("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω - root *εὐαγγελιδ", PASSIVE, AORIST),
+
+        // 59
+        new Word("ἀσπάζομαι", "I greet, salute - root *ἀσπαδ", DEPONENT),
+        new Word("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι - root *ἀσπαδ", DEPONENT),
+
+        // 58
+        new Word("θεωρέω", "I look at, behold - root *θεωρε"),
+        new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
+        new Word("εθεώρησα", "I will looked at, beheld θεωρέω - root *θεωρε", AORIST),
+
+        // 55
+        new Word("κράζω", "I cry out, call out - root *κραγ"),
+        new Word("κράξω", "I will cry out, call out κράζω - root *κραγ", FUTURE),
+        new Word("ἔκραξα", "I cried out, called out κράζω - root *κραγ", AORIST),
+        new Word("κέκραγα", "I have cried out, called out κράζω - root *κραγ", PERFECT),
+
+        // 54
+        new Word("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE),
+        new Word("δεξιά", "right (hand, side)", ADJECTIVE, FEMININE),
+        new Word("δεξιόν", "right (hand, side)", ADJECTIVE, NEUTER),
+        new Word("ούχι", "not"),
 
         // 53
-        new Word("διό", "therefore, for this reason")
+        new Word("διό", "therefore, for this reason"),
 
+        // 52
+        new Word("πείθω", "I persuade - root *πειθ"),
+        new Word("πείσω", "I will persuade πείθω - root *πειθ"),
+        new Word("ἔπεισα", "I persuaded πείθω - root *πειθ"),
+        new Word("πέποιθα", "I have persuaded πείθω - root *πειθ"),
+        new Word("πέπεισμαι", "I have been persuaded πείθω - root *πειθ"),
+        new Word("ἐπείσθην", "I was persuaded πείθω - root *πειθ"),
+        new Word("παιδίον", "child, infant", NEUTER),
+        new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
+        new Word("σπείρω", "I sow - root *σπερ"),
+        new Word("ἔσπειρα", "I sow σπείρω - root *σπερ", AORIST),
+        new Word("ἔσπαρμαι", "I sow σπείρω - root *σπερ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐσπάρην", "I sow σπείρω - root *σπερ", PASSIVE, AORIST)
 
         // Go back and fill in blanks
 
@@ -1262,14 +1489,14 @@ public class GreekBuilder implements LanguageBuilder {
   public List<GrammarRule> buildRules() {
     return Arrays.asList(
         new GrammarRule("Nouns rules:\n" +
-                    "1. Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the third.\n" +
-                    "2. Every neuter word has the same form in the nominative and accusative.\n" +
-                    "3. Almost all neuter words end in α in the nominative and accusative plural.\n" +
-                    "4. In the dative singular, the ι subscripts if possible.\n" +
-                    "5. Vowels often change their length ('ablaut’).\n" +
-                    "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
-                    "7. Square of stops\n" +
-                    "8. A tau cannot stand at the end of the word and will drop off"),
+            "1. Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the third.\n" +
+            "2. Every neuter word has the same form in the nominative and accusative.\n" +
+            "3. Almost all neuter words end in α in the nominative and accusative plural.\n" +
+            "4. In the dative singular, the ι subscripts if possible.\n" +
+            "5. Vowels often change their length ('ablaut’).\n" +
+            "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
+            "7. Square of stops\n" +
+            "8. A tau cannot stand at the end of the word and will drop off"),
 
         new GrammarRule("Square of stops (applies to stops before a θ as well):\n" +
             "Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
@@ -1318,13 +1545,10 @@ public class GreekBuilder implements LanguageBuilder {
             " * partitive, where the subject is a part of the whole, which is genitive: some of\n" +
             "   the branches τινες των κλαδων"),
 
-        // TODO - add subscript iotas to this as it is hard to tell which words are dative.
-        // TODO - I think this needs better indentation as some of the bullet points are
-        // subpoints of the other.
         new GrammarRule("Uses of Dative\n" +
             " * Dative Proper (‘to’)\n" +
             " * indirect object: He has given him authority to execute judgment εξουσιαν εδωκεν\n" +
-            "   αυτω κρισιν ποιεν\n" +
+            "   αυτῳ κρισιν ποιεν\n" +
             " * dative of interest, expression “for”:  Your wife Elizabeth will bear a son for\n" +
             "   you η γυνη σου Ελισαβετ γεννησει υιον σοι (called the “dative of advantage” when\n" +
             "   the idea is to the subject’s advantage and “dative of disadvantage” when the idea\n" +
@@ -1332,20 +1556,20 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Uses of dative continued\n" +
             " * reference or respect (English, with respect to): Consider yourselves dead to sin\n" +
-            "   λογιζεσθε εαυτους ειναι νεκρους τη αμαρτια\n" +
+            "   λογιζεσθε εαυτους ειναι νεκρους τῃ αμαρτιᾳ\n" +
             " * Locative (‘in’, ‘with’)\n" +
             " * sphere or realm in which something occurs: Blessed are the pure in heart μακαριοι\n" +
-            "   οι καθαροι τη καρδια\n" +
+            "   οι καθαροι τῃ καρδιᾳ\n" +
             " * A time designation in the dative specifies when something occurs: On the third\n" +
-            "   day he will be raised τη τριτη ημερα εγερθησεται"),
+            "   day he will be raised τῃ τριτῃ ημερα εγερθησεται"),
 
         new GrammarRule("Uses of dative continued\n" +
             " * Association, indicating “with”: Do not be unequally yoked with unbelievers μη\n" +
             "   γινεσθε ετεροζυγουντες απιστοις\n" +
             " * Instrumental (‘by’)\n" +
-            " * The  manner in which something is done: He speaks boldly παρρησια λαλει\n" +
+            " * The  manner in which something is done: He speaks boldly παρρησιᾳ λαλει\n" +
             " * The means or instrument by which an action is accomplished:  For it is by grace\n" +
-            "    you have been saved Τη γαρ χαριτι εστε σεσωσμενοι"),
+            "    you have been saved Τῃ γαρ χαριτι εστε σεσωσμενοι"),
 
         new GrammarRule("Functions of the Adjective\n" +
             " * Attributive - gives a quality or attribute to the word it modifies: ο αγαθος\n" +
@@ -1574,8 +1798,21 @@ public class GreekBuilder implements LanguageBuilder {
             "* If the verb begins with a dipthong then either the first letter lengthens,\n" +
             "  and if the second letter is a ι it subscripts, or the verb does not show an augment."),
 
-        new GrammarRule("The present tense stem is used to form the imperfect tense.\n" +
-            "Implies: if a verb is deponent in the present it will also be deponent in the imperfect.\n"),
+        new GrammarRule("Base stems:\n" +
+            "* Present stem (active, middle, passive)\n" +
+            "* Future active stem (also used for middle)\n" +
+            "* Aorist active stem (also used for middle)" +
+            "* Perfect active stem\n" +
+            "* Aorist passive stem" +
+            "* Perfect middle/passive stem\n"),
+
+        new GrammarRule("Tense stems used for other tenses:\n" +
+            "* Imperfect tense built on present tense stem.\n" +
+            "* Future passive built on aorist passive stem.\n" +
+            "* Present participle built on present tense stem.\n" +
+            "* Aorist participle built on aorist tense stem.\n" +
+            "* Perfect participle built on perfect tense stem.\n" +
+            "* If verb is deponent in a stem, it will be deponent in other tenses built on that stem."),
 
         new GrammarRule("In a compound verb the augment comes after the preposition.\n" +
             "* If the preposition ends in a vowel it does not contract with the augment\n" +
@@ -1698,8 +1935,11 @@ public class GreekBuilder implements LanguageBuilder {
             "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n"),
 
         new GrammarRule("Perfect tense describes an action that was brought to completion\n" +
-            "and whose effects are felt in the present.  Can be translated with have/has\n" +
-            " or present, e.g. it is written, the kingdom of heaven is near."),
+            "and whose effects are felt in the present (consummative, extensive).  Can be\n" +
+            "translated with have/has or present, e.g.\n" +
+            "τον δρομον τετεκεκα I have finished the race\n" +
+            "Can also be intensive, stressing the resulting state of an action:\n" +
+            "ἀφεωνται σοι αἱ ἁμαρτιαι σου your sins are forgiven you"),
 
         new GrammarRule("Perfect tense reduplication:\n" +
             " * If the word starts with a single consonant, that consonant is doubled with\n" +
@@ -1720,9 +1960,98 @@ public class GreekBuilder implements LanguageBuilder {
             "   Pilate took water and washed his hands.  Emphasizes Pilate's attempt to absolve himself.\n" +
             "   δεξασθε τον ἐμφυτον λογον receive the implanted word, receiving is something done for the self.\n" +
             " * Reflexive middle:  the subject does the action and receives it.\n" +
-            "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself")
+            "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself"),
 
-         // Continue with 25.23 page 234
+        new GrammarRule("Participle aspect:\n" +
+            "Present participle describes a continuous action\n" +
+            "Aorist participle describes an action where the aspect is undefined\n" +
+            "Perfect participle describes a completed action with present effects\n" +
+            "Future participle describes an action that is intended, purposed, or expected."),
+
+        new GrammarRule("Participle relative time:\n" +
+            "Present: describes an action occurring at the same time as the main verb\n" +
+            "Aorist: describes an action occurring before the main verb\n" +
+            "Aspect always trumps relative time."),
+
+        new GrammarRule("Participles have two basic types:\n" +
+            "Adverbial:  action described by the participle is primary directed towards the verb\n" +
+            "  e.g.: While studying his Greek, Ian fell asleep\n" +
+            "  If the participle is active, the word modified does the action of the participle\n" +
+            "  If the participle is passive, the word modified receives the action of the participle\n" +
+            "  Adverbial participles are always anarthrous (no article)\n" +
+            "Adjectival: action described by the participle modifies a noun or pronoun\n" +
+            "  e.g.: The book lying on the floor belongs to Kathy"),
+
+        new GrammarRule("Particples and other parts of speech:\n" +
+            "* Participles do not have a subject and do not take personal endings\n" +
+            "* Participles can take objects and prepositional phrases\n" +
+            "* Participles are negated with μη"),
+
+        new GrammarRule("Present (continuous) participle breakdown:\n" +
+            "Present tense stem + connecting vowel + participle morpheme + case ending\n" +
+            "πιστευ             + ο                + ντ                  + ες\n" +
+            "λυ                 + ο                + μενο                + οι"),
+
+        new GrammarRule("Participle morphemes:\n" +
+            "               masculine   feminine  neuter\n" +
+            "active         ντ          ουσα      ντ    \n" +
+            "middle/passive μενο        μενη      μενο  \n" +
+            "perfect        οτ          οτ        οτ    \n"),
+
+        new GrammarRule("Participal exegesis:\n" +
+            "1. Temporal:  the aorist participle can describe an action occurring before the time" +
+            "   of the finite verb, while the present participle can describe something happening" +
+            "   at the same time as the action of hte main verb:\n" +
+            "   νηστεύσας ... ὕστερον ἐπείνασεν after fasting, ... he was hungry\n" +
+            "   συναλιζόμενας παρήγγειλεν αὐτοις while staying with them he charged them.\n" +
+            "2. Manner:  can indicate the manner in which the action of the finite verb occurs:\n" +
+            "   ἀκουσας δε ὁ νεακισκος τον λογον ἀπηλθεν _λυπουμενος_\n" +
+            "   When the young man heard this, he went away _sad_\n" +
+            "3. Means:  can indicate the means by which the action of the finite verb occurs:\n" +
+            "   κοπιωμεν _ἐργαζομενοι_ ταις ἰδιας χερσιν We toil _working_ with our own hands"),
+
+        new GrammarRule("Participal exegesis continued:\n" +
+            "4. Cause:  can indicate the cause or reason or ground of the action of the finite verb:\n" +
+            "   ἠγαλλιασατο πανοικει _πεπιστευκως_ τῳ θεῳ\n" +
+            "   He was filled with joy, along with his entire household, _because he had come to believe_ in God.\n" +
+            "5. Conditional: can indicate a condition that must be fulfilled if the action of the" +
+            "   finite verb is to be accomplished:\n" +
+            "   παντα ὅσα ἄν αἰτηστε ... _πιστευοντες_ λημψεσθε\n" +
+            "   And whatever you ask in prayer, you will receive, _if you have faith_\n" +
+            "6. Concessive:  can indicate that the action of the finite verb is true despite the " +
+            "   action of the participle:" +
+            "   Και ὑμας _ὄντας_ νεκρους τοις παραπτωμασιν\n" +
+            "   And _although you were dead_ in your transgressions"),
+
+        new GrammarRule("Participle exegesis continued:\n" +
+            "7. Purpose: can indicate the purpose of the finite verb (often translated as infinitive:\n" +
+            "   ἄφες ἴδωμεν εἰ ἔρχεται Ἠλιας _σωσων_ αὐτον\n" +
+            "   Wait! Let's see if Elijah comes _to save_ him\n" +
+            "8. Result:  can indciate the result of the finite verb:\n" +
+            "   ἵνα τους δυο κτισῆ ἐν αὐτῳ εἰς ἕνα καινον ἄνθρωπον _ποιων_ εἰρηνην\n" +
+            "   In order ot create in himself one new man out of hte two, _thus making peace_"),
+
+        new GrammarRule("Participles are often translated as indicatives for several reasons:" +
+            "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)\n" +
+            "* Greek likes aorist participle before the main verb where English prefers two " +
+            "  finite verbs: εὐθυς _ἀφεντες_ τα δικτυα ἠκολουθησαν αὐτῳ\n" +
+            "  Immediately _they left_ their nets and followed him."),
+
+        new GrammarRule("Aorist (undefined aspect) participle breakdown:\n" +
+            "Aorst tense stem + tense formative + participle morpheme + case ending\n" +
+            "λυ               + σα              + ντ                  + ες" +
+            "λυ               + σα              + μενο                + ι" +
+            "λυ               + θε              + ντ                  + ες"),
+
+        new GrammarRule("Participle declensions:\n" +
+            "* feminine participle always uses 1st declension\n" +
+            "* active masculine & neuter use 3rd declension\n" +
+            "* middle/passive present masculine & neuter use 2nd declension\n" +
+            "* middle aorist masculine & neuter use 2nd declension\n" +
+            "* aorist passive use 3rd declension")
+
+
+         // Continue with 29 page 268
 
         // TODO Build master chart of which tenses use which stems
 
