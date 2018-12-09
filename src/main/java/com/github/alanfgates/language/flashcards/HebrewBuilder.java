@@ -153,6 +153,30 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("יֵלְכוּ", "they will walk - from הָלַך", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
         new Word("תֵּלַכְנָה", "they will walk - from הָלַך", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
 
+        // to be - imperfect
+        new Word("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּהְיֶה", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּהְיִי", "you will be", QAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִהְיֶה", "he will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּהְיֶה", "she will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִהְיֶה", "we will be", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּהְיוּ", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּהְיֶינָה", "you will be", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("יִהְיוּ", "they will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("תִּהְיֶינָה", "they will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
+
+        // to give - imperfect
+        new Word("אֶתֵּן", "I will give", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּתֵּן", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתְּנִי", "you will give", QAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִתֵּן", "he will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתֵּן", "she will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִתֵּן", "we will give", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּתְּנוּ", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּתֵּנִּה", "you will give", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("תִּתֵּנִּה", "they will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
+
         /*
         // QAL Participle
         new Word("שׁוֹמֵר", "guarding", QAL, PARTICIPLE, MASCULINE, SINGULAR),
@@ -708,7 +732,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 211
         new Word("מִנְחָה", "gift, tribute, offering", FEMININE),
         // 208
-        new Word("כָּלָה", "he completed"),
+        new Word("כָּלָה", "he was complete, finished, he came to an end"),
         // 206
         new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE),
         new Word("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL),
@@ -749,7 +773,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 186
         new Word("שָׁבַע", "he swore"),
         // 185
-        new Word("אָבַד", "he perished"),
+        new Word("אָבַד", "he perished, hve vanished, he became lost"),
         // 184
         new Word("מִצְוָה", "commandment", FEMININE),
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
@@ -818,6 +842,9 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("מוֹת", "death of", MASCULINE, CONSTRUCT),
         new Word("צָפוֹן", "north, northern", FEMININE),
 
+        // 151
+        new Word("נֶגֶד", "opposite, in front of"),
+
         // 147
         new Word("שְׁמֹנֶה", "eight", MASCULINE),
         new Word("שְׁמֹנִים", "eighty"),
@@ -835,9 +862,19 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
 
+        // 135
+        new Word("כִּסֵּא", "chair, throne", MASCULINE),
+
+        // 134
+        new Word("מִסְפָּר", "number", NOUN, MASCULINE),
+        new Word("שֶׁמֶשׁ", "sun", MASCULINE),
+
         // 133
         new Word("אַף", "also, indeed, even"),
         new Word("פֶּן–", "lest, otherwise"),
+
+        // 127
+        new Word("אֶמֶת", "truth, fidelity", FEMININE),
 
         // 114
         new Word("כָּבֵד", "he was heavy, he was honored"),
@@ -850,6 +887,13 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 104
         new Word("תָּמִיד", "continually"),
+        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"),
+
+        // 102
+        new Word("כָּפַר", "he covered, atoned, made atonement"),
+
+        // 94
+        new Word("טָהֵר", "to be clean, pure"),
 
         // 82
         new Word("פֹּה", "here, at this place"),
@@ -860,6 +904,13 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 71
         new Word("שָׁבַת", "he stopped, ceased, rested"),
+
+        // 64
+        new Word("תָּמַם", "to be(come) complete, come to an end, cease, be consumed, be spent, " +
+            "be burned out"),
+
+        // 60
+        new Word("בָּעַר", "he burned up, consumed"),
 
         // 18
         new Word("רְבָבָה", "ten thousand")
@@ -1226,11 +1277,21 @@ public class HebrewBuilder implements LanguageBuilder {
             "  Behold, I have listened to all that you have said to me and [therefore] I have\n" +
             "  caused a king to reign over you"),
 
-        new GrammarRule("II-Guttural and III ע/ח verbs have pathach _ rather than holem for stem (2nd) vowel.")
+        new GrammarRule("II-Guttural and III ע/ח verbs have pathach _ rather than holem for stem " +
+            "(2nd) vowel."),
+
+        new GrammarRule("Waw consecutive is וַ with dagesh in following letter.\n" +
+            "Imperfect can still take non-consecutive waw to mean simple and, וְ\n" +
+            "Waw consecutive imperfect chain can start with וַיְהִי (and it was) meaning 'after'\n" +
+            "Waw consecutive perfect chain can start with וְהִיִה 'and it will be'\n" +
+            "Waw consecutive perfect used after imperative to continue imperative chain\n" +
+            "and should be translated as imperative\n" +
+            "Perfect prefixed with waw in chain of perfects NOT waw consecutive")
 
 
 
-        // Continue 16.20, p 186
+
+        // Continue 18 p 209
     );
   }
 }

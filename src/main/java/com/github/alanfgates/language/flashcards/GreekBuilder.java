@@ -313,6 +313,34 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
+        // Participle active perfect
+        new Word("λελυκώς", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, SINGULAR),
+        new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λελυκότες", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, PLURAL),
+        new Word("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL),
+        new Word("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL),
+        new Word("λελυκότας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λελυκυῖα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λελυκυῖας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, SINGULAR),
+        new Word("λελυκυῖᾳ", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, SINGULAR),
+        new Word("λελυκυῖαν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λελυκυῖαι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λελυκυιων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, PLURAL),
+        new Word("λελυκυῖαις", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, PLURAL),
+        new Word("λελυκυίας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, SINGULAR),
+        new Word("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, PLURAL),
+        new Word("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL),
+        new Word("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL),
+        new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
+
         // Participle middle present
         new Word("λυόμενος", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λυομένου", "loosening", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
@@ -391,6 +419,32 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γενομένοις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
+        // Participle middle perfect
+        new Word("λελυμένος", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λελυμένου", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λελυμένῳ", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, DATIVE, SINGULAR),
+        new Word("λελυμένον", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λελυμένοι", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, GENITIVE, PLURAL),
+        new Word("λελυμένοις", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, DATIVE, PLURAL),
+        new Word("λελυμένους", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λελυμένη", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λελυμένης", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, GENITIVE, SINGULAR),
+        new Word("λελυμένῃ", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, DATIVE, SINGULAR),
+        new Word("λελυμένην", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λελυμέναι", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, GENITIVE, PLURAL),
+        new Word("λελυμέναις", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, DATIVE, PLURAL),
+        new Word("λελυμένας", "loosening", PARTICIPLE, MIDDLE, PERFECT, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λελυμένον", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λελυμένου", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λελυμένῳ", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, DATIVE, SINGULAR),
+        new Word("λελυμένον", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λελυμένα", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, GENITIVE, PLURAL),
+        new Word("λελυμένοις", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, DATIVE, PLURAL),
+        new Word("λελυμένα", "loosening", PARTICIPLE, MIDDLE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
+
         // Participle passive present
         new Word("λυόμενος", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λυομένου", "loosening", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
@@ -425,8 +479,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθέντες", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
         new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, PLURAL),
         new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL),
-        new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
-        new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
         new Word("λυθέντας", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
         new Word("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυθείσης", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -447,6 +499,32 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθεντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
         // No verb occurring 50 or more times in the NT has 2nd passive participle
+
+        // Participle passive perfect
+        new Word("λελυμένος", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λελυμένου", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR),
+        new Word("λελυμένῳ", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, DATIVE, SINGULAR),
+        new Word("λελυμένον", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λελυμένοι", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, PLURAL),
+        new Word("λελυμένοις", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, DATIVE, PLURAL),
+        new Word("λελυμένους", "loosening", PARTICIPLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word("λελυμένη", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λελυμένης", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, GENITIVE, SINGULAR),
+        new Word("λελυμένῃ", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, DATIVE, SINGULAR),
+        new Word("λελυμένην", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR),
+        new Word("λελυμέναι", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, GENITIVE, PLURAL),
+        new Word("λελυμέναις", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, DATIVE, PLURAL),
+        new Word("λελυμένας", "loosening", PARTICIPLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL),
+        new Word("λελυμένον", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λελυμένου", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λελυμένῳ", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, DATIVE, SINGULAR),
+        new Word("λελυμένον", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λελυμένα", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL),
+        new Word("λελυμένων", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, GENITIVE, PLURAL),
+        new Word("λελυμένοις", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, DATIVE, PLURAL),
+        new Word("λελυμένα", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
 
         //----------------------------------------------------------------------------------------
         // NOUN FORMS
@@ -608,6 +686,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
         // 2357
+        new Word("*λεγ", "to say", ROOT),
+        new Word("*ιπ", "to say ", ROOT, SECOND_AORIST),
+        new Word("*ερ", "to say ", ROOT, FUTURE, PERFECT, PASSIVE, AORIST),
         new Word("λέγω", "I say - root *λεγ"),
         new Word("ἐρῶ", "I will say - λεγω root *ερ", FUTURE),
         new Word("εἶπον", "I said - λεγω root *ιπ", SECOND_AORIST),
@@ -671,6 +752,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κύριος", "lord", MASCULINE),
         new Word("κύριου", "lord", MASCULINE, GENITIVE),
         // 708
+        new Word("*σεχ",	"to have", ROOT),
         new Word("ἔχω",	"I have - root *σεχ"),
         new Word("ἕξω",	"I will have - ἐχω root *σεχ", FUTURE),
         new Word("ἔσχον", "I had - ἐχω root *σεχ", SECOND_AORIST),
@@ -679,12 +761,13 @@ public class GreekBuilder implements LanguageBuilder {
         //new Word("πρός accusative", "to, towards"),
         new Word("πρός", "accusative: to, towards"),
         // 669
+        new Word("*γεν",	"to become, to be", ROOT),
         new Word("γίνομαι",	"I become, I am - root *γεν", DEPONENT),
         new Word("γενήσομαι", "I will become - γινομαι root *γεν", FUTURE, DEPONENT),
         new Word("ἐγένομην", "I became - γινομαι root *γεν", AORIST, DEPONENT),
         new Word("γέγονα", "I have become - γινομαι root *γεν", SECOND_PERFECT),
         new Word("γεγένημαι", "I have been made, caused to happen - γινομαι root *γεν", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐγεννήθην", "I happened, became - γινομαι root *γεν", PASSIVE, AORIST),
+        new Word("ἐγενήθην", "I happened, became - γινομαι root *γεν", PASSIVE, AORIST),
         // 668
         //new Word("διά accusative", "on account of"),
         //new Word("διά genitive", "through"),
@@ -697,6 +780,8 @@ public class GreekBuilder implements LanguageBuilder {
         // 638
         new Word("ἀλλά", "but (strong)"),
         // 634
+        new Word("*ερχ", "To come, to go", ROOT, PRESENT),
+        new Word("*ελευθ", "to come/go ", ROOT, FUTURE, AORIST, PERFECT),
         new Word("ἔρχομαι", "I come, I go - root *ερχ", DEPONENT),
         new Word("ἐλεύσομαι", "I will come/go - ἔρχομαι root *ελευθ", FUTURE, DEPONENT),
         new Word("ἦλθον", "I came/went, - ἔρχομαι root *ελευθ", SECOND_AORIST),
@@ -727,11 +812,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
         new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
         // 572
-        new Word("ποιω", "I do, I make - root ποιε"),
-        new Word("ποιήσω", "I will make/do - root ποιε", FUTURE),
-        new Word("ἐποίησα", "I did/made - root ποιε", AORIST),
-        new Word("πεποίηκα", "I have done/made - root ποιε", PERFECT),
-        new Word("πεποίημαι", "I have been done/made - root ποιε", MIDDLE, PASSIVE, PERFECT),
+        new Word("*ποιε", "to do, to make", ROOT),
+        new Word("ποιω", "I do, I make - root *ποιε"),
+        new Word("ποιήσω", "I will make/do - root *ποιε", FUTURE),
+        new Word("ἐποίησα", "I did/made - root *ποιε", AORIST),
+        new Word("πεποίηκα", "I have done/made - root *ποιε", PERFECT),
+        new Word("πεποίημαι", "I have been done/made - root *ποιε", MIDDLE, PASSIVE, PERFECT),
         // 550
         new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
@@ -778,12 +864,16 @@ public class GreekBuilder implements LanguageBuilder {
         //new Word("μετά genitive", "with"),
         new Word("μετά", "accusative: after, genitive: with"),
         // 455
+        new Word("*ορα",	"to see ", ROOT, PRESENT, PASSIVE, PERFECT),
+        new Word("*οπ",	"to see ", ROOT, FUTURE, PASSIVE, AORIST),
+        new Word("*ιδ",	"to see ", ROOT, SECOND_AORIST),
         new Word("ὁρω",	"I see - ὁραω root *ορα"),
         new Word("ὄψομαι",	"I will see - ὁραω root *οπ", FUTURE, DEPONENT),
         new Word("εἶδον",	"I saw - ὁραω root *ιδ", SECOND_AORIST),
         new Word("ἑώρακα",	"I have seen - ὁραω root *ορα", PERFECT),
         new Word("ὤφθην",	"I was seen - ὁραω root *οπ", PASSIVE, AORIST),
         // 428
+        new Word("*ακου", "to hear ", ROOT),
         new Word("ἀκούω", "I hear - root *ακου"),
         new Word("ἀκούσω", "I will hear - root *ακου", FUTURE),
         new Word("ἤκουσα", "I heard - root *ακου", AORIST),
@@ -794,6 +884,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πολλή", "many, much", FEMININE),
         new Word("πολύ", "many, much", NEUTER),
         // 417
+        new Word("*δο", "to give ", ROOT),
         new Word("δίδωμι", "I give - root *δο"),
         new Word("δώσω", "I will give - διδωμι root *δο", FUTURE),
         new Word("ἔδωκα", "I gave - διδωμι root *δο", AORIST),
@@ -835,6 +926,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἑαυτῆς", "herself", FEMININE, GENITIVE),
         new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE),
         // 296
+        new Word("*λαλε", "to speak ", ROOT),
         new Word("λαλω", "I speak - root *λαλε"),
         new Word("λαλήσω", "I will speak - root *λαλε", FUTURE),
         new Word("ἐλάλησα", "I spoke - root *λαλε", AORIST),
@@ -848,6 +940,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("μαθητής", "student, disciple", MASCULINE),
         new Word("μαθητοῦ", "student, disciple", MASCULINE, GENITIVE),
         // 258
+        new Word("*λαβ", "to take, to receive ", ROOT),
         new Word("λαμβάνω", "I take, I receive - root *λαβ"),
         new Word("λήμψομαι", "I will take/receive - λαμβανω root *λαβ", FUTURE, DEPONENT),
         new Word("ἔλαβον", "I took/received - λαμβανω root *λαβ", SECOND_AORIST),
@@ -858,12 +951,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γῆ", "land, earth", FEMININE),
         new Word("γῆς", "land, earth", FEMININE, GENITIVE),
         // 249
-        new Word("πιστεύω", "I believe - root πιστευ"),
-        new Word("πιστεύσω", "I will believe - root πιστευ", FUTURE),
-        new Word("ἐπίστευσα", "I believed - root πιστευ", AORIST),
-        new Word("πεπίστευκα", "I have believed - root πιστευ", PERFECT),
-        new Word("πεπίστευμαι", "I have been believed - root πιστευ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐπιστεύθην", "I was believed - root πιστευ", PASSIVE, AORIST),
+        new Word("*πιστευ", "to believe ", ROOT),
+        new Word("πιστεύω", "I believe - root *πιστευ"),
+        new Word("πιστεύσω", "I will believe - root *πιστευ", FUTURE),
+        new Word("ἐπίστευσα", "I believed - root *πιστευ", AORIST),
+        new Word("πεπίστευκα", "I have believed - root *πιστευ", PERFECT),
+        new Word("πεπίστευμαι", "I have been believed - root *πιστευ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐπιστεύθην", "I was believed - root *πιστευ", PASSIVE, AORIST),
         // 245
         new Word("μέγας", "large, great", MASCULINE),
         new Word("μεγάλη", "large, great", FEMININE),
@@ -872,6 +966,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πίστις", "faith, trust", FEMININE),
         new Word("πίστεως", "faith, trust", FEMININE, GENITIVE),
         // 242
+        new Word("*γνω", "to know ", ROOT),
         new Word("γινώσκω", "I know - root *γνω"),
         new Word("γνώσομαι", "I will know - γινωσκω root *γνω", FUTURE, DEPONENT),
         new Word("ἔγνων", "I knew - γινωσκω root *γνω", SECOND_AORIST),
@@ -886,6 +981,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἅγια", "holy", ADJECTIVE, FEMININE),
         new Word("ἅγιον", "holy", ADJECTIVE, NEUTER),
         // 231
+        new Word("*αποκριν", "to answer ", ROOT),
         new Word("ἀποκρίνομαι", "I answer - root *αποκριν", DEPONENT),
         new Word("ἀπεκρινἀμην", "I answered - αποκρινομαιa root *αποκριν", AORIST, DEPONENT),
         new Word("ἀπεκρίθην", "I was answered - αποκρινομαιa root *αποκριν", PASSIVE, AORIST),
@@ -906,10 +1002,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γυναικός", "woman", FEMININE, GENITIVE),
         new Word("τέ", "and, so"),
         // 210
+        new Word("*δυν", "to be able ", ROOT),
         new Word("δύναμαι", "I am able - root *δυν", DEPONENT),
         new Word("δυνήσομαι", "I will be able - δυναμαι root *δυν", FUTURE, DEPONENT),
         new Word("ἠδυνήθην",	"I was able - δυναμαι root *δυν", PASSIVE, AORIST, DEPONENT),
         // 208
+        new Word("*εθελε", "to want ", ROOT),
         new Word("θέλω", "I want - root *εθελε"),
         new Word("ἠθέλησα", "I wanted - θελω root *εθελε", AORIST),
         new Word("ὅυτω", "thus"),
@@ -928,6 +1026,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("εἰσῆλθον", "I entered εισερχομαι", AORIST),
         new Word("εἰσελήλυθα", "I have entered εισερχομαι", PERFECT),
         // 191
+        new Word("*γραφ", "to write "),
         new Word("γραφω", "I write - root *γραφ"),
         new Word("γράψω", "I will write - root *γραφ", FUTURE),
         new Word("ἔγραψα", "I wrote - root *γραφ", AORIST),
@@ -945,6 +1044,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("χείρ", "hand", FEMININE),
         new Word("χειρός", "hand", FEMININE, GENITIVE),
         // 176
+        new Word("*ευρ", "to find ", ROOT),
         new Word("ἑυρίσκω", "I find - root *ευρ"),
         new Word("εὑρήσω", "I will find - ἑυρίσκω root *ευρ", FUTURE),
         new Word("εὗρον", "I found - ἑυρίσκω root *ευρ", SECOND_AORIST),
@@ -987,10 +1087,13 @@ public class GreekBuilder implements LanguageBuilder {
         // 157
         new Word("καρδια", "heart", FEMININE),
         new Word("καρδιας", "heart", FEMININE, GENITIVE),
+        new Word("*εσθι", "to eat ", ROOT, PRESENT),
+        new Word("*φαγ", "to eat ", ROOT, FUTURE, SECOND_AORIST),
         new Word("ἐσθιω", "I eat - root *εσθι"),
         new Word("φάγομαι", "I will eat - ἐσθιω root *φαγ", FUTURE, DEPONENT),
         new Word("ἔφαγον", "I ate - ἐσθιω root *φαγ", SECOND_AORIST),
         // 155
+        new Word("*στα", "to stand ", ROOT),
         new Word("ἵστημι", "Transitive: I set, put, place Intransitive: I stand, I appear, I stop - root *στα "),
         new Word("στήσω", "I will stand - ἱστημι root *στα", FUTURE),
         new Word("ἔστησα", "I put, set - ἱστημι root *στα", AORIST),
@@ -1003,11 +1106,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("χαρις", "grace", FEMININE),
         new Word("χαριτος", "grace", FEMININE, GENITIVE),
         // 153
+        new Word("*πορευ", "to go, to live ", ROOT),
         new Word("πορεύομαι", "I go, I live - root *πορευ", DEPONENT),
         new Word("πορεύσομαι", "I will go, live - πορευομαι root *πορευ", FUTURE, DEPONENT),
         new Word("πεπόρευμαι", "I have gone, lived - πορευομαι root *πορευ", MIDDLE, PASSIVE, PERFECT, DEPONENT),
         new Word("ἐπορεὐθην", "I went, lived - πορευομαι root *πορευ", PASSIVE, AORIST, DEPONENT),
         // 152
+        new Word("*φη", "to say ", ROOT),
         new Word("φημί", "I say - root *φη"),
         new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 150
@@ -1015,6 +1120,7 @@ public class GreekBuilder implements LanguageBuilder {
         //new Word("ὑπερ genitive", "in behalf of"),
         new Word("ὑπερ", "accusative: above, genitive: in behalf of"),
         // 148
+        new Word("*καλεϝ", "to call ", ROOT),
         new Word("καλέω", "I call - root *καλεϝ"),
         new Word("καλἐσω", "I will call - καλεω root *καλεϝ", FUTURE),
         new Word("ἐκάλεσα", "I called - καλεω root *καλεϝ", AORIST),
@@ -1034,6 +1140,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 144
         new Word("προφητης", "prophet", MASCULINE),
         new Word("προφητου", "prophet", MASCULINE, GENITIVE),
+        new Word("*εγερ", "to raise ", ROOT),
         new Word("ἐγείρω", "I raise - root *εγερ"),
         new Word("ἐγερῶ", "I will raise - ἐγειρω root *εγερ", FUTURE),
         new Word("ἤγειρα", "I raised - ἐγειρω root *εγερ", AORIST),
@@ -1041,6 +1148,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἠγέρθην", "I was raised - ἐγειρω root *εγερ", PASSIVE, AORIST),
         // 143
         new Word("ὀυδε", "and not, neither"),
+        new Word("απο + *σε", "to let go, divorce, forgive ", ROOT),
         new Word("ἀφιημι", "I let go, divorce, forgive - compound verb απο + ιημι root *σε"),
         new Word("ἀφήσω", "I will forgive - ἀφιημι compound verb απο + ιημι root *σε", FUTURE),
         new Word("ἀφῆκα", "I forgave - ἀφιημι compound verb απο + ιημι root *σε", AORIST),
@@ -1054,6 +1162,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 141
         new Word("παλιν", "again"),
         // 140
+        new Word("*ζα", "to live ", ROOT),
         new Word("ζάω", "I live - root *ζα"),
         new Word("ζἠσω", "I will live - root *ζα", FUTURE),
         new Word("ἔζεσα", "I lived - root *ζα", AORIST),
@@ -1065,10 +1174,12 @@ public class GreekBuilder implements LanguageBuilder {
         // 135
         new Word("δύο", "two"),
         // 133
+        new Word("*βλεπ", "to see ", ROOT),
         new Word("βλέπω", "I see - root *βλεπ"),
         new Word("βλέψω", "I will see - βλέπω root *βλεπ", FUTURE),
         new Word("ἐβλέψα", "I saw - βλέπω root *βλεπ", AORIST),
         // 132
+        new Word("απο + *στελ", "to send ", ROOT),
         new Word("ἀποστέλλω", "I send - root *αποστελ"),
         new Word("ἀποστελῶ", "I will send - ἀποστέλλω root *αποστελ", FUTURE),
         new Word("άπέστειλα", "I sent - ἀποστέλλω root *αποστελ", AORIST),
@@ -1093,6 +1204,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("αἰῶνος", "age", MASCULINE, GENITIVE),
         new Word("ἀρχιερεύς", "high priest", MASCULINE),
         new Word("ἀρχιερέως", "high priest", MASCULINE, GENITIVE),
+        new Word("*βαλ", "to throw ", ROOT),
         new Word("βάλλω", "I throw - root *βαλ"),
         new Word("βαλῶ", "I will throw - βάλλω root *βαλ", FUTURE),
         new Word("ἔβαλον", "I threw - βάλλω root *βαλ", SECOND_AORIST),
@@ -1112,6 +1224,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("παραδέδομαι", "I have been handed over παραδιδωμι", MIDDLE, PASSIVE, PERFECT),
         new Word("παρεδόθην", "I was handed over παραδιδωμι", PASSIVE, AORIST),
         // 118
+        new Word("*μεν", "to remain ", ROOT),
         new Word("μένω", "I remain - root *μεν"),
         new Word("μενῶ", "I will remain - μένω root *μεν", FUTURE),
         new Word("ἔμεινα", "I remained - μένω root *μεν", AORIST),
@@ -1121,6 +1234,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀπελεύσομαι", "I will depart ἀπέρχομαι", FUTURE),
         new Word("ἀπῆλθον", "I departed ἀπέρχομαι", AORIST),
         new Word("ἀπελήλθυα", "I have departed ἀπέρχομαι", PERFECT),
+        new Word("*ζητε", "to seek ", ROOT),
         new Word("ζητῶ", "I seek - root *ζητε"),
         new Word("ζητήσω", "I will seek - root *ζητε", FUTURE),
         new Word("ἐζήτησα", "I sought - root *ζητε", AORIST),
@@ -1142,6 +1256,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("μονος", "alone", ADJECTIVE, MASCULINE),
         new Word("μονη", "alone", ADJECTIVE, FEMININE),
         new Word("μονον", "alone", ADJECTIVE, NEUTER),
+        new Word("*κριν", "to judge ", ROOT),
         new Word("κρίνω", "I judge - root *κριν"),
         new Word("κρινῶ", "I will judge - κρίνω root *κριν", FUTURE),
         new Word("ἔκρινα", "I judged - κρίνω root *κριν", AORIST),
@@ -1149,6 +1264,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κέκριμαι", "I have been judged - κρίνω root *κριν", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐκρίθην", "I was judged - κρίνω root *κριν", PASSIVE, AORIST),
         // 111
+        new Word("απο + *θαν", "to die ", ROOT),
         new Word("ἀποθνῃσκω", "I die - compound απο + *θαν"),
         new Word("ἀποθανοῦμαι", "I will die - ἀποθνῃσκω compound απο + *θαν", FUTURE, DEPONENT),
         new Word("άπέθανον", "I died - ἀποθνῃσκω compound απο + *θαν", SECOND_AORIST),
@@ -1159,6 +1275,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 109
         new Word("ἀληθεια", "truth", FEMININE),
         new Word("ἀληθειας", "truth", FEMININE, GENITIVE),
+        new Word("*μελλε", "to be about to, to intend ", ROOT),
         new Word("μελλω", "I am about to, I intend - root *μελλε"),
         new Word("μελλήσω", "I will intend - μελλω root *μελλε", FUTURE),
         new Word("ὁλος", "whole, entire", ADJECTIVE, MASCULINE),
@@ -1171,6 +1288,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("παρακέκλημαι", "I have been beseeched παρακαλέω", MIDDLE, PASSIVE, PERFECT),
         new Word("παρεκλήθην", "I was beseeched παρακαλέω", PASSIVE, AORIST),
         // 108
+        new Word("ανα + *στα", "to raise, to stand up ", ROOT),
         new Word("ἀνίστημι", "I raise, I stand up - compound ανα + *στα"),
         new Word("ἀναστήσω", "I will raise/stand up - ἀνίστημι compound ανα + *στα", FUTURE),
         new Word("ἀνέστησα", "I raised - ἀνίστημι compound ανα + *στα", AORIST),
@@ -1178,6 +1296,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀνέστυμαι", "I have been raised - ἀνίστημι compound ανα + *στα", MIDDLE, PASSIVE, PERFECT),
         new Word("ἀνέστην", "I was raised - ἀνίστημι compound ανα + *στα", PASSIVE, AORIST),
         // 106
+        new Word("*σωζ", "to save ", ROOT),
         new Word("σῴζω", "I save - root *σωζ"),
         new Word("σώζω", "I will save - σῴζω root *σωζ", FUTURE),
         new Word("ἔσωσα", "I saved - σῴζω root *σωζ", AORIST),
@@ -1200,6 +1319,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐξουσια", "authority", FEMININE),
         new Word("ἐξουσιας", "authority", FEMININE, GENITIVE),
         // 101
+        new Word("*αρ", "to take up, to take away ", ROOT),
         new Word("αἴρω", "I take up, I take away - root *αρ"),
         new Word("ἀρω", "I will take up  -αἴρω root *αρ", FUTURE),
         new Word("ἦρα", "I took up  -αἴρω root *αρ", AORIST),
@@ -1216,6 +1336,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("καλον", "good", ADJECTIVE, NEUTER),
         new Word("ὀφθαλμος", "eye, sight", MASCULINE),
         new Word("ὀφθαλμου", "eye, sight", MASCULINE, GENITIVE),
+        new Word("*θε", "to put, place ", ROOT),
         new Word("τίθημι", "I put, I place - root *θε"),
         new Word("θήσω", "I will put - τίθημι root *θε", FUTURE),
         new Word("ἔθηκα", "I placed - τίθημι root *θε", AORIST),
@@ -1234,10 +1355,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀρτου", "bread", MASCULINE, GENITIVE),
         new Word("αἱμα", "blood", NEUTER),
         new Word("αἱματος", "blood", NEUTER, GENITIVE),
+        new Word("*δακ", "to teach ", ROOT),
         new Word("διδασκω", "I teach - root *δακ"),
         new Word("διδάξω", "I will teach - διδασκω root *δακ", FUTURE),
         new Word("ἐδίδαξα", "I taught - διδασκω root *δακ", AORIST),
         new Word("ἐδιδάχθην", "I was taught - διδασκω root *δακ", PASSIVE, AORIST),
+        new Word("*γεννα", "to beget ", ROOT),
         new Word("γεννῶ", "I beget - root *γεννα"),
         new Word("γεννήσω", "I will beget - root *γεννα", FUTURE),
         new Word("ἐγέννησα", "I begat - root *γεννα", AORIST),
@@ -1245,9 +1368,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γεγέννημαι", "I have been begotten - root *γεννα", PASSIVE, PERFECT),
         new Word("ἐγεννήθην", "I was begotten - root *γεννα", PASSIVE, AORIST),
         // 95
+        new Word("περι + *πατε", "to walk around ", ROOT),
         new Word("περιπατω", "I walk around - compound περι + *πατε"),
         new Word("περιπατήσω", "I will walk around - περιπατω compound περι + *πατε", FUTURE),
         new Word("περιεπάτησα", "I walked around - περιπατω compound περι + *πατε", AORIST),
+        new Word("*φοβε", "to fear ", ROOT),
         new Word("φοβέομαι", "I fear - root *φοβε", DEPONENT),
         new Word("ἐφοβήθην", "I feared - φοβέομαι root *φοβε", PASSIVE, AORIST, DEPONENT),
         // 93
@@ -1266,17 +1391,21 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("θάλασσης", "sea, lake", FEMININE, GENITIVE),
         new Word("τόπος", "place, position; opportunity; passage", MASCULINE),
         new Word("τόπου", "place, position; opportunity; passage", MASCULINE, GENITIVE),
+        new Word("κατα + *εμ", "to sit down ", ROOT),
         new Word("κάθημαι", "I sit down - compound κατα + *εμ"),
         new Word("κάθησομαι", "I will sit down - κάθημαι compound κατα + *εμ", FUTURE),
         // 90
+        new Word("*ἀκολουθε", "to follow ", ROOT),
         new Word("ἀκολουθω", "I follow - root *ἀκολουθε"),
         new Word("ἀκολουθήσω", "I will follow - root *ἀκολουθε", FUTURE),
         new Word("ἠκολούθησα", "I followed - root *ἀκολουθε", AORIST),
         new Word("ἠκολούθηκα", "I have followed - root *ἀκολουθε", PERFECT),
+        new Word("απο + *λε", "to destroy ", ROOT),
         new Word("ἀπόλλυμι", "I destroy - compound απο + *λε"),
         new Word("ἀπολέσω", "I will destroy - ἀπόλλυμι compound απο + *λε", FUTURE),
         new Word("ἀπώλεσα", "I destroyed - ἀπόλλυμι compound απο + *λε", AORIST),
         new Word("ἀπόλωλα", "I have destroyed - ἀπόλλυμι compound απο + *λε", PERFECT),
+        new Word("*πετ", "to fall ", ROOT),
         new Word("πίπτω", "I fall - root *πετ"),
         new Word("πεσοῦμαι", "I will fall - πίπτω root *πετ", FUTURE),
         new Word("ἔπεσον", "I fell - πίπτω root *πετ", SECOND_AORIST),
@@ -1287,9 +1416,11 @@ public class GreekBuilder implements LanguageBuilder {
         // 87
         new Word("οὔτε", "neither"),
         // 86
+        new Word("*αρχ", "(middle) to begin (active) to rule, rare ", ROOT),
         new Word("ἄρχομαι", "I begin (active I rule, but rare) - root *αρχ", MIDDLE),
         new Word("ἄρξομαι", "I will begin - ἄρχομαι root *αρχ", FUTURE, MIDDLE),
         new Word("ἠρξάμην", "I began - ἄρχομαι root *αρχ", AORIST, MIDDLE),
+        new Word("*πληρο", "to fill, fulfill ", ROOT),
         new Word("πληρω", "I fill, fulfill - root *πληρο"),
         new Word("πληρώσω", "I will fill - root *πληρο", FUTURE),
         new Word("ἐπλήρωσα", "I filled - root *πληρο", AORIST),
@@ -1302,6 +1433,7 @@ public class GreekBuilder implements LanguageBuilder {
         // 85
         new Word("καιρός", "time (point and period)", MASCULINE),
         new Word("καιροῦ", "time (point and period)", MASCULINE, GENITIVE),
+        new Word("προσ + *ευχ", "to pray ", DEPONENT),
         new Word("προσεύχομαι", "I pray - root *προσευχ", DEPONENT),
         new Word("προσεύξομαι", "I will pray - προσεύχομαι root *προσευχ", FUTURE, DEPONENT),
         new Word("προσηυξάμην", "I prayed - προσεύχομαι root *προσευχ", AORIST, DEPONENT),
@@ -1310,6 +1442,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("μητρός", "mother", FEMININE, GENITIVE),
         new Word("ὥστε", "so that, in order that, thus"),
         // 82
+        new Word("ανα + *βα", "to go up, rise up, advance ", ROOT),
         new Word("ἀναβαίνω", "I go up, rise up, advance - compound ανα + *βα"),
         new Word("ἀναβήσομαι", "I will go up, rise up, advance - ἀναβαίνω compound ανα + *βα", FUTURE, DEPONENT),
         new Word("ἀνέβην", "I went up, rose up, advanced - ἀναβαίνω compound ανα + *βα", SECOND_AORIST),
@@ -1333,10 +1466,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("άποστολος", "apostle", MASCULINE),
         new Word("άποστολου", "apostle", MASCULINE, GENITIVE),
         // 79
+        new Word("*πεμπ", "to send ", ROOT),
         new Word("πέμπω", "I send - root *πεμπ"),
         new Word("πέμψω", "I will send - root *πεμπ", FUTURE),
         new Word("ἕπεμψα", "I sent - root *πεμπ", AORIST),
         new Word("ἐπέμφθην", "I was sent - root *πεμπ", PASSIVE, AORIST),
+        new Word("ὑπο + *αγ", "to go away, to draw off ", ROOT),
         new Word("ὑπάγω", "I go away, I draw off - compound ὑπο + *αγ"),
         new Word("ὑπάξω", "I will go away, I will draw off - compound ὑπο + *αγ", FUTURE),
         new Word("ὑπἠγαγον", "I went away, I drew off - compound ὑπο + *αγ", SECOND_AORIST),
@@ -1354,9 +1489,11 @@ public class GreekBuilder implements LanguageBuilder {
         // 77
         new Word("σηµεῖον", "sign, miracle", NEUTER),
         new Word("σηµεῖου", "sign, miracle", NEUTER, GENITIVE),
+        new Word("ανα + *οιγω", "to open, unlock, disclose ", ROOT),
         new Word("ἀνοίγω", "I open, unlock, disclose - compound ανα + *οιγω"),
         new Word("ἀνέῳζα", "I opened, unlocked, disclosed - ἀνοίγω compound ανα + *οιγω", AORIST),
         new Word("ἀνεῳχθην", "I was opened, unlocked, disclosed - ἀνοίγω compound ανα + *οιγω", PASSIVE, AORIST),
+        new Word("*βαπτιδ", "to baptize, wash, dip ", ROOT),
         new Word("βαπτίζω", "I baptize, wash, dip - root *βαπτιδ"),
         new Word("βαπτίσω", "I will baptize, wash, dip - βαπτίζω root *βαπτιδ", FUTURE),
         new Word("ἐβαπτισα", "I baptized, washed, dipped - βαπτίζω root *βαπτιδ", AORIST),
@@ -1369,6 +1506,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πρόσωπου", "face, countenance", NEUTER, GENITIVE),
         new Word("ὕδωρ", "water", NEUTER),
         new Word("ὕδατος", "water", NEUTER, GENITIVE),
+        new Word("*μαρτυρε", "to bear witness ", ROOT),
         new Word("μαρτυρῶ", "I bear witness - root *μαρτυρε"),
         new Word("μαρτυρήσω", "I will bear witness - root *μαρτυρε", FUTURE),
         new Word("ἐμαρτύρησα", "I bore witness - root *μαρτυρε", AORIST),
@@ -1380,15 +1518,18 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κεφαλῆς", "head", FEMININE, GENITIVE),
         new Word("δώδεκα", "twelve"),
         // 74
+        new Word("απο + *κτεν", "to kill ", ROOT),
         new Word("ἀποκτείνω", "I kill - compound απο + *κτεν"),
         new Word("ἀποκτενῶ", "I will kill - ἀποκτείνω compound απο + *κτεν", FUTURE),
         new Word("ἀπέκτεινα", "I killed - ἀποκτείνω compound απο + *κτεν", AORIST),
         new Word("ἀπεκτάθην", "I was killed - ἀποκτείνω compound απο + *κτεν", PASSIVE, AORIST),
+        new Word("*χαρ", "to rejoice ", ROOT),
         new Word("χαίρω", "I rejoice (infinitive used as a greeting) - root *χαρ"),
         new Word("ἐχάρην", "I rejoiced - χαίρω root *χαρ", PASSIVE, SECOND_AORIST, DEPONENT),
         // 73
         new Word("φῶς", "light", NEUTER),
         new Word("φωτός", "light", NEUTER, GENITIVE),
+        new Word("*πι", "to drink ", ROOT),
         new Word("πίνω", "I drink - root *πι"),
         new Word("πίομαι", "I will drink - πίνω root *πι", FUTURE, DEPONENT),
         new Word("ἔπιον", "I drank - πίνω root *πι", SECOND_AORIST),
@@ -1402,17 +1543,28 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),
         new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER),
         // 70
+        new Word("*αἰτε", "to ask ", ROOT),
         new Word("αἰτέω", "I ask - root *αἰτε"),
         new Word("αἰτήσω", "I will ask - root *αἰτε", FUTURE),
         new Word("ᾔτησα", "I was asked - root *αἰτε", AORIST),
         new Word("ᾔτηκα", "I have asked - root *αἰτε", PERFECT),
         new Word("ᾔτημαι", "I have been asked - root *αἰτε", MIDDLE, PASSIVE, PERFECT),
+        new Word("*τηρε", "to keep, guard ", ROOT),
         new Word("τηρέω", "I keep, I guard - root *τηρε"),
         new Word("τηρήσω", "I will keep, I will guard - root *τηρε", FUTURE),
         new Word("ἐτήρησα", "I kept, I guarded - root *τηρε", AORIST),
         new Word("τετήρηκα", "I have kept, I have guarded - root *τηρε", PERFECT),
         new Word("τετήρημαι", "I have been kept, I have been guarded - root *τηρε", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
+
+        // 66
+        new Word("*φερ", "to carry, bear, produce ", ROOT),
+        new Word("φέρω", "I carry, bear, produce - root *φερ"),
+        new Word("οἴσω", "I will carry, bear, produce φέρω - root *οἰ", FUTURE),
+        new Word("ἤνεγκα", "I carried, bore, produced φέρω - root *ἐνεχ", AORIST),
+        new Word("ἐνήνοχα", "I have carried, bore, produced φέρω - root *ἐνεχ", PERFECT),
+        new Word("ἠνέχθην", "I was carried, born, produced φέρω - root *ἐνεχ", PASSIVE, AORIST),
+
         // 69
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
@@ -1425,31 +1577,48 @@ public class GreekBuilder implements LanguageBuilder {
 
         // 62
         new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER, PLURAL),
+        new Word("*δοκ", "to think, seem ", ROOT),
+        new Word("δοκέω", "I think, seem - root *δοκ"),
+        new Word("ἔδοξα", "I thought, seemed δοκέω - root *δοκ", AORIST),
 
         // 61
+        new Word("*δοξαδ", "to praise, honor, glorify ", ROOT),
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
         new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
         new Word("ἐδόξασω", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
         new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐδοξάσθην", "I praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
+        new Word("*κηρυγ", "to proclaim, preach ", ROOT),
         new Word("κηρύσσω", "I proclaim, preach - root *κηρυγ"),
         new Word("ἐκήρυξα", "I proclaimed, preached κηρύσσω - root *κηρυγ", AORIST),
         new Word("ἐκηρύχθην", "I was proclaimed, preached - root *κηρυγ", PASSIVE, AORIST),
+        new Word("εὐ + *αγγελιδ", "to bring good news", ROOT),
         new Word("εὐαγγελίζω", "I bring good news - root *εὐαγγελιδ, often occurs in middle voice with same meaning"),
         new Word("εὐηγγέλισα", "I brought good news εὐαγγελίζω - root *εὐαγγελιδ", AORIST),
         new Word("εὐηγγέλισμαι", "I have been brought good news εὐαγγελίζω - root *εὐαγγελιδ", MIDDLE, PASSIVE, PERFECT),
         new Word("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω - root *εὐαγγελιδ", PASSIVE, AORIST),
 
         // 59
+        new Word("*ἀσπαδ", "to greet, salute ", ROOT),
         new Word("ἀσπάζομαι", "I greet, salute - root *ἀσπαδ", DEPONENT),
         new Word("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι - root *ἀσπαδ", DEPONENT),
 
         // 58
+        new Word("*θεωρε", "to look at, behold ", ROOT),
         new Word("θεωρέω", "I look at, behold - root *θεωρε"),
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
         new Word("εθεώρησα", "I will looked at, beheld θεωρέω - root *θεωρε", AORIST),
 
+        // 56
+        new Word("*δεχ", "to take, receive ", ROOT),
+        new Word("δέχομαι", "I take, receive - root *δεχ", DEPONENT),
+        new Word("δέξομαι", "I will take, receive δέχομαι - root *δεχ", FUTURE, DEPONENT),
+        new Word("ἐδεξάμην", "I took, received δέχομαι - root *δεχ", AORIST, DEPONENT),
+        new Word("δέδεγμαι", "I have been taken, received δέχομαι - root *δεχ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐδἐχθην", "I was taken, received δέχομαι - root *δεχ", PASSIVE, AORIST),
+
         // 55
+        new Word("*κραγ", "to cry out, call out ", ROOT),
         new Word("κράζω", "I cry out, call out - root *κραγ"),
         new Word("κράξω", "I will cry out, call out κράζω - root *κραγ", FUTURE),
         new Word("ἔκραξα", "I cried out, called out κράζω - root *κραγ", AORIST),
@@ -1465,6 +1634,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("διό", "therefore, for this reason"),
 
         // 52
+        new Word("*πειθ", "to persuade ", ROOT),
         new Word("πείθω", "I persuade - root *πειθ"),
         new Word("πείσω", "I will persuade πείθω - root *πειθ"),
         new Word("ἔπεισα", "I persuaded πείθω - root *πειθ"),
@@ -1473,6 +1643,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐπείσθην", "I was persuaded πείθω - root *πειθ"),
         new Word("παιδίον", "child, infant", NEUTER),
         new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
+        new Word("*σπερ", "to sow ", ROOT),
         new Word("σπείρω", "I sow - root *σπερ"),
         new Word("ἔσπειρα", "I sow σπείρω - root *σπερ", AORIST),
         new Word("ἔσπαρμαι", "I sow σπείρω - root *σπερ", MIDDLE, PASSIVE, PERFECT),
@@ -2046,10 +2217,28 @@ public class GreekBuilder implements LanguageBuilder {
             "* active masculine & neuter use 3rd declension\n" +
             "* middle/passive present masculine & neuter use 2nd declension\n" +
             "* middle aorist masculine & neuter use 2nd declension\n" +
-            "* aorist passive use 3rd declension")
+            "* aorist passive use 3rd declension"),
+
+        new GrammarRule("Adjectival participles can be either:\n" +
+            "* attribute - acting as an adjective\n" +
+            "* substantival - acting as a noun"),
+
+        new GrammarRule("Adverbial participle is always anarthrous (no definite article)\n" +
+            "while the adjectival participle is usually articular (has definite article).\n" +
+            "Relative time still applies, so aorist still implies the participle is describing\n" +
+            "someone/something that acted before the main verb."),
+
+        new GrammarRule("Perfect participles indicate a completed action with effects in the " +
+            "present (from the viewpoint of the writer).\n" +
+            "Built on the perfect stem of the verb, with reduplication\n" +
+            "Reduplication + perfect tense stem + tense formative + participle morpheme + case ending\n" +
+            "active:\n" +
+            "λε              λυ                   κ                 οτ                    ες" +
+            "middle/passive:\n" +
+            "λε              λυ                                     μενο                  ι")
 
 
-         // Continue with 29 page 268
+         // Continue with 30 page 275
 
     );
   }
