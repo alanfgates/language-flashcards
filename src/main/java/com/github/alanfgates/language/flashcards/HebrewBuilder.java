@@ -263,7 +263,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 847
         new Word("שָׁלַח", "he sent"),
         // 845
-        new Word("מֵת", "he died"),
+        new Word("מֵת", "he died"), // TODO put in middle vowel
         // 835
         new Word("שָׁם", "there"),
         // 814
@@ -901,7 +901,7 @@ public class HebrewBuilder implements LanguageBuilder {
           "     accented), the definite article becomes Seghol הֶ\n" +
           " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ"),
 
-        new GrammarRule("Concjuncton ו (and, but, also, even)\n" +
+        new GrammarRule("Conjuncton ו (and, but, also, even)\n" +
             " * Most frequently spelled וְ\n" +
             " * Becomes Shureq וּ \n" +
             "   * before ב, מ, פ (bump rule), ב פ loose Dagesh lene in this case בּיִת becomes וּבַיִת \n" +
@@ -1073,7 +1073,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " * 200: one hundred dual: מָאתַים\n" +
             " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred\n" +
             " * 2000: one thousand dual: אַלְפַּיִם\n" +
-            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֲלָפִים\n" +
+            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֶלֶף\n" +
             " * 20,000: one thousand dual: רִבּוֹתַיִם\n" +
             " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת"),
 

@@ -341,17 +341,17 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἔργοις", "works - root ἔργο", NEUTER, DATIVE, PLURAL, SECOND_DECLENSION),
         new Word("ἔργα", "works - root ἔργο", NEUTER, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
 
-        new Word("σάρξ", "flesh - root σάρκ", NOMINATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκ", "flesh - root σάρκ", VOCATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
-        new Word("σαρκός", "flesh - root σάρκ", GENITIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
-        new Word("σαρκί", "flesh - root σάρκ", DATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκα", "flesh - root σάρκ", ACCUSATIVE, FEMININE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", NOMINATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", VOCATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρκῶν", "fleshes - root σάρκ", GENITIVE, FEMININE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρξί", "fleshes - root σάρκ", DATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
-        new Word("σαρξίν", "fleshes - root σάρκ", DATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
-        new Word("σάρκας", "fleshes - root σάρκ", ACCUSATIVE, FEMININE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρξ", "flesh - root σάρκ", FEMININE, NOMINATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκ", "flesh - root σάρκ", FEMININE, VOCATIVE, SINGULAR, THIRD_DECLENSION), // TODO not sure this is right
+        new Word("σαρκός", "flesh - root σάρκ", FEMININE, GENITIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σαρκί", "flesh - root σάρκ", FEMININE, DATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκα", "flesh - root σάρκ", FEMININE, ACCUSATIVE, SINGULAR, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", FEMININE, NOMINATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκες", "fleshes - root σάρκ", FEMININE, VOCATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρκῶν", "fleshes - root σάρκ", FEMININE, GENITIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξί", "fleshes - root σάρκ", FEMININE, DATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σαρξίν", "fleshes - root σάρκ", FEMININE, DATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκας", "fleshes - root σάρκ", FEMININE, ACCUSATIVE, PLURAL, THIRD_DECLENSION),
 
         //
         //----------------------------------------------------------------------------------------
@@ -1486,7 +1486,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
             "in meaning.  It does not take a middle or passive meaning.\n" +
-            "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in " +
+            "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in\n" +
             "the present but non in the aorist.\n" +
             "75% of middle forms in the NT are deponent."),
 
