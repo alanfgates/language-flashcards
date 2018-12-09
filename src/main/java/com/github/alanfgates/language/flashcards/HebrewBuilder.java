@@ -373,7 +373,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 847
         new Word("שָׁלַח", "he sent, stretched out"),
         // 845
-        new Word("מֵת", "he died"),
+        new Word("מֵת", "he died"), // TODO put in middle vowel
         // 835
         new Word("שָׁם", "there"),
         // 814
@@ -484,8 +484,8 @@ public class HebrewBuilder implements LanguageBuilder {
         // 494
         new Word("אֶלֶף", "thousand"),
         // 492
-        new Word("עֶשֶׁר", "ten", FEMININE),
-        new Word("עֲשָׂרָה", "ten", MASCULINE),
+        new Word("עֶשֶׁר", "ten", MASCULINE),
+        new Word("עֲשָׂרָה", "ten", FEMININE),
         new Word("עֶשְׂרִים", "twenty"),
         // 491
         new Word("שֶׁבַע", "seven", MASCULINE),
@@ -579,6 +579,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עֵץ", "tree", MASCULINE),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
         // 327
+        // TODO think this should be beerech rather than berech
         new Word("בֵּרֵךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
         // 325
         new Word("כְּלִי", "utensil, weapon", MASCULINE),
@@ -1051,7 +1052,7 @@ public class HebrewBuilder implements LanguageBuilder {
           "     accented), the definite article becomes Seghol הֶ\n" +
           " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ"),
 
-        new GrammarRule("Concjuncton ו (and, but, also, even)\n" +
+        new GrammarRule("Conjuncton ו (and, but, also, even)\n" +
             " * Most frequently spelled וְ\n" +
             " * Becomes Shureq וּ \n" +
             "   * before ב, מ, פ (bump rule), ב פ loose Dagesh lene in this case בּיִת becomes וּבַיִת \n" +
@@ -1130,15 +1131,15 @@ public class HebrewBuilder implements LanguageBuilder {
             "   * Type 1 is used with singular nouns, some prepositions, and the direct object marker.\n" +
             "   * Type 2 is used with plural nouns and some prepositions.\n"),
 
-        new GrammarRule("Spelling changes for pronominal suffixes:" +
-            " * Singular nouns can take plural pronominal suffixes (e.g. our horse) and vice versa.\n" +
+        new GrammarRule("Spelling changes for pronominal suffixes:\n" +
+            " * Singular nouns can take plural pronominal suffixes (e.g. my horses) and vice versa.\n" +
             " * When attached to masculine (or feminine endingless) plural nouns, the ים is dropped\n" +
-            " * Nouns ending segol ה (e.g. שָׂדֶה ) will drop the segol ה before adding the " +
+            " * Nouns ending segol ה (e.g. שָׂדֶה ) will drop the segol ה before adding the\n" +
             "   pronominal suffix: שׂדִי my field\n" +
-            " * Feminine singular nouns ending in patach ה the ה changes to ת before the ending " +
+            " * Feminine singular nouns ending in patach ה the ה changes to ת before the ending\n" +
             "   is applied."),
 
-        new GrammarRule("Spelling changes for pronominal suffixes (continued):" +
+        new GrammarRule("Spelling changes for pronominal suffixes (continued):\n" +
             " * Many monosyllabic nouns add י to their stem before a pronominal suffix.  Can be\n" +
             "   distinguished in the singular (type 1) by the hireq before the י\n" +
             " * The preposition כְּ changes to כָּמוֹ in singular and first person plural when\n" +
@@ -1223,7 +1224,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " * 200: one hundred dual: מָאתַים\n" +
             " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred\n" +
             " * 2000: one thousand dual: אַלְפַּיִם\n" +
-            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֲלָפִים\n" +
+            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֶלֶף\n" +
             " * 20,000: one thousand dual: רִבּוֹתַיִם\n" +
             " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת"),
 
@@ -1242,7 +1243,9 @@ public class HebrewBuilder implements LanguageBuilder {
             " * Perfect:  completed action, state of being.\n" +
             " * Imperfect:  incomplete action, habitual or customary actions, subjunctive.\n" +
             " * Imperative: direct command, sometimes request, second person only.\n" +
-            " * Cohortative: wish, request, or command, can express purpose or result, first person only\n" +
+            " * Cohortative: wish, request, or command, can express purpose or result, first person only"),
+        
+        new GrammarRule("Hebrew verb conjugations (continued):\n" +
             " * Jussive:  mild command or strong wish, third person only\n" +
             " * Infinitive construct: like an English infinitive, a verbal noun.\n" +
             " * Infinitive absolute: used with other verbs to emphasize or itensify action or to\n" +
