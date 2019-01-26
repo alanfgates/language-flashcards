@@ -204,30 +204,153 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λελύμεθα", "we have been loosened", INDICATIVE, PASSIVE, PERFECT, FIRST_PERSON, PLURAL),
         new Word("λελύσθε", "you have been loosened", INDICATIVE, PASSIVE, PERFECT, SECOND_PERSON, PLURAL),
         new Word("λέλυνται", "they have been loosened", INDICATIVE, PASSIVE, PERFECT, THIRD_PERSON, PLURAL),
-        /*
+
         // Subjunctive active present
-        new Word("λύω", "I might loosen", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("λύῃ", "s/he might loosen", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύω", "I might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύῃς", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύῃ", "s/he might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύωμεν", "we might be loosening",  SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύητε", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύωσι", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("λύωσιν", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Subjunctive active aorist
         new Word("λύσω", "I might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λύσῃς", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λύσῃ", "s/he might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσωμεν", "we might loosen",  SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λύσητε", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λύσωσι", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+        new Word("λύσωσιν", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Subjunctive active second aorist
+        new Word("λάβω", "I might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λάβῃς", "you might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λάβῃ", "s/he might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λάβωμεν", "we might throw",  SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("λάβητε", "you might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("λάβωσι", "they might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+        new Word("λάβωσιν", "they might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Subjunctive middle present
-        new Word("λύῃ", "you might loosen yourself", SUBJUNCTIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύωμαι", "I might be loosening myself", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύῃ", "you might be loosening yourself", SUBJUNCTIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύηται", "s/he might be loosening her/himself", SUBJUNCTIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λυώμεθα", "we might be loosening ourselves",  SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύησθε", "you might be loosening yourselves", SUBJUNCTIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύωνται", "they might be loosening themselves", SUBJUNCTIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Subjunctive middle aorist
+        new Word("λύσωμαι", "I might loosen myself", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λύσῃ", "you might loosen yourself", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λύσηται", "s/he might loosen her/himself", SUBJUNCTIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λυσώμεθα", "we might loosen ourselves",  SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λύσησθε", "you might loosen yourselves", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λύσωνται", "they might loosen themselves", SUBJUNCTIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Subjunctive middle second aorist
+        new Word("γένωμαι", "I might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("γένῃ", "you might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("γένηται", "s/he might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γενώμεθα", "we might become",  SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("γένησθε", "you might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("γένωνται", "they might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Subjunctive passive present
-        new Word("λύῃ", "you might be loosened", SUBJUNCTIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύωμαι", "I might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύῃ", "you might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύηται", "s/he might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λυώμεθα", "we might be being loosened",  SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύησθε", "you might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύωνται", "they might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Subjunctive passive aorist
+        new Word("λυθῶ", "I might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λυθῇς", "you might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυθῇ", "s/he might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λυθῶμεν", "we might be loosened",  SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λυθῆτε", "you might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λυθῶσι", "they might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+        new Word("λυθῶσιν", "they might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Subjunctive passive second aorist
+        new Word("γραφῶ", "I might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("γραφῇς", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("γραφῇ", "s/he might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γραφῶμεν", "we might be written",  SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("γραφῆτε", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("γραφῶσι", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+        new Word("γραφῶσιν", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Imperative active present
-        new Word("λύετε", "loosen!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λῦε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λυέτω", "let him/her keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύετε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λυέτωσαν", "let them keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Imperative active aorist
+        new Word("λῦσον", "loose!", IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυσάτω", "let him/her loose!", IMPERATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσατε", "loose!", IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λυσάτωσαν", "let them loose!", IMPERATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Imperative active second aorist
+        new Word("λάβε", "throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λαβέτω", "let him/her throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λάβετε", "throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("λαβέτωσαν", "let them throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Imperative middle present
-        new Word("λύεσθε", "loosen yourselves!", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON,
-            PLURAL),
+        new Word("λύου", "keep loosing yourself!", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λυέσθω", "let him/her keep loosing him/herself!", IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύεσθε", "keep loosing yourselves!", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λυέσθωσαν", "let them keep loosing themselves!", IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Imperative middle aorist
+        new Word("λῦσαι", "loose yourself!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυσάσθω", "let him/her loose him/herself!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσασθε", "loose yourselves!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λυσάσθωσαν", "let them loose themselves!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Imperative middle second aorist
+        new Word("γενοῦ", "become!", IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("γενέσθω", "let him/her become!", IMPERATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γένεσθε", "become!", IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("γενέσθωσαν", "let them become!", IMPERATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Imperative passive present
-        new Word("λύεσθε", "be loosened!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
-        */
+        new Word("λύου", "keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λυέσθω", "let him/her keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύεσθε", "keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λυέσθωσαν", "let them keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Imperative passive aorist
+        new Word("λύθητι", "be loosed!", IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυθήτω", "let him/her be loosed!", IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύθητε", "be loosed!", IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λυθήτωσαν", "let them be loosed!", IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Imperative passive second aorist
+        new Word("γράφητι", "be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("γραφήτω", "let him/her be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γράφητε", "be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("γραφήτωσαν", "let them be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
+        // Infinitive
+        new Word("λύειν", "to continually loosen", INFINITIVE, ACTIVE, PRESENT),
+        new Word("λῦσαι", "to loosen", INFINITIVE, ACTIVE, AORIST),
+        new Word("λαβεῖν", "to receive", INFINITIVE, ACTIVE, SECOND_AORIST),
+        new Word("λελυκέναι", "to have loosened", INFINITIVE, ACTIVE, PERFECT),
+
+        new Word("λύεσθαι", "to continually loosen oneself", INFINITIVE, MIDDLE, PRESENT),
+        new Word("λύσασθαι", "to loosen oneself", INFINITIVE, MIDDLE, AORIST),
+        new Word("λαβέσθαι", "to receive oneself", INFINITIVE, MIDDLE, SECOND_AORIST),
+        new Word("λελύσθαι", "to have loosened oneself", INFINITIVE, MIDDLE, PERFECT),
+
+        new Word("λύεσθαι", "to continually have been loosened", INFINITIVE, PASSIVE, PRESENT),
+        new Word("λυθῆναι", "to have been loosened", INFINITIVE, PASSIVE, AORIST),
+        new Word("γραφῆναι", "to have received", INFINITIVE, PASSIVE, SECOND_AORIST),
+        new Word("λελῦσθαι", "to have been loosened", INFINITIVE, PASSIVE, PERFECT),
 
         // Participle active present
         new Word("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
@@ -685,6 +808,22 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+
+        new Word("ὦ", "I might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("ἦς", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("ᾖ", "s/he might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("ὦμεν", "we might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("ἦτε", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("ὦσι", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("ὦσιν", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        new Word("εἶναι", "to be", INFINITIVE, ACTIVE, PRESENT),
+
+        new Word("ἴσθι", "be!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("ἔστω", "let him/her be!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("ἔστε", "be!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("ἔστωσαν", "let them be!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+
         // 2357
         new Word("*λεγ", "to say", ROOT),
         new Word("*ιπ", "to say ", ROOT, SECOND_AORIST),
@@ -1400,11 +1539,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀκολουθήσω", "I will follow - root *ἀκολουθε", FUTURE),
         new Word("ἠκολούθησα", "I followed - root *ἀκολουθε", AORIST),
         new Word("ἠκολούθηκα", "I have followed - root *ἀκολουθε", PERFECT),
-        new Word("απο + *λε", "to destroy ", ROOT),
-        new Word("ἀπόλλυμι", "I destroy - compound απο + *λε"),
-        new Word("ἀπολέσω", "I will destroy - ἀπόλλυμι compound απο + *λε", FUTURE),
-        new Word("ἀπώλεσα", "I destroyed - ἀπόλλυμι compound απο + *λε", AORIST),
-        new Word("ἀπόλωλα", "I have destroyed - ἀπόλλυμι compound απο + *λε", PERFECT),
+        new Word("απο + *ὀλ", "to destroy ", ROOT),
+        new Word("ἀπόλλυμι", "I destroy - compound απο + *ολ"),
+        new Word("ἀπολέσω", "I will destroy - ἀπόλλυμι compound απο + *ολ", FUTURE),
+        new Word("ἀπώλεσα", "I destroyed - ἀπόλλυμι compound απο + *ολ", AORIST),
+        new Word("ἀπόλωλα", "I have destroyed - ἀπόλλυμι compound απο + *ολ", PERFECT),
         new Word("*πετ", "to fall ", ROOT),
         new Word("πίπτω", "I fall - root *πετ"),
         new Word("πεσοῦμαι", "I will fall - πίπτω root *πετ", FUTURE),
@@ -1570,6 +1709,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
 
+        // 66
+        new Word("πρεσβύτερος", "elder", NOUN, MASCULINE),
+        new Word("πρεσβύτερου", "elder", NOUN, MASCULINE, GENITIVE),
+        new Word("πρεσβύτερος", "old", ADJECTIVE, MASCULINE),
+        new Word("πρεσβύτερα", "old", ADJECTIVE, FEMININE),
+        new Word("πρεσβύτερον", "old", ADJECTIVE, NEUTER),
+
         // 63
         new Word("ὄρος", "mountain, hill", NEUTER),
         new Word("ὄρους", "mountain, hill", NEUTER, GENITIVE),
@@ -1603,6 +1749,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("*ἀσπαδ", "to greet, salute ", ROOT),
         new Word("ἀσπάζομαι", "I greet, salute - root *ἀσπαδ", DEPONENT),
         new Word("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι - root *ἀσπαδ", DEPONENT),
+        new Word("λίθος", "stone", MASCULINE),
+        new Word("λίθου", "stone", MASCULINE, GENITIVE),
 
         // 58
         new Word("*θεωρε", "to look at, behold ", ROOT),
@@ -1610,7 +1758,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
         new Word("εθεώρησα", "I will looked at, beheld θεωρέω - root *θεωρε", AORIST),
 
+        // 57
+        new Word("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE),
+        new Word("τοιαῦτη", "such, of such kind", ADJECTIVE, FEMININE),
+        new Word("τοιοῦτον", "such, of such kind", ADJECTIVE, NEUTER),
+
         // 56
+        new Word("μηδέ", "and not, neither"),
         new Word("*δεχ", "to take, receive ", ROOT),
         new Word("δέχομαι", "I take, receive - root *δεχ", DEPONENT),
         new Word("δέξομαι", "I will take, receive δέχομαι - root *δεχ", FUTURE, DEPONENT),
@@ -1982,6 +2136,8 @@ public class GreekBuilder implements LanguageBuilder {
             "* Present participle built on present tense stem.\n" +
             "* Aorist participle built on aorist tense stem.\n" +
             "* Perfect participle built on perfect tense stem.\n" +
+            "* Subjunctive present formed from present stem, aorist from aorist stem, perfect on the perfect stem.\n" +
+            "* Infinitive present formed from present stem, aorist from aorist stem, perfect on the perfect stem.\n" +
             "* If verb is deponent in a stem, it will be deponent in other tenses built on that stem."),
 
         new GrammarRule("In a compound verb the augment comes after the preposition.\n" +
@@ -2236,12 +2392,199 @@ public class GreekBuilder implements LanguageBuilder {
             "active:\n" +
             "λε              λυ                   κ                 οτ                    ες" +
             "middle/passive:\n" +
-            "λε              λυ                                     μενο                  ι")
+            "λε              λυ                                     μενο                  ι"),
+
+        new GrammarRule("An 'absolute' grammatical construction is one that is not grammatically\n" +
+            "related to the rest of the sentance, that is it does not modify any other words in the sentance.\n" +
+            "_ταυτα αὐτου λαλουντος_ πολλοι ἐπιστευσαν εἰς αὐτον\n" +
+            "_While he was saying these things_ many believed in him" +
+            "This is called a genitive absolute (I assume because the participle is in the genitive case)" +
+            "The genitive absolute can have a 'subject' such as he in the above example and and object\n" +
+            "such as these things in the above, or other modifiers"),
+
+        new GrammarRule("Subjunctive describes possibility or probability.\n" +
+            "Subjunctive has aspect, so present tense indicates continuous action while aorist indicates undefined.\n" +
+            "Perfect subjunctive (very rare) indicates completed action with continuing consequences."),
+
+        new GrammarRule("οὐ μή plus subjunctive indicates emphatic denial of a future possibility, e.g. Jesus'\n" +
+            "words in Jn 10:28 οὐ μή ἀπόλωνται they [his sheep] will by no means perish."),
+
+        new GrammarRule("Subjunctive active present paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "1sg  λυ    ω                   λύω\n" +
+            "2sg  λυ    η          ς        λύῃς\n" +
+            "3sg  λυ    η          ι        λύῃ\n" +
+            "1pl  λυ    ω          μεν      λύωμεν\n" +
+            "2pl  λυ    η          τε       λύητε\n" +
+            "3pl  λυ    ω          νσι      λύωσι(ν)\n"),
+
+        new GrammarRule("Subjunctive middle/passive present paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "1sg  λυ    ω          μαι      λυωμαι\n" +
+            "2sg  λυ    η          σαι      λυῃ\n" +
+            "3sg  λυ    η          ται      λυηται\n" +
+            "1pl  λυ    ω          μεθα     λυωμεθα\n" +
+            "2pl  λυ    η          σθε      λυησθε\n" +
+            "3pl  λυ    ω          νται     λυωνται\n"),
+
+        new GrammarRule("Subjunctive active aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "1sg  λυ    σ         ω                   λύσω\n" +
+            "2sg  λυ    σ         η          ς        λύσῃς\n" +
+            "3sg  λυ    σ         η          ι        λύσῃ\n" +
+            "1pl  λυ    σ         ω          μεν      λύσωμεν\n" +
+            "2pl  λυ    σ         η          τε       λύσητε\n" +
+            "3pl  λυ    σ         ω          νσι      λύσωσι(ν)\n"),
+
+        new GrammarRule("Subjunctive middle aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "1sg  λυ    σ         ω          μαι      λυσωμαι\n" +
+            "2sg  λυ    σ         η          σαι      λυσῃ\n" +
+            "3sg  λυ    σ         η          ται      λυσηται\n" +
+            "1pl  λυ    σ         ω          μεθα     λυσωμεθα\n" +
+            "2pl  λυ    σ         η          σθε      λυσησθε\n" +
+            "3pl  λυ    σ         ω          νται     λυσωνται\n"),
+
+        new GrammarRule("Subjunctive passive aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "1sg  λυ    θ         ω                   λύθω\n" +
+            "2sg  λυ    θ         η          ς        λύθῃς\n" +
+            "3sg  λυ    θ         η          ι        λύθῃ\n" +
+            "1pl  λυ    θ         ω          μεν      λύθωμεν\n" +
+            "2pl  λυ    θ         η          τε       λύθητε\n" +
+            "3pl  λυ    θ         ω          νσι      λύθωσι(ν)\n"),
+
+        new GrammarRule("Uses of the subjunctive:\n" +
+            "* Possibility or probability.\n" +
+            "* ἵνα is almost always followed by the subjunctive, can indicate purpose:\n" +
+            "  τίς σοι ἔδωκεν τήν ἐξουσίαν ταύτην ἵνα ταῦτα _ποιῇς_;\n" +
+            "  Who gave you authority that _you do_ these things? \n" +
+            "* Can also indicate content of the preceeding verb:\n" +
+            "  ἐκήρθξαν ἵνα μετανοῶσιν they preached that they should repent\n" +
+            "* ἵνα μή plus subjunctive can be translated as 'lest'\n" +
+            "  οἱ πατέπρες, μή ἐρεθίζετε τὰ τέκνα ὑμῶν, _ἵνα μή ἀθυμῶσιν_\n" +
+            "  Fathers, do not provoke your children, _lest they become discouraged_"),
+
+        new GrammarRule("Uses of the subjunctive (cont)" +
+            "Conditional statements introduced by ἐάν.  If (protasis) is in subjunctive, then (apodosis) any tense or mood.\n" +
+            "  Can be future event: ταῦτα σοι πάντα δώσω, ἐάν πεσὼν _προσκυνήσῃς_ μοι\n" +
+            "                       All these things I will give you, if you will fall down and _worship_ me\n" +
+            "  Can be a timeless truth: ἐάν _θέλῃς_ δύνασαί με καθαρίσαι\n" +
+            "                           if _you want_ you can make me clean\n" +
+            "Hortatory: first person subjunctive, usually at the beginning of the sentance and plural:\n" +
+            "  _διέλθωμεν_ εἰς τό πέραν _let us to across_ to the other side\n" +
+            "Deliberative, when the answer to a question is uncertain: τί φάγωμεν what should we eat?"),
+
+        new GrammarRule("ἴνα, ἕως, and most words that include ἄν are usually followed by a subjunctive:\n" +
+            "  ὄταν (whenever) ἐάν (if) ὄς ἄν (whoever) ὅπου ἄν (whenever)\n" +
+            "Subjunctive negated with μή"),
+
+        new GrammarRule("Three ways to ask a question:\n" +
+            "1. No indication is given as to the answer expected:\n" +
+            "   σύ εἶ ὁ βασιλεύς τῶν Ἰουδαίων; Are you the king of the Jews?\n" +
+            "2. If the question begins with (not just contains) οὐ the inquistor expects a positive answer:\n" +
+            "   Διδάσκαλε, οὐ μέλει σοι ὅτι ἀπολλύμεθα Teacher, do you not care that we are perishing?\n" +
+            "3. If the question being with μή the inquistor expects a negative answer:\n" +
+            "   μή πάντες ἀπόστολοι;  Are all apostles?"),
+
+        new GrammarRule("Infinitive is a verbal noun.\n" +
+            "It is viewed as singular neuter and can take a definite articule in singular neuter, the case" +
+            "of which is determined by the function of the infinitive in the sentance." +
+            "It can have a direct object and adverbial modifiers."),
+
+        new GrammarRule("Infinitive 'tenses':\n" +
+            "* present: continuous Οὐδεὶς δύναται δυσὶ κυρίος δουλεύειν No one is able to serve two masters.\n" +
+            "* aorist: undefined μὴ φοβηθῇς παραλαβειν Μαρίαν τὴν γυναῖκά σου Do not be afraid to take Mary as your wife\n" +
+            "* perfect: completed ἤκουσαν τοῦτο αὐτὸν πεποιηκέναι τὸ σημεῖον They heard he had done this sign"),
+
+        new GrammarRule("Infinitives cannot take a subject (that's what infinite means in this context), but\n" +
+            "they will sometimes have a noun in the accusative that acts like a subject:\n" +
+            "οὐκ ἤφιεν λαλεῖν τὰ δαιμόνια literally: he would not permit to speak the demons, better English: he would not permit the demons to speak.\n" +
+            "Since infinitive can take direct object (which is in accusative) there are cases of infinitive with two nouns in accusative,\n" +
+            "Usually the 'subject' is first the object second:\n" +
+            "βλέπειν αὐτὸν αὐτήν he to see her"),
+
+        new GrammarRule("Infinitive can be used as a substantive, and is usually proceeded by the definite article, in which\n" +
+            "case it is called articular infinitive.  Best translated with 'to':\n" +
+            "ἐμοι _το ζην_ Χριστος και _το ἀποθανειν_ κερδος\n" +
+            "Literally: for me the live Christ and the die gain, better: for me to live is Christ, and to die is gain"),
+
+        new GrammarRule("Infinitives can be used to complete a finite verb and are called 'complementary inifinitive'\n" +
+            "ἤρξαντο λαλειν ἑτερπαις γλωσσαις They begin to speak in tongues\n" +
+            "δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive"),
+
+        new GrammarRule("δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
+            "αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
+            "But Jesus on his part did not entrust himself to hem, _because he knew_ all people"),
+
+        new GrammarRule("εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
+            "παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +
+            "They will deliver him over to the Gentiles _to be mocked and flogged and crucified_\n" +
+            "Purpose can also be expressed with no preposition and article in genitive"),
+
+        new GrammarRule("προ plus article in genitive plus infinitive means 'before'\n" +
+            "ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
+            "μετα plus article in accusative plus infinitive means 'after'\n" +
+            "ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path"),
+
+        new GrammarRule("ὡστε plus infinitive indicates result:\n" +
+            "ἐπλησαν ἀμφοτερα τα πλοια _ὡστε βυθιζεσθαι_ αὐτα They filled both boats so full that they began to sink"),
+
+        new GrammarRule("Infinitive can be used to report indirect discourse."),
+
+        new GrammarRule("Imperative conveys command.\n" +
+            "Present imperative conveys a continuous command or a general precept (always ...)\n" +
+            "While aorist applies to a particular situation."),
+
+        new GrammarRule("Imperative active present paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "2sg  λυ    ε          ?        λῦε\n" +
+            "3sg  λυ    ε          τω       λυέτω\n" +
+            "2pl  λυ    ε          τε       λύετε\n" +
+            "3pl  λυ    ε          τωσαν    λυέτωσαν\n"),
+
+        new GrammarRule("Imperative middle/passive present paradigm:\n" +
+            "     Stem  connecting personal form\n" +
+            "           vowel      ending\n" +
+            "2sg  λυ    ε          ?        λύου\n" +
+            "3sg  λυ    ε          σθω      λυέσθω\n" +
+            "2pl  λυ    ε          σθε      λύεσθε\n" +
+            "3pl  λυ    ε          σθωσαν   λυέσθωσαν\n"),
+
+        new GrammarRule("Imperative active aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "2sg  λυ    σ         α                   λῦσον\n" +
+            "3sg  λυ    σ         α          τω       λυσάτω\n" +
+            "2pl  λυ    σ         α          τε       λύσατε\n" +
+            "3pl  λυ    σ         α          τωσαν    λυσάτωσαν\n"),
+
+        new GrammarRule("Imperative middle aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "2sg  λυ    σ         α                   λῦσαι\n" +
+            "3sg  λυ    σ         α          σθω      λυσάσθω\n" +
+            "2pl  λυ    σ         α          σθε      λύσασθε\n" +
+            "3pl  λυ    σ         α          σθωσαν   λυσάσθωσαν\n"),
+
+        new GrammarRule("Imperative passive aorist paradigm:\n" +
+            "     Stem  tense     connecting personal form\n" +
+            "           formative vowel      ending\n" +
+            "2sg  λυ    θ         η                   λύθητι\n" +
+            "3sg  λυ    θ         η          τω       λυθήτω\n" +
+            "2pl  λυ    θ         η          τε       λύθητε\n" +
+            "3pl  λυ    θ         ω          τωσαν    λυθήτωσαν\n")
 
 
-         // Continue with 30.9 page 278
 
-        // TODO Build master chart of which tenses use which stems
+         // Continue with 33.15 page 313
+
 
     );
   }
