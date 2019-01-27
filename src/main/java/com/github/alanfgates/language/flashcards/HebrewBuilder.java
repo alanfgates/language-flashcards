@@ -346,7 +346,6 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("יָדַע", "he knew"),
         // 896
         new Word("עַיִן", "eye, spring", FEMININE),
-        new Word("עֵין", "eye of, spring of", FEMININE, CONSTRUCT),
         new Word("עֵינַים", "eyes", FEMININE, DUAL),
         new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 898
@@ -769,7 +768,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 186
         new Word("שָׁבַע", "he swore"),
         // 185
-        new Word("אָבַד", "he perished, hve vanished, he became lost"),
+        new Word("אָבַד", "he perished, he vanished, he became lost"),
         // 184
         new Word("מִצְוָה", "commandment", FEMININE),
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
@@ -831,7 +830,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
         // 160
         new Word("נוּס", "he fled, he escaped"),
-        new Word("גִּּבּוֹר", "mighty man, hero, warrior"),
+        new Word("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE),
         new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
 
         // 156
@@ -839,7 +838,6 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 153
         new Word("מָוֶת", "death, dying", MASCULINE),
-        new Word("מוֹת", "death of", MASCULINE, CONSTRUCT),
         new Word("צָפוֹן", "north, northern", FEMININE),
 
         // 151
@@ -1157,6 +1155,7 @@ public class HebrewBuilder implements LanguageBuilder {
             "   but not definiteness.  They may proceed or follow the noun.\n" +
             " * Sustantive: no noun present, stands for those who have the trait (e.g. the wise)"),
 
+        // TODO - need to understand the difference in how these are translated.
         new GrammarRule("Demonstratives as adjectives and pronouns:\n" +
             " * When a demonstrative is functioning as an adjective, it will follow the noun\n" +
             "   it modifies and agree in gender, number, and definiteness. האיש הזה\n" +
@@ -1207,6 +1206,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " x וֹ or הוּ  he/his         הֶם or אָם they/theirs (m)\n" +
             " x אָהּ or הָ she/hers       הֶן  or אָן they/theirs (f)"),
 
+        // TODO use a real word here to show how masculine plural nouns loose their endings
         new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
             "all cases just to give letter to put vowel under).  All type 2 have י in them.\n" +
             " x אַי me/my          אֵינוּ us/our\n" +
@@ -1276,7 +1276,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred\n" +
             " * 2000: one thousand dual: אַלְפַּיִם\n" +
             " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֶלֶף\n" +
-            " * 20,000: one thousand dual: רִבּוֹתַיִם\n" +
+            " * 20,000: ten thousand dual: רִבּוֹתַיִם\n" +
             " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת"),
 
         new GrammarRule("Ordinal numbers:\n" +
@@ -1312,7 +1312,7 @@ public class HebrewBuilder implements LanguageBuilder {
             " * I-י\n" +
             " * I-נ\n" +
             " * Doubly weak (two of the above)\n" +
-            " * Binconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect\n" +
+            " * Biconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect\n" +
             " * Geminate - identical 2nd and 3rd consonants."),
 
         new GrammarRule("Weak verb perfect tense changes:\n" +
