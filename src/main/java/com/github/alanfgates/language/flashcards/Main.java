@@ -38,6 +38,7 @@ public class Main {
     options.addOption("s", "shuffle", false,
         "Shuffle the cards.  This puts all of the cards back in the deck");
     options.addOption("t", "test", false, "Do daily test");
+    options.addOption("y", "convert-to-yaml", false, "temporary");
 
     try {
       CommandLine cli = new GnuParser().parse(options, args);
@@ -53,6 +54,8 @@ public class Main {
         CardDeck deck = new CardDeck(filename);
         deck.daily(testNumber);
         deck.storeDeck(filename);
+      } else if (cli.hasOption("y")) {
+        CardDeck.convertToYaml();
       } else {
         System.err.println("I'm not really sure what you're looking for here, my friend.");
         usage(options);

@@ -17,7 +17,11 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,7 +35,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 class CardDeck implements Serializable {
 
@@ -66,6 +69,24 @@ class CardDeck implements Serializable {
     cards = (LinkedList<Flashcard>)in.readObject();
     rules = (Map<String, List<GrammarRule>>)in.readObject();
     in.close();
+  }
+
+  // Temporary, to convert to Yaml
+  static void convertToYaml() throws IOException, ClassNotFoundException {
+
+    LanguageBuilder[] languages = new LanguageBuilder[] {new HebrewBuilder(), new GreekBuilder()};
+    for (LanguageBuilder language : languages) {
+      File cardFile = new File(".", language.getLanguageName() + "-cards.yaml");
+      File ruleFile = new File(".", language.getLanguageName() + "-rules.yaml");
+      WordContainer words = new WordContainer(language.buildWords());
+      GrammarRuleContainer rules = new GrammarRuleContainer(language.buildRules());
+      ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+      mapper.writeValue(cardFile, words);
+      mapper.writeValue(ruleFile, rules);
+    }
+
+    // Write out the cards
+
   }
 
   void daily(int numToTest) throws IOException {
@@ -119,6 +140,39 @@ class CardDeck implements Serializable {
           .append(" ");
     }
     System.out.println(buf.toString());
+  }
+
+  static class WordContainer {
+    List<Word> words;
+
+    public WordContainer(List<Word> words) {
+      this.words = words;
+    }
+
+    public List<Word> getWords() {
+      return words;
+    }
+
+    public void setWords(List<Word> words) {
+      this.words = words;
+    }
+  }
+
+  static class GrammarRuleContainer {
+    List<GrammarRule> rules;
+
+    public GrammarRuleContainer(List<GrammarRule> rules) {
+      this.rules = rules;
+    }
+
+    public List<GrammarRule> getRules() {
+      return rules;
+    }
+
+    public GrammarRuleContainer setRules(List<GrammarRule> rules) {
+      this.rules = rules;
+      return this;
+    }
   }
 
 }

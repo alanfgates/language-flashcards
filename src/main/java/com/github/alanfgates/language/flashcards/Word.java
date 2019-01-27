@@ -20,22 +20,22 @@ package com.github.alanfgates.language.flashcards;
 import java.io.Serializable;
 
 public class Word implements Serializable {
-  private final String english;
-  final String other;
-  private final Enum[] modifiers;
+  private String english;
+  String other;
+  private Enum[] modifiers;
 
 
-  public Word(String other, String english, Enum... modifiers) {
+  Word(String other, String english, Enum... modifiers) {
     this.english = english;
     this.other = other;
     this.modifiers = modifiers;
   }
 
-  public void showFront() {
+  void showFront() {
     System.out.println(other);
   }
 
-  public final void flipOver() {
+  final void flipOver() {
     StringBuilder buf = new StringBuilder(english)
         .append(" ");
     for (Enum modifier : modifiers) {
@@ -43,5 +43,33 @@ public class Word implements Serializable {
           .append(' ');
     }
     System.out.println(buf.toString());
+  }
+
+  // Following all for YAML
+  public String getEnglish() {
+    return english;
+  }
+
+  public Word setEnglish(String english) {
+    this.english = english;
+    return this;
+  }
+
+  public String getOther() {
+    return other;
+  }
+
+  public Word setOther(String other) {
+    this.other = other;
+    return this;
+  }
+
+  public Enum[] getModifiers() {
+    return modifiers;
+  }
+
+  public Word setModifiers(Enum[] modifiers) {
+    this.modifiers = modifiers;
+    return this;
   }
 }

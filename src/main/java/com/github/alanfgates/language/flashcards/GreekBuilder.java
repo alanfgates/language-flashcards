@@ -1723,7 +1723,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γραμματέως", "scribe", MASCULINE, GENITIVE),
 
         // 62
-        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER, PLURAL),
+        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER),
         new Word("*δοκ", "to think, seem ", ROOT),
         new Word("δοκέω", "I think, seem - root *δοκ"),
         new Word("ἔδοξα", "I thought, seemed δοκέω - root *δοκ", AORIST),

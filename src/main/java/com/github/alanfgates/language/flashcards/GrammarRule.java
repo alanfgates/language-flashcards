@@ -20,13 +20,23 @@ package com.github.alanfgates.language.flashcards;
 import java.io.Serializable;
 
 public class GrammarRule implements Serializable {
-  private final String rule;
+  private String rule;
 
-  public GrammarRule(String rule) {
+  GrammarRule(String rule) {
     this.rule = rule;
   }
 
-  public void show() {
+  void show() {
     System.out.println(rule);
+  }
+
+  // for YAML
+  public String getRule() {
+    return rule;
+  }
+
+  public GrammarRule setRule(String rule) {
+    this.rule = rule;
+    return this;
   }
 }
