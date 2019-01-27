@@ -81,6 +81,7 @@ class CardDeck implements Serializable {
     }
 
     List<Flashcard> doAgain = new ArrayList<>();
+    int initialSize = cards.size();
     int succeeded = 0;
     int failed = 0;
     for (int i = 0; i < numToTest && !cards.isEmpty(); i++) {
@@ -94,7 +95,9 @@ class CardDeck implements Serializable {
     }
     // Put back the ones that need to be done again
     cards.addAll(0, doAgain);
-    System.out.println("Total right: " + succeeded + ", wrong: " + failed);
+    System.out.println("Total right: " + succeeded + ", wrong: " + failed +
+        ", success rate: " + ((float)succeeded / (float)numToTest) + 
+        ", cards finished: " + (initialSize - cards.size()));
     printStatus();
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");

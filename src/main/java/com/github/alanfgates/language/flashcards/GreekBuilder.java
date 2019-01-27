@@ -479,6 +479,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθέντες", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
         new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, PLURAL),
         new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL),
+        new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL),
         new Word("λυθέντας", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
         new Word("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυθείσης", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -496,7 +497,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, PLURAL),
         new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
         new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
-        new Word("λυθεντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
+        new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
         // No verb occurring 50 or more times in the NT has 2nd passive participle
 
@@ -1608,7 +1609,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("*θεωρε", "to look at, behold ", ROOT),
         new Word("θεωρέω", "I look at, behold - root *θεωρε"),
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
-        new Word("εθεώρησα", "I will looked at, beheld θεωρέω - root *θεωρε", AORIST),
+        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST),
 
         // 56
         new Word("*δεχ", "to take, receive ", ROOT),
@@ -1646,9 +1647,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
         new Word("*σπερ", "to sow ", ROOT),
         new Word("σπείρω", "I sow - root *σπερ"),
-        new Word("ἔσπειρα", "I sow σπείρω - root *σπερ", AORIST),
-        new Word("ἔσπαρμαι", "I sow σπείρω - root *σπερ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐσπάρην", "I sow σπείρω - root *σπερ", PASSIVE, AORIST)
+        new Word("ἔσπειρα", "I sowed σπείρω - root *σπερ", AORIST),
+        new Word("ἔσπαρμαι", "I have been sown σπείρω - root *σπερ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐσπάρην", "I was sown σπείρω - root *σπερ", PASSIVE, AORIST)
 
         // Go back and fill in blanks
 
@@ -1737,7 +1738,7 @@ public class GreekBuilder implements LanguageBuilder {
             " * Association, indicating “with”: Do not be unequally yoked with unbelievers μη\n" +
             "   γινεσθε ετεροζυγουντες απιστοις\n" +
             " * Instrumental (‘by’)\n" +
-            " * The  manner in which something is done: He speaks boldly παρρησιᾳ λαλει\n" +
+            " * The manner in which something is done: He speaks boldly παρρησιᾳ λαλει\n" +
             " * The means or instrument by which an action is accomplished:  For it is by grace\n" +
             "    you have been saved Τῃ γαρ χαριτι εστε σεσωσμενοι"),
 
@@ -1881,7 +1882,7 @@ public class GreekBuilder implements LanguageBuilder {
         new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
             "in meaning.  It does not take a middle or passive meaning.\n" +
             "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in\n" +
-            "the present but non in the aorist.\n" +
+            "the present but not in the aorist.\n" +
             "75% of middle forms in the NT are deponent."),
 
         new GrammarRule("Future stems:\n" +
@@ -1971,9 +1972,9 @@ public class GreekBuilder implements LanguageBuilder {
         new GrammarRule("Base stems:\n" +
             "* Present stem (active, middle, passive)\n" +
             "* Future active stem (also used for middle)\n" +
-            "* Aorist active stem (also used for middle)" +
+            "* Aorist active stem (also used for middle)\n" +
             "* Perfect active stem\n" +
-            "* Aorist passive stem" +
+            "* Aorist passive stem\n" +
             "* Perfect middle/passive stem\n"),
 
         new GrammarRule("Tense stems used for other tenses:\n" +
@@ -2097,7 +2098,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Second future passive paradigm:\n" +
             "     Stem      tense formative   connecting vowel  ending  form\n" +
-            "1sg  ἀποσταλ   ησ                ο                 μαι     ἀποσταλθήσομαι\n" +
+            "1sg  ἀποσταλ   ησ                ο                 μαι     ἀποσταλήσομαι\n" +
             "2sg  ἀποσταλ   ησ                ε                 σαι     ἀποσταλήσῃ\n" +
             "3sg  ἀποσταλ   ησ                ε                 ται     ἀποσταλήσεται\n" +
             "1pl  ἀποσταλ   ησ                ο                 μεθα    ἀποσταλησόμεθα\n" +
@@ -2116,7 +2117,7 @@ public class GreekBuilder implements LanguageBuilder {
             "   and ε placed between.\n" +
             "   * φ goes to π   χ goes to κ    θ goes to τ\n" +
             " * If the word starts with a vowel or dipthong, the vowel is lengthened.\n" +
-            "   * Dipthongs often do not change." +
+            "   * Dipthongs often do not change.\n" +
             " * If the word starts with two consonants, just the ε will usually be prepended,\n" +
             "   no reduplication.  Does not usually apply to words where λ or ρ are the second\n" +
             "   letter.\n" +
