@@ -22,6 +22,10 @@ import java.io.Serializable;
 public class GrammarRule implements Serializable {
   private String rule;
 
+  // For Jackson
+  public GrammarRule() {
+  }
+
   GrammarRule(String rule) {
     this.rule = rule;
   }
@@ -35,8 +39,7 @@ public class GrammarRule implements Serializable {
     return rule;
   }
 
-  public GrammarRule setRule(String rule) {
+  public void setRule(String rule) {
     this.rule = rule;
-    return this;
   }
 }

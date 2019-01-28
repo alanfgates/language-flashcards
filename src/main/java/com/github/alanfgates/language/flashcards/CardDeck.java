@@ -18,16 +18,13 @@
 package com.github.alanfgates.language.flashcards;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,28 +62,11 @@ class CardDeck implements Serializable {
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
-    ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
-    cards = (LinkedList<Flashcard>)in.readObject();
-    rules = (Map<String, List<GrammarRule>>)in.readObject();
-    in.close();
-  }
-
-  // Temporary, to convert to Yaml
-  static void convertToYaml() throws IOException, ClassNotFoundException {
-
-    LanguageBuilder[] languages = new LanguageBuilder[] {new HebrewBuilder(), new GreekBuilder()};
-    for (LanguageBuilder language : languages) {
-      File cardFile = new File(".", language.getLanguageName() + "-cards.yaml");
-      File ruleFile = new File(".", language.getLanguageName() + "-rules.yaml");
-      WordContainer words = new WordContainer(language.buildWords());
-      GrammarRuleContainer rules = new GrammarRuleContainer(language.buildRules());
-      ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-      mapper.writeValue(cardFile, words);
-      mapper.writeValue(ruleFile, rules);
-    }
-
-    // Write out the cards
-
+    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    ObjectReader reader = mapper.readerFor(Container.class);
+    Container c = reader.readValue(new File(filename));
+    cards = c.getCards();
+    rules = c.getRules();
   }
 
   void daily(int numToTest) throws IOException {
@@ -126,10 +106,8 @@ class CardDeck implements Serializable {
   }
 
   void storeDeck(String filename) throws IOException {
-    ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename));
-    out.writeObject(cards);
-    out.writeObject(rules);
-    out.close();
+    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    mapper.writeValue(new File(filename), new Container(cards, rules));
   }
 
   private void printStatus() {
@@ -145,37 +123,32 @@ class CardDeck implements Serializable {
     System.out.println(buf.toString());
   }
 
-  static class WordContainer {
-    List<Word> words;
+  static class Container {
+    LinkedList<Flashcard> cards;
+    Map<String, List<GrammarRule>> rules;
 
-    public WordContainer(List<Word> words) {
-      this.words = words;
+    public Container() {
     }
 
-    public List<Word> getWords() {
-      return words;
-    }
-
-    public void setWords(List<Word> words) {
-      this.words = words;
-    }
-  }
-
-  static class GrammarRuleContainer {
-    List<GrammarRule> rules;
-
-    public GrammarRuleContainer(List<GrammarRule> rules) {
+    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules) {
+      this.cards = cards;
       this.rules = rules;
     }
 
-    public List<GrammarRule> getRules() {
+    public LinkedList<Flashcard> getCards() {
+      return cards;
+    }
+
+    public void setCards(LinkedList<Flashcard> cards) {
+      this.cards = cards;
+    }
+
+    public Map<String, List<GrammarRule>> getRules() {
       return rules;
     }
 
-    public GrammarRuleContainer setRules(List<GrammarRule> rules) {
+    public void setRules(Map<String, List<GrammarRule>> rules) {
       this.rules = rules;
-      return this;
     }
   }
-
 }

@@ -18,12 +18,17 @@
 package com.github.alanfgates.language.flashcards;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Word implements Serializable {
   private String english;
   String other;
   private Enum[] modifiers;
 
+  // For Jackson
+  public Word() {
+  }
 
   Word(String other, String english, Enum... modifiers) {
     this.english = english;
@@ -64,12 +69,41 @@ public class Word implements Serializable {
     return this;
   }
 
-  public Enum[] getModifiers() {
-    return modifiers;
+  // This is nasty and hackish, but if I return a straight Enum[] Jackson balks on the set side because there's no
+  // default constructor for Enum.  I could mash all the modifiers together into one Enum, but I like separating them out.
+  public Map<String, String> getModifiers() {
+    Map<String, String> modStrs = new HashMap<>();
+    for (Enum modifer : modifiers) modStrs.put(modifer.getClass().getSimpleName(), modifer.name());
+    return modStrs;
   }
 
-  public Word setModifiers(Enum[] modifiers) {
-    this.modifiers = modifiers;
-    return this;
+  public void setModifiers(Map<String, String> modStrs) {
+    this.modifiers = new Enum[modStrs.size()];
+    int i = 0;
+    for (Map.Entry<String, String> e : modStrs.entrySet()) {
+      if (e.getKey().equals("Declension")) {
+        modifiers[i++] = Declension.valueOf(e.getValue());
+      } else if (e.getKey().equals("Gender")) {
+        modifiers[i++] = Gender.valueOf(e.getValue());
+      } else if (e.getKey().equals("Mood")) {
+        modifiers[i++] = Mood.valueOf(e.getValue());
+      } else if (e.getKey().equals("Number")) {
+        modifiers[i++] = Number.valueOf(e.getValue());
+      } else if (e.getKey().equals("Other")) {
+        modifiers[i++] = Other.valueOf(e.getValue());
+      } else if (e.getKey().equals("PartOfSpeech")) {
+        modifiers[i++] = PartOfSpeech.valueOf(e.getValue());
+      } else if (e.getKey().equals("Person")) {
+        modifiers[i++] = Person.valueOf(e.getValue());
+      } else if (e.getKey().equals("Tense")) {
+        modifiers[i++] = Tense.valueOf(e.getValue());
+      } else if (e.getKey().equals("VerbRoot")) {
+        modifiers[i++] = VerbRoot.valueOf(e.getValue());
+      } else if (e.getKey().equals("Voice")) {
+        modifiers[i++] = Voice.valueOf(e.getValue());
+      } else {
+        throw new RuntimeException("Unknown modifier type " + e.getKey());
+      }
+    }
   }
 }
