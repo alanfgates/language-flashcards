@@ -18,5 +18,5 @@
 package com.github.alanfgates.language.flashcards;
 
 public enum PartOfSpeech {
-  NOUN, ADJECTIVE, ADVERB, CONSTRUCT, VERB
+  NOUN, ADJECTIVE, ADVERB, CONSTRUCT, VERB, PARTICLE
 }
