@@ -1751,6 +1751,8 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("εὐηγγέλισα", "I brought good news εὐαγγελίζω - root *εὐαγγελιδ", AORIST),
         new Word("εὐηγγέλισμαι", "I have been brought good news εὐαγγελίζω - root *εὐαγγελιδ", MIDDLE, PASSIVE, PERFECT),
         new Word("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω - root *εὐαγγελιδ", PASSIVE, AORIST),
+        new Word("*ὑπ + *αρχ", "To be, to exist", ROOT),
+        new Word("ὑπάρχω", "I am, I exist - root *ὑπ + *αρχ"),
 
         // 59
         new Word("*ἀσπαδ", "to greet, salute ", ROOT),
@@ -1785,6 +1787,9 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("κράξω", "I will cry out, call out κράζω - root *κραγ", FUTURE),
         new Word("ἔκραξα", "I cried out, called out κράζω - root *κραγ", AORIST),
         new Word("κέκραγα", "I have cried out, called out κράζω - root *κραγ", PERFECT),
+        new Word("λοιπός", "remaining (adj), the rest (noun), henceforth (adv)", MASCULINE),
+        new Word("λοιπή", "remaining (adj), the rest (noun), henceforth (adv)", FEMININE),
+        new Word("λοιπόν", "remaining (adj), the rest (noun), henceforth (adv)", NEUTER),
 
         // 54
         new Word("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE),
@@ -2600,11 +2605,33 @@ public class GreekBuilder implements LanguageBuilder {
             " * μή plus aorist subjunctive = stronger form of no than οὐ plus indicative\n" +
             "   μή φοβηθῇς παραλαβεῖν Μαρῖαν τὴν γυναῖκά σου Do not be afraid to take Mary home as your wife\n" +
             " * οὐ μή plus aorist subjunctive = very strong no\n" +
-            "   οἱ λόγοι μου οὐ παρέλθωσιν  My words will by no means [or never, but without time reference] pass away")
+            "   οἱ λόγοι μου οὐ παρέλθωσιν  My words will by no means [or never, but without time reference] pass away"),
+
+        new GrammarRule("Standard verb conjugation (e.g. λυω) is called thematic.  Verbs ending in μι are called athematic.\n" +
+            "(because the connecting vowel is called the thematic vowel and athematic verbs lack a thematic vowel)."),
+
+        new GrammarRule("Athematic verbs rule 1: they reduplicate their initial stem letter to form the present, inserting a ι between.\n" +
+            "(This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)"),
+
+        new GrammarRule("Athematic verbs rule 2: they do not ordinarily use a connecting vowel in the present indicative."),
+
+        new GrammarRule("Athematic verbs rule 3: they use different personal endings in present active indicative, but the same endings everywhere else:\n" +
+            "     Stem    personal   form\n" +
+            "             ending\n" +
+            "1sg  διδω    μι         δίδωμι\n" +
+            "2sg  διδω    ς          δίδως\n" +
+            "3sg  διδω    σι         δίδωσι(ν)\n" +
+            "1pl  διδο    μεν        δίδομεν\n" +
+            "2pl  διδο    τε         δίδοτε\n" +
+            "3pl  διδο    ασι        διδόασι(ν)\n"),
+
+        new GrammarRule("Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)"),
+
+        new GrammarRule("Athematic verbs rule 5: most use κα as the tense formative in the aorist.")
 
 
 
-         // Continue with 34 page 318
+         // Continue with 35 page 325
 
 
     );

@@ -379,6 +379,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
         // 783
         new Word("אַיִן", "nothing, there is not"),
+        new Word("אֵין", "nothing, there is not"),
         // 781
         new Word("אִשָּׁה", "woman, wife", FEMININE),
         new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
@@ -854,19 +855,34 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 148
         new Word("שָׁבַר", "he broke (up), smashed"),
+        new Word("שָׂנֵא", "he hated"),
 
         // 147
         new Word("שְׁמֹנֶה", "eight", MASCULINE),
         new Word("שְׁמֹנִים", "eighty"),
-
         new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE),
+
+        // 146
+        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"),
+
+        // 144
+        new Word("רָדַף", "he pursued, followed after, persecuted"),
+
+        // 143
+        new Word("חָנָה", "he declined, camped, lay seige to"),
 
         // 141
         new Word("אָז", "then, since, before"),
         new Word("יַיִן", "wine", MASCULINE),
+        new Word("יָמִין", "right hand, south", FEMININE),
+
+        // 140
+        new Word("נוּחַ", "he rested, settled down"),
 
         // 139
         new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
+        new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
+
         // 138
         new Word("סוּס", "horse", MASCULINE),
         new Word("סוּסִים", "horses", MASCULINE, PLURAL),
@@ -875,17 +891,26 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
 
+        // 137
+        new Word("נַחַל", "stream, wadi", MASCULINE),
+
+        // 136
+        new Word("פָּתַח", "he opened"),
+
         // 135
         new Word("כִּסֵּא", "chair, throne", MASCULINE),
 
         // 134
         new Word("מִסְפָּר", "number", NOUN, MASCULINE),
         new Word("שֶׁמֶשׁ", "sun", MASCULINE),
+        new Word("זָבַח", "he slaughtered, sacrificed"),
+        new Word("פָּנָח", "he turned"),
 
         // 133
         new Word("אַף", "also, indeed, even"),
         new Word("פֶּן–", "lest, otherwise"),
         new Word("פַּר", "bull, ox, steer", MASCULINE),
+        new Word("שָׁאַר", "he remained, was left over, survived"),
 
         // 127
         new Word("אֶמֶת", "truth, fidelity", FEMININE),
@@ -917,13 +942,21 @@ public class HebrewBuilder implements LanguageBuilder {
         // 107
         new Word("סָפַר", "he counted"),
 
+        // 106
+        new Word("בָּמָח", "(cultic) high place, hill", MASCULINE),
+
         // 104
         new Word("תָּמִיד", "continually"),
         new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"),
         new Word("בַּעַד", "behind, through"),
+        new Word("חֻקָּח", "statute, ordinance", MASCULINE),
+        new Word("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL),
 
         // 102
         new Word("כָּפַר", "he covered, atoned, made atonement"),
+
+        // 101
+        new Word("רָעָב", "famine, hunger", MASCULINE),
 
         // 100
         new Word("יַעַן", "on account of"),
@@ -1424,9 +1457,29 @@ public class HebrewBuilder implements LanguageBuilder {
 
         new GrammarRule("Infinitive construct almost all weak verbs regular except:\n" +
             " * III-ה verbs loose final consonant: עשׂה is עָשׂוֹ\n" +
-            " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם")
+            " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם"),
 
-        // Continue 21.6 p 253
+        new GrammarRule("Common uses of infinitive absolute:\n" +
+            "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same rute to emphasize the verb:\n" +
+            "  x אָמוֹר אָמַרְתִּי I have surely said\n" +
+            "* Imperatival:  can stand alone and function as imperative:\n" +
+            "  x זָכוֹר אֶת–הַיּוֹם הַזֶּה Remember this day!\n" +
+            "* Contemporaneous action: two infinitives absolutes and a im/perfect of the same root as one infinitive expresses contemporary action:\n" +
+            "  x וַיֵּלֶך הָלוֹך וְאָכֹל and they walked, eating as they went\n" +
+            "* Complementary: may complement the main verb and carry the temporal value of that verb (no example given because I don't understand the examples)"),
+
+        new GrammarRule("Participle יֵשׁ:\n" +
+            "* Is not inflected\n" +
+            "* Can express existence: יֵשׁ מֶלֶך there is a king, or a king is\n" +
+            "* Followed by preposition לְ indicates possession: יֶשׁ–לִי תִקְוָה I have hope"),
+
+        new GrammarRule("Participle אֵין (sometimes spelled אַיִן)\n" +
+            "* Is not inflected\n" +
+            "* Can take pronominal suffixes\n" +
+            "* can express non-existence: אֵין לוֹ בֵּן he had no son\n" +
+            "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD")
+
+        // Continue 22 p 259
     );
   }
 }
