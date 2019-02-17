@@ -1234,6 +1234,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἔφαγον", "I ate - ἐσθιω root *φαγ", SECOND_AORIST),
         // 155
         new Word("*στα", "to stand ", ROOT),
+        // TODO - I think I have the breathing mark backwards on the beginning of this
         new Word("ἵστημι", "Transitive: I set, put, place Intransitive: I stand, I appear, I stop - root *στα "),
         new Word("στήσω", "I will stand - ἱστημι root *στα", FUTURE),
         new Word("ἔστησα", "I put, set - ἱστημι root *στα", AORIST),
@@ -2337,9 +2338,9 @@ public class GreekBuilder implements LanguageBuilder {
             "perfect        οτ          οτ        οτ    \n"),
 
         new GrammarRule("Participal exegesis:\n" +
-            "1. Temporal:  the aorist participle can describe an action occurring before the time" +
+            "1. Temporal:  the aorist participle can describe an action occurring before the time\n" +
             "   of the finite verb, while the present participle can describe something happening" +
-            "   at the same time as the action of hte main verb:\n" +
+            "   at the same time as the action of the main verb:\n" +
             "   νηστεύσας ... ὕστερον ἐπείνασεν after fasting, ... he was hungry\n" +
             "   συναλιζόμενας παρήγγειλεν αὐτοις while staying with them he charged them.\n" +
             "2. Manner:  can indicate the manner in which the action of the finite verb occurs:\n" +
@@ -2367,7 +2368,7 @@ public class GreekBuilder implements LanguageBuilder {
             "   Wait! Let's see if Elijah comes _to save_ him\n" +
             "8. Result:  can indciate the result of the finite verb:\n" +
             "   ἵνα τους δυο κτισῆ ἐν αὐτῳ εἰς ἕνα καινον ἄνθρωπον _ποιων_ εἰρηνην\n" +
-            "   In order ot create in himself one new man out of hte two, _thus making peace_"),
+            "   In order ot create in himself one new man out of the two, _thus making peace_"),
 
         new GrammarRule("Participles are often translated as indicatives for several reasons:" +
             "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)\n" +
@@ -2377,9 +2378,9 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Aorist (undefined aspect) participle breakdown:\n" +
             "Aorst tense stem + tense formative + participle morpheme + case ending\n" +
-            "λυ               + σα              + ντ                  + ες" +
-            "λυ               + σα              + μενο                + ι" +
-            "λυ               + θε              + ντ                  + ες"),
+            "λυ               + σα              + ντ                  + ες\n" +
+            "λυ               + σα              + μενο                + ι\n" +
+            "λυ               + θε              + ντ                  + ες\n"),
 
         new GrammarRule("Participle declensions:\n" +
             "* feminine participle always uses 1st declension\n" +
@@ -2400,11 +2401,10 @@ public class GreekBuilder implements LanguageBuilder {
         new GrammarRule("Perfect participles indicate a completed action with effects in the " +
             "present (from the viewpoint of the writer).\n" +
             "Built on the perfect stem of the verb, with reduplication\n" +
-            "Reduplication + perfect tense stem + tense formative + participle morpheme + case ending\n" +
-            "active:\n" +
-            "λε              λυ                   κ                 οτ                    ες" +
-            "middle/passive:\n" +
-            "λε              λυ                                     μενο                  ι"),
+            "                Redup-   + perfect    + tense formative + participle + case\n" +
+            "                lication   tense stem   formative         morpheme     ending\n" +
+            "active:         λε         λυ           κ                 οτ           ες\n" +
+            "middle/passive: λε         λυ                             μενο         ι"),
 
         new GrammarRule("An 'absolute' grammatical construction is one that is not grammatically\n" +
             "related to the rest of the sentance, that is it does not modify any other words in the sentance.\n" +
