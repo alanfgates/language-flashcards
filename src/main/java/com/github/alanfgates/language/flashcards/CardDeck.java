@@ -17,13 +17,14 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,7 +32,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 class CardDeck implements Serializable {
 
@@ -62,10 +62,11 @@ class CardDeck implements Serializable {
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
-    ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename));
-    cards = (LinkedList<Flashcard>)in.readObject();
-    rules = (Map<String, List<GrammarRule>>)in.readObject();
-    in.close();
+    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    ObjectReader reader = mapper.readerFor(Container.class);
+    Container c = reader.readValue(new File(filename));
+    cards = c.getCards();
+    rules = c.getRules();
   }
 
   void daily(int numToTest) throws IOException {
@@ -105,10 +106,8 @@ class CardDeck implements Serializable {
   }
 
   void storeDeck(String filename) throws IOException {
-    ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename));
-    out.writeObject(cards);
-    out.writeObject(rules);
-    out.close();
+    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    mapper.writeValue(new File(filename), new Container(cards, rules));
   }
 
   private void printStatus() {
@@ -124,4 +123,32 @@ class CardDeck implements Serializable {
     System.out.println(buf.toString());
   }
 
+  static class Container {
+    LinkedList<Flashcard> cards;
+    Map<String, List<GrammarRule>> rules;
+
+    public Container() {
+    }
+
+    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules) {
+      this.cards = cards;
+      this.rules = rules;
+    }
+
+    public LinkedList<Flashcard> getCards() {
+      return cards;
+    }
+
+    public void setCards(LinkedList<Flashcard> cards) {
+      this.cards = cards;
+    }
+
+    public Map<String, List<GrammarRule>> getRules() {
+      return rules;
+    }
+
+    public void setRules(Map<String, List<GrammarRule>> rules) {
+      this.rules = rules;
+    }
+  }
 }

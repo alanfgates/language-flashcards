@@ -24,20 +24,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Flashcard implements Serializable {
-  final private List<Word> words;
+  private List<Word> words;
   private int needToGetRight;
 
-  public Flashcard(Word word) {
+  // For Jackson
+  public Flashcard() {
+  }
+
+  Flashcard(Word word) {
     this.words = new ArrayList<>();
     words.add(word);
     needToGetRight = 1;
   }
 
-  public void addWord(Word word) {
+  void addWord(Word word) {
     words.add(word);
   }
 
-  public boolean test(BufferedReader input) throws IOException {
+  boolean test(BufferedReader input) throws IOException {
     words.get(0).showFront();
     input.readLine();
     for (Word word : words) word.flipOver();
@@ -52,7 +56,15 @@ public class Flashcard implements Serializable {
     }
   }
 
-  public boolean needToDoAgain() {
+  boolean needToDoAgain() {
     return needToGetRight > 0;
+  }
+
+  public List<Word> getWords() {
+    return words;
+  }
+
+  public void setWords(List<Word> words) {
+    this.words = words;
   }
 }

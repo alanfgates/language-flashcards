@@ -1542,7 +1542,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἠκολούθησα", "I followed - root *ἀκολουθε", AORIST),
         new Word("ἠκολούθηκα", "I have followed - root *ἀκολουθε", PERFECT),
         new Word("απο + *ὀλ", "to destroy ", ROOT),
-        new Word("ἀπόλλυμι", "I destroy - compound απο + *ολ"),
+        new Word("ἀπόλλυμι", "I destroy, middle I perish, I die - compound απο + *ολ"),
         new Word("ἀπολέσω", "I will destroy - ἀπόλλυμι compound απο + *ολ", FUTURE),
         new Word("ἀπώλεσα", "I destroyed - ἀπόλλυμι compound απο + *ολ", AORIST),
         new Word("ἀπόλωλα", "I have destroyed - ἀπόλλυμι compound απο + *ολ", PERFECT),
@@ -1699,14 +1699,6 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τετήρημαι", "I have been kept, I have been guarded - root *τηρε", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
 
-        // 66
-        new Word("*φερ", "to carry, bear, produce ", ROOT),
-        new Word("φέρω", "I carry, bear, produce - root *φερ"),
-        new Word("οἴσω", "I will carry, bear, produce φέρω - root *οἰ", FUTURE),
-        new Word("ἤνεγκα", "I carried, bore, produced φέρω - root *ἐνεχ", AORIST),
-        new Word("ἐνήνοχα", "I have carried, bore, produced φέρω - root *ἐνεχ", PERFECT),
-        new Word("ἠνέχθην", "I was carried, born, produced φέρω - root *ἐνεχ", PASSIVE, AORIST),
-
         // 69
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
@@ -1717,6 +1709,20 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πρεσβύτερος", "old", ADJECTIVE, MASCULINE),
         new Word("πρεσβύτερα", "old", ADJECTIVE, FEMININE),
         new Word("πρεσβύτερον", "old", ADJECTIVE, NEUTER),
+        new Word("*φερ", "to carry, bear, produce ", ROOT),
+        new Word("φέρω", "I carry, bear, produce - root *φερ"),
+        new Word("οἴσω", "I will carry, bear, produce φέρω - root *οἰ", FUTURE),
+        new Word("ἤνεγκα", "I carried, bore, produced φέρω - root *ἐνεχ", AORIST),
+        new Word("ἐνήνοχα", "I have carried, bore, produced φέρω - root *ἐνεχ", PERFECT),
+        new Word("ἠνέχθην", "I was carried, born, produced φέρω - root *ἐνεχ", PASSIVE, AORIST),
+        new Word("ἀπολύω", "I release - root *ἀπο + *λυ"),
+        new Word("ἀπολύσω", "I will release ἀπολύω - root *ἀπο + *λυ", FUTURE),
+        new Word("ἀπέλυσω", "I released ἀπολύω - root *ἀπο + *λυ", AORIST),
+        new Word("ἀπολέλυμαι", "I have been released ἀπολύω - root *ἀπο + *λυ", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἀπελύθην", "I was released ἀπολύω - root *ἀπο + *λυ", PASSIVE, AORIST),
+
+        // 65
+        new Word("εἴτε", "if, whether", PARTICLE),
 
         // 63
         new Word("ὄρος", "mountain, hill", NEUTER),
@@ -1725,7 +1731,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("γραμματέως", "scribe", MASCULINE, GENITIVE),
 
         // 62
-        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER, PLURAL),
+        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER),
         new Word("*δοκ", "to think, seem ", ROOT),
         new Word("δοκέω", "I think, seem - root *δοκ"),
         new Word("ἔδοξα", "I thought, seemed δοκέω - root *δοκ", AORIST),
@@ -2538,7 +2544,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Infinitive can be used to report indirect discourse."),
 
-        new GrammarRule("Imperative conveys command.\n" +
+        new GrammarRule("Imperative conveys command or request (as in 'give us this day our daily bread').\n" +
             "Present imperative conveys a continuous command or a general precept (always ...)\n" +
             "While aorist applies to a particular situation."),
 
@@ -2580,11 +2586,25 @@ public class GreekBuilder implements LanguageBuilder {
             "2sg  λυ    θ         η                   λύθητι\n" +
             "3sg  λυ    θ         η          τω       λυθήτω\n" +
             "2pl  λυ    θ         η          τε       λύθητε\n" +
-            "3pl  λυ    θ         ω          τωσαν    λυθήτωσαν\n")
+            "3pl  λυ    θ         ω          τωσαν    λυθήτωσαν\n"),
+
+        new GrammarRule("Forms of negation:\n" +
+            " * οὐ with future indicative = simple negation\n" +
+            "   οὐ μοιχεύσεις you shall not commit adultery\n" +
+            " * μή plus present imperative = prohibiting a continuous action\n" +
+            "   μή μεριμνᾶτε τῇ ψυχῇ ὑμῶν do not worry about your life\n" +
+            " * μή plus aorist imperative = prohibiting an undefinted action\n" +
+            "   μή γνώτω ἡ ἀριστερά σου τί ποιεῖ ἡ δεξιά σου Do not let your left hand know what your right hand is doing"),
+
+        new GrammarRule("Forms of negation continued:\n" +
+            " * μή plus aorist subjunctive = stronger form of no than οὐ plus indicative\n" +
+            "   μή φοβηθῇς παραλαβεῖν Μαρῖαν τὴν γυναῖκά σου Do not be afraid to take Mary home as your wife\n" +
+            " * οὐ μή plus aorist subjunctive = very strong no\n" +
+            "   οἱ λόγοι μου οὐ παρέλθωσιν  My words will by no means [or never, but without time reference] pass away")
 
 
 
-         // Continue with 33.15 page 313
+         // Continue with 34 page 318
 
 
     );

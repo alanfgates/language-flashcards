@@ -22,8 +22,7 @@ import java.util.List;
 
 import static com.github.alanfgates.language.flashcards.Declension.NOMINATIVE;
 import static com.github.alanfgates.language.flashcards.Gender.*;
-import static com.github.alanfgates.language.flashcards.Mood.IMPERATIVE;
-import static com.github.alanfgates.language.flashcards.Mood.INFINITIVE;
+import static com.github.alanfgates.language.flashcards.Mood.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
 import static com.github.alanfgates.language.flashcards.Other.SUFFIX;
 import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
@@ -140,10 +139,13 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, THIRD_PERSON, MASCULINE, PLURAL),
         new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, THIRD_PERSON, FEMININE, PLURAL),
 
-        new Word("קְטֹל", "to kill", QAL, INFINITIVE, CONSTRUCT),
-        new Word("נְתֹן", "to give", QAL, INFINITIVE, CONSTRUCT),
-        new Word("תֵּת", "to give נתן", QAL, INFINITIVE, CONSTRUCT),
-        new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE, CONSTRUCT),
+        new Word("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT),
+        new Word("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT),
+        new Word("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT),
+        new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT),
+
+        new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
+
 
         /*
         // QAL Participle
@@ -1418,9 +1420,13 @@ public class HebrewBuilder implements LanguageBuilder {
         new GrammarRule("Infinitive construct with בְּ or כְּ and often a pronominal suffix indicate temporality (while, when).\n" +
             "Often these are paired with וַיְהִי (and he was) or וְהָיָה (and he will be) (remember waw consecutive) to indicate perfect or imperfect.\n" +
             "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " +
-            "When they were in the field")
+            "When they were in the field"),
 
-        // Continue 21 p 251
+        new GrammarRule("Infinitive construct almost all weak verbs regular except:\n" +
+            " * III-ה verbs loose final consonant: עשׂה is עָשׂוֹ\n" +
+            " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם")
+
+        // Continue 21.6 p 253
     );
   }
 }
