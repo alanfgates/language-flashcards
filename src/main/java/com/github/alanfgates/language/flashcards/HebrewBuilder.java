@@ -17,6 +17,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import org.omg.PortableInterceptor.ACTIVE;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,11 +26,11 @@ import static com.github.alanfgates.language.flashcards.Declension.NOMINATIVE;
 import static com.github.alanfgates.language.flashcards.Gender.*;
 import static com.github.alanfgates.language.flashcards.Mood.*;
 import static com.github.alanfgates.language.flashcards.Number.*;
-import static com.github.alanfgates.language.flashcards.Other.SUFFIX;
 import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
 import static com.github.alanfgates.language.flashcards.Person.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.VerbRoot.*;
+import static com.github.alanfgates.language.flashcards.Voice.*;
 
 public class HebrewBuilder implements LanguageBuilder {
 
@@ -146,14 +148,11 @@ public class HebrewBuilder implements LanguageBuilder {
 
         new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
 
-
-        /*
-        // QAL Participle
-        new Word("שׁוֹמֵר", "guarding", QAL, PARTICIPLE, MASCULINE, SINGULAR),
-        new Word("שׁוֹמֶרֶת", "guarding", QAL, PARTICIPLE, FEMININE, SINGULAR),
-        new Word("שׁוֹמְרִים", "guarding", QAL, PARTICIPLE, MASCULINE, PLURAL),
-        new Word("שׁוֹמְרִוֹת", "guarding", QAL, PARTICIPLE, FEMININE, PLURAL),
-        */
+        new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
+        new Word("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
+        new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
+        new Word("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
+        new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
 
         //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
@@ -180,30 +179,30 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("סוּסֵיהֶן", "their horses", FEMININE),
 
         // QAL perfect with pronominal suffixes
-        new Word("קְטָלַנִי", "he killed me", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, FIRST_PERSON, SINGULAR),
-        new Word("קְטָלְךָ", "he killed you", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטָלֵך", "he killed you", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("קְטָלוֹ", "he killed him", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטָלָהוֹ", "he killed him", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטָלָהּ", "he killed her", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("קְטָלָנוּ", "he killed us", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, FIRST_PERSON, PLURAL),
-        new Word("קְטָלְכֶם", "he killed you", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("קְטָלְכֶן", "he killed you", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, SECOND_PERSON, FEMININE, PLURAL),
-        new Word("קְטָלָם", "he killed them", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, PLURAL),
-        new Word("קְטָלָן", "he killed them", VERB, QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("קְטָלַנִי", "he killed me", PRONOMINAL_SUFFIX, FIRST_PERSON, SINGULAR),
+        new Word("קְטָלְךָ", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלֵך", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קְטָלוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלָהוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלָהּ", "he killed her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קְטָלָנוּ", "he killed us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
+        new Word("קְטָלְכֶם", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קְטָלְכֶן", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קְטָלָם", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("קְטָלָן", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, PLURAL),
 
-        new Word("קְטַלְתִּיו", "I killed him", VERB, QAL, PERFECT, FIRST_PERSON, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטַלְתָּהוּ", "you killed him", VERB, QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטָלַתְהוּ", "she killed him", VERB, QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטַלְנוּהוּ", "we killed him", VERB, QAL, PERFECT, FIRST_PERSON, PLURAL, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("קְטַלְוּהוּ", "they killed him", VERB, QAL, PERFECT, THIRD_PERSON, PLURAL, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטַלְתִּיו", "I killed him", QAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קְטַלְתָּהוּ", "you killed him", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלַתְהוּ", "she killed him", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קְטַלְנוּהוּ", "we killed him", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // QAL imperfect with pronominal suffixes
-        new Word("יִקְטְלֵהוּ", "he will kill him", VERB, QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("יִקְטְלֵנּוּ", "he will kill him", VERB, QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("יִקְטְלָהּ", "he will kill her", VERB, QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("יִקְטְלֶנָּה", "he will kill her", VERB, QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR, SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("יִקְטְלוּנוּ", "they will kill us", VERB, QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL, SUFFIX, FIRST_PERSON, PLURAL),
+        new Word("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטְלֶנָּה", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטְלוּנוּ", "they will kill us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
 
 
         //----------------------------------------------------------------------------------------
@@ -1477,9 +1476,22 @@ public class HebrewBuilder implements LanguageBuilder {
             "* Is not inflected\n" +
             "* Can take pronominal suffixes\n" +
             "* can express non-existence: אֵין לוֹ בֵּן he had no son\n" +
-            "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD")
+            "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD"),
 
-        // Continue 22 p 259
+        new GrammarRule("Participles can be attributive, meaning they can directly modify a noun:\n" +
+            "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
+            "the people dwelling [or who dwell] in the land"),
+
+        new GrammarRule("Participles can be predicative, meaning they assert or pedicate something about the noun:\n" +
+            "וְהָהָר בֹּעֵר בָּאֵשׁ " +
+            "And the mountain was burning with fire"),
+
+        new GrammarRule("Participles can be substantive, meaning they act as a noun.  In this situation they can take a direct\n" +
+            "object, be part of a construct chain, or take a pronominal suffix.\n" +
+            "הַיּוֹשֶׁבֶת בַּגַּנִּים " +
+            "the one who dwells in the gardens")
+
+        // Continue 22.6 p 264
     );
   }
 }

@@ -18,10 +18,27 @@
 package com.github.alanfgates.language.flashcards;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Word implements Serializable {
+  private static final Map<Class<? extends Enum>, Integer> modifierOrder = new HashMap<>();
+
+  static {
+    modifierOrder.put(PartOfSpeech.class, 1);
+    modifierOrder.put(VerbRoot.class, 2);
+    modifierOrder.put(Mood.class, 3);
+    modifierOrder.put(Voice.class, 4);
+    modifierOrder.put(Tense.class, 5);
+    modifierOrder.put(Person.class, 6);
+    modifierOrder.put(Gender.class, 7);
+    modifierOrder.put(Declension.class, 8);
+    modifierOrder.put(Number.class, 9);
+    modifierOrder.put(Other.class, 10);
+  }
+
   private String english;
   String other;
   private Enum[] modifiers;
@@ -42,10 +59,12 @@ public class Word implements Serializable {
 
   final void flipOver() {
     StringBuilder buf = new StringBuilder(english)
-        .append(" ");
+        .append(" - ");
+    boolean first = true;
     for (Enum modifier : modifiers) {
-      buf.append(modifier.name().toLowerCase())
-          .append(' ');
+      if (first) first = false;
+      else buf .append(", ");
+      buf.append(modifier.name().toLowerCase().replace('_', ' '));
     }
     System.out.println(buf.toString());
   }
@@ -105,5 +124,12 @@ public class Word implements Serializable {
         throw new RuntimeException("Unknown modifier type " + e.getKey());
       }
     }
+
+    Arrays.sort(modifiers, new Comparator<Enum>() {
+      @Override
+      public int compare(Enum o1, Enum o2) {
+        return Integer.compare(modifierOrder.get(o1.getClass()), modifierOrder.get(o2.getClass()));
+      }
+    });
   }
 }
