@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Flashcard implements Serializable {
+  // Flashcards can have more than one word due to homonyms or because one conjugation may represent multiple tenses, moods, etc.
   private List<Word> words;
   private int needToGetRight;
 
@@ -66,5 +67,14 @@ public class Flashcard implements Serializable {
 
   public void setWords(List<Word> words) {
     this.words = words;
+  }
+
+  public int getNeedToGetRight() {
+    return needToGetRight;
+  }
+
+  public Flashcard setNeedToGetRight(int needToGetRight) {
+    this.needToGetRight = needToGetRight;
+    return this;
   }
 }
