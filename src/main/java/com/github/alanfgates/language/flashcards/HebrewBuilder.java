@@ -17,8 +17,6 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import org.omg.PortableInterceptor.ACTIVE;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -123,36 +121,76 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // QAL Imperative
-        new Word("קְטֹל", "kill!", QAL, IMPERATIVE, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("קָטְלָה", "kill!", QAL, IMPERATIVE, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קָטְלָה", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
+
+        // QAL Imperative geminate
+        new Word("סֹב", "go around!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+
+        // QAL Imperative I-י
+        new Word("שֵׁב", "dwell!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+
+        // QAL various odd important ones
+        new Word("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַה", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הֱיֵה", "be!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+
+        // TODO add some of the weak verb forms that loose letters
 
         // QAL Cohortative
-        new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, FIRST_PERSON, SINGULAR),
-        new Word("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, FIRST_PERSON, SINGULAR),
-        new Word("נִקְטֹל", "let us kill", QAL, COHORTATIVE, FIRST_PERSON, PLURAL),
-        new Word("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, FIRST_PERSON, PLURAL),
+        new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR),
+        new Word("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, SINGULAR),
+        new Word("נִקְטֹל", "let us kill", QAL, COHORTATIVE, PLURAL),
+        new Word("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, PLURAL),
 
         // QAL Jussive
-        new Word("יִקְטֹל", "let him kill", QAL, JUSSIVE, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּקְטֹל", "let her kill", QAL, JUSSIVE, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, THIRD_PERSON, MASCULINE, PLURAL),
-        new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יִקְטֹל", "let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR),
+        new Word("תִּקְטֹל", "let her kill", QAL, JUSSIVE, FEMININE, SINGULAR),
+        new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, MASCULINE, PLURAL),
+        new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, FEMININE, PLURAL),
 
+        // QAL Infinitive Construct
         new Word("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT),
         new Word("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT),
         new Word("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT),
         new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT),
 
+        // QAL Infinitive construct weak forms
+        new Word("עֲשׂוֹת", "to do, to make", QAL, INFINITIVE_CONSTRUCT),
+        new Word("לֶכֶת", "to walk, go", QAL, INFINITIVE_CONSTRUCT),
+        new Word("מוּת", "to die", QAL, INFINITIVE_CONSTRUCT),
+
+        // QAL Infinitive Absolute
         new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
 
+        // QAL Infinitive Absolute weak forms
+        new Word("עָשׂה", "to do, to make", QAL, INFINITIVE_ABSOLUTE),
+        new Word("עָשׂוֹ", "to do, to make", QAL, INFINITIVE_ABSOLUTE),
+        new Word("מוֹת", "to die", QAL, INFINITIVE_ABSOLUTE),
+
+        // QAL Active Participle
         new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
         new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
         new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
+
+        // QAL Active Participle weak forms
+        new Word("בֹּנִים", "building", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
+        new Word("קָם", "arising", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
+        new Word("בָּנוּי", "being built", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
+
+        // TODO weak participle forms
+
+        // QAL Passive Participle
+        new Word("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
+        new Word("קְטוּלָה", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, SINGULAR),
+        new Word("קְטוּלִים", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, PLURAL),
+        new Word("קְטוּלוֹת", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, PLURAL),
 
         //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
@@ -910,15 +948,34 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("פֶּן–", "lest, otherwise"),
         new Word("פַּר", "bull, ox, steer", MASCULINE),
         new Word("שָׁאַר", "he remained, was left over, survived"),
+        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited"),
+        new Word("חוֹמָה", "wall", FEMININE),
+
+        // 131
+        new Word("חֹק", "statute, appointed time, portion", MASCULINE),
 
         // 127
         new Word("אֶמֶת", "truth, fidelity", FEMININE),
+        new Word("קָבַץ", "he collected, gathered, assembled"),
+
+        // 125
+        new Word("בּוֹשׁ", "he was ashamed"),
+        new Word("נָגַשׁ", "he drew near, approached"),
+
+        // 124
+        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
+
+        // 121
+        new Word("לָכַד", "he took, captured, caught, seized"),
 
         // 118
         new Word("בָּטַח", "to trust, be confident, rely upon"),
 
         // 117
         new Word("שָׂרַף", "he completely burned, destroyed"),
+        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"),
+        new Word("יָטַב", "he was well, it went well with, it was pleasing"),
+        new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
 
         // 116
         new Word("שָׁלֵם", "to be complete, finished"),
@@ -940,6 +997,7 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // 107
         new Word("סָפַר", "he counted"),
+        new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE),
 
         // 106
         new Word("בָּמָח", "(cultic) high place, hill", MASCULINE),
@@ -982,6 +1040,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 64
         new Word("תָּמַם", "he be(came) complete, came to an end, ceased, was consumed, was spent, " +
             "was burned out"),
+        new Word("אָרַר", "he cursed"),
 
         // 63
         new Word("אָחַז", "he seized, grasped, took"),
@@ -1454,12 +1513,12 @@ public class HebrewBuilder implements LanguageBuilder {
             "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " +
             "When they were in the field"),
 
-        new GrammarRule("Infinitive construct almost all weak verbs regular except:\n" +
-            " * III-ה verbs loose final consonant: עשׂה is עָשׂוֹ\n" +
+        new GrammarRule("Infinitive absolute almost all weak verbs regular except:\n" +
+            " * III-ה may end in ה or וֹ, sound the same חָיָה becomes חָיֹה or חַיוֹ \n" +
             " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם"),
 
         new GrammarRule("Common uses of infinitive absolute:\n" +
-            "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same rute to emphasize the verb:\n" +
+            "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same root to emphasize the verb:\n" +
             "  x אָמוֹר אָמַרְתִּי I have surely said\n" +
             "* Imperatival:  can stand alone and function as imperative:\n" +
             "  x זָכוֹר אֶת–הַיּוֹם הַזֶּה Remember this day!\n" +
@@ -1482,16 +1541,46 @@ public class HebrewBuilder implements LanguageBuilder {
             "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
             "the people dwelling [or who dwell] in the land"),
 
-        new GrammarRule("Participles can be predicative, meaning they assert or pedicate something about the noun:\n" +
+        new GrammarRule("Participles can be predicative, meaning they assert or predicate something about the noun:\n" +
             "וְהָהָר בֹּעֵר בָּאֵשׁ " +
             "And the mountain was burning with fire"),
 
         new GrammarRule("Participles can be substantive, meaning they act as a noun.  In this situation they can take a direct\n" +
             "object, be part of a construct chain, or take a pronominal suffix.\n" +
             "הַיּוֹשֶׁבֶת בַּגַּנִּים " +
-            "the one who dwells in the gardens")
+            "the one who dwells in the gardens"),
 
-        // Continue 22.6 p 264
+        new GrammarRule("Active participles I-Guttural, I-נ and I-י verbs follow strong verb paradigm.\n" +
+            "II-Guttural, III-ח/ע and III-א follow with shifts in the stem vowel to deal with the guttural\n" +
+            "III-ה the last consontant drops (though in singular a mater lectionis ה) is in the third position\n" +
+            "Biconsonantal roots only the two consontants are in the participle form."),
+
+        new GrammarRule("III-ה verbs have י in the III position for passive particples (since the root consontant is \n" +
+            "really י there to begin with.  For example, being built: בָּנוּי"),
+
+        new GrammarRule("Standard Hebrew word order is verb-subject-object\n" +
+            "In the object section, direct and indirect object can come in any order\n" +
+            "Indirect object usually marked with לְ or -אֶל"),
+
+        new GrammarRule("Verb tense and sentance order:\n" +
+            "* When a perfect verb is describing a completely action it is usually proceeded\n" +
+            "    by a time clause or other explanatory clause.\n" +
+            "* A consecutive perfect is normally be first in its clause.\n" +
+            "* A regular imperfect is not normally the first word in the clause.\n" +
+            "* A consecutive imperfect is always the first word in its clause\n" +
+            "* A jussive or cohortative (aka volitional imperfect) is normally the first word in its clause."),
+
+        new GrammarRule("Sequences with volational conjugations:\n" +
+            "* Imperatives can occur in succession, possibly linked by ו.  This linkage can consequential or sequential:\n" +
+            "  e.g.  עֲלֵח וּקְבֹר אֶת–אָבִיךָ Go up and bury your father.\n" +
+            "* An imperative may be followed by a consecutive perfect.  The perfect may carry the full force of the imperative:\n" +
+            "  e.g. לֵך וְאָמַרְתָּ אֶל–עַבְדִּי Go and say to my servant...\n" +
+            "* An imperative may be followed by an imperfect or cohortative, creating a purpose or result clause:\n" +
+            "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king.")
+
+
+        // Continue 23.8 p 280
+        // put in books of the Bible first
     );
   }
 }

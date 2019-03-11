@@ -26,8 +26,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,8 +37,13 @@ import java.util.Map;
 
 class CardDeck implements Serializable {
 
+  private static int MAX_CARDS_TO_TEST = 50;
+  private static int MIN_CARDS_TO_TEST = 10;
+  private static int PCT_RETIRED_TO_TRACK = 20;
+
   private LinkedList<Flashcard> cards;
   private Map<String, List<GrammarRule>> rules;
+  private Deque<Double> percentRetired;
 
   CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
@@ -58,6 +65,7 @@ class CardDeck implements Serializable {
     }
     cards = new LinkedList<>(m.values());
     Collections.shuffle(cards);
+    percentRetired = new ArrayDeque<>();
     printStatus();
   }
 
@@ -67,9 +75,18 @@ class CardDeck implements Serializable {
     Container c = reader.readValue(new File(filename));
     cards = c.getCards();
     rules = c.getRules();
+    percentRetired = c.getCardsRetired();
   }
 
   void daily(int numToTest) throws IOException {
+
+    if (numToTest != 0) {
+      System.out.println("Warning: numToTest command line argument now ignored,\n" +
+          "calculating based on number of rules to go and historic average of number\n" +
+          "of cards finished on each run.");
+    }
+
+    numToTest = calculateNumToTest();
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
@@ -96,9 +113,12 @@ class CardDeck implements Serializable {
     }
     // Put back the ones that need to be done again
     cards.addAll(0, doAgain);
+
+    // Track how many we finished
+    int numRetired = trackRetired(initialSize, numToTest);
     System.out.println("Total right: " + succeeded + ", wrong: " + failed +
         ", success rate: " + ((float)succeeded / (float)numToTest) + 
-        ", cards finished: " + (initialSize - cards.size()));
+        ", cards finished: " + numRetired);
     printStatus();
     if (cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
@@ -107,7 +127,7 @@ class CardDeck implements Serializable {
 
   void storeDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-    mapper.writeValue(new File(filename), new Container(cards, rules));
+    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
   }
 
   private void printStatus() {
@@ -123,16 +143,58 @@ class CardDeck implements Serializable {
     System.out.println(buf.toString());
   }
 
+  private int calculateNumToTest() {
+    // Base the number of things to test on the number of rules in the largest grammar's rule set.  This way we have at least one
+    // rule each time we test.
+    int maxRules = Integer.MIN_VALUE;
+    for (Map.Entry<String, List<GrammarRule>> ruleSet : rules.entrySet()) {
+      if (ruleSet.getValue().size() > maxRules) {
+        maxRules = ruleSet.getValue().size();
+      }
+    }
+    double predicted;
+    if (percentRetired.size() < 3) {
+      System.out.println("Too few historical instances to use, basing on assumed retirement rate of 70%");
+      predicted = 0.7;
+    } else {
+      double sum = 0;
+      for (double d : percentRetired) sum += d;
+      predicted = sum / (double)percentRetired.size();
+    }
+    int numToTest = (int)((double)cards.size() / (double)maxRules / predicted);
+
+    if (numToTest > MAX_CARDS_TO_TEST) {
+      System.out.println("Should test " + numToTest + " cards, but reducing it to " + MAX_CARDS_TO_TEST);
+    } else if (numToTest < MIN_CARDS_TO_TEST) {
+      System.out.println("Should test " + numToTest + " cards, but increasing it to " + MIN_CARDS_TO_TEST);
+    }
+
+
+    System.out.println("Will test with " + numToTest + " cards");
+    return numToTest;
+  }
+
+  // This has to be called after the missed cards are put back
+  private int trackRetired(int initialSize, int numTested) {
+    int numRetired = initialSize - cards.size();
+    double pct = (double)numRetired / (double)numTested;
+    percentRetired.addLast(pct);
+    if (percentRetired.size() > PCT_RETIRED_TO_TRACK) percentRetired.removeFirst();
+    return numRetired;
+  }
+
   static class Container {
     LinkedList<Flashcard> cards;
     Map<String, List<GrammarRule>> rules;
+    Deque<Double> percentRetired;
 
     public Container() {
     }
 
-    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules) {
+    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired) {
       this.cards = cards;
       this.rules = rules;
+      this.percentRetired = percentRetired;
     }
 
     public LinkedList<Flashcard> getCards() {
@@ -149,6 +211,15 @@ class CardDeck implements Serializable {
 
     public void setRules(Map<String, List<GrammarRule>> rules) {
       this.rules = rules;
+    }
+
+    public Deque<Double> getCardsRetired() {
+      return percentRetired;
+    }
+
+    public Container setCardsRetired(Deque<Double> cardsRetired) {
+      this.percentRetired = cardsRetired;
+      return this;
     }
   }
 }
