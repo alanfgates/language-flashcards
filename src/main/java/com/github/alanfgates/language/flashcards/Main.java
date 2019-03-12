@@ -27,16 +27,15 @@ import java.io.IOException;
 
 public class Main {
   private static final String FILENAME = "./cards.yaml";
-  private static final String TEST_NUMBER = "40";
+  private static final String TEST_NUMBER = "0";
 
   public static void main(String[] args) {
     Options options = new Options();
 
     options.addOption("f", "filename", true, "File to store deck in, defaults to " + FILENAME);
     options.addOption("h", "help", false, "You're looking at it.");
-    options.addOption("n", "number-to-test", true, "Number of cards to test, defaults to " + TEST_NUMBER);
-    options.addOption("s", "shuffle", false,
-        "Shuffle the cards.  This puts all of the cards back in the deck");
+    options.addOption("n", "number-to-test", true, "No longer used, number to test now calculated automatically.");
+    options.addOption("s", "shuffle", false, "Shuffle the cards.  This puts all of the cards back in the deck");
     options.addOption("t", "test", false, "Do daily test");
 
     try {
