@@ -224,13 +224,13 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λύσωσιν", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
 
         // Subjunctive active second aorist
-        new Word("λάβω", "I might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
-        new Word("λάβῃς", "you might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λάβῃ", "s/he might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λάβωμεν", "we might throw",  SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
-        new Word("λάβητε", "you might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
-        new Word("λάβωσι", "they might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
-        new Word("λάβωσιν", "they might throw", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+        new Word("λάβω", "I might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λάβῃς", "you might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λάβῃ", "s/he might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λάβωμεν", "we might receive",  SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("λάβητε", "you might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("λάβωσι", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+        new Word("λάβωσιν", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Subjunctive middle present
         new Word("λύωμαι", "I might be loosening myself", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -1270,7 +1270,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἐκλήθην", "I was called - καλεω root *καλεϝ", PASSIVE, AORIST),
         // 147
         new Word("σαρξ", "flesh", FEMININE),
-        new Word("σαρκος", "flesh", FEMININE, GENITIVE),
+        new Word("σαρκος", "flesh", FEMININE, GENITIVE), // TODO fix to have accents
         new Word("ἀγαπαω", "I love"),
         new Word("ἀγαπήσω", "I will love ἀγαπαω", FUTURE),
         new Word("ἠγάπησα", "I loved ἀγαπαω", AORIST),
@@ -1766,7 +1766,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("*θεωρε", "to look at, behold ", ROOT),
         new Word("θεωρέω", "I look at, behold - root *θεωρε"),
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
-        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST),
+        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST), // TODO fix initial accent
 
         // 57
         new Word("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE),
