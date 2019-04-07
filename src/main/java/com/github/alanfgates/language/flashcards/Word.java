@@ -1,8 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
+ * The author licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -18,9 +15,11 @@
 package com.github.alanfgates.language.flashcards;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Word implements Serializable {
@@ -40,17 +39,23 @@ public class Word implements Serializable {
   }
 
   private String english;
-  String other;
+  private String other;
   private Enum[] modifiers;
+  private int chapter;
 
   // For Jackson
   public Word() {
   }
 
   Word(String other, String english, Enum... modifiers) {
+    this(other, english, Integer.MAX_VALUE, modifiers);
+  }
+
+  public Word(String other, String english, int chapter, Enum... modifiers) {
     this.english = english;
     this.other = other;
     this.modifiers = modifiers;
+    this.chapter = chapter;
   }
 
   void showFront() {
@@ -90,46 +95,57 @@ public class Word implements Serializable {
 
   // This is nasty and hackish, but if I return a straight Enum[] Jackson balks on the set side because there's no
   // default constructor for Enum.  I could mash all the modifiers together into one Enum, but I like separating them out.
-  public Map<String, String> getModifiers() {
-    Map<String, String> modStrs = new HashMap<>();
-    for (Enum modifer : modifiers) modStrs.put(modifer.getClass().getSimpleName(), modifer.name());
+  public Map<String, List<String>> getModifiers() {
+    Map<String, List<String>> modStrs = new HashMap<>();
+    for (Enum modifer : modifiers) {
+      List<String> mods = modStrs.computeIfAbsent(modifer.getClass().getSimpleName(), m -> new ArrayList<>());
+      mods.add(modifer.name());
+    }
     return modStrs;
   }
 
-  public void setModifiers(Map<String, String> modStrs) {
-    this.modifiers = new Enum[modStrs.size()];
+  public void setModifiers(Map<String, List<String>> modStrs) {
+    int size = 0;
+    for (List<String> list : modStrs.values()) size += list.size();
+    this.modifiers = new Enum[size];
     int i = 0;
-    for (Map.Entry<String, String> e : modStrs.entrySet()) {
-      if (e.getKey().equals("Declension")) {
-        modifiers[i++] = Declension.valueOf(e.getValue());
-      } else if (e.getKey().equals("Gender")) {
-        modifiers[i++] = Gender.valueOf(e.getValue());
-      } else if (e.getKey().equals("Mood")) {
-        modifiers[i++] = Mood.valueOf(e.getValue());
-      } else if (e.getKey().equals("Number")) {
-        modifiers[i++] = Number.valueOf(e.getValue());
-      } else if (e.getKey().equals("Other")) {
-        modifiers[i++] = Other.valueOf(e.getValue());
-      } else if (e.getKey().equals("PartOfSpeech")) {
-        modifiers[i++] = PartOfSpeech.valueOf(e.getValue());
-      } else if (e.getKey().equals("Person")) {
-        modifiers[i++] = Person.valueOf(e.getValue());
-      } else if (e.getKey().equals("Tense")) {
-        modifiers[i++] = Tense.valueOf(e.getValue());
-      } else if (e.getKey().equals("VerbRoot")) {
-        modifiers[i++] = VerbRoot.valueOf(e.getValue());
-      } else if (e.getKey().equals("Voice")) {
-        modifiers[i++] = Voice.valueOf(e.getValue());
-      } else {
-        throw new RuntimeException("Unknown modifier type " + e.getKey());
+    for (Map.Entry<String, List<String>> e : modStrs.entrySet()) {
+      for (String s : e.getValue()) {
+        if (e.getKey().equals("Declension")) {
+          modifiers[i++] = Declension.valueOf(s);
+        } else if (e.getKey().equals("Gender")) {
+          modifiers[i++] = Gender.valueOf(s);
+        } else if (e.getKey().equals("Mood")) {
+          modifiers[i++] = Mood.valueOf(s);
+        } else if (e.getKey().equals("Number")) {
+          modifiers[i++] = Number.valueOf(s);
+        } else if (e.getKey().equals("Other")) {
+          modifiers[i++] = Other.valueOf(s);
+        } else if (e.getKey().equals("PartOfSpeech")) {
+          modifiers[i++] = PartOfSpeech.valueOf(s);
+        } else if (e.getKey().equals("Person")) {
+          modifiers[i++] = Person.valueOf(s);
+        } else if (e.getKey().equals("Tense")) {
+          modifiers[i++] = Tense.valueOf(s);
+        } else if (e.getKey().equals("VerbRoot")) {
+          modifiers[i++] = VerbRoot.valueOf(s);
+        } else if (e.getKey().equals("Voice")) {
+          modifiers[i++] = Voice.valueOf(s);
+        } else {
+          throw new RuntimeException("Unknown modifier type " + e.getKey());
+        }
       }
     }
 
-    Arrays.sort(modifiers, new Comparator<Enum>() {
-      @Override
-      public int compare(Enum o1, Enum o2) {
-        return Integer.compare(modifierOrder.get(o1.getClass()), modifierOrder.get(o2.getClass()));
-      }
-    });
+    Arrays.sort(modifiers, Comparator.comparingInt(o -> modifierOrder.get(o.getClass())));
+  }
+
+  public int getChapter() {
+    return chapter;
+  }
+
+  public Word setChapter(int chapter) {
+    this.chapter = chapter;
+    return this;
   }
 }

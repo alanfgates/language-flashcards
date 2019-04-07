@@ -1,8 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
+ * The author licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -17,8 +14,7 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 import static com.github.alanfgates.language.flashcards.Declension.NOMINATIVE;
 import static com.github.alanfgates.language.flashcards.Gender.*;
@@ -30,7 +26,7 @@ import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.VerbRoot.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
 
-public class HebrewBuilder implements LanguageBuilder {
+public class HebrewBuilder extends BaseLanguageBuilder {
 
   @Override
   public String getLanguageName() {
@@ -38,8 +34,8 @@ public class HebrewBuilder implements LanguageBuilder {
   }
 
   @Override
-  public List<Word> buildWords() {
-    return Arrays.asList(
+  public Stream<Word> buildAllWords() {
+    return Stream.of(
         // VERBS
         // Qal perfect
         new Word("קָטַלְתִּי", "I killed", QAL, PERFECT, FIRST_PERSON, SINGULAR),
@@ -120,20 +116,20 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("תִּתְּנוּ", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        // QAL Imperative
+        // Qal Imperative
         new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קָטְלָה", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
 
-        // QAL Imperative geminate
+        // Qal Imperative geminate
         new Word("סֹב", "go around!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
 
-        // QAL Imperative I-י
+        // Qal Imperative I-י
         new Word("שֵׁב", "dwell!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
 
-        // QAL various odd important ones
+        // Qal various odd important ones
         new Word("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קַה", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
@@ -141,56 +137,79 @@ public class HebrewBuilder implements LanguageBuilder {
 
         // TODO add some of the weak verb forms that loose letters
 
-        // QAL Cohortative
+        // Qal Cohortative
         new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR),
         new Word("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, SINGULAR),
         new Word("נִקְטֹל", "let us kill", QAL, COHORTATIVE, PLURAL),
         new Word("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, PLURAL),
 
-        // QAL Jussive
+        // Qal Jussive
         new Word("יִקְטֹל", "let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR),
         new Word("תִּקְטֹל", "let her kill", QAL, JUSSIVE, FEMININE, SINGULAR),
         new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, MASCULINE, PLURAL),
         new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, FEMININE, PLURAL),
 
-        // QAL Infinitive Construct
+        // Qal Infinitive Construct
         new Word("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT),
         new Word("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT),
         new Word("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT),
         new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT),
 
-        // QAL Infinitive construct weak forms
+        // Qal Infinitive construct weak forms
         new Word("עֲשׂוֹת", "to do, to make", QAL, INFINITIVE_CONSTRUCT),
         new Word("לֶכֶת", "to walk, go", QAL, INFINITIVE_CONSTRUCT),
         new Word("מוּת", "to die", QAL, INFINITIVE_CONSTRUCT),
 
-        // QAL Infinitive Absolute
+        // Qal Infinitive Absolute
         new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
 
-        // QAL Infinitive Absolute weak forms
+        // Qal Infinitive Absolute weak forms
         new Word("עָשׂה", "to do, to make", QAL, INFINITIVE_ABSOLUTE),
         new Word("עָשׂוֹ", "to do, to make", QAL, INFINITIVE_ABSOLUTE),
         new Word("מוֹת", "to die", QAL, INFINITIVE_ABSOLUTE),
 
-        // QAL Active Participle
+        // Qal Active Participle
         new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
         new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
         new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
 
-        // QAL Active Participle weak forms
+        // Qal Active Participle weak forms
         new Word("בֹּנִים", "building", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
         new Word("קָם", "arising", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("בָּנוּי", "being built", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
 
         // TODO weak participle forms
 
-        // QAL Passive Participle
+        // Qal Passive Participle
         new Word("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
         new Word("קְטוּלָה", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, SINGULAR),
         new Word("קְטוּלִים", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, PLURAL),
         new Word("קְטוּלוֹת", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, PLURAL),
+
+        // Niphal Perfect
+        new Word("נִקְטַלְתִּי", "I was killed", NIPHAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("נִקְטַלְתָּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("נִקְטַלְתְּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטַל", "he was killed", NIPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("נִקְטְלָה", "she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטְלוּ", "they were killed", NIPHAL, PERFECT, THIRD_PERSON, SINGULAR),
+
+        // Niphal Imperfect
+        new Word("אֶקָּטֵל", "I will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּקָּטֵל", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטְלִי", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִקָּטֵל", "he will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטַלְנָה", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטַלְנָה", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
 
         //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
@@ -216,7 +235,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("סוּסֵיהֶם", "their horses", MASCULINE),
         new Word("סוּסֵיהֶן", "their horses", FEMININE),
 
-        // QAL perfect with pronominal suffixes
+        // Qal perfect with pronominal suffixes
         new Word("קְטָלַנִי", "he killed me", PRONOMINAL_SUFFIX, FIRST_PERSON, SINGULAR),
         new Word("קְטָלְךָ", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
         new Word("קְטָלֵך", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
@@ -235,7 +254,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("קְטַלְנוּהוּ", "we killed him", QAL, PERFECT, FIRST_PERSON, PLURAL),
         new Word("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
-        // QAL imperfect with pronominal suffixes
+        // Qal imperfect with pronominal suffixes
         new Word("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
@@ -919,6 +938,7 @@ public class HebrewBuilder implements LanguageBuilder {
         // 139
         new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
         new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
+        new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE),
 
         // 138
         new Word("סוּס", "horse", MASCULINE),
@@ -942,6 +962,7 @@ public class HebrewBuilder implements LanguageBuilder {
         new Word("שֶׁמֶשׁ", "sun", MASCULINE),
         new Word("זָבַח", "he slaughtered, sacrificed"),
         new Word("פָּנָח", "he turned"),
+        new Word("עֶרֶב", "evening, sunset", MASCULINE),
 
         // 133
         new Word("אַף", "also, indeed, even"),
@@ -954,28 +975,49 @@ public class HebrewBuilder implements LanguageBuilder {
         // 131
         new Word("חֹק", "statute, appointed time, portion", MASCULINE),
 
+        // 130
+        new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
         // 127
         new Word("אֶמֶת", "truth, fidelity", FEMININE),
         new Word("קָבַץ", "he collected, gathered, assembled"),
 
+        // 126
+        new Word("כֹּחַ", "strength, power", MASCULINE),
+        new Word("עֶצֶם", "bone, skeleton", FEMININE),
+
         // 125
         new Word("בּוֹשׁ", "he was ashamed"),
         new Word("נָגַשׁ", "he drew near, approached"),
+        new Word("חֵמָה", "wrath, heat, poison", FEMININE),
+        new Word("חֲצִי", "half, middle", MASCULINE),
 
         // 124
         new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
 
+        // 123
+        new Word("קָהָל", "assembly, community, crowd", MASCULINE),
+
         // 121
         new Word("לָכַד", "he took, captured, caught, seized"),
 
+        // 120
+        new Word("אוֹר", "light, daylight, sunshine", MASCULINE),
+        new Word("בְּכֹר", "firstborn", MASCULINE),
+        new Word("רֶכֶב", "chariot, upper millstone", MASCULINE),
+
+        // 119
+        new Word("פְּרִי", "fruit, offspring", MASCULINE),
+
         // 118
         new Word("בָּטַח", "to trust, be confident, rely upon"),
+        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE),
 
         // 117
         new Word("שָׂרַף", "he completely burned, destroyed"),
         new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"),
         new Word("יָטַב", "he was well, it went well with, it was pleasing"),
         new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
+        new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE),
 
         // 116
         new Word("שָׁלֵם", "to be complete, finished"),
@@ -1065,8 +1107,8 @@ public class HebrewBuilder implements LanguageBuilder {
   }
 
   @Override
-  public List<GrammarRule> buildRules() {
-    return Arrays.asList(
+  public Stream<GrammarRule> buildAllRules() {
+    return Stream.of(
         new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
 
@@ -1425,7 +1467,8 @@ public class HebrewBuilder implements LanguageBuilder {
             " * I-ו/י/נ the initial consontant drops"),
 
         new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
-            " Qal: 50,699"),
+            " Qal:    50,699\n" +
+            " Niphal:  4,138"),
 
         new GrammarRule("Stative verbs often have tsere (..) or holem (o) in second vowel.\n" +
             "In the imperfect they have pathach (_) instead of holem in the second vowel."),
@@ -1576,10 +1619,66 @@ public class HebrewBuilder implements LanguageBuilder {
             "* An imperative may be followed by a consecutive perfect.  The perfect may carry the full force of the imperative:\n" +
             "  e.g. לֵך וְאָמַרְתָּ אֶל–עַבְדִּי Go and say to my servant...\n" +
             "* An imperative may be followed by an imperfect or cohortative, creating a purpose or result clause:\n" +
-            "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king.")
+            "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king."),
+
+        new GrammarRule("Conditional clauses, if/then protasis/apodosis.  Protasis often begins with one of\n" +
+            "אִם כִּי הֵן אֲשֶׁר" +
+            "\n and the apodosis often begins with וְ\n" +
+            "אִם–תֵּלְכִי עִמִּי וְהָלָכְתִּי" +
+            "\n if you go with her, then I will go"),
+
+        new GrammarRule("Causal clause, indicates cause of another clause.  Often begins with כִּי or אֲשֶׁר\n" +
+            "קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי" +
+            "\n You will [must] be holy because I am holy"),
+
+        new GrammarRule("Purpose clause, indicates the purpose of the action of the subject of another clause.\n" +
+            "Can begin with לְמַעַן so that, בּעֲבוּר so that,  אֲשֶׁר so that, לְבִלְתִּי so that not, or לְמַעַן לֹא so that not\n" +
+            "וְשָׁמַרְתָּ לַעֲשׂוֹת אֲשֶׁר יִיטַב לְךָ " +
+            "\nAnd you will be careful to do so that it will go well with you."),
+
+        new GrammarRule("A result clause states something that is true because of another clause.\n" +
+            "Often begins with Waw consecutive verb or כִּי\n" +
+            "וַיֹּאמֶר יוֹאָב יָקֻמוּ וַיָּקֻמוּ" +
+            "\nAnd Joab said, 'Let them arise!', so they arose"),
+
+        new GrammarRule("A concessive clause states something that might be thought to prevent another clause, but does not.\n" +
+            "Often marked by אִם, or גַּם or גַּם כִּי or וְ or כִּי or עַל, all of which can be transalted 'although', or 'even though'\n" +
+            "גַּם כִּי–אֵלֵך צַלְמָוֶת לֹא–אִירָא רָע" +
+            "\nEven though I walk through the valley of the shadow of death, I will not fear evil"),
+
+        new GrammarRule("Conjunctive waw is usually prefixed to a verb and links clauses sequentially, temporally, logically, or consequentially.\n" +
+            "Disjunctive waw is prefixed to a non-verb and is non-sequential; it introduces some kind of break in the narrative."),
+
+        new GrammarRule("Disjunctive waw parenthetical, provides a parenthetical explanation or comment:" +
+            "וְהֵם לֹא יָדְעוּ כִּי שֹׁמֵעַ יוֹסֵף כִּי הַמֵּלִיץ בֵּינֹתָם" +
+            "\nNow they did not know that Joseph was understanding them, for there was an interpreter between them."),
+
+        new GrammarRule("Disjunctive waw circumstantial, gives circumstantial information\n" +
+            "וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ => וְאֵין אִישׁ מֵאַנְשֵׁי חַבַּית שָׁם בַּבָּיִת" +
+            "\nAnd one day, he went into the house to do his work, => and none of the household servants were there in the house"),
+
+        new GrammarRule("Disjunctive waw contrastive, gives a contrasting idea\n" +
+            "וַיִּשַׁע יְהוָה אֶל–הֶבֶל וְאֶל–מִנְחָתוֹ => וְאֶל–קַיִן וְאֶל–מִנְחָתוֹ לֹא שָׁעָה" +
+            "\nThe LORD looked favorably on Abel and his offering, => but on Cain and his offering he did not look favorably"),
+
+        new GrammarRule("Disjunctive waw introductory, begins a new narrative or introduces a new idea or theme\n" +
+            "וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים" +
+            "\nNow the serpent was more crafty than any creature that the LORD God had made"),
+
+        new GrammarRule("Adverbs of time: עַתָּה (now), (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
+            "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect."),
+
+        new GrammarRule("Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside)."),
+
+        new GrammarRule("Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually)."),
+
+        new GrammarRule("Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."),
+
+        new GrammarRule("Nipal can be passive, reflexive, reciprocal (they heard each other),\n" +
+            "or middle where no agency is specified and the subject and object are the same (the gate opened)")
 
 
-        // Continue 23.8 p 280
+        // Continue 24.8 p 292
         // put in books of the Bible first
     );
   }

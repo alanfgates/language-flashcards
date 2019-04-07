@@ -1,8 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
+ * The author licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -45,23 +42,23 @@ class CardDeck implements Serializable {
   private Map<String, List<GrammarRule>> rules;
   private Deque<Double> percentRetired;
 
-  CardDeck() {
+  CardDeck(int throughChapter, boolean includeAdvanced) {
     Map<String, Flashcard> m = new HashMap<>();
     rules = new HashMap<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      for (Word w : builder.buildWords()) {
-        Flashcard f = m.get(w.other);
+      for (Word w : builder.buildWords(throughChapter)) {
+        Flashcard f = m.get(w.getOther());
         if (f == null) {
           f = new Flashcard(w);
-          m.put(w.other, f);
+          m.put(w.getOther(), f);
         } else {
           f.addWord(w);
         }
       }
       // Have to make a copy of the rules list because Arrays.asList returns an implementation of
       // List that doesn't support remove.
-      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
+      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules(throughChapter, includeAdvanced)));
     }
     cards = new LinkedList<>(m.values());
     Collections.shuffle(cards);
