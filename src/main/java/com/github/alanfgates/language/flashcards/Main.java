@@ -1,8 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
+ * The author licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -32,6 +29,10 @@ public class Main {
   public static void main(String[] args) {
     Options options = new Options();
 
+    options.addOption("A", "no-advanced", false, "Exclude advanced grammar rules, defaults to false.\n" +
+        "This option only has an affect when sorting the deck");
+    options.addOption("c", "chapter", true, "Include words and rules through this chapter when creating the deck," +
+        "defaults to all chapters.  This option only has an affect when sorting the deck ");
     options.addOption("f", "filename", true, "File to store deck in, defaults to " + FILENAME);
     options.addOption("h", "help", false, "You're looking at it.");
     options.addOption("n", "number-to-test", true, "No longer used, number to test now calculated automatically.");
@@ -46,7 +47,8 @@ public class Main {
       if (cli.hasOption("h")) {
         usage(options);
       } else if (cli.hasOption("s")) {
-        CardDeck deck = new CardDeck();
+        int throughChapter = cli.hasOption("c") ? Integer.valueOf(cli.getOptionValue("c")) : Integer.MAX_VALUE;
+        CardDeck deck = new CardDeck(throughChapter, !cli.hasOption("A"));
         deck.storeDeck(filename);
       } else if (cli.hasOption("t")) {
         CardDeck deck = new CardDeck(filename);

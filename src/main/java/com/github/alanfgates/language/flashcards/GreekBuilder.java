@@ -1,8 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
+ * The author licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -17,8 +14,7 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 import static com.github.alanfgates.language.flashcards.Declension.*;
 import static com.github.alanfgates.language.flashcards.Gender.*;
@@ -30,7 +26,7 @@ import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 
-public class GreekBuilder implements LanguageBuilder {
+public class GreekBuilder extends BaseLanguageBuilder {
 
   @Override
   public String getLanguageName() {
@@ -38,8 +34,8 @@ public class GreekBuilder implements LanguageBuilder {
   }
 
   @Override
-  public List<Word> buildWords() {
-    return Arrays.asList(
+  public Stream<Word> buildAllWords() {
+    return Stream.of(
         //----------------------------------------------------------------------------------------
         // VERB FORMS
         //
@@ -97,7 +93,21 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λέλυκασι", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
         new Word("λέλυκασιν", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
 
-        // Omitting indicative active plu-perfect as it occurs only 79 times
+        // Indicative Active Pluperfect
+        new Word("ἐλελύκειν", "I have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("λελύκειν", "I have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλελύκεις", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λελύκεις", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλελύκειν", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκειν", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκει", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκει", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκειμεν", "we have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύκειμεν", "we have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλελύκειτε", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
+        new Word("λελύκειτε", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
+        new Word("ἐλελύκειααν", "they have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("λελύκειααν", "they have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -729,6 +739,78 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("λελυμένοις", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, DATIVE, PLURAL),
         new Word("λελυμένα", "loosening", PARTICIPLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
 
+        // Optative Active Present
+        new Word("λύοιμι", "I wish to keep loosening", OPTATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύοις", "you wish to keep loosening", OPTATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύοι", "s/he wishes to keep loosening", OPTATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύοιμεν", "we wish to keep loosening", OPTATIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύοιτε", "you wish to keep loosening", OPTATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύοιεν", "they wish to keep loosening", OPTATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Optative Active Aorist
+        new Word("λύσαιμι", "I wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λύσαις", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λύσαι", "s/he wishes to loosen", OPTATIVE, AORIST, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσαιμεν", "we wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λύσαιτε", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λύσαιεν", "they wish to loosen", OPTATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Optative Active Second Aorist
+        new Word("βάλοιμι", "I wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("βάλοις", "you wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("βάλοι", "s/he wishes to throw", OPTATIVE, AORIST, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("βάλοιμεν", "we wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("βάλοιτε", "you wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("βάλοιεν", "they wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
+        // Optative Middle Present
+        new Word("λυοίμην", "I wish to keep loosening myself", OPTATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύοιο", "you wish to keep loosening yourself", OPTATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύοιτο", "s/he wishes to keep loosening her/himself", OPTATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λυοίμεθα", "we wish to keep loosening ourselves", OPTATIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύοισθε", "you wish to keep loosening yourselves", OPTATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύοιντο", "they wish to keep loosening themselves", OPTATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Optative Middle Aorist
+        new Word("λυσαίμην", "I wish to loosen myself", OPTATIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λύσαιο", "you wish to loosen yourself", OPTATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λύσαιτο", "s/he wishes to loosen her/himself", OPTATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λυσαίμεθα", "we wish to loosen ourselves", OPTATIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λύσαισθε", "you wish to loosen yourselves", OPTATIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λύσαιντο", "they wish to loosen themselves", OPTATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Optative Middle Second Aorist
+        new Word("βαλοίμην", "I wish to throw myself", OPTATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("βάλοιο", "you wish to throw yourself", OPTATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("βάλοιτο", "s/he wishes to throw her/himself", OPTATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("βαλοίμεθα", "we wish to throw ourselves", OPTATIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("βάλοισθε", "you wish to throw yourselves", OPTATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("βάλοιντο", "they wish to throw themselves", OPTATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
+        // Optative Passive Present
+        new Word("λυοίμην", "I wish to keep being loosened", OPTATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύοιο", "you wish to keep being loosened", OPTATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύοιτο", "s/he wishes to keep being loosened", OPTATIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λυοίμεθα", "we wish to keep being loosened", OPTATIVE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύοισθε", "you wish to keep being loosened", OPTATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύοιντο", "they wish to keep being loosened", OPTATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
+
+        // Optative Passive Aorist
+        new Word("λυθείην", "I wish to be loosened", OPTATIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR),
+        new Word("λυθείης", "you wish to be loosened", OPTATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυθείη", "s/he wishes to be loosened", OPTATIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λυθείημεν", "we wish to be loosened", OPTATIVE, PASSIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λυθείητε", "you wish to be loosened", OPTATIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("λυθείησαν", "they wish to be loosened", OPTATIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+
+        // Optative Passive Second Aorist
+        new Word("γραφείην", "I wish to be written", OPTATIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("γραφείης", "you wish to be written", OPTATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("γραφείη", "s/he wishes to be written", OPTATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γραφείημεν", "we wish to be written", OPTATIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("γραφείητε", "you wish to be written", OPTATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("γραφείησαν", "they wish to be written", OPTATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+
         //----------------------------------------------------------------------------------------
         // NOUN FORMS
         new Word("λόγος", "word - root λόγο", MASCULINE, NOMINATIVE, SINGULAR, SECOND_DECLENSION),
@@ -1031,12 +1113,12 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
         new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
         // 572
-        new Word("*ποιε", "to do, to make", ROOT),
-        new Word("ποιω", "I do, I make - root *ποιε"),
-        new Word("ποιήσω", "I will make/do - root *ποιε", FUTURE),
-        new Word("ἐποίησα", "I did/made - root *ποιε", AORIST),
-        new Word("πεποίηκα", "I have done/made - root *ποιε", PERFECT),
-        new Word("πεποίημαι", "I have been done/made - root *ποιε", MIDDLE, PASSIVE, PERFECT),
+        new Word("*ποιε", "to do, to make", 17, ROOT),
+        new Word("ποιω", "I do, I make - root *ποιε", 17),
+        new Word("ποιήσω", "I will make/do - root *ποιε", 17, FUTURE),
+        new Word("ἐποίησα", "I did/made - root *ποιε", 17, AORIST),
+        new Word("πεποίηκα", "I have done/made - root *ποιε", 17, PERFECT),
+        new Word("πεποίημαι", "I have been done/made - root *ποιε", 17, MIDDLE, PASSIVE, PERFECT),
         // 550
         new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
@@ -1330,13 +1412,7 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("πορεύσομαι", "I will go, live - πορευομαι root *πορευ", FUTURE, DEPONENT),
         new Word("πεπόρευμαι", "I have gone, lived - πορευομαι root *πορευ", MIDDLE, PASSIVE, PERFECT, DEPONENT),
         new Word("ἐπορεὐθην", "I went, lived - πορευομαι root *πορευ", PASSIVE, AORIST, DEPONENT),
-        // 152
-        new Word("*φη", "to say ", ROOT),
-        new Word("φημί", "I say - root *φη"),
-        new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 150
-        //new Word("ὑπερ accusative", "above"),
-        //new Word("ὑπερ genitive", "in behalf of"),
         new Word("ὑπερ", "accusative: above, genitive: in behalf of"),
         // 148
         new Word("*καλεϝ", "to call ", ROOT),
@@ -1775,11 +1851,19 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("τετήρηκα", "I have kept, I have guarded - root *τηρε", PERFECT),
         new Word("τετήρημαι", "I have been kept, I have been guarded - root *τηρε", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
-
         // 69
         new Word("τρεῖς", "three", MASCULINE, FEMININE),
         new Word("τρία", "three", NEUTER),
-
+        // 68
+        new Word("ῥῆμα", "word, thing", NEUTER),
+        new Word("ῥῆματος", "word, thing", NEUTER, GENITIVE),
+        new Word("σάββατον", "Sabbath, week", NEUTER),
+        new Word("σάββατου", "Sabbath, week", NEUTER, GENITIVE),
+        // 67
+        new Word("ἐντολή", "commandment", FEMININE),
+        new Word("ἐντολῆς", "commandment", FEMININE, GENITIVE),
+        new Word("πλοῖον", "ship, boat", NEUTER),
+        new Word("πλοῖου", "ship, boat", NEUTER, GENITIVE),
         // 66
         new Word("πρεσβύτερος", "elder", NOUN, MASCULINE),
         new Word("πρεσβύτερου", "elder", NOUN, MASCULINE, GENITIVE),
@@ -1797,7 +1881,11 @@ public class GreekBuilder implements LanguageBuilder {
         new Word("ἀπέλυσα", "I released ἀπολύω - root *ἀπο + *λυ", AORIST),
         new Word("ἀπολέλυμαι", "I have been released ἀπολύω - root *ἀπο + *λυ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἀπελύθην", "I was released ἀπολύω - root *ἀπο + *λυ", PASSIVE, AORIST),
-
+        new Word("καπρός", "fruit, crop, result", MASCULINE),
+        new Word("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE),
+        new Word("*φη", "to say ", ROOT),
+        new Word("φημί", "I say - root *φη"),
+        new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 65
         new Word("εἴτε", "if, whether", PARTICLE),
 
@@ -1901,8 +1989,8 @@ public class GreekBuilder implements LanguageBuilder {
   }
 
   @Override
-  public List<GrammarRule> buildRules() {
-    return Arrays.asList(
+  public Stream<GrammarRule> buildAllRules() {
+    return Stream.of(
         new GrammarRule("Nouns rules:\n" +
             "1. Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the third.\n" +
             "2. Every neuter word has the same form in the nominative and accusative.\n" +
@@ -1911,7 +1999,7 @@ public class GreekBuilder implements LanguageBuilder {
             "5. Vowels often change their length ('ablaut’).\n" +
             "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
             "7. Square of stops\n" +
-            "8. A tau cannot stand at the end of the word and will drop off"),
+            "8. A tau cannot stand at the end of the word and will drop off", 6),
 
         new GrammarRule("Square of stops (applies to stops before a θ as well):\n" +
             "Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
@@ -2115,7 +2203,7 @@ public class GreekBuilder implements LanguageBuilder {
             " * ο + ε + ι = οι\n" +
             " * Dipthongs:  if the contract vowel and the first vowel of the dipthong are the\n" +
             "   same, they combine to a single instance of the vowel.  Otherwise they contract.\n" +
-            "   If the second vowel of the dipthong is a ι it subscripts if possible.\n"),
+            "   If the second vowel of the dipthong is a ι it subscripts if possible.\n", 17, true),
 
         new GrammarRule("Present middle/passive indicative paradigm:\n" +
             "     Stem  connecting personal form\n" +
@@ -2174,7 +2262,7 @@ public class GreekBuilder implements LanguageBuilder {
 
         new GrammarRule("Common verb root modifications:\n" +
             " * When the present tense stem ends in ιζω or αζω the root generally ends in a\n" +
-            "   dental (τ, δ, θ) *βαπτδ -> βαπτιζω\n" +
+            "   dental (τ, δ, θ) *βαπτιδ -> βαπτιζω\n" +
             " * When the present tense stem ends in ασσω the root generally ends in a\n" +
             "   velar ( κ, γ, χ) *ταραχ -> ταρασσω\n" +
             " * When the present tense stem ends in a double consonant the root often ends in\n" +
@@ -2382,6 +2470,15 @@ public class GreekBuilder implements LanguageBuilder {
             "   δεξασθε τον ἐμφυτον λογον receive the implanted word, receiving is something done for the self.\n" +
             " * Reflexive middle:  the subject does the action and receives it.\n" +
             "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself"),
+
+        new GrammarRule("Pluperfect describe an action in the past that was completed and who's effect are felt in the past\n" +
+            "    augment     reduplication     stem     tense formative     secondary endings     form\n" +
+            "1sg (ε)         λε                λυ       κ                   ν                     ἐλελύκειν\n" +
+            "2sg (ε)         λε                λυ       κ                   σ                     ἐλελύκεις\n" +
+            "3sg (ε)         λε                λυ       κ                   (ν)                   ἐλελύκει(ν)\n" +
+            "1pl (ε)         λε                λυ       κ                   μεν                   ἐλελύκειμεν\n" +
+            "2pl (ε)         λε                λυ       κ                   τε                    ἐλελύκειτε\n" +
+            "3pl (ε)         λε                λυ       κ                   σαν                   ἐλελύκειααν\n"),
 
         new GrammarRule("Participle aspect:\n" +
             "Present participle describes a continuous action\n" +
@@ -2763,11 +2860,85 @@ public class GreekBuilder implements LanguageBuilder {
             "participle   active          2nd aorist   δο      δόν          neuter nominative singular\n" +
             "participle   middle/passive  present      διδο    διδόμενος    masculine nominative singular\n" +
             "participle   middle          2nd aorist   δο      δόμενος      masculine nominative singular\n" +
-            "participle   passive         2nd aorist   δο      δοθείς       masculine nominative singular")
+            "participle   passive         2nd aorist   δο      δοθείς       masculine nominative singular"),
+
+        new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
+            "  * First class conditional, aka conditions of fact:  assume something is true for argument (it may or \n" +
+            "    may not be), then the apodosis must be true:" +
+            "    protasis: εἰ + indicative any tense; apodosis: any mood, any tense; negated by οὐ\n" +
+            "    εἰ δέ ἀνάστασις νεκρῶν οὐκ ἔστιν, οὐδὲ Χριστὸς ἐγήγερται" +
+            "    But if there is no ressurection of the dead, then not even Christ has been raised."),
+
+        new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
+            "  * Second class conditional, aka contrary to fact:  if something were true, which it isn't, then\n" +
+            "    something else would be true." +
+            "    protasis: εἰ + indicative past tense; apodosis: ἄν plus same tense as protasis; negated by μή\n" +
+            "    εἰ γάρ ἔγνωσαν, ούκ ἂν τὸν κύριον τῆς δόξης ἐσταύπωσαν" +
+            "    For if they had known, they would not have crucified the Lord of glory"),
+
+        new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
+            "  * Third class conditional, future more probable (something might be true in the future) or present general (generally true at all times)\n" +
+            "    protasis: ἐάν + subjunctive; apodosis: any mood, any tense; negated by μή\n" +
+            "    Future more probable: ταῦτα σοι πάντα δώσω, ἐάν πεσὼν _προσκυνήσῃς_ μοι\n" +
+            "    All these things I will give you, if you will fall down and _worship_ me\n" +
+            "    present general: ἐάν _θέλῃς_ δύνασαί με καθαρίσαι\n" +
+            "    if _you want_ you can make me clean\n"),
+
+        new GrammarRule("Optative mood, one further step from reality than subjunctive, the mood of wish or desire."),
+
+        new GrammarRule("Optative active present paradigm:\n" +
+            "     Stem  tense     mood       personal form\n" +
+            "           formative formative  ending\n" +
+            "1sg  λυ              οι         μι       λύοιμι\n" +
+            "2sg  λυ              οι         ς        λύοις\n" +
+            "3sg  λυ              οι         ι        λύοι\n" +
+            "1pl  λυ              οι         μεν      λύοιμεν\n" +
+            "2pl  λυ              οι         τε       λύοιτε\n" +
+            "3pl  λυ              οι         νσι      λύοιεν\n"),
+
+        new GrammarRule("Optative active aorist paradigm:\n" +
+            "     Stem  tense     mood       personal form\n" +
+            "           formative formative  ending\n" +
+            "1sg  λυ    σα        ι          μι       λύσαιμι\n" +
+            "2sg  λυ    σα        ι          ς        λύσαις\n" +
+            "3sg  λυ    σα        ι          ι        λύσαι\n" +
+            "1pl  λυ    σα        ι          μεν      λύσαιμεν\n" +
+            "2pl  λυ    σα        ι          τε       λύσαιτε\n" +
+            "3pl  λυ    σα        ι          νσι      λύσαιεν\n"),
+
+        new GrammarRule("Optative middle/passive present paradigm:\n" +
+            "     Stem  tense     mood       personal form\n" +
+            "           formative formative  ending\n" +
+            "1sg  λυ              οι         μαι      λυοίμην\n" +
+            "2sg  λυ              οι         σαι      λύοιο\n" +
+            "3sg  λυ              οι         ται      λύοιτο\n" +
+            "1pl  λυ              οι         μεθα     λυοίμεθα\n" +
+            "2pl  λυ              οι         σθε      λύοισθε\n" +
+            "3pl  λυ              οι         νται     λύοιντο\n"),
+
+        new GrammarRule("Optative middle aorist paradigm:\n" +
+            "     Stem  tense     mood       personal form\n" +
+            "           formative formative  ending\n" +
+            "1sg  λυ    σα        ι          μαι      λυσαίμην\n" +
+            "2sg  λυ    σα        ι          σαι      λύσαιο\n" +
+            "3sg  λυ    σα        ι          ται      λύσαιτο\n" +
+            "1pl  λυ    σα        ι          μεθα     λυσαίμεθα\n" +
+            "2pl  λυ    σα        ι          σθε      λύσαισθε\n" +
+            "3pl  λυ    σα        ι          νται     λύσαιντο\n"),
+
+        new GrammarRule("Subjunctive passive aorist paradigm:\n" +
+            "     Stem  tense     mood       personal form\n" +
+            "           formative formative  ending\n" +
+            "1sg  λυ    θε        ιη                  λυθείην\n" +
+            "2sg  λυ    θε        ιη         ς        λυθείης\n" +
+            "3sg  λυ    θε        ιη         ι        λυθείη\n" +
+            "1pl  λυ    θε        ιη         μεν      λυθείημεν\n" +
+            "2pl  λυ    θε        ιη         τε       λυθείητε\n" +
+            "3pl  λυ    θε        ιη         νσι      λυθείησαν\n")
 
 
-
-         // Continue with 35.5 page 328
+         // Continue with 36.5 page 334
+        // Figure out what to do with 25.23
 
 
     );
