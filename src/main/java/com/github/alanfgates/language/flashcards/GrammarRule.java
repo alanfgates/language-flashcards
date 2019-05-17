@@ -44,7 +44,7 @@ public class GrammarRule implements Serializable {
     System.out.println(rule);
   }
 
-  // for YAML
+  // for Jackson
   public String getRule() {
     return rule;
   }

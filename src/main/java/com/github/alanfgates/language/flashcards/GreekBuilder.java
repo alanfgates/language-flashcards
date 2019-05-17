@@ -1913,8 +1913,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("*δοξαδ", "to praise, honor, glorify ", ROOT),
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
         new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
-        // TODO - check, omega at end of this looks wrong
-        new Word("ἐδόξασω", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
+        new Word("ἐδόξασα", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
         new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐδοξάσθην", "I was praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
         new Word("*κηρυγ", "to proclaim, preach ", ROOT),
@@ -2746,9 +2745,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("προ plus article in genitive plus infinitive means 'before'\n" +
             "ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
             "μετα plus article in accusative plus infinitive means 'after'\n" +
-            "ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path"),
-
-        new GrammarRule("ὡστε plus infinitive indicates result:\n" +
+            "ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path\n" +
+            "ὡστε plus infinitive indicates result:\n" +
             "ἐπλησαν ἀμφοτερα τα πλοια _ὡστε βυθιζεσθαι_ αὐτα They filled both boats so full that they began to sink"),
 
         new GrammarRule("Infinitive can be used to report indirect discourse."),
@@ -2815,9 +2813,11 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "(because the connecting vowel is called the thematic vowel and athematic verbs lack a thematic vowel)."),
 
         new GrammarRule("Athematic verbs rule 1: they reduplicate their initial stem letter to form the present, inserting a ι between.\n" +
-            "(This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)"),
-
-        new GrammarRule("Athematic verbs rule 2: they do not ordinarily use a connecting vowel in the present indicative."),
+            "(This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)\n" +
+            "Athematic verbs rule 2: they do not ordinarily use a connecting vowel in the present indicative." +
+            "(rule 3 in next rule)\n" +
+            "Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)\n" +
+            "Athematic verbs rule 5: most use κα as the tense formative in the aorist."),
 
         new GrammarRule("Athematic verbs rule 3: they use different personal endings in present active indicative, but the same endings everywhere else:\n" +
             "Example: *δο\n" +
@@ -2829,10 +2829,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "1pl  διδο    μεν        δίδομεν\n" +
             "2pl  διδο    τε         δίδοτε\n" +
             "3pl  διδο    ασι        διδόασι(ν)\n"),
-
-        new GrammarRule("Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)"),
-
-        new GrammarRule("Athematic verbs rule 5: most use κα as the tense formative in the aorist."),
 
         new GrammarRule("Exceptions to a verb uses first aorist or second aorist only:\n" +
             "δίδωμι uses first aorist in indicative and second aorist for other moods\n" +
@@ -2976,14 +2972,13 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   Πᾶς _ὁ γεγεννημένος_ ἐκ τοῦ θεοῦ Everyone _who has been born of God_\n" +
             " * the article can function as a personal, possessive, or relative pronoun\n" +
             "   Οἱ δὲ εἶπαν πρὸς αὐτόν And they said to him\n" +
-            "   Οἱ ἄνδρες, ἀγαπᾶτε _τὰς_ γυναῖκας Husbands, love _your_ wives\n"),
+            "   Οἱ ἄνδρες, ἀγαπᾶτε _τὰς_ γυναῖκας Husbands, love _your_ wives\n" +
+            "Article can function as a grammatical marker:\n" +
+            "μετά τῶν ἀγγελων _τῶν_ ἁγίων with the holy angels"),
 
         new GrammarRule("When the article is not present, it is generally emphasizing the quality of the substantive:\n" +
             "ὁ θεὸς ἀγάπη ἐστίν God is love (focusing not on that God loves, but that he is the very essence of love\n" +
             "Article also not used when the substantive is not specific"),
-
-        new GrammarRule("Article can function as a grammatical marker:\n" +
-            "μετά τῶν ἀγγελων _τῶν_ ἁγίων with the holy angels"),
 
         new GrammarRule("Koine Greek is VSO")
 

@@ -23,7 +23,7 @@ import org.apache.commons.cli.ParseException;
 import java.io.IOException;
 
 public class Main {
-  private static final String FILENAME = "./cards.yaml";
+  private static final String FILENAME = "./cards.json";
   private static final String TEST_NUMBER = "0";
 
   public static void main(String[] args) {

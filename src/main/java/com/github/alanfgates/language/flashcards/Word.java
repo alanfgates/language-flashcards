@@ -74,7 +74,7 @@ public class Word implements Serializable {
     System.out.println(buf.toString());
   }
 
-  // Following all for YAML
+  // Following all for Jackson
   public String getEnglish() {
     return english;
   }

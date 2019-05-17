@@ -14,9 +14,9 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -67,7 +67,7 @@ class CardDeck implements Serializable {
   }
 
   CardDeck(String filename) throws IOException, ClassNotFoundException {
-    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     ObjectReader reader = mapper.readerFor(Container.class);
     Container c = reader.readValue(new File(filename));
     cards = c.getCards();
@@ -123,7 +123,7 @@ class CardDeck implements Serializable {
   }
 
   void storeDeck(String filename) throws IOException {
-    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+    ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
   }
 

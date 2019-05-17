@@ -1691,13 +1691,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "\nNow the serpent was more crafty than any creature that the LORD God had made"),
 
         new GrammarRule("Adverbs of time: עַתָּה (now), (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
-            "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect."),
-
-        new GrammarRule("Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside)."),
-
-        new GrammarRule("Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually)."),
-
-        new GrammarRule("Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."),
+            "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect.\n" +
+            "Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside).\n" +
+            "Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually).\n" +
+            "Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."),
 
         new GrammarRule("Nipal can be passive, reflexive, reciprocal (they heard each other),\n" +
             "or middle where no agency is specified and the subject and object are the same (the gate opened)")
