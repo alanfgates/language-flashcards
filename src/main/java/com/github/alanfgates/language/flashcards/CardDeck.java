@@ -214,7 +214,7 @@ class CardDeck implements Serializable {
     }
 
     public Deque<Double> getCardsRetired() {
-      return percentRetired;
+      return percentRetired == null ? new ArrayDeque<Double>() : percentRetired;
     }
 
     public Container setCardsRetired(Deque<Double> cardsRetired) {
