@@ -17,6 +17,7 @@ package com.github.alanfgates.language.flashcards;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -124,6 +125,7 @@ class CardDeck implements Serializable {
 
   void storeDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
+    mapper.enable(SerializationFeature.INDENT_OUTPUT);
     mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
   }
 
