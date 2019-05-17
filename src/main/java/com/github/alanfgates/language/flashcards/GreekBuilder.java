@@ -1382,9 +1382,9 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἥτις", "whoever, everyone (ἥ + τις both parts decline)", ADJECTIVE, FEMININE),
         new Word("ὅτι", "whoever, everyone (ὅ + τις both parts decline)", ADJECTIVE, NEUTER),
         // 159
-        new Word("προτος", "first", ADJECTIVE, MASCULINE),
-        new Word("προτη", "first", ADJECTIVE, FEMININE),
-        new Word("προτον", "first", ADJECTIVE, NEUTER),
+        new Word("πρῶτος", "first", ADJECTIVE, MASCULINE),
+        new Word("πρῶτη", "first", ADJECTIVE, FEMININE),
+        new Word("πρῶτον", "first", ADJECTIVE, NEUTER),
         // 157
         new Word("καρδια", "heart", FEMININE),
         new Word("καρδιας", "heart", FEMININE, GENITIVE),
@@ -1888,19 +1888,27 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἔφη", "I said - φημί root *φη", AORIST),
         // 65
         new Word("εἴτε", "if, whether", PARTICLE),
-
         // 63
         new Word("ὄρος", "mountain, hill", NEUTER),
         new Word("ὄρους", "mountain, hill", NEUTER, GENITIVE),
         new Word("γραμματεύς", "scribe", MASCULINE),
         new Word("γραμματέως", "scribe", MASCULINE, GENITIVE),
-
+        new Word("δαιμόνιον", "demon", NEUTER),
+        new Word("δαιμόνιου", "demon", NEUTER, GENITIVE),
+        new Word("*ερωτα", "to ask", ROOT),
+        new Word("ἐρωτάω", "I ask - root *ερωτα"),
+        new Word("ἐρωτήσω", "I will ask - ἐρωτάω root *ερωτα", FUTURE),
+        new Word("ἠρώτησα", "I asked - ἐρωτάω root *ερωτα", AORIST),
+        new Word("ἠρωτήθην", "I was asked - ἐρωτάω root *ερωτα", PASSIVE, AORIST),
         // 62
         new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER),
         new Word("*δοκ", "to think, seem ", ROOT),
         new Word("δοκέω", "I think, seem - root *δοκ"),
         new Word("ἔδοξα", "I thought, seemed δοκέω - root *δοκ", AORIST),
-
+        new Word("θέλημα", "will, desire", NEUTER),
+        new Word("θέληματος", "will, desire", NEUTER, GENITIVE),
+        new Word("θρόνος", "throne", MASCULINE),
+        new Word("θρόνου", "throne", MASCULINE, GENITIVE),
         // 61
         new Word("*δοξαδ", "to praise, honor, glorify ", ROOT),
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
@@ -1919,6 +1927,20 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω - root *εὐαγγελιδ", PASSIVE, AORIST),
         new Word("*ὑπ + *αρχ", "To be, to exist", ROOT),
         new Word("ὑπάρχω", "I am, I exist - root *ὑπ + *αρχ"),
+        new Word("ἤδη", "now, already"),
+        new Word("ὧδε", "here"),
+        new Word("νύξ", "night", FEMININE),
+        new Word("νυκτός", "night", FEMININE, GENITIVE),
+        new Word("ἀγαπητός", "beloved", ADJECTIVE, MASCULINE),
+        new Word("ἀγαπητή", "beloved", ADJECTIVE, FEMININE),
+        new Word("ἀγαπητόν", "beloved", ADJECTIVE, NEUTER),
+        // 60
+        new Word("ἱμάτιον", "garment", NEUTER),
+        new Word("ἱμάτιου", "garment", NEUTER, GENITIVE),
+        new Word("*προσκυνε", "to fall down to worship", ROOT),
+        new Word("προσκυνέω", "I fall down to worship - root *προσκυνε"),
+        new Word("προσκυνήσω προσεκύνησα", "I will fall down to worship προσκυνέω - root *προσκυνε", FUTURE),
+        new Word("προσεκύνησα", "I fell down to worship προσκυνέω - root *προσκυνε", AORIST),
 
         // 59
         new Word("*ἀσπαδ", "to greet, salute ", ROOT),
@@ -2930,7 +2952,36 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "3sg  λυ    θε        ιη         ι        λυθείη\n" +
             "1pl  λυ    θε        ιη         μεν      λυθείημεν\n" +
             "2pl  λυ    θε        ιη         τε       λυθείητε\n" +
-            "3pl  λυ    θε        ιη         νσι      λυθείησαν\n")
+            "3pl  λυ    θε        ιη         νσι      λυθείησαν\n"),
+
+        new GrammarRule("The function of the article in Greek is not to make something definite\n" +
+            "(note the use of the article with proper names, which are by definition definite).\n" +
+            "Rather its presence emphasizes identity.  This can be:\n" +
+            " * anaphoric: where the article refers back to a previous reference:\n" +
+            "   κήρυξον τὸν λόγον preach the word (referring back to discussion in 2 Tim 3\n" +
+            " * deictic: the article points out someone or something present and often is best translated as a demonstrative:\n" +
+            "   προσῆλθον αὐτῷ οἱ μαθηταί λὲγοντες ἔρημός ἐστιν _ὁ_ τόπος The disciples came to him and said, '_This_ place is desolate'\n" +
+            " * par excellence: the article identifies a substantive as in a class by itself:\n" +
+            "   ὁ προφήτης εἶ σύ; Are you the Prophet?"),
+
+        new GrammarRule("The function of the article in Greek is not to make something definite\n" +
+            "Rather its presence emphasizes identity.  This can be:\n" +
+            " * monadic:  the article identifies a substantive as unique:\n" +
+            "   ἴδε ὁ ἀμνος τοῦ θεοῦ Behold, the lamb of God\n" +
+            " * the article can turn a participle or adjective into a noun\n" +
+            "   Πᾶς _ὁ γεγεννημένος_ ἐκ τοῦ θεοῦ Everyone _who has been born of God_\n" +
+            " * the article can function as a personal, possessive, or relative pronoun\n" +
+            "   Οἱ δὲ εἶπαν πρὸς αὐτόν And they said to him\n" +
+            "   Οἱ ἄνδρες, ἀγαπᾶτε _τὰς_ γυναῖκας Husbands, love _your_ wives\n"),
+
+        new GrammarRule("When the article is not present, it is generally emphasizing the quality of the substantive:\n" +
+            "ὁ θεὸς ἀγάπη ἐστίν God is love (focusing not on that God loves, but that he is the very essence of love\n" +
+            "Article also not used when the substantive is not specific"),
+
+        new GrammarRule("Article can function as a grammatical marker:\n" +
+            "μετά τῶν ἀγγελων _τῶν_ ἁγίων with the holy angels"),
+
+        new GrammarRule("Koine Greek is VSO")
 
 
          // Continue with 36.5 page 334

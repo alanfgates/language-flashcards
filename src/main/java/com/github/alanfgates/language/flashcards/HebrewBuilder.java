@@ -171,7 +171,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // Qal Active Participle
         new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
-        new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
+        new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
         new Word("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
         new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
 
@@ -210,6 +210,24 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("תִּקָּטַלְנָה", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("תִּקָּטַלְנָה", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+
+        // Niphal Imperative
+        new Word("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הִקָּטְלִי", "be killed!", NIPHAL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("הִקָּטְלְוּ", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL),
+
+        // Niphal Infinitive
+        new Word("הִקָּטֵל", "to kill", NIPHAL, INFINITIVE_CONSTRUCT),
+        new Word("נִקְטוֹל", "to kill", NIPHAL, INFINITIVE_ABSOLUTE),
+        new Word("הִקָּטוֹל", "to kill", NIPHAL, INFINITIVE_ABSOLUTE),
+
+        // Niphal Participle
+        new Word("נִקְטָל", "being killed", NIPHAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("נִקְטֶלֶת", "being killed", NIPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("נִקְטָלִים", "being killed", NIPHAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("נִקְטָלוֹת", "being killed", NIPHAL, PARTICIPLE, FEMININE, PLURAL),
+
 
         //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
@@ -891,17 +909,16 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נוּס", "he fled, he escaped"),
         new Word("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE),
         new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
-
+        // 159
+        new Word("צדָקָה", "righteousness", FEMININE),
         // 156
         new Word("שָׂמַח", "he rejoiced, he was glad"),
-
         // 153
         new Word("מָוֶת", "death, dying", MASCULINE),
         new Word("צָפוֹן", "north, northern", FEMININE),
-
+        new Word("כָּסָה", "he covered"),
         // 151
         new Word("נֶגֶד", "opposite, in front of"),
-
         // 150
         new Word("רֹב", "multitude, greatness", NOUN, MASCULINE),
         new Word("נָגַע", "he touched, struck, escaped"),
@@ -1678,7 +1695,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "or middle where no agency is specified and the subject and object are the same (the gate opened)")
 
 
-        // Continue 24.8 p 292
+        // Continue 24.16 p 296
         // put in books of the Bible first
     );
   }
