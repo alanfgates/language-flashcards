@@ -1247,7 +1247,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἔλαβον", "I took/received - λαμβανω root *λαβ", SECOND_AORIST),
         new Word("εἴληφα", "I have taken/received - λαμβανω root *λαβ", SECOND_PERFECT),
         new Word("εἴλημμαι", "I have been taken/received - λαμβανω root *λαβ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐλήμφθην", "I was taken/received - λαμβανω root *λαβ", AORIST, PERFECT),
+        new Word("ἐλήμφθην", "I was taken/received - λαμβανω root *λαβ", PASSIVE, AORIST),
         // 250
         new Word("γῆ", "land, earth", FEMININE),
         new Word("γῆς", "land, earth", FEMININE, GENITIVE),
@@ -1424,7 +1424,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἐκλήθην", "I was called - καλεω root *καλεϝ", PASSIVE, AORIST),
         // 147
         new Word("σαρξ", "flesh", FEMININE),
-        new Word("σαρκος", "flesh", FEMININE, GENITIVE),
+        new Word("σαρκος", "flesh", FEMININE, GENITIVE), // TODO fix to have accents
         new Word("ἀγαπαω", "I love"),
         new Word("ἀγαπήσω", "I will love ἀγαπαω", FUTURE),
         new Word("ἠγάπησα", "I loved ἀγαπαω", AORIST),
@@ -1728,7 +1728,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         // 85
         new Word("καιρός", "time (point and period)", MASCULINE),
         new Word("καιροῦ", "time (point and period)", MASCULINE, GENITIVE),
-        new Word("προσ + *ευχ", "to pray ", DEPONENT),
+        new Word("προσ + *ευχ", "to pray ", ROOT),
         new Word("προσεύχομαι", "I pray - root *προσευχ", DEPONENT),
         new Word("προσεύξομαι", "I will pray - προσεύχομαι root *προσευχ", FUTURE, DEPONENT),
         new Word("προσηυξάμην", "I prayed - προσεύχομαι root *προσευχ", AORIST, DEPONENT),
@@ -1913,6 +1913,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("*δοξαδ", "to praise, honor, glorify ", ROOT),
         new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ"),
         new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
+        // TODO - check, omega at end of this looks wrong
         new Word("ἐδόξασω", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
         new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐδοξάσθην", "I was praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
@@ -1953,7 +1954,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("*θεωρε", "to look at, behold ", ROOT),
         new Word("θεωρέω", "I look at, behold - root *θεωρε"),
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
-        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST),
+        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST), // TODO fix initial accent
 
         // 57
         new Word("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE),
@@ -2417,7 +2418,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Contract verbs lengthen the contract vowel before the tense formative:\n" +
             "   ἀγαπάω becomes ἠγάπησα\n" +
             " * Stems that end in a stop combine the stop with the sigma, as per the rules.\n" +
-            " * Liquid verbs us α/ε as a tense formative rather than σα."),
+            " * Liquid verbs use α/ε as a tense formative rather than σα."),
 
         new GrammarRule("First aorist middle paradigm:\n" +
             "    augment  stem tense formative  secondary active personal endings  form\n" +
@@ -2539,7 +2540,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Participal exegesis:\n" +
             "1. Temporal:  the aorist participle can describe an action occurring before the time\n" +
-            "   of the finite verb, while the present participle can describe something happening" +
+            "   of the finite verb, while the present participle can describe something happening\n" +
             "   at the same time as the action of the main verb:\n" +
             "   νηστεύσας ... ὕστερον ἐπείνασεν after fasting, ... he was hungry\n" +
             "   συναλιζόμενας παρήγγειλεν αὐτοις while staying with them he charged them.\n" +
@@ -2553,12 +2554,12 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "4. Cause:  can indicate the cause or reason or ground of the action of the finite verb:\n" +
             "   ἠγαλλιασατο πανοικει _πεπιστευκως_ τῳ θεῳ\n" +
             "   He was filled with joy, along with his entire household, _because he had come to believe_ in God.\n" +
-            "5. Conditional: can indicate a condition that must be fulfilled if the action of the" +
+            "5. Conditional: can indicate a condition that must be fulfilled if the action of the\n" +
             "   finite verb is to be accomplished:\n" +
             "   παντα ὅσα ἄν αἰτηστε ... _πιστευοντες_ λημψεσθε\n" +
             "   And whatever you ask in prayer, you will receive, _if you have faith_\n" +
-            "6. Concessive:  can indicate that the action of the finite verb is true despite the " +
-            "   action of the participle:" +
+            "6. Concessive:  can indicate that the action of the finite verb is true despite the\n" +
+            "   action of the participle:\n" +
             "   Και ὑμας _ὄντας_ νεκρους τοις παραπτωμασιν\n" +
             "   And _although you were dead_ in your transgressions"),
 
@@ -2570,17 +2571,17 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   ἵνα τους δυο κτισῆ ἐν αὐτῳ εἰς ἕνα καινον ἄνθρωπον _ποιων_ εἰρηνην\n" +
             "   In order ot create in himself one new man out of the two, _thus making peace_"),
 
-        new GrammarRule("Participles are often translated as indicatives for several reasons:" +
+        new GrammarRule("Participles are often translated as indicatives for several reasons:\n" +
             "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)\n" +
-            "* Greek likes aorist participle before the main verb where English prefers two " +
+            "* Greek likes aorist participle before the main verb where English prefers two\n" +
             "  finite verbs: εὐθυς _ἀφεντες_ τα δικτυα ἠκολουθησαν αὐτῳ\n" +
             "  Immediately _they left_ their nets and followed him."),
 
         new GrammarRule("Aorist (undefined aspect) participle breakdown:\n" +
-            "Aorst tense stem + tense formative + participle morpheme + case ending\n" +
-            "λυ               + σα              + ντ                  + ες\n" +
-            "λυ               + σα              + μενο                + ι\n" +
-            "λυ               + θε              + ντ                  + ες\n"),
+            "Voice   Aorst tense stem + tense formative + participle morpheme + case ending\n" +
+            "active  λυ               + σα              + ντ                  + ες\n" +
+            "middle  λυ               + σα              + μενο                + ι\n" +
+            "passive λυ               + θε              + ντ                  + ες\n"),
 
         new GrammarRule("Participle declensions:\n" +
             "* feminine participle always uses 1st declension\n" +
@@ -2588,9 +2589,10 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* middle/passive present masculine & neuter use 2nd declension\n" +
             "* middle aorist masculine & neuter use 2nd declension\n" +
             "* aorist passive use 3rd declension"),
+        // TODO add perfect to this list, as it's not clear to me what it does
 
         new GrammarRule("Adjectival participles can be either:\n" +
-            "* attribute - acting as an adjective\n" +
+            "* attributive - acting as an adjective\n" +
             "* substantival - acting as a noun"),
 
         new GrammarRule("Adverbial participle is always anarthrous (no definite article)\n" +
@@ -2609,8 +2611,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("An 'absolute' grammatical construction is one that is not grammatically\n" +
             "related to the rest of the sentance, that is it does not modify any other words in the sentance.\n" +
             "_ταυτα αὐτου λαλουντος_ πολλοι ἐπιστευσαν εἰς αὐτον\n" +
-            "_While he was saying these things_ many believed in him" +
-            "This is called a genitive absolute (I assume because the participle is in the genitive case)" +
+            "_While he was saying these things_ many believed in him\n" +
+            "This is called a genitive absolute (I assume because the participle is in the genitive case)\n" +
             "The genitive absolute can have a 'subject' such as he in the above example and and object\n" +
             "such as these things in the above, or other modifiers"),
 
@@ -2682,7 +2684,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  οἱ πατέπρες, μή ἐρεθίζετε τὰ τέκνα ὑμῶν, _ἵνα μή ἀθυμῶσιν_\n" +
             "  Fathers, do not provoke your children, _lest they become discouraged_"),
 
-        new GrammarRule("Uses of the subjunctive (cont)" +
+        new GrammarRule("Uses of the subjunctive (cont)\n" +
             "Conditional statements introduced by ἐάν.  If (protasis) is in subjunctive, then (apodosis) any tense or mood.\n" +
             "  Can be future event: ταῦτα σοι πάντα δώσω, ἐάν πεσὼν _προσκυνήσῃς_ μοι\n" +
             "                       All these things I will give you, if you will fall down and _worship_ me\n" +
@@ -2705,8 +2707,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   μή πάντες ἀπόστολοι;  Are all apostles?"),
 
         new GrammarRule("Infinitive is a verbal noun.\n" +
-            "It is viewed as singular neuter and can take a definite articule in singular neuter, the case" +
-            "of which is determined by the function of the infinitive in the sentance." +
+            "It is viewed as singular neuter and can take a definite articule in singular neuter, the case\n" +
+            "of which is determined by the function of the infinitive in the sentance.\n" +
             "It can have a direct object and adverbial modifiers."),
 
         new GrammarRule("Infinitive 'tenses':\n" +
@@ -2716,8 +2718,10 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Infinitives cannot take a subject (that's what infinite means in this context), but\n" +
             "they will sometimes have a noun in the accusative that acts like a subject:\n" +
-            "οὐκ ἤφιεν λαλεῖν τὰ δαιμόνια literally: he would not permit to speak the demons, better English: he would not permit the demons to speak.\n" +
-            "Since infinitive can take direct object (which is in accusative) there are cases of infinitive with two nouns in accusative,\n" +
+            "οὐκ ἤφιεν λαλεῖν τὰ δαιμόνια literally: he would not permit to speak the demons,\n" +
+            "better English: he would not permit the demons to speak.\n" +
+            "Since infinitive can take direct object (which is in accusative) there are cases of\n" +
+            "infinitive with two nouns in accusative,\n" +
             "Usually the 'subject' is first the object second:\n" +
             "βλέπειν αὐτὸν αὐτήν he to see her"),
 
@@ -2732,7 +2736,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
             "αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
-            "But Jesus on his part did not entrust himself to hem, _because he knew_ all people"),
+            "But Jesus on his part did not entrust himself to them, _because he knew_ all people"),
 
         new GrammarRule("εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
             "παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +

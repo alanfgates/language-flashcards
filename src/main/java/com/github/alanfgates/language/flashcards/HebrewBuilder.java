@@ -878,6 +878,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 170
         new Word("בָּחַר", "he chose, tested, examined"),
         // 167
+        // TODO make sure teh last letter of this is right and isn't supposed to be beth
         new Word("הָרַג", "he attacked, he slew"),
         new Word("רָעָה", "he pastured, tended, grazed"),
         new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
@@ -1303,9 +1304,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * Attributive: modifies a noun.  Attributive adjectives follow the noun they\n" +
             "   modify and agree in gender, number, and definiteness.\n" +
             " * Predicative: asserts something about the noun, e.g. the book is big.\n" +
-            "   No verb is used.  Predicative adjects agree with the noun in gender and number\n" +
+            "   No verb is used.  Predicative adjectives agree with the noun in gender and number\n" +
             "   but not definiteness.  They may proceed or follow the noun.\n" +
-            " * Sustantive: no noun present, stands for those who have the trait (e.g. the wise)"),
+            " * Substantive: no noun present, stands for those who have the trait (e.g. the wise)"),
 
         // TODO - need to understand the difference in how these are translated.
         new GrammarRule("Demonstratives as adjectives and pronouns:\n" +
@@ -1379,7 +1380,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * Last noun in the chain is in an absolute state, all others are in construct state.\n" +
             " * No other words can come between the nouns in a construct chain.\n" +
             " * A construct chain is either entirely definite or entirely indefinite.  When\n" +
-            "   definite only the abosolute noun takes the definite article or has a\n" +
+            "   definite only the absolute noun takes the definite article or has a\n" +
             "   pronominal suffix or is a proper noun."),
 
         new GrammarRule("Construct chains continued:\n" +
@@ -1405,7 +1406,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
             " * Some monosyllabic nouns add a hireq yod in the contruct state."),
 
-        new GrammarRule("An noun can be made superlative by placing it in a construct chain\n" +
+        new GrammarRule("A noun can be made superlative by placing it in a construct chain\n" +
             "with the construct noun singular and the absolute noun plural and definite:\n" +
             "e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
 
@@ -1525,7 +1526,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Jussive expresses a wish, request, or command, but only in third person.  Often \n" +
             "translated with 'let him' or 'may she'.\n" +
-            "When verb with imperfect htird person form begins a clause, it is generally jussive.\n" +
+            "When verb with imperfect third person form begins a clause, it is generally jussive.\n" +
             "In some weak verb forms, especially III-ה and hiphil final consonant is often dropped in jussive"),
 
         new GrammarRule("Pronominal suffixes on verbs can be used to express a pronoun as the direct object of\n" +
@@ -1535,7 +1536,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("III-ה verbs drop the ה in the imperfect when taking a pronominal suffix."),
 
         new GrammarRule("Weak infinitives:\n" +
-            " * I-Gutteral, I-א, II-Gutteral, and III ח/ע/א that shift their stem vowels in imperfect DO NOT" +
+            " * I-Gutteral, I-א, II-Gutteral, and III ח/ע/א that shift their stem vowels in imperfect DO NOT\n" +
             "   for infinitive, they still take a holem stem vowel\n" +
             " * III-ה verbs end in וֹת in infinitive construct: בָּנָה infinitive בְּנוֹת\n" +
             " * I-י/ה/נ some preserve the initial stem vowel and have standard schewa/holem vowels, but many\n" +
@@ -1561,7 +1562,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Infinitive construct, with or without ל, can be complementary.\n" +
             "That is, it works to explain, clarify, or complement a preceding action or statement.\n" +
-            "In such cases the best English translation is often a finite verb:" +
+            "In such cases the best English translation is often a finite verb:\n" +
             "וְשָׁמַרְתָּ אֶת–מִצְוֹת יְהוָה אֱלֹהֶיךָ ––לָלֶכֶת–– בִּדְרָכָיו  " +
             "\nAnd you shall observe the commandments of the LORD your God _by walking_ in his ways."),
 
@@ -1569,7 +1570,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "or obligation or necessity.  These are less common."),
 
         new GrammarRule("Infinitive construct with בְּ or כְּ and often a pronominal suffix indicate temporality (while, when).\n" +
-            "Often these are paired with וַיְהִי (and he was) or וְהָיָה (and he will be) (remember waw consecutive) to indicate perfect or imperfect.\n" +
+            "Often these are paired with וַיְהִי (and he was) or וְהָיָה (and he will be)\n" +
+            "(remember waw consecutive) to indicate perfect or imperfect.\n" +
             "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " +
             "When they were in the field"),
 
@@ -1578,13 +1580,19 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם"),
 
         new GrammarRule("Common uses of infinitive absolute:\n" +
-            "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same root to emphasize the verb:\n" +
-            "  x אָמוֹר אָמַרְתִּי I have surely said\n" +
+            "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same\n" +
+            "  root to emphasize the verb:\n" +
+            "  אָמוֹר אָמַרְתִּי " +
+            "  \nI have surely said\n" +
             "* Imperatival:  can stand alone and function as imperative:\n" +
-            "  x זָכוֹר אֶת–הַיּוֹם הַזֶּה Remember this day!\n" +
-            "* Contemporaneous action: two infinitives absolutes and a im/perfect of the same root as one infinitive expresses contemporary action:\n" +
-            "  x וַיֵּלֶך הָלוֹך וְאָכֹל and they walked, eating as they went\n" +
-            "* Complementary: may complement the main verb and carry the temporal value of that verb (no example given because I don't understand the examples)"),
+            "  זָכוֹר אֶת–הַיּוֹם הַזֶּה " +
+            "  \nRemember this day!\n" +
+            "* Contemporaneous action: two infinitives absolutes and a im/perfect of the same\n" +
+            "  root as one infinitive expresses contemporary action:\n" +
+            "  וַיֵּלֶך הָלוֹך וְאָכֹל " + 
+            "  \nand they walked, eating as they went\n" +
+            "* Complementary: may complement the main verb and carry the temporal value\n" +
+            "  of that verb (no example given because I don't understand the examples)"),
 
         new GrammarRule("Participle יֵשׁ:\n" +
             "* Is not inflected\n" +
