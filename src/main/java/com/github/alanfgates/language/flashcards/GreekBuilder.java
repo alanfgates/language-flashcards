@@ -1941,20 +1941,26 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("προσκυνέω", "I fall down to worship - root *προσκυνε"),
         new Word("προσκυνήσω προσεκύνησα", "I will fall down to worship προσκυνέω - root *προσκυνε", FUTURE),
         new Word("προσεκύνησα", "I fell down to worship προσκυνέω - root *προσκυνε", AORIST),
-
         // 59
         new Word("*ἀσπαδ", "to greet, salute ", ROOT),
         new Word("ἀσπάζομαι", "I greet, salute - root *ἀσπαδ", DEPONENT),
         new Word("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι - root *ἀσπαδ", DEPONENT),
         new Word("λίθος", "stone", MASCULINE),
         new Word("λίθου", "stone", MASCULINE, GENITIVE),
-
+        new Word("διδάσκαλος ου", "teacher", MASCULINE),
+        new Word("διδάσκαλου", "teacher", MASCULINE, GENITIVE),
+        new Word("χαρά", "joy", FEMININE),
+        new Word("χαρᾶς", "joy", FEMININE, GENITIVE),
+        new Word("συνάγω", "I bring together, I compile - root *συναγ"),
+        new Word("συνάξω", "I will bring together, I will compile συνάγω - root *συναγ", FUTURE),
+        new Word("συνήγαγον", "I brought together, I compiled συνάγω - root *συναγ", AORIST),
+        new Word("συνήχθην", "I was brought together, I was compiled συνάγω - root *συναγ", PASSIVE, AORIST),
+        new Word("συνῆγμαι", "I have been brought together, I have been compiled συνάγω - root *συναγ", MIDDLE, PASSIVE, PERFECT),
         // 58
         new Word("*θεωρε", "to look at, behold ", ROOT),
         new Word("θεωρέω", "I look at, behold - root *θεωρε"),
         new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", FUTURE),
         new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", AORIST), // TODO fix initial accent
-
         // 57
         new Word("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE),
         new Word("τοιαῦτη", "such, of such kind", ADJECTIVE, FEMININE),

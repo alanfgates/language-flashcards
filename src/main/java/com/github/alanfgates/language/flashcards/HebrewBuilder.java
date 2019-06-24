@@ -48,15 +48,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קְטַלְתֶּן", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
         new Word("קָטְלוּ", "they killed", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
-        // Qal Perfect III-ה weak verbs (really a yodh in III, but he added in 3ms)
-        new Word("בָּנִיתִי", "I built", QAL, PERFECT, FIRST_PERSON, SINGULAR),
-        new Word("בָּנָה", "he built", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("בָּנְתָה", "she built", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-
-        // Qal perfect geminate (twin consonants) verbs
-        new Word("סַבּוֹתִי", "I went around", QAL, PERFECT, FIRST_PERSON, SINGULAR),
-        new Word("סָבַב", "he went around", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-
         // To be
         new Word("הָיִיתִי", "I was", QAL, PERFECT, FIRST_PERSON, SINGULAR),
         new Word("הָיִיתָ", "you were", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
@@ -86,17 +77,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("תִּקְטֹלְנָה", "you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
         new Word("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
         new Word("תִּקְטֹלְנָה", "they will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
-
-        // Qal Imperfect III-ה weak verbs (really a yodh in III, adds he in many endings )
-        new Word("יִבְנֶה", "he will build", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּבְנֶינָה", "you will build", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
-        new Word("תִּבְנֶינָה", "they will build", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
-
-        // Qal imperfect geminate (twin consonants) verbs
-        new Word("יָסֹב", "he will go around - from סָבַב", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-
-        // Qal imperfect I-נ/ה/י and לָקַח
-        new Word("יֵלֵך", "he will walk - from הָלַך", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
 
         // to be - imperfect
         new Word("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
@@ -179,8 +159,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("בֹּנִים", "building", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
         new Word("קָם", "arising", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
         new Word("בָּנוּי", "being built", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
-
-        // TODO weak participle forms
 
         // Qal Passive Participle
         new Word("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
@@ -873,12 +851,11 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("שָׁחָה", "he bowed down"),
         // 171
         new Word("בִּין", "he discerned, understood"),
-        new Word("לָחַם", "he fought, did battle"),
+        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL),
         new Word("קָדַשׁ", "he was consecrated, he consecrated"),
         // 170
         new Word("בָּחַר", "he chose, tested, examined"),
         // 167
-        // TODO make sure teh last letter of this is right and isn't supposed to be beth
         new Word("הָרַג", "he attacked, he slew"),
         new Word("רָעָה", "he pastured, tended, grazed"),
         new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
@@ -923,41 +900,44 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 150
         new Word("רֹב", "multitude, greatness", NOUN, MASCULINE),
         new Word("נָגַע", "he touched, struck, escaped"),
-
         // 149
         new Word("עֵדָה", "congregation, assembly", FEMININE),
-
+        new Word("חָכְמָה", "wisdom", FEMININE),
         // 148
         new Word("שָׁבַר", "he broke (up), smashed"),
         new Word("שָׂנֵא", "he hated"),
-
         // 147
         new Word("שְׁמֹנֶה", "eight", MASCULINE),
         new Word("שְׁמֹנִים", "eighty"),
         new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE),
-
         // 146
         new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"),
-
+        new Word("הִלֵּל", "he praised – הָלַל", PIEL),
+        new Word("הוּלָּל", "he was praised – הָלַל", PUAL),
+        new Word("יִתְהַלִּל", "he boasted about himself – הָלַל", HITHPAEL),
+        // 145
+        new Word("עֲבֹדָה", "labor, service", NOUN, FEMININE),
         // 144
         new Word("רָדַף", "he pursued, followed after, persecuted"),
-
         // 143
         new Word("חָנָה", "he declined, camped, lay seige to"),
-
+        // 142
+        new Word("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL),
+        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL),
+        new Word("הִשְׁהִית", "he destroyed", HIPHIL),
         // 141
         new Word("אָז", "then, since, before"),
         new Word("יַיִן", "wine", MASCULINE),
         new Word("יָמִין", "right hand, south", FEMININE),
-
+        new Word("כְּמוֹ", "like, as"),
         // 140
         new Word("נוּחַ", "he rested, settled down"),
-
+        new Word("הֵנִיחַ", "he gave rest to, he set down", HIPHIL),
         // 139
         new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
         new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
         new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE),
-
+        new Word("קָרָא", "he encountered, he met"),
         // 138
         new Word("סוּס", "horse", MASCULINE),
         new Word("סוּסִים", "horses", MASCULINE, PLURAL),
@@ -965,36 +945,35 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
-
         // 137
         new Word("נַחַל", "stream, wadi", MASCULINE),
-
         // 136
         new Word("פָּתַח", "he opened"),
-
         // 135
         new Word("כִּסֵּא", "chair, throne", MASCULINE),
-
+        new Word("הֵחֵל", "he began – חָלַל", HIPHIL),
+        new Word("נִחָל", "he was defiled – חָלַל", NIPHAL),
+        new Word("חִלֵּל", "he polluted, profaned – חָלַל", PIEL),
         // 134
         new Word("מִסְפָּר", "number", NOUN, MASCULINE),
         new Word("שֶׁמֶשׁ", "sun", MASCULINE),
         new Word("זָבַח", "he slaughtered, sacrificed"),
-        new Word("פָּנָח", "he turned"),
+        new Word("פָּנָה", "he turned"),
         new Word("עֶרֶב", "evening, sunset", MASCULINE),
-
         // 133
+        new Word("קָבַר", "he buried"),
         new Word("אַף", "also, indeed, even"),
         new Word("פֶּן–", "lest, otherwise"),
         new Word("פַּר", "bull, ox, steer", MASCULINE),
         new Word("שָׁאַר", "he remained, was left over, survived"),
         new Word("שָׁכַן", "he settled, abode, dwelt, inhabited"),
         new Word("חוֹמָה", "wall", FEMININE),
-
         // 131
         new Word("חֹק", "statute, appointed time, portion", MASCULINE),
-
         // 130
         new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
+        new Word("שָׁכַן", "he dwelt"),
+
         // 127
         new Word("אֶמֶת", "truth, fidelity", FEMININE),
         new Word("קָבַץ", "he collected, gathered, assembled"),
@@ -1076,7 +1055,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("רָעָב", "famine, hunger", MASCULINE),
 
         // 100
-        new Word("יַעַן", "on account of"),
+        new Word("יַעַן", "on account of")/*,
 
         // 96
         new Word("יַחְדָּו", "together, united", ADVERB),
@@ -1118,7 +1097,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 18
         new Word("רְבָבָה", "ten thousand")
 
-        // Back up and fill in from 162 - 138
+        */
 
 
     );
@@ -1130,12 +1109,13 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
 
-        new GrammarRule("Gutterals:  אעהח"),
+        new GrammarRule("Gutturals:  אעהח"),
 
         new GrammarRule("Vowels:\n" +
-          "long    a  בָּ  e   בֵּ  o  בֹּ \n" +
-          "short   a  בַּ  e   בֶּ  i  בִּ  o   בָּ  u  בֻּ \n" +
-          "reduced a  בֲּ  e   בֱּ  o  בֳּ "),
+            "              a     e      i    o     u\n " +
+            "long    " + " ָ      ֵ           ֹ      " + "\n" +
+            "short   " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
+            "reduced " + " ֲ      ֱ           ֳ       "),
 
         new GrammarRule("Rules of Syllabification p18\n" +
           "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
@@ -1184,9 +1164,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
           "consonant and must be pronounced before the guttural rather than after."),
 
         new GrammarRule("Diphthong\n" +
-          "Most common Hebrew diphthong is אַיִ (aleph not required, just there so I have a\n" +
-          "letter to put the patach under).  Syllables that contain a diphthong are considered\n" +
-          "to be closed because they end in a consontant."),
+          "Most common Hebrew diphthong is" + " ַיִ  " + "\n" +
+          "Syllables that contain a diphthong are considered to be closed because they end in a consontant."),
 
         new GrammarRule("Vowel Syllable Preferences\n" +
           " * Short vowels prefer closed, unaccented syllables or open, accented syllables. Both syllables in עֶבֶד\n" +
@@ -1197,10 +1176,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Gender Endings\n" +
           "Masculine Singular: anything\n" +
-          "Feminine Singular: אָה אַת אֶת אִית וּת\n" +
-          "Masculine Plural: אִים\n" +
+          "Feminine Singular: " + " ָה ַת ֶת  ִית וּת" + "\n" +
+          "Masculine Plural: " + " ִים " + "\n" +
           "Feminine Plural: וֹת\n" +
-          "Masculine Dual: אַ׳ם\n" +
+          "Masculine Dual:" + " ַים " + "\n" +
           "Feminine Dual: תַיִם or same as masculine\n"),
 
         new GrammarRule("Exceptions to Gender Ending Rules\n" +
@@ -1352,21 +1331,23 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             ""),
 
         new GrammarRule("Type 1 pronominal suffixes (singular nouns, some prepositions, direct\n" +
-            "object marker, most verbs) (א in all cases just to give letter to put vowel under):\n" +
-            " x אִי  or נִי me/my          נוּ   us/our\n" +
-            " x ךָ   you/your (ms)       כֶם  you/your (mp)\n" +
-            " x :ך you/your (fs)        כֶן  you/your (fp)\n" +
-            " x וֹ or הוּ  he/his         הֶם or אָם they/theirs (m)\n" +
-            " x אָהּ or הָ she/hers       הֶן  or אָן they/theirs (f)"),
+            "object marker, most verbs):\n" +
+            "        singular           plural\n" +
+            "1p" +  " נוּ               נִי / ִי   " + "\n" +
+            "2pm" + " כֶם               ךָ       " + "\n" +
+            "2pf" + " כֶן               ך:      " + "\n" +
+            "3pm" + "חֶם / ָם          הוּ / וֹ   " + "\n" +
+            "3pf" + "הֶן / ָן           הָ / ָהּ   " + "\n"),
 
         // TODO use a real word here to show how masculine plural nouns loose their endings
         new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
             "all cases just to give letter to put vowel under).  All type 2 have י in them.\n" +
-            " x אַי me/my          אֵינוּ us/our\n" +
-            " x אֶיךָ you/your (ms) אֵיכֶם you/your (mp)\n" +
-            " x אַיִך you/your (fs) אֵיכֶן you/your (fp)\n" +
-            " x אָיו he/his        אֵיהֶם they/theirs (m)\n" +
-            " x אֶיהָ she/hers     אֵיהֶן  they/theirs (f)"),
+            "        singular           plural\n" +
+            "1p" +  " ֵינוּ                 ַי    " + "\n" +
+            "2pm" + " ֵיכֶם                ֶיךָ    " + "\n" +
+            "2pf" + " ֵיכֶן                ַיִך:   " + "\n" +
+            "3pm" + " ֵיהֶם                ָיו    " + "\n" +
+            "3pf" + " ֵיהֶן                 ֶיהָ   " + "\n"),
 
         new GrammarRule("Distinguishing similar words with pronominal suffixes:\n" +
             " * Direct object marker and אֵת/אֶת are the same alone but differ with pronominal\n" +
@@ -1394,7 +1375,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * A construct noun surrenders its primary accent.  A construct chain is pronounced\n" +
             "   as a single word, with the accent on the absolute noun.  This is sometimes\n" +
             "   marked with a maqqef (-).\n" +
-            " * Masculine plural and both dual endings change to אֵי: e.g. אֱלֹהִים changes to אֱלֹהֵי "),
+            " * Masculine plural and both dual endings change to" + " ֵי " + " e.g. אֱלֹהִים changes to אֱלֹהֵי "),
 
         new GrammarRule("Spelling in construct state continued:\n" +
             " * Vowel reduction:\n" +
@@ -1402,7 +1383,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "     e.g. מִשְׁפָּט changes to מִשְׁפַּט\n" +
             "   * Qamets or tsere change to vocal shewa in open, unaccented syllable:\n" +
             "     (or a hateph vowel under a gutteral): נָבִִיא changes to נְבִיא \n" +
-            " * Feminine singular nouns ending in אָה changes to אַת:\n" +
+            " * Feminine singular nouns ending in" + " ָה " + "changes to" + " ַת " + "\n" +
             "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
             " * Some monosyllabic nouns add a hireq yod in the contruct state."),
 
@@ -1456,40 +1437,201 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   express contemporaneous action.  Can be used as an imperative.\n" +
             " * Participle:  verbal adjective."),
 
+        new GrammarRule("Qal perfect paradigm of the strong verb:\n" +
+            "      Perfect                  Sufformative\n" +
+            "1s    תּי                          קָטַלְתִּי\n" +
+            "2ms   תָּ                           קָטַלְתָּ \n" +
+            "2fs   תְּ                           קָטַלְתְּ\n" +
+            "3ms    קָטַל\n" +
+            "3fs   אָה                          קָטְלָה\n" +
+            "1p    נוּ                           קָטַלְנוּ\n" +
+            "2mp  תֶּם                          קְטַלְתֶּם\n" +
+            "2fp   תֶּן                          קְטַלְתֶּן\n" +
+            "3p     וּ                           קָטְלוּ"),
+
+        new GrammarRule("Stative verbs often have tsere (..) or holem (o) in second vowel.\n" +
+            "In the imperfect they have pathach (_) instead of holem in the second vowel.\n" +
+            "Tsere    Holem    Strong\n" +
+            "Stative  Stative    Verb\n" +
+            "קָטַלְתִּי    קָטֹנְתִּי    כָּבַדְתִּי" + "\n" +
+            "קָטַלְתָּ     קָטֹנְתָּ    כָּבַדְתָּ " + "\n" +
+            "קָטַלְתְּ     קָטֹנְתְּ    כָּבַדְתְּ " + "\n" +
+            "קָטַל       קָטֹן     כָּבֵד  " + "\n" +
+            "קָטְלָה     קָטְנָה    כּבְדָה " + "\n" +
+            "קָטַלְנוּ     קָטֹנּוּ     כָּבַדְנוּ " + "\n" +
+            "קְטַלְתֶּם    קְטָנְתֶּם   כְּבַדְתֶּם" + "\n" +
+            "קְטַלְתֶּן     קְטָנְתֶּן   כְּבַדְתֶּן " + "\n" +
+            "קָטְלוּ     קָטְנוּ     כָּבְדוּ  "),
+
         new GrammarRule("Strong verbs have three strong consonants.  Weak verbs classified as follows:\n" +
-            " * I-Gutteral\n" +
-            " * II-Guteral\n" +
-            " * III-ח/ע\n" +
-            " * III-א\n" +
-            " * III-ה (really III-י but י changes to ה in many forms)\n" +
+            " * I-Guttural\n" +
+            " * II-Guttural\n" +
+            " * III-Guttural, broken into III-ח/ע, III-א, and III-ה (really III-י but י changes to ה in many forms)\n" +
             " * I-י\n" +
             " * I-נ\n" +
             " * Doubly weak (two of the above)\n" +
             " * Biconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect\n" +
             " * Geminate - identical 2nd and 3rd consonants."),
 
-        new GrammarRule("Weak verb perfect tense changes:\n" +
-            " * I-Gutteral and II-Gutteral vocal shewas switch to hateph pathach\n" +
-            " * III-א Vowels shift from pathach to qamets under the middle consonant\n" +
-            " * III-ה The ה reverts back to י in most forms except 3fs where it becomes ת and 3p where it vanishes\n" +
-            " * Geminate nouns: in all 1st and 2nd person forms second instance of geminate consonant assimilates into first with\n" +
-            "   dagesh and a וֹ connecting vowel is placed between the root and the suffix\n" +
-            " * Biconsonantal: the II י/ו does not come back"),
+        new GrammarRule("Qal perfect weak verbs, I and II gutteral:\n" +
+            "II Guttural     I Guttural      Strong\n" +
+            "קָטַלְתִּי      עָמַדְתִּי               בָּחַרְתִּי" + " 1s\n" +
+            "קָטַלְתָּ       עָמַדְתָּ               בָּחַרְתָּ " + " 2ms\n" +
+            "קָטַלְתְּ       עָמַדְתְּ               בָּחַרְתְּ " + " 2fs\n" +
+            "קָטַל         עָמַד                בָּחַר  " + " 3ms\n" +
+            "קָטְדָה       עָמְדָה               בָּחֲרָה " + " 3fs\n" +
+            "קָטַלְנוּ       עָמַדְנוּ               בָּחַרְנוּּּ " + " 1p\n" +
+            "קְטַלְתֶּם      עֲמַדְתֶּם              בְּחַרְתֶּם" + " 2mp\n" +
+            "קְטַלְתֶּן       עֲמַדְתֶּן               בְּחַרְתֶּן" + " 2fp\n" +
+            "קָטְלוּ        עָמְדוּ               בָּחֲרוּ  " + " 3p"),
 
-        new GrammarRule("Weak verb imperfect tense changes:\n" +
-            " * II-Gutteral and III-ע/ח Pathach rather than holem stem vowel (under II)\n" +
-            " * III-א Qamets stem vowel rather than holem\n" +
-            " * III-ה all singular forms (except 2fs) and 1p have seghol ה on the end.  י in III returns in 2/3fp\n" +
-            " * Geminate, second geminate consonant dropped\n" +
-            " * Biconsonantal: the II י/ו returns\n" +
-            " * I-ו/י/נ the initial consontant drops"),
+        new GrammarRule("Qal perfect weak verbs, III gutteral:\n" +
+            "III-ה   III-א   III-ע/ח Strong\n" +
+            "קָטַלְתִּי   שָׁמַעְתִּי   מָצָאתִי   בָּנִיתִי " + " 1s\n" +
+            "קָטַלְתָּ   שָׁמַעְתָּ    מָצָאתָ    בָּנִיתָ " + " 2ms\n" +
+            "קָטַלְתְּ   שָׁמַעְתְּ    מָצָאת    בָּנִית " + " 2fs\n" +
+            "קָטַל    שָׁמַע     מָצָא     בָּנָה  " + " 3ms\n" +
+            "קָטְדָה   שָׁמְעָה    מָצְאָה    בָּנְתָה " + " 3fs\n" +
+            "קָטַלְנוּּ   שָׁמַעְנוּ    מָצָאנוּ    בָּנִינוּּּ " + " 1p\n" +
+            "קְטַלְתֶּם  שְׁמַעְתֶּם   מְצָאתֶם   בְּנִיתֶם" + " 2mp\n" +
+            "קְטַלְתֶּן   שְׁמַעְתֶּן   מְצָאתֶן    בְּנִיתֶן" + " 2fp\n" +
+            "קָטְלוּ     שׁמְעוּ    מָצְאוּ     בָּנוּ  " + " 3p"),
+
+        new GrammarRule("Qal perfect weak verbs, doubly weak:\n" +
+            "Doubly Weak    Strong\n" +
+            "קָטַלְתִּי           עָלִיתִיִ" + " 1s\n" +
+            "קָטַלְתָּ           עָלִיתָ " + " 2ms\n" +
+            "קָטַלְתְּ           עָלִית " + " 2fs\n" +
+            "קָטַל             עָלָה " + " 3ms\n" +
+            "קָטְדָה            עָלְתָה" + " 3fs\n" +
+            "קָטַלְנוּ           עָלִינוּּּ " + " 1p\n" +
+            "קְטַלְתֶּם          עֲלִיתֶם" + " 2mp\n" +
+            "קְטַלְתֶּן          עֲלִיתֶן " + " 2fp\n" +
+            "קָטְלוּ            עָלוּּ  " + " 3p"),
+
+        new GrammarRule("Qal perfect weak verbs, geminate:\n" +
+            "Geminate    Strong\n" +
+            "קָטַלְתִּי        סַבּוֹתִי" + " 1s\n" +
+            "קָטַלְתָּ        סַבּוֹתָ " + " 2ms\n" +
+            "קָטַלְתְּ        סַבּוֹת " + " 2fs\n" +
+            "קָטַל         סָבַב  " + " 3ms\n" +
+            "קָטְדָה        סָבְבָה " + " 3fs\n" +
+            "קָטַלְנוּ        סַבּוֹנו ּּ" + " 1p\n" +
+            "קְטַלְתֶּם       סַבּוֹתֶם" + " 2mp\n" +
+            "קְטַלְתֶּן        סַבּוֹתֶן" + " 2fp\n" +
+            "קָטְלוּ         סָבְבוּ " + " 3p"),
+
+        new GrammarRule("Qal perfect weak verbs, biconsonental:\n" +
+            "Biconsonental  Strong\n" +
+            "קָטַלְתִּי           קַמְתִּי" + " 1s\n" +
+            "קָטַלְתָּ            קַמְתָּ" + " 2ms\n" +
+            "קָטַלְתְּ            קַמְתְּ" + " 2fs\n" +
+            "קָטַל             קָם " + " 3ms\n" +
+            "קָטְדָה            קָמָה" + " 3fs\n" +
+            "קָטַלְנוּ            קַמְנוּ" + " 1p\n" +
+            "קְטַלְתֶּם          קַמְתֶּם" + " 2mp\n" +
+            "קְטַלְתֶּן           קַמְתֶּן" + " 2fp\n" +
+            "קָטְלוּ            קָמוּ " + " 3p"),
+
+        new GrammarRule("Qal imperfect strong verb:\n" +
+            "Preformative  Sufformative   Imperfect\n" +
+            "אֶקְטֹל                     אֶ          " + " 1s\n" +
+            " תִּקְטֹל                     תִּ          " + " 2ms\n" +
+            " תִּקְטֹלִי        ִי            תִּ          " + " 2fs\n" +
+            " יִקְטֹל                      יִ          " + " 3ms\n" +
+            " תִּקְטֹל                     תִּ          " + " 3fs\n" +
+            " נִקְטֹל                      נִ          " + " 1p\n" +
+            "תִּקְטְלוּ        וּ            תִּ          " + " 2mp\n" +
+            "תִּקְטֹלְנָה      נִה           תִּ          " + " 2fp\n" +
+            "יִקְטְלוּ        וּ             יִ          " + " 3mp\n" +
+            "תִּקְטֹלְנָה      נִה           תִּ          " + " 3fp"),
+
+        new GrammarRule("All stative verbs (regardless of stem vowel) use patach as the stem vowel rather than holem in imperfect:\n" +
+            "יִכְבַּד <– כָּבֵד    יִקְטַן  <– קָטֹן"),
+
+        new GrammarRule("Qal imperfect weak verbs, II-Guttural:\n" +
+            "II-Guttural      Strong\n" +
+            " אֶקְטֹל           אֶבְחַר  " + "1s\n" +
+            " תִּקְטֹל           תִּבְחַר  " + "2ms\n" +
+            " תִּקְטְלִי           תִּבחֲרִי " + "2fs\n" +
+            " יִקְטֹל           יִבְחַר   " + "3ms\n" +
+            " תִּקְטֹל           תִּבְחַר  " + "3fs\n" +
+            " נִקְטֹל            נִבְחַר  " + "1p\n" +
+            " תִּקְטְלוּ           תִּבְחֲרוּ " + "2mp\n" +
+            " תִּקְטֹלְנָה         תִּבְחֲרְנָה" + "2fp\n" +
+            " יִקְטְלוּ           יִבְחֲרוּ  " + "3mp\n" +
+            " תִּקְטֹלְנָה         תִּבְחֲרְנָה" + "3fp\n"),
+
+        new GrammarRule("Qal imperfect weak verbs, III-Guttural:\n" +
+            "III ע/ח         III-א       III-ה      Strong\n" +
+            " אֶקְטֹל        אֶבְנֶה       אֶמְצָא         אֶשְׁלַח   " + "1s\n" +
+            " תִּקְטֹל        תִּבְנֶה       תִּמְצָא         תִּשְׁלַח   " + "2ms\n" +
+            " תִּקְטְלִי        תִּבְנִי       תִּמְצְאִי         תִּשְׁלְחִי  " + "2fs\n" +
+            " יִקְטֹל         יִבְנֶה       יִמְצָא          יִשְׁלַח   " + "3ms\n" +
+            " תִּקְטֹל        תִּבְנֶה       תִּמְצָא         תִּשְׁלַח   " + "3fs\n" +
+            " נִקְטֹל        נִבְנֶה       נִמְצָה          נִשְׁלַח   " + "1p\n" +
+            " תִּקְטְלוּ       תִּבְנוּ       תִּמְצְאוּ         תִּשְׁלְחוּ  " + "2mp\n" +
+            " תִּקְטֹלְנָה      תִּבְנֶינָה     תִּמְצֶאנָה       תִּשְׁלַחְנָה " + "2fp\n" +
+            " יִקְטְלוּ       יִבְנוּ        יִמְצְאוּ          יִשְׁלְחוּ  " + "3mp\n" +
+            " תִּקְטֹלְנָה      תִּבְנֶינָה     תִּמְצֶאנָה       תִּשְׁלַחְנָה " + "3fp"),
+
+        new GrammarRule("Qal imperfect weak verbs, I-Guttural:\n" +
+            "I-Gutteral  I-Gutteral   I-א      I-א            \n" +
+            "Type 1      Type 2       Type 1   Type 2   Strong\n" +
+            " אֶקְטֹל    אֹמַר      אֶאֱסֹר    אֶעֱמֹד       אֶחֱזַק     " + "1s\n" +
+            " תִּקְטֹל    תֹּאמַר     תֶּאֱסֹר    תַּעֲמֹד       תֶּחֱזַק     " + "2ms\n" +
+            " תִּקְטְלִי    תֹּאמְרִי    תַּאַסְרִי   תַּעַמְדִי       תֶּחֶזְקִי    " + "2fs\n" +
+            " יִקְטֹל     יֹאמַר     יֶאֱסֹר     יַעֲמֹד        יֶחֱזַק     " + "3ms\n" +
+            " תִּקְטֹל    תֹּאמַר     תֶּאֱסֹר    תַּעֲמֹד       תֶּחֱזַק     " + "3fs\n" +
+            " נִקְטֹל    נֹאמַר      נֶאֱסֹר    נַעֲמֹד        נֶחֱזַק     " + "1p\n" +
+            " תִּקְטְלוּ   תֹּאמְרוּ     תַּאַסְרוּ   תַּעַמְדוּ       תֶּחֶזְקוּ    " + "2mp\n" +
+            " תִּקְטֹלְנָה  תֹּאמַרנָה    תֶּאֱסֹרְנָה  תַּעֲמֹדְנָה     תֶּחֱזַקְנָה   " + "2fp\n" +
+            " יִקְטְלוּ    יֹאמְרוּ     יַאַסְרוּ    יַעַמְדוּ       יֶחֶזְקוּ     " + "3mp\n" +
+            " תִּקְטֹלְנָה  תֹּאמַרנָה    תֶּאֱסֹרְנָה  תַּעֲמֹדְנָה     תֶּחֱזַקְנָה   " + "3fp"),
+
+        new GrammarRule("Qal imperfect weak verbs, Geminate:\n" +
+            "Type 1      Type 2       Strong\n" +
+            " אֶקְטֹל         אֵתַם       אָסֹב   " + "1s\n" +
+            " תִּקְטֹל         תֵּתַם       תָּסֹב   " + "2ms\n" +
+            " תִּקְטְלִי        תֵּתַמִּי       תָּסֹבִּי  " + "2fs\n" +
+            " יִקְטֹל         יֵתַם        יָסֹב   " + "3ms\n" +
+            " תִּקְטֹל         תֵּתַם       תָּסֹב   " + "3fs\n" +
+            " נִקְטֹל         נֵתַם        נָסֹב   " + "1p\n" +
+            " תִּקְטְלוּ        תֵּתַמּוּ       תָּסֹבּוּ  " + "2mp\n" +
+            " תִּקְטֹלְנָה       תְּתַמֶּינָה     תְּסֻבֶּינָה" + "2fp\n" +
+            " יִקְטְלוּ         יֵתַמּוּ        יָסֹבּוּ  " + "3mp\n" +
+            " תִּקְטֹלְנָה       תְּתַמֶּינָה     תְּסֻבֶּינָה" + "3fp"),
+
+        new GrammarRule("Qal imperfect weak verbs, Biconsonantal (aka II-י/ו, the middle consonant returns):\n" +
+            " וֹ          ִי         וּ      "+"    Strong\n" +
+            " אֶקְטֹל       אָבוֹא      אָשִׂים      אָקוּם   " + "1s\n" +
+            " תִּקְטֹל       תָּבוֹא      תָּשִׂים      תָּקוּם   " + "2ms\n" +
+            " תִּקְטְלִי       תָּבוֹאִי     תָּשִׂימִי      תָּקוּמִי  " + "2fs\n" +
+            " יִקְטֹל        יָבוֹא      יָשִׂים       יָקוּם   " + "3ms\n" +
+            " תִּקְטֹל       תָּבוֹא      תָּשִׂים      תָּקוּם   " + "3fs\n" +
+            " נִקְטֹל        נָבוֹא      נָשִׂים       נָקוּם   " + "1p\n" +
+            " תִּקְטְלוּ       תָּבוֹאוּ     תָּשִׂימוּ      תָּקוּמוּ  " + "2mp\n" +
+            " תִּקְטֹלְנָה     תָּבוֹאנָה    תְּשִׂימֶינָה    תְּקוּמֶינָה" + "2fp\n" +
+            " יִקְטְלוּ       יָבוֹאוּ      יָשִׂימוּ       יָקוּמוּ  " + "3mp\n" +
+            " תִּקְטֹלְנָה     תָּבוֹאנָה    תְּשִׂימֶינָה    תְּקוּמֶינָה" + "3fp\n"),
+
+        new GrammarRule("Qal imperfect weak verbs, I-נ/י plus הלך and לקח:\n" +
+            " I-י Type-1    I-י Type 2   I-נ Type 1   I-נ Type 2    Strong\n" +
+            "  לקח                                  הלך       " + "\n" +
+            " אֶקְטֹל     אֶקַּח         אֶפֹּל         אִירַשׁ          אֵלֵך:      " + "1s\n" +
+            " תִּקְטֹל      תִּקַּח        תִּפֹּל         תִּירַשׁ          תֵּלֵך:      " + "2ms\n" +
+            " תִּקְטְלִי     תִּקְחִי        תִּפְּלִי        תִּירְשִׁי          תֵּלְכִי      " + "2fs\n" +
+            " יִקְטֹל      יִקַּח         יִפֹּל          יִירַשׁ           יֵלֵך:      " + "3ms\n" +
+            " תִּקְטֹל      תִּקַּח        תִּפֹּל         תִּירַשׁ          תֵּלֵך:      " + "3fs\n" +
+            " נִקְטֹל      נִקַּח         נִפֹּל         נִירַשׁ           נֵלֵך:      " + "1p\n" +
+            " תִּקְטְלוּ     תִּקְחוּ        תִּפְּלוּ        תִּירְשׁוּ          תֵּלְכוּ      " + "2mp\n" +
+            " תִּקְטֹלְנָה   תִּקַּחְנָה       תִּפֹּלְנָה       תִּירַשְׁנָה         תֵּלַכְנָה    " + "2fp\n" +
+            " יִקְטְלוּ      יִקְחוּ        יִפְּלוּ         יִירְשׁוּ           יֵלְכוּ      " + "3mp\n" +
+            " תִּקְטֹלְנָה   תִּקַּחְנָה       תִּפֹּלְנָה       תִּירַשְׁנָה         תֵּלַכְנָה    " + "3fp\n"),
 
         new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
             " Qal:    50,699\n" +
             " Niphal:  4,138"),
-
-        new GrammarRule("Stative verbs often have tsere (..) or holem (o) in second vowel.\n" +
-            "In the imperfect they have pathach (_) instead of holem in the second vowel."),
 
         new GrammarRule("Uses of הִנֵּה\n:" +
             "* add emphasis or stress (demonstrative interjection):\n" +
@@ -1508,6 +1650,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Waw consecutive perfect used after imperative to continue imperative chain\n" +
             "and should be translated as imperative\n" +
             "Perfect prefixed with waw in chain of perfects NOT waw consecutive"),
+
+        // TODO - Verb review p 209 volitional forms
 
         new GrammarRule("Imperative is not negated, instead use negative with imperfect\n" +
             "To express permanent prohibition: לֹא plus imperfect\n" +
@@ -1536,7 +1680,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("III-ה verbs drop the ה in the imperfect when taking a pronominal suffix."),
 
         new GrammarRule("Weak infinitives:\n" +
-            " * I-Gutteral, I-א, II-Gutteral, and III ח/ע/א that shift their stem vowels in imperfect DO NOT\n" +
+            " * I-Guttural, I-א, II-Guttural, and III ח/ע/א that shift their stem vowels in imperfect DO NOT\n" +
             "   for infinitive, they still take a holem stem vowel\n" +
             " * III-ה verbs end in וֹת in infinitive construct: בָּנָה infinitive בְּנוֹת\n" +
             " * I-י/ה/נ some preserve the initial stem vowel and have standard schewa/holem vowels, but many\n" +
@@ -1700,7 +1844,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "or middle where no agency is specified and the subject and object are the same (the gate opened)")
 
 
-        // Continue 24.16 p 296
+        // Do Verb review first
+        // Continue 25 p 299
         // put in books of the Bible first
     );
   }
