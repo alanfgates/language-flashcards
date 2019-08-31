@@ -750,7 +750,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         // Optative Active Aorist
         new Word("λύσαιμι", "I wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λύσαις", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λύσαι", "s/he wishes to loosen", OPTATIVE, AORIST, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσαι", "s/he wishes to loosen", OPTATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύσαιμεν", "we wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσαιτε", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λύσαιεν", "they wish to loosen", OPTATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
@@ -758,7 +758,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         // Optative Active Second Aorist
         new Word("βάλοιμι", "I wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("βάλοις", "you wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
-        new Word("βάλοι", "s/he wishes to throw", OPTATIVE, AORIST, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("βάλοι", "s/he wishes to throw", OPTATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
         new Word("βάλοιμεν", "we wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("βάλοιτε", "you wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("βάλοιεν", "they wish to throw", OPTATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
@@ -1577,7 +1577,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ὁλη", "whole, entire", ADJECTIVE, FEMININE),
         new Word("ὁλον", "whole, entire", ADJECTIVE, NEUTER),
         new Word("παρακαλῶ", "I call, I beseech παρακαλέω"),
-        new Word("παρακαλέσω", "I will call, I beseech παρακαλέω", FUTURE),
+        new Word("παρακαλέσω", "I will call, I will beseech παρακαλέω", FUTURE),
         new Word("παρεκάλεσα", "I beseeched παρακαλέω", AORIST),
         new Word("παρακέκληκα", "I have beseeched παρακαλέω", PERFECT),
         new Word("παρακέκλημαι", "I have been beseeched παρακαλέω", MIDDLE, PASSIVE, PERFECT),
@@ -1965,7 +1965,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE),
         new Word("τοιαῦτη", "such, of such kind", ADJECTIVE, FEMININE),
         new Word("τοιοῦτον", "such, of such kind", ADJECTIVE, NEUTER),
-
         // 56
         new Word("μηδέ", "and not, neither"),
         new Word("*δεχ", "to take, receive ", ROOT),
@@ -1974,7 +1973,12 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἐδεξάμην", "I took, received δέχομαι - root *δεχ", AORIST, DEPONENT),
         new Word("δέδεγμαι", "I have been taken, received δέχομαι - root *δεχ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐδἐχθην", "I was taken, received δέχομαι - root *δεχ", PASSIVE, AORIST),
-
+        new Word("επι + *ερωτα", "to ask", ROOT),
+        new Word("ἐπερωτάω", "I ask - root επι + *ερωτα"),
+        new Word("ἐπερωτήσω", "I will ask ἐπερωτάω - επι + *ερωτα", FUTURE),
+        new Word("ἐπηρώτησα", "I asked ἐπερωτάω - επι + *ερωτα", AORIST),
+        new Word("συναγωγή", "synagogue, meeting", FEMININE),
+        new Word("συναγωγῆς", "synagogue, meeting", FEMININE, GENITIVE),
         // 55
         new Word("*κραγ", "to cry out, call out ", ROOT),
         new Word("κράζω", "I cry out, call out - root *κραγ"),
@@ -1984,17 +1988,28 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("λοιπός", "remaining (adj), the rest (noun), henceforth (adv)", MASCULINE),
         new Word("λοιπή", "remaining (adj), the rest (noun), henceforth (adv)", FEMININE),
         new Word("λοιπόν", "remaining (adj), the rest (noun), henceforth (adv)", NEUTER),
-
+        new Word("ἀρχή", "beginning; ruler", FEMININE),
+        new Word("ἀρχῆς", "beginning; ruler", FEMININE, GENITIVE),
         // 54
         new Word("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE),
         new Word("δεξιά", "right (hand, side)", ADJECTIVE, FEMININE),
         new Word("δεξιόν", "right (hand, side)", ADJECTIVE, NEUTER),
+        new Word("μέσος", "middle, in the midst", ADJECTIVE, MASCULINE),
+        new Word("μέση", "middle, in the midst", ADJECTIVE, FEMININE),
+        new Word("μέσον", "middle, in the midst", ADJECTIVE, NEUTER),
+        new Word("χρόνος", "time", MASCULINE),
+        new Word("χρόνου", "time", MASCULINE, GENITIVE),
         new Word("ούχι", "not"),
-
         // 53
+        new Word("ἐλπίς", "hope, expectation", FEMININE),
+        new Word("ἐλπίδος", "hope, expectation", FEMININE, GENITIVE),
         new Word("διό", "therefore, for this reason"),
-
+        new Word("ὅπως", "so that, in order that, how that"),
         // 52
+        new Word("ἐπαγγελία", "promise", FEMININE),
+        new Word("ἐπαγγελίας", "promise", FEMININE, GENITIVE),
+        new Word("παιδίον", "child, infant", NEUTER),
+        new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
         new Word("*πειθ", "to persuade ", ROOT),
         new Word("πείθω", "I persuade - root *πειθ"),
         new Word("πείσω", "I will persuade πείθω - root *πειθ"),
@@ -2002,15 +2017,12 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("πέποιθα", "I have persuaded πείθω - root *πειθ"),
         new Word("πέπεισμαι", "I have been persuaded πείθω - root *πειθ"),
         new Word("ἐπείσθην", "I was persuaded πείθω - root *πειθ"),
-        new Word("παιδίον", "child, infant", NEUTER),
-        new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
         new Word("*σπερ", "to sow ", ROOT),
         new Word("σπείρω", "I sow - root *σπερ"),
         new Word("ἔσπειρα", "I sowed σπείρω - root *σπερ", AORIST),
         new Word("ἔσπαρμαι", "I have been sown σπείρω - root *σπερ", MIDDLE, PASSIVE, PERFECT),
         new Word("ἐσπάρην", "I was sown σπείρω - root *σπερ", PASSIVE, AORIST)
 
-        // Go back and fill in blanks
 
         );
   }

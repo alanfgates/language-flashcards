@@ -38,6 +38,7 @@ class CardDeck implements Serializable {
   private static int MAX_CARDS_TO_TEST = 50;
   private static int MIN_CARDS_TO_TEST = 10;
   private static int PCT_RETIRED_TO_TRACK = 20;
+  private static double ASSUMED_PCT_RETIRED = 0.6;
 
   private LinkedList<Flashcard> cards;
   private Map<String, List<GrammarRule>> rules;
@@ -153,8 +154,8 @@ class CardDeck implements Serializable {
     }
     double predicted;
     if (percentRetired.size() < 3) {
-      System.out.println("Too few historical instances to use, basing on assumed retirement rate of 70%");
-      predicted = 0.7;
+      System.out.println("Too few historical instances to use, basing on assumed retirement rate of " + (int)(ASSUMED_PCT_RETIRED * 100) + "%");
+      predicted = ASSUMED_PCT_RETIRED;
     } else {
       double sum = 0;
       for (double d : percentRetired) sum += d;

@@ -103,19 +103,12 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
 
-        // Qal Imperative geminate
-        new Word("סֹב", "go around!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
-
-        // Qal Imperative I-י
-        new Word("שֵׁב", "dwell!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
-
         // Qal various odd important ones
         new Word("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קַה", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("הֱיֵה", "be!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
-
-        // TODO add some of the weak verb forms that loose letters
+        new Word("עֲלֵה", "go up!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
 
         // Qal Cohortative
         new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR),
@@ -251,11 +244,18 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // Qal imperfect with pronominal suffixes
+        new Word("יִקְטְלֵנִי", "he will kill me", PRONOMINAL_SUFFIX, FIRST_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטָלְךָ", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלֵך", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("יִקְטְלֶנָּה", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("יִקְטְלוּנוּ", "they will kill us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
+        new Word("יִקְטְלֵכֶם", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, PLURAL),
+        new Word("יִקְטְלֵכֶן", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE),
+        new Word("יִקְטְלֵם", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, PLURAL),
+        new Word("יִקְטְלֵן", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE),
 
 
         //----------------------------------------------------------------------------------------
@@ -973,51 +973,49 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 130
         new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
         new Word("שָׁכַן", "he dwelt"),
-
         // 127
         new Word("אֶמֶת", "truth, fidelity", FEMININE),
         new Word("קָבַץ", "he collected, gathered, assembled"),
-
         // 126
         new Word("כֹּחַ", "strength, power", MASCULINE),
         new Word("עֶצֶם", "bone, skeleton", FEMININE),
-
         // 125
         new Word("בּוֹשׁ", "he was ashamed"),
         new Word("נָגַשׁ", "he drew near, approached"),
         new Word("חֵמָה", "wrath, heat, poison", FEMININE),
         new Word("חֲצִי", "half, middle", MASCULINE),
-
+        new Word("הִשְׁלְִיך:", "he threw, flung, cast", HIPHIL),
         // 124
         new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
-
         // 123
         new Word("קָהָל", "assembly, community, crowd", MASCULINE),
-
         // 121
         new Word("לָכַד", "he took, captured, caught, seized"),
-
         // 120
         new Word("אוֹר", "light, daylight, sunshine", MASCULINE),
-        new Word("בְּכֹר", "firstborn", MASCULINE),
         new Word("רֶכֶב", "chariot, upper millstone", MASCULINE),
-
+        new Word("בְּכֹר", "firstborn", MASCULINE),
         // 119
+        new Word("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE),
+        new Word("אָחוֹת", "sister", FEMININE),
         new Word("פְּרִי", "fruit, offspring", MASCULINE),
-
+        new Word("נָהָר", "river, stream", MASCULINE),
         // 118
-        new Word("בָּטַח", "to trust, be confident, rely upon"),
+        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE),
         new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE),
-
+        new Word("בָּטַח", "to trust, be confident, rely upon"),
         // 117
-        new Word("שָׂרַף", "he completely burned, destroyed"),
-        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"),
         new Word("יָטַב", "he was well, it went well with, it was pleasing"),
         new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
         new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE),
-
+        new Word("מַמְלָכָה", "kingdom, reign, dominion", FEMININE),
+        new Word("שָׂרַף", "he completely burned, destroyed"),
+        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"),
         // 116
         new Word("שָׁלֵם", "to be complete, finished"),
+        new Word("שָׁלֵם", "he was whole, complete"),
+        new Word("שִׁלַּם", "he repaid", PIEL),
+        new Word("הִשְׁלִים", "he made peace", HIPHIL),
 
         // 114
         new Word("כָּבֵד", "he was heavy, he was honored"),
@@ -1651,7 +1649,40 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "and should be translated as imperative\n" +
             "Perfect prefixed with waw in chain of perfects NOT waw consecutive"),
 
-        // TODO - Verb review p 209 volitional forms
+        new GrammarRule("Qal imperative strong verb:\n" +
+            "Sufformative   Imperfect\n" +
+            "קְטֹל                  " + " 2ms\n" +
+            "קִטְלִי       ִי          " + " 2fs\n" +
+            "קִטְלוּ       וּ          " + " 2mp\n" +
+            "קְטֹלְנָה     נִה         " + " 2fp\n"),
+
+        new GrammarRule("Qal imperative weak, I & II Guttural:\n" +
+            "I-Guttural      I-א   II-Guttural   Strong\n" +
+            "קְטֹל      בְּחַר          אֱמֹר      חֲזַק      " + " 2ms\n" +
+            "קִטְלִי      בַּחֲרִי         אִמְרִי      חִזְקִי     " + " 2fs\n" +
+            "קִטְלוּ      בַּחֲרוּ         אִמְרוּ      חִזְקוּ     " + " 2mp\n" +
+            "קְטֹלְנָה     בְּחַרְנָה        אֱמֹרְנָה    חֲזַקְנָה    " + " 2fp\n"),
+
+        new GrammarRule("Qal imperative weak, III-Guttural:\n" +
+            "III-ע/ח      III-א     III-ה       Strong\n" +
+            "קְטֹל         בְּנֵה       מְצָא       שְׁלַח    " + " 2ms\n" +
+            "קִטְלִי         בְּנֵי       מִצְאִי       שִׁלְחִי   " + " 2fs\n" +
+            "קִטְלוּ         בְּנוּ       מִצְאוּ       שִׁלְחוּ   " + " 2mp\n" +
+            "קְטֹלְנָה        בְּנֶינָה     מְצֶאנָה     שְׁלַחְנָה  " + " 2fp\n"),
+
+        new GrammarRule("Qal imperative weak, Geminate and Biconsonantal:\n" +
+            "Geminate   Biconsonantal       Strong\n" +
+            "קְטֹל          קוּם             סֹב     " + " 2ms\n" +
+            "קִטְלִי         קוּמִי             סֹבִּי    " + " 2fs\n" +
+            "קִטְלוּ         קוּמוּ             סֹבּוּ    " + " 2mp\n" +
+            "קְטֹלְנָה        קֹמְנָה            סֹבְנָה   " + " 2fp\n"),
+
+        new GrammarRule("Qal imperative weak, I-י/נ:\n" +
+            "I-נ Type 1   I-נ Type 2   I-י Type 1   I-י Type 2   Strong\n" +
+            "קְטֹל      רַשׁ          שֵב         סַע          נְפֹל       " + " 2ms\n" +
+            "קִטְלִי     רְשִׁי          שְׁבִי         סְעִי         נִפְלִי      " + " 2fs\n" +
+            "קִטְלוּ     רְשׁוּ          שְׁבוּ         סְעוּ         נִפְלוּ      " + " 2mp\n" +
+            "קְטֹלְנָה    רַשְׁנָה         שֵׁבְנָה       סַעְנָה        נְפֹלְנָה     " + " 2fp\n"),
 
         new GrammarRule("Imperative is not negated, instead use negative with imperfect\n" +
             "To express permanent prohibition: לֹא plus imperfect\n" +
@@ -1664,6 +1695,12 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Other weak forms keep the first consonant\n" +
             "Biconsonantal, aka II-י/ה, retain the second vowel letter."),
 
+        new GrammarRule("Qal cohortative verb:\n" +
+            "Cohortative             \n" +
+            "Type 1        Type 2    \n" +
+            "    אֶקְטְלָה       אֶקְטֹל  " + " singular\n" +
+            "    נִקְטְלָה        נִקְטֹל  " + " plural\n"),
+
         new GrammarRule("Cohortative expresses a wish, request, or command, but only in first person.  Often \n" +
             "translated with 'let me' or 'may we'.\n" +
             "When verb with imperfect first person form begins a clause, it is generally cohortative."),
@@ -1671,21 +1708,62 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Jussive expresses a wish, request, or command, but only in third person.  Often \n" +
             "translated with 'let him' or 'may she'.\n" +
             "When verb with imperfect third person form begins a clause, it is generally jussive.\n" +
+            "In general jussive is same as 3 person imperfect.\n" +
             "In some weak verb forms, especially III-ה and hiphil final consonant is often dropped in jussive"),
 
         new GrammarRule("Pronominal suffixes on verbs can be used to express a pronoun as the direct object of\n" +
             "the verb.  This can also be done by attaching the pronoun to the direct object marker את\n" +
             "Type 1 pronominal suffixes are used."),
 
-        new GrammarRule("III-ה verbs drop the ה in the imperfect when taking a pronominal suffix."),
+        new GrammarRule("Pronominal suffixes on 3ms perfect:\n" +
+            "קְטָלַ  נִי" + "     he killed me\n" +
+            "קְטָלְ  ךָ" + "      he killed you\n" +
+            "קְטָלֵ  ך" + "      he killed you\n" +
+            "קְטָל  וֹ" + "      he killed him\n" +
+            "קְטָלָ  הּ" + "      he killed her\n" +
+            "קְטָלָ  נוּ" + "      he killed us\n" +
+            "קְטָלְ כֶם" + "      he killed you\n" +
+            "קְטָלְ  כֶן" + "      he killed you\n" +
+            "קְטָלָ  ם" + "      he killed them\n" +
+            "קְטָלָ  ן" + "      he killed them"),
 
-        new GrammarRule("Weak infinitives:\n" +
-            " * I-Guttural, I-א, II-Guttural, and III ח/ע/א that shift their stem vowels in imperfect DO NOT\n" +
-            "   for infinitive, they still take a holem stem vowel\n" +
-            " * III-ה verbs end in וֹת in infinitive construct: בָּנָה infinitive בְּנוֹת\n" +
-            " * I-י/ה/נ some preserve the initial stem vowel and have standard schewa/holem vowels, but many\n" +
-            "   drop the initial consonant and append a ת\n" +
-            " * Biconsonantal: the II י/ו returns"),
+        new GrammarRule("Pronominal suffixes on 3ms imperfect:\n" +
+            "יִקְטְלֵ  נִי" + "      he will kill me\n" +
+            "יִקְטָלְ  ךָ" + "      he will kill you\n" +
+            "יִקְטְלֵ  ך" + "      he will kill you\n" +
+            "יִקְטְלֵ הוּ" + "      he will kill him\n" +
+            "יִקְטְלֵ  נּוּ" + "      he will kill him\n" +
+            "יִקְטְלָ  הּ" + "      he will kill her\n" +
+            "יִקְטְלֶ נָּה" + "      he will kill her\n" +
+            "יִקְטְלֵ  נוּ" + "      he will kill us\n" +
+            "יִקְטְלֵ כֶם" + "      he will kill you\n" +
+            "יִקְטְלֵ כֶן" + "      he will kill you\n" +
+            "יִקְטְלֵ  ם" + "      he will kill them\n" +
+            "יִקְטְלֵ  ן" + "      he will kill them\n"),
+
+        new GrammarRule("Pronominal suffixes on imperfect weak III-ה verbs drop the ה\n:" +
+            "יִרְאֶה" + "  +  " + "נָּה" + "  becomes " + "יִרְאֶנָּה" + "  he will see her"),
+
+        new GrammarRule("Pronominal suffixes on imperative same as imperfect except 2ms for is קָטְל instead of קְטְל\n\n" +
+            "2fs imperative with pronominal suffix very rare and 2fp not attested\n" +
+            "קָטְלֵ הוּ" + "      kill him!\n"),
+
+        new GrammarRule("Infinitives (both construct and absolute) are verbal nouns"),
+
+        new GrammarRule("Infinitive construct functions much like the English infinitive"),
+
+        new GrammarRule("Infinitive construct form:\n" +
+            "Strong            " + "קְטֹל" + "\n" +
+            "I-Gutteral        " + "עֲזֹר" + "\n" +
+            "I-א               " + "אֱמֹר" + "\n" +
+            "II-Gutteral       " + "בְּחֹר" + "\n" +
+            "III-א             " + "קְרֹא" + "\n" +
+            "III-ע             " + "שְׁמֹעַ" + "\n" +
+            "III-ח             " + "שְׁלֹחַ" + "\n" +
+            "III-ה             " + "בְּנוֹת" + "    From בנה\n" +
+            "I-נ               " + "סַעַת" + "    From נסע  Many I-נ verbs follow strong paradigm, others drop initial נ and append ת\n" +
+            "I-י               " + "שֶׁבֶת" + "    From ישׁב  A few I-י verbs follow strong paradigm, most drop initial י and append ת\n" +
+            "Biconsonantal     " + "מוּת" + "    Keep their middle vowel\n"),
 
         new GrammarRule("Infinitive constructs can take pronominal suffixes.  These suffixes can serve as the\n" +
             "'subject' or object of the infinitive, e.g. קָטְלוֹ can mean 'his killing' or 'killing him'"),
@@ -1719,24 +1797,48 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " +
             "When they were in the field"),
 
-        new GrammarRule("Infinitive absolute almost all weak verbs regular except:\n" +
-            " * III-ה may end in ה or וֹ, sound the same חָיָה becomes חָיֹה or חַיוֹ \n" +
-            " * Biconsonantal verbs always have וֹ as middle consonant: שִׂים becomes שׂוֹם"),
-
-        new GrammarRule("Common uses of infinitive absolute:\n" +
+        new GrammarRule("Infinitive absolute is a verbal noun but has no direct English equivalent.\n" +
+            "Common uses of infinitive absolute:\n" +
             "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same\n" +
-            "  root to emphasize the verb:\n" +
-            "  אָמוֹר אָמַרְתִּי " +
-            "  \nI have surely said\n" +
+            "  root to emphasize the verb:" + "  אָמוֹר אָמַרְתִּי " + "I have surely said\n" +
             "* Imperatival:  can stand alone and function as imperative:\n" +
-            "  זָכוֹר אֶת–הַיּוֹם הַזֶּה " +
-            "  \nRemember this day!\n" +
+            "  זָכוֹר אֶת–הַיּוֹם הַזֶּה " + "  Remember this day!"),
+
+        new GrammarRule("Common uses of infinitive absolute continued:\n " +
             "* Contemporaneous action: two infinitives absolutes and a im/perfect of the same\n" +
             "  root as one infinitive expresses contemporary action:\n" +
-            "  וַיֵּלֶך הָלוֹך וְאָכֹל " + 
-            "  \nand they walked, eating as they went\n" +
+            "  וַיֵּלֶך הָלוֹך וְאָכֹל " + " and they walked, eating as they went\n" +
             "* Complementary: may complement the main verb and carry the temporal value\n" +
             "  of that verb (no example given because I don't understand the examples)"),
+
+        new GrammarRule("Almost all weak verbs follow the strong verb paradigm in infinitive absolute.\n" +
+            "Only III-ה and biconsonantal verbs differ:\n" +
+            "Strong        " + "קָטוֹל" + "\n" +
+            "III-ה         " + "עָשׂה" + " or " + "עָשׂוֹ" + "\n" +
+            "Biconsonantal " + "שׂוֹם" + " middle vowel becomes וֹ regardless of what it is in the root, as here from " + "שִׂים"),
+
+        new GrammarRule("Qal active participle strong verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "קֹטֵל" + "         " + "קֹטְלִים" + "\n" +
+            "Feminine     " + "קֹטֶלֶת" + "/" + "קֹטְלָה" + "    " + "קֹטְלוֹת" + "\n" +
+            "I-Guttural, I-נ, I-י, and geminate verbs follow the strong verb pattern\n" +
+            "II-Gutteral schewa changes to hateph pathach in plural and alternate feminie forms: " + "בֹּחֲרִים" + "\n" +
+            "III-א only alternate feminine singular varies:  " + "מֹצְאָה"),
+
+        new GrammarRule("Qal active participle III-ע/ח verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "שֹׁמֵעַ" + "         " + "שֹׁמְעִים" + "\n" +
+            "Feminine     " + "שֹׁמַעַת" + "/" + "שֹׁמְעָה" + "    " + "שֹׁמְעוֹת" + "\n"),
+
+        new GrammarRule("Qal active participle III-ה verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "בֹּנֶה" + "         " + "בֹּנִים" + "\n" +
+            "Feminine     " + "בֹּנָה" + "/" + "בֹּנִיָּה" + "    " + "בֹּנוֹת" + "\n"),
+
+        new GrammarRule("Qal active participle Biconsonantal verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "קָם" + "         " + "קָמִים" + "\n" +
+            "Feminine     " + "קָמָה"  + "    " + "קָמוֹת" + "\n"),
 
         new GrammarRule("Participle יֵשׁ:\n" +
             "* Is not inflected\n" +
@@ -1762,13 +1864,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "הַיּוֹשֶׁבֶת בַּגַּנִּים " +
             "the one who dwells in the gardens"),
 
-        new GrammarRule("Active participles I-Guttural, I-נ and I-י verbs follow strong verb paradigm.\n" +
-            "II-Guttural, III-ח/ע and III-א follow with shifts in the stem vowel to deal with the guttural\n" +
-            "III-ה the last consontant drops (though in singular a mater lectionis ה) is in the third position\n" +
-            "Biconsonantal roots only the two consontants are in the participle form."),
-
-        new GrammarRule("III-ה verbs have י in the III position for passive particples (since the root consontant is \n" +
-            "really י there to begin with.  For example, being built: בָּנוּי"),
+        // TODO p 264 22.6
 
         new GrammarRule("Standard Hebrew word order is verb-subject-object\n" +
             "In the object section, direct and indirect object can come in any order\n" +
@@ -1777,7 +1873,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Verb tense and sentance order:\n" +
             "* When a perfect verb is describing a completely action it is usually proceeded\n" +
             "    by a time clause or other explanatory clause.\n" +
-            "* A consecutive perfect is normally be first in its clause.\n" +
+            "* A consecutive perfect is normally the first word in its clause.\n" +
             "* A regular imperfect is not normally the first word in the clause.\n" +
             "* A consecutive imperfect is always the first word in its clause\n" +
             "* A jussive or cohortative (aka volitional imperfect) is normally the first word in its clause."),
