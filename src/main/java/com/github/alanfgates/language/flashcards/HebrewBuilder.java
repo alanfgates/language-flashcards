@@ -118,6 +118,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // Qal Imperative
         new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        // TODO - double check this
         new Word("קָטְלָה", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
@@ -157,7 +158,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // Qal Infinitive construct weak forms
         new Word("עֲשׂוֹת", "to do, to make", QAL, INFINITIVE_CONSTRUCT),
-        new Word("לֶכֶת", "to walk, go", QAL, INFINITIVE_CONSTRUCT),
         new Word("מוּת", "to die", QAL, INFINITIVE_CONSTRUCT),
 
         // Qal Infinitive Absolute
@@ -194,10 +194,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נִקְטַלְתְּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("נִקְטַל", "he was killed", NIPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("נִקְטְלָה", "she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, SINGULAR),
-        new Word("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("נִקְטְלוּ", "they were killed", NIPHAL, PERFECT, THIRD_PERSON, SINGULAR),
+        new Word("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("נִקְטְלוּ", "they were killed", NIPHAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // Niphal Imperfect
         new Word("אֶקָּטֵל", "I will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
@@ -205,11 +205,11 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("תִּקָּטְלִי", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יִקָּטֵל", "he will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּקָּטַלְנָה", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּקָּטַלְנָה", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּקָּטַלְנָה", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("תִּקָּטַלְנָה", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
 
         // Niphal Imperative
         new Word("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR),
@@ -852,6 +852,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 183
         new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
         new Word("בּקָרִים", "herds, oxen", MASCULINE, PLURAL),
+        // TODO fix vowel under b.
         // 182
         new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
         new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),

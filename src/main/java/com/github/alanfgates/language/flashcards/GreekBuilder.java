@@ -94,20 +94,21 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("λέλυκασιν", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Active Pluperfect
-        new Word("ἐλελύκειν", "I have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("λελύκειν", "I have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("ἐλελύκεις", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("λελύκεις", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἐλελύκειν", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("λελύκειν", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλελύκει", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("λελύκει", "s/he has been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλελύκειμεν", "we have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
-        new Word("λελύκειμεν", "we have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
-        new Word("ἐλελύκειτε", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
-        new Word("λελύκειτε", "you have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἐλελύκειααν", "they have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
-        new Word("λελύκειααν", "they have been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("ἐλελύκειν", "I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("λελύκειν", "I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλελύκειν", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκειν", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
+        new Word("λελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
+        // TODO I think the aa here is a typo, check
+        new Word("ἐλελύκειααν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("λελύκειααν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -331,6 +332,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("λύσατε", "loose!", IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λυσάτωσαν", "let them loose!", IMPERATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
 
+        // TODO This isn't right, lab isn't throw 
         // Imperative active second aorist
         new Word("λάβε", "throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("λαβέτω", "let him/her throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
@@ -750,7 +752,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         // Optative Active Aorist
         new Word("λύσαιμι", "I wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λύσαις", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λύσαι", "s/he wishes to loosen", OPTATIVE, AORIST, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύσαι", "s/he wishes to loosen", OPTATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύσαιμεν", "we wish to loosen", OPTATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσαιτε", "you wish to loosen", OPTATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λύσαιεν", "they wish to loosen", OPTATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
@@ -1939,7 +1941,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἱμάτιου", "garment", NEUTER, GENITIVE),
         new Word("*προσκυνε", "to fall down to worship", ROOT),
         new Word("προσκυνέω", "I fall down to worship - root *προσκυνε"),
-        new Word("προσκυνήσω προσεκύνησα", "I will fall down to worship προσκυνέω - root *προσκυνε", FUTURE),
+        new Word("προσκυνήσω", "I will fall down to worship προσκυνέω - root *προσκυνε", FUTURE),
         new Word("προσεκύνησα", "I fell down to worship προσκυνέω - root *προσκυνε", AORIST),
 
         // 59
@@ -1976,8 +1978,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new Word("ἔκραξα", "I cried out, called out κράζω - root *κραγ", AORIST),
         new Word("κέκραγα", "I have cried out, called out κράζω - root *κραγ", PERFECT),
         new Word("λοιπός", "remaining (adj), the rest (noun), henceforth (adv)", MASCULINE),
-        new Word("λοιπή", "remaining (adj), the rest (noun), henceforth (adv)", FEMININE),
-        new Word("λοιπόν", "remaining (adj), the rest (noun), henceforth (adv)", NEUTER),
+        new Word("λοιπή", "remaining (adj), henceforth (adv)", FEMININE),
+        new Word("λοιπόν", "remaining (adj), henceforth (adv)", NEUTER),
 
         // 54
         new Word("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE),
@@ -2052,7 +2054,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Accusative  ν        ἔργον        α      ἔργα\n"),
 
         new GrammarRule("Uses of Genitive\n" +
-            " * descriptive: Let us put on the armor of light ενδθσμεθα τα οπλα του φωτος\n" +
+            " * descriptive: Let us put on the armor of light ενδυσμεθα τα οπλα του φωτος\n" +
             " * possessive\n" +
             " * showing apposition to the head noun: You will receive the gift, the Holy Spirit\n" +
             "   λημψεσθε την δωρεαν του αγιου πνευματος"),
@@ -2195,7 +2197,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Attraction: Occasionally the case of the relative pronoun is determined\n" +
             "not by its function in the relative clause but by its antecedent.  This usually\n" +
-            "happens when it is in the immediate proximity of its antecedent, when the the\n" +
+            "happens when it is in the immediate proximity of its antecedent, when the\n" +
             "antecedent is dative or genitive and the relative pronoun normally would be\n" +
             "accusative."),
 
@@ -2536,6 +2538,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "active         ντ          ουσα      ντ    \n" +
             "middle/passive μενο        μενη      μενο  \n" +
             "perfect        οτ          οτ        οτ    \n"),
+        // TODO this last line doesn't seem true, as I never see t in perfect
+        // feminine.  Double check this.
 
         new GrammarRule("Participal exegesis:\n" +
             "1. Temporal:  the aorist participle can describe an action occurring before the time\n" +
@@ -2882,20 +2886,21 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
             "  * First class conditional, aka conditions of fact:  assume something is true for argument (it may or \n" +
-            "    may not be), then the apodosis must be true:" +
+            "    may not be), then the apodosis must be true:\n" +
             "    protasis: εἰ + indicative any tense; apodosis: any mood, any tense; negated by οὐ\n" +
-            "    εἰ δέ ἀνάστασις νεκρῶν οὐκ ἔστιν, οὐδὲ Χριστὸς ἐγήγερται" +
+            "    εἰ δέ ἀνάστασις νεκρῶν οὐκ ἔστιν, οὐδὲ Χριστὸς ἐγήγερται\n" +
             "    But if there is no ressurection of the dead, then not even Christ has been raised."),
 
         new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
             "  * Second class conditional, aka contrary to fact:  if something were true, which it isn't, then\n" +
-            "    something else would be true." +
+            "    something else would be true.\n" +
             "    protasis: εἰ + indicative past tense; apodosis: ἄν plus same tense as protasis; negated by μή\n" +
-            "    εἰ γάρ ἔγνωσαν, ούκ ἂν τὸν κύριον τῆς δόξης ἐσταύπωσαν" +
+            "    εἰ γάρ ἔγνωσαν, ούκ ἂν τὸν κύριον τῆς δόξης ἐσταύπωσαν\n" +
             "    For if they had known, they would not have crucified the Lord of glory"),
 
         new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
-            "  * Third class conditional, future more probable (something might be true in the future) or present general (generally true at all times)\n" +
+            "  * Third class conditional, future more probable (something might be true in the future)\n" +
+            "    or present general (generally true at all times)\n" +
             "    protasis: ἐάν + subjunctive; apodosis: any mood, any tense; negated by μή\n" +
             "    Future more probable: ταῦτα σοι πάντα δώσω, ἐάν πεσὼν _προσκυνήσῃς_ μοι\n" +
             "    All these things I will give you, if you will fall down and _worship_ me\n" +
@@ -2944,7 +2949,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "2pl  λυ    σα        ι          σθε      λύσαισθε\n" +
             "3pl  λυ    σα        ι          νται     λύσαιντο\n"),
 
-        new GrammarRule("Subjunctive passive aorist paradigm:\n" +
+        new GrammarRule("Optative passive aorist paradigm:\n" +
             "     Stem  tense     mood       personal form\n" +
             "           formative formative  ending\n" +
             "1sg  λυ    θε        ιη                  λυθείην\n" +
