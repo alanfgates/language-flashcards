@@ -146,7 +146,7 @@ class CardDeck implements Serializable {
   private int calculateNumToTest() {
     // Base the number of things to test on the number of rules in the largest grammar's rule set.  This way we have at least one
     // rule each time we test.
-    int maxRules = Integer.MIN_VALUE;
+    int maxRules = 1; // avoid div0 errors
     for (Map.Entry<String, List<GrammarRule>> ruleSet : rules.entrySet()) {
       if (ruleSet.getValue().size() > maxRules) {
         maxRules = ruleSet.getValue().size();
@@ -163,12 +163,15 @@ class CardDeck implements Serializable {
     }
     int numToTest = (int)((double)cards.size() / (double)maxRules / predicted);
 
-    if (numToTest > MAX_CARDS_TO_TEST) {
+    if (numToTest > cards.size()) {
+      numToTest = cards.size();
+    } else if (numToTest > MAX_CARDS_TO_TEST) {
       System.out.println("Should test " + numToTest + " cards, but reducing it to " + MAX_CARDS_TO_TEST);
+      numToTest = MAX_CARDS_TO_TEST;
     } else if (numToTest < MIN_CARDS_TO_TEST) {
       System.out.println("Should test " + numToTest + " cards, but increasing it to " + MIN_CARDS_TO_TEST);
+      numToTest = MIN_CARDS_TO_TEST;
     }
-
 
     System.out.println("Will test with " + numToTest + " cards");
     return numToTest;
