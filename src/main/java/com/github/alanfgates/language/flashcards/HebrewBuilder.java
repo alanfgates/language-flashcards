@@ -98,8 +98,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // Qal Imperative
         new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
-        // TODO - double check this
-        new Word("קָטְלָה", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
@@ -421,7 +419,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 847
         new Word("שָׁלַח", "he sent, stretched out"),
         // 845
-        new Word("מֵת", "he died"), // TODO put in middle vowel
+        new Word("מֵת", "he died - מוּת"),
         // 835
         new Word("שָׁם", "there"),
         // 814
@@ -628,8 +626,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עֵץ", "tree", MASCULINE),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
         // 327
-        // TODO think this should be beerech rather than berech
-        new Word("בֵּרֵךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
+        new Word("בֵּרַךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
         // 325
         new Word("כְּלִי", "utensil, weapon", MASCULINE),
         new Word("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL),
@@ -829,8 +826,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
         // 183
         new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
-        new Word("בּקָרִים", "herds, oxen", MASCULINE, PLURAL),
-        // TODO fix vowel under b.
+        new Word("בְּקָרִים", "herds, oxen", MASCULINE, PLURAL),
         // 182
         new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
         new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
@@ -985,7 +981,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נָגַשׁ", "he drew near, approached"),
         new Word("חֵמָה", "wrath, heat, poison", FEMININE),
         new Word("חֲצִי", "half, middle", MASCULINE),
-        new Word("הִשְׁלְִיך:", "he threw, flung, cast", HIPHIL),
+        new Word("הִשְׁלְִיך:", "he threw, flung, cast - שָׁלַך", HIPHIL),
         // 124
         new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
         // 123
@@ -1015,12 +1011,16 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 116
         new Word("שָׁלֵם", "to be complete, finished"),
         new Word("שָׁלֵם", "he was whole, complete"),
-        new Word("שִׁלַּם", "he repaid", PIEL),
-        new Word("הִשְׁלִים", "he made peace", HIPHIL),
-
+        new Word("שִׁלַּם", "he repaid - שָׁלֵם", PIEL),
+        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL),
+        // 115
+        new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL),
+        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַל", PIEL),
+        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַל", HIPHIL),
         // 114
         new Word("כָּבֵד", "he was heavy, he was honored"),
         new Word("בָּכָה", "he wept (in grief or joy)"),
+        new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE),
 
         // 112
         new Word("לָבַשׁ", "he put on a garmet, he clothed"),
@@ -1865,7 +1865,19 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "הַיּוֹשֶׁבֶת בַּגַּנִּים " +
             "the one who dwells in the gardens"),
 
-        // TODO p 264 22.6
+        new GrammarRule("Qal passive participle strong verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "קָטוּל" + "         " + "קְטוּלִים" + "\n" +
+            "Feminine     " + "קְטוּלָה" + "         " + "קְטוּלוֹת" + "\n" +
+            "All but III-ה follow the strong pattern"),
+
+        new GrammarRule("Qal passive participle III-ה verb:\n" +
+            "             Singular         Plural\n" +
+            "Masculine    " + "בָּנוּי" + "         " + "בְּנוּיִים" + "\n" +
+            "Feminine     " + "בְּנוּיָה" + "         " + "בְּנוּיוֹת" + "\n"),
+
+        new GrammarRule("Participles, because they behave like nouns, can take a definite article,\n" +
+            "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur construct chain in the construct state."),
 
         new GrammarRule("Standard Hebrew word order is verb-subject-object\n" +
             "In the object section, direct and indirect object can come in any order\n" +
@@ -1938,10 +1950,48 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."),
 
         new GrammarRule("Nipal can be passive, reflexive, reciprocal (they heard each other),\n" +
-            "or middle where no agency is specified and the subject and object are the same (the gate opened)")
+            "or middle where no agency is specified and the subject and object are the same (the gate opened)"),
 
+        new GrammarRule("Niphal strong verb perfect:\n" +
+            "1s    " + "נִקְטַלְתִּי" + "\n" +
+            "2ms   " + "נִקְטַלְתָּ" + "\n" +
+            "2fs   " + "נִקְטַלתְּ" + "\n" +
+            "3ms   " + "נִקְטַל" + "\n" +
+            "3fs   " + "נִקְטְלָה" + "\n" +
+            "1p    " + "נִקְטַלְנוּ" + "\n" +
+            "2mp   " + "נִקְטַלְתֶּם" + "\n" +
+            "2fp   " + "נִקְטַלְתֶּן" + "\n" +
+            "3p    " + "נִקְטְלוּ" + "\n"),
 
-        // Do Verb review first
+        new GrammarRule("Niphal strong verb imperfect:\n" +
+            "1s    " + "אֶקָּטֵל" + "\n" +
+            "2ms   " + "תִּקָּטֵל" + "\n" +
+            "2fs   " + "תִּקָּטְלִי" + "\n" +
+            "3ms   " + "יִקָּטֵל" + "\n" +
+            "3fs   " + "תִּקָּטֵל" + "\n" +
+            "1p    " + "נִקָּטֵל" + "\n" +
+            "2mp   " + "תִּקָּטְלוּ" + "\n" +
+            "2fp   " + "תִּקָּטַלְנָה" + "\n" +
+            "3mp   " + "יִקָּטְלוּ" + "\n" +
+            "3fp   " + "תִּקָּטַלְנָה" + "\n"),
+
+        new GrammarRule("Niphal strong verb imperative:\n" +
+            "ms   " + "הִקָּטֵל" + "\n" +
+            "fs   " + "הִקָּטְלִי" + "\n" +
+            "mp   " + "הִקָּטְלְוּ" + "\n" +
+            "fp   " + "הִקָּטַלְנָה" + "\n"),
+
+        new GrammarRule("Niphal strong verb infinitive:\n" +
+            "infinitive construct  " + "הִקָּטֵל" + "\n" +
+            "infinitive absolute   " + "נִקְטוֹל" + "\n" +
+            "infinitive absolute   " + "הִקָּטוֹל" + "\n"),
+
+        new GrammarRule("Niphal strong verb participle:\n" +
+            "ms   " + "נִקְטָל" + "\n" +
+            "fs   " + "נִקְטֶלֶת" + "\n" +
+            "mp   " + "נִקְטָלִים" + "\n" +
+            "fp   " + "נִקְטָלוֹת" + "\n")
+
         // Continue 25 p 299
         // put in books of the Bible first
     );
