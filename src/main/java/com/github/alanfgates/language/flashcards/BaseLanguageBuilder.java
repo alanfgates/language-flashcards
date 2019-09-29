@@ -20,16 +20,14 @@ import java.util.stream.Stream;
 
 abstract class BaseLanguageBuilder implements LanguageBuilder {
   @Override
-  public List<Word> buildWords(int throughChapter) {
+  public List<Word> buildWords() {
     return buildAllWords()
-        .filter(word -> word.getChapter() <= throughChapter)
         .collect(Collectors.toList());
   }
 
   @Override
-  public List<GrammarRule> buildRules(int throughChapter, boolean includeAdvanced) {
+  public List<GrammarRule> buildRules() {
     return buildAllRules()
-        .filter(grammarRule -> grammarRule.getChapter() <= throughChapter && !(!includeAdvanced && grammarRule.isAdvanced()))
         .collect(Collectors.toList());
   }
 

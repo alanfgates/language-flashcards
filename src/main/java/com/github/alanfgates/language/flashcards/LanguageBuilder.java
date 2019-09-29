@@ -19,6 +19,6 @@ import java.util.List;
 public interface LanguageBuilder {
 
   String getLanguageName();
-  List<Word> buildWords(int throughChapter);
-  List<GrammarRule> buildRules(int throughChapter, boolean includeAdvanced);
+  List<Word> buildWords();
+  List<GrammarRule> buildRules();
 }

@@ -44,12 +44,12 @@ class CardDeck implements Serializable {
   private Map<String, List<GrammarRule>> rules;
   private Deque<Double> percentRetired;
 
-  CardDeck(int throughChapter, boolean includeAdvanced) {
+  CardDeck() {
     Map<String, Flashcard> m = new HashMap<>();
     rules = new HashMap<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      for (Word w : builder.buildWords(throughChapter)) {
+      for (Word w : builder.buildWords()) {
         Flashcard f = m.get(w.getOther());
         if (f == null) {
           f = new Flashcard(w);
@@ -60,7 +60,7 @@ class CardDeck implements Serializable {
       }
       // Have to make a copy of the rules list because Arrays.asList returns an implementation of
       // List that doesn't support remove.
-      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules(throughChapter, includeAdvanced)));
+      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
     }
     cards = new LinkedList<>(m.values());
     Collections.shuffle(cards);
@@ -68,7 +68,7 @@ class CardDeck implements Serializable {
     printStatus();
   }
 
-  CardDeck(String filename) throws IOException, ClassNotFoundException {
+  CardDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     ObjectReader reader = mapper.readerFor(Container.class);
     Container c = reader.readValue(new File(filename));
@@ -77,15 +77,8 @@ class CardDeck implements Serializable {
     percentRetired = c.getCardsRetired();
   }
 
-  void daily(int numToTest) throws IOException {
-
-    if (numToTest != 0) {
-      System.out.println("Warning: numToTest command line argument now ignored,\n" +
-          "calculating based on number of rules to go and historic average of number\n" +
-          "of cards finished on each run.");
-    }
-
-    numToTest = calculateNumToTest();
+  void daily() throws IOException {
+    int numToTest = calculateNumToTest();
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
@@ -217,7 +210,7 @@ class CardDeck implements Serializable {
     }
 
     public Deque<Double> getCardsRetired() {
-      return percentRetired == null ? new ArrayDeque<Double>() : percentRetired;
+      return percentRetired == null ? new ArrayDeque<>() : percentRetired;
     }
 
     public Container setCardsRetired(Deque<Double> cardsRetired) {

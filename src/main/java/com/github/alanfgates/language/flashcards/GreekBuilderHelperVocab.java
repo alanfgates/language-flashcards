@@ -282,12 +282,12 @@ class GreekBuilderHelperVocab {
         new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
         new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
         // 572
-        new Word("*ποιε", "to do, to make", 17, ROOT),
-        new Word("ποιω", "I do, I make - root *ποιε", 17),
-        new Word("ποιήσω", "I will make/do - root *ποιε", 17, FUTURE),
-        new Word("ἐποίησα", "I did/made - root *ποιε", 17, AORIST),
-        new Word("πεποίηκα", "I have done/made - root *ποιε", 17, PERFECT),
-        new Word("πεποίημαι", "I have been done/made - root *ποιε", 17, MIDDLE, PASSIVE, PERFECT),
+        new Word("*ποιε", "to do, to make", ROOT),
+        new Word("ποιω", "I do, I make - root *ποιε"),
+        new Word("ποιήσω", "I will make/do - root *ποιε", FUTURE),
+        new Word("ἐποίησα", "I did/made - root *ποιε", AORIST),
+        new Word("πεποίηκα", "I have done/made - root *ποιε", PERFECT),
+        new Word("πεποίημαι", "I have been done/made - root *ποιε", MIDDLE, PASSIVE, PERFECT),
         // 550
         new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),

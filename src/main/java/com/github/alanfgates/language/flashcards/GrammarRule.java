@@ -18,26 +18,13 @@ import java.io.Serializable;
 
 public class GrammarRule implements Serializable {
   private String rule;
-  private int chapter;
-  private boolean advanced;
 
   // For Jackson
   public GrammarRule() {
   }
 
   GrammarRule(String rule) {
-    this(rule, Integer.MAX_VALUE, false);
-  }
-
-  GrammarRule(String rule, int chapter) {
-    this(rule, chapter, false);
-  }
-
-
-  GrammarRule(String rule, int chapter, boolean advanced) {
     this.rule = rule;
-    this.chapter = chapter;
-    this.advanced = advanced;
   }
 
   void show() {
@@ -51,21 +38,5 @@ public class GrammarRule implements Serializable {
 
   public void setRule(String rule) {
     this.rule = rule;
-  }
-
-  public int getChapter() {
-    return chapter;
-  }
-
-  public void setChapter(int chapter) {
-    this.chapter = chapter;
-  }
-
-  public boolean isAdvanced() {
-    return advanced;
-  }
-
-  public void setAdvanced(boolean advanced) {
-    this.advanced = advanced;
   }
 }

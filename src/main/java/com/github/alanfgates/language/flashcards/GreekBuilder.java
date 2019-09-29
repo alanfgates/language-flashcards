@@ -39,7 +39,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "5. Vowels often change their length ('ablaut’).\n" +
             "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
             "7. Square of stops\n" +
-            "8. A tau cannot stand at the end of the word and will drop off", 6),
+            "8. A tau cannot stand at the end of the word and will drop off"),
 
         new GrammarRule("Square of stops (applies to stops before a θ as well):\n" +
             "Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
@@ -243,7 +243,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * ο + ε + ι = οι\n" +
             " * Dipthongs:  if the contract vowel and the first vowel of the dipthong are the\n" +
             "   same, they combine to a single instance of the vowel.  Otherwise they contract.\n" +
-            "   If the second vowel of the dipthong is a ι it subscripts if possible.\n", 17, true),
+            "   If the second vowel of the dipthong is a ι it subscripts if possible.\n"),
 
         new GrammarRule("Present middle/passive indicative paradigm:\n" +
             "     Stem  connecting personal form\n" +

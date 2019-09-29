@@ -41,21 +41,15 @@ public class Word implements Serializable {
   private String english;
   private String other;
   private Enum[] modifiers;
-  private int chapter;
 
   // For Jackson
   public Word() {
   }
 
-  Word(String other, String english, Enum... modifiers) {
-    this(other, english, Integer.MAX_VALUE, modifiers);
-  }
-
-  public Word(String other, String english, int chapter, Enum... modifiers) {
+  public Word(String other, String english, Enum... modifiers) {
     this.english = english;
     this.other = other;
     this.modifiers = modifiers;
-    this.chapter = chapter;
   }
 
   void showFront() {
@@ -140,12 +134,4 @@ public class Word implements Serializable {
     Arrays.sort(modifiers, Comparator.comparingInt(o -> modifierOrder.get(o.getClass())));
   }
 
-  public int getChapter() {
-    return chapter;
-  }
-
-  public Word setChapter(int chapter) {
-    this.chapter = chapter;
-    return this;
-  }
 }
