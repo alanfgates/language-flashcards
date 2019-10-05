@@ -14,7 +14,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.List;
 
 import static com.github.alanfgates.language.flashcards.Declension.*;
 import static com.github.alanfgates.language.flashcards.Gender.*;
@@ -26,8 +27,8 @@ import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
 
 class GreekBuilderHelperGrammar {
-  static Stream<Word> getGrammar() {
-    return Stream.of(
+  static List<Word> getGrammar() {
+    return Arrays.asList(
         //----------------------------------------------------------------------------------------
         // VERB FORMS
         //
@@ -218,7 +219,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύω", "I might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃς", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύῃ", "s/he might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λύωμεν", "we might be loosening",  SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λύωμεν", "we might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύητε", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύωσι", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         new Word("λύωσιν", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
@@ -230,7 +231,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύσω", "I might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λύσῃς", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("λύσῃ", "s/he might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λύσωμεν", "we might loosen",  SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λύσωμεν", "we might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσητε", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λύσωσι", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
         new Word("λύσωσιν", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
@@ -239,7 +240,7 @@ class GreekBuilderHelperGrammar {
         new Word("λάβω", "I might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("λάβῃς", "you might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("λάβῃ", "s/he might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λάβωμεν", "we might receive",  SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("λάβωμεν", "we might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("λάβητε", "you might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("λάβωσι", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
         new Word("λάβωσιν", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
@@ -251,7 +252,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύωμαι", "I might be loosening myself", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you might be loosening yourself", SUBJUNCTIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύηται", "s/he might be loosening her/himself", SUBJUNCTIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λυώμεθα", "we might be loosening ourselves",  SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λυώμεθα", "we might be loosening ourselves", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύησθε", "you might be loosening yourselves", SUBJUNCTIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύωνται", "they might be loosening themselves", SUBJUNCTIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
@@ -262,7 +263,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύσωμαι", "I might loosen myself", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λύσῃ", "you might loosen yourself", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("λύσηται", "s/he might loosen her/himself", SUBJUNCTIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λυσώμεθα", "we might loosen ourselves",  SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λυσώμεθα", "we might loosen ourselves", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσησθε", "you might loosen yourselves", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λύσωνται", "they might loosen themselves", SUBJUNCTIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
 
@@ -270,7 +271,7 @@ class GreekBuilderHelperGrammar {
         new Word("γένωμαι", "I might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("γένῃ", "you might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("γένηται", "s/he might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("γενώμεθα", "we might become",  SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("γενώμεθα", "we might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("γένησθε", "you might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("γένωνται", "they might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
@@ -281,7 +282,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύωμαι", "I might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύῃ", "you might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύηται", "s/he might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λυώμεθα", "we might be being loosened",  SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
+        new Word("λυώμεθα", "we might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύησθε", "you might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύωνται", "they might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
@@ -292,7 +293,7 @@ class GreekBuilderHelperGrammar {
         new Word("λυθῶ", "I might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λυθῇς", "you might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("λυθῇ", "s/he might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λυθῶμεν", "we might be loosened",  SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, PLURAL),
+        new Word("λυθῶμεν", "we might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λυθῆτε", "you might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λυθῶσι", "they might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
         new Word("λυθῶσιν", "they might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
@@ -301,7 +302,7 @@ class GreekBuilderHelperGrammar {
         new Word("γραφῶ", "I might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("γραφῇς", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("γραφῇ", "s/he might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("γραφῶμεν", "we might be written",  SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
+        new Word("γραφῶμεν", "we might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("γραφῆτε", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("γραφῶσι", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
         new Word("γραφῶσιν", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),

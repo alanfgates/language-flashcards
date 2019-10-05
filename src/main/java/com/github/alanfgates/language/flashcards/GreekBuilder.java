@@ -14,7 +14,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.List;
 
 public class GreekBuilder extends BaseLanguageBuilder {
 
@@ -24,15 +25,21 @@ public class GreekBuilder extends BaseLanguageBuilder {
   }
 
   @Override
-  public Stream<Word> buildAllWords() {
-    return Stream.concat(GreekBuilderHelperGrammar.getGrammar(), GreekBuilderHelperVocab.getVocab());
+  public List<Word> buildGrammarWords() {
+    return GreekBuilderHelperGrammar.getGrammar();
   }
 
   @Override
-  public Stream<GrammarRule> buildAllRules() {
-    return Stream.of(
+  public List<Word> buildVocabWords() {
+    return GreekBuilderHelperVocab.getVocab();
+  }
+
+  @Override
+  public List<GrammarRule> buildRules() {
+    return Arrays.asList(
         new GrammarRule("Nouns rules:\n" +
-            "1. Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the third.\n" +
+            "1. Stems ending in α or η are in the first declension, stems ending in ο are in the second, and consonantal stems are in the" +
+            " third.\n" +
             "2. Every neuter word has the same form in the nominative and accusative.\n" +
             "3. Almost all neuter words end in α in the nominative and accusative plural.\n" +
             "4. In the dative singular, the ι subscripts if possible.\n" +
@@ -191,14 +198,14 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Accusative           ὄνομα        α      ὀνόματα\n"),
 
         new GrammarRule("The Three Uses of αὐτος\n" +
-           " 1. Personal pronoun.\n" +
-           " 2. Adjectival intensive.  This is used to modify another word and is placed in the\n" +
-           "    predicate position.  This is usually translated into English with a reflexive\n" +
-           "    pronoun: αὐτος ὁ ἀποστολος the apostle himself.  When functioning as an intensive,\n" +
-           "    αὐτος is usually in the nominative case and modifies the subject.\n" +
-           " 3. Identical adjective, meaning “the same”.  Usually in the attributive position.\n" +
-           "    και παλιν απελθων προσηυξατο τον αυτον λογον\n" +
-           "    And again after going away he prayed the same word."),
+            " 1. Personal pronoun.\n" +
+            " 2. Adjectival intensive.  This is used to modify another word and is placed in the\n" +
+            "    predicate position.  This is usually translated into English with a reflexive\n" +
+            "    pronoun: αὐτος ὁ ἀποστολος the apostle himself.  When functioning as an intensive,\n" +
+            "    αὐτος is usually in the nominative case and modifies the subject.\n" +
+            " 3. Identical adjective, meaning “the same”.  Usually in the attributive position.\n" +
+            "    και παλιν απελθων προσηυξατο τον αυτον λογον\n" +
+            "    And again after going away he prayed the same word."),
 
         new GrammarRule("The demonstratives οὑτος and ἐκεινος can be used as pronouns or\n" +
             "adjectives.  Can also be used as a personal pronoun at times."),
@@ -840,7 +847,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)\n" +
             "Athematic verbs rule 5: most use κα as the tense formative in the aorist."),
 
-        new GrammarRule("Athematic verbs rule 3: they use different personal endings in present active indicative, but the same endings everywhere else:\n" +
+        new GrammarRule("Athematic verbs rule 3: they use different personal endings in present active indicative, but the same endings " +
+            "everywhere else:\n" +
             "Example: *δο\n" +
             "     Stem    personal   form\n" +
             "             ending\n" +
@@ -982,7 +990,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * anaphoric: where the article refers back to a previous reference:\n" +
             "   κήρυξον τὸν λόγον preach the word (referring back to discussion in 2 Tim 3\n" +
             " * deictic: the article points out someone or something present and often is best translated as a demonstrative:\n" +
-            "   προσῆλθον αὐτῷ οἱ μαθηταί λὲγοντες ἔρημός ἐστιν _ὁ_ τόπος The disciples came to him and said, '_This_ place is desolate'\n" +
+            "   προσῆλθον αὐτῷ οἱ μαθηταί λὲγοντες ἔρημός ἐστιν _ὁ_ τόπος The disciples came to him and said, '_This_ place is " +
+            "desolate'\n" +
             " * par excellence: the article identifies a substantive as in a class by itself:\n" +
             "   ὁ προφήτης εἶ σύ; Are you the Prophet?"),
 
@@ -1005,7 +1014,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Koine Greek is VSO")
 
 
-         // Continue with 36.5 page 334
+        // Continue with 36.5 page 334
         // Figure out what to do with 25.23
 
 

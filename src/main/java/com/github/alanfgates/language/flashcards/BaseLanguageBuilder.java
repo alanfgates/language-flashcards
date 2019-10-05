@@ -14,24 +14,21 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 abstract class BaseLanguageBuilder implements LanguageBuilder {
+
   @Override
   public List<Word> buildWords() {
-    return buildAllWords()
-        .collect(Collectors.toList());
+    return buildAllWords();
   }
 
-  @Override
-  public List<GrammarRule> buildRules() {
-    return buildAllRules()
-        .collect(Collectors.toList());
+  private List<Word> buildAllWords() {
+    List<Word> words = new ArrayList<>(buildGrammarWords());
+    words.addAll(buildVocabWords());
+    return words;
   }
 
-  protected abstract Stream<Word> buildAllWords();
-
-  protected abstract Stream<GrammarRule> buildAllRules();
 }

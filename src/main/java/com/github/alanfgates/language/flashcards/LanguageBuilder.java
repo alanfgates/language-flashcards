@@ -19,6 +19,28 @@ import java.util.List;
 public interface LanguageBuilder {
 
   String getLanguageName();
+
+  /**
+   * Build all the words, each word only occurring once
+   * @return all the words, in one list
+   */
   List<Word> buildWords();
+
+  /**
+   * Build all the words that are grammar oriented, such as verb forms, etc.
+   * @return grammar words
+   */
+  List<Word> buildGrammarWords();
+
+  /**
+   * Build all the words that are vocabulary
+   * @return vocab words
+   */
+  List<Word> buildVocabWords();
+
+  /**
+   * Build all the grammar rules, each rule occurring once.
+   * @return all the grammar rules
+   */
   List<GrammarRule> buildRules();
 }

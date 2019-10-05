@@ -43,31 +43,75 @@ class CardDeck implements Serializable {
   private LinkedList<Flashcard> cards;
   private Map<String, List<GrammarRule>> rules;
   private Deque<Double> percentRetired;
+  private int wordsPerTest;
 
+  /**
+   * Build the card deck from source, with each word appearing once
+   */
   CardDeck() {
-    Map<String, Flashcard> m = new HashMap<>();
+    Map<String, Flashcard> flashcards = new HashMap<>();
     rules = new HashMap<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      for (Word w : builder.buildWords()) {
-        Flashcard f = m.get(w.getOther());
-        if (f == null) {
-          f = new Flashcard(w);
-          m.put(w.getOther(), f);
-        } else {
-          f.addWord(w);
-        }
-      }
+      for (Word w : builder.buildWords()) addFlashCard(flashcards, w);
       // Have to make a copy of the rules list because Arrays.asList returns an implementation of
       // List that doesn't support remove.
       rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
     }
-    cards = new LinkedList<>(m.values());
+    cards = new LinkedList<>(flashcards.values());
     Collections.shuffle(cards);
     percentRetired = new ArrayDeque<>();
+    wordsPerTest = 0;
     printStatus();
   }
 
+  /**
+   * Read the card deck from source, but build it with the intent to test numWords each day
+   * @param numWords number of words to test each day
+   */
+  CardDeck(int numWords) {
+    LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
+    rules = new HashMap<>();
+    int totalRules = 0;
+    Map<String, Flashcard> flashcards = new HashMap<>();
+    for (LanguageBuilder builder : builders) {
+      List<GrammarRule> r = builder.buildRules();
+      totalRules += r.size();
+      rules.put(builder.getLanguageName(), new ArrayList<>(r));
+    }
+
+    int targetSize = (int)(totalRules * numWords * ASSUMED_PCT_RETIRED);
+
+    // First, put in every word at least once
+    for (LanguageBuilder builder : builders) {
+      for (Word w : builder.buildGrammarWords()) addFlashCard(flashcards, w);
+      for (Word w : builder.buildVocabWords()) addFlashCard(flashcards, w);
+    }
+
+    // Have to take these out of the flashcards map and put them in the linked list, otherwise
+    // all the words get mapped to the existing flashcards
+    cards = new LinkedList<>(flashcards.values());
+    while (cards.size() < targetSize) {
+      flashcards.clear();
+      for (LanguageBuilder builder : builders) {
+        for (Word w : builder.buildVocabWords()) addFlashCard(flashcards, w);
+      }
+      cards.addAll(flashcards.values());
+    }
+    if (cards.size() > targetSize) {
+      cards = new LinkedList<>(cards.subList(0, targetSize));
+    }
+    Collections.shuffle(cards);
+    percentRetired = new ArrayDeque<>();
+    wordsPerTest = numWords;
+    printStatus();
+  }
+
+  /**
+   * Build the card deck from an existing file.
+   * @param filename name of the file
+   * @throws IOException if the file cannot be read.
+   */
   CardDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     ObjectReader reader = mapper.readerFor(Container.class);
@@ -81,14 +125,7 @@ class CardDeck implements Serializable {
     int numToTest = calculateNumToTest();
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
-    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
-      if (e.getValue().size() > 0) {
-        System.out.println("Rule for " + e.getKey());
-        e.getValue().get(0).show();
-        input.readLine();
-        e.getValue().remove(0);
-      }
-    }
+    doGrammarRules(input);
 
     List<Flashcard> doAgain = new ArrayList<>();
     int initialSize = cards.size();
@@ -120,7 +157,7 @@ class CardDeck implements Serializable {
   void storeDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
-    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
+    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired, wordsPerTest));
   }
 
   private void printStatus() {
@@ -136,7 +173,49 @@ class CardDeck implements Serializable {
     System.out.println(buf.toString());
   }
 
+  private void doGrammarRules(BufferedReader input) throws IOException {
+    if (wordsPerTest > 0) {
+      // Only do one, pick from whichever has more entries
+      List<GrammarRule> most = Collections.emptyList();
+      String language = null;
+      for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+        if (e.getValue().size() > most.size()) {
+          language = e.getKey();
+          most = e.getValue();
+        }
+      }
+      if (language != null) {
+        showOneGrammarRule(input, language, most);
+      }
+    } else {
+      for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+        if (e.getValue().size() > 0) {
+          showOneGrammarRule(input, e.getKey(), e.getValue());
+        }
+      }
+    }
+  }
+
+  private void showOneGrammarRule(BufferedReader input, String language, List<GrammarRule> ruleList) throws IOException {
+    System.out.println("Rule for " + language);
+    ruleList.get(0).show();
+    input.readLine();
+    ruleList.remove(0);
+  }
+
+  private void addFlashCard(Map<String, Flashcard> flashcards, Word w) {
+    Flashcard f = flashcards.get(w.getOther());
+    if (f == null) {
+      f = new Flashcard(w);
+      flashcards.put(w.getOther(), f);
+    } else {
+      f.addWord(w);
+    }
+  }
+
   private int calculateNumToTest() {
+    if (wordsPerTest > 0) return wordsPerTest;
+
     // Base the number of things to test on the number of rules in the largest grammar's rule set.  This way we have at least one
     // rule each time we test.
     int maxRules = 1; // avoid div0 errors
@@ -183,14 +262,16 @@ class CardDeck implements Serializable {
     LinkedList<Flashcard> cards;
     Map<String, List<GrammarRule>> rules;
     Deque<Double> percentRetired;
+    int wordsPerTest;
 
     public Container() {
     }
 
-    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired) {
+    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired, int wordsPerTest) {
       this.cards = cards;
       this.rules = rules;
       this.percentRetired = percentRetired;
+      this.wordsPerTest = wordsPerTest;
     }
 
     public LinkedList<Flashcard> getCards() {
@@ -216,6 +297,14 @@ class CardDeck implements Serializable {
     public Container setCardsRetired(Deque<Double> cardsRetired) {
       this.percentRetired = cardsRetired;
       return this;
+    }
+
+    public int getWordsPerTest() {
+      return wordsPerTest;
+    }
+
+    public void setWordsPerTest(int wordsPerTest) {
+      this.wordsPerTest = wordsPerTest;
     }
   }
 }

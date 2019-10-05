@@ -14,7 +14,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.List;
 
 import static com.github.alanfgates.language.flashcards.Declension.NOMINATIVE;
 import static com.github.alanfgates.language.flashcards.Gender.*;
@@ -34,8 +35,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
   }
 
   @Override
-  public Stream<Word> buildAllWords() {
-    return Stream.of(
+  public List<Word> buildGrammarWords() {
+    return Arrays.asList(
         // VERBS
         // Qal perfect
         new Word("קָטַלְתִּי", "I killed", QAL, PERFECT, FIRST_PERSON, SINGULAR),
@@ -253,10 +254,13 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("יִקְטְלֵכֶם", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, PLURAL),
         new Word("יִקְטְלֵכֶן", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE),
         new Word("יִקְטְלֵם", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, PLURAL),
-        new Word("יִקְטְלֵן", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE),
+        new Word("יִקְטְלֵן", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE)
+    );
+  }
 
-
-        //----------------------------------------------------------------------------------------
+  @Override
+  public List<Word> buildVocabWords() {
+    return Arrays.asList(
         // VOCABULARY, with frequency noted in comments
         // 50524
         new Word("וְ", "and, but, also, even"),
@@ -1103,8 +1107,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
   }
 
   @Override
-  public Stream<GrammarRule> buildAllRules() {
-    return Stream.of(
+  public List<GrammarRule> buildRules() {
+    return Arrays.asList(
         new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
 
@@ -1329,14 +1333,15 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   taking a pronominal suffix.\n" +
             ""),
 
+        // TODO add a real word here
         new GrammarRule("Type 1 pronominal suffixes (singular nouns, some prepositions, direct\n" +
             "object marker, most verbs):\n" +
             "        singular           plural\n" +
-            "1p" +  " נוּ               נִי / ִי   " + "\n" +
-            "2pm" + " כֶם               ךָ       " + "\n" +
-            "2pf" + " כֶן               ך:      " + "\n" +
-            "3pm" + "חֶם / ָם          הוּ / וֹ   " + "\n" +
-            "3pf" + "הֶן / ָן           הָ / ָהּ   " + "\n"),
+            "1p      " +  " נוּ               נִי / ִי   " + "\n" +
+            "2pm     " + " כֶם               ךָ       " + "\n" +
+            "2pf     " + " כֶן               ך:      " + "\n" +
+            "3pm     " + "חֶם / ָם          הוּ / וֹ   " + "\n" +
+            "3pf     " + "הֶן / ָן           הָ / ָהּ   " + "\n"),
 
         // TODO use a real word here to show how masculine plural nouns loose their endings
         new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +

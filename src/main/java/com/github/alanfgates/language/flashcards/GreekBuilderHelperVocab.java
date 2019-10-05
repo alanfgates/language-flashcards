@@ -14,7 +14,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.List;
 
 import static com.github.alanfgates.language.flashcards.Declension.*;
 import static com.github.alanfgates.language.flashcards.Gender.*;
@@ -27,8 +28,8 @@ import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
 
 class GreekBuilderHelperVocab {
-  static Stream<Word> getVocab() {
-    return Stream.of(
+  static List<Word> getVocab() {
+    return Arrays.asList(
         new Word("ὁ", "the", MASCULINE, NOMINATIVE, SINGULAR),
         new Word("τοῦ", "the", MASCULINE, GENITIVE, SINGULAR),
         new Word("τῷ", "the", MASCULINE, DATIVE, SINGULAR),
