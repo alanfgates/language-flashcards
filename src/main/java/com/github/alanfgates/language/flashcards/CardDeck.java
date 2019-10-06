@@ -119,6 +119,7 @@ class CardDeck implements Serializable {
     cards = c.getCards();
     rules = c.getRules();
     percentRetired = c.getCardsRetired();
+    wordsPerTest = c.getWordsPerTest();
   }
 
   void daily() throws IOException {
