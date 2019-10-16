@@ -1215,7 +1215,29 @@ class GreekBuilderHelperVocab {
         new Word("τυφλός", "blind", ADJECTIVE, MASCULINE),
         new Word("τυφλή", "blind", ADJECTIVE, FEMININE),
         new Word("τυφλόν", "blind", ADJECTIVE, NEUTER),
-        new Word("μηδέ", "nor, and not")
+        new Word("μηδέ", "nor, and not"),
+        // 49
+        new Word("ἔτος", "year", NEUTER),
+        new Word("ἔτους", "year", NEUTER, GENITIVE),
+        new Word("χρεία", "need, necessity", FEMININE),
+        new Word("χρείας", "need, necessity", FEMININE, GENITIVE),
+        new Word("παραλαμβάνω", "I take to myself, take along, take over", PRESENT),
+        new Word("παραλήμψομαι", "I will take to myself, will take along, will take over - παραλαμβάνω", FUTURE),
+        new Word("παρέλαβον", "I took to myself, took along, took over - παραλαμβάνω", SECOND_AORIST),
+        new Word("παρελήμφθην", "I was taken along, was taken over - παραλαμβάνω", PASSIVE, AORIST),
+        new Word("*φανερο", "to reveal, make known", ROOT),
+        new Word("φανερῶ", "I reveal, make known - root *φανερο", PRESENT),
+        new Word("φανερώσω", "I reveal, make known φανερῶ - root *φανερο", FUTURE),
+        new Word("ἐφανέρωσα", "I revealed, made known φανερῶ - root *φανερο", AORIST),
+        new Word("ἐφανερώθην", "I was revealed, made known φανερῶ - root *φανερο", PASSIVE, AORIST),
+        new Word("πεφανέρωμαι", "I have been revealed, made known φανερῶ - root *φανερο", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἄρα", "then, therefore"),
+        // 48
+        new Word("ἔρημος", "isolated, desolate, deserted, used as substantive, desert (feminine in this case)", ADJECTIVE),
+        new Word("ἀποδίδωμι", "I give up, give back, pay", PRESENT),
+        new Word("ἀποδώσω", "I will give up, give back, pay - ἀποδίδωμι", FUTURE),
+        new Word("ἀπέδωκα", "I gave up, gave back, paid - ἀποδίδωμι", AORIST),
+        new Word("ἀπεδόθην", "I was given up, given back, paid - ἀποδίδωμι", PASSIVE, AORIST)
 
     );
   }

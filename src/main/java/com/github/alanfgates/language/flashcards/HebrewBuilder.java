@@ -14,6 +14,8 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -1025,11 +1027,14 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("כָּבֵד", "he was heavy, he was honored"),
         new Word("בָּכָה", "he wept (in grief or joy)"),
         new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE),
-
+        // 113
+        new Word("שֶׁקֶר", "deception, lie, disappointment", MASCULINE),
         // 112
         new Word("לָבַשׁ", "he put on a garmet, he clothed"),
-        new Word("בִּלְתּי", "not (with infinitive)"),
+        new Word("בִּלְתּי", "not (with infinitive), except"),
         new Word("לְבִלְתּי", "not (with infinitive)"),
+        new Word("חָשַׁב", "he thought, accounted"),
+        new Word(" עַמּוּד", "pillar, column", MASCULINE),
 
         // 111
         new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
@@ -1995,9 +2000,35 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "ms   " + "נִקְטָל" + "\n" +
             "fs   " + "נִקְטֶלֶת" + "\n" +
             "mp   " + "נִקְטָלִים" + "\n" +
-            "fp   " + "נִקְטָלוֹת" + "\n")
+            "fp   " + "נִקְטָלוֹת" + "\n"),
 
-        // Continue 25 p 299
+        new GrammarRule("III-א niphal differ from strong verbs only in perfect:\n" +
+            "1s    " + "נִמְצֵאתִי" + "\n" +
+            "2ms   " + "נִמְצֵאתָ" + "\n" +
+            "2fs   " + "נִמְצֵאת" + "\n" +
+            "3ms   " + "נִמְצָא" + "\n" +
+            "3fs   " + "נִמְצְאָה" + "\n" +
+            "1p    " + "נִמְצֵאנוּ" + "\n" +
+            "2mp   " + "נִמְצֵאתֶם" + "\n" +
+            "2fp   " + "נִמְצֵאתֶן" + "\n" +
+            "3p    " + "נִמְצְאוּ" + "\n"),
+
+        new GrammarRule("III-ה niphal differ from strong verbs only in perfect and participle:\n" +
+            "perfect 1s    " + "נִבְנֵיתִי" + "\n" +
+            "perfect 2ms   " + "נִבְנֵיתָ" + "\n" +
+            "perfect 2fs   " + "נִבְנֵית" + "\n" +
+            "perfect 3ms   " + "נִבְנָה" + "\n" +
+            "perfect 3fs   " + "נִבְנְתָה" + "\n" +
+            "perfect 1p    " + "נִבְנֵינוּ" + "\n" +
+            "perfect 2mp   " + "נִבְנֵיתֶם" + "\n" +
+            "perfect 2fp   " + "נִבְנֵיתֶן" + "\n" +
+            "perfect 3p    " + "נִבְנוּ" + "\n" +
+            "participle ms    " + "נִבְנֶה" + "\n" +
+            "participle fs    " + "נִבְנָה" + "\n" +
+            "participle mp    " + "נִבְנִים" + "\n" +
+            "participle fp    " + "נִבְנוֹת" + "\n")
+
+        // Continue 25.6 p 302
         // put in books of the Bible first
     );
   }
