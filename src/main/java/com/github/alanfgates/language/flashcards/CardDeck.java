@@ -91,12 +91,14 @@ class CardDeck implements Serializable {
     // Have to take these out of the flashcards map and put them in the linked list, otherwise
     // all the words get mapped to the existing flashcards
     cards = new LinkedList<>(flashcards.values());
+    int lastSize = cards.size();
     while (cards.size() < targetSize) {
       flashcards.clear();
       for (LanguageBuilder builder : builders) {
-        for (Word w : builder.buildVocabWords()) addFlashCard(flashcards, w);
+        for (Word w : builder.buildVocabWords()) if (w.getNeedsExtra()) addFlashCard(flashcards, w);
       }
       cards.addAll(flashcards.values());
+      if (cards.size() == lastSize) break; // in case no words are marked as needs extra
     }
     if (cards.size() > targetSize) {
       cards = new LinkedList<>(cards.subList(0, targetSize));

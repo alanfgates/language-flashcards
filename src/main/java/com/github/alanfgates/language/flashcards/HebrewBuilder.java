@@ -107,7 +107,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // Qal various odd important ones
         new Word("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
-        new Word("קַה", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַח", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("הֱיֵה", "be!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
         new Word("עֲלֵה", "go up!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
@@ -317,8 +317,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הֵן", "those", FEMININE, PLURAL),
         new Word("הֵנָּה", "those", FEMININE, PLURAL),
         // 4487
-        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"),
-        new Word("כִּי–אִם", "but, except"),
+        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly", true),
+        new Word("כִּי–אִם", "but, except", true),
         // 3576
         new Word("הָיָה",	"he was"),
         // 2909
@@ -341,8 +341,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("אֶרֶץ", "land, earth", FEMININE),
         new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
         // 2303
-        new Word("יוֹם", "day", MASCULINE),
-        new Word("יָמִים", "days", MASCULINE, PLURAL),
+        new Word("יוֹם", "day", true, MASCULINE),
+        new Word("יָמִים", "days", true, MASCULINE, PLURAL),
         // 2187
         new Word("אִיש", "man", MASCULINE),
         new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
@@ -360,7 +360,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
         // 1627
         new Word("יָד", "hand, (metaphorically) side, power", FEMININE),
-        new Word("יַד", "hand of", FEMININE, CONSTRUCT),
+        new Word("יַד", "hand of", true, FEMININE, CONSTRUCT),
         new Word("יָדַיִם", "hands", FEMININE, DUAL),
         // 1554
         new Word("הָלַךּ",	"he walked"),
@@ -368,7 +368,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("דָּבָר", "word, speech", MASCULINE),
         new Word("דְּבָרִים", "words, speeches", MASCULINE, PLURAL),
         // 1310
-        new Word("רָאָה", "he saw"),
+        new Word("רָאָה", "he saw", true),
         // 1263
         new Word("עַד", "until, as far as"),
         // 1210
@@ -380,7 +380,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 1135
         new Word("דִּבֶּר",	"he spoke", PIEL),
         // 1119
-        new Word("ָה", "to, toward, directional ending"),
+        new Word("ָה", "to, toward, directional ending", true),
         // 1094
         new Word("עִיר", "city", FEMININE),
         new Word("עָרִים", "cities", FEMININE, PLURAL),
@@ -396,8 +396,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 1048
         new Word("עִם", "with"),
         // 976
-        new Word("אֶחָד", "one", MASCULINE),
-        new Word("אַחַת", "one", FEMININE),
+        new Word("אֶחָד", "one", true, MASCULINE),
+        new Word("אַחַת", "one", true, FEMININE),
         // 966
         new Word("לָקַח", "he took"),
         // 952
@@ -434,36 +434,36 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עֶבֶד", "servant, slave", MASCULINE),
         new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
         // 783
-        new Word("אַיִן", "nothing, there is not"),
-        new Word("אֵין", "nothing, there is not"),
+        new Word("אַיִן", "nothing, there is not", true),
+        new Word("אֵין", "nothing, there is not", true),
         // 781
         new Word("אִשָּׁה", "woman, wife", FEMININE),
-        new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
+        new Word("אֵשֶׁת", "woman, wife", true, FEMININE, SINGULAR, CONSTRUCT),
         new Word("נָשׁים", "women, wives", FEMININE, PLURAL),
-        new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT),
+        new Word("נְשֵׁי", "women, wives", true, FEMININE, PLURAL, CONSTRUCT),
         // 774
         new Word("אָדוֹן", "lord, master", MASCULINE),
         new Word("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL),
         // 769
-        new Word("שְׁנַיִם", "two", MASCULINE),
-        new Word("שְׁתַּים", "two", FEMININE),
-        new Word("שֵׁנִי", "second", MASCULINE),
-        new Word("שֵׁנִית", "second", FEMININE),
+        new Word("שְׁנַיִם", "two", true, MASCULINE),
+        new Word("שְׁתַּים", "two", true, FEMININE),
+        new Word("שֵׁנִי", "second", true, MASCULINE),
+        new Word("שֵׁנִית", "second", true, FEMININE),
         new Word("גַּם", "also"),
         // 757
         new Word("נֶפֶש", "soul, person", FEMININE),
         new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
         // 754
-        new Word("מָה", "what?"),
-        new Word("מַה", "what?"),
-        new Word("מֶה", "what?"),
+        new Word("מָה", "what?", true),
+        new Word("מַה", "what?", true),
+        new Word("מֶה", "what?", true),
         // 750
         new Word("כֹּהַן", "priest", MASCULINE),
         new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
-        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence"),
+        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence", true),
         // 743
-        new Word("כֵּן", "so, thus"),
+        new Word("כֵּן", "so, thus", true),
         // 736
         new Word("קָרָא", "he called"),
         // 729
@@ -484,7 +484,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 606
         new Word("שָׁלשׁ", "three", MASCULINE),
         new Word("שְׁלֹשִׁים", "thirty"),
-        new Word("שְׁלִישִׁי", "third"),
+        new Word("שְׁלִישִׁי", "third", true),
         // 600
         new Word("רֹאשׁ", "head", MASCULINE),
         new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
@@ -494,9 +494,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 583
         new Word("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL),
         new Word("מֵי", "water", MASCULINE, SINGULAR, PLURAL, CONSTRUCT),
-        new Word("מֵאָה", "hundred"),
+        new Word("מֵאָה", "hundred", true),
         // 577
-        new Word("כֹּה", "thus, here"),
+        new Word("כֹּה", "thus, here", true),
         // 560
         new Word("גּוֹי", "nation", MASCULINE),
         new Word("גּוֹיִם", "nations", MASCULINE, PLURAL),
@@ -514,39 +514,39 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 524
         new Word("עָמַד", "he stood"),
         // 511
-        new Word("תַּחַת", "under, instead of"),
+        new Word("תַּחַת", "under, instead of", true),
         // 508
-        new Word("חָמַשׁ", "five", MASCULINE),
+        new Word("חָמַשׁ", "five", true, MASCULINE),
         new Word("חֲמִשִּׁים", "fifty"),
         // 505
         new Word("קוֹל", "voice, sound", MASCULINE),
         new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
         // 501
-        new Word("הִכָּה", "he hit - נכה (he smote)", HIPHIL),
+        new Word("הִכָּה", "he hit - נכה (he smote)", true, HIPHIL),
         // 498
-        new Word("פֶה", "mouth", MASCULINE),
-        new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT),
+        new Word("פֶה", "mouth", true, MASCULINE),
+        new Word("פִּי", "mouth", true, MASCULINE, SINGULAR, CONSTRUCT),
         new Word("פִּיּוֹת", "mouths", MASCULINE, PLURAL),
         // 496
         new Word("צָבָא", "host, army, war, service", MASCULINE),
         new Word("צְבָאוֹת", "hosts, armies, wars, services", MASCULINE, PLURAL),
         // 496
-        new Word("צִוָּה", "he commanded"),
+        new Word("צִוָּה", "he commanded", true),
         // 495
         new Word("יָלַד", "he bore, he begat"),
         // 494
-        new Word("אֶלֶף", "thousand"),
+        new Word("אֶלֶף", "thousand", true),
         // 492
-        new Word("עֶשֶׁר", "ten", MASCULINE),
-        new Word("עֲשָׂרָה", "ten", FEMININE),
-        new Word("עֶשְׂרִים", "twenty"),
+        new Word("עֶשֶׁר", "ten", true, MASCULINE),
+        new Word("עֲשָׂרָה", "ten", true, FEMININE),
+        new Word("עֶשְׂרִים", "twenty", true),
         // 491
         new Word("שֶׁבַע", "seven", MASCULINE),
         new Word("שִׁבְעִים", "seventy"),
         // 491
         new Word("עוֹד", "again, still, long"),
         // 470
-        new Word("קֹדֶש", "holiness, apartness, sacredness", MASCULINE),
+        new Word("קֹדֶש", "holiness, apartness, sacredness", true, MASCULINE),
         new Word("קֳדָשִׁים", "holiness, apartness, sacredness", MASCULINE, PLURAL),
         // 469
         new Word("שָׁמַר", "he guarded, watched, preserved"),
@@ -561,11 +561,11 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עוֹלָמִים", "forever", MASCULINE, PLURAL),
         // 435
         new Word("נָפַל", "he fell"),
-        new Word("עַתָּה", "now"),
+        new Word("עַתָּה", "now", true),
         // 424
         new Word("מִשְׁפָת", "judgement, law", MASCULINE),
         new Word("מִשׁפָּטִים", "judgements, laws", MASCULINE, PLURAL),
-        new Word("מִי", "who?"),
+        new Word("מִי", "who?", true),
         // 421
         new Word("שַׂר", "prince, chief", MASCULINE),
         new Word("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL),
@@ -577,7 +577,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("חֶרֶב", "sword", FEMININE),
         new Word("חֲרָבוֹת", "swords", FEMININE, PLURAL),
         // 409
-        new Word("רַב", "great, many", MASCULINE),
+        new Word("רַב", "great, many", true, MASCULINE),
         new Word("רַבָּה", "great, many", FEMININE),
         new Word("בַּין", "between"),
         // 405
@@ -590,8 +590,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מָקוֹם", "place", MASCULINE),
         new Word("מְקוֹמוֹת", "places", MASCULINE, PLURAL),
         // 396
-        new Word("יָם", "sea", MASCULINE),
-        new Word("יַמִּים", "seas", MASCULINE, PLURAL),
+        new Word("יָם", "sea", true, MASCULINE),
+        new Word("יַמִּים", "seas", true, MASCULINE, PLURAL),
         // 389
         new Word("זָהָב", "gold", MASCULINE),
         // 382
@@ -600,7 +600,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("בָּנָה", "he built"),
         new Word("אַשׁ", "fire", FEMININE),
         // 376
-        new Word("נְאֻם", "utterance", MASCULINE),
+        new Word("נְאֻם", "utterance", true, MASCULINE),
         // 373
         new Word("שַׁעַר", "gate", MASCULINE),
         new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
@@ -609,7 +609,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
         new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
         // 371
-        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL),
+        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", true, HIPHIL),
         // 363
         new Word("רוּחַ", "spirit, breath, wind", FEMININE),
         new Word("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL),
@@ -617,7 +617,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("דָּם", "blood", MASCULINE),
         new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
-        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רַע", "bad, evil", true, ADJECTIVE, MASCULINE, SINGULAR),
         new Word("רָעָה", "bad, evil", ADJECTIVE, FEMININE, SINGULAR),
         new Word("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL),
@@ -627,7 +627,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("אֹהֶל", "tent", MASCULINE),
         new Word("אֹהָלִים", "tents", MASCULINE, PLURAL),
         // 338
-        new Word("סָבִיב", "all around"),
+        new Word("סָבִיב", "all around", true),
         // 330
         new Word("עֵץ", "tree", MASCULINE),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
@@ -644,7 +644,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מִלְחָמָה", "war, battle", FEMININE),
         new Word("מִלְחָמוֹת", "wars, battles", FEMININE, PLURAL),
         // 318
-        new Word("יָרֵא", "he feared"),
+        new Word("יָרֵא", "he feared", true),
         // 317
         new Word("עָנָה", "he answered"),
         new Word("נָבִיא", "prophet", MASCULINE),
@@ -656,16 +656,16 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מִשְׁפָּחָה", "family", FEMININE),
         new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL),
         // 298
-        new Word("סָר", "he turned aside - סור"),
+        new Word("סָר", "he turned aside - סור", true),
         new Word("חַטָּאת", "sin, sin offering", FEMININE),
         new Word("לֶחֶם", "bread, food", MASCULINE),
         new Word("מְאֹד", "very"),
         // 296
-        new Word("עַת", "time, point in time", FEMININE),
+        new Word("עַת", "time, point in time", true, FEMININE),
         // 290
-        new Word("חָזַק", "he was strong"),
+        new Word("חָזַק", "he was strong", true),
         // 289
-        new Word("כָּרַת", "he cut off"),
+        new Word("כָּרַת", "he cut off", true),
         new Word("עָבַד", "he worked, he served"),
         // 288
         new Word("עֹלָה", "whole burnt offering", FEMININE),
@@ -673,15 +673,15 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 287
         new Word("חָיָה", "he lived"),
         // 285
-        new Word("אֹיֵב", "enemy", MASCULINE),
+        new Word("אֹיֵב", "enemy", true, MASCULINE),
         // 284
-        new Word("אָיַב", "he was hostile"),
+        new Word("אָיַב", "he was hostile", true),
         new Word("בְּרִית", "covenant", FEMININE),
         // 283
-        new Word("חֹדֶשׁ", "month, new moon", MASCULINE),
+        new Word("חֹדֶשׁ", "month, new moon", true, MASCULINE),
         new Word("חֳדָשִׁים", "months, new moons", MASCULINE, PLURAL),
         // 280
-        new Word("קָרַב", "he came near, he offered"),
+        new Word("קָרַב", "he came near, he offered", true),
         // 277
         new Word("אַף", "nose, anger", MASCULINE),
         new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
@@ -692,40 +692,40 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 272
         new Word("אֶבֶן", "stone", FEMININE),
         new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
-        new Word("לְמַעַן", "because of, in order to, for the sake of"),
+        new Word("לְמַעַן", "because of, in order to, for the sake of", true),
         // 270
-        new Word("בָּשָׂר", "flesh, meat, skin", MASCULINE),
+        new Word("בָּשָׂר", "flesh, meat, skin", true, MASCULINE),
         new Word("בְּשָׂרִים", "fleshes, meats, skins", MASCULINE, PLURAL),
         new Word("מִדְבָּר", "wilderness, desert, pasture", MASCULINE),
         // 268
         new Word("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL),
         // 264
-        new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רָשָׁע", "wicked", true, ADJECTIVE, MASCULINE, SINGULAR),
         new Word("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רְשָׁעָה", "wicked", ADJECTIVE, FEMININE, SINGULAR),
         // 252
-        new Word("מַטֶּה", "tribe, staff", MASCULINE),
+        new Word("מַטֶּה", "tribe, staff", true, MASCULINE),
         new Word("מָטּוֹת", "tribes, staffs", MASCULINE, PLURAL),
         // 251
         new Word("רֶגֶל", "foot", FEMININE),
         new Word("רַגְלַיִם", "feet", FEMININE, DUAL),
         // 250
-        new Word("מָלֵא", "he filled"),
-        new Word("אַמָּה", "cubit, forearm", FEMININE),
+        new Word("מָלֵא", "he filled", true),
+        new Word("אַמָּה", "cubit, forearm", true, FEMININE),
         new Word("אַמּוֹת", "cubits, forearms", FEMININE, PLURAL),
         // 249
         new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE),
         new Word("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL),
         // 245
-        new Word("חַיַל", "strength, wealth, army", MASCULINE),
+        new Word("חַיַל", "strength, wealth, army", true, MASCULINE),
         new Word("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL),
         // 241
-        new Word("גְּבוּל", "border, boundary, territory", MASCULINE),
+        new Word("גְּבוּל", "border, boundary, territory", true, MASCULINE),
         // 240
         new Word("נַעַר", "boy, youth", MASCULINE),
         new Word("נְעָרִים", "boys, youths", MASCULINE, PLURAL),
         // 239
-        new Word("חָטָא", "he sinned, he missed"),
+        new Word("חָטָא", "he sinned, he missed", true),
         // 237
         new Word("שָׁלוֹם", "peace, completeness", MASCULINE),
         // 236
@@ -737,101 +737,101 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עָוֹן", "iniquity", MASCULINE),
         new Word("עֲוֹנוֹת", "iniquities", MASCULINE, PLURAL),
         // 232
-        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed"),
+        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed", true),
         // 229
         new Word("זֶרַע", "seed", MASCULINE),
         // 227
         new Word("לַיְלָה", "night", MASCULINE),
         new Word("לֵילוֹת", "nights", MASCULINE, PLURAL),
-        new Word("קֶרֶב", "midst, inward part", MASCULINE),
+        new Word("קֶרֶב", "midst, inward part", true, MASCULINE),
         // 225
-        new Word("בִּקֵּשׁ", "he sought", PIEL),
-        new Word("זָכַר", "he remembered"),
-        new Word("כָּתַב", "he wrote"),
+        new Word("בִּקֵּשׁ", "he sought", true, PIEL),
+        new Word("זָכַר", "he remembered", true),
+        new Word("כָּתַב", "he wrote", true),
         // 223
         new Word("מוֹעַד", "appointed time, place", MASCULINE),
         new Word("מוֹעֲדִים", "appointed times, places", MASCULINE, PLURAL),
         new Word("תּוֹרָה", "law, instruction", FEMININE),
         new Word("תּוֹרוֹת", "laws, instructions", FEMININE, PLURAL),
         // 222
-        new Word("נַחֲלָה", "possession", FEMININE),
+        new Word("נַחֲלָה", "possession", true, FEMININE),
         new Word("נְחָלוֹת", "possessions", FEMININE, PLURAL),
         new Word("אֲדָמָה", "land, ground, earth", FEMININE),
         new Word("אֲדָמוֹת", "lands, grounds", FEMININE, PLURAL),
         // 220
         new Word("אֵם", "mother", FEMININE),
         // 219
-        new Word("נָכְוֹן", "he was firm, established, prepared", NIPHAL),
+        new Word("נָכְוֹן", "he was firm, established, prepared", true, NIPHAL),
         // 217
         new Word("אָהַב", "he loved"),
-        new Word("שָׁתָה", "he drank"),
+        new Word("שָׁתָה", "he drank", true),
         // 216
-        new Word("נָטָה", "he stretched out"),
+        new Word("נָטָה", "he stretched out", true),
         new Word("בֶּגֶד", "garmet", MASCULINE),
         new Word("בְּגָדִים", "garmets", MASCULINE, PLURAL),
         // 215
         new Word("יָסַף", "he added, he did again"),
-        new Word("מַחֲנֶה", "camp", MASCULINE, FEMININE),
+        new Word("מַחֲנֶה", "camp", true, MASCULINE, FEMININE),
         new Word("מַחַנוֹת", "camps", MASCULINE, FEMININE, PLURAL),
         // 214
-        new Word("עָזַב", "he forsook, left"),
+        new Word("עָזַב", "he forsook, left", true),
         // 213
-        new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL),
-        new Word("שָׁכַב", "he layed down, he had sex"),
+        new Word("הִצִּיל", "he saved, delivered - נצל", true, HIPHIL),
+        new Word("שָׁכַב", "he layed down, he had sex", true),
         new Word("בֹּקֶר", "morning", MASCULINE),
         new Word("בְּקָרִים", "mornings", MASCULINE, PLURAL),
         new Word("מַלְאָךּ", "messenger", MASCULINE),
         new Word("מַלְאָכִים", "messengers", MASCULINE, PLURAL),
         // 211
-        new Word("מִנְחָה", "gift, tribute, offering", FEMININE),
+        new Word("מִנְחָה", "gift, tribute, offering", true, FEMININE),
         // 208
-        new Word("כָּלָה", "he was complete, finished, he came to an end"),
+        new Word("כָּלָה", "he was complete, finished, he came to an end", true),
         // 206
         new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE),
         new Word("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL),
         // 204
         new Word("שָׁפַת", "he judged"),
         // 202
-        new Word("אֲרוֹן", "ark, chest", MASCULINE),
+        new Word("אֲרוֹן", "ark, chest", true, MASCULINE),
         // 200
         new Word("אָסַף", "he gathered"),
         // 199
-        new Word("כָּבוֹד", "abundance, honor, glory", MASCULINE),
+        new Word("כָּבוֹד", "abundance, honor, glory", true, MASCULINE),
         // 195
-        new Word("רוּם", "he was high, exalted"),
-        new Word("כַּף", "palm of the hand, sole of the foot", FEMININE),
+        new Word("רוּם", "he was high, exalted", true),
+        new Word("כַּף", "palm of the hand, sole of the foot", true, FEMININE),
         new Word("כַּפוֹת", "palms of the hands, soles of the feet", FEMININE, PLURAL),
         // 194
-        new Word("יָכוֹל", "he was able"),
+        new Word("יָכוֹל", "he was able", true),
         // 193
         new Word("שֶׁמֶן", "fat, oil", MASCULINE),
         new Word("שְמָנִים", "fats, oils", MASCULINE, PLURAL),
         // 191
-        new Word("חֲצֵרִים", "settlements, villages", MASCULINE),
+        new Word("חֲצֵרִים", "settlements, villages", true, MASCULINE),
         new Word("חֲצֵרִים", "settlements, villages", MASCULINE, PLURAL),
         // 190
         new Word("בְּהֵמָה", "beast", FEMININE),
         new Word("בְּהֵמוֹת", "beasts", FEMININE, PLURAL),
-        new Word("שָׁבֶט", "scepter, rod, tribe", MASCULINE),
+        new Word("שָׁבֶט", "scepter, rod, tribe", true, MASCULINE),
         new Word("שְׁבָטִים", "scepters, rods, tribes", MASCULINE, PLURAL),
         // 188
-        new Word("אֹזֶן", "ear", FEMININE),
+        new Word("אֹזֶן", "ear", true, FEMININE),
         new Word("אָזְנַיִם", "ears", FEMININE, DUAL),
         // 187
-        new Word("גָלָה", "he removed, uncovered, departed"),
-        new Word("סֵפֶר", "document, book", MASCULINE),
+        new Word("גָלָה", "he removed, uncovered, departed", true),
+        new Word("סֵפֶר", "document, book", true, MASCULINE),
         new Word("סְפָרִים", "documents, books", MASCULINE, PLURAL),
-        new Word("רֵעַ", "friend, companion, fellow", MASCULINE),
+        new Word("רֵעַ", "friend, companion, fellow", true, MASCULINE),
         new Word("רֵעִים", "friends, companions, fellows", MASCULINE, PLURAL),
         // 186
         new Word("שָׁבַע", "he swore"),
         // 185
-        new Word("אָבַד", "he perished, he vanished, he became lost"),
+        new Word("אָבַד", "he perished, he vanished, he became lost", true),
         // 184
-        new Word("מִצְוָה", "commandment", FEMININE),
+        new Word("מִצְוָה", "commandment", true, FEMININE),
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
         // 183
-        new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
+        new Word("בָּקָר", "cattle, herd, ox", true, MASCULINE),
         new Word("בְּקָרִים", "herds, oxen", MASCULINE, PLURAL),
         // 182
         new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
@@ -843,227 +843,228 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("זְקֵנִים", "old", ADJECTIVE, MASCULINE, PLURAL),
         new Word("זְקֵנוֹת", "old", ADJECTIVE, FEMININE, PLURAL),
         // 178
-        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL),
-        new Word("רָבָה", "he was(became) great/many"),
-        new Word("שָֹפָה", "lip, language, edge, shore", FEMININE),
+        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", true, HIPHIL),
+        new Word("רָבָה", "he was(became) great/many", true),
+        new Word("שָֹפָה", "lip, language, edge, shore", true, FEMININE),
         new Word("שְׂפָתַיִם", "lips, languages, edges, shores", FEMININE, DUAL),
-        new Word("לָמָּה", "why?"),
+        new Word("לָמָּה", "why?", true),
         // 174
-        new Word("שָאַל", "he asked"),
+        new Word("שָאַל", "he asked", true),
         // 173
-        new Word("שָׁחָה", "he bowed down"),
+        new Word("שָׁחָה", "he bowed down", true),
         // 171
-        new Word("בִּין", "he discerned, understood"),
-        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL),
-        new Word("קָדַשׁ", "he was consecrated, he consecrated"),
+        new Word("בִּין", "he discerned, understood", true),
+        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", true, NIPHAL),
+        new Word("קָדַשׁ", "he was consecrated, he consecrated", true),
         // 170
-        new Word("בָּחַר", "he chose, tested, examined"),
+        new Word("בָּחַר", "he chose, tested, examined", true),
         // 167
-        new Word("הָרַג", "he attacked, he slew"),
-        new Word("רָעָה", "he pastured, tended, grazed"),
-        new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
+        new Word("הָרַג", "he attacked, he slew", true),
+        new Word("רָעָה", "he pastured, tended, grazed", true),
+        new Word("דּוֹר", "period, generation, dwelling", true, MASCULINE),
         new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
-        new Word("מְלָאכָה", "work, occupation", FEMININE),
+        new Word("מְלָאכָה", "work, occupation", true, FEMININE),
         new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL),
         // 166
-        new Word("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("אַחֵר", "another", true, ADJECTIVE, MASCULINE, SINGULAR),
         new Word("אֲחֵרִים", "another", ADJECTIVE, MASCULINE, PLURAL),
         new Word("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR),
         new Word("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL),
         // 165
-        new Word("דָּרַשׁ", "he sought, inquired, investigated, required, demanded"),
+        new Word("דָּרַשׁ", "he sought, inquired, investigated, required, demanded", true),
         // 164
-        new Word("חוּץ", "outside, street", NOUN, MASCULINE),
+        new Word("חוּץ", "outside, street", true, NOUN, MASCULINE),
         new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE),
         new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
         // 163
-        new Word("סָבַב", "he turned around, went around, surrounded"),
+        new Word("סָבַב", "he turned around, went around, surrounded", true),
         // 162
-        new Word("טָמֵא", "he was/became unclean"),
-        new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
+        new Word("טָמֵא", "he was/became unclean", true),
+        new Word("זֶבַח", "sacrifice", true, NOUN, MASCULINE),
         // 161
-        new Word("אַיִל", "ram", NOUN, MASCULINE),
-        new Word("בַּד", "alone"),
-        new Word("אַך:", "only, surely, nevertheless"),
+        new Word("אַיִל", "ram", true, NOUN, MASCULINE),
+        new Word("בַּד", "alone", true),
+        new Word("אַך:", "only, surely, nevertheless", true),
         new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
         // 160
-        new Word("נוּס", "he fled, he escaped"),
-        new Word("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE),
-        new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
+        new Word("נוּס", "he fled, he escaped", true),
+        new Word("גִּּבּוֹר", "mighty man, hero, warrior", true, MASCULINE),
+        new Word("גִּּבּוֹר", "mighty", true, ADJECTIVE),
         // 159
-        new Word("צדָקָה", "righteousness", FEMININE),
+        new Word("צדָקָה", "righteousness", true, FEMININE),
         // 156
-        new Word("שָׂמַח", "he rejoiced, he was glad"),
+        new Word("שָׂמַח", "he rejoiced, he was glad", true),
         // 153
-        new Word("מָוֶת", "death, dying", MASCULINE),
-        new Word("צָפוֹן", "north, northern", FEMININE),
-        new Word("כָּסָה", "he covered"),
+        new Word("מָוֶת", "death, dying", true, MASCULINE),
+        new Word("צָפוֹן", "north, northern", true, FEMININE),
+        new Word("כָּסָה", "he covered", true),
         // 151
-        new Word("נֶגֶד", "opposite, in front of"),
+        new Word("נֶגֶד", "opposite, in front of", true),
         // 150
-        new Word("רֹב", "multitude, greatness", NOUN, MASCULINE),
-        new Word("נָגַע", "he touched, struck, escaped"),
+        new Word("רֹב", "multitude, greatness", true, NOUN, MASCULINE),
+        new Word("נָגַע", "he touched, struck, escaped", true),
         // 149
-        new Word("עֵדָה", "congregation, assembly", FEMININE),
-        new Word("חָכְמָה", "wisdom", FEMININE),
+        new Word("עֵדָה", "congregation, assembly", true, FEMININE),
+        new Word("חָכְמָה", "wisdom", true, FEMININE),
         // 148
-        new Word("שָׁבַר", "he broke (up), smashed"),
-        new Word("שָׂנֵא", "he hated"),
+        new Word("שָׁבַר", "he broke (up), smashed", true),
+        new Word("שָׂנֵא", "he hated", true),
         // 147
-        new Word("שְׁמֹנֶה", "eight", MASCULINE),
-        new Word("שְׁמֹנִים", "eighty"),
+        new Word("שְׁמֹנֶה", "eight", true, MASCULINE),
+        new Word("שְׁמֹנִים", "eighty", true),
         new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE),
         // 146
-        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"),
-        new Word("הִלֵּל", "he praised – הָלַל", PIEL),
-        new Word("הוּלָּל", "he was praised – הָלַל", PUAL),
-        new Word("יִתְהַלִּל", "he boasted about himself – הָלַל", HITHPAEL),
+        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched", true),
+        new Word("הִלֵּל", "he praised – הָלַל", true, PIEL),
+        new Word("הוּלָּל", "he was praised – הָלַל", true, PUAL),
+        // TODO why does this start with y, that doesn't seem right.
+        new Word("יִתְהַלִּל", "he boasted about himself – הָלַל", true, HITHPAEL),
         // 145
-        new Word("עֲבֹדָה", "labor, service", NOUN, FEMININE),
+        new Word("עֲבֹדָה", "labor, service", true, NOUN, FEMININE),
         // 144
-        new Word("רָדַף", "he pursued, followed after, persecuted"),
+        new Word("רָדַף", "he pursued, followed after, persecuted", true),
         // 143
-        new Word("חָנָה", "he declined, camped, lay seige to"),
+        new Word("חָנָה", "he declined, camped, lay seige to", true),
         // 142
-        new Word("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL),
-        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL),
-        new Word("הִשְׁהִית", "he destroyed", HIPHIL),
+        new Word("נִשְׁחַת", "he was corrupt, spoiled", true, NIPHAL),
+        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", true, PIEL),
+        new Word("הִשְׁהִית", "he destroyed", true, HIPHIL),
         // 141
-        new Word("אָז", "then, since, before"),
-        new Word("יַיִן", "wine", MASCULINE),
-        new Word("יָמִין", "right hand, south", FEMININE),
-        new Word("כְּמוֹ", "like, as"),
+        new Word("אָז", "then, since, before", true),
+        new Word("יַיִן", "wine", true, MASCULINE),
+        new Word("יָמִין", "right hand, south", true, FEMININE),
+        new Word("כְּמוֹ", "like, as", true),
         // 140
-        new Word("נוּחַ", "he rested, settled down"),
-        new Word("הֵנִיחַ", "he gave rest to, he set down", HIPHIL),
+        new Word("נוּחַ", "he rested, settled down", true),
+        new Word("הֵנִיחַ", "he gave rest to, he set down", true, HIPHIL),
         // 139
-        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
-        new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
-        new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE),
-        new Word("קָרָא", "he encountered, he met"),
+        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed", true),
+        new Word("מִשְׁכָּן", "dwelling place, tabernacle", true, MASCULINE),
+        new Word("נְחֹשֶׁת", "copper, bronze", true, MASCULINE),
+        new Word("קָרָא", "he encountered, he met", true),
         // 138
         new Word("סוּס", "horse", MASCULINE),
         new Word("סוּסִים", "horses", MASCULINE, PLURAL),
-        new Word("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("חָכָם", "wise", true, ADJECTIVE, MASCULINE, SINGULAR),
         new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
         // 137
-        new Word("נַחַל", "stream, wadi", MASCULINE),
+        new Word("נַחַל", "stream, wadi", true, MASCULINE),
         // 136
-        new Word("פָּתַח", "he opened"),
+        new Word("פָּתַח", "he opened", true),
         // 135
-        new Word("כִּסֵּא", "chair, throne", MASCULINE),
-        new Word("הֵחֵל", "he began – חָלַל", HIPHIL),
-        new Word("נִחָל", "he was defiled – חָלַל", NIPHAL),
-        new Word("חִלֵּל", "he polluted, profaned – חָלַל", PIEL),
+        new Word("כִּסֵּא", "chair, throne", true, MASCULINE),
+        new Word("הֵחֵל", "he began – חָלַל", true, HIPHIL),
+        new Word("נִחָל", "he was defiled – חָלַל", true, NIPHAL),
+        new Word("חִלֵּל", "he polluted, profaned – חָלַל", true, PIEL),
         // 134
-        new Word("מִסְפָּר", "number", NOUN, MASCULINE),
-        new Word("שֶׁמֶשׁ", "sun", MASCULINE),
-        new Word("זָבַח", "he slaughtered, sacrificed"),
-        new Word("פָּנָה", "he turned"),
-        new Word("עֶרֶב", "evening, sunset", MASCULINE),
+        new Word("מִסְפָּר", "number", true, NOUN, MASCULINE),
+        new Word("שֶׁמֶשׁ", "sun", true, MASCULINE),
+        new Word("זָבַח", "he slaughtered, sacrificed", true),
+        new Word("פָּנָה", "he turned", true),
+        new Word("עֶרֶב", "evening, sunset", true, MASCULINE),
         // 133
-        new Word("קָבַר", "he buried"),
-        new Word("אַף", "also, indeed, even"),
-        new Word("פֶּן–", "lest, otherwise"),
-        new Word("פַּר", "bull, ox, steer", MASCULINE),
-        new Word("שָׁאַר", "he remained, was left over, survived"),
-        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited"),
-        new Word("חוֹמָה", "wall", FEMININE),
+        new Word("קָבַר", "he buried", true),
+        new Word("אַף", "also, indeed, even", true),
+        new Word("פֶּן–", "lest, otherwise", true),
+        new Word("פַּר", "bull, ox, steer", true, MASCULINE),
+        new Word("שָׁאַר", "he remained, was left over, survived", true),
+        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited", true),
+        new Word("חוֹמָה", "wall", true, FEMININE),
         // 131
-        new Word("חֹק", "statute, appointed time, portion", MASCULINE),
+        new Word("חֹק", "statute, appointed time, portion", true, MASCULINE),
         // 130
-        new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
-        new Word("שָׁכַן", "he dwelt"),
+        new Word("נָשִׂיא", "chief, leader, prince", true, MASCULINE),
         // 127
-        new Word("אֶמֶת", "truth, fidelity", FEMININE),
-        new Word("קָבַץ", "he collected, gathered, assembled"),
+        new Word("אֶמֶת", "truth, fidelity", true, FEMININE),
+        new Word("קָבַץ", "he collected, gathered, assembled", true),
         // 126
-        new Word("כֹּחַ", "strength, power", MASCULINE),
-        new Word("עֶצֶם", "bone, skeleton", FEMININE),
+        new Word("כֹּחַ", "strength, power", true, MASCULINE),
+        new Word("עֶצֶם", "bone, skeleton", true, FEMININE),
         // 125
-        new Word("בּוֹשׁ", "he was ashamed"),
-        new Word("נָגַשׁ", "he drew near, approached"),
-        new Word("חֵמָה", "wrath, heat, poison", FEMININE),
-        new Word("חֲצִי", "half, middle", MASCULINE),
-        new Word("הִשְׁלְִיך:", "he threw, flung, cast - שָׁלַך", HIPHIL),
+        new Word("בּוֹשׁ", "he was ashamed", true),
+        new Word("נָגַשׁ", "he drew near, approached", true),
+        new Word("חֵמָה", "wrath, heat, poison", true, FEMININE),
+        new Word("חֲצִי", "half, middle", true, MASCULINE),
+        new Word("הִשְׁלְִיך:", "he threw, flung, cast - שָׁלַך", true, HIPHIL),
         // 124
-        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
+        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed", true),
         // 123
-        new Word("קָהָל", "assembly, community, crowd", MASCULINE),
+        new Word("קָהָל", "assembly, community, crowd", true, MASCULINE),
         // 121
-        new Word("לָכַד", "he took, captured, caught, seized"),
+        new Word("לָכַד", "he took, captured, caught, seized", true),
         // 120
-        new Word("אוֹר", "light, daylight, sunshine", MASCULINE),
-        new Word("רֶכֶב", "chariot, upper millstone", MASCULINE),
-        new Word("בְּכֹר", "firstborn", MASCULINE),
+        new Word("אוֹר", "light, daylight, sunshine", true, MASCULINE),
+        new Word("רֶכֶב", "chariot, upper millstone", true, MASCULINE),
+        new Word("בְּכֹר", "firstborn", true, MASCULINE),
         // 119
-        new Word("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE),
+        new Word("יָשָׁר", "straight, right (correct, not direction)", true, MASCULINE, ADJECTIVE),
         new Word("אָחוֹת", "sister", FEMININE),
-        new Word("פְּרִי", "fruit, offspring", MASCULINE),
-        new Word("נָהָר", "river, stream", MASCULINE),
+        new Word("פְּרִי", "fruit, offspring", true, MASCULINE),
+        new Word("נָהָר", "river, stream", true, MASCULINE),
         // 118
-        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE),
-        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE),
-        new Word("בָּטַח", "to trust, be confident, rely upon"),
+        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", true, FEMININE),
+        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", true, FEMININE),
+        new Word("בָּטַח", "to trust, be confident, rely upon", true),
         // 117
-        new Word("יָטַב", "he was well, it went well with, it was pleasing"),
-        new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
-        new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE),
-        new Word("מַמְלָכָה", "kingdom, reign, dominion", FEMININE),
-        new Word("שָׂרַף", "he completely burned, destroyed"),
-        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"),
+        new Word("יָטַב", "he was well, it went well with, it was pleasing", true),
+        new Word("שָׁפַך", "he poured, spilt, shed (blood)", true),
+        new Word("לָשׁוֹן", "tongue, language", true, MASCULINE, FEMININE),
+        new Word("מַמְלָכָה", "kingdom, reign, dominion", true, FEMININE),
+        new Word("שָׂרַף", "he completely burned, destroyed", true),
+        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important", true),
         // 116
-        new Word("שָׁלֵם", "to be complete, finished"),
         new Word("שָׁלֵם", "he was whole, complete"),
-        new Word("שִׁלַּם", "he repaid - שָׁלֵם", PIEL),
-        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL),
+        new Word("שִׁלַּם", "he repaid - שָׁלֵם", true, PIEL),
+        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", true, HIPHIL),
         // 115
-        new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL),
-        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַל", PIEL),
-        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַל", HIPHIL),
+        new Word("נִבָּא", "he prophisied - נָבָא", true, NIPHAL),
+        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַל", true, PIEL),
+        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַל", true, HIPHIL),
         // 114
-        new Word("כָּבֵד", "he was heavy, he was honored"),
-        new Word("בָּכָה", "he wept (in grief or joy)"),
-        new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE),
+        new Word("כָּבֵד", "he was heavy, he was honored", true),
+        new Word("בָּכָה", "he wept (in grief or joy)", true),
+        new Word("מִגְרָשׁ", "common land, open land, pasture", true, MASCULINE),
         // 113
-        new Word("שֶׁקֶר", "deception, lie, disappointment", MASCULINE),
+        new Word("שֶׁקֶר", "deception, lie, disappointment", true, MASCULINE),
         // 112
-        new Word("לָבַשׁ", "he put on a garmet, he clothed"),
-        new Word("בִּלְתּי", "not (with infinitive), except"),
-        new Word("לְבִלְתּי", "not (with infinitive)"),
-        new Word("חָשַׁב", "he thought, accounted"),
-        new Word(" עַמּוּד", "pillar, column", MASCULINE),
-
+        new Word("לָבַשׁ", "he put on a garmet, he clothed", true),
+        new Word("בִּלְתּי", "not (with infinitive), except", true),
+        new Word("לְבִלְתּי", "not (with infinitive)", true),
+        new Word("חָשַׁב", "he thought, accounted", true),
+        new Word(" עַמּוּד", "pillar, column", true, MASCULINE),
         // 111
-        new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
+        new Word("שַׁבָּת", "Sabbath, rest period", true, MASCULINE),
+        new Word("הוֹדוּ", "he praised, he confessed - " + "יָדָה" + " - he cast", true, HIPHIL),
+        // 110
+        new Word("עָפָר", "dry earth, dust", true, MASCULINE),
 
         // 109
-        new Word("רַק", "only, still, but, however"),
+        new Word("רַק", "only, still, but, however", true),
 
         // 107
-        new Word("סָפַר", "he counted"),
-        new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE),
+        new Word("סָפַר", "he counted", true),
+        new Word("כֶּבֶשׂ", "lamb, sheep", true, MASCULINE),
 
         // 106
-        new Word("בָּמָח", "(cultic) high place, hill", MASCULINE),
+        new Word("בָּמָח", "(cultic) high place, hill", true, MASCULINE),
 
         // 104
-        new Word("תָּמִיד", "continually"),
-        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"),
-        new Word("בַּעַד", "behind, through"),
-        new Word("חֻקָּח", "statute, ordinance", MASCULINE),
+        new Word("תָּמִיד", "continually", true),
+        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged", true),
+        new Word("בַּעַד", "behind, through", true),
+        new Word("חֻקָּח", "statute, ordinance", true, MASCULINE),
         new Word("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL),
 
         // 102
-        new Word("כָּפַר", "he covered, atoned, made atonement"),
+        new Word("כָּפַר", "he covered, atoned, made atonement", true),
 
         // 101
-        new Word("רָעָב", "famine, hunger", MASCULINE),
+        new Word("רָעָב", "famine, hunger", true, MASCULINE),
 
         // 100
-        new Word("יַעַן", "on account of")/*,
+        new Word("יַעַן", "on account of", true)/*,
 
         // 96
         new Word("יַחְדָּו", "together, united", ADVERB),
@@ -1114,6 +1115,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
   @Override
   public List<GrammarRule> buildRules() {
     return Arrays.asList(
+        /*
         new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
 
@@ -1482,66 +1484,70 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * Biconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect\n" +
             " * Geminate - identical 2nd and 3rd consonants."),
 
+        // I'm not drunk, this spacing makes it come out right in the display
         new GrammarRule("Qal perfect weak verbs, I and II gutteral:\n" +
-            "II Guttural     I Guttural      Strong\n" +
-            "קָטַלְתִּי      עָמַדְתִּי               בָּחַרְתִּי" + " 1s\n" +
-            "קָטַלְתָּ       עָמַדְתָּ               בָּחַרְתָּ " + " 2ms\n" +
-            "קָטַלְתְּ       עָמַדְתְּ               בָּחַרְתְּ " + " 2fs\n" +
-            "קָטַל         עָמַד                בָּחַר  " + " 3ms\n" +
-            "קָטְדָה       עָמְדָה               בָּחֲרָה " + " 3fs\n" +
-            "קָטַלְנוּ       עָמַדְנוּ               בָּחַרְנוּּּ " + " 1p\n" +
-            "קְטַלְתֶּם      עֲמַדְתֶּם              בְּחַרְתֶּם" + " 2mp\n" +
-            "קְטַלְתֶּן       עֲמַדְתֶּן               בְּחַרְתֶּן" + " 2fp\n" +
-            "קָטְלוּ        עָמְדוּ               בָּחֲרוּ  " + " 3p"),
+            "      II Guttural       I Guttural   Strong\n" +
+            "1s    " + "קָטַלְתִּי        עָמַדְתִּי             בָּחַרְתִּי" + "\n" +
+            "2ms    " + "קָטַלְתָּ         עָמַדְתָּ              בָּחַרְתָּ " + "\n" +
+            "2fs    " + "קָטַלְתְּ         עָמַדְתְּ              בָּחַרְתְּ " + "\n" +
+            "3ms     " + "קָטַל          עָמַד               בָּחַר  " + "\n" +
+            "3fs    " + "קָטְדָה         עָמְדָה              בָּחֲרָה " + "\n" +
+            "1p    " + "קָטַלְנוּ        עָמַדְנוּ             בָּחַרְנוּּּ " + "\n" +
+            "2mp   " + "קְטַלְתֶּם        עֲמַדְתֶּם             בְּחַרְתֶּם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן        עֲמַדְתֶּן             בְּחַרְתֶּן" + "\n" +
+            "3p     " + "קָטְלוּ         עָמְדוּ              בָּחֲרוּ  "),
 
         new GrammarRule("Qal perfect weak verbs, III gutteral:\n" +
-            "III-ה   III-א   III-ע/ח Strong\n" +
-            "קָטַלְתִּי   שָׁמַעְתִּי   מָצָאתִי   בָּנִיתִי " + " 1s\n" +
-            "קָטַלְתָּ   שָׁמַעְתָּ    מָצָאתָ    בָּנִיתָ " + " 2ms\n" +
-            "קָטַלְתְּ   שָׁמַעְתְּ    מָצָאת    בָּנִית " + " 2fs\n" +
-            "קָטַל    שָׁמַע     מָצָא     בָּנָה  " + " 3ms\n" +
-            "קָטְדָה   שָׁמְעָה    מָצְאָה    בָּנְתָה " + " 3fs\n" +
-            "קָטַלְנוּּ   שָׁמַעְנוּ    מָצָאנוּ    בָּנִינוּּּ " + " 1p\n" +
-            "קְטַלְתֶּם  שְׁמַעְתֶּם   מְצָאתֶם   בְּנִיתֶם" + " 2mp\n" +
-            "קְטַלְתֶּן   שְׁמַעְתֶּן   מְצָאתֶן    בְּנִיתֶן" + " 2fp\n" +
-            "קָטְלוּ     שׁמְעוּ    מָצְאוּ     בָּנוּ  " + " 3p"),
+            "      III-ה    III-א   III-ע/ח   Strong\n" +
+            "1s    " + "קָטַלְתִּי    שָׁמַעְתִּי    מָצָאתִי    בָּנִיתִי " + "\n" +
+            "2ms    " + "קָטַלְתָּ     שָׁמַעְתָּ     מָצָאתָ     בָּנִיתָ " + "\n" +
+            "2fs    " + "קָטַלְתְּ     שָׁמַעְתְּ     מָצָאת     בָּנִית " + "\n" +
+            "3ms     " + "קָטַל      שָׁמַע      מָצָא      בָּנָה  " + "\n" +
+            "3fs    " + "קָטְדָה     שָׁמְעָה     מָצְאָה     בָּנְתָה " + "\n" +
+            "1p    " + "קָטַלְנוּּ    שָׁמַעְנוּ    מָצָאנוּ    בָּנִינוּּּ " + "\n" +
+            "2mp   " + "קְטַלְתֶּם    שְׁמַעְתֶּם    מְצָאתֶם    בְּנִיתֶם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן    שְׁמַעְתֶּן    מְצָאתֶן    בְּנִיתֶן" + "\n" +
+            "3p      " + "קָטְלוּ     שׁמְעוּ     מָצְאוּ     בָּנוּ  "),
 
         new GrammarRule("Qal perfect weak verbs, doubly weak:\n" +
-            "Doubly Weak    Strong\n" +
-            "קָטַלְתִּי           עָלִיתִיִ" + " 1s\n" +
-            "קָטַלְתָּ           עָלִיתָ " + " 2ms\n" +
-            "קָטַלְתְּ           עָלִית " + " 2fs\n" +
-            "קָטַל             עָלָה " + " 3ms\n" +
-            "קָטְדָה            עָלְתָה" + " 3fs\n" +
-            "קָטַלְנוּ           עָלִינוּּּ " + " 1p\n" +
-            "קְטַלְתֶּם          עֲלִיתֶם" + " 2mp\n" +
-            "קְטַלְתֶּן          עֲלִיתֶן " + " 2fp\n" +
-            "קָטְלוּ            עָלוּּ  " + " 3p"),
+            "      Doubly\n" +
+            "      Weak           Strong\n" +
+            "1s    " + "קָטַלְתִּי           עָלִיתִיִ" + "\n" +
+            "2ms    " + "קָטַלְתָּ            עָלִיתָ" + "\n" +
+            "2fs    " + "קָטַלְתְּ            עָלִית" + "\n" +
+            "3ms     " + "קָטַל             עָלָה" + "\n" +
+            "3fs    " + "קָטְדָה            עָלְתָה" + "\n" +
+            "1p    " + "קָטַלְנוּ           עָלִינוּּּ" + "\n" +
+            "2mp   " + "קְטַלְתֶּם           עֲלִיתֶם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן           עֲלִיתֶן" + "\n" +
+            "3p      " + "קָטְלוּ            עָלוּּ"),
 
         new GrammarRule("Qal perfect weak verbs, geminate:\n" +
-            "Geminate    Strong\n" +
-            "קָטַלְתִּי        סַבּוֹתִי" + " 1s\n" +
-            "קָטַלְתָּ        סַבּוֹתָ " + " 2ms\n" +
-            "קָטַלְתְּ        סַבּוֹת " + " 2fs\n" +
-            "קָטַל         סָבַב  " + " 3ms\n" +
-            "קָטְדָה        סָבְבָה " + " 3fs\n" +
-            "קָטַלְנוּ        סַבּוֹנו ּּ" + " 1p\n" +
-            "קְטַלְתֶּם       סַבּוֹתֶם" + " 2mp\n" +
-            "קְטַלְתֶּן        סַבּוֹתֶן" + " 2fp\n" +
-            "קָטְלוּ         סָבְבוּ " + " 3p"),
+            "      Geminate    Strong\n" +
+            "1s    " + "קָטַלְתִּי        סַבּוֹתִי" + "\n" +
+            "2ms    " + "קָטַלְתָּ         סַבּוֹתָ" + "\n" +
+            "2fs    " + "קָטַלְתְּ         סַבּוֹת" + "\n" +
+            "3ms     " + "קָטַל          סָבַב" + "\n" +
+            "3fs    " + "קָטְדָה         סָבְבָה" + "\n" +
+            "1p    " + "קָטַלְנוּ        סַבּוֹנוּ" + "\n" +
+            "2mp   " + "קְטַלְתֶּם        סַבּוֹתֶם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן        סַבּוֹתֶן" + "\n" +
+            "3p     " + "קָטְלוּ         סָבְבוּ" + ""),
 
         new GrammarRule("Qal perfect weak verbs, biconsonental:\n" +
-            "Biconsonental  Strong\n" +
-            "קָטַלְתִּי           קַמְתִּי" + " 1s\n" +
-            "קָטַלְתָּ            קַמְתָּ" + " 2ms\n" +
-            "קָטַלְתְּ            קַמְתְּ" + " 2fs\n" +
-            "קָטַל             קָם " + " 3ms\n" +
-            "קָטְדָה            קָמָה" + " 3fs\n" +
-            "קָטַלְנוּ            קַמְנוּ" + " 1p\n" +
-            "קְטַלְתֶּם          קַמְתֶּם" + " 2mp\n" +
-            "קְטַלְתֶּן           קַמְתֶּן" + " 2fp\n" +
-            "קָטְלוּ            קָמוּ " + " 3p"),
+            "      Biconsonental  Strong\n" +
+            "1s    " + "קָטַלְתִּי            קַמְתִּי" + "\n" +
+            "2ms    " + "קָטַלְתָּ             קַמְתָּ" + "\n" +
+            "2fs    " + "קָטַלְתְּ             קַמְתְּ" + "\n" +
+            "3ms     " + "קָטַל              קָם" + "\n" +
+            "3fs    " + "קָטְדָה             קָמָה" + "\n" +
+            "1p    " + "קָטַלְנוּ            קַמְנוּ" + "\n" +
+            "2mp   " + "קְטַלְתֶּם            קַמְתֶּם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן            קַמְתֶּן" + "\n" +
+            "3p     " + "קָטְלוּ             קָמוּ" + ""),
 
+        */
+        // TODO fix formatting on these, they come out all messed up
         new GrammarRule("Qal imperfect strong verb:\n" +
             "Preformative  Sufformative   Imperfect\n" +
             "אֶקְטֹל                     אֶ          " + " 1s\n" +
@@ -1639,8 +1645,13 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " תִּקְטֹלְנָה   תִּקַּחְנָה       תִּפֹּלְנָה       תִּירַשְׁנָה         תֵּלַכְנָה    " + "3fp\n"),
 
         new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
-            " Qal:    50,699\n" +
-            " Niphal:  4,138"),
+            " Qal:       50,699\n" +
+            " Hiphil:     9,496\n" +
+            " Piel:       6,473\n" +
+            " Niphal:     4,138\n" +
+            " Hithpael:     842\n" +
+            " Pual:         423\n" +
+            " Hophal:       396\n"),
 
         new GrammarRule("Uses of הִנֵּה\n:" +
             "* add emphasis or stress (demonstrative interjection):\n" +
@@ -1836,6 +1847,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "II-Gutteral schewa changes to hateph pathach in plural and alternate feminie forms: " + "בֹּחֲרִים" + "\n" +
             "III-א only alternate feminine singular varies:  " + "מֹצְאָה"),
 
+        // TODO put in strong verb to see difference
         new GrammarRule("Qal active participle III-ע/ח verb:\n" +
             "             Singular         Plural\n" +
             "Masculine    " + "שֹׁמֵעַ" + "         " + "שֹׁמְעִים" + "\n" +
@@ -2026,10 +2038,22 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "participle ms    " + "נִבְנֶה" + "\n" +
             "participle fs    " + "נִבְנָה" + "\n" +
             "participle mp    " + "נִבְנִים" + "\n" +
-            "participle fp    " + "נִבְנוֹת" + "\n")
+            "participle fp    " + "נִבְנוֹת" + "\n"),
 
-        // Continue 25.6 p 302
-        // put in books of the Bible first
+        // TODO Continue 25.6 p 302
+
+        // Jumping ahead, I'll backfill all the weak forms over time
+        new GrammarRule("Meaning of the Piel steam:\n" +
+            "  * intensive - can intensify the meaning of the qal stem\n" +
+            "  * factitive - turns an intransitive verb transitive\n" +
+            "    e.g. " + "קָדַשׁ" + " he is holy, " + "קִדַּשׁ" + " he sanctified\n" +
+            "  * denominitive - taking a noun or adjective stem and making it a verb\n" +
+            "    e.g. " + "דָּבָר" + " word " + "דִּבֵּר" + " he spoke\n" +
+            "    In this case the verb does not have an intensive meaning\n" +
+            "  * iterative - often occurs with physical movement")
+
+        // TODO continue 26.3
+
     );
   }
 }

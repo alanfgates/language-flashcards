@@ -41,15 +41,21 @@ public class Word implements Serializable {
   private String english;
   private String other;
   private Enum[] modifiers;
+  private boolean needsExtra;  // indicates I need extra practice on this one
 
   // For Jackson
   public Word() {
   }
 
   public Word(String other, String english, Enum... modifiers) {
+    this(other, english, false, modifiers);
+  }
+
+  public Word(String other, String english, boolean needsExtra, Enum... modifiers) {
     this.english = english;
     this.other = other;
     this.modifiers = modifiers;
+    this.needsExtra = needsExtra;
   }
 
   void showFront() {
@@ -85,6 +91,14 @@ public class Word implements Serializable {
   public Word setOther(String other) {
     this.other = other;
     return this;
+  }
+
+  public boolean getNeedsExtra() {
+    return needsExtra;
+  }
+
+  public void setNeedsExtra(boolean needsExtra) {
+    this.needsExtra = needsExtra;
   }
 
   // This is nasty and hackish, but if I return a straight Enum[] Jackson balks on the set side because there's no

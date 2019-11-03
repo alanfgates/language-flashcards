@@ -463,6 +463,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "2pl ε        λυ   θη               τε                                 ἐλύθητε\n" +
             "3pl ε        λυ   θη               σαν                                ἐλύθησαν"),
 
+        // TODO fix the stem here, it isn't lu
         new GrammarRule("Second aorist passive paradigm:\n" +
             "    augment  stem tense formative  secondary active personal endings  form\n" +
             "1sg ε        λυ   η                ν                                  ἐγράφην\n" +
@@ -557,6 +558,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "πιστευ             + ο                + ντ                  + ες\n" +
             "λυ                 + ο                + μενο                + οι"),
 
+        // TODO, this chart doesn't make any sense, perfect is a tense, while active etc. are voices
         new GrammarRule("Participle morphemes:\n" +
             "               masculine   feminine  neuter\n" +
             "active         ντ          ουσα      ντ    \n" +
