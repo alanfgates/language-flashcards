@@ -29,6 +29,7 @@ public class Main {
     Options options = new Options();
 
     options.addOption("f", "filename", true, "File to store deck in, defaults to " + FILENAME);
+    options.addOption("G", "grammar-rule", true, "Show a particular grammar rule, for debugging.");
     options.addOption("h", "help", false, "You're looking at it.");
     options.addOption("s", "shuffle", false, "Shuffle the cards.  This puts all of the cards back in the deck");
     options.addOption("S", "shuffle-with-fixed-size", true, "Shuffle the cards, fixing the daily test size per the provided argument." +
@@ -41,6 +42,9 @@ public class Main {
 
       if (cli.hasOption("h")) {
         usage(options);
+      } else if (cli.hasOption("G")) {
+        CardDeck deck = new CardDeck();
+        deck.findRule(cli.getOptionValue("G"));
       } else if (cli.hasOption("s")) {
         CardDeck deck = new CardDeck();
         deck.storeDeck(filename);

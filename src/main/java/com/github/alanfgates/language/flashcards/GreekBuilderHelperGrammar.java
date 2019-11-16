@@ -99,9 +99,8 @@ class GreekBuilderHelperGrammar {
         new Word("λελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
         new Word("ἐλελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
         new Word("λελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
-        // TODO I think the aa here is a typo, check
-        new Word("ἐλελύκειααν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
-        new Word("λελύκειααν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("ἐλελύκεισαν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("λελύκεισαν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -112,7 +111,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύονται", "they loosen themselves", INDICATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic indicative middle present
-        new Word("δίδομαι", "I give myself - stem διδο", INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("δίδομαι", "I give myself - stem διδο", true, ATHEMATIC, INDICATIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Indicative Middle Future
         new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, SINGULAR),
@@ -165,7 +164,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύονται", "they were loosened", INDICATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic indicative passive present
-        new Word("δίδομαι", "I am given - stem διδο", INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("δίδομαι", "I am given - stem διδο", true, ATHEMATIC, INDICATIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Indicative Passive Future
         new Word("λυθήσομαι", "I will be loosed", INDICATIVE, PASSIVE, FUTURE, FIRST_PERSON, SINGULAR),
@@ -207,7 +206,7 @@ class GreekBuilderHelperGrammar {
         new Word("ἐγράφητε", "you were written", INDICATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("ἐγράφησαν", "they were written", INDICATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
-        // Indicative Passive Perfect been
+        // Indicative Passive Perfect
         new Word("λέλυμαι", "I have been loosened", INDICATIVE, PASSIVE, PERFECT, FIRST_PERSON, SINGULAR),
         new Word("λέλυσαι", "you have been loosened", INDICATIVE, PASSIVE, PERFECT, SECOND_PERSON, SINGULAR),
         new Word("λέλυται", "s/he has been loosened", INDICATIVE, PASSIVE, PERFECT, THIRD_PERSON, SINGULAR),
@@ -225,7 +224,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύωσιν", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive active present
-        new Word("διδῶ", "I might be giving - stem διδω", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("διδῶ", "I might be giving - stem διδω", true, SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Subjunctive active aorist
         new Word("λύσω", "I might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
@@ -246,7 +245,7 @@ class GreekBuilderHelperGrammar {
         new Word("λάβωσιν", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive active second aorist
-        new Word("δῶ", "I might give - stem δω", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("δῶ", "I might give - stem δω", true, SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
 
         // Subjunctive middle present
         new Word("λύωμαι", "I might be loosening myself", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -257,7 +256,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύωνται", "they might be loosening themselves", SUBJUNCTIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive middle present
-        new Word("διδῶμαι", "I might be giving myself - stem διδω", SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("διδῶμαι", "I might be giving myself - stem διδω", true, SUBJUNCTIVE, MIDDLE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Subjunctive middle aorist
         new Word("λύσωμαι", "I might loosen myself", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
@@ -276,7 +275,7 @@ class GreekBuilderHelperGrammar {
         new Word("γένωνται", "they might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive middle second aorist
-        new Word("δῶμαι", "I might give myself - stem δω", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("δῶμαι", "I might give myself - stem δω", true, SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
 
         // Subjunctive passive present
         new Word("λύωμαι", "I might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
@@ -287,7 +286,7 @@ class GreekBuilderHelperGrammar {
         new Word("λύωνται", "they might be being loosened", SUBJUNCTIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive passive present
-        new Word("διδῶμαι", "I might be being given - stem διδω", SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("διδῶμαι", "I might be being given - stem διδω", true, SUBJUNCTIVE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Subjunctive passive aorist
         new Word("λυθῶ", "I might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR),
@@ -308,47 +307,46 @@ class GreekBuilderHelperGrammar {
         new Word("γραφῶσιν", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic subjunctive passive second aorist
-        new Word("δοθῶ", "I might be given - stem δο", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("δοθῶ", "I might be given - stem δο", true, SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
 
         // Imperative active present
-        new Word("λῦε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λῦε", "keep loosing!", true, IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λυέτω", "let him/her keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λύετε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λυέτωσαν", "let them keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic imperative active present
-        new Word("δίδοτε", "keep giving! - stem διδο", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("δίδοτε", "keep giving! - stem διδο", true, IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
 
         // Imperative active aorist
-        new Word("λῦσον", "loose!", IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λῦσον", "loose!", true, IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("λυσάτω", "let him/her loose!", IMPERATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύσατε", "loose!", IMPERATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λυσάτωσαν", "let them loose!", IMPERATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
 
-        // TODO This isn't right, lab isn't throw
         // Imperative active second aorist
-        new Word("λάβε", "throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λαβέτω", "let him/her throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
-        new Word("λάβετε", "throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
-        new Word("λαβέτωσαν", "let them throw!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
+        new Word("λάβε", "take!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λαβέτω", "let him/her take!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λάβετε", "take!", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("λαβέτωσαν", "let them take!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic imperative active second aorist
-        new Word("δότε", "give! - stem δο", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("δότε", "give! - stem δο", true, IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
 
         // Imperative middle present
-        new Word("λύου", "keep loosing yourself!", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("λυέσθω", "let him/her keep loosing him/herself!", IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύου", "keep loosing yourself!", true, IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λυέσθω", "let him/her keep loosing him/herself!", true, IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λύεσθε", "keep loosing yourselves!", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("λυέσθωσαν", "let them keep loosing themselves!", IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("λυέσθωσαν", "let them keep loosing themselves!", true, IMPERATIVE, MIDDLE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic imperative middle present
-        new Word("δίδοσθε", "keep giving yourselves! - stem διδο", IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("δίδοσθε", "keep giving yourselves! - stem διδο", true, IMPERATIVE, MIDDLE, PRESENT, SECOND_PERSON, PLURAL),
 
         // Imperative middle aorist
-        new Word("λῦσαι", "loose yourself!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λυσάσθω", "let him/her loose him/herself!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λῦσαι", "loose yourself!", true, IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυσάσθω", "let him/her loose him/herself!", true, IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύσασθε", "loose yourselves!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
-        new Word("λυσάσθωσαν", "let them loose themselves!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
+        new Word("λυσάσθωσαν", "let them loose themselves!", true, IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
 
         // Imperative middle second aorist
         new Word("γενοῦ", "become!", IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
@@ -357,22 +355,22 @@ class GreekBuilderHelperGrammar {
         new Word("γενέσθωσαν", "let them become!", IMPERATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic imperative middle second aorist
-        new Word("δόσθε", "give yourselves! - stem δο", IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("δόσθε", "give yourselves! - stem δο", true, IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL),
 
         // Imperative passive present
-        new Word("λύου", "keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("λυέσθω", "let him/her keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        new Word("λύου", "keep being loosed!", true, IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λυέσθω", "let him/her keep being loosed!", true, IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λύεσθε", "keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("λυέσθωσαν", "let them keep being loosed!", IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("λυέσθωσαν", "let them keep being loosed!", true, IMPERATIVE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic imperative passive present
-        new Word("δίδοσθε", "keep being given! - stem διδο", IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("δίδοσθε", "keep being given! - stem διδο", true, IMPERATIVE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
 
         // Imperative passive aorist
-        new Word("λύθητι", "be loosed!", IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λυθήτω", "let him/her be loosed!", IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
+        new Word("λύθητι", "be loosed!", true, IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λυθήτω", "let him/her be loosed!", true, IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύθητε", "be loosed!", IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, PLURAL),
-        new Word("λυθήτωσαν", "let them be loosed!", IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
+        new Word("λυθήτωσαν", "let them be loosed!", true, IMPERATIVE, PASSIVE, AORIST, THIRD_PERSON, PLURAL),
 
         // Imperative passive second aorist
         new Word("γράφητι", "be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
@@ -381,40 +379,40 @@ class GreekBuilderHelperGrammar {
         new Word("γραφήτωσαν", "let them be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Athematic imperative passive second aorist
-        new Word("δόθητε", "be given! - stem δο", IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
+        new Word("δόθητε", "be given! - stem δο", true, IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
 
         // Infinitive active
-        new Word("λύειν", "to continually loosen", INFINITIVE, ACTIVE, PRESENT),
-        new Word("λῦσαι", "to loosen", INFINITIVE, ACTIVE, AORIST),
-        new Word("λαβεῖν", "to receive", INFINITIVE, ACTIVE, SECOND_AORIST),
-        new Word("λελυκέναι", "to have loosened", INFINITIVE, ACTIVE, PERFECT),
+        new Word("λύειν", "to continually loosen", true, INFINITIVE, ACTIVE, PRESENT),
+        new Word("λῦσαι", "to loosen", true, INFINITIVE, ACTIVE, AORIST),
+        new Word("λαβεῖν", "to receive", true, INFINITIVE, ACTIVE, SECOND_AORIST),
+        new Word("λελυκέναι", "to have loosened", true, INFINITIVE, ACTIVE, PERFECT),
 
         // Athematic infinitive active
-        new Word("διδόναι", "to keep giving - stem διδο", INFINITIVE, ACTIVE, PRESENT),
-        new Word("δοῦναι", "to give - stem δο", INFINITIVE, ACTIVE, SECOND_AORIST),
+        new Word("διδόναι", "to keep giving - stem διδο", true, INFINITIVE, ACTIVE, PRESENT),
+        new Word("δοῦναι", "to give - stem δο", true, INFINITIVE, ACTIVE, SECOND_AORIST),
 
         // Infinitive middle
-        new Word("λύεσθαι", "to continually loosen oneself", INFINITIVE, MIDDLE, PRESENT),
-        new Word("λύσασθαι", "to loosen oneself", INFINITIVE, MIDDLE, AORIST),
-        new Word("λαβέσθαι", "to receive oneself", INFINITIVE, MIDDLE, SECOND_AORIST),
-        new Word("λελύσθαι", "to have loosened oneself", INFINITIVE, MIDDLE, PERFECT),
+        new Word("λύεσθαι", "to continually loosen oneself", true, INFINITIVE, MIDDLE, PRESENT),
+        new Word("λύσασθαι", "to loosen oneself", true, INFINITIVE, MIDDLE, AORIST),
+        new Word("λαβέσθαι", "to receive oneself", true, INFINITIVE, MIDDLE, SECOND_AORIST),
+        new Word("λελύσθαι", "to have loosened oneself", true, INFINITIVE, MIDDLE, PERFECT),
 
         // Athematic infinitive middle
-        new Word("δίδοσθαι", "to keep giving oneself - stem διδο", INFINITIVE, MIDDLE, PRESENT),
-        new Word("δόσθαι", "to give oneself - stem δο", INFINITIVE, MIDDLE, SECOND_AORIST),
+        new Word("δίδοσθαι", "to keep giving oneself - stem διδο", true, INFINITIVE, MIDDLE, PRESENT),
+        new Word("δόσθαι", "to give oneself - stem δο", true, INFINITIVE, MIDDLE, SECOND_AORIST),
 
         // Infinitive passive
-        new Word("λύεσθαι", "to continually have been loosened", INFINITIVE, PASSIVE, PRESENT),
-        new Word("λυθῆναι", "to have been loosened", INFINITIVE, PASSIVE, AORIST),
+        new Word("λύεσθαι", "to continually have been loosened", true, INFINITIVE, PASSIVE, PRESENT),
+        new Word("λυθῆναι", "to have been loosened", true, INFINITIVE, PASSIVE, AORIST),
         new Word("γραφῆναι", "to have received", INFINITIVE, PASSIVE, SECOND_AORIST),
-        new Word("λελῦσθαι", "to have been loosened", INFINITIVE, PASSIVE, PERFECT),
+        new Word("λελῦσθαι", "to have been loosened", true, INFINITIVE, PASSIVE, PERFECT),
 
         // Athematic infinitive passive
-        new Word("δίδοσθαι", "to keep being given - stem διδο", INFINITIVE, PASSIVE, PRESENT),
-        new Word("δοθῆναι", "to be given - stem δο", INFINITIVE, PASSIVE, SECOND_AORIST),
+        new Word("δίδοσθαι", "to keep being given - stem διδο", true, INFINITIVE, PASSIVE, PRESENT),
+        new Word("δοθῆναι", "to be given - stem δο", true, INFINITIVE, PASSIVE, SECOND_AORIST),
 
         // Participle active present
-        new Word("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λύων", "loosening", true, PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
         new Word("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR),
         new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
@@ -434,7 +432,7 @@ class GreekBuilderHelperGrammar {
         new Word("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
         new Word("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
         new Word("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
-        new Word("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λῦον", "loosening", true, PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
         new Word("λύοντων", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
         new Word("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
@@ -442,12 +440,12 @@ class GreekBuilderHelperGrammar {
         new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
 
         // Athematic participle active present
-        new Word("διδούς", "giving - stem διδο", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("διδοῦσα", "giving - stem διδο", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
-        new Word("διδόν", "giving - stem διδο", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("διδούς", "giving - stem διδο", true, PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("διδοῦσα", "giving - stem διδο", true, PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("διδόν", "giving - stem διδο", true, PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
 
         // Participle active aorist
-        new Word("λύσας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λύσας", "loosening", true, PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, SINGULAR),
         new Word("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, SINGULAR),
         new Word("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
@@ -464,7 +462,7 @@ class GreekBuilderHelperGrammar {
         new Word("λυσασῶν", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, GENITIVE, PLURAL),
         new Word("λυσάσαις", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, DATIVE, PLURAL),
         new Word("λυσάσας", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL),
-        new Word("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λῦσαν", "loosening", true, PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
         new Word("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, GENITIVE, SINGULAR),
         new Word("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, SINGULAR),
         new Word("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
@@ -503,12 +501,12 @@ class GreekBuilderHelperGrammar {
         new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
         // Athematic participle active second aorist
-        new Word("δούς", "giving - stem δο", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("δοῦσα", "giving - stem δο", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR),
-        new Word("δόν", "giving - stem δο", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("δούς", "giving - stem δο", true, PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("δοῦσα", "giving - stem δο", true, PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("δόν", "giving - stem δο", true, PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR),
 
         // Participle active perfect
-        new Word("λελυκώς", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λελυκώς", "having loosened", true, PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR),
         new Word("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, SINGULAR),
         new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
@@ -517,7 +515,7 @@ class GreekBuilderHelperGrammar {
         new Word("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL),
         new Word("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL),
         new Word("λελυκότας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λελυκυῖα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λελυκυῖα", "having loosened", true, PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λελυκυῖας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, SINGULAR),
         new Word("λελυκυῖᾳ", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, SINGULAR),
         new Word("λελυκυῖαν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR),
@@ -525,7 +523,7 @@ class GreekBuilderHelperGrammar {
         new Word("λελυκυιων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, PLURAL),
         new Word("λελυκυῖαις", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, PLURAL),
         new Word("λελυκυίας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL),
-        new Word("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λελυκός", "having loosened", true, PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR),
         new Word("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, SINGULAR),
         new Word("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, SINGULAR),
         new Word("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
@@ -562,7 +560,7 @@ class GreekBuilderHelperGrammar {
         new Word("λυόμενα", "loosening", PARTICIPLE, MIDDLE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
 
         // Athematic participle middle present
-        new Word("διδόμενος", "giving oneself - stem διδο", PARTICIPLE, MIDDLE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("διδόμενος", "giving oneself - stem διδο", true, PARTICIPLE, MIDDLE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
 
         // Participle middle aorist
         new Word("λυσάμενος", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
@@ -617,7 +615,7 @@ class GreekBuilderHelperGrammar {
         new Word("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
         // Athematic participle middle second aorist
-        new Word("δόμενος", "giving oneself - stem δο", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("δόμενος", "giving oneself - stem δο", true, PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
 
         // Participle middle perfect
         new Word("λελυμένος", "loosening", PARTICIPLE, MIDDLE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
@@ -672,10 +670,10 @@ class GreekBuilderHelperGrammar {
         new Word("λυόμενα", "loosening", PARTICIPLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
 
         // Athematic participle passive present
-        new Word("διδόμενος", "being given - stem διδο", PARTICIPLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("διδόμενος", "being given - stem διδο", true, PARTICIPLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
 
         // Participle passive aorist
-        new Word("λυθείς", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("λυθείς", "loosening", true, PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
         new Word("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, SINGULAR),
         new Word("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, SINGULAR),
         new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
@@ -692,10 +690,10 @@ class GreekBuilderHelperGrammar {
         new Word("λυθεισῶν", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, PLURAL),
         new Word("λυθείσαις", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, DATIVE, PLURAL),
         new Word("λυθείσας", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL),
-        new Word("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
+        new Word("λυθέν", "loosening", true, PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR),
         new Word("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, SINGULAR),
         new Word("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, SINGULAR),
-        new Word("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("λυθέν", "loosening", true, PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, PLURAL),
         new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, PLURAL),
         new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
@@ -705,7 +703,7 @@ class GreekBuilderHelperGrammar {
         // No verb occurring 50 or more times in the NT has 2nd passive participle
 
         // Athematic participle passive second aorist
-        new Word("δοθείς", "being given - stem δο", PARTICIPLE, PASSIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
+        new Word("δοθείς", "being given - stem δο", true, PARTICIPLE, PASSIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
 
 
         // Participle passive perfect

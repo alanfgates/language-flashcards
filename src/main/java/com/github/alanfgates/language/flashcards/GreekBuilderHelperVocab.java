@@ -1235,7 +1235,24 @@ class GreekBuilderHelperVocab {
         new Word("προσήνεχθην", "I was brought, I was offered προσφερω", true, PASSIVE, AORIST),
         new Word("ἁμαρτωλός", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, MASCULINE, FEMININE),
         new Word("ἁμαρτωλόν", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, NEUTER),
-        new Word("οὐκέτι", "no longer")
+        new Word("οὐκέτι", "no longer"),
+        // 46
+        new Word("θηρίον", "non-human animal, wild animal", true, NEUTER),
+        new Word("θηρίου", "non-human animal, wild animal", NEUTER, GENITIVE),
+        new Word("σωτηρία", "salvation, deliverance, preservation", true, FEMININE),
+        new Word("σωτηρίας", "salvation, deliverance, preservation", FEMININE, GENITIVE),
+        new Word("καθίζω", "I set, seat, appoint, sit down, settle", true, PRESENT),
+        new Word("καθίσω", "I will set, seat, appoint, sit down, settle καθίζω", true, FUTURE),
+        new Word("ἐκάθισα", "I set, sat, appointed, sat down, settled καθίζω", true, AORIST),
+        new Word("κεκάθικα", "I have set, sat, appointed, sat down, settled καθίζω", true, PERFECT),
+        new Word("σταυρῶ", "I crucify", true, PRESENT),
+        new Word("σταυρώσω", "I will crucify σταυρῶ", true, FUTURE),
+        new Word("ἐσταύρωσα", "I crucifid σταυρῶ", true, AORIST),
+        new Word("ἐσταυρώθην", "I was crucifid σταυρῶ", true, PASSIVE, AORIST),
+        new Word("ἐσταύρωμαι", "I have been crucifid σταυρῶ", true, MIDDLE, PASSIVE, PERFECT),
+        new Word("μικρός", "small, little", ADJECTIVE, MASCULINE),
+        new Word("μικρά", "small, little", ADJECTIVE, FEMININE),
+        new Word("μικρόν", "small, little", ADJECTIVE, NEUTER)
 
     );
   }

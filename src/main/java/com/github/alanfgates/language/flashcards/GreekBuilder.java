@@ -81,17 +81,13 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * descriptive: Let us put on the armor of light ενδυσμεθα τα οπλα του φωτος\n" +
             " * possessive\n" +
             " * showing apposition to the head noun: You will receive the gift, the Holy Spirit\n" +
-            "   λημψεσθε την δωρεαν του αγιου πνευματος"),
-
-        new GrammarRule("Uses of genitive continued:\n" +
+            "   λημψεσθε την δωρεαν του αγιου πνευματος\n" +
             " * showing separation from the head noun: being alienated from the commonwealth of\n" +
             "   Israel απελλοτριωμενοι της πολιτειας του Ισραηλ\n" +
             " * subjective, expanding on the idea of the head noun: Who will separate us from\n" +
             "   Christ’s love τισ ημας χωρισει απο της αγαπης του Χπριστου\n" +
             " * objective, receiving the action of the head noun: The blasphemy against the\n" +
-            "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται"),
-
-        new GrammarRule("Uses of genitive continued:\n" +
+            "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται\n" +
             " * plenary, being both subjective and objective: For the love of Christ compels us η\n" +
             "   γαρ αγαπη του Χριστου συνεχει ημας\n" +
             " * relationship: Simon, son of John Σιμων Ιωαννου\n" +
@@ -105,18 +101,14 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * dative of interest, expression “for”:  Your wife Elizabeth will bear a son for\n" +
             "   you η γυνη σου Ελισαβετ γεννησει υιον σοι (called the “dative of advantage” when\n" +
             "   the idea is to the subject’s advantage and “dative of disadvantage” when the idea\n" +
-            "   is not to the subject’s advantage)"),
-
-        new GrammarRule("Uses of dative continued\n" +
+            "   is not to the subject’s advantage)\n" +
             " * reference or respect (English, with respect to): Consider yourselves dead to sin\n" +
             "   λογιζεσθε εαυτους ειναι νεκρους τῃ αμαρτιᾳ\n" +
             " * Locative (‘in’, ‘with’)\n" +
             " * sphere or realm in which something occurs: Blessed are the pure in heart μακαριοι\n" +
             "   οι καθαροι τῃ καρδιᾳ\n" +
             " * A time designation in the dative specifies when something occurs: On the third\n" +
-            "   day he will be raised τῃ τριτῃ ημερα εγερθησεται"),
-
-        new GrammarRule("Uses of dative continued\n" +
+            "   day he will be raised τῃ τριτῃ ημερα εγερθησεται\n" +
             " * Association, indicating “with”: Do not be unequally yoked with unbelievers μη\n" +
             "   γινεσθε ετεροζυγουντες απιστοις\n" +
             " * Instrumental (‘by’)\n" +
@@ -170,9 +162,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " 1. Definite article\n" +
             " 2. Attaching adjective to preceding noun μετα των αγγελων των αγιων\n" +
             " 3. Is often used with proper names and other nouns that English would not use it with\n" +
-            " 4. Can be used with participle or adjective to make it into a noun."),
-
-        new GrammarRule("Uses of article continued\n" +
+            " 4. Can be used with participle or adjective to make it into a noun.\n" +
             " 5. Is sometimes omitted when English would use it: Εν αρχη ην ο λογος\n" +
             " 6. Can function as a personal or possessive pronoun: Οι δε ειπαν προς αυτον And they said to him\n" +
             " 7. Can govern two nouns together, linking them:\n" +
@@ -383,9 +373,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Can place emphasis on the beginning of an action, called ingressive, inceptive.\n" +
             "   ἀγγελοι προσηλθον και διηκονουν αυτῳ Angles came and begin to minister to him\n" +
             " * Can stress the repetitive nature of an action, called iterative.\n" +
-            "   ἠρχετο προσ αὐτον [the widow] kept coming to him"),
-
-        new GrammarRule("Imperfect can describe (continued):\n" +
+            "   ἠρχετο προσ αὐτον [the widow] kept coming to him\n" +
             " * Used to desribe actions that occur regularly, called customary.\n" +
             "   Κατα δε ἑορτην _ἀπελυεν_ αὐτοις ἑνα δεσμιον\n" +
             "   Now at the feast _he used to release_ for them any one prisoner\n" +
@@ -548,7 +536,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Adjectival: action described by the participle modifies a noun or pronoun\n" +
             "  e.g.: The book lying on the floor belongs to Kathy"),
 
-        new GrammarRule("Particples and other parts of speech:\n" +
+        new GrammarRule("Participles and other parts of speech:\n" +
             "* Participles do not have a subject and do not take personal endings\n" +
             "* Participles can take objects and prepositional phrases\n" +
             "* Participles are negated with μη"),
@@ -577,9 +565,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   ἀκουσας δε ὁ νεακισκος τον λογον ἀπηλθεν _λυπουμενος_\n" +
             "   When the young man heard this, he went away _sad_\n" +
             "3. Means:  can indicate the means by which the action of the finite verb occurs:\n" +
-            "   κοπιωμεν _ἐργαζομενοι_ ταις ἰδιας χερσιν We toil _working_ with our own hands"),
-
-        new GrammarRule("Participal exegesis continued:\n" +
+            "   κοπιωμεν _ἐργαζομενοι_ ταις ἰδιας χερσιν We toil _working_ with our own hands\n" +
             "4. Cause:  can indicate the cause or reason or ground of the action of the finite verb:\n" +
             "   ἠγαλλιασατο πανοικει _πεπιστευκως_ τῳ θεῳ\n" +
             "   He was filled with joy, along with his entire household, _because he had come to believe_ in God.\n" +
@@ -590,9 +576,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "6. Concessive:  can indicate that the action of the finite verb is true despite the\n" +
             "   action of the participle:\n" +
             "   Και ὑμας _ὄντας_ νεκρους τοις παραπτωμασιν\n" +
-            "   And _although you were dead_ in your transgressions"),
-
-        new GrammarRule("Participle exegesis continued:\n" +
+            "   And _although you were dead_ in your transgressions\n" +
             "7. Purpose: can indicate the purpose of the finite verb (often translated as infinitive:\n" +
             "   ἄφες ἴδωμεν εἰ ἔρχεται Ἠλιας _σωσων_ αὐτον\n" +
             "   Wait! Let's see if Elijah comes _to save_ him\n" +
@@ -711,17 +695,15 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  ἐκήρθξαν ἵνα μετανοῶσιν they preached that they should repent\n" +
             "* ἵνα μή plus subjunctive can be translated as 'lest'\n" +
             "  οἱ πατέπρες, μή ἐρεθίζετε τὰ τέκνα ὑμῶν, _ἵνα μή ἀθυμῶσιν_\n" +
-            "  Fathers, do not provoke your children, _lest they become discouraged_"),
-
-        new GrammarRule("Uses of the subjunctive (cont)\n" +
-            "Conditional statements introduced by ἐάν.  If (protasis) is in subjunctive, then (apodosis) any tense or mood.\n" +
+            "  Fathers, do not provoke your children, _lest they become discouraged_\n" +
+            "* Conditional statements introduced by ἐάν.  If (protasis) is in subjunctive, then (apodosis) any tense or mood.\n" +
             "  Can be future event: ταῦτα σοι πάντα δώσω, ἐάν πεσὼν _προσκυνήσῃς_ μοι\n" +
             "                       All these things I will give you, if you will fall down and _worship_ me\n" +
             "  Can be a timeless truth: ἐάν _θέλῃς_ δύνασαί με καθαρίσαι\n" +
             "                           if _you want_ you can make me clean\n" +
-            "Hortatory: first person subjunctive, usually at the beginning of the sentance and plural:\n" +
-            "  _διέλθωμεν_ εἰς τό πέραν _let us to across_ to the other side\n" +
-            "Deliberative, when the answer to a question is uncertain: τί φάγωμεν what should we eat?"),
+            "* Hortatory: first person subjunctive, usually at the beginning of the sentance and plural:\n" +
+            "    _διέλθωμεν_ εἰς τό πέραν _let us to across_ to the other side\n" +
+            "* Deliberative, when the answer to a question is uncertain: τί φάγωμεν what should we eat?"),
 
         new GrammarRule("ἴνα, ἕως, and most words that include ἄν are usually followed by a subjunctive:\n" +
             "  ὄταν (whenever) ἐάν (if) ὄς ἄν (whoever) ὅπου ἄν (whenever)\n" +
@@ -754,32 +736,30 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Usually the 'subject' is first the object second:\n" +
             "βλέπειν αὐτὸν αὐτήν he to see her"),
 
-        new GrammarRule("Infinitive can be used as a substantive, and is usually proceeded by the definite article, in which\n" +
-            "case it is called articular infinitive.  Best translated with 'to':\n" +
-            "ἐμοι _το ζην_ Χριστος και _το ἀποθανειν_ κερδος\n" +
-            "Literally: for me the live Christ and the die gain, better: for me to live is Christ, and to die is gain"),
+        new GrammarRule("Uses of infininitive:\n" +
+            "* as a substantive; is usually proceeded by the definite article, in which\n" +
+            "  case it is called articular infinitive.  Best translated with 'to':\n" +
+            "  ἐμοι _το ζην_ Χριστος και _το ἀποθανειν_ κερδος\n" +
+            "  Literally: for me the live Christ and the die gain, better: for me to live is Christ, and to die is gain\n" +
+            "* to complete a finite verb and are called 'complementary infinitive':\n" +
+            "  ἤρξαντο λαλειν ἑτερπαις γλωσσαις They begin to speak in tongues\n" +
+            "* δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive" +
+            "* to report indirect discourse."),
 
-        new GrammarRule("Infinitives can be used to complete a finite verb and are called 'complementary inifinitive'\n" +
-            "ἤρξαντο λαλειν ἑτερπαις γλωσσαις They begin to speak in tongues\n" +
-            "δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive"),
-
-        new GrammarRule("δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
-            "αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
-            "But Jesus on his part did not entrust himself to them, _because he knew_ all people"),
-
-        new GrammarRule("εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
-            "παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +
-            "They will deliver him over to the Gentiles _to be mocked and flogged and crucified_\n" +
-            "Purpose can also be expressed with no preposition and article in genitive"),
-
-        new GrammarRule("προ plus article in genitive plus infinitive means 'before'\n" +
-            "ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
-            "μετα plus article in accusative plus infinitive means 'after'\n" +
-            "ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path\n" +
-            "ὡστε plus infinitive indicates result:\n" +
-            "ἐπλησαν ἀμφοτερα τα πλοια _ὡστε βυθιζεσθαι_ αὐτα They filled both boats so full that they began to sink"),
-
-        new GrammarRule("Infinitive can be used to report indirect discourse."),
+        new GrammarRule("Infinitive and prepositions:\n" +
+            "* δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
+            "  αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
+            "  But Jesus on his part did not entrust himself to them, _because he knew_ all people" +
+            "* εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
+            "  παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +
+            "  They will deliver him over to the Gentiles _to be mocked and flogged and crucified_\n" +
+            "  Purpose can also be expressed with no preposition and article in genitive" +
+            "* προ plus article in genitive plus infinitive means 'before'\n" +
+            "* ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
+            "* μετα plus article in accusative plus infinitive means 'after'\n" +
+            "  ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path\n" +
+            "* ὡστε plus infinitive indicates result:\n" +
+            "  ἐπλησαν ἀμφοτερα τα πλοια _ὡστε βυθιζεσθαι_ αὐτα They filled both boats so full that they began to sink"),
 
         new GrammarRule("Imperative conveys command or request (as in 'give us this day our daily bread').\n" +
             "Present imperative conveys a continuous command or a general precept (always ...)\n" +
@@ -831,9 +811,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * μή plus present imperative = prohibiting a continuous action\n" +
             "   μή μεριμνᾶτε τῇ ψυχῇ ὑμῶν do not worry about your life\n" +
             " * μή plus aorist imperative = prohibiting an undefinted action\n" +
-            "   μή γνώτω ἡ ἀριστερά σου τί ποιεῖ ἡ δεξιά σου Do not let your left hand know what your right hand is doing"),
-
-        new GrammarRule("Forms of negation continued:\n" +
+            "   μή γνώτω ἡ ἀριστερά σου τί ποιεῖ ἡ δεξιά σου Do not let your left hand know what your right hand is doing"+
             " * μή plus aorist subjunctive = stronger form of no than οὐ plus indicative\n" +
             "   μή φοβηθῇς παραλαβεῖν Μαρῖαν τὴν γυναῖκά σου Do not be afraid to take Mary home as your wife\n" +
             " * οὐ μή plus aorist subjunctive = very strong no\n" +
@@ -842,90 +820,52 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Standard verb conjugation (e.g. λυω) is called thematic.  Verbs ending in μι are called athematic.\n" +
             "(because the connecting vowel is called the thematic vowel and athematic verbs lack a thematic vowel)."),
 
-        new GrammarRule("Athematic verbs rule 1: they reduplicate their initial stem letter to form the present, inserting a ι between.\n" +
-            "(This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)\n" +
-            "Athematic verbs rule 2: they do not ordinarily use a connecting vowel in the present indicative." +
-            "(rule 3 in next rule)\n" +
+        new GrammarRule("Athematic verb rules\n" +
+            "* 1: they reduplicate their initial stem letter to form the present, inserting a ι between.\n" +
+            "  (This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)\n" +
+            "* 2: they do not ordinarily use a connecting vowel in the present indicative." +
+            "* 3 they use different personal endings in present active indicative, but the same endings \" +\n" +
+            "    everywhere else, e.g.: *δο\n" +
+            "    1sg  διδω    μι         δίδωμι\n" +
+            "    2sg  διδω    ς          δίδως\n" +
+            "    3sg  διδω    σι         δίδωσι(ν)\n" +
+            "    1pl  διδο    μεν        δίδομεν\n" +
+            "    2pl  διδο    τε         δίδοτε\n" +
+            "    3pl  διδο    ασι        διδόασι(ν)\n" +
             "Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)\n" +
             "Athematic verbs rule 5: most use κα as the tense formative in the aorist."),
-
-        new GrammarRule("Athematic verbs rule 3: they use different personal endings in present active indicative, but the same endings " +
-            "everywhere else:\n" +
-            "Example: *δο\n" +
-            "     Stem    personal   form\n" +
-            "             ending\n" +
-            "1sg  διδω    μι         δίδωμι\n" +
-            "2sg  διδω    ς          δίδως\n" +
-            "3sg  διδω    σι         δίδωσι(ν)\n" +
-            "1pl  διδο    μεν        δίδομεν\n" +
-            "2pl  διδο    τε         δίδοτε\n" +
-            "3pl  διδο    ασι        διδόασι(ν)\n"),
 
         new GrammarRule("Exceptions to a verb uses first aorist or second aorist only:\n" +
             "δίδωμι uses first aorist in indicative and second aorist for other moods\n" +
             "ἵστημι uses both, first aorist ἔστησα for transitive and second aorist ἔστην for intransitive."),
 
-        new GrammarRule("Athemtic verbs use same endings as thematic verbs in everything but present active indicative.  Following\n" +
+        new GrammarRule("Athematic verbs use same endings as thematic verbs in everything but present active indicative.  Following\n" +
             "examples used to show just how the stems change in various situations.  Only first person singular used except where\n" +
             "noted otherwise\n" +
-            "mood         voice           tense        stem    form         notes\n" +
-            "indicative   active          present      διδω    δίδωμι\n" +
-            "indicative   active          future       δω      δώσω\n" +
-            "indicative   active          2nd aorist   δω      ἔδωκα\n" +
-            "indicative   active          future       δω      δέδωκα\n" +
-            "indicative   middle/passive  present      διδο    δίδομαι\n"),
-
-        new GrammarRule("Athematic verb endings continued:\n" +
-            "mood         voice           tense        stem    form         notes\n" +
-            "subjunctive  active          present      διδω    διδῶ\n" +
-            "subjunctive  active          2nd aorist   δω      δῶ\n" +
-            "subjunctive  middle/passive  present      διδω    διδῶμαι\n" +
-            "subjunctive  middle          2nd aorist   δω      δῶμαι\n" +
-            "subjunctive  passive         2nd aorist   δο      δοθῶ\n"),
-
-        new GrammarRule("Athematic verb endings continued:\n" +
-            "mood         voice           tense        stem    form         notes\n" +
-            "imperative   active          present      διδο    δίδοτε       2nd person plural\n" +
-            "imperative   active          2nd aorist   δο      δότε         2nd person plural\n" +
-            "imperative   middle/passive  present      διδο    δίδοσθε      2nd person plural\n" +
-            "imperative   middle          2nd aorist   δο      δόσθε        2nd person plural\n" +
-            "imperative   passive         2nd aorist   δο      δόθητε       2nd person plural"),
-
-        new GrammarRule("Athematic verb endings continued:\n" +
-            "mood         voice           tense        stem    form         notes\n" +
-            "infinitive   active          present      διδο    διδόναι\n" +
-            "infinitive   middle/passive  present      διδο    δίδοσθαι\n" +
-            "infinitive   active          2nd aorist   δο      δοῦναι\n" +
-            "infinitive   middle          2nd aorist   δο      δόσθαι\n" +
-            "infinitive   passive         2nd aorist   δο      δοθῆναι"),
-
-        new GrammarRule("Athematic verb endings continued:\n" +
-            "mood         voice           tense        stem    form         notes\n" +
-            "participle   active          present      διδο    διδούς       masculine nominative singular\n" +
-            "participle   active          present      διδο    διδοῦσα      feminine nominative singular\n" +
-            "participle   active          present      διδο    διδόν        neuter nominative singular\n" +
-            "participle   active          2nd aorist   δο      δούς         masculine nominative singular\n" +
-            "participle   active          2nd aorist   δο      δοῦσα        feminine nominative singular\n" +
-            "participle   active          2nd aorist   δο      δόν          neuter nominative singular\n" +
-            "participle   middle/passive  present      διδο    διδόμενος    masculine nominative singular\n" +
-            "participle   middle          2nd aorist   δο      δόμενος      masculine nominative singular\n" +
-            "participle   passive         2nd aorist   δο      δοθείς       masculine nominative singular"),
+            "stem: διδω\n" +
+            "used in: indicative,active,present; subjunctive,present\n" +
+            "\n" +
+            "stem: δω\n" +
+            "used in: indicative,active,future; indicative,active,2nd aorist; indicative,active,future;\n" +
+            "         subjunctive,active,2nd aorist; subjunctive,middle,2nd aorist\n" +
+            "\n" +
+            "stem: διδο\n" +
+            "used in: indicative,middle/passive,present; imperative,present; infinitive,present; participle,present\n" +
+            "\n" +
+            "stem: δο\n" +
+            "used in: subjunctive,passive,2nd aorist; imperative,2nd aorist; infinitive,2nd aorist; participle,2nd aorist"),
 
         new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
             "  * First class conditional, aka conditions of fact:  assume something is true for argument (it may or \n" +
             "    may not be), then the apodosis must be true:\n" +
             "    protasis: εἰ + indicative any tense; apodosis: any mood, any tense; negated by οὐ\n" +
             "    εἰ δέ ἀνάστασις νεκρῶν οὐκ ἔστιν, οὐδὲ Χριστὸς ἐγήγερται\n" +
-            "    But if there is no ressurection of the dead, then not even Christ has been raised."),
-
-        new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
+            "    But if there is no ressurection of the dead, then not even Christ has been raised.\n" +
             "  * Second class conditional, aka contrary to fact:  if something were true, which it isn't, then\n" +
             "    something else would be true.\n" +
             "    protasis: εἰ + indicative past tense; apodosis: ἄν plus same tense as protasis; negated by μή\n" +
             "    εἰ γάρ ἔγνωσαν, ούκ ἂν τὸν κύριον τῆς δόξης ἐσταύπωσαν\n" +
-            "    For if they had known, they would not have crucified the Lord of glory"),
-
-        new GrammarRule("Conditional senatances, if then:  if called protasis, then apodosis\n" +
+            "    For if they had known, they would not have crucified the Lord of glory\n" +
             "  * Third class conditional, future more probable (something might be true in the future)\n" +
             "    or present general (generally true at all times)\n" +
             "    protasis: ἐάν + subjunctive; apodosis: any mood, any tense; negated by μή\n" +
@@ -992,26 +932,20 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * anaphoric: where the article refers back to a previous reference:\n" +
             "   κήρυξον τὸν λόγον preach the word (referring back to discussion in 2 Tim 3\n" +
             " * deictic: the article points out someone or something present and often is best translated as a demonstrative:\n" +
-            "   προσῆλθον αὐτῷ οἱ μαθηταί λὲγοντες ἔρημός ἐστιν _ὁ_ τόπος The disciples came to him and said, '_This_ place is " +
-            "desolate'\n" +
+            "   προσῆλθον αὐτῷ οἱ μαθηταί λὲγοντες ἔρημός ἐστιν _ὁ_ τόπος The disciples came to him and said, '_This_ place is desolate'\n" +
             " * par excellence: the article identifies a substantive as in a class by itself:\n" +
-            "   ὁ προφήτης εἶ σύ; Are you the Prophet?"),
-
-        new GrammarRule("The function of the article in Greek is not to make something definite\n" +
-            "Rather its presence emphasizes identity.  This can be:\n" +
+            "   ὁ προφήτης εἶ σύ; Are you the Prophet?\n" +
             " * monadic:  the article identifies a substantive as unique:\n" +
             "   ἴδε ὁ ἀμνος τοῦ θεοῦ Behold, the lamb of God\n" +
-            " * the article can turn a participle or adjective into a noun\n" +
+            " * can turn a participle or adjective into a noun\n" +
             "   Πᾶς _ὁ γεγεννημένος_ ἐκ τοῦ θεοῦ Everyone _who has been born of God_\n" +
-            " * the article can function as a personal, possessive, or relative pronoun\n" +
+            " * can function as a personal, possessive, or relative pronoun\n" +
             "   Οἱ δὲ εἶπαν πρὸς αὐτόν And they said to him\n" +
             "   Οἱ ἄνδρες, ἀγαπᾶτε _τὰς_ γυναῖκας Husbands, love _your_ wives\n" +
-            "Article can function as a grammatical marker:\n" +
-            "μετά τῶν ἀγγελων _τῶν_ ἁγίων with the holy angels"),
-
-        new GrammarRule("When the article is not present, it is generally emphasizing the quality of the substantive:\n" +
-            "ὁ θεὸς ἀγάπη ἐστίν God is love (focusing not on that God loves, but that he is the very essence of love\n" +
-            "Article also not used when the substantive is not specific"),
+            " * can function as a grammatical marker:  μετά τῶν ἀγγελων _τῶν_ ἁγίων with the holy angels\n" +
+            " * When the article is not present, it is generally emphasizing the quality of the substantive:\n" +
+            "   ὁ θεὸς ἀγάπη ἐστίν God is love (focusing not on that God loves, but that he is the very essence of love\n" +
+            " * also not used when the substantive is not specific"),
 
         new GrammarRule("Koine Greek is VSO")
 

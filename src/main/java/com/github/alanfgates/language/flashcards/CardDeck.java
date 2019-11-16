@@ -96,6 +96,7 @@ class CardDeck implements Serializable {
       flashcards.clear();
       for (LanguageBuilder builder : builders) {
         for (Word w : builder.buildVocabWords()) if (w.getNeedsExtra()) addFlashCard(flashcards, w);
+        for (Word w : builder.buildGrammarWords()) if (w.getNeedsExtra()) addFlashCard(flashcards, w);
       }
       cards.addAll(flashcards.values());
       if (cards.size() == lastSize) break; // in case no words are marked as needs extra
@@ -161,6 +162,14 @@ class CardDeck implements Serializable {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
     mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired, wordsPerTest));
+  }
+
+  void findRule(String pattern) throws IOException {
+    for (List<GrammarRule> grammarRules : rules.values()) {
+      for (GrammarRule rule : grammarRules) {
+        if (rule.toString().contains(pattern)) rule.show();
+      }
+    }
   }
 
   private void printStatus() {

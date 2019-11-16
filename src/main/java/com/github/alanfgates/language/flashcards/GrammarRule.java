@@ -39,4 +39,9 @@ public class GrammarRule implements Serializable {
   public void setRule(String rule) {
     this.rule = rule;
   }
+
+  @Override
+  public String toString() {
+    return rule;
+  }
 }
