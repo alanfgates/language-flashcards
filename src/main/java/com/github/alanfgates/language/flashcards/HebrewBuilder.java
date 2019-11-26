@@ -14,8 +14,6 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -200,8 +198,41 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נִקְטָלִים", "being killed", true, NIPHAL, PARTICIPLE, MASCULINE, PLURAL),
         new Word("נִקְטָלוֹת", "being killed", true, NIPHAL, PARTICIPLE, FEMININE, PLURAL),
 
+        new Word("קִטַּלְתִּי", "I slaughtered", PIEL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קִטַּלְתָּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קִטַּלְתְּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קִטּל", "he slaughtered", PIEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קִטְּלָה", "she slaughtered", PIEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קִטַּלְנוּ", "we slaughtered", PIEL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קִטַּלְתֶּם", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קִטֵַּלְתֶּן", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קִטְּלוּ", "they slaughtered", PIEL, PERFECT, THIRD_PERSON, PLURAL),
 
-        //----------------------------------------------------------------------------------------
+        new Word("אֲקַטֵּל", "I will slaughter", PIEL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תְּקַטֵּל", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקַטְּלִי", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יְקַטֵּל", "he will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקַטֵּל", "she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נְקַטֵּל", "we will slaughter", PIEL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תְּקַטְּלוּ", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תְּקַטֵּלְנָה", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("תְּקַטֵּלְנָה", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
+
+        new Word("קַטֵּל", "slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַטְּלִי", "slaughter!", PIEL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("קַטְּלוּ", "slaughter!", PIEL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("קַטֵּלְנָה", "slaughter!", PIEL, IMPERATIVE, FEMININE, PLURAL),
+
+        new Word("קַטֵּל", "to slaughter", PIEL, INFINITIVE_CONSTRUCT),
+        new Word("קַטֵּל", "to slaughter", PIEL, INFINITIVE_ABSOLUTE),
+
+        new Word("מְקַטֵּל", "slaughtering", PIEL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מְקַטֶּלֶת", "slaughtering", PIEL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מְקַטְּלִים", "slaughtering", PIEL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מְקַטְּלוֹת", "slaughtering", PIEL, PARTICIPLE, FEMININE, PLURAL),
+
+    //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
         new Word("סוּסִי", "my horse", true),
         new Word("סוּסְךָ", "your horse", true, MASCULINE, SINGULAR),
@@ -884,7 +915,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 161
         new Word("אַיִל", "ram", true, NOUN, MASCULINE),
         new Word("בַּד", "alone", true),
-        new Word("אַך:", "only, surely, nevertheless", true),
+        new Word("אַך", "only, surely, nevertheless", true),
         new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
         // 160
         new Word("נוּס", "he fled, he escaped", true),
@@ -919,8 +950,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הוּלָּל", "he was praised – הָלַל", true, PUAL),
         // TODO why does this start with y, that doesn't seem right.
         new Word("יִתְהַלִּל", "he boasted about himself – הָלַל", true, HITHPAEL),
-        // 145
-        new Word("עֲבֹדָה", "labor, service", true, NOUN, FEMININE),
         // 144
         new Word("רָדַף", "he pursued, followed after, persecuted", true),
         // 143
@@ -987,7 +1016,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נָגַשׁ", "he drew near, approached", true),
         new Word("חֵמָה", "wrath, heat, poison", true, FEMININE),
         new Word("חֲצִי", "half, middle", true, MASCULINE),
-        new Word("הִשְׁלְִיך:", "he threw, flung, cast - שָׁלַך", true, HIPHIL),
+        new Word("הִשְׁלְִיך", "he threw, flung, cast - שָׁלַך", true, HIPHIL),
         // 124
         new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed", true),
         // 123
@@ -1042,20 +1071,23 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 109
         new Word("רַק", "only, still, but, however", true),
         new Word("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", true, FEMININE),
-
+        // 108
+        new Word("נִחַם", "he was sorry, moved to pity, had compassion", true, NIPHAL),
+        new Word("נִחַם", "he comforted, consoled", true, PIEL),
         // 107
         new Word("סָפַר", "he counted", true),
         new Word("כֶּבֶשׂ", "lamb, sheep", true, MASCULINE),
-
         // 106
         new Word("בָּמָח", "(cultic) high place, hill", true, MASCULINE),
-
+        new Word("נוֹתַר", "he was left over, he remained - יָתַר", true, NIPHAL),
+        new Word("הוֹתִיר", "he left - יָתַר", true, HIPHIL),
         // 104
         new Word("תָּמִיד", "continually", true),
         new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged", true),
         new Word("בַּעַד", "behind, through", true),
         new Word("חֻקָּח", "statute, ordinance", true, MASCULINE),
         new Word("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL),
+        new Word("רָץ", "he ran רוּץ", true),
 
         // 102
         new Word("כָּפַר", "he covered, atoned, made atonement", true),
@@ -1805,6 +1837,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "  root as one infinitive expresses contemporary action:\n" +
             "  וַיֵּלֶך הָלוֹך וְאָכֹל " + " and they walked, eating as they went\n" +
             "* Complementary: may complement the main verb and carry the temporal value\n" +
+            // TODO figure out the examples
             "  of that verb (no example given because I don't understand the examples)"),
 
         new GrammarRule("Almost all weak verbs follow the strong verb paradigm in infinitive absolute.\n" +
@@ -1815,32 +1848,32 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Qal active participle strong verb:\n" +
             "                        Singular         Plural\n" +
-            "Masculine                  " + "קֹטֵל            קֹטְלִים" + "\n" +
-            "Feminine                   " + "קֹטֶלֶת           קֹטְלוֹת" + "\n" +
+            "Masculine                    " + "קֹטְלִים          קֹטֵל" + "\n" +
+            "Feminine                    " + "קֹטְלוֹת          קֹטֶלֶת" + "\n" +
             "Feminine (alternate)        " + "קֹטְלָה"),
 
         new GrammarRule("Qal active participle weak verbs:\n" +
             "Strong\n" +
-            "    " + "קֹטֵל            קֹטְלִים" + "\n" +
-            "    " + "קֹטֶלֶת           קֹטְלוֹת" + "\n" +
-            "    " + "קֹטְלָה" + "\n" +
+            "    " + "קֹטְלִים             קֹטֵל    " +  "\n" +
+            "   " + "קֹטְלוֹת             קֹטֶלֶת   " + "\n" +
+            "   " + "קֹטְלָה   " + "\n" +
             "I-Guttural, I-נ, I-י, and geminate:\n" +
             "    follow the strong verb pattern\n" +
             "II-Gutteral:\n" +
             "    schewa changes to hateph pathach in plural and alternate feminine forms: " + "בֹּחֲרִים" + "\n" +
             "Biconsonantal:\n" +
-            "    " + "קָם              קָמִים" + "\n" +
-            "    " + "קָמָה             קָמוֹת" + "\n" +
+            "     " + "קָמִים              קָם     " + "\n" +
+            "    " + "קָמוֹת              קָמָה    " + "\n" +
             "III-א:\n" +
             "    only alternate feminine singular varies:  " + "מֹצְאָה" + "\n" +
             "III-ע/ח:\n" +
-            "    " + "שֹׁמֵעַ            שֹׁמְעִים" + "\n" +
-            "    " + "שֹׁמַעַת           שֹׁמְעוֹת" + "\n" +
-            "    " + "שֹׁמְעָה" + "\n" +
+            "    " + "שֹׁמְעִים             שֹׁמֵעַ    " + "\n" +
+            "   " + "שֹׁמְעוֹת             שֹׁמַעַת   " + "\n" +
+            "   " + "שֹׁמְעָה   " + "\n" +
             "III-ה:\n" +
-            "    " + "בֹּנֶה             בֹּנִים" + "\n" +
-            "    " + "בֹּנָה             בֹּנוֹת" + "\n" +
-            "    " + "בֹּנִיָּה"),
+            "    " + "בֹּנִים              בֹּנֶה     " + "\n" +
+            "    " + "בֹּנוֹת              בֹּנָה     " + "\n" +
+            "   " + "בֹּנִיָּה    "),
 
     new GrammarRule("Participle יֵשׁ:\n" +
             "* Is not inflected\n" +
@@ -1866,12 +1899,12 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Qal passive participle:\n" +
             "             Singular         Plural\n" +
-            "Masculine    " + "קָטוּל             קְטוּלִים" + "\n" +
-            "Feminine     " + "קְטוּלָה            קְטוּלוֹת" + "\n\n" +
+            "Masculine        " + "קְטוּלִים         קָטוּל" + "\n" +
+            "Feminine        " + "קְטוּלוֹת         קְטוּלָה" + "\n\n" +
             "All but III-ה follow the strong pattern\n" +
             "III-ה verb:\n" +
-            "             " + "בָּנוּי             בְּנוּיִים" + "\n" +
-            "             " + "בְּנוּיָה            בְּנוּיוֹת"),
+            "                 " + "בְּנוּיִים         בָּנוּי" + "\n" +
+            "                " + "בְּנוּיוֹת         בְּנוּיָה"),
 
         new GrammarRule("Participles, because they behave like nouns, can take a definite article,\n" +
             "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur construct chain in the construct state."),
@@ -1949,72 +1982,57 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Niphal strong verb perfect:\n" +
             "1s    " + "נִקְטַלְתִּי" + "\n" +
-            "2ms   " + "נִקְטַלְתָּ" + "\n" +
-            "2fs   " + "נִקְטַלתְּ" + "\n" +
-            "3ms   " + "נִקְטַל" + "\n" +
-            "3fs   " + "נִקְטְלָה" + "\n" +
+            "2ms    " + "נִקְטַלְתָּ" + "\n" +
+            "2fs    " + "נִקְטַלתְּ" + "\n" +
+            "3ms     " + "נִקְטַל" + "\n" +
+            "3fs    " + "נִקְטְלָה" + "\n" +
             "1p    " + "נִקְטַלְנוּ" + "\n" +
             "2mp   " + "נִקְטַלְתֶּם" + "\n" +
             "2fp   " + "נִקְטַלְתֶּן" + "\n" +
-            "3p    " + "נִקְטְלוּ" + "\n"),
+            "3p     " + "נִקְטְלוּ" + "\n"),
 
         new GrammarRule("Niphal strong verb imperfect:\n" +
-            "1s    " + "אֶקָּטֵל" + "\n" +
-            "2ms   " + "תִּקָּטֵל" + "\n" +
-            "2fs   " + "תִּקָּטְלִי" + "\n" +
-            "3ms   " + "יִקָּטֵל" + "\n" +
-            "3fs   " + "תִּקָּטֵל" + "\n" +
-            "1p    " + "נִקָּטֵל" + "\n" +
-            "2mp   " + "תִּקָּטְלוּ" + "\n" +
+            "1s      " + "אֶקָּטֵל" + "\n" +
+            "2ms     " + "תִּקָּטֵל" + "\n" +
+            "2fs    " + "תִּקָּטְלִי" + "\n" +
+            "3ms     " + "יִקָּטֵל" + "\n" +
+            "3fs     " + "תִּקָּטֵל" + "\n" +
+            "1p      " + "נִקָּטֵל" + "\n" +
+            "2mp    " + "תִּקָּטְלוּ" + "\n" +
             "2fp   " + "תִּקָּטַלְנָה" + "\n" +
-            "3mp   " + "יִקָּטְלוּ" + "\n" +
+            "3mp    " + "יִקָּטְלוּ" + "\n" +
             "3fp   " + "תִּקָּטַלְנָה" + "\n"),
 
         new GrammarRule("Niphal strong verb imperative:\n" +
-            "ms   " + "הִקָּטֵל" + "\n" +
-            "fs   " + "הִקָּטְלִי" + "\n" +
-            "mp   " + "הִקָּטְלְוּ" + "\n" +
+            "ms     " + "הִקָּטֵל" + "\n" +
+            "fs    " + "הִקָּטְלִי" + "\n" +
+            "mp    " + "הִקָּטְלְוּ" + "\n" +
             "fp   " + "הִקָּטַלְנָה" + "\n"),
 
         new GrammarRule("Niphal strong verb infinitive:\n" +
-            "infinitive construct  " + "הִקָּטֵל" + "\n" +
+            "infinitive construct   " + "הִקָּטֵל" + "\n" +
             "infinitive absolute   " + "נִקְטוֹל" + "\n" +
             "infinitive absolute   " + "הִקָּטוֹל" + "\n"),
 
         new GrammarRule("Niphal strong verb participle:\n" +
-            "ms   " + "נִקְטָל" + "\n" +
-            "fs   " + "נִקְטֶלֶת" + "\n" +
+            "ms     " + "נִקְטָל" + "\n" +
+            "fs    " + "נִקְטֶלֶת" + "\n" +
             "mp   " + "נִקְטָלִים" + "\n" +
             "fp   " + "נִקְטָלוֹת" + "\n"),
 
-        // TODO put in strong verb
-        new GrammarRule("III-א niphal differ from strong verbs only in perfect:\n" +
-            "1s    " + "נִמְצֵאתִי" + "\n" +
-            "2ms   " + "נִמְצֵאתָ" + "\n" +
-            "2fs   " + "נִמְצֵאת" + "\n" +
-            "3ms   " + "נִמְצָא" + "\n" +
-            "3fs   " + "נִמְצְאָה" + "\n" +
-            "1p    " + "נִמְצֵאנוּ" + "\n" +
-            "2mp   " + "נִמְצֵאתֶם" + "\n" +
-            "2fp   " + "נִמְצֵאתֶן" + "\n" +
-            "3p    " + "נִמְצְאוּ" + "\n"),
-
-        new GrammarRule("III-ה niphal differ from strong verbs only in perfect and participle:\n" +
-            "perfect 1s    " + "נִבְנֵיתִי" + "\n" +
-            "perfect 2ms   " + "נִבְנֵיתָ" + "\n" +
-            "perfect 2fs   " + "נִבְנֵית" + "\n" +
-            "perfect 3ms   " + "נִבְנָה" + "\n" +
-            "perfect 3fs   " + "נִבְנְתָה" + "\n" +
-            "perfect 1p    " + "נִבְנֵינוּ" + "\n" +
-            "perfect 2mp   " + "נִבְנֵיתֶם" + "\n" +
-            "perfect 2fp   " + "נִבְנֵיתֶן" + "\n" +
-            "perfect 3p    " + "נִבְנוּ" + "\n" +
-            "participle ms    " + "נִבְנֶה" + "\n" +
-            "participle fs    " + "נִבְנָה" + "\n" +
-            "participle mp    " + "נִבְנִים" + "\n" +
-            "participle fp    " + "נִבְנוֹת" + "\n"),
-
-        // TODO Continue 25.6 p 302
+        new GrammarRule("Niphal weak verbs:\n" +
+            "                                         Infinitive   Infinitive          \n" +
+            "         Perfect  Imperfect  Imperative  Construct    Absolute    Participle\n" +
+            "Strong      " + "נִקְטָל          נִקְטוֹל       הִקָּטֵל       הִקְּטֵל        יִקָּטֵל       נִקְטַל" + "\n" +
+            "Strong                                                   " + "הִקָּטוֹל" + "\n" +
+            "III-" + "נִמְצָא          נִמְצוֹא       הִמָּצֵא       הִמָּצֵא        יִמָּצֵא       נִמְצָא       א" + "\n" +
+            "III-" + "נִבְנֶה          נִבְנֹה        הִבָּנוֹת      הִבָּנֵה        יִבָּנֶה       נִבְנָה       ה" + "\n" +
+            "III-" + "הִבָּנֵה                                          נִבְנֵיתָ      ה" + "\n" +
+            "II-Gutteral " + "נֶעֱזָב          נַעֳזוֹב       הֵעָזֵב       הֵעָזֵב        יֵעָזֵב       נֶעֱזַב" + "\n" +
+            "II-Gutteral                                              " + "הֵעָזוֹב" + "\n" +
+            "III-" + "נִצָּל           הִנָּצֵל        הִנָּצֵל       הִנָּצֵל        יִנָּצֵל       נִצַּל        נ" + "\n" +
+            "III-" + "נִצּוֹל                                                     נ" + "\n" +
+            "III-" + "נוֹשָׁב                      הִוָּשֵׁב       הִוָּשֵׁב        יִוָּשֵׁב       נוֹשַׁב       י"),
 
         // Jumping ahead, I'll backfill all the weak forms over time
         new GrammarRule("Meaning of the Piel steam:\n" +
@@ -2024,10 +2042,63 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "  * denominitive - taking a noun or adjective stem and making it a verb\n" +
             "    e.g. " + "דָּבָר" + " word " + "דִּבֵּר" + " he spoke\n" +
             "    In this case the verb does not have an intensive meaning\n" +
-            "  * iterative - often occurs with physical movement")
+            "  * iterative - often occurs with physical movement"),
 
-        // TODO continue 26.3
+        new GrammarRule("Piel strong verb perfect:\n" +
+            "1s    " + "קִטַּלְתִּי" + "\n" +
+            "2ms    " + "קִטַּלְתָּ" + "\n" +
+            "2fs    " + "קִטַּלְתְּ" + "\n" +
+            "3ms     " + "קִטֵּל" + "\n" +
+            "3fs    " + "קִטְּלָה" + "\n" +
+            "1p    " + "קִטַּלְנוּ" + "\n" +
+            "2mp   " + "קִטַּלְתֶּם" + "\n" +
+            "2fp   " + "קִטֵַּלְתֶּן" + "\n" +
+            "3p     " + "קִטְּלוּ" + "\n"),
 
-    );
+        new GrammarRule("Piel strong verb imperfect:\n" +
+            "1s      " + "אֲקַטֵּל" + "\n" +
+            "2ms     " + "תְּקַטֵּל" + "\n" +
+            "2fs    " + "תְּקַטְּלִי" + "\n" +
+            "3ms     " + "יְקַטֵּל" + "\n" +
+            "3fs     " + "תְּקַטֵּל" + "\n" +
+            "1p      " + "נְקַטֵּל" + "\n" +
+            "2mp    " + "תְּקַטְּלוּ" + "\n" +
+            "2fp   " + "תְּקַטֵּלְנָה" + "\n" +
+            "3mp    " + "יְקַטְּלוּ" + "\n" +
+            "3fp   " + "תְּקַטֵּלְנָה" + "\n"),
+
+        new GrammarRule("Piel strong verb imperative:\n" +
+            "ms     " + "קַטֵּל" + "\n" +
+            "fs    " + "קַטְּלִי" + "\n" +
+            "mp    " + "קַטְּלוּ" + "\n" +
+            "fp   " + "קַטֵּלְנָה" + "\n"),
+
+        new GrammarRule("Piel strong verb infinitive:\n" +
+            "infinitive construct   " + "קַטֵּל" + "\n" +
+            "infinitive absolute    " + "קַטֵּל"),
+
+        new GrammarRule("Piel strong verb participle:\n" +
+            "ms     " + "מְקַטֵּל" + "\n" +
+            "fs    " + "מְקַטֶּלֶת" + "\n" +
+            "mp   " + "מְקַטְּלִים" + "\n" +
+            "fp   " + "מְקַטְּלוֹת" + "\n"),
+
+        new GrammarRule("Piel weak verbs:\n" +
+            "                                           Infinitive   Infinitive          \n" +
+            "           Perfect  Imperfect  Imperative  Construct    Absolute    Participle\n" +
+            "Strong         " + "מְקַטֵּל        קַטֵּל          קַטֵּל         קַטֵּל         יְקַטֵּל       קֵטֵּל" + "\n" +
+            "III-" + "מְשַׁלֵּחַ        שַׁלֵּחַ          שַׁלַּח         שַׁלַּח         יְשַׁלַּח       שִׁלַּח        ע/ח" + "\n" +
+            "III-" + "מְמַצֵּא        מַצֵּא          מַצֵּא         מַצֵּא         יְמַצֵּא       מִצֵא          א" + "\n" +
+            "III-" + "מְגַלֶּה        גַּלֵּה          גַּלּוֹת        גַּלֵה         יְגַלֶּה       גִּלָּה          ה" + "\n" +
+            "Geminate       " + "מְהַלֵּל        הַלֵּל          הַלֵּל         הַלֵּל         יְהַלֵּל       הֵלֵּל" + "\n" +
+            "II-Gutteral    " + "מְנַחֵם        נַחֵם          נַחֵם         נַחֵם         יְנַחֵם       נִחַם" + "\n" +
+            "virtual\n" +
+            "doubling\n" +
+            "II-Gutteral    " + "מְבָרֵך        בָּרֵך          בָּרֵך         בָּרֵך         יְבָרֵך       בֵּרֵך" + "\n" +
+            "compensatory\n" +
+            "lengthening")
+
+        // TODO continue ch 28 p329
+        );
   }
 }
