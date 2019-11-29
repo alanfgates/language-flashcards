@@ -26,1258 +26,1261 @@ import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
 import static com.github.alanfgates.language.flashcards.Person.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
+import static com.github.alanfgates.language.flashcards.Word.Competence.*;
 
 class GreekBuilderHelperVocab {
   static List<Word> getVocab() {
     return Arrays.asList(
-        new Word("ὁ", "the", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("τοῦ", "the", MASCULINE, GENITIVE, SINGULAR),
-        new Word("τῷ", "the", MASCULINE, DATIVE, SINGULAR),
-        new Word("τόν", "the", MASCULINE, ACCUSATIVE, SINGULAR),
-        new Word("ὁι", "the", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", MASCULINE, GENITIVE, PLURAL),
-        new Word("τοῖς", "the", MASCULINE, DATIVE, PLURAL),
-        new Word("τούς", "the", MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("ἡ", "the", FEMININE, NOMINATIVE, SINGULAR),
-        new Word("τῆς", "the", FEMININE, GENITIVE, SINGULAR),
-        new Word("τῇ", "the", FEMININE, DATIVE, SINGULAR),
-        new Word("τήν", "the", FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("ἁι", "the", FEMININE, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", FEMININE, GENITIVE, PLURAL),
-        new Word("ταῖς", "the", FEMININE, DATIVE, PLURAL),
-        new Word("τάς", "the", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τό", "the", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("τοῦ", "the", NEUTER, GENITIVE, SINGULAR),
-        new Word("τῷ", "the", NEUTER, DATIVE, SINGULAR),
-        new Word("τό", "the", NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("τά", "the", NEUTER, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", NEUTER, GENITIVE, PLURAL),
-        new Word("τοῖς", "the", NEUTER, DATIVE, PLURAL),
-        new Word("τά", "the", NEUTER, ACCUSATIVE, PLURAL),
+        new Word(new WordForm("ὁ", "the", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("τοῦ", "the", MASCULINE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τῷ", "the", MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τόν", "the", MASCULINE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὁι", "the", MASCULINE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τῶν", "the", MASCULINE, GENITIVE, PLURAL))
+            .addForm(new WordForm("τοῖς", "the", MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("τούς", "the", MASCULINE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("ἡ", "the", FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τῆς", "the", FEMININE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τῇ", "the", FEMININE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τήν", "the", FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ἁι", "the", FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τῶν", "the", FEMININE, GENITIVE, PLURAL))
+            .addForm(new WordForm("ταῖς", "the", FEMININE, DATIVE, PLURAL))
+            .addForm(new WordForm("τάς", "the", FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τό", "the", NEUTER, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τοῦ", "the", NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τῷ", "the", NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("τό", "the", NEUTER, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τά", "the", NEUTER, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τῶν", "the", NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("τοῖς", "the", NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("τά", "the", NEUTER, ACCUSATIVE, PLURAL)),
         // 9164
-        new Word("καί", "and"),
+        new Word(new WordForm("καί", "and"), STRONG),
         // 5601
-        new Word("αὐτός", "he"),
-        new Word("αὐτή", "she"),
-        new Word("αὐτό", "it"),
+        new Word(new WordForm("αὐτός", "he"), STRONG)
+            .addForm(new WordForm("αὐτή", "she"))
+            .addForm(new WordForm("αὐτό", "it")),
         // 2913
-        new Word("συ", "you", NOMINATIVE, SINGULAR),
-        new Word("σου", "your", GENITIVE, SINGULAR),
-        new Word("σοι", "you", DATIVE, SINGULAR),
-        new Word("σε", "you", ACCUSATIVE, SINGULAR),
-        new Word("ὑμεις", "you", NOMINATIVE, PLURAL),
-        new Word("ὑμων", "your", GENITIVE, PLURAL),
-        new Word("ὑμιν", "you", DATIVE, PLURAL),
-        new Word("ὑμας", "you", ACCUSATIVE, PLURAL),
+        new Word(new WordForm("συ", "you", NOMINATIVE, SINGULAR), OK)
+            .addForm(new WordForm("σου", "your", GENITIVE, SINGULAR))
+            .addForm(new WordForm("σοι", "you", DATIVE, SINGULAR))
+            .addForm(new WordForm("σε", "you", ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὑμεις", "you", NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὑμων", "your", GENITIVE, PLURAL))
+            .addForm(new WordForm("ὑμιν", "you", DATIVE, PLURAL))
+            .addForm(new WordForm("ὑμας", "you", ACCUSATIVE, PLURAL)),
         // 2801
-        new Word("δε", "weak but/yet, and"),
+        new Word(new WordForm("δε", "weak but/yet, and"), STRONG),
         // 2757
-        new Word("ἐν", "dative: in"),
+        new Word(new WordForm("ἐν", "in", DATIVE), STRONG),
         // 2666
-        new Word("ἐγώ", "I", NOMINATIVE, SINGULAR),
-        new Word("μου", "my", GENITIVE, SINGULAR),
-        new Word("ἐμου", "my", GENITIVE, SINGULAR, EMPHATIC),
-        new Word("μοι", "me", DATIVE, SINGULAR),
-        new Word("ἐμοι", "me", DATIVE, SINGULAR, EMPHATIC),
-        new Word("με", "me", ACCUSATIVE, SINGULAR),
-        new Word("ἐμε", "me", ACCUSATIVE, SINGULAR, EMPHATIC),
-        new Word("ἡμεις", "we", NOMINATIVE, PLURAL),
-        new Word("ἡμων", "our", GENITIVE, PLURAL),
-        new Word("ἡμιν", "us", DATIVE, PLURAL),
-        new Word("ἡμας", "us", ACCUSATIVE, PLURAL),
+        new Word(new WordForm("ἐγώ", "I", NOMINATIVE, SINGULAR), OK)
+            .addForm(new WordForm("μου", "my", GENITIVE, SINGULAR))
+            .addForm(new WordForm("ἐμου", "my", GENITIVE, SINGULAR, EMPHATIC))
+            .addForm(new WordForm("μοι", "me", DATIVE, SINGULAR))
+            .addForm(new WordForm("ἐμοι", "me", DATIVE, SINGULAR, EMPHATIC))
+            .addForm(new WordForm("με", "me", ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ἐμε", "me", ACCUSATIVE, SINGULAR, EMPHATIC))
+            .addForm(new WordForm("ἡμεις", "we", NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ἡμων", "our", GENITIVE, PLURAL))
+            .addForm(new WordForm("ἡμιν", "us", DATIVE, PLURAL))
+            .addForm(new WordForm("ἡμας", "us", ACCUSATIVE, PLURAL)),
         // 2656
-        new Word("οὐ", "not", INDICATIVE),
-        new Word("οὐκ", "not", INDICATIVE),
-        new Word("οὐχ", "not", INDICATIVE),
-        new Word("μη", "not", IMPERATIVE, OPTATIVE, SUBJUNCTIVE, PARTICIPLE),
+        new Word(new WordForm("οὐ", "not", INDICATIVE), STRONG)
+            .addForm(new WordForm("οὐκ", "not", INDICATIVE))
+            .addForm(new WordForm("οὐχ", "not", INDICATIVE)),
+        new Word(new WordForm("μη", "not", IMPERATIVE, OPTATIVE, SUBJUNCTIVE, PARTICIPLE), STRONG),
         // 2462
-        new Word("εἰμί", "I am", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("εἶ", "you are", true, INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("ἐστίν", "s/he is", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("ἐσμέν", "we are", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("ἐστέ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("εἰσίν", "they are", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
-        new Word("εσομαι", "I will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
-        new Word("ἔσῃ", "You will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, SINGULAR),
-        new Word("ἔσται", "S/He will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, SINGULAR),
-        new Word("ἐσόμεθα", "We will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, PLURAL),
-        new Word("ἔσεσθε", "You will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, PLURAL),
-        new Word("ἔσονται", "They will be εἰμί", true, INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
-        new Word("ἤμην", "I was", true, INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
-        new Word("ἦς", "you were", true, INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("ἦν", "s/he was", true, INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
-        new Word("ἦμεν", "We were", true, INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
-        new Word("ἤμεθα", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
-        new Word("ἦτε", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
-        new Word("ἦσαν", "They were", true, INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
+        new Word(new WordForm("εἰμί", "I am", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR), OK)
+            .addForm(new WordForm("εἶ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR))
+            .addForm(new WordForm("ἐστίν", "s/he is", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR))
+            .addForm(new WordForm("ἐσμέν", "we are", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("ἐστέ", "you are", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL))
+            .addForm(new WordForm("εἰσίν", "they are", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)),
+        new Word(new WordForm("εσομαι", "I will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR), OK)
+            .addForm(new WordForm("ἔσῃ", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, SINGULAR))
+            .addForm(new WordForm("ἔσται", "S/He will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, SINGULAR))
+            .addForm(new WordForm("ἐσόμεθα", "We will be εἰμί", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("ἔσεσθε", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, PLURAL))
+            .addForm(new WordForm("ἔσονται", "They will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL)),
+        new Word(new WordForm("ἤμην", "I was", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR), OK)
+            .addForm(new WordForm("ἦς", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR))
+            .addForm(new WordForm("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR))
+            .addForm(new WordForm("ἦμεν", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("ἤμεθα", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("ἦτε", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL))
+            .addForm(new WordForm("ἦσαν", "They were", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL)),
 
-        new Word("ὤν", "being", true, PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
-        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
-        new Word("ὄντες", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL),
-        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
-        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
-        new Word("ὄντας", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
+        new Word(new WordForm("ὤν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), OK)
+            .addForm(new WordForm("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὄντες", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL))
+            .addForm(new WordForm("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("ὄντας", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL))
 
-        new Word("οὖσα", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
-        new Word("οὔσης", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, SINGULAR),
-        new Word("οὔσῃ", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, SINGULAR),
-        new Word("οὖσαν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("οὖσαι", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL),
-        new Word("οὐσῶν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, PLURAL),
-        new Word("οὔσαις", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, PLURAL),
-        new Word("οὔσας", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
+            .addForm(new WordForm("οὖσα", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("οὔσης", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("οὔσῃ", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, SINGULAR))
+            .addForm(new WordForm("οὖσαν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("οὖσαι", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("οὐσῶν", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, PLURAL))
+            .addForm(new WordForm("οὔσαις", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, PLURAL))
+            .addForm(new WordForm("οὔσας", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL))
 
-        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
-        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
-        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
-        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
-        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
-        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
-        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+            .addForm(new WordForm("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL)),
 
-        new Word("ὦ", "I might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("ἦς", "you might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("ᾖ", "s/he might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("ὦμεν", "we might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("ἦτε", "you might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("ὦσι", "they might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
-        new Word("ὦσιν", "they might be", true, SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word(new WordForm("ὦ", "I might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR), WEAK)
+            .addForm(new WordForm("ἦς", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR))
+            .addForm(new WordForm("ᾖ", "s/he might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR))
+            .addForm(new WordForm("ὦμεν", "we might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("ἦτε", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL))
+            .addForm(new WordForm("ὦσι", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL))
+            .addForm(new WordForm("ὦσιν", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
-        new Word("εἶναι", "to be", true, INFINITIVE, ACTIVE, PRESENT),
+        new Word(new WordForm("εἶναι", "to be", INFINITIVE, ACTIVE, PRESENT), WEAK),
 
-        new Word("ἴσθι", "be!", true, IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("ἔστω", "let him/her be!", true, IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("ἔστε", "be!", true, IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("ἔστωσαν", "let them be!", true, IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word(new WordForm("ἴσθι", "be!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR), WEAK)
+            .addForm(new WordForm("ἔστω", "let him/her be!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR))
+            .addForm(new WordForm("ἔστε", "be!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL))
+            .addForm(new WordForm("ἔστωσαν", "let them be!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
         // 2357
-        new Word("*λεγ", "to say", ROOT),
-        new Word("*ιπ", "to say ", ROOT, SECOND_AORIST),
-        new Word("*ερ", "to say ", ROOT, FUTURE, PERFECT, PASSIVE, AORIST),
-        new Word("λέγω", "I say - root *λεγ", PRESENT),
-        new Word("ἐρῶ", "I will say - λεγω root *ερ", FUTURE),
-        new Word("εἶπον", "I said - λεγω root *ιπ", SECOND_AORIST),
-        new Word("εἴρηκα", "I have said - λεγω root *ερ", PERFECT),
-        new Word("εἴρημαι", "I have been said - λεγω root *ερ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐρρέθην", "I was said - λεγω root *ερ", PASSIVE, AORIST),
+        new Word(new WordForm("*λεγ", "to say", ROOT), STRONG),
+        new Word(new WordForm("*ιπ", "to say ", ROOT, SECOND_AORIST), STRONG),
+        new Word(new WordForm("*ερ", "to say ", ROOT, FUTURE, PERFECT, PASSIVE, AORIST), STRONG)
+            .addForm(new WordForm("λέγω", "I say ", PRESENT))
+            .addForm(new WordForm("ἐρῶ", "I will say ", FUTURE))
+            .addForm(new WordForm("εἶπον", "I said ", SECOND_AORIST))
+            .addForm(new WordForm("εἴρηκα", "I have said ", PERFECT))
+            .addForm(new WordForm("εἴρημαι", "I have been said ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐρρέθην", "I was said ", PASSIVE, AORIST)),
         // 1768
-        new Word("εἰς", "accusative: into"),
+        new Word(new WordForm("εἰς", "into ", ACCUSATIVE), STRONG),
         // 1391
-        new Word("οὗτος", "this", MASCULINE),
-        new Word("αὕτη", "this", FEMININE),
-        new Word("τοῦτο", "this", NEUTER),
+        new Word(new WordForm("οὗτος", "this", MASCULINE), STRONG)
+            .addForm(new WordForm("αὕτη", "this", FEMININE))
+            .addForm(new WordForm("τοῦτο", "this", NEUTER)),
         // 1365
-        new Word("ὁς", "who, which", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("ὁυ", "who, which", MASCULINE, GENITIVE, SINGULAR),
-        new Word("ᾡ", "who, which", MASCULINE, DATIVE, SINGULAR),
-        new Word("ὁν", "who, which", MASCULINE, ACCUSATIVE, SINGULAR),
-        new Word("ἥ", "who, which", FEMININE, NOMINATIVE, SINGULAR),
-        new Word("ἡς", "who, which", FEMININE, GENITIVE, SINGULAR),
-        new Word("ᾑ", "who, which", FEMININE, DATIVE, SINGULAR),
-        new Word("ἡν", "who, which", FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("ὅ", "who, which", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("ὁυ", "who, which", NEUTER, GENITIVE, SINGULAR),
-        new Word("ᾡ", "who, which", NEUTER, DATIVE, SINGULAR),
-        new Word("ὅ", "who, which", NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("ὅι", "who, which", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", MASCULINE, GENITIVE, PLURAL),
-        new Word("ὁις", "who, which", MASCULINE, DATIVE, PLURAL),
-        new Word("ὁυς", "who, which", MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("ἅι", "who, which", FEMININE, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", FEMININE, GENITIVE, PLURAL),
-        new Word("ἁις", "who, which", FEMININE, DATIVE, PLURAL),
-        new Word("ἁς", "who, which", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("ἁ", "who, which", NEUTER, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", NEUTER, GENITIVE, PLURAL),
-        new Word("ὁις", "who, which", NEUTER, DATIVE, PLURAL),
-        new Word("ἁ", "who, which", NEUTER, ACCUSATIVE, PLURAL),
+        new Word(new WordForm("ὁς", "who, which", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("ὁυ", "who, which", MASCULINE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("ᾡ", "who, which", MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("ὁν", "who, which", MASCULINE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ἥ", "who, which", FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("ἡς", "who, which", FEMININE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("ᾑ", "who, which", FEMININE, DATIVE, SINGULAR))
+            .addForm(new WordForm("ἡν", "who, which", FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὅ", "who, which", NEUTER, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("ὁυ", "who, which", NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("ᾡ", "who, which", NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("ὅ", "who, which", NEUTER, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("ὅι", "who, which", MASCULINE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὡν", "who, which", MASCULINE, GENITIVE, PLURAL))
+            .addForm(new WordForm("ὁις", "who, which", MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("ὁυς", "who, which", MASCULINE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("ἅι", "who, which", FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὡν", "who, which", FEMININE, GENITIVE, PLURAL))
+            .addForm(new WordForm("ἁις", "who, which", FEMININE, DATIVE, PLURAL))
+            .addForm(new WordForm("ἁς", "who, which", FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("ἁ", "who, which", NEUTER, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("ὡν", "who, which", NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("ὁις", "who, which", NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("ἁ", "who, which", NEUTER, ACCUSATIVE, PLURAL)),
         // 1318
-        new Word("Θεός", "God", MASCULINE),
-        new Word("Θεοῦ", "God", MASCULINE, GENITIVE),
+        new Word(new WordForm("Θεός", "God", MASCULINE), STRONG)
+            .addForm(new WordForm("Θεοῦ", "God", MASCULINE, GENITIVE)),
         // 1297
-        new Word("ὅτι", "that, because"),
+        new Word(new WordForm("ὅτι", "that, because"), STRONG),
         // 1283
-        new Word("πᾶς", "all every each", MASCULINE),
-        new Word("πᾶσα", "all every each", FEMININE),
-        new Word("πᾶν", "all every each", NEUTER),
+        new Word(new WordForm("πᾶς", "all every each", MASCULINE), STRONG)
+            .addForm(new WordForm("πᾶσα", "all every each", FEMININE))
+            .addForm(new WordForm("πᾶν", "all every each", NEUTER)),
         // 1042
-        new Word("γάρ", "for, because"),
+        new Word(new WordForm("γάρ", "for, because"), STRONG),
         // 916
-        new Word("ἐκ", "genitive: out of, from"),
-        new Word("ἐξ", "genitive: out of, from"),
+        new Word(new WordForm("ἐκ", "out of, from", GENITIVE), STRONG)
+            .addForm(new WordForm("ἐξ", "out of, from", GENITIVE)),
         // 891
-        new Word("ἐπί", "accusative: onto, genitive: over, dative: at", true),
+        new Word(new WordForm("ἐπί", "onto", ACCUSATIVE), STRONG)
+            .addForm(new WordForm("ἐπί", "over", GENITIVE))
+            .addForm(new WordForm("ἐπί", "at", DATIVE)),
         // 719
-        new Word("κύριος", "lord", MASCULINE),
-        new Word("κύριου", "lord", MASCULINE, GENITIVE),
+        new Word(new WordForm("κύριος", "lord", MASCULINE), STRONG)
+            .addForm(new WordForm("κύριου", "lord", MASCULINE, GENITIVE)),
         // 708
-        new Word("*σεχ",	"to have", ROOT),
-        new Word("ἔχω",	"I have - root *σεχ", PRESENT),
-        new Word("ἕξω",	"I will have - ἐχω root *σεχ", FUTURE),
-        new Word("ἔσχον", "I had - ἐχω root *σεχ", SECOND_AORIST),
-        new Word("ἔσχηκα", "I have had - ἐχω root *σεχ", PERFECT),
+        new Word(new WordForm("*σεχ",	"to have", ROOT), OK)
+            .addForm(new WordForm("ἔχω",	"I have ", PRESENT))
+            .addForm(new WordForm("ἕξω",	"I will have ", FUTURE))
+            .addForm(new WordForm("ἔσχον", "I had ", SECOND_AORIST))
+            .addForm(new WordForm("ἔσχηκα", "I have had ", PERFECT)),
         // 699
-        new Word("πρός", "accusative: to, towards", true),
+        new Word(new WordForm("πρός", "to, towards", ACCUSATIVE), WEAK),
         // 669
-        new Word("*γεν",	"to become, to be", ROOT),
-        new Word("γίνομαι",	"I become, I am - root *γεν", PRESENT, DEPONENT),
-        new Word("γενήσομαι", "I will become - γινομαι root *γεν", FUTURE, DEPONENT),
-        new Word("ἐγένομην", "I became - γινομαι root *γεν", AORIST, DEPONENT),
-        new Word("γέγονα", "I have become - γινομαι root *γεν", SECOND_PERFECT),
-        new Word("γεγένημαι", "I have been made, caused to happen - γινομαι root *γεν", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐγενήθην", "I happened, became - γινομαι root *γεν", PASSIVE, AORIST),
+        new Word(new WordForm("*γεν",	"to become, to be", ROOT), OK)
+            .addForm(new WordForm("γίνομαι",	"I become, I am ", PRESENT, DEPONENT))
+            .addForm(new WordForm("γενήσομαι", "I will become ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἐγένομην", "I became ", AORIST, DEPONENT))
+            .addForm(new WordForm("γέγονα", "I have become ", SECOND_PERFECT))
+            .addForm(new WordForm("γεγένημαι", "I have been made, caused to happen ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐγενήθην", "I happened, became ", PASSIVE, AORIST)),
         // 668
-        new Word("διά", "accusative: on account of, genitive: through", true),
+        new Word(new WordForm("διά", "on account of", ACCUSATIVE), OK)
+            .addForm(new WordForm("διά", "through", GENITIVE)),
         // 663
-        new Word("ἵνα", "in order that"),
+        new Word(new WordForm("ἵνα", "in order that"), OK),
         // 646
-        new Word("ἀπό", "genitive: from"),
+        new Word(new WordForm("ἀπό", "from", GENITIVE), STRONG),
         // 638
-        new Word("ἀλλά", "but (strong)"),
+        new Word(new WordForm("ἀλλά", "but (strong)"), STRONG),
         // 634
-        new Word("*ερχ", "To come, to go", ROOT, PRESENT),
-        new Word("*ελευθ", "to come/go ", ROOT, FUTURE, AORIST, PERFECT),
-        new Word("ἔρχομαι", "I come, I go - root *ερχ", PRESENT, DEPONENT),
-        new Word("ἐλεύσομαι", "I will come/go - ἔρχομαι root *ελευθ", FUTURE, DEPONENT),
-        new Word("ἦλθον", "I came/went, - ἔρχομαι root *ελευθ", SECOND_AORIST),
-        new Word("ἐλήλυθα", "I have come/gone - ἔρχομαι root *ελευθ", SECOND_PERFECT),
+        new Word(new WordForm("*ερχ", "To come, to go", ROOT, PRESENT), OK)
+            .addForm(new WordForm("*ελευθ", "to come/go ", ROOT, FUTURE, AORIST, PERFECT))
+            .addForm(new WordForm("ἔρχομαι", "I come, I go ", PRESENT, DEPONENT))
+            .addForm(new WordForm("ἐλεύσομαι", "I will come/go ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἦλθον", "I came/went", SECOND_AORIST))
+            .addForm(new WordForm("ἐλήλυθα", "I have come/gone ", SECOND_PERFECT)),
         // 579
-        new Word("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR),
-        new Word("τίνι", "who? what?", MASCULINE, DATIVE, SINGULAR),
-        new Word("τίνα", "who? what?", MASCULINE, ACCUSATIVE, SINGULAR),
-        new Word("τίς", "who? what?", FEMININE, NOMINATIVE, SINGULAR),
-        new Word("τίνος", "who? what?", FEMININE, GENITIVE, SINGULAR),
-        new Word("τίνι", "who? what?", FEMININE, DATIVE, SINGULAR),
-        new Word("τίνα", "who? what?", FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("τί", "who? what?", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("τίνος", "who? what?", NEUTER, GENITIVE, SINGULAR),
-        new Word("τίνι", "who? what?", NEUTER, DATIVE, SINGULAR),
-        new Word("τί", "who? what?", NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("τίνες", "who? what?", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("τίνων", "who? what?", MASCULINE, GENITIVE, PLURAL),
-        new Word("τίσι", "who? what?", MASCULINE, DATIVE, PLURAL),
-        new Word("τίνας", "who? what?", MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("τίνες", "who? what?", FEMININE, NOMINATIVE, PLURAL),
-        new Word("τίνων", "who? what?", FEMININE, GENITIVE, PLURAL),
-        new Word("τίσι", "who? what?", FEMININE, DATIVE, PLURAL),
-        new Word("τίνας", "who? what?", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τίνα", "who? what?", NEUTER, NOMINATIVE, PLURAL),
-        new Word("τίνων", "who? what?", NEUTER, GENITIVE, PLURAL),
-        new Word("τίσι", "who? what?", NEUTER, DATIVE, PLURAL),
-        new Word("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL),
+        new Word(new WordForm("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τίνι", "who? what?", MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τίνα", "who? what?", MASCULINE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τίς", "who? what?", FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τίνος", "who? what?", FEMININE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τίνι", "who? what?", FEMININE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τίνα", "who? what?", FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τί", "who? what?", NEUTER, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τίνος", "who? what?", NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τίνι", "who? what?", NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("τί", "who? what?", NEUTER, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τίνες", "who? what?", MASCULINE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τίνων", "who? what?", MASCULINE, GENITIVE, PLURAL))
+            .addForm(new WordForm("τίσι", "who? what?", MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("τίνας", "who? what?", MASCULINE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τίνες", "who? what?", FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τίνων", "who? what?", FEMININE, GENITIVE, PLURAL))
+            .addForm(new WordForm("τίσι", "who? what?", FEMININE, DATIVE, PLURAL))
+            .addForm(new WordForm("τίνας", "who? what?", FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τίνα", "who? what?", NEUTER, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τίνων", "who? what?", NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("τίσι", "who? what?", NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL)),
         // 572
-        new Word("*ποιε", "to do, to make", ROOT),
-        new Word("ποιω", "I do, I make - root *ποιε", PRESENT),
-        new Word("ποιήσω", "I will make/do - root *ποιε", FUTURE),
-        new Word("ἐποίησα", "I did/made - root *ποιε", AORIST),
-        new Word("πεποίηκα", "I have done/made - root *ποιε", PERFECT),
-        new Word("πεποίημαι", "I have been done/made - root *ποιε", MIDDLE, PASSIVE, PERFECT),
+        new Word(new WordForm("*ποιε", "to do, to make", ROOT), STRONG)
+            .addForm(new WordForm("ποιω", "I do, I make ", PRESENT))
+            .addForm(new WordForm("ποιήσω", "I will make/do ", FUTURE))
+            .addForm(new WordForm("ἐποίησα", "I did/made ", AORIST))
+            .addForm(new WordForm("πεποίηκα", "I have done/made ", PERFECT))
+            .addForm(new WordForm("πεποίημαι", "I have been done/made ", MIDDLE, PASSIVE, PERFECT)),
         // 550
-        new Word("ἄνθρωπος", "human being", MASCULINE),
-        new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
+        new Word(new WordForm("ἄνθρωπος", "human being", MASCULINE), STRONG)
+            .addForm(new WordForm("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE)),
         // 538
-        new Word("τις", "someone something", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("τινος", "someone something", MASCULINE, GENITIVE, SINGULAR),
-        new Word("τινα", "someone something", MASCULINE, ACCUSATIVE, SINGULAR),
-        new Word("τινι", "someone something", MASCULINE, DATIVE, SINGULAR),
-        new Word("τις", "someone something", FEMININE, NOMINATIVE, SINGULAR),
-        new Word("τινος", "someone something", FEMININE, GENITIVE, SINGULAR),
-        new Word("τινι", "someone something", FEMININE, DATIVE, SINGULAR),
-        new Word("τινα", "someone something", FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("τι", "someone something", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("τινος", "someone something", NEUTER, GENITIVE, SINGULAR),
-        new Word("τινι", "someone something", NEUTER, DATIVE, SINGULAR),
-        new Word("τι", "someone something", NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("τινες", "someone something", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", MASCULINE, GENITIVE, PLURAL),
-        new Word("τισι", "someone something", MASCULINE, DATIVE, PLURAL),
-        new Word("τινας", "someone something", MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("τινες", "someone something", FEMININE, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", FEMININE, GENITIVE, PLURAL),
-        new Word("τισι", "someone something", FEMININE, DATIVE, PLURAL),
-        new Word("τινας", "someone something", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τινα", "someone something", NEUTER, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", NEUTER, GENITIVE, PLURAL),
-        new Word("τισι", "someone something", NEUTER, DATIVE, PLURAL),
-        new Word("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL),
+        new Word(new WordForm("τις", "someone something", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("τινος", "someone something", MASCULINE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τινα", "someone something", MASCULINE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τινι", "someone something", MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τις", "someone something", FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τινος", "someone something", FEMININE, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τινι", "someone something", FEMININE, DATIVE, SINGULAR))
+            .addForm(new WordForm("τινα", "someone something", FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τι", "someone something", NEUTER, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("τινος", "someone something", NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τινι", "someone something", NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("τι", "someone something", NEUTER, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τινες", "someone something", MASCULINE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τινων", "someone something", MASCULINE, GENITIVE, PLURAL))
+            .addForm(new WordForm("τισι", "someone something", MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("τινας", "someone something", MASCULINE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τινες", "someone something", FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τινων", "someone something", FEMININE, GENITIVE, PLURAL))
+            .addForm(new WordForm("τισι", "someone something", FEMININE, DATIVE, PLURAL))
+            .addForm(new WordForm("τινας", "someone something", FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τινα", "someone something", NEUTER, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τινων", "someone something", NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("τισι", "someone something", NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL)),
         // 531
-        new Word("Χριστός", "Christ", MASCULINE),
-        new Word("Χριστοῦ", "Christ", MASCULINE, GENITIVE),
+        new Word(new WordForm("Χριστός", "Christ", MASCULINE), STRONG)
+            .addForm(new WordForm("Χριστοῦ", "Christ", MASCULINE, GENITIVE)),
         // 504
-        new Word("ὡς", "as, like, when, that, how, approximately", true),
+        new Word(new WordForm("ὡς", "as, like, when, that, how, approximately"), OK),
         // 502
-        new Word("εἰ", "if"),
+        new Word(new WordForm("εἰ", "if"), STRONG),
         // 499
-        new Word("οὖν", "therefore"),
+        new Word(new WordForm("οὖν", "therefore"), STRONG),
         // 476
-        new Word("κατά", "accusative: according to, genitive: down from", true),
+        new Word(new WordForm("κατά", "according to", ACCUSATIVE), OK)
+            .addForm(new WordForm("κατά", "down from", GENITIVE)),
         // 473
-        new Word("μετά", "accusative: after, genitive: with", true),
+        new Word(new WordForm("μετά", "after", ACCUSATIVE), OK)
+            .addForm(new WordForm("μετά", "with", GENITIVE)),
         // 455
-        new Word("*ορα",	"to see ", ROOT, PRESENT, PASSIVE, PERFECT),
-        new Word("*οπ",	"to see ", ROOT, FUTURE, PASSIVE, AORIST),
-        new Word("*ιδ",	"to see ", ROOT, SECOND_AORIST),
-        new Word("ὁρω",	"I see - ὁραω root *ορα", PRESENT),
-        new Word("ὄψομαι",	"I will see - ὁραω root *οπ", FUTURE, DEPONENT),
-        new Word("εἶδον",	"I saw - ὁραω root *ιδ", SECOND_AORIST),
-        new Word("ἑώρακα",	"I have seen - ὁραω root *ορα", PERFECT),
-        new Word("ὤφθην",	"I was seen - ὁραω root *οπ", PASSIVE, AORIST),
+        new Word(new WordForm("*ορα",	"to see ", ROOT), OK)
+            .addForm(new WordForm("ὁρω",	"I see ", PRESENT))
+            .addForm(new WordForm("ἑώρακα",	"I have seen ", PERFECT)),
+        new Word(new WordForm("*οπ",	"to see ", ROOT), WEAK)
+            .addForm(new WordForm("ὄψομαι",	"I will see ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ὤφθην",	"I was seen ", PASSIVE, AORIST)),
+        new Word(new WordForm("*ιδ",	"to see ", ROOT), WEAK)
+            .addForm(new WordForm("εἶδον",	"I saw ", SECOND_AORIST)),
         // 428
-        new Word("*ακου", "to hear ", ROOT),
-        new Word("ἀκούω", "I hear - root *ακου", PRESENT),
-        new Word("ἀκούσω", "I will hear - root *ακου", FUTURE),
-        new Word("ἤκουσα", "I heard - root *ακου", AORIST),
-        new Word("ἀκήκοα", "I have heard - root *ακου", SECOND_PERFECT),
-        new Word("ἠκούσθην", "I was heard - root *ακου", PASSIVE, AORIST),
+        new Word(new WordForm("*ακου", "to hear ", ROOT), STRONG)
+            .addForm(new WordForm("ἀκούω", "I hear ", PRESENT))
+            .addForm(new WordForm("ἀκούσω", "I will hear ", FUTURE))
+            .addForm(new WordForm("ἤκουσα", "I heard ", AORIST))
+            .addForm(new WordForm("ἀκήκοα", "I have heard ", SECOND_PERFECT))
+            .addForm(new WordForm("ἠκούσθην", "I was heard ", PASSIVE, AORIST)),
         // 418
-        new Word("πολύς", "many, much", MASCULINE),
-        new Word("πολλή", "many, much", FEMININE),
-        new Word("πολύ", "many, much", NEUTER),
+        new Word(new WordForm("πολύς", "many, much", MASCULINE), STRONG)
+            .addForm(new WordForm("πολλή", "many, much", FEMININE))
+            .addForm(new WordForm("πολύ", "many, much", NEUTER)),
         // 417
-        new Word("*δο", "to give ", ROOT),
-        new Word("δίδωμι", "I give - root *δο", PRESENT),
-        new Word("δώσω", "I will give - διδωμι root *δο", FUTURE),
-        new Word("ἔδωκα", "I gave - διδωμι root *δο", AORIST),
-        new Word("δέδωκα", "I have given - διδωμι root *δο", PERFECT),
-        new Word("δέδομαι", "I have been given - διδωμι root *δο", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐδόθην", "I was given - διδωμι passive root *δο", PASSIVE, AORIST),
+        new Word(new WordForm("*δο", "to give ", ROOT), OK)
+            .addForm(new WordForm("δίδωμι", "I give ", PRESENT))
+            .addForm(new WordForm("δώσω", "I will give ", FUTURE))
+            .addForm(new WordForm("ἔδωκα", "I gave ", AORIST))
+            .addForm(new WordForm("δέδωκα", "I have given ", PERFECT))
+            .addForm(new WordForm("δέδομαι", "I have been given ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐδόθην", "I was given ", PASSIVE, AORIST)),
         // 414
-        new Word("πατήρ", "father", MASCULINE),
-        new Word("πατρός", "father", MASCULINE, GENITIVE),
+        new Word(new WordForm("πατήρ", "father", MASCULINE), STRONG)
+            .addForm(new WordForm("πατρός", "father", MASCULINE, GENITIVE)),
         // 389
-        new Word("ἡμέρα", "day", FEMININE),
-        new Word("ἡμέρας", "day", FEMININE, GENITIVE),
+        new Word(new WordForm("ἡμέρα", "day", FEMININE), STRONG)
+            .addForm(new WordForm("ἡμέρας", "day", FEMININE, GENITIVE)),
         // 379
-        new Word("πνεῦμα", "spirit, wind, breath", NEUTER),
-        new Word("πνεύματος", "spirit, wind, breath", NEUTER, GENITIVE),
+        new Word(new WordForm("πνεῦμα", "spirit, wind, breath", NEUTER), STRONG)
+            .addForm(new WordForm("πνεύματος", "spirit, wind, breath", NEUTER, GENITIVE)),
         // 377
-        new Word("υἱός", "son", MASCULINE),
-        new Word("υἱοῦ", "son", MASCULINE, GENITIVE),
+        new Word(new WordForm("υἱός", "son", MASCULINE), STRONG)
+            .addForm(new WordForm("υἱοῦ", "son", MASCULINE, GENITIVE)),
         // 353
-        new Word("εἷς", "one", true, MASCULINE),
-        new Word("μία", "one", FEMININE),
-        new Word("ἕν", "one", true, NEUTER),
+        new Word(new WordForm("εἷς", "one", MASCULINE), OK)
+            .addForm(new WordForm("μία", "one", FEMININE))
+            .addForm(new WordForm("ἕν", "one", NEUTER)),
         // 343
-        new Word("ἀδελφός", "brother", MASCULINE),
-        new Word("ἀδελφοῦ", "brother", MASCULINE, GENITIVE),
-        new Word("ἤ", "or"),
+        new Word(new WordForm("ἀδελφός", "brother", MASCULINE), STRONG)
+            .addForm(new WordForm("ἀδελφοῦ", "brother", MASCULINE, GENITIVE)),
+        new Word(new WordForm("ἤ", "or"), STRONG),
         // 333
-        new Word("ἐάν", "if", true),
-        new Word("περί", "accusative: around, genitive: concerning, about", true),
-        // 330
-        new Word("λόγος", "word", MASCULINE),
-        new Word("λόγου", "word", MASCULINE, GENITIVE),
+        new Word(new WordForm("ἐάν", "if"), OK),
+        new Word(new WordForm("περί", "around", ACCUSATIVE), WEAK)
+            .addForm(new WordForm("περί", "concerning, about", GENITIVE)),
         // 324
-        new Word("οἶδα", "I know", PRESENT),
+        new Word(new WordForm("οἶδα", "I know", PRESENT), OK),
         // 319
-        new Word("ἑαυτοῦ", "himself", MASCULINE, GENITIVE),
-        new Word("ἑαυτῆς", "herself", FEMININE, GENITIVE),
-        new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE),
+        new Word(new WordForm("ἑαυτοῦ", "himself", MASCULINE, GENITIVE), OK)
+            .addForm(new WordForm("ἑαυτῆς", "herself", FEMININE, GENITIVE))
+            .addForm(new WordForm("ἑαυτοῦ", "itself", NEUTER, GENITIVE)),
         // 296
-        new Word("*λαλε", "to speak ", ROOT),
-        new Word("λαλω", "I speak - root *λαλε", PRESENT),
-        new Word("λαλήσω", "I will speak - root *λαλε", FUTURE),
-        new Word("ἐλάλησα", "I spoke - root *λαλε", AORIST),
-        new Word("λελάληκα", "I have spoken - root *λαλε", PERFECT),
-        new Word("λελάλημαι", "I have been spoken - root *λαλε", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐλαλήθην", "I was spoken - root *λαλε", PASSIVE, AORIST),
+        new Word(new WordForm("*λαλε", "to speak ", ROOT), STRONG)
+            .addForm(new WordForm("λαλω", "I speak ", PRESENT))
+            .addForm(new WordForm("λαλήσω", "I will speak ", FUTURE))
+            .addForm(new WordForm("ἐλάλησα", "I spoke ", AORIST))
+            .addForm(new WordForm("λελάληκα", "I have spoken ", PERFECT))
+            .addForm(new WordForm("λελάλημαι", "I have been spoken ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐλαλήθην", "I was spoken ", PASSIVE, AORIST)),
         // 273
-        new Word("οὐρανός", "heaven", MASCULINE),
-        new Word("οὐρανοῦ", "heaven", MASCULINE, GENITIVE),
+        new Word(new WordForm("οὐρανός", "heaven", MASCULINE), STRONG)
+            .addForm(new WordForm("οὐρανοῦ", "heaven", MASCULINE, GENITIVE)),
         // 261
-        new Word("μαθητής", "student, disciple", MASCULINE),
-        new Word("μαθητοῦ", "student, disciple", MASCULINE, GENITIVE),
+        new Word(new WordForm("μαθητής", "student, disciple", MASCULINE), STRONG)
+            .addForm(new WordForm("μαθητοῦ", "student, disciple", MASCULINE, GENITIVE)),
         // 258
-        new Word("*λαβ", "to take, to receive ", ROOT),
-        new Word("λαμβάνω", "I take, I receive - root *λαβ", PRESENT),
-        new Word("λήμψομαι", "I will take/receive - λαμβανω root *λαβ", FUTURE, DEPONENT),
-        new Word("ἔλαβον", "I took/received - λαμβανω root *λαβ", SECOND_AORIST),
-        new Word("εἴληφα", "I have taken/received - λαμβανω root *λαβ", SECOND_PERFECT),
-        new Word("εἴλημμαι", "I have been taken/received - λαμβανω root *λαβ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐλήμφθην", "I was taken/received - λαμβανω root *λαβ", PASSIVE, AORIST),
+        new Word(new WordForm("*λαβ", "to take, to receive ", ROOT), WEAK)
+            .addForm(new WordForm("λαμβάνω", "I take, I receive ", PRESENT))
+            .addForm(new WordForm("λήμψομαι", "I will take/receive ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἔλαβον", "I took/received ", SECOND_AORIST))
+            .addForm(new WordForm("εἴληφα", "I have taken/received ", SECOND_PERFECT))
+            .addForm(new WordForm("εἴλημμαι", "I have been taken/received ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐλήμφθην", "I was taken/received ", PASSIVE, AORIST)),
         // 250
-        new Word("γῆ", "land, earth", FEMININE),
-        new Word("γῆς", "land, earth", FEMININE, GENITIVE),
+        new Word(new WordForm("γῆ", "land, earth", FEMININE), STRONG)
+            .addForm(new WordForm("γῆς", "land, earth", FEMININE, GENITIVE)),
         // 249
-        new Word("*πιστευ", "to believe ", ROOT),
-        new Word("πιστεύω", "I believe - root *πιστευ", PRESENT),
-        new Word("πιστεύσω", "I will believe - root *πιστευ", FUTURE),
-        new Word("ἐπίστευσα", "I believed - root *πιστευ", AORIST),
-        new Word("πεπίστευκα", "I have believed - root *πιστευ", PERFECT),
-        new Word("πεπίστευμαι", "I have been believed - root *πιστευ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐπιστεύθην", "I was believed - root *πιστευ", PASSIVE, AORIST),
+        new Word(new WordForm("*πιστευ", "to believe ", ROOT), STRONG)
+            .addForm(new WordForm("πιστεύω", "I believe ", PRESENT))
+            .addForm(new WordForm("πιστεύσω", "I will believe ", FUTURE))
+            .addForm(new WordForm("ἐπίστευσα", "I believed ", AORIST))
+            .addForm(new WordForm("πεπίστευκα", "I have believed ", PERFECT))
+            .addForm(new WordForm("πεπίστευμαι", "I have been believed ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐπιστεύθην", "I was believed ", PASSIVE, AORIST)),
         // 245
-        new Word("μέγας", "large, great", MASCULINE),
-        new Word("μεγάλη", "large, great", FEMININE),
-        new Word("μέγα", "large, great", NEUTER),
+        new Word(new WordForm("μέγας", "large, great", MASCULINE), STRONG)
+            .addForm(new WordForm("μεγάλη", "large, great", FEMININE))
+            .addForm(new WordForm("μέγα", "large, great", NEUTER)),
         // 243
-        new Word("πίστις", "faith, trust", FEMININE),
-        new Word("πίστεως", "faith, trust", FEMININE, GENITIVE),
+        new Word(new WordForm("πίστις", "faith, trust", FEMININE), STRONG)
+            .addForm(new WordForm("πίστεως", "faith, trust", FEMININE, GENITIVE)),
         // 242
-        new Word("*γνω", "to know ", ROOT),
-        new Word("γινώσκω", "I know - root *γνω", PRESENT),
-        new Word("γνώσομαι", "I will know - γινωσκω root *γνω", FUTURE, DEPONENT),
-        new Word("ἔγνων", "I knew - γινωσκω root *γνω", SECOND_AORIST),
-        new Word("ἔγνωσκα", "I have known - γινωσκω root *γνω", PERFECT),
-        new Word("ἔγνωσμαι", "I have been known - γινωσκω root *γνω", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐγνώσθην", "I was known - γινωσκω root *γνω", PASSIVE, AORIST),
+        new Word(new WordForm("*γνω", "to know ", ROOT), OK)
+            .addForm(new WordForm("γινώσκω", "I know ", PRESENT))
+            .addForm(new WordForm("γνώσομαι", "I will know ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἔγνων", "I knew ", SECOND_AORIST))
+            .addForm(new WordForm("ἔγνωσκα", "I have known ", PERFECT))
+            .addForm(new WordForm("ἔγνωσμαι", "I have been known ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐγνώσθην", "I was known ", PASSIVE, AORIST)),
         // 234
-        new Word("ὄνομα", "name", MASCULINE),
-        new Word("ὄνοματος", "name", MASCULINE, GENITIVE),
+        new Word(new WordForm("ὄνομα", "name", MASCULINE), OK)
+            .addForm(new WordForm("ὄνοματος", "name", MASCULINE, GENITIVE)),
         // 233
-        new Word("ἅγιος", "holy", ADJECTIVE, MASCULINE),
-        new Word("ἅγια", "holy", ADJECTIVE, FEMININE),
-        new Word("ἅγιον", "holy", ADJECTIVE, NEUTER),
+        new Word(new WordForm("ἅγιος", "holy", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("ἅγια", "holy", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἅγιον", "holy", ADJECTIVE, NEUTER)),
         // 231
-        new Word("*αποκριν", "to answer ", true, ROOT),
-        new Word("ἀποκρίνομαι", "I answer - root *αποκριν", true, PRESENT, DEPONENT),
-        new Word("ἀπεκρινἀμην", "I answered - αποκρινομαιa root *αποκριν", true, AORIST, DEPONENT),
-        new Word("ἀπεκρίθην", "I was answered - αποκρινομαιa root *αποκριν", true, PASSIVE, AORIST),
+        new Word(new WordForm("*αποκριν", "to answer ", ROOT), WEAK)
+            .addForm(new WordForm("ἀποκρίνομαι", "I answer ", PRESENT, DEPONENT))
+            .addForm(new WordForm("ἀπεκρινἀμην", "I answered ", AORIST, DEPONENT))
+            .addForm(new WordForm("ἀπεκρίθην", "I was answered ", PASSIVE, AORIST)),
         // 220
-        new Word("ὑπό", "accusative: under, genitive: by", true),
+        new Word(new WordForm("ὑπό", "under", ACCUSATIVE), WEAK)
+            .addForm(new WordForm("ὑπό", "by", GENITIVE)),
         // 218
-        new Word("ἐξέρχομαι", "I go out"),
-        new Word("ἐξελεὐσομαι", "I will go out εξερχομαι", FUTURE),
-        new Word("ἐξῆλθον", "I went out εξερχομαι", AORIST),
-        new Word("ἐξελήλυθα", "I have gone out εξερχομαι", PERFECT),
+        new Word(new WordForm("ἐξέρχομαι", "I go out"), OK)
+            .addForm(new WordForm("ἐξελεὐσομαι", "I will go out εξερχομαι", FUTURE))
+            .addForm(new WordForm("ἐξῆλθον", "I went out εξερχομαι", AORIST))
+            .addForm(new WordForm("ἐξελήλυθα", "I have gone out εξερχομαι", PERFECT)),
         // 216
-        new Word("ἀνήρ", "man", MASCULINE),
-        new Word("ἀνδρός", "man", MASCULINE, GENITIVE),
+        new Word(new WordForm("ἀνήρ", "man", MASCULINE), STRONG)
+            .addForm(new WordForm("ἀνδρός", "man", MASCULINE, GENITIVE)),
         // 215
-        new Word("γυνή", "woman", FEMININE),
-        new Word("γυναικός", "woman", FEMININE, GENITIVE),
-        new Word("τέ", "and, so"),
+        new Word(new WordForm("γυνή", "woman", FEMININE), STRONG)
+            .addForm(new WordForm("γυναικός", "woman", FEMININE, GENITIVE)),
+        new Word(new WordForm("τέ", "and, so"), OK),
         // 210
-        new Word("*δυν", "to be able ", ROOT),
-        new Word("δύναμαι", "I am able - root *δυν", PRESENT, DEPONENT),
-        new Word("δυνήσομαι", "I will be able - δυναμαι root *δυν", FUTURE, DEPONENT),
-        new Word("ἠδυνήθην",	"I was able - δυναμαι root *δυν", PASSIVE, AORIST, DEPONENT),
+        new Word(new WordForm("*δυν", "to be able ", ROOT), OK)
+            .addForm(new WordForm("δύναμαι", "I am able ", PRESENT, DEPONENT))
+            .addForm(new WordForm("δυνήσομαι", "I will be able ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἠδυνήθην",	"I was able ", PASSIVE, AORIST, DEPONENT)),
         // 208
-        new Word("*εθελε", "to want ", ROOT),
-        new Word("θέλω", "I want - root *εθελε", PRESENT),
-        new Word("ἠθέλησα", "I wanted - θελω root *εθελε", AORIST),
-        new Word("ὅυτω", "thus", true),
-        new Word("ὅυτως", "thus", true),
+        new Word(new WordForm("*εθελε", "to want ", ROOT), OK)
+            .addForm(new WordForm("θέλω", "I want ", PRESENT))
+            .addForm(new WordForm("ἠθέλησα", "I wanted ", AORIST)),
+        new Word(new WordForm("ὅυτω", "thus"), WEAK)
+            .addForm(new WordForm("ὅυτως", "thus")),
         // 195
-        new Word("Ἰοὐδαῖος", "jewish", ADJECTIVE, MASCULINE),
-        new Word("Ἰοὐδαῖα", "jewish", ADJECTIVE, FEMININE),
-        new Word("Ἰοὐδαῖον", "jewish", ADJECTIVE, NEUTER),
+        new Word(new WordForm("Ἰοὐδαῖος", "jewish", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("Ἰοὐδαῖα", "jewish", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("Ἰοὐδαῖον", "jewish", ADJECTIVE, NEUTER)),
         // 194
-        new Word("παρά", "accusative: alongside of, genitive: from, dative: in the presence of", true),
-        new Word("εισερχομαι", "I enter", PRESENT),
-        new Word("εἰσελεύσομαι", "I will enter εισερχομαι", FUTURE),
-        new Word("εἰσῆλθον", "I entered εισερχομαι", AORIST),
-        new Word("εἰσελήλυθα", "I have entered εισερχομαι", PERFECT),
+        new Word(new WordForm("παρά", "alongside of", ACCUSATIVE), WEAK)
+            .addForm(new WordForm("παρά", "from", GENITIVE))
+            .addForm(new WordForm("παρά", "in the presence of", DATIVE)),
+        new Word(new WordForm("εισερχομαι", "I enter", PRESENT), OK)
+            .addForm(new WordForm("εἰσελεύσομαι", "I will enter εισερχομαι", FUTURE))
+            .addForm(new WordForm("εἰσῆλθον", "I entered εισερχομαι", AORIST))
+            .addForm(new WordForm("εἰσελήλυθα", "I have entered εισερχομαι", PERFECT)),
         // 191
-        new Word("*γραφ", "to write "),
-        new Word("γραφω", "I write - root *γραφ", PRESENT),
-        new Word("γράψω", "I will write - root *γραφ", FUTURE),
-        new Word("ἔγραψα", "I wrote - root *γραφ", AORIST),
-        new Word("γέγραφα", "I have written - root *γράφ", SECOND_PERFECT),
-        new Word("γέγραμμαι", "I have been written - root *γράφ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐγράφην", "I was written - root *γράφ", PASSIVE, AORIST),
+        new Word(new WordForm("*γραφ", "to write "), STRONG)
+            .addForm(new WordForm("γραφω", "I write ", PRESENT))
+            .addForm(new WordForm("γράψω", "I will write ", FUTURE))
+            .addForm(new WordForm("ἔγραψα", "I wrote ", AORIST))
+            .addForm(new WordForm("γέγραφα", "I have written ", SECOND_PERFECT))
+            .addForm(new WordForm("γέγραμμαι", "I have been written ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐγράφην", "I was written ", PASSIVE, AORIST)),
         // 186
-        new Word("κόσμος", "world", MASCULINE),
-        new Word("κόσμου", "world", MASCULINE, GENITIVE),
+        new Word(new WordForm("κόσμος", "world", MASCULINE), STRONG)
+            .addForm(new WordForm("κόσμου", "world", MASCULINE, GENITIVE)),
         // 182
-        new Word("καθώς", "just as"),
+        new Word(new WordForm("καθώς", "just as"), STRONG),
         // 179
-        new Word("μέν", "indeed, on the one hand"),
+        new Word(new WordForm("μέν", "indeed, on the one hand"), STRONG),
         // 177
-        new Word("χείρ", "hand", FEMININE),
-        new Word("χειρός", "hand", FEMININE, GENITIVE),
+        new Word(new WordForm("χείρ", "hand", FEMININE), STRONG)
+            .addForm(new WordForm("χειρός", "hand", FEMININE, GENITIVE)),
         // 176
-        new Word("*ευρ", "to find ", ROOT),
-        new Word("ἑυρίσκω", "I find - root *ευρ", PRESENT),
-        new Word("εὑρήσω", "I will find - ἑυρίσκω root *ευρ", FUTURE),
-        new Word("εὗρον", "I found - ἑυρίσκω root *ευρ", SECOND_AORIST),
-        new Word("εὕρηκα", "I have found - ἑυρίσκω root *ευρ", PERFECT),
-        new Word("εὑρέθην", "I was found - ἑυρίσκω root *ευρ", PASSIVE, AORIST),
+        new Word(new WordForm("*ευρ", "to find ", ROOT), OK)
+            .addForm(new WordForm("ἑυρίσκω", "I find ", PRESENT))
+            .addForm(new WordForm("εὑρήσω", "I will find ", FUTURE))
+            .addForm(new WordForm("εὗρον", "I found ", SECOND_AORIST))
+            .addForm(new WordForm("εὕρηκα", "I have found ", PERFECT))
+            .addForm(new WordForm("εὑρέθην", "I was found ", PASSIVE, AORIST)),
         // 175
-        new Word("ἄγγελος", "messenger, angel", MASCULINE),
-        new Word("ἄγγελου", "messenger, angel", MASCULINE, GENITIVE),
-        new Word("ὄχλος", "crowd", MASCULINE),
-        new Word("ὄχλου", "crowd", MASCULINE, GENITIVE),
+        new Word(new WordForm("ἄγγελος", "messenger, angel", MASCULINE), STRONG)
+            .addForm(new WordForm("ἄγγελου", "messenger, angel", MASCULINE, GENITIVE)),
+        new Word(new WordForm("ὄχλος", "crowd", MASCULINE), STRONG)
+            .addForm(new WordForm("ὄχλου", "crowd", MASCULINE, GENITIVE)),
         // 173
-        new Word("ἁμαρτία", "sin", FEMININE),
-        new Word("ἁμαρτίας", "sin", FEMININE, GENITIVE),
-        // 169
-        new Word("ἔργον", "work", NEUTER),
-        new Word("ἔργου", "work", NEUTER, GENITIVE),
+        new Word(new WordForm("ἁμαρτία", "sin", FEMININE), STRONG)
+            .addForm(new WordForm("ἁμαρτίας", "sin", FEMININE, GENITIVE))
+            .addForm(new WordForm("ἁμαρτωλός", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, MASCULINE, FEMININE))
+            .addForm(new WordForm("ἁμαρτωλόν", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, NEUTER)),
         // 166
-        new Word("δόξα", "glory", FEMININE),
-        new Word("δόξης", "glory", FEMININE, GENITIVE),
-        new Word("ἄν", "if, would, might", true),
+        new Word(new WordForm("δόξα", "glory", FEMININE), OK)
+            .addForm(new WordForm("δόξης", "glory", FEMININE, GENITIVE)),
+        new Word(new WordForm("ἄν", "if, would, might"), WEAK),
         // 163
-        new Word("πόλις", "city", FEMININE),
-        new Word("πόλεως", "city", FEMININE, GENITIVE),
+        new Word(new WordForm("πόλις", "city", FEMININE), STRONG)
+            .addForm(new WordForm("πόλεως", "city", FEMININE, GENITIVE)),
         // 162
-        new Word("βασιλεία", "kingdom", true, FEMININE),
-        new Word("βασιλείας", "kingdom", true, FEMININE, GENITIVE),
-        new Word("ἔθνος", "people", NEUTER),
-        new Word("ἔθνους", "people", NEUTER, GENITIVE),
+        new Word(new WordForm("βασιλεία", "kingdom", FEMININE), WEAK)
+            .addForm(new WordForm("βασιλευς", "king", MASCULINE)) // 115
+            .addForm(new WordForm("βασιλεως", "king", MASCULINE, GENITIVE))
+            .addForm(new WordForm("βασιλείας", "kingdom", FEMININE, GENITIVE)),
+        new Word(new WordForm("ἔθνος", "people", NEUTER), OK)
+            .addForm(new WordForm("ἔθνους", "people", NEUTER, GENITIVE)),
         // 160
-        new Word("τοτε", "then", true),
-        new Word("ἕως", "until", true),
+        new Word(new WordForm("τοτε", "then"), WEAK),
+        new Word(new WordForm("ἕως", "until"), WEAK),
         // ?
-        new Word("ὅστις", "whoever, everyone (ὅς + τις both parts decline)", true, ADJECTIVE, MASCULINE),
-        new Word("ἥτις", "whoever, everyone (ἥ + τις both parts decline)", true, ADJECTIVE, FEMININE),
-        new Word("ὅτι", "whoever, everyone (ὅ + τις both parts decline)", true, ADJECTIVE, NEUTER),
+        new Word(new WordForm("ὅστις", "whoever, everyone (ὅς + τις both parts decline)", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("ἥτις", "whoever, everyone (ἥ + τις both parts decline)", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ὅτι", "whoever, everyone (ὅ + τις both parts decline)", ADJECTIVE, NEUTER)),
         // 159
-        new Word("πρῶτος", "first", ADJECTIVE, MASCULINE),
-        new Word("πρῶτη", "first", ADJECTIVE, FEMININE),
-        new Word("πρῶτον", "first", ADJECTIVE, NEUTER),
+        new Word(new WordForm("πρῶτος", "first", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("πρῶτη", "first", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("πρῶτον", "first", ADJECTIVE, NEUTER)),
         // 157
-        new Word("καρδια", "heart", FEMININE),
-        new Word("καρδιας", "heart", FEMININE, GENITIVE),
-        new Word("*εσθι", "to eat ", ROOT, PRESENT),
-        new Word("*φαγ", "to eat ", ROOT, FUTURE, SECOND_AORIST),
-        new Word("ἐσθιω", "I eat - root *εσθι", PRESENT),
-        new Word("φάγομαι", "I will eat - ἐσθιω root *φαγ", FUTURE, DEPONENT),
-        new Word("ἔφαγον", "I ate - ἐσθιω root *φαγ", SECOND_AORIST),
+        new Word(new WordForm("καρδια", "heart", FEMININE), STRONG)
+            .addForm(new WordForm("καρδιας", "heart", FEMININE, GENITIVE)),
+        new Word(new WordForm("*εσθι", "to eat ", ROOT), OK)
+            .addForm(new WordForm("ἐσθιω", "I eat ", PRESENT)),
+        new Word(new WordForm("*φαγ", "to eat ", ROOT), WEAK)
+            .addForm(new WordForm("φάγομαι", "I will eat ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἔφαγον", "I ate ", SECOND_AORIST)),
         // 155
-        new Word("*στα", "to stand ", ROOT),
-        new Word("ἵστημι", "Transitive: I set, put, place Intransitive: I stand, I appear, I stop - root *στα ", PRESENT),
-        new Word("στήσω", "I will stand - ἱστημι root *στα", FUTURE),
-        new Word("ἔστησα", "I put, set - ἱστημι root *στα", true, AORIST),
-        new Word("ἔστην", "I stood - ἱστημι root *στα", true, SECOND_AORIST),
-        new Word("ἕστηκα", "I have stood - ἱστημι root *στα", PERFECT),
-        new Word("ἐστάθην", "I was put - ἱστημιa root *στα", PASSIVE, AORIST),
-        new Word("ἀλλος", "other", ADJECTIVE, MASCULINE),
-        new Word("ἀλλη", "other", ADJECTIVE, FEMININE),
-        new Word("ἀλλο", "other", ADJECTIVE, NEUTER),
-        new Word("χαρις", "grace", FEMININE),
-        new Word("χαριτος", "grace", FEMININE, GENITIVE),
+        new Word(new WordForm("*στα", "to stand ", ROOT), WEAK)
+            .addForm(new WordForm("ἵστημι", "Transitive: I set, put, place Intransitive: I stand, I appear, I stop ", PRESENT))
+            .addForm(new WordForm("στήσω", "I will stand ", FUTURE))
+            .addForm(new WordForm("ἔστησα", "I put, set ", AORIST))
+            .addForm(new WordForm("ἔστην", "I stood ", SECOND_AORIST))
+            .addForm(new WordForm("ἕστηκα", "I have stood ", PERFECT))
+            .addForm(new WordForm("ἐστάθην", "I was put ", PASSIVE, AORIST)),
+        new Word(new WordForm("ἀλλος", "other", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("ἀλλη", "other", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἀλλο", "other", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("χαρις", "grace", FEMININE), STRONG)
+            .addForm(new WordForm("χαριτος", "grace", FEMININE, GENITIVE)),
         // 153
-        new Word("*πορευ", "to go, to live ", ROOT),
-        new Word("πορεύομαι", "I go, I live - root *πορευ", PRESENT, DEPONENT),
-        new Word("πορεύσομαι", "I will go, live - πορευομαι root *πορευ", FUTURE, DEPONENT),
-        new Word("πεπόρευμαι", "I have gone, lived - πορευομαι root *πορευ", MIDDLE, PASSIVE, PERFECT, DEPONENT),
-        new Word("ἐπορεὐθην", "I went, lived - πορευομαι root *πορευ", PASSIVE, AORIST, DEPONENT),
+        new Word(new WordForm("*πορευ", "to go, to live ", ROOT), WEAK)
+            .addForm(new WordForm("πορεύομαι", "I go, I live ", PRESENT, DEPONENT))
+            .addForm(new WordForm("πορεύσομαι", "I will go, live ", FUTURE, DEPONENT))
+            .addForm(new WordForm("πεπόρευμαι", "I have gone, lived ", MIDDLE, PASSIVE, PERFECT, DEPONENT))
+            .addForm(new WordForm("ἐπορεὐθην", "I went, lived ", PASSIVE, AORIST, DEPONENT)),
         // 150
-        new Word("ὑπερ", "accusative: above, genitive: in behalf of"),
+        new Word(new WordForm("ὑπερ", "above", ACCUSATIVE), OK)
+            .addForm(new WordForm("ὑπερ", "in behalf of", GENITIVE)),
         // 148
-        new Word("*καλεϝ", "to call ", ROOT),
-        new Word("καλέω", "I call - root *καλεϝ", PRESENT),
-        new Word("καλἐσω", "I will call - καλεω root *καλεϝ", FUTURE),
-        new Word("ἐκάλεσα", "I called - καλεω root *καλεϝ", AORIST),
-        new Word("κέκληκα", "I have called - καλεω root *καλεϝ", PERFECT),
-        new Word("κέκλημαι", "I have been called - καλεω root *καλεϝ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐκλήθην", "I was called - καλεω root *καλεϝ", PASSIVE, AORIST),
+        new Word(new WordForm("*καλεϝ", "to call ", ROOT), OK)
+            .addForm(new WordForm("καλέω", "I call ", PRESENT))
+            .addForm(new WordForm("καλἐσω", "I will call ", FUTURE))
+            .addForm(new WordForm("ἐκάλεσα", "I called ", AORIST))
+            .addForm(new WordForm("κέκληκα", "I have called ", PERFECT))
+            .addForm(new WordForm("κέκλημαι", "I have been called ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐκλήθην", "I was called ", PASSIVE, AORIST)),
         // 147
-        new Word("σαρξ", "flesh", FEMININE),
-        new Word("σαρκος", "flesh", FEMININE, GENITIVE), // TODO fix to have accents
-        new Word("ἀγαπαω", "I love", PRESENT),
-        new Word("ἀγαπήσω", "I will love ἀγαπαω", FUTURE),
-        new Word("ἠγάπησα", "I loved ἀγαπαω", AORIST),
-        new Word("ἠγάπηκα", "I have loved ἀγαπαω", PERFECT),
-        new Word("ἠγάπημαι", "I have been loved ἀγαπαω", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἠγαπἠθην", "I was loved ἀγαπαω", PASSIVE, AORIST),
-        new Word("νυν", "now"),
+        new Word(new WordForm("ἀγαπαω", "I love", PRESENT), STRONG)
+            .addForm(new WordForm("ἀγαπήσω", "I will love ἀγαπαω", FUTURE))
+            .addForm(new WordForm("ἠγάπησα", "I loved ἀγαπαω", AORIST))
+            .addForm(new WordForm("ἠγάπηκα", "I have loved ἀγαπαω", PERFECT))
+            .addForm(new WordForm("ἠγάπημαι", "I have been loved ἀγαπαω", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἠγαπἠθην", "I was loved ἀγαπαω", PASSIVE, AORIST)),
+        new Word(new WordForm("νυν", "now"), STRONG),
         // 144
-        new Word("προφητης", "prophet", MASCULINE),
-        new Word("προφητου", "prophet", MASCULINE, GENITIVE),
-        new Word("*εγερ", "to raise ", ROOT),
-        new Word("ἐγείρω", "I raise - root *εγερ", PRESENT),
-        new Word("ἐγερῶ", "I will raise - ἐγειρω root *εγερ", FUTURE),
-        new Word("ἤγειρα", "I raised - ἐγειρω root *εγερ", AORIST),
-        new Word("ἐγήγερμαι", "I have been raised - ἐγειρω root *εγερ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἠγέρθην", "I was raised - ἐγειρω root *εγερ", PASSIVE, AORIST),
+        new Word(new WordForm("προφητης", "prophet", MASCULINE), STRONG)
+            .addForm(new WordForm("προφητου", "prophet", MASCULINE, GENITIVE)),
+        new Word(new WordForm("*εγερ", "to raise ", ROOT), OK)
+            .addForm(new WordForm("ἐγείρω", "I raise ", PRESENT))
+            .addForm(new WordForm("ἐγερῶ", "I will raise ", FUTURE))
+            .addForm(new WordForm("ἤγειρα", "I raised ", AORIST))
+            .addForm(new WordForm("ἐγήγερμαι", "I have been raised ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἠγέρθην", "I was raised ", PASSIVE, AORIST)),
         // 143
-        new Word("οὐδέ", "and not, neither"),
-        new Word("απο + *σε", "to let go, divorce, forgive ", ROOT),
-        new Word("ἀφιημι", "I let go, divorce, forgive - compound verb απο + ιημι root *σε", PRESENT),
-        new Word("ἀφήσω", "I will forgive - ἀφιημι compound verb απο + ιημι root *σε", FUTURE),
-        new Word("ἀφῆκα", "I forgave - ἀφιημι compound verb απο + ιημι root *σε", AORIST),
-        new Word("ἀφέωμαι", "I have been forgiven - ἀφιημι compound verb απο + ιημι root *σε", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἀφέθην", "I was forgiven - ἀφιημι compound verb απο + ιημι root *σε", PASSIVE, AORIST),
+        new Word(new WordForm("οὐδέ", "and not, neither"), OK),
+        new Word(new WordForm("απο + *σε", "to let go, divorce, forgive ", ROOT), OK)
+            .addForm(new WordForm("ἀφιημι", "I let go, divorce, forgive ", PRESENT))
+            .addForm(new WordForm("ἀφήσω", "I will forgive ", FUTURE))
+            .addForm(new WordForm("ἀφῆκα", "I forgave ", AORIST))
+            .addForm(new WordForm("ἀφέωμαι", "I have been forgiven ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἀφέθην", "I was forgiven ", PASSIVE, AORIST)),
         // 142
-        new Word("λαος", "people", MASCULINE),
-        new Word("λαου", "people", MASCULINE, GENITIVE),
-        new Word("σωμα", "body", NEUTER),
-        new Word("σωματος", "body", NEUTER, GENITIVE),
+        new Word(new WordForm("λαος", "people", MASCULINE), OK)
+            .addForm(new WordForm("λαου", "people", MASCULINE, GENITIVE)),
+        new Word(new WordForm("σωμα", "body", NEUTER), STRONG)
+            .addForm(new WordForm("σωματος", "body", NEUTER, GENITIVE)),
         // 141
-        new Word("παλιν", "again"),
+        new Word(new WordForm("παλιν", "again"), STRONG),
         // 140
-        new Word("*ζα", "to live ", ROOT),
-        new Word("ζάω", "I live - root *ζα", PRESENT),
-        new Word("ζἠσω", "I will live - root *ζα", FUTURE),
-        new Word("ἔζεσα", "I lived - root *ζα", AORIST),
+        new Word(new WordForm("*ζα", "to live ", ROOT), OK)
+            .addForm(new WordForm("ζάω", "I live ", PRESENT))
+            .addForm(new WordForm("ζἠσω", "I will live ", FUTURE))
+            .addForm(new WordForm("ἔζεσα", "I lived ", AORIST)),
         // 139
-        new Word("φωνή", "sound, voice", FEMININE),
-        new Word("φωνῆς", "sound, voice", FEMININE, GENITIVE),
-        new Word("ζωή", "life", FEMININE),
-        new Word("ζωῆς", "life", FEMININE, GENITIVE),
+        new Word(new WordForm("φωνή", "sound, voice", FEMININE), STRONG)
+            .addForm(new WordForm("φωνῆς", "sound, voice", FEMININE, GENITIVE)),
+        new Word(new WordForm("ζωή", "life", FEMININE), STRONG)
+            .addForm(new WordForm("ζωῆς", "life", FEMININE, GENITIVE)),
         // 135
-        new Word("δύο", "two"),
+        new Word(new WordForm("δύο", "two"), OK),
         // 133
-        new Word("*βλεπ", "to see ", ROOT),
-        new Word("βλέπω", "I see - root *βλεπ", PRESENT),
-        new Word("βλέψω", "I will see - βλέπω root *βλεπ", FUTURE),
-        new Word("ἐβλέψα", "I saw - βλέπω root *βλεπ", AORIST),
+        new Word(new WordForm("*βλεπ", "to see ", ROOT), STRONG)
+            .addForm(new WordForm("βλέπω", "I see ", PRESENT))
+            .addForm(new WordForm("βλέψω", "I will see ", FUTURE))
+            .addForm(new WordForm("ἐβλέψα", "I saw ", AORIST)),
         // 132
-        new Word("απο + *στελ", "to send ", ROOT),
-        new Word("ἀποστέλλω", "I send - root *αποστελ", PRESENT),
-        new Word("ἀποστελῶ", "I will send - ἀποστέλλω root *αποστελ", FUTURE),
-        new Word("άπέστειλα", "I sent - ἀποστέλλω root *αποστελ", AORIST),
-        new Word("ἀπέσταλκα", "I have sent - ἀποστέλλω root *αποστελ", PERFECT),
-        new Word("ἀπέσταλμαι", "I have been sent - ἀποστέλλω root *αποστελ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἀπεστάλην", "I was sent - ἀποστέλλω root *αποστελ", PASSIVE, SECOND_AORIST),
+        new Word(new WordForm("απο + *στελ", "to send ", ROOT), OK)
+            .addForm(new WordForm("ἀποστέλλω", "I send ", PRESENT))
+            .addForm(new WordForm("ἀποστελῶ", "I will send ", FUTURE))
+            .addForm(new WordForm("άπέστειλα", "I sent ", AORIST))
+            .addForm(new WordForm("ἀπέσταλκα", "I have sent ", PERFECT))
+            .addForm(new WordForm("ἀπέσταλμαι", "I have been sent ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἀπεστάλην", "I was sent ", PASSIVE, SECOND_AORIST)),
         // 129
-        new Word("ἀμήν", "truly"),
+        new Word(new WordForm("ἀμήν", "truly"), STRONG),
         // 128
-        new Word("νεκρός", "dead", ADJECTIVE, MASCULINE),
-        new Word("νεκρά", "dead", ADJECTIVE, FEMININE),
-        new Word("νεκρόν", "dead", ADJECTIVE, NEUTER),
-        //new Word("συν dative", "with"),
-        new Word("συν", "dative: with"),
+        new Word(new WordForm("νεκρός", "dead", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("νεκρά", "dead", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("νεκρόν", "dead", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("συν", "with", DATIVE), STRONG),
         // 124
-        new Word("δοῦλος", "slave", MASCULINE),
-        new Word("δοῦλου", "slave", MASCULINE, GENITIVE),
+        new Word(new WordForm("δοῦλος", "slave", MASCULINE), STRONG)
+            .addForm(new WordForm("δοῦλου", "slave", MASCULINE, GENITIVE)),
         // 123
-        new Word("ὅταν", "whenever", true),
+        new Word(new WordForm("ὅταν", "whenever"), WEAK),
         // 122
-        new Word("αἰών", "age", MASCULINE),
-        new Word("αἰῶνος", "age", MASCULINE, GENITIVE),
-        new Word("ἀρχιερεύς", "high priest", MASCULINE),
-        new Word("ἀρχιερέως", "high priest", MASCULINE, GENITIVE),
-        new Word("*βαλ", "to throw ", ROOT),
-        new Word("βάλλω", "I throw - root *βαλ", PRESENT),
-        new Word("βαλῶ", "I will throw - βάλλω root *βαλ", FUTURE),
-        new Word("ἔβαλον", "I threw - βάλλω root *βαλ", SECOND_AORIST),
-        new Word("βέβληκα", "I have thrown - βάλλω root *βαλ", PERFECT),
-        new Word("βέβλημαι", "I have been thrown - βάλλω root *βαλ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐβλήθην", "I was thrown - βάλλω root *βαλ", PASSIVE, AORIST),
+        new Word(new WordForm("αἰών", "age", NOUN, MASCULINE), OK)
+            .addForm(new WordForm("αἰῶνος", "age", NOUN, MASCULINE, GENITIVE))
+            .addForm(new WordForm("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE))
+            .addForm(new WordForm("αἰώνον", "eternal", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("ἀρχιερεύς", "high priest", MASCULINE), STRONG)
+            .addForm(new WordForm("ἀρχιερέως", "high priest", MASCULINE, GENITIVE)),
+        new Word(new WordForm("*βαλ", "to throw ", ROOT), STRONG)
+            .addForm(new WordForm("βάλλω", "I throw ", PRESENT))
+            .addForm(new WordForm("βαλῶ", "I will throw ", FUTURE))
+            .addForm(new WordForm("ἔβαλον", "I threw ", SECOND_AORIST))
+            .addForm(new WordForm("βέβληκα", "I have thrown ", PERFECT))
+            .addForm(new WordForm("βέβλημαι", "I have been thrown ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐβλήθην", "I was thrown ", PASSIVE, AORIST)),
         // 120
-        new Word("θάνατος", "death", MASCULINE),
-        new Word("θάνατου", "death", MASCULINE, GENITIVE),
+        new Word(new WordForm("θάνατος", "death", MASCULINE), STRONG)
+            .addForm(new WordForm("θάνατου", "death", MASCULINE, GENITIVE)),
         // 119
-        new Word("δυναμις", "power, ability", FEMININE),
-        new Word("δυναμεως", "power, ability", FEMININE, GENITIVE),
-        new Word("παραδιδωμι", "I hand over", PRESENT),
-        new Word("παραδώσω", "I will hand over παραδιδωμι", FUTURE),
-        new Word("παρέδωκα", "I handed over παραδιδωμι", AORIST),
-        new Word("παραδέδωκα", "I have handed over παραδιδωμι", PERFECT),
-        new Word("παραδέδομαι", "I have been handed over παραδιδωμι", MIDDLE, PASSIVE, PERFECT),
-        new Word("παρεδόθην", "I was handed over παραδιδωμι", PASSIVE, AORIST),
+        new Word(new WordForm("δυναμις", "power, ability", FEMININE), OK)
+            .addForm(new WordForm("δυναμεως", "power, ability", FEMININE, GENITIVE)),
+        new Word(new WordForm("παραδιδωμι", "I hand over", PRESENT), OK)
+            .addForm(new WordForm("παραδώσω", "I will hand over παραδιδωμι", FUTURE))
+            .addForm(new WordForm("παρέδωκα", "I handed over παραδιδωμι", AORIST))
+            .addForm(new WordForm("παραδέδωκα", "I have handed over παραδιδωμι", PERFECT))
+            .addForm(new WordForm("παραδέδομαι", "I have been handed over παραδιδωμι", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("παρεδόθην", "I was handed over παραδιδωμι", PASSIVE, AORIST)),
         // 118
-        new Word("*μεν", "to remain ", ROOT),
-        new Word("μένω", "I remain - root *μεν", PRESENT),
-        new Word("μενῶ", "I will remain - μένω root *μεν", FUTURE),
-        new Word("ἔμεινα", "I remained - μένω root *μεν", AORIST),
-        new Word("μεμένηκα", "I have remained - μένω root *μεν", PERFECT),
+        new Word(new WordForm("*μεν", "to remain ", ROOT), OK)
+            .addForm(new WordForm("μένω", "I remain ", PRESENT))
+            .addForm(new WordForm("μενῶ", "I will remain ", FUTURE))
+            .addForm(new WordForm("ἔμεινα", "I remained ", AORIST))
+            .addForm(new WordForm("μεμένηκα", "I have remained ", PERFECT)),
         // 117
-        new Word("ἀπέρχομαι", "I depart, I go away", PRESENT),
-        new Word("ἀπελεύσομαι", "I will depart ἀπέρχομαι", FUTURE),
-        new Word("ἀπῆλθον", "I departed ἀπέρχομαι", AORIST),
-        new Word("ἀπελήλθυα", "I have departed ἀπέρχομαι", PERFECT),
-        new Word("*ζητε", "to seek ", ROOT),
-        new Word("ζητῶ", "I seek - root *ζητε", PRESENT),
-        new Word("ζητήσω", "I will seek - root *ζητε", FUTURE),
-        new Word("ἐζήτησα", "I sought - root *ζητε", AORIST),
-        new Word("ἐζητήθην", "I was sought - root *ζητε", PASSIVE, AORIST),
+        new Word(new WordForm("ἀπέρχομαι", "I depart, I go away", PRESENT), WEAK)
+            .addForm(new WordForm("ἀπελεύσομαι", "I will depart ἀπέρχομαι", FUTURE))
+            .addForm(new WordForm("ἀπῆλθον", "I departed ἀπέρχομαι", AORIST))
+            .addForm(new WordForm("ἀπελήλθυα", "I have departed ἀπέρχομαι", PERFECT)),
+        new Word(new WordForm("*ζητε", "to seek ", ROOT), OK)
+            .addForm(new WordForm("ζητῶ", "I seek ", PRESENT))
+            .addForm(new WordForm("ζητήσω", "I will seek ", FUTURE))
+            .addForm(new WordForm("ἐζήτησα", "I sought ", AORIST))
+            .addForm(new WordForm("ἐζητήθην", "I was sought ", PASSIVE, AORIST)),
         // 116
-        new Word("ἀγαπη", "love", FEMININE),
-        new Word("ἀγαπης", "love", FEMININE, GENITIVE),
-        // 115
-        new Word("βασιλευς", "king", true, MASCULINE),
-        new Word("βασιλεως", "king", true, MASCULINE, GENITIVE),
+        new Word(new WordForm("ἀγαπη", "love", FEMININE), STRONG)
+            .addForm(new WordForm("ἀγαπης", "love", FEMININE, GENITIVE))
+            .addForm(new WordForm("ἀγαπητός", "beloved", ADJECTIVE, MASCULINE))
+            .addForm(new WordForm("ἀγαπητή", "beloved", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἀγαπητόν", "beloved", ADJECTIVE, NEUTER)),
         // 114
-        new Word("ἐκκλησια", "assembly, church", FEMININE),
-        new Word("ἐκκλησιας", "assembly, church", FEMININE, GENITIVE),
-        new Word("ὀικος", "house", MASCULINE),
-        new Word("ὀικου", "house", MASCULINE, GENITIVE),
-        new Word("ἴδιος", "one's own", ADJECTIVE, MASCULINE),
-        new Word("ἰδία", "one's own", ADJECTIVE, FEMININE),
-        new Word("ἴδιον", "one's own", ADJECTIVE, NEUTER),
-        new Word("μόνος", "alone", ADJECTIVE, MASCULINE),
-        new Word("μόνη", "alone", ADJECTIVE, FEMININE),
-        new Word("μόνον", "alone", ADJECTIVE, NEUTER),
-        new Word("*κριν", "to judge ", true, ROOT),
-        new Word("κρίνω", "I judge - root *κριν", true, PRESENT),
-        new Word("κρινῶ", "I will judge - κρίνω root *κριν", true, FUTURE),
-        new Word("ἔκρινα", "I judged - κρίνω root *κριν", true, AORIST),
-        new Word("κέκρικα", "I have judged - κρίνω root *κριν", true, PERFECT),
-        new Word("κέκριμαι", "I have been judged - κρίνω root *κριν", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐκρίθην", "I was judged - κρίνω root *κριν", true, PASSIVE, AORIST),
+        new Word(new WordForm("ἐκκλησια", "assembly, church", FEMININE), STRONG)
+            .addForm(new WordForm("ἐκκλησιας", "assembly, church", FEMININE, GENITIVE)),
+        new Word(new WordForm("ὀικος", "house", MASCULINE), WEAK)
+            .addForm(new WordForm("ὀικου", "house", MASCULINE, GENITIVE))
+            .addForm(new WordForm("οἰκία", "house, family", FEMININE))
+            .addForm(new WordForm("οἰκὶας", "house, family", FEMININE, GENITIVE)),
+        new Word(new WordForm("ἴδιος", "one's own", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("ἰδία", "one's own", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἴδιον", "one's own", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("μόνος", "alone", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("μόνη", "alone", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("μόνον", "alone", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("*κριν", "to judge ", ROOT), WEAK)
+            .addForm(new WordForm("κρίνω", "I judge ", PRESENT))
+            .addForm(new WordForm("κρινῶ", "I will judge ", FUTURE))
+            .addForm(new WordForm("ἔκρινα", "I judged ", AORIST))
+            .addForm(new WordForm("κέκρικα", "I have judged ", PERFECT))
+            .addForm(new WordForm("κέκριμαι", "I have been judged ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐκρίθην", "I was judged ", PASSIVE, AORIST)),
         // 111
-        new Word("απο + *θαν", "to die ", ROOT),
-        new Word("ἀποθνῃσκω", "I die - compound απο + *θαν", PRESENT),
-        new Word("ἀποθανοῦμαι", "I will die - ἀποθνῃσκω compound απο + *θαν", FUTURE, DEPONENT),
-        new Word("άπέθανον", "I died - ἀποθνῃσκω compound απο + *θαν", SECOND_AORIST),
+        new Word(new WordForm("απο + *θαν", "to die ", ROOT), WEAK)
+            .addForm(new WordForm("ἀποθνῃσκω", "I die ", PRESENT))
+            .addForm(new WordForm("ἀποθανοῦμαι", "I will die ", FUTURE, DEPONENT))
+            .addForm(new WordForm("άπέθανον", "I died ", SECOND_AORIST)),
         // 110
-        new Word("ὁσος", "as/how much/great/far/long", ADJECTIVE, MASCULINE),
-        new Word("ὁση", "as/how much/great/far/long", ADJECTIVE, FEMININE),
-        new Word("ὁσον", "as/how much/great/far/long", ADJECTIVE, NEUTER),
+        new Word(new WordForm("ὁσος", "as/how much/great/far/long", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("ὁση", "as/how much/great/far/long", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ὁσον", "as/how much/great/far/long", ADJECTIVE, NEUTER)),
         // 109
-        new Word("ἀληθεια", "truth", FEMININE),
-        new Word("ἀληθειας", "truth", FEMININE, GENITIVE),
-        new Word("*μελλε", "to be about to, to intend ", ROOT),
-        new Word("μελλω", "I am about to, I intend - root *μελλε", PRESENT),
-        new Word("μελλήσω", "I will intend - μελλω root *μελλε", FUTURE),
-        new Word("ὁλος", "whole, entire", ADJECTIVE, MASCULINE),
-        new Word("ὁλη", "whole, entire", ADJECTIVE, FEMININE),
-        new Word("ὁλον", "whole, entire", ADJECTIVE, NEUTER),
-        new Word("παρακαλῶ", "I call, I beseech παρακαλέω", PRESENT),
-        new Word("παρακαλέσω", "I will call, I will beseech παρακαλέω", FUTURE),
-        new Word("παρεκάλεσα", "I beseeched παρακαλέω", AORIST),
-        new Word("παρακέκληκα", "I have beseeched παρακαλέω", PERFECT),
-        new Word("παρακέκλημαι", "I have been beseeched παρακαλέω", MIDDLE, PASSIVE, PERFECT),
-        new Word("παρεκλήθην", "I was beseeched παρακαλέω", PASSIVE, AORIST),
+        new Word(new WordForm("ἀληθεια", "truth", FEMININE), OK)
+            .addForm(new WordForm("ἀληθειας", "truth", FEMININE, GENITIVE)),
+        new Word(new WordForm("*μελλε", "to be about to, to intend ", ROOT), OK)
+            .addForm(new WordForm("μελλω", "I am about to, I intend ", PRESENT))
+            .addForm(new WordForm("μελλήσω", "I will intend ", FUTURE)),
+        new Word(new WordForm("ὁλος", "whole, entire", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("ὁλη", "whole, entire", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ὁλον", "whole, entire", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("παρακαλῶ", "I call, I beseech παρακαλέω", PRESENT), OK)
+            .addForm(new WordForm("παρακαλέσω", "I will call, I will beseech παρακαλέω", FUTURE))
+            .addForm(new WordForm("παρεκάλεσα", "I beseeched παρακαλέω", AORIST))
+            .addForm(new WordForm("παρακέκληκα", "I have beseeched παρακαλέω", PERFECT))
+            .addForm(new WordForm("παρακέκλημαι", "I have been beseeched παρακαλέω", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("παρεκλήθην", "I was beseeched παρακαλέω", PASSIVE, AORIST)),
         // 108
-        new Word("ανα + *στα", "to raise, to stand up ", ROOT),
-        new Word("ἀνίστημι", "I raise, I stand up - compound ανα + *στα", PRESENT),
-        new Word("ἀναστήσω", "I will raise/stand up - ἀνίστημι compound ανα + *στα", FUTURE),
-        new Word("ἀνέστησα", "I raised - ἀνίστημι compound ανα + *στα", AORIST),
-        new Word("ἀνέστηκα", "I have raised - ἀνίστημι compound ανα + *στα", PERFECT),
-        new Word("ἀνέστυμαι", "I have been raised - ἀνίστημι compound ανα + *στα", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἀνέστην", "I was raised - ἀνίστημι compound ανα + *στα", PASSIVE, AORIST),
+        new Word(new WordForm("ανα + *στα", "to raise, to stand up ", ROOT), OK)
+            .addForm(new WordForm("ἀνίστημι", "I raise, I stand up ", PRESENT))
+            .addForm(new WordForm("ἀναστήσω", "I will raise/stand up ", FUTURE))
+            .addForm(new WordForm("ἀνέστησα", "I raised ", AORIST))
+            .addForm(new WordForm("ἀνέστηκα", "I have raised ", PERFECT))
+            .addForm(new WordForm("ἀνέστυμαι", "I have been raised ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἀνέστην", "I was raised ", PASSIVE, AORIST)),
         // 106
-        new Word("*σωζ", "to save ", ROOT),
-        new Word("σῴζω", "I save - root *σωζ", PRESENT),
-        new Word("σώζω", "I will save - σῴζω root *σωζ", FUTURE),
-        new Word("ἔσωσα", "I saved - σῴζω root *σωζ", AORIST),
-        new Word("σέσωκα", "I have saved - σῴζω root *σωζ", PERFECT),
-        new Word("σέσῳσμαι", "I have been saved - σῴζω root *σωζ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐσώθην", "I was saved - σῴζω root *σωζ", PASSIVE, AORIST),
-        new Word("ὤρα", "hour", FEMININE),
-        new Word("ὤρας", "hour", FEMININE, GENITIVE),
+        new Word(new WordForm("*σωζ", "to save ", ROOT), OK)
+            .addForm(new WordForm("σῴζω", "I save ", PRESENT))
+            .addForm(new WordForm("σώζω", "I will save ", FUTURE))
+            .addForm(new WordForm("ἔσωσα", "I saved ", AORIST))
+            .addForm(new WordForm("σέσωκα", "I have saved ", PERFECT))
+            .addForm(new WordForm("σέσῳσμαι", "I have been saved ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐσώθην", "I was saved ", PASSIVE, AORIST)),
+        new Word(new WordForm("ὤρα", "hour", FEMININE), OK)
+            .addForm(new WordForm("ὤρας", "hour", FEMININE, GENITIVE)),
         // 105
-        new Word("ἐκει", "there"),
+        new Word(new WordForm("ἐκει", "there"), OK),
         // 103
-        new Word("ὁτε", "when", true),
-        new Word("πως", "how", true),
-        new Word("ψυχη", "soul, life", FEMININE),
-        new Word("ψυχης", "soul, life", FEMININE, GENITIVE),
+        new Word(new WordForm("ὁτε", "when"), WEAK),
+        new Word(new WordForm("πως", "how"), WEAK),
+        new Word(new WordForm("ψυχη", "soul, life", FEMININE), STRONG)
+            .addForm(new WordForm("ψυχης", "soul, life", FEMININE, GENITIVE)),
         // 102
-        new Word("ἀγαθός", "good", ADJECTIVE, MASCULINE),
-        new Word("ἀγαθή", "good", ADJECTIVE, FEMININE),
-        new Word("ἀγαθόν", "good", ADJECTIVE, NEUTER),
-        new Word("ἐξουσια", "authority", FEMININE),
-        new Word("ἐξουσιας", "authority", FEMININE, GENITIVE),
+        new Word(new WordForm("ἀγαθός", "good", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("ἀγαθή", "good", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἀγαθόν", "good", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("ἐξουσια", "authority", FEMININE), OK)
+            .addForm(new WordForm("ἐξουσιας", "authority", FEMININE, GENITIVE)),
         // 101
-        new Word("*αρ", "to take up, to take away ", true, ROOT),
-        new Word("αἴρω", "I take up, I take away - root *αρ", true, PRESENT),
-        new Word("ἀρω", "I will take up  -αἴρω root *αρ", true, FUTURE),
-        new Word("ἦρα", "I took up  -αἴρω root *αρ", true, AORIST),
-        new Word("ἦρκα", "I have taken up  -αἴρω root *αρ", true, PERFECT),
-        new Word("ἦρμαι", "I have been taken up - αἴρω root *αρ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἤρθην", "I was taken up  -αἴρω root *αρ", true, PASSIVE, AORIST),
-        new Word("δει", "it is necessary"),
-        new Word("ὁδος", "way, road", FEMININE),
-        new Word("ὁδου", "way, road", FEMININE, GENITIVE),
+        new Word(new WordForm("*αρ", "to take up, to take away ", ROOT), WEAK)
+            .addForm(new WordForm("αἴρω", "I take up, I take away ", PRESENT))
+            .addForm(new WordForm("ἀρω", "I will take up  ", FUTURE))
+            .addForm(new WordForm("ἦρα", "I took up  ", AORIST))
+            .addForm(new WordForm("ἦρκα", "I have taken up  ", PERFECT))
+            .addForm(new WordForm("ἦρμαι", "I have been taken up ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἤρθην", "I was taken up  ", PASSIVE, AORIST)),
+        new Word(new WordForm("δει", "it is necessary"), STRONG),
+        new Word(new WordForm("ὁδος", "way, road", FEMININE), WEAK)
+            .addForm(new WordForm("ὁδου", "way, road", FEMININE, GENITIVE)),
         // 100
-        new Word("ἀλληλων", "each other"),
-        new Word("καλος", "good", ADJECTIVE, MASCULINE),
-        new Word("καλη", "good", ADJECTIVE, FEMININE),
-        new Word("καλον", "good", ADJECTIVE, NEUTER),
-        new Word("ὀφθαλμος", "eye, sight", MASCULINE),
-        new Word("ὀφθαλμου", "eye, sight", MASCULINE, GENITIVE),
-        new Word("*θε", "to put, place ", ROOT),
-        new Word("τίθημι", "I put, I place - root *θε", PRESENT),
-        new Word("θήσω", "I will put - τίθημι root *θε", FUTURE),
-        new Word("ἔθηκα", "I placed - τίθημι root *θε", AORIST),
-        new Word("τέθεικα", "I have put - τίθημι root *θε", PERFECT),
-        new Word("τέθειμαι", "I have been put - τίθημι root *θε", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐτέθην", "I was put - τίθημι root *θε", PASSIVE, AORIST),
+        new Word(new WordForm("ἀλληλων", "each other"), STRONG),
+        new Word(new WordForm("καλος", "good", ADJECTIVE, MASCULINE), STRONG)
+            .addForm(new WordForm("καλη", "good", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("καλον", "good", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("ὀφθαλμος", "eye, sight", MASCULINE), STRONG)
+            .addForm(new WordForm("ὀφθαλμου", "eye, sight", MASCULINE, GENITIVE)),
+        new Word(new WordForm("*θε", "to put, place ", ROOT), OK)
+            .addForm(new WordForm("τίθημι", "I put, I place ", PRESENT))
+            .addForm(new WordForm("θήσω", "I will put ", FUTURE))
+            .addForm(new WordForm("ἔθηκα", "I placed ", AORIST))
+            .addForm(new WordForm("τέθεικα", "I have put ", PERFECT))
+            .addForm(new WordForm("τέθειμαι", "I have been put ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐτέθην", "I was put ", PASSIVE, AORIST)),
         // 98
-        new Word("φαρισαιος", "Pharisee", MASCULINE),
-        new Word("φαρισαιου", "Pharisee", MASCULINE, GENITIVE),
-        new Word("ἑτερος", "other, another", ADJECTIVE, MASCULINE),
-        new Word("ἑτερα", "other, another", ADJECTIVE, FEMININE),
-        new Word("ἑτερον", "other, another", ADJECTIVE, NEUTER),
-        new Word("οὐδέ", "and not, neither, nor, not even"),
+        new Word(new WordForm("φαρισαιος", "Pharisee", MASCULINE), STRONG)
+            .addForm(new WordForm("φαρισαιου", "Pharisee", MASCULINE, GENITIVE)),
+        new Word(new WordForm("ἑτερος", "other, another", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("ἑτερα", "other, another", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἑτερον", "other, another", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("οὐδέ", "and not, neither, nor, not even"), OK),
         // 97
-        new Word("ἀρτος", "bread", MASCULINE),
-        new Word("ἀρτου", "bread", MASCULINE, GENITIVE),
-        new Word("αἱμα", "blood", NEUTER),
-        new Word("αἱματος", "blood", NEUTER, GENITIVE),
-        new Word("*δακ", "to teach ", ROOT),
-        new Word("διδασκω", "I teach - root *δακ", PRESENT),
-        new Word("διδάξω", "I will teach - διδασκω root *δακ", FUTURE),
-        new Word("ἐδίδαξα", "I taught - διδασκω root *δακ", AORIST),
-        new Word("ἐδιδάχθην", "I was taught - διδασκω root *δακ", PASSIVE, AORIST),
-        new Word("*γεννα", "to beget ", ROOT),
-        new Word("γεννῶ", "I beget - root *γεννα", PRESENT),
-        new Word("γεννήσω", "I will beget - root *γεννα", FUTURE),
-        new Word("ἐγέννησα", "I begat - root *γεννα", AORIST),
-        new Word("γεγέννηκα", "I have begotten - root *γεννα", PERFECT),
-        new Word("γεγέννημαι", "I have been begotten - root *γεννα", PASSIVE, PERFECT),
-        new Word("ἐγεννήθην", "I was begotten - root *γεννα", PASSIVE, AORIST),
+        new Word(new WordForm("ἀρτος", "bread", MASCULINE), OK)
+            .addForm(new WordForm("ἀρτου", "bread", MASCULINE, GENITIVE)),
+        new Word(new WordForm("αἱμα", "blood", NEUTER), OK)
+            .addForm(new WordForm("αἱματος", "blood", NEUTER, GENITIVE)),
+        new Word(new WordForm("*δακ", "to teach ", ROOT), OK)
+            .addForm(new WordForm("διδασκω", "I teach ", PRESENT))
+            .addForm(new WordForm("διδάξω", "I will teach ", FUTURE))
+            .addForm(new WordForm("ἐδίδαξα", "I taught ", AORIST))
+            .addForm(new WordForm("ἐδιδάχθην", "I was taught ", PASSIVE, AORIST)),
+        new Word(new WordForm("*γεννα", "to beget ", ROOT), OK)
+            .addForm(new WordForm("γεννῶ", "I beget ", PRESENT))
+            .addForm(new WordForm("γεννήσω", "I will beget ", FUTURE))
+            .addForm(new WordForm("ἐγέννησα", "I begat ", AORIST))
+            .addForm(new WordForm("γεγέννηκα", "I have begotten ", PERFECT))
+            .addForm(new WordForm("γεγέννημαι", "I have been begotten ", PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐγεννήθην", "I was begotten ", PASSIVE, AORIST)),
         // 95
-        new Word("περι + *πατε", "to walk around ", ROOT),
-        new Word("περιπατω", "I walk around - compound περι + *πατε", PRESENT),
-        new Word("περιπατήσω", "I will walk around - περιπατω compound περι + *πατε", FUTURE),
-        new Word("περιεπάτησα", "I walked around - περιπατω compound περι + *πατε", AORIST),
-        new Word("*φοβε", "to fear ", ROOT),
-        new Word("φοβέομαι", "I fear - root *φοβε", PRESENT, DEPONENT),
-        new Word("ἐφοβήθην", "I feared - φοβέομαι root *φοβε", PASSIVE, AORIST, DEPONENT),
+        new Word(new WordForm("περι + *πατε", "to walk around ", ROOT), WEAK)
+            .addForm(new WordForm("περιπατω", "I walk around ", PRESENT))
+            .addForm(new WordForm("περιπατήσω", "I will walk around ", FUTURE))
+            .addForm(new WordForm("περιεπάτησα", "I walked around ", AORIST)),
+        new Word(new WordForm("*φοβε", "to fear ", ROOT), OK)
+            .addForm(new WordForm("φοβέομαι", "I fear ", PRESENT, DEPONENT))
+            .addForm(new WordForm("ἐφοβήθην", "I feared ", PASSIVE, AORIST, DEPONENT)),
         // 93
-        new Word("ἔτι", "still, yet"),
-        new Word("οἰκία", "house, family", FEMININE),
-        new Word("οἰκὶας", "house, family", FEMININE, GENITIVE),
-        new Word("πούς", "foot", MASCULINE),
-        new Word("ποδός", "foot", MASCULINE, GENITIVE),
+        new Word(new WordForm("ἔτι", "still, yet"), OK),
+        new Word(new WordForm("πούς", "foot", MASCULINE), OK)
+            .addForm(new WordForm("ποδός", "foot", MASCULINE, GENITIVE)),
         // 92
-        new Word("δικαιοσύνη", "justice, righteousness", FEMININE),
-        new Word("δικαιοσύνης", "justice, righteousness", FEMININE, GENITIVE),
-        new Word("εἰρήνη", "peace", FEMININE),
-        new Word("εἰρήνης", "peace", FEMININE, GENITIVE),
+        new Word(new WordForm("δικαιοσύνη", "justice, righteousness", FEMININE), OK)
+            .addForm(new WordForm("δικαιοσύνης", "justice, righteousness", FEMININE, GENITIVE)),
+        new Word(new WordForm("εἰρήνη", "peace", FEMININE), OK)
+            .addForm(new WordForm("εἰρήνης", "peace", FEMININE, GENITIVE)),
         // 91
-        new Word("θάλασσα", "sea, lake", FEMININE),
-        new Word("θάλασσης", "sea, lake", FEMININE, GENITIVE),
-        new Word("τόπος", "place, position; opportunity; passage", MASCULINE),
-        new Word("τόπου", "place, position; opportunity; passage", MASCULINE, GENITIVE),
-        new Word("κατα + *εμ", "to sit down ", ROOT),
-        new Word("κάθημαι", "I sit down - compound κατα + *εμ"),
-        new Word("κάθησομαι", "I will sit down - κάθημαι compound κατα + *εμ", FUTURE),
+        new Word(new WordForm("θάλασσα", "sea, lake", FEMININE), OK)
+            .addForm(new WordForm("θάλασσης", "sea, lake", FEMININE, GENITIVE)),
+        new Word(new WordForm("τόπος", "place, position; opportunity; passage", MASCULINE), OK)
+            .addForm(new WordForm("τόπου", "place, position; opportunity; passage", MASCULINE, GENITIVE)),
+        new Word(new WordForm("κατα + *εμ", "to sit down ", ROOT), WEAK)
+            .addForm(new WordForm("κάθημαι", "I sit down "))
+            .addForm(new WordForm("κάθησομαι", "I will sit down ", FUTURE)),
         // 90
-        new Word("*ἀκολουθε", "to follow ", ROOT),
-        new Word("ἀκολουθω", "I follow - root *ἀκολουθε", PRESENT),
-        new Word("ἀκολουθήσω", "I will follow - root *ἀκολουθε", FUTURE),
-        new Word("ἠκολούθησα", "I followed - root *ἀκολουθε", AORIST),
-        new Word("ἠκολούθηκα", "I have followed - root *ἀκολουθε", PERFECT),
-        new Word("απο + *ὀλ", "to destroy ", true, ROOT),
-        new Word("ἀπόλλυμι", "I destroy, middle I perish, I die - compound απο + *ολ", true, PRESENT),
-        new Word("ἀπολέσω", "I will destroy - ἀπόλλυμι compound απο + *ολ", true, FUTURE),
-        new Word("ἀπώλεσα", "I destroyed - ἀπόλλυμι compound απο + *ολ", true, AORIST),
-        new Word("ἀπόλωλα", "I have destroyed - ἀπόλλυμι compound απο + *ολ", true, PERFECT),
-        new Word("*πετ", "to fall ", true, ROOT),
-        new Word("πίπτω", "I fall - root *πετ", true, PRESENT),
-        new Word("πεσοῦμαι", "I will fall - πίπτω root *πετ", true, FUTURE),
-        new Word("ἔπεσον", "I fell - πίπτω root *πετ", true, SECOND_AORIST),
-        new Word("πέπτωκα", "I have fallen - πίπτω root *πετ", true, PERFECT),
-        new Word("μηδείς", "no, no one"),
+        new Word(new WordForm("*ἀκολουθε", "to follow ", ROOT), WEAK)
+            .addForm(new WordForm("ἀκολουθω", "I follow ", PRESENT))
+            .addForm(new WordForm("ἀκολουθήσω", "I will follow ", FUTURE))
+            .addForm(new WordForm("ἠκολούθησα", "I followed ", AORIST))
+            .addForm(new WordForm("ἠκολούθηκα", "I have followed ", PERFECT)),
+        new Word(new WordForm("απο + *ὀλ", "to destroy ", ROOT), WEAK)
+            .addForm(new WordForm("ἀπόλλυμι", "I destroy, middle I perish, I die ", PRESENT))
+            .addForm(new WordForm("ἀπολέσω", "I will destroy ", FUTURE))
+            .addForm(new WordForm("ἀπώλεσα", "I destroyed ", AORIST))
+            .addForm(new WordForm("ἀπόλωλα", "I have destroyed ", PERFECT)),
+        new Word(new WordForm("*πετ", "to fall ", ROOT), WEAK)
+            .addForm(new WordForm("πίπτω", "I fall ", PRESENT))
+            .addForm(new WordForm("πεσοῦμαι", "I will fall ", FUTURE))
+            .addForm(new WordForm("ἔπεσον", "I fell ", SECOND_AORIST))
+            .addForm(new WordForm("πέπτωκα", "I have fallen ", PERFECT)),
+        new Word(new WordForm("μηδείς", "no, no one"), OK),
         // 88
-        new Word("ἑπτά", "seven, doesn't decline"),
+        new Word(new WordForm("ἑπτά", "seven, doesn't decline"), OK),
         // 87
-        new Word("οὔτε", "neither"),
+        new Word(new WordForm("οὔτε", "neither"), OK),
         // 86
-        new Word("*αρχ", "(middle) to begin (active) to rule, rare ", ROOT),
-        new Word("ἄρχομαι", "I begin (active I rule, but rare) - root *αρχ", MIDDLE, PRESENT),
-        new Word("ἄρξομαι", "I will begin - ἄρχομαι root *αρχ", FUTURE, MIDDLE),
-        new Word("ἠρξάμην", "I began - ἄρχομαι root *αρχ", AORIST, MIDDLE),
-        new Word("*πληρο", "to fill, fulfill ", ROOT),
-        new Word("πληρω", "I fill, fulfill - root *πληρο", PRESENT),
-        new Word("πληρώσω", "I will fill - root *πληρο", FUTURE),
-        new Word("ἐπλήρωσα", "I filled - root *πληρο", AORIST),
-        new Word("πεπλήρωκα", "I have filled - root *πληρο", PERFECT),
-        new Word("πεπλήρωμαι", "I have been filled - root *πληρο", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐπληρώθην", "I was filled - root *πληρο", PASSIVE, AORIST),
-        new Word("προσέρχομαι", "I come to", PRESENT),
-        new Word("προσήλθον", "I came to προσέρχομαι", AORIST),
-        new Word("προσελήλυθα", "I have come to προσέρχομαι", PERFECT),
+        new Word(new WordForm("*αρχ", "(middle) to begin (active) to rule, rare ", ROOT), OK)
+            .addForm(new WordForm("ἄρχομαι", "I begin (active I rule, but rare) ", MIDDLE, PRESENT))
+            .addForm(new WordForm("ἄρξομαι", "I will begin ", FUTURE, MIDDLE))
+            .addForm(new WordForm("ἠρξάμην", "I began ", AORIST, MIDDLE)),
+        new Word(new WordForm("*πληρο", "to fill, fulfill ", ROOT), OK)
+            .addForm(new WordForm("πληρω", "I fill, fulfill ", PRESENT))
+            .addForm(new WordForm("πληρώσω", "I will fill ", FUTURE))
+            .addForm(new WordForm("ἐπλήρωσα", "I filled ", AORIST))
+            .addForm(new WordForm("πεπλήρωκα", "I have filled ", PERFECT))
+            .addForm(new WordForm("πεπλήρωμαι", "I have been filled ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐπληρώθην", "I was filled ", PASSIVE, AORIST)),
+        new Word(new WordForm("προσέρχομαι", "I come to", PRESENT), WEAK)
+            .addForm(new WordForm("προσήλθον", "I came to προσέρχομαι", AORIST))
+            .addForm(new WordForm("προσελήλυθα", "I have come to προσέρχομαι", PERFECT)),
         // 85
-        new Word("καιρός", "time (point and period)", MASCULINE),
-        new Word("καιροῦ", "time (point and period)", MASCULINE, GENITIVE),
-        new Word("προσ + *ευχ", "to pray ", true, ROOT),
-        new Word("προσεύχομαι", "I pray - root *προσευχ", true, PRESENT, DEPONENT),
-        new Word("προσεύξομαι", "I will pray - προσεύχομαι root *προσευχ", true, FUTURE, DEPONENT),
-        new Word("προσηυξάμην", "I prayed - προσεύχομαι root *προσευχ", true, AORIST, DEPONENT),
+        new Word(new WordForm("καιρός", "time (point and period)", MASCULINE), WEAK)
+            .addForm(new WordForm("καιροῦ", "time (point and period)", MASCULINE, GENITIVE)),
+        new Word(new WordForm("προσ + *ευχ", "to pray ", ROOT), WEAK)
+            .addForm(new WordForm("προσεύχομαι", "I pray ", PRESENT, DEPONENT))
+            .addForm(new WordForm("προσεύξομαι", "I will pray ", FUTURE, DEPONENT))
+            .addForm(new WordForm("προσηυξάμην", "I prayed ", AORIST, DEPONENT)),
         // 83
-        new Word("μήτηρ", "mother", FEMININE),
-        new Word("μητρός", "mother", FEMININE, GENITIVE),
-        new Word("ὥστε", "so that, in order that, thus", true),
+        new Word(new WordForm("μήτηρ", "mother", FEMININE), STRONG)
+            .addForm(new WordForm("μητρός", "mother", FEMININE, GENITIVE)),
+        new Word(new WordForm("ὥστε", "so that, in order that, thus"), WEAK),
         // 82
-        new Word("ανα + *βα", "to go up, rise up, advance ", ROOT),
-        new Word("ἀναβαίνω", "I go up, rise up, advance - compound ανα + *βα"),
-        new Word("ἀναβήσομαι", "I will go up, rise up, advance - ἀναβαίνω compound ανα + *βα", FUTURE, DEPONENT),
-        new Word("ἀνέβην", "I went up, rose up, advanced - ἀναβαίνω compound ανα + *βα", SECOND_AORIST),
-        new Word("ἀναβέβηκα", "I have gone up, risen up, advanced - ἀναβαίνω compound ανα + *βα", PERFECT),
-        new Word("ἕκαστος", "each, every", ADJECTIVE, MASCULINE),
-        new Word("ἕκαστη", "each, every", ADJECTIVE, FEMININE),
-        new Word("ἕκαστον", "each, every", ADJECTIVE, NEUTER),
-        new Word("ὅπου", "where, whereas", true),
+        new Word(new WordForm("ανα + *βα", "to go up, rise up, advance ", ROOT), OK)
+            .addForm(new WordForm("ἀναβαίνω", "I go up, rise up, advance "))
+            .addForm(new WordForm("ἀναβήσομαι", "I will go up, rise up, advance ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἀνέβην", "I went up, rose up, advanced ", SECOND_AORIST))
+            .addForm(new WordForm("ἀναβέβηκα", "I have gone up, risen up, advanced ", PERFECT)),
+        new Word(new WordForm("ἕκαστος", "each, every", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("ἕκαστη", "each, every", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἕκαστον", "each, every", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("ὅπου", "where, whereas"), WEAK),
         // 81
-        new Word("ἐκβάλλω", "I cast out"),
-        new Word("ἐκβαλῶ", "I will cast out ἐκβάλλω", FUTURE),
-        new Word("ἐξέβαλον", "I cast out (past) ἐκβάλλω", AORIST),
-        new Word("ἐκβέβληκα", "I have cast out ἐκβάλλω", PERFECT),
-        new Word("ἐξεβλήθην", "I was cast out ἐκβάλλω", PASSIVE, AORIST),
-        new Word("καταβαίνω", "I come/go down - compound κατα + *βα"),
-        new Word("καταβήσομαι", "I will come/go down - καταβαίνω compound κατα + *βα", FUTURE, DEPONENT),
-        new Word("κατέβην", "I came/went down - καταβαίνω compound κατα + *βα", SECOND_AORIST),
-        new Word("καταβέβηκα", "I have come/gone down - καταβαίνω compound κατα + *βα", PERFECT),
-        new Word("μᾶλλον", "more, rather"),
+        new Word(new WordForm("ἐκβάλλω", "I cast out"), OK)
+            .addForm(new WordForm("ἐκβαλῶ", "I will cast out ἐκβάλλω", FUTURE))
+            .addForm(new WordForm("ἐξέβαλον", "I cast out (past) ἐκβάλλω", AORIST))
+            .addForm(new WordForm("ἐκβέβληκα", "I have cast out ἐκβάλλω", PERFECT))
+            .addForm(new WordForm("ἐξεβλήθην", "I was cast out ἐκβάλλω", PASSIVE, AORIST)),
+        new Word(new WordForm("καταβαίνω", "I come/go down "), OK)
+            .addForm(new WordForm("καταβήσομαι", "I will come/go down ", FUTURE, DEPONENT))
+            .addForm(new WordForm("κατέβην", "I came/went down ", SECOND_AORIST))
+            .addForm(new WordForm("καταβέβηκα", "I have come/gone down ", PERFECT)),
+        new Word(new WordForm("μᾶλλον", "more, rather"), WEAK),
         // 80
-        new Word("άποστολος", "apostle", MASCULINE),
-        new Word("άποστολου", "apostle", MASCULINE, GENITIVE),
+        new Word(new WordForm("άποστολος", "apostle", MASCULINE), STRONG)
+            .addForm(new WordForm("άποστολου", "apostle", MASCULINE, GENITIVE)),
         // 79
-        new Word("*πεμπ", "to send ", true, ROOT),
-        new Word("πέμπω", "I send - root *πεμπ", true, PRESENT),
-        new Word("πέμψω", "I will send - root *πεμπ", true, FUTURE),
-        new Word("ἕπεμψα", "I sent - root *πεμπ", true, AORIST),
-        new Word("ἐπέμφθην", "I was sent - root *πεμπ", true, PASSIVE, AORIST),
-        new Word("ὑπο + *αγ", "to go away, to draw off ", true, ROOT),
-        new Word("ὑπάγω", "I go away, I draw off - compound ὑπο + *αγ", true, PRESENT),
-        new Word("ὑπάξω", "I will go away, I will draw off - compound ὑπο + *αγ", true, FUTURE),
-        new Word("ὑπἠγαγον", "I went away, I drew off - compound ὑπο + *αγ", true, SECOND_AORIST),
-        new Word("ὑπῆγμαι", "I have been taken away, I have been drawn off - compound ὑπο + *αγ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ὑπήχθην", "I was taken away, I was drawn off - compound ὑπο + *αγ", true, PASSIVE, AORIST),
-        new Word("δίκαιος", "upright, just, righteous", ADJECTIVE, MASCULINE),
-        new Word("δικαία", "upright, just, righteous", ADJECTIVE, FEMININE),
-        new Word("δικαιον", "upright, just, righteous", ADJECTIVE, NEUTER),
+        new Word(new WordForm("*πεμπ", "to send ", ROOT), WEAK)
+            .addForm(new WordForm("πέμπω", "I send ", PRESENT))
+            .addForm(new WordForm("πέμψω", "I will send ", FUTURE))
+            .addForm(new WordForm("ἕπεμψα", "I sent ", AORIST))
+            .addForm(new WordForm("ἐπέμφθην", "I was sent ", PASSIVE, AORIST)),
+        new Word(new WordForm("ὑπο + *αγ", "to go away, to draw off ", ROOT), WEAK)
+            .addForm(new WordForm("ὑπάγω", "I go away, I draw off ", PRESENT))
+            .addForm(new WordForm("ὑπάξω", "I will go away, I will draw off ", FUTURE))
+            .addForm(new WordForm("ὑπἠγαγον", "I went away, I drew off ", SECOND_AORIST))
+            .addForm(new WordForm("ὑπῆγμαι", "I have been taken away, I have been drawn off ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ὑπήχθην", "I was taken away, I was drawn off ", PASSIVE, AORIST)),
+        new Word(new WordForm("δίκαιος", "upright, just, righteous", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("δικαία", "upright, just, righteous", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("δικαιον", "upright, just, righteous", ADJECTIVE, NEUTER)),
         // 78
-        new Word("στόµα", "mouth", NEUTER),
-        new Word("στόματος", "mouth", NEUTER, GENITIVE),
-        new Word("πονηρός", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, MASCULINE),
-        new Word("πονηρά", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, FEMININE),
-        new Word("πονηρόν", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, NEUTER),
+        new Word(new WordForm("στόµα", "mouth", NEUTER), OK)
+            .addForm(new WordForm("στόματος", "mouth", NEUTER, GENITIVE)),
+        new Word(new WordForm("πονηρός", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("πονηρά", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("πονηρόν", "physical: sick, bad spiritual: evil, wicked", ADJECTIVE, NEUTER)),
         // 77
-        new Word("σηµεῖον", "sign, miracle", NEUTER),
-        new Word("σηµεῖου", "sign, miracle", NEUTER, GENITIVE),
-        new Word("ανα + *οιγω", "to open, unlock, disclose ", ROOT),
-        new Word("ἀνοίγω", "I open, unlock, disclose - compound ανα + *οιγω", true, PRESENT),
-        new Word("ἀνέῳζα", "I opened, unlocked, disclosed - ἀνοίγω compound ανα + *οιγω", true, AORIST),
-        new Word("ἀνεῳχθην", "I was opened, unlocked, disclosed - ἀνοίγω compound ανα + *οιγω", true, PASSIVE, AORIST),
-        new Word("*βαπτιδ", "to baptize, wash, dip ", ROOT),
-        new Word("βαπτίζω", "I baptize, wash, dip - root *βαπτιδ", PRESENT),
-        new Word("βαπτίσω", "I will baptize, wash, dip - βαπτίζω root *βαπτιδ", FUTURE),
-        new Word("ἐβαπτισα", "I baptized, washed, dipped - βαπτίζω root *βαπτιδ", AORIST),
-        new Word("βεβάπτισμαι", "I have been baptized, washed, dipped - βαπτίζω root *βαπτιδ", PASSIVE, PERFECT),
-        new Word("ἐβαπτίσθην", "I was baptized, washed, dipped - βαπτίζω root *βαπτιδ", PASSIVE, AORIST),
+        new Word(new WordForm("σηµεῖον", "sign, miracle", NEUTER), OK)
+            .addForm(new WordForm("σηµεῖου", "sign, miracle", NEUTER, GENITIVE)),
+        new Word(new WordForm("ανα + *οιγω", "to open, unlock, disclose ", ROOT), WEAK)
+            .addForm(new WordForm("ἀνοίγω", "I open, unlock, disclose ", PRESENT))
+            .addForm(new WordForm("ἀνέῳζα", "I opened, unlocked, disclosed ", AORIST))
+            .addForm(new WordForm("ἀνεῳχθην", "I was opened, unlocked, disclosed ", PASSIVE, AORIST)),
+        new Word(new WordForm("*βαπτιδ", "to baptize, wash, dip ", ROOT), STRONG)
+            .addForm(new WordForm("βαπτίζω", "I baptize, wash, dip ", PRESENT))
+            .addForm(new WordForm("βαπτίσω", "I will baptize, wash, dip ", FUTURE))
+            .addForm(new WordForm("ἐβαπτισα", "I baptized, washed, dipped ", AORIST))
+            .addForm(new WordForm("βεβάπτισμαι", "I have been baptized, washed, dipped ", PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐβαπτίσθην", "I was baptized, washed, dipped ", PASSIVE, AORIST)),
         // 76
-        new Word("εὐαγγέλιον", "good news, gospel", NEUTER),
-        new Word("εὐαγγέλιου", "good news, gospel", NEUTER, GENITIVE),
-        new Word("πρόσωπον", "face, countenance", NEUTER),
-        new Word("πρόσωπου", "face, countenance", NEUTER, GENITIVE),
-        new Word("ὕδωρ", "water", NEUTER),
-        new Word("ὕδατος", "water", NEUTER, GENITIVE),
-        new Word("*μαρτυρε", "to bear witness ", ROOT),
-        new Word("μαρτυρῶ", "I bear witness - root *μαρτυρε", PRESENT),
-        new Word("μαρτυρήσω", "I will bear witness - root *μαρτυρε", FUTURE),
-        new Word("ἐμαρτύρησα", "I bore witness - root *μαρτυρε", AORIST),
-        new Word("μεμαρτύρηκα", "I have born witness - root *μαρτυρε", PERFECT),
-        new Word("μεμαρτύρημαι", "I have been witnessed - root *μαρτυρε", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐμαρτυρήθην", "I was witnessed - root *μαρτυρε", PASSIVE, AORIST),
+        new Word(new WordForm("εὐαγγέλιον", "good news, gospel", NEUTER), STRONG)
+            .addForm(new WordForm("εὐαγγέλιου", "good news, gospel", NEUTER, GENITIVE)),
+        new Word(new WordForm("πρόσωπον", "face, countenance", NEUTER), OK)
+            .addForm(new WordForm("πρόσωπου", "face, countenance", NEUTER, GENITIVE)),
+        new Word(new WordForm("ὕδωρ", "water", NEUTER), OK)
+            .addForm(new WordForm("ὕδατος", "water", NEUTER, GENITIVE)),
+        new Word(new WordForm("*μαρτυρε", "to bear witness ", ROOT), STRONG)
+            .addForm(new WordForm("μαρτυρῶ", "I bear witness ", PRESENT))
+            .addForm(new WordForm("μαρτυρήσω", "I will bear witness ", FUTURE))
+            .addForm(new WordForm("ἐμαρτύρησα", "I bore witness ", AORIST))
+            .addForm(new WordForm("μεμαρτύρηκα", "I have born witness ", PERFECT))
+            .addForm(new WordForm("μεμαρτύρημαι", "I have been witnessed ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐμαρτυρήθην", "I was witnessed ", PASSIVE, AORIST)),
         // 75
-        new Word("κεφαλή", "head", FEMININE),
-        new Word("κεφαλῆς", "head", FEMININE, GENITIVE),
-        new Word("δώδεκα", "twelve"),
+        new Word(new WordForm("κεφαλή", "head", FEMININE), OK)
+            .addForm(new WordForm("κεφαλῆς", "head", FEMININE, GENITIVE)),
+        new Word(new WordForm("δώδεκα", "twelve"), OK),
         // 74
-        new Word("απο + *κτεν", "to kill ", ROOT),
-        new Word("ἀποκτείνω", "I kill - compound απο + *κτεν", PRESENT),
-        new Word("ἀποκτενῶ", "I will kill - ἀποκτείνω compound απο + *κτεν", FUTURE),
-        new Word("ἀπέκτεινα", "I killed - ἀποκτείνω compound απο + *κτεν", AORIST),
-        new Word("ἀπεκτάθην", "I was killed - ἀποκτείνω compound απο + *κτεν", PASSIVE, AORIST),
-        new Word("*χαρ", "to rejoice ", ROOT),
-        new Word("χαίρω", "I rejoice (infinitive used as a greeting) - root *χαρ", true, PRESENT),
-        new Word("ἐχάρην", "I rejoiced - χαίρω root *χαρ", true, PASSIVE, SECOND_AORIST, DEPONENT),
+        new Word(new WordForm("απο + *κτεν", "to kill ", ROOT), WEAK)
+            .addForm(new WordForm("ἀποκτείνω", "I kill ", PRESENT))
+            .addForm(new WordForm("ἀποκτενῶ", "I will kill ", FUTURE))
+            .addForm(new WordForm("ἀπέκτεινα", "I killed ", AORIST))
+            .addForm(new WordForm("ἀπεκτάθην", "I was killed ", PASSIVE, AORIST)),
+        new Word(new WordForm("*χαρ", "to rejoice ", ROOT), WEAK)
+            .addForm(new WordForm("χαίρω", "I rejoice (infinitive used as a greeting) ", PRESENT))
+            .addForm(new WordForm("ἐχάρην", "I rejoiced ", PASSIVE, SECOND_AORIST, DEPONENT)),
         // 73
-        new Word("φῶς", "light", NEUTER),
-        new Word("φωτός", "light", NEUTER, GENITIVE),
-        new Word("*πι", "to drink ", ROOT),
-        new Word("πίνω", "I drink - root *πι", PRESENT),
-        new Word("πίομαι", "I will drink - πίνω root *πι", true, FUTURE, DEPONENT),
-        new Word("ἔπιον", "I drank - πίνω root *πι", true, SECOND_AORIST),
-        new Word("πέπωκα", "I have drunk - πίνω root *πι", true, PERFECT),
-        new Word("ἐπόθην", "I was drunk - πίνω root *πι", true, PASSIVE, AORIST),
+        new Word(new WordForm("φῶς", "light", NEUTER), STRONG)
+            .addForm(new WordForm("φωτός", "light", NEUTER, GENITIVE)),
+        new Word(new WordForm("*πι", "to drink ", ROOT), WEAK)
+            .addForm(new WordForm("πίνω", "I drink ", PRESENT))
+            .addForm(new WordForm("πίομαι", "I will drink ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἔπιον", "I drank ", SECOND_AORIST))
+            .addForm(new WordForm("πέπωκα", "I have drunk ", PERFECT))
+            .addForm(new WordForm("ἐπόθην", "I was drunk ", PASSIVE, AORIST)),
         // 71
-        new Word("ἱερόν", "temple", NEUTER),
-        new Word("ἱεροῦ", "temple", NEUTER, GENITIVE),
-        new Word("πῦρ", "fire", NEUTER),
-        new Word("πυρός", "fire", NEUTER, GENITIVE),
-        new Word("αἰώνος", "eternal", ADJECTIVE, MASCULINE, FEMININE),
-        new Word("αἰώνον", "eternal", ADJECTIVE, NEUTER),
+        new Word(new WordForm("ἱερόν", "temple", NEUTER), WEAK)
+            .addForm(new WordForm("ἱεροῦ", "temple", NEUTER, GENITIVE)),
+        new Word(new WordForm("πῦρ", "fire", NEUTER), OK)
+            .addForm(new WordForm("πυρός", "fire", NEUTER, GENITIVE)),
         // 70
-        new Word("*αἰτε", "to ask ", true, ROOT),
-        new Word("αἰτέω", "I ask - root *αἰτε", true, PRESENT),
-        new Word("αἰτήσω", "I will ask - root *αἰτε", true, FUTURE),
-        new Word("ᾔτησα", "I asked - root *αἰτε", true, AORIST),
-        new Word("ᾔτηκα", "I have asked - root *αἰτε", true, PERFECT),
-        new Word("ᾔτημαι", "I have been asked - root *αἰτε", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("*τηρε", "to keep, guard ", ROOT),
-        new Word("τηρέω", "I keep, I guard - root *τηρε", PRESENT),
-        new Word("τηρήσω", "I will keep, I will guard - root *τηρε", FUTURE),
-        new Word("ἐτήρησα", "I kept, I guarded - root *τηρε", AORIST),
-        new Word("τετήρηκα", "I have kept, I have guarded - root *τηρε", PERFECT),
-        new Word("τετήρημαι", "I have been kept, I have been guarded - root *τηρε", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐτηρήθην", "I was kept, I was guarded - root *τηρε", PASSIVE, AORIST),
+        new Word(new WordForm("*αἰτε", "to ask ", ROOT), WEAK)
+            .addForm(new WordForm("αἰτέω", "I ask ", PRESENT))
+            .addForm(new WordForm("αἰτήσω", "I will ask ", FUTURE))
+            .addForm(new WordForm("ᾔτησα", "I asked ", AORIST))
+            .addForm(new WordForm("ᾔτηκα", "I have asked ", PERFECT))
+            .addForm(new WordForm("ᾔτημαι", "I have been asked ", MIDDLE, PASSIVE, PERFECT)),
+        new Word(new WordForm("*τηρε", "to keep, guard ", ROOT), OK)
+            .addForm(new WordForm("τηρέω", "I keep, I guard ", PRESENT))
+            .addForm(new WordForm("τηρήσω", "I will keep, I will guard ", FUTURE))
+            .addForm(new WordForm("ἐτήρησα", "I kept, I guarded ", AORIST))
+            .addForm(new WordForm("τετήρηκα", "I have kept, I have guarded ", PERFECT))
+            .addForm(new WordForm("τετήρημαι", "I have been kept, I have been guarded ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐτηρήθην", "I was kept, I was guarded ", PASSIVE, AORIST)),
         // 69
-        new Word("τρεῖς", "three", MASCULINE, FEMININE),
-        new Word("τρία", "three", NEUTER),
+        new Word(new WordForm("τρεῖς", "three", MASCULINE, FEMININE), OK)
+            .addForm(new WordForm("τρία", "three", NEUTER)),
         // 68
-        new Word("ῥῆμα", "word, thing", NEUTER),
-        new Word("ῥῆματος", "word, thing", NEUTER, GENITIVE),
-        new Word("σάββατον", "Sabbath, week", NEUTER),
-        new Word("σάββατου", "Sabbath, week", NEUTER, GENITIVE),
+        new Word(new WordForm("ῥῆμα", "word, thing", NEUTER), OK)
+            .addForm(new WordForm("ῥῆματος", "word, thing", NEUTER, GENITIVE)),
+        new Word(new WordForm("σάββατον", "Sabbath, week", NEUTER), OK)
+            .addForm(new WordForm("σάββατου", "Sabbath, week", NEUTER, GENITIVE)),
         // 67
-        new Word("ἐντολή", "commandment", FEMININE),
-        new Word("ἐντολῆς", "commandment", FEMININE, GENITIVE),
-        new Word("πλοῖον", "ship, boat", NEUTER),
-        new Word("πλοῖου", "ship, boat", NEUTER, GENITIVE),
+        new Word(new WordForm("ἐντολή", "commandment", FEMININE), OK)
+            .addForm(new WordForm("ἐντολῆς", "commandment", FEMININE, GENITIVE)),
+        new Word(new WordForm("πλοῖον", "ship, boat", NEUTER), OK)
+            .addForm(new WordForm("πλοῖου", "ship, boat", NEUTER, GENITIVE)),
         // 66
-        new Word("πρεσβύτερος", "elder", NOUN, MASCULINE),
-        new Word("πρεσβύτερου", "elder", NOUN, MASCULINE, GENITIVE),
-        new Word("πρεσβύτερος", "old", ADJECTIVE, MASCULINE),
-        new Word("πρεσβύτερα", "old", ADJECTIVE, FEMININE),
-        new Word("πρεσβύτερον", "old", ADJECTIVE, NEUTER),
-        new Word("*φερ", "to carry, bear, produce ", true, ROOT),
-        new Word("φέρω", "I carry, bear, produce - root *φερ", true, PRESENT),
-        new Word("οἴσω", "I will carry, bear, produce φέρω - root *οἰ", true, FUTURE),
-        new Word("ἤνεγκα", "I carried, bore, produced φέρω - root *ἐνεχ", true, AORIST),
-        new Word("ἐνήνοχα", "I have carried, bore, produced φέρω - root *ἐνεχ", true, PERFECT),
-        new Word("ἠνέχθην", "I was carried, born, produced φέρω - root *ἐνεχ", true, PASSIVE, AORIST),
-        new Word("ἀπολύω", "I release - root *ἀπο + *λυ", true, PRESENT),
-        new Word("ἀπολύσω", "I will release ἀπολύω - root *ἀπο + *λυ", true, FUTURE),
-        new Word("ἀπέλυσα", "I released ἀπολύω - root *ἀπο + *λυ", true, AORIST),
-        new Word("ἀπολέλυμαι", "I have been released ἀπολύω - root *ἀπο + *λυ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἀπελύθην", "I was released ἀπολύω - root *ἀπο + *λυ", PASSIVE, AORIST),
-        new Word("καπρός", "fruit, crop, result", true, MASCULINE),
-        new Word("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE),
-        new Word("*φη", "to say ", true, ROOT),
-        new Word("φημί", "I say - root *φη", true, PRESENT),
-        new Word("ἔφη", "I said - φημί root *φη", true, AORIST),
+        new Word(new WordForm("πρεσβύτερος", "elder", NOUN, MASCULINE), OK)
+            .addForm(new WordForm("πρεσβύτερου", "elder", NOUN, MASCULINE, GENITIVE))
+            .addForm(new WordForm("πρεσβύτερος", "old", ADJECTIVE, MASCULINE))
+            .addForm(new WordForm("πρεσβύτερα", "old", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("πρεσβύτερον", "old", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("*φερ", "to carry, bear, produce ", ROOT), WEAK)
+            .addForm(new WordForm("φέρω", "I carry, bear, produce ", PRESENT))
+            .addForm(new WordForm("οἴσω", "I will carry, bear, produce φέρω ", FUTURE))
+            .addForm(new WordForm("ἤνεγκα", "I carried, bore, produced φέρω ", AORIST))
+            .addForm(new WordForm("ἐνήνοχα", "I have carried, bore, produced φέρω ", PERFECT))
+            .addForm(new WordForm("ἠνέχθην", "I was carried, born, produced φέρω ", PASSIVE, AORIST)),
+        new Word(new WordForm("ἀπολύω", "I release + *λυ", PRESENT), WEAK)
+            .addForm(new WordForm("ἀπολύσω", "I will release ἀπολύω + *λυ", FUTURE))
+            .addForm(new WordForm("ἀπέλυσα", "I released ἀπολύω + *λυ", AORIST))
+            .addForm(new WordForm("ἀπολέλυμαι", "I have been released ἀπολύω + *λυ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἀπελύθην", "I was released ἀπολύω + *λυ", PASSIVE, AORIST)),
+        new Word(new WordForm("καπρός", "fruit, crop, result", MASCULINE), ZERO)
+            .addForm(new WordForm("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE)),
+        new Word(new WordForm("*φη", "to say ", ROOT), WEAK)
+            .addForm(new WordForm("φημί", "I say ", PRESENT))
+            .addForm(new WordForm("ἔφη", "I said ", AORIST)),
         // 65
-        new Word("εἴτε", "if, whether", true, PARTICLE),
+        new Word(new WordForm("εἴτε", "if, whether", PARTICLE), WEAK),
         // 63
-        new Word("ὄρος", "mountain, hill", true, NEUTER),
-        new Word("ὄρους", "mountain, hill", true, NEUTER, GENITIVE),
-        new Word("γραμματεύς", "scribe", MASCULINE),
-        new Word("γραμματέως", "scribe", MASCULINE, GENITIVE),
-        new Word("δαιμόνιον", "demon", NEUTER),
-        new Word("δαιμόνιου", "demon", NEUTER, GENITIVE),
-        new Word("*ερωτα", "to ask", true, ROOT),
-        new Word("ἐρωτάω", "I ask - root *ερωτα", true, PRESENT),
-        new Word("ἐρωτήσω", "I will ask - ἐρωτάω root *ερωτα", true, FUTURE),
-        new Word("ἠρώτησα", "I asked - ἐρωτάω root *ερωτα", true, AORIST),
-        new Word("ἠρωτήθην", "I was asked - ἐρωτάω root *ερωτα", true, PASSIVE, AORIST),
+        new Word(new WordForm("ὄρος", "mountain, hill", NEUTER), WEAK)
+            .addForm(new WordForm("ὄρους", "mountain, hill", NEUTER, GENITIVE)),
+        new Word(new WordForm("γραμματεύς", "scribe", MASCULINE), OK)
+            .addForm(new WordForm("γραμματέως", "scribe", MASCULINE, GENITIVE)),
+        new Word(new WordForm("δαιμόνιον", "demon", NEUTER), STRONG)
+            .addForm(new WordForm("δαιμόνιου", "demon", NEUTER, GENITIVE)),
+        new Word(new WordForm("*ερωτα", "to ask", ROOT), WEAK)
+            .addForm(new WordForm("ἐρωτάω", "I ask ", PRESENT))
+            .addForm(new WordForm("ἐρωτήσω", "I will ask ", FUTURE))
+            .addForm(new WordForm("ἠρώτησα", "I asked ", AORIST))
+            .addForm(new WordForm("ἠρωτήθην", "I was asked ", PASSIVE, AORIST)),
         // 62
-        new Word("Ἱεροσόλυμα", "Jerusalem", NEUTER),
-        new Word("*δοκ", "to think, seem ", true, ROOT),
-        new Word("δοκέω", "I think, seem - root *δοκ", true, PRESENT),
-        new Word("ἔδοξα", "I thought, seemed δοκέω - root *δοκ", true, AORIST),
-        new Word("θέλημα", "will, desire", NEUTER),
-        new Word("θέληματος", "will, desire", NEUTER, GENITIVE),
-        new Word("θρόνος", "throne", MASCULINE),
-        new Word("θρόνου", "throne", MASCULINE, GENITIVE),
+        new Word(new WordForm("Ἱεροσόλυμα", "Jerusalem", NEUTER), OK),
+        new Word(new WordForm("*δοκ", "to think, seem ", ROOT), WEAK)
+            .addForm(new WordForm("δοκέω", "I think, seem ", PRESENT))
+            .addForm(new WordForm("ἔδοξα", "I thought, seemed δοκέω ", AORIST)),
+        new Word(new WordForm("θέλημα", "will, desire", NEUTER), OK)
+            .addForm(new WordForm("θέληματος", "will, desire", NEUTER, GENITIVE)),
+        new Word(new WordForm("θρόνος", "throne", MASCULINE), OK)
+            .addForm(new WordForm("θρόνου", "throne", MASCULINE, GENITIVE)),
         // 61
-        new Word("*δοξαδ", "to praise, honor, glorify ", ROOT),
-        new Word("δοξάζω", "I praise, honor, glorify - root *δοξαδ", PRESENT),
-        new Word("δοξάσω", "I will praise, honor, glorify δοξάζω - root *δοξαδ", FUTURE),
-        new Word("ἐδόξασα", "I praised, honored, glorified δοξάζω - root *δοξαδ", AORIST),
-        new Word("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω - root *δοξαδ", MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐδοξάσθην", "I was praised, honored, glorified δοξάζω - root *δοξαδ", PASSIVE, AORIST),
-        new Word("*κηρυγ", "to proclaim, preach ", ROOT),
-        new Word("κηρύσσω", "I proclaim, preach - root *κηρυγ"),
-        new Word("ἐκήρυξα", "I proclaimed, preached κηρύσσω - root *κηρυγ", AORIST),
-        new Word("ἐκηρύχθην", "I was proclaimed, preached - root *κηρυγ", PASSIVE, AORIST),
-        new Word("εὐ + *αγγελιδ", "to bring good news", ROOT),
-        new Word("εὐαγγελίζω", "I bring good news - root *εὐαγγελιδ, often occurs in middle voice with same meaning", PRESENT),
-        new Word("εὐηγγέλισα", "I brought good news εὐαγγελίζω - root *εὐαγγελιδ", AORIST),
-        new Word("εὐηγγέλισμαι", "I have been brought good news εὐαγγελίζω - root *εὐαγγελιδ", MIDDLE, PASSIVE, PERFECT),
-        new Word("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω - root *εὐαγγελιδ", PASSIVE, AORIST),
-        new Word("ὑπάρχω", "I am, I exist - root *ὑπ + *αρχ", true, PRESENT),
-        new Word("ἤδη", "now, already", true),
-        new Word("ὧδε", "here", true),
-        new Word("νύξ", "night", true, FEMININE),
-        new Word("νυκτός", "night", true, FEMININE, GENITIVE),
-        new Word("ἀγαπητός", "beloved", ADJECTIVE, MASCULINE),
-        new Word("ἀγαπητή", "beloved", ADJECTIVE, FEMININE),
-        new Word("ἀγαπητόν", "beloved", ADJECTIVE, NEUTER),
+        new Word(new WordForm("*δοξαδ", "to praise, honor, glorify ", ROOT), WEAK)
+            .addForm(new WordForm("δοξάζω", "I praise, honor, glorify ", PRESENT))
+            .addForm(new WordForm("δοξάσω", "I will praise, honor, glorify δοξάζω ", FUTURE))
+            .addForm(new WordForm("ἐδόξασα", "I praised, honored, glorified δοξάζω ", AORIST))
+            .addForm(new WordForm("δεδόξασμαι", "I have been praised, honored, glorified δοξάζω ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐδοξάσθην", "I was praised, honored, glorified δοξάζω ", PASSIVE, AORIST)),
+        new Word(new WordForm("*κηρυγ", "to proclaim, preach ", ROOT), OK)
+            .addForm(new WordForm("κηρύσσω", "I proclaim, preach "))
+            .addForm(new WordForm("ἐκήρυξα", "I proclaimed, preached κηρύσσω ", AORIST))
+            .addForm(new WordForm("ἐκηρύχθην", "I was proclaimed, preached ", PASSIVE, AORIST)),
+        new Word(new WordForm("εὐ + *αγγελιδ", "to bring good news", ROOT), OK)
+            .addForm(new WordForm("εὐαγγελίζω", "I bring good news , often occurs in middle voice with same meaning", PRESENT))
+            .addForm(new WordForm("εὐηγγέλισα", "I brought good news εὐαγγελίζω ", AORIST))
+            .addForm(new WordForm("εὐηγγέλισμαι", "I have been brought good news εὐαγγελίζω ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("εὐηγγελίσθην", "I was brought good news εὐαγγελίζω ", PASSIVE, AORIST)),
+        new Word(new WordForm("ὑπάρχω", "I am, I exist + *αρχ", PRESENT), WEAK),
+        new Word(new WordForm("ἤδη", "now, already"), WEAK),
+        new Word(new WordForm("ὧδε", "here"), WEAK),
+        new Word(new WordForm("νύξ", "night", FEMININE), OK)
+            .addForm(new WordForm("νυκτός", "night", FEMININE, GENITIVE)),
         // 60
-        new Word("ἱμάτιον", "garment", NEUTER),
-        new Word("ἱμάτιου", "garment", NEUTER, GENITIVE),
-        new Word("*προσκυνε", "to fall down to worship", true, ROOT),
-        new Word("προσκυνέω", "I fall down to worship - root *προσκυνε", true, PRESENT),
-        new Word("προσκυνήσω", "I will fall down to worship προσκυνέω - root *προσκυνε", true, FUTURE),
-        new Word("προσεκύνησα", "I fell down to worship προσκυνέω - root *προσκυνε", true, AORIST),
+        new Word(new WordForm("ἱμάτιον", "garment", NEUTER), WEAK)
+            .addForm(new WordForm("ἱμάτιου", "garment", NEUTER, GENITIVE)),
+        new Word(new WordForm("*προσκυνε", "to fall down to worship", ROOT), WEAK)
+            .addForm(new WordForm("προσκυνέω", "I fall down to worship ", PRESENT))
+            .addForm(new WordForm("προσκυνήσω", "I will fall down to worship προσκυνέω ", FUTURE))
+            .addForm(new WordForm("προσεκύνησα", "I fell down to worship προσκυνέω ", AORIST)),
         // 59
-        new Word("*ἀσπαδ", "to greet, salute ", true, ROOT),
-        new Word("ἀσπάζομαι", "I greet, salute - root *ἀσπαδ", true, PRESENT, DEPONENT),
-        new Word("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι - root *ἀσπαδ", true, AORIST, DEPONENT),
-        new Word("λίθος", "stone", true, MASCULINE),
-        new Word("λίθου", "stone", true, MASCULINE, GENITIVE),
-        new Word("διδάσκαλος ου", "teacher", MASCULINE),
-        new Word("διδάσκαλου", "teacher", MASCULINE, GENITIVE),
-        new Word("χαρά", "joy", FEMININE),
-        new Word("χαρᾶς", "joy", FEMININE, GENITIVE),
-        new Word("συνάγω", "I bring together, I compile - root *συναγ", PRESENT),
-        new Word("συνάξω", "I will bring together, I will compile συνάγω - root *συναγ", FUTURE),
-        new Word("συνήγαγον", "I brought together, I compiled συνάγω - root *συναγ", AORIST),
-        new Word("συνήχθην", "I was brought together, I was compiled συνάγω - root *συναγ", PASSIVE, AORIST),
-        new Word("συνῆγμαι", "I have been brought together, I have been compiled συνάγω - root *συναγ", MIDDLE, PASSIVE, PERFECT),
+        new Word(new WordForm("*ἀσπαδ", "to greet, salute ", ROOT), ZERO)
+            .addForm(new WordForm("ἀσπάζομαι", "I greet, salute ", PRESENT, DEPONENT))
+            .addForm(new WordForm("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι ", AORIST, DEPONENT)),
+        new Word(new WordForm("λίθος", "stone", MASCULINE), WEAK)
+            .addForm(new WordForm("λίθου", "stone", MASCULINE, GENITIVE)),
+        new Word(new WordForm("διδάσκαλος ου", "teacher", MASCULINE), STRONG)
+            .addForm(new WordForm("διδάσκαλου", "teacher", MASCULINE, GENITIVE)),
+        new Word(new WordForm("χαρά", "joy", FEMININE), WEAK)
+            .addForm(new WordForm("χαρᾶς", "joy", FEMININE, GENITIVE)),
+        new Word(new WordForm("συνάγω", "I bring together, I compile ", PRESENT), WEAK)
+            .addForm(new WordForm("συνάξω", "I will bring together, I will compile συνάγω ", FUTURE))
+            .addForm(new WordForm("συνήγαγον", "I brought together, I compiled συνάγω ", AORIST))
+            .addForm(new WordForm("συνήχθην", "I was brought together, I was compiled συνάγω ", PASSIVE, AORIST))
+            .addForm(new WordForm("συνῆγμαι", "I have been brought together, I have been compiled συνάγω ", MIDDLE, PASSIVE, PERFECT)),
         // 58
-        new Word("*θεωρε", "to look at, behold ", true, ROOT),
-        new Word("θεωρέω", "I look at, behold - root *θεωρε", true, PRESENT),
-        new Word("θεωρήσω", "I will look at, behold θεωρέω - root *θεωρε", true, FUTURE),
-        new Word("εθεώρησα", "I looked at, beheld θεωρέω - root *θεωρε", true, AORIST), // TODO fix initial accent
+        new Word(new WordForm("*θεωρε", "to look at, behold ", ROOT), STRONG)
+            .addForm(new WordForm("θεωρέω", "I look at, behold ", PRESENT))
+            .addForm(new WordForm("θεωρήσω", "I will look at, behold θεωρέω ", FUTURE))
+            .addForm(new WordForm("ἐθεώρησα", "I looked at, beheld θεωρέω ", AORIST)),
         // 57
-        new Word("τοιοῦτος", "such, of such kind", true, ADJECTIVE, MASCULINE),
-        new Word("τοιαῦτη", "such, of such kind", true, ADJECTIVE, FEMININE),
-        new Word("τοιοῦτον", "such, of such kind", true, ADJECTIVE, NEUTER),
+        new Word(new WordForm("τοιοῦτος", "such, of such kind", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("τοιαῦτη", "such, of such kind", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("τοιοῦτον", "such, of such kind", ADJECTIVE, NEUTER)),
         // 56
-        new Word("μηδέ", "and not, neither", true),
-        new Word("*δεχ", "to take, receive ", true, ROOT),
-        new Word("δέχομαι", "I take, receive - root *δεχ", true, DEPONENT),
-        new Word("δέξομαι", "I will take, receive δέχομαι - root *δεχ", true, FUTURE, DEPONENT),
-        new Word("ἐδεξάμην", "I took, received δέχομαι - root *δεχ", true, AORIST, DEPONENT),
-        new Word("δέδεγμαι", "I have been taken, received δέχομαι - root *δεχ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐδἐχθην", "I was taken, received δέχομαι - root *δεχ", true, PASSIVE, AORIST),
-        new Word("επι + *ερωτα", "to ask", true, ROOT),
-        new Word("ἐπερωτάω", "I ask - root επι + *ερωτα", true, PRESENT),
-        new Word("ἐπερωτήσω", "I will ask ἐπερωτάω - επι + *ερωτα", true, FUTURE),
-        new Word("ἐπηρώτησα", "I asked ἐπερωτάω - επι + *ερωτα", true, AORIST),
-        new Word("συναγωγή", "synagogue, meeting", FEMININE),
-        new Word("συναγωγῆς", "synagogue, meeting", FEMININE, GENITIVE),
+        new Word(new WordForm("μηδέ", "and not, neither"), OK),
+        new Word(new WordForm("*δεχ", "to take, receive ", ROOT), ZERO)
+            .addForm(new WordForm("δέχομαι", "I take, receive ", DEPONENT))
+            .addForm(new WordForm("δέξομαι", "I will take, receive δέχομαι ", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἐδεξάμην", "I took, received δέχομαι ", AORIST, DEPONENT))
+            .addForm(new WordForm("δέδεγμαι", "I have been taken, received δέχομαι ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐδἐχθην", "I was taken, received δέχομαι ", PASSIVE, AORIST)),
+        new Word(new WordForm("επι + *ερωτα", "to ask", ROOT), ZERO)
+            .addForm(new WordForm("ἐπερωτάω", "I ask *ερωτα", PRESENT))
+            .addForm(new WordForm("ἐπερωτήσω", "I will ask ἐπερωτάω ", FUTURE))
+            .addForm(new WordForm("ἐπηρώτησα", "I asked ἐπερωτάω ", AORIST)),
+        new Word(new WordForm("συναγωγή", "synagogue, meeting", FEMININE), OK)
+            .addForm(new WordForm("συναγωγῆς", "synagogue, meeting", FEMININE, GENITIVE)),
         // 55
-        new Word("*κραγ", "to cry out, call out ", true, ROOT),
-        new Word("κράζω", "I cry out, call out - root *κραγ", true, PRESENT),
-        new Word("κράξω", "I will cry out, call out κράζω - root *κραγ", true, FUTURE),
-        new Word("ἔκραξα", "I cried out, called out κράζω - root *κραγ", true, AORIST),
-        new Word("κέκραγα", "I have cried out, called out κράζω - root *κραγ", true, PERFECT),
-        new Word("λοιπός", "remaining (adj), the rest (noun), henceforth (adv)", true, MASCULINE),
-        new Word("λοιπή", "remaining (adj), the rest (noun), henceforth (adv)", true, FEMININE),
-        new Word("λοιπόν", "remaining (adj), the rest (noun), henceforth (adv)", true, NEUTER),
-        new Word("ἀρχή", "beginning; ruler", FEMININE),
-        new Word("ἀρχῆς", "beginning; ruler", FEMININE, GENITIVE),
+        new Word(new WordForm("*κραγ", "to cry out, call out ", ROOT), WEAK)
+            .addForm(new WordForm("κράζω", "I cry out, call out ", PRESENT))
+            .addForm(new WordForm("κράξω", "I will cry out, call out κράζω ", FUTURE))
+            .addForm(new WordForm("ἔκραξα", "I cried out, called out κράζω ", AORIST))
+            .addForm(new WordForm("κέκραγα", "I have cried out, called out κράζω ", PERFECT)),
+        new Word(new WordForm("λοιπός", "the rest, remainder", NOUN, MASCULINE), WEAK)
+            .addForm(new WordForm("λοιπός", "remaining", ADJECTIVE, MASCULINE))
+            .addForm(new WordForm("λοιπή", "remaining", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("λοιπόν", "remaining", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("ἀρχή", "beginning; ruler", FEMININE), WEAK)
+            .addForm(new WordForm("ἀρχῆς", "beginning; ruler", FEMININE, GENITIVE)),
         // 54
-        new Word("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE),
-        new Word("δεξιά", "right (hand, side)", ADJECTIVE, FEMININE),
-        new Word("δεξιόν", "right (hand, side)", ADJECTIVE, NEUTER),
-        new Word("μέσος", "middle, in the midst", ADJECTIVE, MASCULINE),
-        new Word("μέση", "middle, in the midst", ADJECTIVE, FEMININE),
-        new Word("μέσον", "middle, in the midst", ADJECTIVE, NEUTER),
-        new Word("χρόνος", "time", MASCULINE),
-        new Word("χρόνου", "time", MASCULINE, GENITIVE),
-        new Word("ούχι", "not", true),
+        new Word(new WordForm("δεξιός", "right (hand, side)", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("δεξιά", "right (hand, side)", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("δεξιόν", "right (hand, side)", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("μέσος", "middle, in the midst", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("μέση", "middle, in the midst", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("μέσον", "middle, in the midst", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("χρόνος", "time", MASCULINE), WEAK)
+            .addForm(new WordForm("χρόνου", "time", MASCULINE, GENITIVE)),
+        new Word(new WordForm("ούχι", "not"), OK),
         // 53
-        new Word("ἐλπίς", "hope, expectation", true, FEMININE),
-        new Word("ἐλπίδος", "hope, expectation", true, FEMININE, GENITIVE),
-        new Word("διό", "therefore, for this reason", true),
-        new Word("ὅπως", "so that, in order that, how that", true),
+        new Word(new WordForm("ἐλπίς", "hope, expectation", FEMININE), WEAK)
+            .addForm(new WordForm("ἐλπίδος", "hope, expectation", FEMININE, GENITIVE)),
+        new Word(new WordForm("διό", "therefore, for this reason"), ZERO),
+        new Word(new WordForm("ὅπως", "so that, in order that, how that"), ZERO),
         // 52
-        new Word("ἐπαγγελία", "promise", true, FEMININE),
-        new Word("ἐπαγγελίας", "promise", true, FEMININE, GENITIVE),
-        new Word("παιδίον", "child, infant", NEUTER),
-        new Word("παιδίου", "child, infant", NEUTER, GENITIVE),
-        new Word("*πειθ", "to persuade ", ROOT),
-        new Word("πείθω", "I persuade - root *πειθ", true, PRESENT),
-        new Word("πείσω", "I will persuade πείθω - root *πειθ", true, FUTURE),
-        new Word("ἔπεισα", "I persuaded πείθω - root *πειθ", true, AORIST),
-        new Word("πέποιθα", "I have persuaded πείθω - root *πειθ", true, PERFECT),
-        new Word("πέπεισμαι", "I have been persuaded πείθω - root *πειθ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐπείσθην", "I was persuaded πείθω - root *πειθ", true, PASSIVE, AORIST),
-        new Word("*σπερ", "to sow ", true, ROOT),
-        new Word("σπείρω", "I sow - root *σπερ", true, PRESENT),
-        new Word("ἔσπειρα", "I sowed σπείρω - root *σπερ", true, AORIST),
-        new Word("ἔσπαρμαι", "I have been sown σπείρω - root *σπερ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἐσπάρην", "I was sown σπείρω - root *σπερ", true, PASSIVE, AORIST),
+        new Word(new WordForm("ἐπαγγελία", "promise", FEMININE), ZERO)
+            .addForm(new WordForm("ἐπαγγελίας", "promise", FEMININE, GENITIVE)),
+        new Word(new WordForm("παιδίον", "child, infant", NEUTER), STRONG)
+            .addForm(new WordForm("παιδίου", "child, infant", NEUTER, GENITIVE)),
+        new Word(new WordForm("*πειθ", "to persuade ", ROOT), WEAK)
+            .addForm(new WordForm("πείθω", "I persuade ", PRESENT))
+            .addForm(new WordForm("πείσω", "I will persuade πείθω ", FUTURE))
+            .addForm(new WordForm("ἔπεισα", "I persuaded πείθω ", AORIST))
+            .addForm(new WordForm("πέποιθα", "I have persuaded πείθω ", PERFECT))
+            .addForm(new WordForm("πέπεισμαι", "I have been persuaded πείθω ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐπείσθην", "I was persuaded πείθω ", PASSIVE, AORIST)),
+        new Word(new WordForm("*σπερ", "to sow ", ROOT), WEAK)
+            .addForm(new WordForm("σπείρω", "I sow ", PRESENT))
+            .addForm(new WordForm("ἔσπειρα", "I sowed σπείρω ", AORIST))
+            .addForm(new WordForm("ἔσπαρμαι", "I have been sown σπείρω ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἐσπάρην", "I was sown σπείρω ", PASSIVE, AORIST)),
         // 51
-        new Word("σοφία", "skill, wisdom", FEMININE),
-        new Word("σοφίας", "skill, wisdom", FEMININE, GENITIVE),
-        new Word("εὐθύς", "immediately"),
+        new Word(new WordForm("σοφία", "skill, wisdom", FEMININE), OK)
+            .addForm(new WordForm("σοφίας", "skill, wisdom", FEMININE, GENITIVE)),
+        new Word(new WordForm("εὐθύς", "immediately"), OK),
         // 50
-        new Word("γλῶσσα", "tongue, language", FEMININE),
-        new Word("γλῶσσης", "tongue, language", FEMININE, GENITIVE),
-        new Word("γραφή", "scripture, writing", FEMININE),
-        new Word("γραφῆς", "scripture, writing", FEMININE, GENITIVE),
-        new Word("παραβολή", "parable", FEMININE),
-        new Word("παραβολῆς", "parable", FEMININE, GENITIVE),
-        new Word("ἔσχατος", "last", ADJECTIVE, MASCULINE),
-        new Word("ἔσχατη", "last", ADJECTIVE, FEMININE),
-        new Word("ἔσχατον", "last", ADJECTIVE, NEUTER),
-        new Word("κακός", "bad, evil", ADJECTIVE, MASCULINE),
-        new Word("κακή", "bad, evil", ADJECTIVE, FEMININE),
-        new Word("κακόν", "bad, evil", ADJECTIVE, NEUTER),
-        new Word("μακάριος", "blessed, happy", ADJECTIVE, MASCULINE),
-        new Word("μακαρία", "blessed, happy", ADJECTIVE, FEMININE),
-        new Word("μακάριον", "blessed, happy", ADJECTIVE, NEUTER),
-        new Word("τυφλός", "blind", true, ADJECTIVE, MASCULINE),
-        new Word("τυφλή", "blind", true, ADJECTIVE, FEMININE),
-        new Word("τυφλόν", "blind", true, ADJECTIVE, NEUTER),
-        new Word("μηδέ", "nor, and not"),
+        new Word(new WordForm("γλῶσσα", "tongue, language", FEMININE), OK)
+            .addForm(new WordForm("γλῶσσης", "tongue, language", FEMININE, GENITIVE)),
+        new Word(new WordForm("γραφή", "scripture, writing", FEMININE), OK)
+            .addForm(new WordForm("γραφῆς", "scripture, writing", FEMININE, GENITIVE)),
+        new Word(new WordForm("παραβολή", "parable", FEMININE), OK)
+            .addForm(new WordForm("παραβολῆς", "parable", FEMININE, GENITIVE)),
+        new Word(new WordForm("ἔσχατος", "last", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("ἔσχατη", "last", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ἔσχατον", "last", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("κακός", "bad, evil", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("κακή", "bad, evil", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("κακόν", "bad, evil", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("μακάριος", "blessed, happy", ADJECTIVE, MASCULINE), OK)
+            .addForm(new WordForm("μακαρία", "blessed, happy", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("μακάριον", "blessed, happy", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("τυφλός", "blind", ADJECTIVE, MASCULINE), ZERO)
+            .addForm(new WordForm("τυφλή", "blind", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("τυφλόν", "blind", ADJECTIVE, NEUTER)),
+        new Word(new WordForm("μηδέ", "nor, and not"), WEAK),
         // 49
-        new Word("ἔτος", "year", true, NEUTER),
-        new Word("ἔτους", "year", true, NEUTER, GENITIVE),
-        new Word("χρεία", "need, necessity", true, FEMININE),
-        new Word("χρείας", "need, necessity", true, FEMININE, GENITIVE),
-        new Word("παραλαμβάνω", "I take to myself, take along, take over", true, PRESENT),
-        new Word("παραλήμψομαι", "I will take to myself, will take along, will take over - παραλαμβάνω", true, FUTURE),
-        new Word("παρέλαβον", "I took to myself, took along, took over - παραλαμβάνω", true, SECOND_AORIST),
-        new Word("παρελήμφθην", "I was taken along, was taken over - παραλαμβάνω", true, PASSIVE, AORIST),
-        new Word("*φανερο", "to reveal, make known", true, ROOT),
-        new Word("φανερῶ", "I reveal, make known - root *φανερο", true, PRESENT),
-        new Word("φανερώσω", "I reveal, make known φανερῶ - root *φανερο", true, FUTURE),
-        new Word("ἐφανέρωσα", "I revealed, made known φανερῶ - root *φανερο", true, AORIST),
-        new Word("ἐφανερώθην", "I was revealed, made known φανερῶ - root *φανερο", true, PASSIVE, AORIST),
-        new Word("πεφανέρωμαι", "I have been revealed, made known φανερῶ - root *φανερο", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ἄρα", "then, therefore", true),
+        new Word(new WordForm("ἔτος", "year", NEUTER), ZERO)
+            .addForm(new WordForm("ἔτους", "year", NEUTER, GENITIVE)),
+        new Word(new WordForm("χρεία", "need, necessity", FEMININE), ZERO)
+            .addForm(new WordForm("χρείας", "need, necessity", FEMININE, GENITIVE)),
+        new Word(new WordForm("παραλαμβάνω", "I take to myself, take along, take over", PRESENT), ZERO)
+            .addForm(new WordForm("παραλήμψομαι", "I will take to myself, will take along, will take over ", FUTURE))
+            .addForm(new WordForm("παρέλαβον", "I took to myself, took along, took over ", SECOND_AORIST))
+            .addForm(new WordForm("παρελήμφθην", "I was taken along, was taken over ", PASSIVE, AORIST)),
+        new Word(new WordForm("*φανερο", "to reveal, make known", ROOT), ZERO)
+            .addForm(new WordForm("φανερῶ", "I reveal, make known ", PRESENT))
+            .addForm(new WordForm("φανερώσω", "I reveal, make known φανερῶ ", FUTURE))
+            .addForm(new WordForm("ἐφανέρωσα", "I revealed, made known φανερῶ ", AORIST))
+            .addForm(new WordForm("ἐφανερώθην", "I was revealed, made known φανερῶ ", PASSIVE, AORIST))
+            .addForm(new WordForm("πεφανέρωμαι", "I have been revealed, made known φανερῶ ", MIDDLE, PASSIVE, PERFECT)),
+        new Word(new WordForm("ἄρα", "then, therefore"), ZERO),
         // 48
-        new Word("ἔρημος", "isolated, desolate, deserted, used as substantive, desert (feminine in this case)", ADJECTIVE),
-        new Word("ἀποδίδωμι", "I give up, give back, pay", true, PRESENT),
-        new Word("ἀποδώσω", "I will give up, give back, pay - ἀποδίδωμι", true, FUTURE),
-        new Word("ἀπέδωκα", "I gave up, gave back, paid - ἀποδίδωμι", true, AORIST),
-        new Word("ἀπεδόθην", "I was given up, given back, paid - ἀποδίδωμι", true, PASSIVE, AORIST),
+        new Word(new WordForm("ἔρημος", "isolated, desolate, deserted, used as substantive, desert (feminine in this case)", ADJECTIVE), WEAK),
+        new Word(new WordForm("ἀποδίδωμι", "I give up, give back, pay", PRESENT), ZERO)
+            .addForm(new WordForm("ἀποδώσω", "I will give up, give back, pay ", FUTURE))
+            .addForm(new WordForm("ἀπέδωκα", "I gave up, gave back, paid ", AORIST))
+            .addForm(new WordForm("ἀπεδόθην", "I was given up, given back, paid ", PASSIVE, AORIST)),
         // 47
-        new Word("πρό", "before, above", true),
-        new Word("κρίσις", "judgement, legal case", true, FEMININE),
-        new Word("κρίσεως", "judgement, legal case", true, FEMININE, GENITIVE),
-        new Word("φόβος", "fear, fear inspiring thing, reverence", MASCULINE),
-        new Word("φόβου", "fear, fear inspiring thing, reverence", MASCULINE, GENITIVE),
-        new Word("φυλακή", "standing guard or watch, guard (noun), prison, watch (of the night)", true, FEMININE),
-        new Word("φυλακῆς", "standing guard or watch, guard (noun), prison, watch (of the night)", true, FEMININE, GENITIVE),
-        new Word("*κρατε", "to grasp, to be strong, to take possession", true, ROOT),
-        new Word("κρατῶ", "I grasp, am strong, take possession κρατέω - root *κρατε", true, PRESENT),
-        new Word("κρατήσω", "I will grasp, will be strong, will take possession κρατέω - root *κρατε", true, FUTURE),
-        new Word("ἐκράτησα", "I grasped, was strong, took possession κρατέω - root *κρατε", true, AORIST),
-        new Word("κεκράτηκα", "I have grasped, have been strong, have taken possession κρατέω - root *κρατε", true, PERFECT),
-        new Word("κεκράτημαι", "I have been grasped, have been taken possession κρατέω - root *κρατε", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("προσφέρω", "I bring, I offer προσ + φερω", true, PRESENT),
-        new Word("προσήνεγκα", "I brought, I offered προσφερω", true, AORIST),
-        new Word("προσενήνοχα", "I have brought, I have offered προσφερω", true, PERFECT),
-        new Word("προσήνεχθην", "I was brought, I was offered προσφερω", true, PASSIVE, AORIST),
-        new Word("ἁμαρτωλός", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, MASCULINE, FEMININE),
-        new Word("ἁμαρτωλόν", "sinful or out of bounds behavior, as substantive sinner or outsider", ADJECTIVE, NEUTER),
-        new Word("οὐκέτι", "no longer"),
+        new Word(new WordForm("πρό", "before, above"), WEAK),
+        new Word(new WordForm("κρίσις", "judgement, legal case", FEMININE), WEAK)
+            .addForm(new WordForm("κρίσεως", "judgement, legal case", FEMININE, GENITIVE)),
+        new Word(new WordForm("φόβος", "fear, fear inspiring thing, reverence", MASCULINE), STRONG)
+            .addForm(new WordForm("φόβου", "fear, fear inspiring thing, reverence", MASCULINE, GENITIVE)),
+        new Word(new WordForm("φυλακή", "guard, prison, watch (of the night)", FEMININE), ZERO)
+            .addForm(new WordForm("φυλακῆς", "guard, prison, watch (of the night)", FEMININE, GENITIVE)),
+        new Word(new WordForm("*κρατε", "to grasp, to be strong, to take possession", ROOT), ZERO)
+            .addForm(new WordForm("κρατῶ", "I grasp, am strong, take possession κρατέω ", PRESENT))
+            .addForm(new WordForm("κρατήσω", "I will grasp, will be strong, will take possession κρατέω ", FUTURE))
+            .addForm(new WordForm("ἐκράτησα", "I grasped, was strong, took possession κρατέω ", AORIST))
+            .addForm(new WordForm("κεκράτηκα", "I have grasped, have been strong, have taken possession κρατέω ", PERFECT))
+            .addForm(new WordForm("κεκράτημαι", "I have been grasped, have been taken possession κρατέω ", MIDDLE, PASSIVE, PERFECT)),
+        new Word(new WordForm("προσφέρω", "I bring, I offer προσ + φερω", PRESENT), ZERO)
+            .addForm(new WordForm("προσήνεγκα", "I brought, I offered προσφερω", AORIST))
+            .addForm(new WordForm("προσενήνοχα", "I have brought, I have offered προσφερω", PERFECT))
+            .addForm(new WordForm("προσήνεχθην", "I was brought, I was offered προσφερω", PASSIVE, AORIST)),
+        new Word(new WordForm("οὐκέτι", "no longer"), ZERO),
         // 46
-        new Word("θηρίον", "non-human animal, wild animal", true, NEUTER),
-        new Word("θηρίου", "non-human animal, wild animal", NEUTER, GENITIVE),
-        new Word("σωτηρία", "salvation, deliverance, preservation", true, FEMININE),
-        new Word("σωτηρίας", "salvation, deliverance, preservation", FEMININE, GENITIVE),
-        new Word("καθίζω", "I set, seat, appoint, sit down, settle", true, PRESENT),
-        new Word("καθίσω", "I will set, seat, appoint, sit down, settle καθίζω", true, FUTURE),
-        new Word("ἐκάθισα", "I set, sat, appointed, sat down, settled καθίζω", true, AORIST),
-        new Word("κεκάθικα", "I have set, sat, appointed, sat down, settled καθίζω", true, PERFECT),
-        new Word("σταυρῶ", "I crucify", true, PRESENT),
-        new Word("σταυρώσω", "I will crucify σταυρῶ", true, FUTURE),
-        new Word("ἐσταύρωσα", "I crucifid σταυρῶ", true, AORIST),
-        new Word("ἐσταυρώθην", "I was crucifid σταυρῶ", true, PASSIVE, AORIST),
-        new Word("ἐσταύρωμαι", "I have been crucifid σταυρῶ", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("μικρός", "small, little", ADJECTIVE, MASCULINE),
-        new Word("μικρά", "small, little", ADJECTIVE, FEMININE),
-        new Word("μικρόν", "small, little", ADJECTIVE, NEUTER),
+        new Word(new WordForm("θηρίον", "non-human animal, wild animal", NEUTER), ZERO)
+            .addForm(new WordForm("θηρίου", "non-human animal, wild animal", NEUTER, GENITIVE)),
+        new Word(new WordForm("σωτηρία", "salvation, deliverance, preservation", FEMININE), ZERO)
+            .addForm(new WordForm("σωτηρίας", "salvation, deliverance, preservation", FEMININE, GENITIVE)),
+        new Word(new WordForm("καθίζω", "I set, seat, appoint, sit down, settle", PRESENT), ZERO)
+            .addForm(new WordForm("καθίσω", "I will set, seat, appoint, sit down, settle καθίζω", FUTURE))
+            .addForm(new WordForm("ἐκάθισα", "I set, sat, appointed, sat down, settled καθίζω", AORIST))
+            .addForm(new WordForm("κεκάθικα", "I have set, sat, appointed, sat down, settled καθίζω", PERFECT)),
+        new Word(new WordForm("σταυρῶ", "I crucify", PRESENT), ZERO)
+            .addForm(new WordForm("σταυρώσω", "I will crucify σταυρῶ", FUTURE))
+            .addForm(new WordForm("ἐσταύρωσα", "I crucifid σταυρῶ", AORIST))
+            .addForm(new WordForm("ἐσταυρώθην", "I was crucifid σταυρῶ", PASSIVE, AORIST))
+            .addForm(new WordForm("ἐσταύρωμαι", "I have been crucifid σταυρῶ", MIDDLE, PASSIVE, PERFECT)),
+        new Word(new WordForm("μικρός", "small, little", ADJECTIVE, MASCULINE), WEAK)
+            .addForm(new WordForm("μικρά", "small, little", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("μικρόν", "small, little", ADJECTIVE, NEUTER)),
         // 45
-        new Word("θλῖψις", "trouble that inflicts distress, oppression, afflication, tribulation", true, FEMININE),
-        new Word("θλῖψεως", "trouble that inflicts distress, oppression, afflication, tribulation", FEMININE, GENITIVE),
-        new Word("ναός", "temple, diety's palace", true, MASCULINE),
-        new Word("ναοῦ", "temple, diety's palace", MASCULINE, GENITIVE),
-        new Word("ἀπαγγέλλω", "I tell, bring news, report", true, PRESENT),
-        new Word("ἀπαγγελῶ", "I will tell, bring news, report ἀπαγγέλλω", true, FUTURE),
-        new Word("ἀπήγγειλα", "I told, brought news, reported ἀπαγγέλλω", true, AORIST),
-        new Word("ἀπηγγέλην", "I was told, brought news, reported ἀπαγγέλλω", true, PASSIVE, AORIST),
-        new Word("διώκω", "I pursue, persecute", true, PRESENT),
-        new Word("διώξω", "I will pursue, persecute διώκω", true, FUTURE),
-        new Word("ἐδιώξα", "I pursued, persecuted διώκω", true, AORIST),
-        new Word("ἐδιώχθην", "I was pursued, persecuted διώκω", true, PASSIVE, AORIST),
-        new Word("δεδίωγμαι", "I have been pursued, persecuted διώκω", true, MIDDLE, PASSIVE, PERFECT),
-        new Word("ὅμοιος", "of the same nature, like, similar", true, ADJECTIVE, MASCULINE),
-        new Word("ὁμοία", "of the same nature, like, similar", ADJECTIVE, FEMININE),
-        new Word("ὅμοιον", "of the same nature, like, similar", ADJECTIVE, NEUTER),
+        new Word(new WordForm("θλῖψις", "trouble that inflicts distress, oppression, afflication, tribulation", FEMININE), ZERO)
+            .addForm(new WordForm("θλῖψεως", "trouble that inflicts distress, oppression, afflication, tribulation", FEMININE, GENITIVE)),
+        new Word(new WordForm("ναός", "temple, diety's palace", MASCULINE), ZERO)
+            .addForm(new WordForm("ναοῦ", "temple, diety's palace", MASCULINE, GENITIVE)),
+        new Word(new WordForm("ἀπαγγέλλω", "I tell, bring news, report", PRESENT), ZERO)
+            .addForm(new WordForm("ἀπαγγελῶ", "I will tell, bring news, report ἀπαγγέλλω", FUTURE))
+            .addForm(new WordForm("ἀπήγγειλα", "I told, brought news, reported ἀπαγγέλλω", AORIST))
+            .addForm(new WordForm("ἀπηγγέλην", "I was told, brought news, reported ἀπαγγέλλω", PASSIVE, AORIST)),
+        new Word(new WordForm("διώκω", "I pursue, persecute", PRESENT), ZERO)
+            .addForm(new WordForm("διώξω", "I will pursue, persecute διώκω", FUTURE))
+            .addForm(new WordForm("ἐδιώξα", "I pursued, persecuted διώκω", AORIST))
+            .addForm(new WordForm("ἐδιώχθην", "I was pursued, persecuted διώκω", PASSIVE, AORIST))
+            .addForm(new WordForm("δεδίωγμαι", "I have been pursued, persecuted διώκω", MIDDLE, PASSIVE, PERFECT)),
+        new Word(new WordForm("ὅμοιος", "of the same nature, like, similar", ADJECTIVE, MASCULINE), ZERO)
+            .addForm(new WordForm("ὁμοία", "of the same nature, like, similar", ADJECTIVE, FEMININE))
+            .addForm(new WordForm("ὅμοιον", "of the same nature, like, similar", ADJECTIVE, NEUTER)),
         // 44
-        new Word("ἐπιγινώσκω", "I understand, recognize", PRESENT),
-        new Word("ἐπιγινώσομαι", "I will understand, recognize ἐπιγινώσκω", FUTURE, DEPONENT),
-        new Word("ἐπέγνων", "I understood, recognized ἐπιγινώσκω", AORIST),
-        new Word("ἐπέγνωκα", "I have understood, recognized ἐπιγινώσκω", PERFECT),
-        new Word("ἐπεγινώσθην", "I was understood, recognized ἐπιγινώσκω", PASSIVE, AORIST),
-        new Word("κατοικῶ", "I dwell, settle, inhabit κατοικέω", PRESENT),
-        new Word("κατῷκησα", "I dwelt, settled, inhabited κατοικέω", AORIST)
+        new Word(new WordForm("ἐπιγινώσκω", "I understand, recognize", PRESENT), ZERO)
+            .addForm(new WordForm("ἐπιγινώσομαι", "I will understand, recognize ἐπιγινώσκω", FUTURE, DEPONENT))
+            .addForm(new WordForm("ἐπέγνων", "I understood, recognized ἐπιγινώσκω", AORIST))
+            .addForm(new WordForm("ἐπέγνωκα", "I have understood, recognized ἐπιγινώσκω", PERFECT))
+            .addForm(new WordForm("ἐπεγινώσθην", "I was understood, recognized ἐπιγινώσκω", PASSIVE, AORIST)),
+        new Word(new WordForm("κατοικῶ", "I dwell, settle, inhabit κατοικέω", PRESENT), ZERO)
+            .addForm(new WordForm("κατῷκησα", "I dwelt, settled, inhabited κατοικέω", AORIST))
+
 
     );
   }

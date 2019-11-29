@@ -53,30 +53,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Velar (Palatals) Unvoiced κ  Voiced γ  Aspirates χ  Velar + σ = ξ\n" +
             "Dental           Unvoiced τ  Voiced δ  Aspirates θ  Dental + σ = σ"),
 
-        new GrammarRule("1st Declension Paradigm, Feminine\n" +
-            "            Singular              Plural\n" +
-            "Nomanative            γραφή       ι        γραφαί\n" +
-            "Vocative              γραφή       ι        γραφαί\n" +
-            "Genitive    ς         γραφῆς      ων       γραφῶν\n" +
-            "Dative      ι         γραφῇ       ις       γραφαῖς\n" +
-            "Accusative  ν         γραφήν      ς        γραφάς\n"),
-
-        new GrammarRule("2nd Declension Paradigm, Masculine\n" +
-            "            Singular              Plural\n" +
-            "Nomanative  ς        λόγος        ι      λόγοι\n" +
-            "Vocative    ε        λόγε         ι      λόγοι\n" +
-            "Genitive    υ        λόγου        ων     λόγων\n" +
-            "Dative      ι        λόγῳ         ις     λόγοις\n" +
-            "Accusative  ν        λόγον        υς     λόγους\n"),
-
-        new GrammarRule("2nd Declension Paradigm, Neuter\n" +
-            "            Singular              Plural\n" +
-            "Nomanative  ν        ἔργον        α      ἔργα\n" +
-            "Vocative    ε        ἔργε         α      ἔργα\n" +
-            "Genitive    υ        ἔργου        ων     ἔργων\n" +
-            "Dative      ι        ἔργῳ         ις     ἔργοις\n" +
-            "Accusative  ν        ἔργον        α      ἔργα\n"),
-
         new GrammarRule("Uses of Genitive\n" +
             " * descriptive: Let us put on the armor of light ενδυσμεθα τα οπλα του φωτος\n" +
             " * possessive\n" +
@@ -171,22 +147,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "    waiting for our blessed hope, the appearing of the glory of our great God and\n" +
             "      Savior Jesus Christ."),
 
-        new GrammarRule("3rd Declension Paradigm, Masculine/Feminine:\n" +
-            "            Singular              Plural\n" +
-            "Nomanative  ς        σάρξ         ες     σάρκες\n" +
-            "Vocative             σάρκ         ες     σάρκες\n" +
-            "Genitive    ος       σαρκός       ων     σαρκῶν\n" +
-            "Dative      ι        σαρκί        σι(ν)  σαρξί(ν)\n" +
-            "Accusative  α/ν      σάρκα        ας     σάρκας\n"),
-
-        new GrammarRule("3rd Declension Paradigm, Neuter:\n" +
-            "            Singular              Plural\n" +
-            "Nomanative           ὄνομα        α      ὀνόματα\n" +
-            "Vocative             ὄνομα        α      ὀνόματα\n" +
-            "Genitive    ος       ὀνόματος     ων     ὀνομἀτων\n" +
-            "Dative      ι        ὀνόματι      σι(ν)  ὀνόμασι(ν)\n" +
-            "Accusative           ὄνομα        α      ὀνόματα\n"),
-
         new GrammarRule("The Three Uses of αὐτος\n" +
             " 1. Personal pronoun.\n" +
             " 2. Adjectival intensive.  This is used to modify another word and is placed in the\n" +
@@ -215,16 +175,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "antecedent is dative or genitive and the relative pronoun normally would be\n" +
             "accusative."),
 
-        new GrammarRule("Present active indicative paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "1sg  λυ    ο                   λυω\n" +
-            "2sg  λυ    ε          ς        λυεις\n" +
-            "3sg  λυ    ε          ι        λυει\n" +
-            "1pl  λυ    ο          μεν      λυομεν\n" +
-            "2pl  λυ    ε          τε       λυετε\n" +
-            "3pl  λυ    ο          νσι      λυουσι(ν)\n"),
-
         new GrammarRule("Contract verbs are verbs that end in α, ε, or ο.  In the present and\n" +
             "imperfect tenses the final vowel contracts with the connecting vowel as follows:\n" +
             " * two like vowels combine to the associated long vowel (except following two)\n" +
@@ -242,16 +192,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   same, they combine to a single instance of the vowel.  Otherwise they contract.\n" +
             "   If the second vowel of the dipthong is a ι it subscripts if possible.\n"),
 
-        new GrammarRule("Present middle/passive indicative paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "1sg  λυ    ο          μαι      λυομαι\n" +
-            "2sg  λυ    ε          σαι      λυῃ\n" +
-            "3sg  λυ    ε          ται      λυεται\n" +
-            "1pl  λυ    ο          μεθα     λυομεθα\n" +
-            "2pl  λυ    ε          σθε      λυεσθε\n" +
-            "3pl  λυ    ο          νται     λυονται\n"),
-
         new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
             "in meaning.  It does not take a middle or passive meaning.\n" +
             "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in\n" +
@@ -262,24 +202,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Future active has its own stems.\n" +
             " * Future middle uses future active tense stem.\n" +
             " * Future passive uses aorist passive tense stem."),
-
-        new GrammarRule("Future active indicative paradigm:\n" +
-            "     Stem  tense formative   connecting vowel  ending  form\n" +
-            "1sg  λυ    σ                 ο                 -       λύσω\n" +
-            "2sg  λυ    σ                 ε                 ς       λύσεις\n" +
-            "3sg  λυ    σ                 ε                 ι       λύσει\n" +
-            "1pl  λυ    σ                 ο                 μεν     λύσομεν\n" +
-            "2pl  λυ    σ                 ε                 τε      λύσετε\n" +
-            "3pl  λυ    σ                 ο                 νσι     λύσουσι(ν)\n"),
-
-        new GrammarRule("Future middle indicative paradigm:\n" +
-            "     Stem  tense formative   connecting vowel  ending  form\n" +
-            "1sg  λυ    σ                 ο                 μαι     λύσομαι\n" +
-            "2sg  λυ    σ                 ε                 σαι     λύσῃ\n" +
-            "3sg  λυ    σ                 ε                 ται     λύσεται\n" +
-            "1pl  λυ    σ                 ο                 μεθα    λυσόμεθα\n" +
-            "2pl  λυ    σ                 ε                 σθε     λύσεσθε\n" +
-            "3pl  λυ    σ                 ο                 νται    λύσονται\n"),
 
         new GrammarRule("Separating γινομαι, γενναω and γινωσκω:\n" +
             " * γινομαι will always have a vowel between the γ and the ν.  Usually an ε.\n" +
@@ -310,24 +232,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Verbs that have second aorists are normally verbs that alter their\n" +
             "root in the formation of their present tense stem."),
-
-        new GrammarRule("Imperfect active paradigm:\n" +
-            "       form       connecting vowel  ending\n" +
-            "1sg    ἔλυον      ο                 ν\n" +
-            "2sg    ἔλυες      ε                 ς\n" +
-            "3sg    ἔλυε(ν)    ε                 - (ν)\n" +
-            "1pl    ἐλύομεν    ο                 μεν\n" +
-            "2pl    ἐλὐετε     ε                 τε\n" +
-            "3pl    ἔλυον      ο                 ν"),
-
-        new GrammarRule("Imperfect middle/passive paradigm:\n" +
-            "       form       connecting vowel  ending\n" +
-            "1sg    ἐλυόμην    ο                 μην\n" +
-            "2sg    ἐλύου      ε                 σο\n" +
-            "3sg    ἐλύετο     ε                 το\n" +
-            "1pl    ἐλυόμεθα   ο                 μεθα\n" +
-            "2pl    ἐλύεσθε    ε                 σθε\n" +
-            "3pl    ἐλύοντο    ο                 ντο"),
 
         new GrammarRule("Augments for imperfect and aorist:\n" +
             "* If the word begins with a consonant, an ε is prepended.\n" +
@@ -384,24 +288,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Can describe something almost done (tendential)\n" +
             "   ὁ δε Ἰωαννης διεκωλυεν αὐτον John would have prevented him"),
 
-        new GrammarRule("Second aorist active paradigm:\n" +
-            "       form       connecting vowel  ending\n" +
-            "1sg    ἔλαβον     ο                 ν\n" +
-            "2sg    ἔλαβες     ε                 ς\n" +
-            "3sg    ἔλαβε(ν)   ε                 - (ν)\n" +
-            "1pl    ἐλαβομεν   ο                 μεν\n" +
-            "2pl    ἐλαβετε    ε                 τε\n" +
-            "3pl    ἔλαβον     ο                 ν"),
-
-        new GrammarRule("Second aorist middle paradigm:\n" +
-            "       form        connecting vowel  ending\n" +
-            "1sg    ἐγενόμην    ο                 μην\n" +
-            "2sg    ἐγένου      ε                 σο\n" +
-            "3sg    ἐγένετο     ε                 το\n" +
-            "1pl    ἐγενόμεθα   ο                 μεθα\n" +
-            "2pl    ἐγένεσθε    ε                 σθε\n" +
-            "3pl    ἐγένοντο    ο                 ντο"),
-
         new GrammarRule("Aorist stems:\n" +
             " * In the active voice, a second aorist will always have a different stem from\n" +
             "   the present because the root will always have been modified to form the\n" +
@@ -418,66 +304,11 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * It can refer to a timeless truth (gnomic)\n" +
             " * It can refer to a future action that will certainly occur (proleptic)."),
 
-        new GrammarRule("First aorist active paradigm:\n" +
-            "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   σα               -                                  ἔλυσα\n" +
-            "2sg ε        λυ   σα               ς                                  ἔλυσας\n" +
-            "3sg ε        λυ   σε               - (ν)                              ἔλυσε(ν)\n" +
-            "1pl ε        λυ   σα               μεν                                ἐλύσαμεν\n" +
-            "2pl ε        λυ   σα               τε                                 ἐλύσατε\n" +
-            "3pl ε        λυ   σα               ν                                  ἔλυσαν"),
-
         new GrammarRule("First aorist endings and verb types:\n" +
             " * Contract verbs lengthen the contract vowel before the tense formative:\n" +
             "   ἀγαπάω becomes ἠγάπησα\n" +
             " * Stems that end in a stop combine the stop with the sigma, as per the rules.\n" +
             " * Liquid verbs use α/ε as a tense formative rather than σα."),
-
-        new GrammarRule("First aorist middle paradigm:\n" +
-            "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   σα               μην                                ἐλυσάμην\n" +
-            "2sg ε        λυ   σα               σο                                 ἐλύσω\n" +
-            "3sg ε        λυ   σα               το                                 ἐλύσατο\n" +
-            "1pl ε        λυ   σα               μεθα                               ἐλυσάμεθα\n" +
-            "2pl ε        λυ   σα               σθε                                ἐλύσασθε\n" +
-            "3pl ε        λυ   σα               ντο                                ἐλύσαντο"),
-
-        new GrammarRule("First aorist passive paradigm:\n" +
-            "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   θη               ν                                  ἐλύθην\n" +
-            "2sg ε        λυ   θη               ς                                  ἐλύθης\n" +
-            "3sg ε        λυ   θη               -                                  ἐλύθη\n" +
-            "1pl ε        λυ   θη               μεν                                ἐλύθημεν\n" +
-            "2pl ε        λυ   θη               τε                                 ἐλύθητε\n" +
-            "3pl ε        λυ   θη               σαν                                ἐλύθησαν"),
-
-        // TODO fix the stem here, it isn't lu
-        new GrammarRule("Second aorist passive paradigm:\n" +
-            "    augment  stem tense formative  secondary active personal endings  form\n" +
-            "1sg ε        λυ   η                ν                                  ἐγράφην\n" +
-            "2sg ε        λυ   η                ς                                  ἐγράφης\n" +
-            "3sg ε        λυ   η                -                                  ἐγράφη\n" +
-            "1pl ε        λυ   η                μεν                                ἐγράφημεν\n" +
-            "2pl ε        λυ   η                τε                                 ἐγράφητε\n" +
-            "3pl ε        λυ   η                σαν                                ἐγράφησαν"),
-
-        new GrammarRule("Future passive paradigm:\n" +
-            "     Stem  tense formative   connecting vowel  ending  form\n" +
-            "1sg  λυ    θησ               ο                 μαι     λυθήσομαι\n" +
-            "2sg  λυ    θησ               ε                 σαι     λυθήσῃ\n" +
-            "3sg  λυ    θησ               ε                 ται     λυθήσεται\n" +
-            "1pl  λυ    θησ               ο                 μεθα    λυθησόμεθα\n" +
-            "2pl  λυ    θησ               ε                 σθε     λυθήσεσθε\n" +
-            "3pl  λυ    θησ               ο                 νται    λυθήσονται\n"),
-
-        new GrammarRule("Second future passive paradigm:\n" +
-            "     Stem      tense formative   connecting vowel  ending  form\n" +
-            "1sg  ἀποσταλ   ησ                ο                 μαι     ἀποσταλήσομαι\n" +
-            "2sg  ἀποσταλ   ησ                ε                 σαι     ἀποσταλήσῃ\n" +
-            "3sg  ἀποσταλ   ησ                ε                 ται     ἀποσταλήσεται\n" +
-            "1pl  ἀποσταλ   ησ                ο                 μεθα    ἀποσταλησόμεθα\n" +
-            "2pl  ἀποσταλ   ησ                ε                 σθε     ἀποσταλήσεσθε\n" +
-            "3pl  ἀποσταλ   ησ                ο                 νται    ἀποσταλήσονται\n"),
 
         new GrammarRule("Perfect tense describes an action that was brought to completion\n" +
             "and whose effects are felt in the present (consummative, extensive).  Can be\n" +
@@ -507,14 +338,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Reflexive middle:  the subject does the action and receives it.\n" +
             "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself"),
 
-        new GrammarRule("Pluperfect describe an action in the past that was completed and who's effect are felt in the past\n" +
-            "    augment     reduplication     stem     tense formative     secondary endings     form\n" +
-            "1sg (ε)         λε                λυ       κ                   ν                     ἐλελύκειν\n" +
-            "2sg (ε)         λε                λυ       κ                   σ                     ἐλελύκεις\n" +
-            "3sg (ε)         λε                λυ       κ                   (ν)                   ἐλελύκει(ν)\n" +
-            "1pl (ε)         λε                λυ       κ                   μεν                   ἐλελύκειμεν\n" +
-            "2pl (ε)         λε                λυ       κ                   τε                    ἐλελύκειτε\n" +
-            "3pl (ε)         λε                λυ       κ                   σαν                   ἐλελύκειααν\n"),
+        new GrammarRule("Pluperfect describe an action in the past that was completed and who's effect are felt in the past"),
 
         new GrammarRule("Participle aspect:\n" +
             "Present participle describes a continuous action\n" +
@@ -540,20 +364,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* Participles do not have a subject and do not take personal endings\n" +
             "* Participles can take objects and prepositional phrases\n" +
             "* Participles are negated with μη"),
-
-        new GrammarRule("Present (continuous) participle breakdown:\n" +
-            "Present tense stem + connecting vowel + participle morpheme + case ending\n" +
-            "πιστευ             + ο                + ντ                  + ες\n" +
-            "λυ                 + ο                + μενο                + οι"),
-
-        // TODO, this chart doesn't make any sense, perfect is a tense, while active etc. are voices
-        new GrammarRule("Participle morphemes:\n" +
-            "               masculine   feminine  neuter\n" +
-            "active         ντ          ουσα      ντ    \n" +
-            "middle/passive μενο        μενη      μενο  \n" +
-            "perfect        οτ          οτ        οτ    \n"),
-        // TODO this last line doesn't seem true, as I never see t in perfect
-        // feminine.  Double check this.
 
         new GrammarRule("Participal exegesis:\n" +
             "1. Temporal:  the aorist participle can describe an action occurring before the time\n" +
@@ -590,12 +400,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  finite verbs: εὐθυς _ἀφεντες_ τα δικτυα ἠκολουθησαν αὐτῳ\n" +
             "  Immediately _they left_ their nets and followed him."),
 
-        new GrammarRule("Aorist (undefined aspect) participle breakdown:\n" +
-            "Voice   Aorst tense stem + tense formative + participle morpheme + case ending\n" +
-            "active  λυ               + σα              + ντ                  + ες\n" +
-            "middle  λυ               + σα              + μενο                + ι\n" +
-            "passive λυ               + θε              + ντ                  + ες\n"),
-
         new GrammarRule("Participle declensions:\n" +
             "* feminine participle always uses 1st declension\n" +
             "* active masculine & neuter use 3rd declension\n" +
@@ -615,11 +419,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Perfect participles indicate a completed action with effects in the " +
             "present (from the viewpoint of the writer).\n" +
-            "Built on the perfect stem of the verb, with reduplication\n" +
-            "                Redup-   + perfect    + tense formative + participle + case\n" +
-            "                lication   tense stem   formative         morpheme     ending\n" +
-            "active:         λε         λυ           κ                 οτ           ες\n" +
-            "middle/passive: λε         λυ                             μενο         ι"),
+            "Built on the perfect stem of the verb, with reduplication"),
 
         new GrammarRule("An 'absolute' grammatical construction is one that is not grammatically\n" +
             "related to the rest of the sentance, that is it does not modify any other words in the sentance.\n" +
@@ -635,56 +435,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("οὐ μή plus subjunctive indicates emphatic denial of a future possibility, e.g. Jesus'\n" +
             "words in Jn 10:28 οὐ μή ἀπόλωνται they [his sheep] will by no means perish."),
-
-        new GrammarRule("Subjunctive active present paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "1sg  λυ    ω                   λύω\n" +
-            "2sg  λυ    η          ς        λύῃς\n" +
-            "3sg  λυ    η          ι        λύῃ\n" +
-            "1pl  λυ    ω          μεν      λύωμεν\n" +
-            "2pl  λυ    η          τε       λύητε\n" +
-            "3pl  λυ    ω          νσι      λύωσι(ν)\n"),
-
-        new GrammarRule("Subjunctive middle/passive present paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "1sg  λυ    ω          μαι      λυωμαι\n" +
-            "2sg  λυ    η          σαι      λυῃ\n" +
-            "3sg  λυ    η          ται      λυηται\n" +
-            "1pl  λυ    ω          μεθα     λυωμεθα\n" +
-            "2pl  λυ    η          σθε      λυησθε\n" +
-            "3pl  λυ    ω          νται     λυωνται\n"),
-
-        new GrammarRule("Subjunctive active aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "1sg  λυ    σ         ω                   λύσω\n" +
-            "2sg  λυ    σ         η          ς        λύσῃς\n" +
-            "3sg  λυ    σ         η          ι        λύσῃ\n" +
-            "1pl  λυ    σ         ω          μεν      λύσωμεν\n" +
-            "2pl  λυ    σ         η          τε       λύσητε\n" +
-            "3pl  λυ    σ         ω          νσι      λύσωσι(ν)\n"),
-
-        new GrammarRule("Subjunctive middle aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "1sg  λυ    σ         ω          μαι      λυσωμαι\n" +
-            "2sg  λυ    σ         η          σαι      λυσῃ\n" +
-            "3sg  λυ    σ         η          ται      λυσηται\n" +
-            "1pl  λυ    σ         ω          μεθα     λυσωμεθα\n" +
-            "2pl  λυ    σ         η          σθε      λυσησθε\n" +
-            "3pl  λυ    σ         ω          νται     λυσωνται\n"),
-
-        new GrammarRule("Subjunctive passive aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "1sg  λυ    θ         ω                   λύθω\n" +
-            "2sg  λυ    θ         η          ς        λύθῃς\n" +
-            "3sg  λυ    θ         η          ι        λύθῃ\n" +
-            "1pl  λυ    θ         ω          μεν      λύθωμεν\n" +
-            "2pl  λυ    θ         η          τε       λύθητε\n" +
-            "3pl  λυ    θ         ω          νσι      λύθωσι(ν)\n"),
 
         new GrammarRule("Uses of the subjunctive:\n" +
             "* Possibility or probability.\n" +
@@ -765,46 +515,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Present imperative conveys a continuous command or a general precept (always ...)\n" +
             "While aorist applies to a particular situation."),
 
-        new GrammarRule("Imperative active present paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "2sg  λυ    ε          ?        λῦε\n" +
-            "3sg  λυ    ε          τω       λυέτω\n" +
-            "2pl  λυ    ε          τε       λύετε\n" +
-            "3pl  λυ    ε          τωσαν    λυέτωσαν\n"),
-
-        new GrammarRule("Imperative middle/passive present paradigm:\n" +
-            "     Stem  connecting personal form\n" +
-            "           vowel      ending\n" +
-            "2sg  λυ    ε          ?        λύου\n" +
-            "3sg  λυ    ε          σθω      λυέσθω\n" +
-            "2pl  λυ    ε          σθε      λύεσθε\n" +
-            "3pl  λυ    ε          σθωσαν   λυέσθωσαν\n"),
-
-        new GrammarRule("Imperative active aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "2sg  λυ    σ         α                   λῦσον\n" +
-            "3sg  λυ    σ         α          τω       λυσάτω\n" +
-            "2pl  λυ    σ         α          τε       λύσατε\n" +
-            "3pl  λυ    σ         α          τωσαν    λυσάτωσαν\n"),
-
-        new GrammarRule("Imperative middle aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "2sg  λυ    σ         α                   λῦσαι\n" +
-            "3sg  λυ    σ         α          σθω      λυσάσθω\n" +
-            "2pl  λυ    σ         α          σθε      λύσασθε\n" +
-            "3pl  λυ    σ         α          σθωσαν   λυσάσθωσαν\n"),
-
-        new GrammarRule("Imperative passive aorist paradigm:\n" +
-            "     Stem  tense     connecting personal form\n" +
-            "           formative vowel      ending\n" +
-            "2sg  λυ    θ         η                   λύθητι\n" +
-            "3sg  λυ    θ         η          τω       λυθήτω\n" +
-            "2pl  λυ    θ         η          τε       λύθητε\n" +
-            "3pl  λυ    θ         ω          τωσαν    λυθήτωσαν\n"),
-
         new GrammarRule("Forms of negation:\n" +
             " * οὐ with future indicative = simple negation\n" +
             "   οὐ μοιχεύσεις you shall not commit adultery\n" +
@@ -834,6 +544,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "    3pl  διδο    ασι        διδόασι(ν)\n" +
             "Athematic verbs rule 4: the stem vowel will often lengthen, shorten, or drop out (e.g. δο to διδωμι)\n" +
             "Athematic verbs rule 5: most use κα as the tense formative in the aorist."),
+        // TODO move to Grammar section
 
         new GrammarRule("Exceptions to a verb uses first aorist or second aorist only:\n" +
             "δίδωμι uses first aorist in indicative and second aorist for other moods\n" +
@@ -875,56 +586,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "    if _you want_ you can make me clean\n"),
 
         new GrammarRule("Optative mood, one further step from reality than subjunctive, the mood of wish or desire."),
-
-        new GrammarRule("Optative active present paradigm:\n" +
-            "     Stem  tense     mood       personal form\n" +
-            "           formative formative  ending\n" +
-            "1sg  λυ              οι         μι       λύοιμι\n" +
-            "2sg  λυ              οι         ς        λύοις\n" +
-            "3sg  λυ              οι         ι        λύοι\n" +
-            "1pl  λυ              οι         μεν      λύοιμεν\n" +
-            "2pl  λυ              οι         τε       λύοιτε\n" +
-            "3pl  λυ              οι         νσι      λύοιεν\n"),
-
-        new GrammarRule("Optative active aorist paradigm:\n" +
-            "     Stem  tense     mood       personal form\n" +
-            "           formative formative  ending\n" +
-            "1sg  λυ    σα        ι          μι       λύσαιμι\n" +
-            "2sg  λυ    σα        ι          ς        λύσαις\n" +
-            "3sg  λυ    σα        ι          ι        λύσαι\n" +
-            "1pl  λυ    σα        ι          μεν      λύσαιμεν\n" +
-            "2pl  λυ    σα        ι          τε       λύσαιτε\n" +
-            "3pl  λυ    σα        ι          νσι      λύσαιεν\n"),
-
-        new GrammarRule("Optative middle/passive present paradigm:\n" +
-            "     Stem  tense     mood       personal form\n" +
-            "           formative formative  ending\n" +
-            "1sg  λυ              οι         μαι      λυοίμην\n" +
-            "2sg  λυ              οι         σαι      λύοιο\n" +
-            "3sg  λυ              οι         ται      λύοιτο\n" +
-            "1pl  λυ              οι         μεθα     λυοίμεθα\n" +
-            "2pl  λυ              οι         σθε      λύοισθε\n" +
-            "3pl  λυ              οι         νται     λύοιντο\n"),
-
-        new GrammarRule("Optative middle aorist paradigm:\n" +
-            "     Stem  tense     mood       personal form\n" +
-            "           formative formative  ending\n" +
-            "1sg  λυ    σα        ι          μαι      λυσαίμην\n" +
-            "2sg  λυ    σα        ι          σαι      λύσαιο\n" +
-            "3sg  λυ    σα        ι          ται      λύσαιτο\n" +
-            "1pl  λυ    σα        ι          μεθα     λυσαίμεθα\n" +
-            "2pl  λυ    σα        ι          σθε      λύσαισθε\n" +
-            "3pl  λυ    σα        ι          νται     λύσαιντο\n"),
-
-        new GrammarRule("Optative passive aorist paradigm:\n" +
-            "     Stem  tense     mood       personal form\n" +
-            "           formative formative  ending\n" +
-            "1sg  λυ    θε        ιη                  λυθείην\n" +
-            "2sg  λυ    θε        ιη         ς        λυθείης\n" +
-            "3sg  λυ    θε        ιη         ι        λυθείη\n" +
-            "1pl  λυ    θε        ιη         μεν      λυθείημεν\n" +
-            "2pl  λυ    θε        ιη         τε       λυθείητε\n" +
-            "3pl  λυ    θε        ιη         νσι      λυθείησαν\n"),
 
         new GrammarRule("The function of the article in Greek is not to make something definite\n" +
             "(note the use of the article with proper names, which are by definition definite).\n" +

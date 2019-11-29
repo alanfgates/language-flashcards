@@ -29,9 +29,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 class CardDeck implements Serializable {
 
@@ -40,73 +42,37 @@ class CardDeck implements Serializable {
   private static int PCT_RETIRED_TO_TRACK = 20;
   private static double ASSUMED_PCT_RETIRED = 0.6;
 
-  private LinkedList<Flashcard> cards;
+  private LinkedList<Word> cards;
   private Map<String, List<GrammarRule>> rules;
   private Deque<Double> percentRetired;
-  private int wordsPerTest;
 
   /**
    * Build the card deck from source, with each word appearing once
    */
   CardDeck() {
-    Map<String, Flashcard> flashcards = new HashMap<>();
     rules = new HashMap<>();
+    cards = new LinkedList<>();
+    Set<String> seen = new HashSet<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      for (Word w : builder.buildWords()) addFlashCard(flashcards, w);
+      for (Word w : builder.buildWords()) {
+        switch (w.getCompetence()) {
+          case ZERO: cards.add(w); // Fall through intentional
+          case WEAK: cards.add(w); // Fall through intentional
+          case OK: cards.add(w); // Fall through intentional
+          case STRONG:
+            cards.add(w);
+            break;
+          default:
+            throw new RuntimeException("Unexpected enum value");
+        }
+      }
       // Have to make a copy of the rules list because Arrays.asList returns an implementation of
       // List that doesn't support remove.
       rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
     }
-    cards = new LinkedList<>(flashcards.values());
     Collections.shuffle(cards);
     percentRetired = new ArrayDeque<>();
-    wordsPerTest = 0;
-    printStatus();
-  }
-
-  /**
-   * Read the card deck from source, but build it with the intent to test numWords each day
-   * @param numWords number of words to test each day
-   */
-  CardDeck(int numWords) {
-    LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
-    rules = new HashMap<>();
-    int totalRules = 0;
-    Map<String, Flashcard> flashcards = new HashMap<>();
-    for (LanguageBuilder builder : builders) {
-      List<GrammarRule> r = builder.buildRules();
-      totalRules += r.size();
-      rules.put(builder.getLanguageName(), new ArrayList<>(r));
-    }
-
-    int targetSize = (int)(totalRules * numWords * ASSUMED_PCT_RETIRED);
-
-    // First, put in every word at least once
-    for (LanguageBuilder builder : builders) {
-      for (Word w : builder.buildGrammarWords()) addFlashCard(flashcards, w);
-      for (Word w : builder.buildVocabWords()) addFlashCard(flashcards, w);
-    }
-
-    // Have to take these out of the flashcards map and put them in the linked list, otherwise
-    // all the words get mapped to the existing flashcards
-    cards = new LinkedList<>(flashcards.values());
-    int lastSize = cards.size();
-    while (cards.size() < targetSize) {
-      flashcards.clear();
-      for (LanguageBuilder builder : builders) {
-        for (Word w : builder.buildVocabWords()) if (w.getNeedsExtra()) addFlashCard(flashcards, w);
-        for (Word w : builder.buildGrammarWords()) if (w.getNeedsExtra()) addFlashCard(flashcards, w);
-      }
-      cards.addAll(flashcards.values());
-      if (cards.size() == lastSize) break; // in case no words are marked as needs extra
-    }
-    if (cards.size() > targetSize) {
-      cards = new LinkedList<>(cards.subList(0, targetSize));
-    }
-    Collections.shuffle(cards);
-    percentRetired = new ArrayDeque<>();
-    wordsPerTest = numWords;
     printStatus();
   }
 
@@ -122,7 +88,6 @@ class CardDeck implements Serializable {
     cards = c.getCards();
     rules = c.getRules();
     percentRetired = c.getCardsRetired();
-    wordsPerTest = c.getWordsPerTest();
   }
 
   void daily() throws IOException {
@@ -131,12 +96,12 @@ class CardDeck implements Serializable {
 
     doGrammarRules(input);
 
-    List<Flashcard> doAgain = new ArrayList<>();
+    List<Word> doAgain = new ArrayList<>();
     int initialSize = cards.size();
     int succeeded = 0;
     int failed = 0;
     for (int i = 0; i < numToTest && !cards.isEmpty(); i++) {
-      Flashcard f = cards.pop();
+      Word f = cards.pop();
       if (f.test(input)) {
         succeeded++;
       } else {
@@ -161,7 +126,7 @@ class CardDeck implements Serializable {
   void storeDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
-    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired, wordsPerTest));
+    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
   }
 
   void findRule(String pattern) throws IOException {
@@ -186,25 +151,17 @@ class CardDeck implements Serializable {
   }
 
   private void doGrammarRules(BufferedReader input) throws IOException {
-    if (wordsPerTest > 0) {
-      // Only do one, pick from whichever has more entries
-      List<GrammarRule> most = Collections.emptyList();
-      String language = null;
-      for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
-        if (e.getValue().size() > most.size()) {
-          language = e.getKey();
-          most = e.getValue();
-        }
+    // Only do one, pick from whichever has more entries
+    List<GrammarRule> most = Collections.emptyList();
+    String language = null;
+    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+      if (e.getValue().size() > most.size()) {
+        language = e.getKey();
+        most = e.getValue();
       }
-      if (language != null) {
-        showOneGrammarRule(input, language, most);
-      }
-    } else {
-      for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
-        if (e.getValue().size() > 0) {
-          showOneGrammarRule(input, e.getKey(), e.getValue());
-        }
-      }
+    }
+    if (language != null) {
+      showOneGrammarRule(input, language, most);
     }
   }
 
@@ -215,27 +172,14 @@ class CardDeck implements Serializable {
     ruleList.remove(0);
   }
 
-  private void addFlashCard(Map<String, Flashcard> flashcards, Word w) {
-    Flashcard f = flashcards.get(w.getOther());
-    if (f == null) {
-      f = new Flashcard(w);
-      flashcards.put(w.getOther(), f);
-    } else {
-      f.addWord(w);
-    }
-  }
-
   private int calculateNumToTest() {
-    if (wordsPerTest > 0) return wordsPerTest;
-
     // Base the number of things to test on the number of rules in the largest grammar's rule set.  This way we have at least one
     // rule each time we test.
-    int maxRules = 1; // avoid div0 errors
-    for (Map.Entry<String, List<GrammarRule>> ruleSet : rules.entrySet()) {
-      if (ruleSet.getValue().size() > maxRules) {
-        maxRules = ruleSet.getValue().size();
-      }
+    double numRules = 0;
+    for (List<GrammarRule> ruleSet : rules.values()) {
+      numRules += ruleSet.size();
     }
+
     double predicted;
     if (percentRetired.size() < 3) {
       System.out.println("Too few historical instances to use, basing on assumed retirement rate of " + (int)(ASSUMED_PCT_RETIRED * 100) + "%");
@@ -245,7 +189,7 @@ class CardDeck implements Serializable {
       for (double d : percentRetired) sum += d;
       predicted = sum / (double)percentRetired.size();
     }
-    int numToTest = (int)((double)cards.size() / (double)maxRules / predicted);
+    int numToTest = (int)((double)cards.size() / numRules / predicted);
 
     if (numToTest > cards.size()) {
       numToTest = cards.size();
@@ -271,26 +215,24 @@ class CardDeck implements Serializable {
   }
 
   static class Container {
-    LinkedList<Flashcard> cards;
+    LinkedList<Word> cards;
     Map<String, List<GrammarRule>> rules;
     Deque<Double> percentRetired;
-    int wordsPerTest;
 
     public Container() {
     }
 
-    Container(LinkedList<Flashcard> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired, int wordsPerTest) {
+    Container(LinkedList<Word> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired) {
       this.cards = cards;
       this.rules = rules;
       this.percentRetired = percentRetired;
-      this.wordsPerTest = wordsPerTest;
     }
 
-    public LinkedList<Flashcard> getCards() {
+    public LinkedList<Word> getCards() {
       return cards;
     }
 
-    public void setCards(LinkedList<Flashcard> cards) {
+    public void setCards(LinkedList<Word> cards) {
       this.cards = cards;
     }
 
@@ -309,14 +251,6 @@ class CardDeck implements Serializable {
     public Container setCardsRetired(Deque<Double> cardsRetired) {
       this.percentRetired = cardsRetired;
       return this;
-    }
-
-    public int getWordsPerTest() {
-      return wordsPerTest;
-    }
-
-    public void setWordsPerTest(int wordsPerTest) {
-      this.wordsPerTest = wordsPerTest;
     }
   }
 }

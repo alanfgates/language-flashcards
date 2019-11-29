@@ -14,138 +14,98 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Word implements Serializable {
-  private static final Map<Class<? extends Enum>, Integer> modifierOrder = new HashMap<>();
+  public enum Competence { STRONG, OK, WEAK, ZERO };
 
-  static {
-    modifierOrder.put(PartOfSpeech.class, 1);
-    modifierOrder.put(VerbRoot.class, 2);
-    modifierOrder.put(Mood.class, 3);
-    modifierOrder.put(Voice.class, 4);
-    modifierOrder.put(Tense.class, 5);
-    modifierOrder.put(Person.class, 6);
-    modifierOrder.put(Gender.class, 7);
-    modifierOrder.put(Declension.class, 8);
-    modifierOrder.put(Number.class, 9);
-    modifierOrder.put(Other.class, 10);
-  }
+  // Flashcards can have more than one word due to homonyms or because one conjugation may represent multiple tenses, moods, etc.
+  private List<WordForm> wordForms;
+  private int needToGetRight;
+  private Competence competence;
+  private String comment;
 
-  private String english;
-  private String other;
-  private Enum[] modifiers;
-  private boolean needsExtra;  // indicates I need extra practice on this one
 
   // For Jackson
   public Word() {
   }
 
-  public Word(String other, String english, Enum... modifiers) {
-    this(other, english, false, modifiers);
+  Word(WordForm word, Competence competence) {
+    this(word, competence, null);
   }
 
-  public Word(String other, String english, boolean needsExtra, Enum... modifiers) {
-    this.english = english;
-    this.other = other;
-    this.modifiers = modifiers;
-    this.needsExtra = needsExtra;
+  Word(WordForm word, Competence competence, String comment) {
+    this.wordForms = new ArrayList<>();
+    wordForms.add(word);
+    needToGetRight = 1;
+    this.competence = competence;
+    this.comment = comment;
   }
 
-  void showFront() {
-    System.out.println(other);
-  }
-
-  final void flipOver() {
-    StringBuilder buf = new StringBuilder(english)
-        .append(" - ");
-    boolean first = true;
-    for (Enum modifier : modifiers) {
-      if (first) first = false;
-      else buf .append(", ");
-      buf.append(modifier.name().toLowerCase().replace('_', ' '));
-    }
-    System.out.println(buf.toString());
-  }
-
-  // Following all for Jackson
-  public String getEnglish() {
-    return english;
-  }
-
-  public Word setEnglish(String english) {
-    this.english = english;
+  Word addForm(WordForm word) {
+    wordForms.add(word);
     return this;
   }
 
-  public String getOther() {
-    return other;
+  boolean test(BufferedReader input) throws IOException {
+    int index = RandomGenerator.get().getRandom(wordForms.size());
+    wordForms.get(index).showFront();
+    input.readLine();
+    wordForms.get(index).flipOver();
+    if (comment != null) System.out.println(comment);
+    if (wordForms.size() > 1) {
+      System.out.println("Other forms of the word:");
+      for (WordForm form : wordForms) form.flipOver();
+    }
+    System.out.println("Success?[y]");
+    String answer = input.readLine();
+    if (answer.length() == 0 || answer.toLowerCase().startsWith("y")) {
+      needToGetRight--;
+      return true;
+    } else {
+      needToGetRight++;
+      return false;
+    }
   }
 
-  public Word setOther(String other) {
-    this.other = other;
+  boolean needToDoAgain() {
+    return needToGetRight > 0;
+  }
+
+  public List<WordForm> getWordForms() {
+    return wordForms;
+  }
+
+  public void setWordForms(List<WordForm> wordForms) {
+    this.wordForms = wordForms;
+  }
+
+  public int getNeedToGetRight() {
+    return needToGetRight;
+  }
+
+  public Word setNeedToGetRight(int needToGetRight) {
+    this.needToGetRight = needToGetRight;
     return this;
   }
 
-  public boolean getNeedsExtra() {
-    return needsExtra;
+  public Competence getCompetence() {
+    return competence;
   }
 
-  public void setNeedsExtra(boolean needsExtra) {
-    this.needsExtra = needsExtra;
+  public void setCompetence(Competence competence) {
+    this.competence = competence;
   }
 
-  // This is nasty and hackish, but if I return a straight Enum[] Jackson balks on the set side because there's no
-  // default constructor for Enum.  I could mash all the modifiers together into one Enum, but I like separating them out.
-  public Map<String, List<String>> getModifiers() {
-    Map<String, List<String>> modStrs = new HashMap<>();
-    for (Enum modifer : modifiers) {
-      List<String> mods = modStrs.computeIfAbsent(modifer.getClass().getSimpleName(), m -> new ArrayList<>());
-      mods.add(modifer.name());
-    }
-    return modStrs;
+  public String getComment() {
+    return comment;
   }
 
-  public void setModifiers(Map<String, List<String>> modStrs) {
-    int size = 0;
-    for (List<String> list : modStrs.values()) size += list.size();
-    this.modifiers = new Enum[size];
-    int i = 0;
-    for (Map.Entry<String, List<String>> e : modStrs.entrySet()) {
-      for (String s : e.getValue()) {
-        if (e.getKey().equals("Declension")) {
-          modifiers[i++] = Declension.valueOf(s);
-        } else if (e.getKey().equals("Gender")) {
-          modifiers[i++] = Gender.valueOf(s);
-        } else if (e.getKey().equals("Mood")) {
-          modifiers[i++] = Mood.valueOf(s);
-        } else if (e.getKey().equals("Number")) {
-          modifiers[i++] = Number.valueOf(s);
-        } else if (e.getKey().equals("Other")) {
-          modifiers[i++] = Other.valueOf(s);
-        } else if (e.getKey().equals("PartOfSpeech")) {
-          modifiers[i++] = PartOfSpeech.valueOf(s);
-        } else if (e.getKey().equals("Person")) {
-          modifiers[i++] = Person.valueOf(s);
-        } else if (e.getKey().equals("Tense")) {
-          modifiers[i++] = Tense.valueOf(s);
-        } else if (e.getKey().equals("VerbRoot")) {
-          modifiers[i++] = VerbRoot.valueOf(s);
-        } else if (e.getKey().equals("Voice")) {
-          modifiers[i++] = Voice.valueOf(s);
-        } else {
-          throw new RuntimeException("Unknown modifier type " + e.getKey());
-        }
-      }
-    }
-
-    Arrays.sort(modifiers, Comparator.comparingInt(o -> modifierOrder.get(o.getClass())));
+  public void setComment(String comment) {
+    this.comment = comment;
   }
-
 }
