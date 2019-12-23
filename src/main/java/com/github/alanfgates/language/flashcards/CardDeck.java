@@ -129,9 +129,10 @@ class CardDeck implements Serializable {
     mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
   }
 
-  void findRule(String pattern) throws IOException {
-    for (List<GrammarRule> grammarRules : rules.values()) {
-      for (GrammarRule rule : grammarRules) {
+  void findRule(String pattern) {
+    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+      System.out.println(e.getKey() + " has " + e.getValue().size() + " rules");
+      for (GrammarRule rule : e.getValue()) {
         if (rule.toString().contains(pattern)) rule.show();
       }
     }

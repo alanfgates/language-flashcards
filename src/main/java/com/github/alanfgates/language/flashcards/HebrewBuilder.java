@@ -76,9 +76,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("תִּקְטֹל", "she will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
             .addForm(new WordForm("נִקְטֹל", "we will kill", QAL, IMPERFECT, FIRST_PERSON, PLURAL))
             .addForm(new WordForm("תִּקְטְלוּ", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקְטֹלְנָה", "you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקְטֹלְנָה", "they will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL)),
+            .addForm(new WordForm("תִּקְטֹלְנָה", "you/they will kill", QAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
 
         // to be - imperfect
         new Word(new WordForm("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR), WEAK, "'to be', imperfect")
@@ -164,9 +163,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
             .addForm(new WordForm("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, PLURAL))
             .addForm(new WordForm("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקָּטַלְנָה", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקָּטַלְנָה", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL)),
+            .addForm(new WordForm("תִּקָּטַלְנָה", "you/they will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
 
         // Niphal Imperative
         new Word(new WordForm("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR), WEAK, "Niphal imperative")
@@ -202,9 +200,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("תְּקַטֵּל", "she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
             .addForm(new WordForm("נְקַטֵּל", "we will slaughter", PIEL, IMPERFECT, FIRST_PERSON, PLURAL))
             .addForm(new WordForm("תְּקַטְּלוּ", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תְּקַטֵּלְנָה", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תְּקַטֵּלְנָה", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL)),
+            .addForm(new WordForm("תְּקַטֵּלְנָה", "you/they will slaughter", PIEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
 
         new Word(new WordForm("קַטֵּל", "slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR), WEAK, "Piel imperative")
             .addForm(new WordForm("קַטְּלִי", "slaughter!", PIEL, IMPERATIVE, FEMININE, SINGULAR))
@@ -219,7 +216,65 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("מְקַטְּלִים", "slaughtering", PIEL, PARTICIPLE, MASCULINE, PLURAL))
             .addForm(new WordForm("מְקַטְּלוֹת", "slaughtering", PIEL, PARTICIPLE, FEMININE, PLURAL)),
 
-    //----------------------------------------------------------------------------------------
+        new Word(new WordForm("קֻטַּלְתִּי", "I was slaughtered", PUAL, PERFECT, FIRST_PERSON, SINGULAR), ZERO, "Pual perfect")
+            .addForm(new WordForm("קֻטַּלְתָּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("קֻטַּלְתְּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("קֻטַּל", "he was slaughtered", PUAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("קֻטְּלָה", "she was slaughtered", PUAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("קֻטַּלְנוּ", "we were slaughtered", PUAL, PERFECT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("קֻטַּלְתֶּם", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
+            .addForm(new WordForm("קֻטַּלְתֶּן", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("קֻטְּלוּ", "they were slaughtered", PUAL, PERFECT, THIRD_PERSON, PLURAL)),
+
+        new Word(new WordForm("אֲקֻטַּל", "I will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, SINGULAR), ZERO, "Pual imperfect")
+            .addForm(new WordForm("תְּקֻטַּל", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("תְּקֻטְּלִי", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("יְקֻטַּל", "he will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("תְּקֻטַּל", "she will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("נְקֻטַּל", "we will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("תְּקֻטְּלוּ", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
+            .addForm(new WordForm("תְּקֻטַּלְנָה", "you/they will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("יְקֻטְּלוּ", "they will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+
+        new Word(new WordForm("מְקֻטָּל", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Pual participle")
+            .addForm(new WordForm("מְקֻטֶּלֶת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, SINGULAR))
+            .addForm(new WordForm("מְקֻטָּלִים", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, PLURAL))
+            .addForm(new WordForm("מְקֻטָּלוֹת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, PLURAL)),
+
+        new Word(new WordForm("הִקְטַלְתִּי", "I caused to kill", HIPHIL, PERFECT, FIRST_PERSON, SINGULAR), WEAK, "Hiphil perfect")
+            .addForm(new WordForm("הִקְטַלְתָּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("הִקְטַלְתְּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("הִקְטִיל", "he caused to kill", HIPHIL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("הִקְטִילָה", "she caused to kill", HIPHIL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("הִקְטַלְְנוּ", "we caused to kill", HIPHIL, PERFECT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("הִקְטַלְתֶּם", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
+            .addForm(new WordForm("הִקְטַלְתֶּן", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("הִקְטִילוּ", "they caused to kill", HIPHIL, PERFECT, THIRD_PERSON, PLURAL)),
+
+        new Word(new WordForm("אַקְטִיל", "I will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR), WEAK, "Hiphil imperfect")
+            .addForm(new WordForm("תַּקְטִיל", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("תַּקְטִילִי", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("יַקְטִיל", "he will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
+            .addForm(new WordForm("תַּקְטִיל", "she will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
+            .addForm(new WordForm("נַקְטִיל", "we will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("תַּקְטִילוּ", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
+            .addForm(new WordForm("תַּקְטֵלְנָה", "you/they will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("תַּקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+
+        new Word(new WordForm("הַקְטֵל", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR), ZERO, "Hiphil imperative")
+            .addForm(new WordForm("הַקְטִילִי", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, SINGULAR))
+            .addForm(new WordForm("הַקְטִילוּ", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, PLURAL))
+            .addForm(new WordForm("הַקְטֵלְנָה", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, PLURAL)),
+
+        new Word(new WordForm("הַקְטִיל", "to cause to kill", HIPHIL, INFINITIVE_CONSTRUCT), ZERO),
+        new Word(new WordForm("הַקְטֵל", "to cause to kill", HIPHIL, INFINITIVE_ABSOLUTE), ZERO),
+
+        new Word(new WordForm("מַקְטִיל", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Hiphil participle")
+            .addForm(new WordForm("מַקְטֶלֶת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, SINGULAR))
+            .addForm(new WordForm("מַקְטִילִים", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, PLURAL))
+            .addForm(new WordForm("מַקְטִילוֹת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, PLURAL)),
+
+        //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
         new Word(new WordForm("סוּסִי", "my horse"), WEAK, "Singular pronominal suffixes")
             .addForm(new WordForm("סוּסְךָ", "your horse", MASCULINE, SINGULAR))
@@ -254,15 +309,15 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("קְטָלְכֶם", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, PLURAL))
             .addForm(new WordForm("קְטָלְכֶן", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, PLURAL))
             .addForm(new WordForm("קְטָלָם", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטָלָן", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, PLURAL))
+            .addForm(new WordForm("קְטָלָן", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, PLURAL)),
 
-            .addForm(new WordForm("קְטַלְתִּיו", "I killed him", QAL, PERFECT, FIRST_PERSON, SINGULAR))
+          new Word((new WordForm("קְטַלְתִּיו", "I killed him", QAL, PERFECT, FIRST_PERSON, SINGULAR)), WEAK)
             .addForm(new WordForm("קְטַלְתָּהוּ", "you killed him", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
             .addForm(new WordForm("קְטָלַתְהוּ", "she killed him", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
             .addForm(new WordForm("קְטַלְנוּהוּ", "we killed him", QAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL))
+            .addForm(new WordForm("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL)),
 
-            .addForm(new WordForm("יִקְטְלֵנִי", "he will kill me", PRONOMINAL_SUFFIX, FIRST_PERSON, MASCULINE, SINGULAR))
+          new Word((new WordForm("יִקְטְלֵנִי", "he will kill me", PRONOMINAL_SUFFIX, FIRST_PERSON, MASCULINE, SINGULAR)), WEAK)
             .addForm(new WordForm("יִקְטָלְךָ", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR))
             .addForm(new WordForm("יִקְטְלֵך", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR))
             .addForm(new WordForm("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR))
@@ -389,7 +444,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("דְּבָרִים", "words, speeches", MASCULINE, PLURAL))
             .addForm(new WordForm("דִּבֶּר",	"he spoke", PIEL)), // 1135
         // 1310
-        new Word(new WordForm("רָאָה", "he saw"), WEAK),
+        new Word(new WordForm("רָאָה", "he saw"), WEAK)
+            .addForm(new WordForm("מַרְאֶה", "sight, appearance", MASCULINE)),  // 103
         // 1263
         new Word(new WordForm("עַד", "until, as far as"), OK),
         // 1210
@@ -829,8 +885,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("שֶׁמֶן", "fat, oil", MASCULINE), OK)
             .addForm(new WordForm("שְמָנִים", "fats, oils", MASCULINE, PLURAL)),
         // 191
-        new Word(new WordForm("חֲצֵרִים", "settlements, villages", MASCULINE), WEAK)
-            .addForm(new WordForm("חֲצֵרִים", "settlements, villages", MASCULINE, PLURAL)),
+        new Word(new WordForm("חֲצֵרִים", "settlements, villages", MASCULINE, SINGULAR, PLURAL), WEAK),
         // 190
         new Word(new WordForm("בְּהֵמָה", "beast", FEMININE), OK)
             .addForm(new WordForm("בְּהֵמוֹת", "beasts", FEMININE, PLURAL)),
@@ -890,8 +945,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 165
         new Word(new WordForm("דָּרַשׁ", "he sought, inquired, investigated, required, demanded"), ZERO),
         // 164
-        new Word(new WordForm("חוּץ", "outside, street", NOUN, MASCULINE), ZERO)
-            .addForm(new WordForm("פֶּתַח", "opening, doorway, entrace", MASCULINE))
+        new Word(new WordForm("חוּץ", "outside, street", NOUN, MASCULINE), ZERO),
+        new Word(new WordForm("פֶּתַח", "opening, doorway, entrace", MASCULINE), WEAK)
             .addForm(new WordForm("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL))
             .addForm(new WordForm("פָּתַח", "he opened")), // 136
         // 162
@@ -1028,7 +1083,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("בִּלְתּי", "not (with infinitive), except"), ZERO)
             .addForm(new WordForm("לְבִלְתּי", "not (with infinitive)")),
         new Word(new WordForm("חָשַׁב", "he thought, accounted"), ZERO),
-        new Word(new WordForm(" עַמּוּד", "pillar, column", MASCULINE), ZERO),
+        new Word(new WordForm("עַמּוּד", "pillar, column", MASCULINE), ZERO),
         // 111
         new Word(new WordForm("שַׁבָּת", "Sabbath, rest period", MASCULINE), OK),
         new Word(new WordForm("הוֹדוּ", "he praised, he confessed - " + "יָדָה" + " - he cast", HIPHIL), ZERO),
@@ -1053,12 +1108,13 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("חֻקָּח", "statute, ordinance", MASCULINE), ZERO)
             .addForm(new WordForm("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL)),
         new Word(new WordForm("רָץ", "he ran רוּץ"), ZERO),
-
         // 102
-        new Word(new WordForm("כָּפַר", "he covered, atoned, made atonement"), ZERO),
-
+        new Word(new WordForm("כִּפֶּר", "he covered over, pacified, made propitiation", PIEL), ZERO),
+        new Word(new WordForm("שָׁכַח", "he forgot"), ZERO),
         // 101
         new Word(new WordForm("רָעָב", "famine, hunger", MASCULINE), ZERO),
+        new Word(new WordForm("רֹחַב", "breadth, width", MASCULINE), ZERO),
+        new Word(new WordForm("מעַט", "a little, a few"), ZERO),
 
         // 100
         new Word(new WordForm("יַעַן", "on account of"), ZERO)/*,
@@ -1112,9 +1168,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
   public List<GrammarRule> buildRules() {
     return Arrays.asList(
         new GrammarRule("Alphabet:\n" +
-            "אבגדהוזחטיכלמנסעפצקרשׂשׁת"),
-
-        new GrammarRule("Gutturals:  אעהח"),
+            "אבגדהוזחטיכלמנסעפצקרשׂשׁת" + "\n" +
+            "Gutturals:  אעהח"),
 
         new GrammarRule("Vowels:\n" +
             "              a     e      i    o     u\n " +
@@ -1122,18 +1177,15 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "short   " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
             "reduced " + " ֲ      ֱ           ֳ       "),
 
-        new GrammarRule("Rules of Syllabification p18\n" +
+        new GrammarRule("Rules of Syllabification\n" +
           "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
-          "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant."),
-
-        new GrammarRule("Hebrew words are usually accented on the last syllable."),
-
-        new GrammarRule("Syllable classification p19\n" +
-          "  1. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic\n" +
-          "  2. Pretonic: syllable immediately before the tonic; first syllable above\n" +
-          "  3. Propretonic: syllable before the pretonic"),
-
-        new GrammarRule("Dagesh Forte letters count as two consonants for the purpose of syllabification."),
+          "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant.\n" +
+          "  Hebrew words are usually accented on the last syllable.\n" +
+          "  3. Syllable classification\n" +
+          "     a. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic\n" +
+          "     b. Pretonic: syllable immediately before the tonic; first syllable above\n" +
+          "     c. Propretonic: syllable before the pretonic\n" +
+          "  4. Dagesh Forte letters count as two consonants for the purpose of syllabification."),
 
         new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters\n" +
           " * The Dagesh is Forte if it is preceded by a vowel. אַתּה\n" +
@@ -1147,8 +1199,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
           "   * A Schewa is silent when immediately preceded by a short vowel. פַּרְעֹה\n" +
           "   * The first of two contiguous Schewas is silent. מִשְׁפְּטֵי\n" +
           "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n" +
-          "The Vocal Schewa will always occur in an open syllable.\n" +
-          "The Silent Schewa will always come at the end of a closed syllable.\n" +
           " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
           "   * Initial Schewa is always vocal. בְּרָכָה\n" +
           "   * The second of two contiguous Schewas is vocal.\n" +
@@ -1240,9 +1290,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   * and before a vocal Shewa נְעָרִים becomes וּנְעָרִים\n" +
             " * Before Hateph vowel, conjuction takes the corresponding short vowel אֲנָשׁים becomes וַאֲנָשׁים  \n" +
             "   * Exception, does not apply to אלהים\n" +
-            " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן "),
-
-        new GrammarRule("Additional uses of definite article:\n" +
+            " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן\n" +
             " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day\n" +
             " * Vocative, indicating direct address: ויקרא לאמר המלך - And he called saying the[O] king\n" +
             " * Superlative with an adjective: הטוב והישׁר - the good[best] and the upright[most upgright]\n" +
@@ -1263,12 +1311,12 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   * When the first letter is a gutteral, the hireq under מ lengthens to a tsere\n" +
             "     e.g. מֵאִישׁ\n" +
             "   * When the first letter is ח there is not usually vowel lengthening.\n" +
-            "Special uses of מִן (beyond \"from\")\n" +
-            " * Comparative use: applied to adjective to make it comparative\n" +
-            "   e.g. טוֹבָה חָכְמָה מִזָּהָב wisdom is better than gold\n" +
-            " * Superlative use: used with כּל to express superlative\n" +
-            "   e.g. עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה the most clever living thing of the field\n" +
-            " * Partitive use: Can mean a part of something: מֵהָאֲנָשִׁים some of the men"),
+            " * Special uses beyond \"from\"\n" +
+            "   * Comparative use: applied to adjective to make it comparative\n" +
+            "     e.g. טוֹבָה חָכְמָה מִזָּהָב wisdom is better than gold\n" +
+            "   * Superlative use: used with כּל to express superlative\n" +
+            "     e.g. עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה the most clever living thing of the field\n" +
+            "   * Partitive use: Can mean a part of something: מֵהָאֲנָשִׁים some of the men"),
 
         new GrammarRule("Compound prepositions:\n" +
             " * preposition plus פנה (face)\n" +
@@ -1324,28 +1372,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * The preposition כְּ changes to כָּמוֹ in singular and first person plural when\n" +
             "   taking a pronominal suffix.\n" +
             " * The preposition מִן changes to מִמֶ in singular and first person plural when\n" +
-            "   taking a pronominal suffix.\n" +
-            ""),
-
-        // TODO add a real word here
-        new GrammarRule("Type 1 pronominal suffixes (singular nouns, some prepositions, direct\n" +
-            "object marker, most verbs):\n" +
-            "        singular           plural\n" +
-            "1p      " +  " נוּ               נִי / ִי   " + "\n" +
-            "2pm     " + " כֶם               ךָ       " + "\n" +
-            "2pf     " + " כֶן               ך:      " + "\n" +
-            "3pm     " + "חֶם / ָם          הוּ / וֹ   " + "\n" +
-            "3pf     " + "הֶן / ָן           הָ / ָהּ   " + "\n"),
-
-        // TODO use a real word here to show how masculine plural nouns loose their endings
-        new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
-            "all cases just to give letter to put vowel under).  All type 2 have י in them.\n" +
-            "        singular           plural\n" +
-            "1p" +  " ֵינוּ                 ַי    " + "\n" +
-            "2pm" + " ֵיכֶם                ֶיךָ    " + "\n" +
-            "2pf" + " ֵיכֶן                ַיִך:   " + "\n" +
-            "3pm" + " ֵיהֶם                ָיו    " + "\n" +
-            "3pf" + " ֵיהֶן                 ֶיהָ   " + "\n"),
+            "   taking a pronominal suffix.\n"),
 
         new GrammarRule("Distinguishing similar words with pronominal suffixes:\n" +
             " * Direct object marker and אֵת/אֶת are the same alone but differ with pronominal\n" +
@@ -1365,7 +1392,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   gender of the adjective can sometimes determine which noun it modifies, sometimes\n" +
             "   you must use context.  This applies to demonstratives adjectives (this, that) as well.\n" +
             " * Substantive adjectives functioning as a noun can form part of the construct chain.\n" +
-            " * Inseparable prepositions can be attached to construct nouns."),
+            " * Inseparable prepositions can be attached to construct nouns." +
+            " * A noun can be made superlative by placing it in a construct chain\n" +
+            "   with the construct noun singular and the absolute noun plural and definite:\n" +
+            "   e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
 
         new GrammarRule("Spelling in construct state:\n" +
             " * A construct noun surrenders its primary accent.  A construct chain is pronounced\n" +
@@ -1380,10 +1410,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * Feminine singular nouns ending in" + " ָה " + "changes to" + " ַת " + "\n" +
             "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
             " * Some monosyllabic nouns add a hireq yod in the contruct state."),
-
-        new GrammarRule("A noun can be made superlative by placing it in a construct chain\n" +
-            "with the construct noun singular and the absolute noun plural and definite:\n" +
-            "e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
 
         new GrammarRule("Cardinal numbers:\n" +
             " * 'one' acts as an adjective and comes after the noun and agrees in gender and\n" +
@@ -1478,45 +1504,17 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "2fp   " + "קְטַלְתֶּן    שְׁמַעְתֶּן    מְצָאתֶן    בְּנִיתֶן" + "\n" +
             "3p      " + "קָטְלוּ     שׁמְעוּ     מָצְאוּ     בָּנוּ  "),
 
-        new GrammarRule("Qal perfect weak verbs, doubly weak:\n" +
-            "      Doubly\n" +
-            "      Weak           Strong\n" +
-            "1s    " + "קָטַלְתִּי           עָלִיתִיִ" + "\n" +
-            "2ms    " + "קָטַלְתָּ            עָלִיתָ" + "\n" +
-            "2fs    " + "קָטַלְתְּ            עָלִית" + "\n" +
-            "3ms     " + "קָטַל             עָלָה" + "\n" +
-            "3fs    " + "קָטְדָה            עָלְתָה" + "\n" +
-            "1p    " + "קָטַלְנוּ           עָלִינוּּּ" + "\n" +
-            "2mp   " + "קְטַלְתֶּם           עֲלִיתֶם" + "\n" +
-            "2fp   " + "קְטַלְתֶּן           עֲלִיתֶן" + "\n" +
-            "3p      " + "קָטְלוּ            עָלוּּ"),
-
-        new GrammarRule("Qal perfect weak verbs, geminate:\n" +
-            "      Geminate    Strong\n" +
-            "1s    " + "קָטַלְתִּי        סַבּוֹתִי" + "\n" +
-            "2ms    " + "קָטַלְתָּ         סַבּוֹתָ" + "\n" +
-            "2fs    " + "קָטַלְתְּ         סַבּוֹת" + "\n" +
-            "3ms     " + "קָטַל          סָבַב" + "\n" +
-            "3fs    " + "קָטְדָה         סָבְבָה" + "\n" +
-            "1p    " + "קָטַלְנוּ        סַבּוֹנוּ" + "\n" +
-            "2mp   " + "קְטַלְתֶּם        סַבּוֹתֶם" + "\n" +
-            "2fp   " + "קְטַלְתֶּן        סַבּוֹתֶן" + "\n" +
-            "3p     " + "קָטְלוּ         סָבְבוּ" + ""),
-
-        new GrammarRule("Qal perfect weak verbs, biconsonental:\n" +
-            "      Biconsonental  Strong\n" +
-            "1s    " + "קָטַלְתִּי            קַמְתִּי" + "\n" +
-            "2ms    " + "קָטַלְתָּ             קַמְתָּ" + "\n" +
-            "2fs    " + "קָטַלְתְּ             קַמְתְּ" + "\n" +
-            "3ms     " + "קָטַל              קָם" + "\n" +
-            "3fs    " + "קָטְדָה             קָמָה" + "\n" +
-            "1p    " + "קָטַלְנוּ            קַמְנוּ" + "\n" +
-            "2mp   " + "קְטַלְתֶּם            קַמְתֶּם" + "\n" +
-            "2fp   " + "קְטַלְתֶּן            קַמְתֶּן" + "\n" +
-            "3p     " + "קָטְלוּ             קָמוּ" + ""),
-
-        new GrammarRule("All stative verbs (regardless of stem vowel) use patach as the stem vowel rather than holem in imperfect:\n" +
-            "יִכְבַּד <– כָּבֵד    יִקְטַן  <– קָטֹן"),
+        new GrammarRule("Qal perfect weak verbs, doubly weak, geminate, and biconsonental:\n" +
+            "      Doubly Weak     Geminate     Biconsonental   Strong\n" +
+            "1s    " + "קָטַלְתִּי            קַמְתִּי        סַבּוֹתִי           עָלִיתִיִ" + "\n" +
+            "2ms    " + "קָטַלְתָּ             קַמְתָּ         סַבּוֹתָ            עָלִיתָ" + "\n" +
+            "2fs    " + "קָטַלְתְּ             קַמְתְּ         סַבּוֹת            עָלִית" + "\n" +
+            "3ms     " + "קָטַל              קָם          סָבַב             עָלָה" + "\n" +
+            "3fs    " + "קָטְדָה             קָמָה         סָבְבָה            עָלְתָה" + "\n" +
+            "1p    " + "קָטַלְנוּ            קַמְנוּ        סַבּוֹנוּ           עָלִינוּּּ" + "\n" +
+            "2mp   " + "קְטַלְתֶּם            קַמְתֶּם        סַבּוֹתֶם           עֲלִיתֶם" + "\n" +
+            "2fp   " + "קְטַלְתֶּן            קַמְתֶּן        סַבּוֹתֶן           עֲלִיתֶן" + "\n" +
+            "3p      " + "קָטְלוּ             קָמוּ         סָבְבוּ            עָלוּּ"),
 
         new GrammarRule("Qal imperfect weak verbs, II-Guttural:\n" +
             "       II-Guttural      Strong\n" +
@@ -1662,10 +1660,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Imperative sometimes followed by נָא, which can be translated \"please\""),
 
-        new GrammarRule("Imperative forms of III-ה, geminate, I-נ (sometimes), and I-י still loose the first consonant in imperative\n" +
-            "Other weak forms keep the first consonant\n" +
-            "Biconsonantal, aka II-י/ה, retain the second vowel letter."),
-
         new GrammarRule("Cohortative expresses a wish, request, or command, but only in first person.  Often \n" +
             "translated with 'let me' or 'may we'.\n" +
             "When verb with imperfect first person form begins a clause, it is generally cohortative."),
@@ -1687,9 +1681,14 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "2fs imperative with pronominal suffix very rare and 2fp not attested\n" +
             "קָטְלֵ הוּ" + "      kill him!\n"),
 
-        new GrammarRule("Infinitives (both construct and absolute) are verbal nouns"),
+        new GrammarRule("Infinitives (both construct and absolute) are verbal nouns\n" +
+            "Infinitive is negated with לְבִלְתּי "),
 
-        new GrammarRule("Infinitive construct functions much like the English infinitive"),
+
+        new GrammarRule("Infinitive construct functions much like the English infinitive\n" +
+            "Infinitive constructs can take pronominal suffixes.  These suffixes can serve as the\n" +
+            "'subject' or object of the infinitive, e.g. קָטְלוֹ can mean 'his killing' or 'killing him'"),
+
 
         new GrammarRule("Infinitive construct form:\n" +
             "Strong            " + "קְטֹל" + "\n" +
@@ -1703,11 +1702,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "III-" + "שְׁמֹעַ             ע" + "\n" +
             "III-" + "שְׁלֹחַ             ח" + "\n" +
             "III-" + "בְּנוֹת            ה" + "    From בנה"),
-
-        new GrammarRule("Infinitive constructs can take pronominal suffixes.  These suffixes can serve as the\n" +
-            "'subject' or object of the infinitive, e.g. קָטְלוֹ can mean 'his killing' or 'killing him'"),
-
-        new GrammarRule("Infinitive is negated with לְבִלְתּי "),
 
         new GrammarRule("Infinitive construct\n" +
             "* with ל \n" +
@@ -1780,15 +1774,14 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "* can express non-existence: אֵין לוֹ בֵּן he had no son\n" +
             "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD"),
 
-        new GrammarRule("Participles can be attributive, meaning they can directly modify a noun:\n" +
+        new GrammarRule("Participles can be " +
+            " * attributive, meaning they can directly modify a noun:\n    " +
             "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
-            "the people dwelling [or who dwell] in the land"),
-
-        new GrammarRule("Participles can be\n" +
-            "* predicative, meaning they assert or predicate something about the noun:\n  " +
-            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "And the mountain was burning with fire\n" +
-            "* substantive, meaning they act as a noun.  In this situation they can take a direct object, be part of a\n" +
-            "  construct chain, or take a pronominal suffix.\n  " +
+            " the people dwelling [or who dwell] in the land\n" +
+            " * predicative, meaning they assert or predicate something about the noun:\n    " +
+            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "  And the mountain was burning with fire\n" +
+            " * substantive, meaning they act as a noun.  In this situation they can take a direct object, be part of a\n" +
+            "   construct chain, or take a pronominal suffix.\n    " +
             "הַיּוֹשֶׁבֶת בַּגַּנִּים " + "the one who dwells in the gardens"),
 
         new GrammarRule("Qal passive participle:\n" +
@@ -1888,7 +1881,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "III-" + "נִצּוֹל                                                     נ" + "\n" +
             "III-" + "נוֹשָׁב                      הִוָּשֵׁב       הִוָּשֵׁב        יִוָּשֵׁב       נוֹשַׁב       י"),
 
-        // Jumping ahead, I'll backfill all the weak forms over time
         new GrammarRule("Meaning of the Piel steam:\n" +
             "  * intensive - can intensify the meaning of the qal stem\n" +
             "  * factitive - turns an intransitive verb transitive\n" +
@@ -1911,9 +1903,29 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "doubling\n" +
             "II-Gutteral    " + "מְבָרֵך        בָּרֵך          בָּרֵך         בָּרֵך         יְבָרֵך       בֵּרֵך" + "\n" +
             "compensatory\n" +
-            "lengthening")
+            "lengthening"),
 
-        // TODO continue ch 28 p329
+        new GrammarRule("Pual steam is passive counterpart of Piel, indicates intensive action in passive voice"),
+
+        new GrammarRule("Pual weak verbs:\n" +
+            "           Perfect  Imperfect  Participle\n" +
+            "Strong         " + "מְקֻטָּל         יְקֻטַּל       קֻטַּל" + "\n" +
+            "III-" + "מְמֻצָּא        יְמֻצָּא       מֻצָא          א" + "\n" +
+            "III-" + "מְגֻלֶּה        יְגֻלֶּה       גֻּלָּה          ה" + "\n" +
+            "II-Gutteral    " + "מְנֻחָם        יְנֻחַם       נֻחַם" + "\n" +
+            "virtual\n" +
+            "doubling\n" +
+            "II-Gutteral    " + "מְבֹרָך        יְבֹרַך       בֹּרַך" + "\n" +
+            "compensatory\n" +
+            "lengthening"),
+
+        new GrammarRule("Hipil stem, most common derived stem.  Meaning can be:\n" +
+            "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king\n" +
+            "* simple action: more common in verbs where qal form is not attested in OT\n" +
+            "* declarative: the subject declares a certain condition:  רָשַׁע he was guily הִרְשִׁיע he declared someone guilty\n" +
+            "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great")
+
+        // TODO continue ch 31 p355
         );
   }
 }

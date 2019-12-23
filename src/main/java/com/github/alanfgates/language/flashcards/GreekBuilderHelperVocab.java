@@ -227,13 +227,15 @@ class GreekBuilderHelperVocab {
         // 699
         new Word(new WordForm("πρός", "to, towards", ACCUSATIVE), WEAK),
         // 669
-        new Word(new WordForm("*γεν",	"to become, to be", ROOT), OK)
+        new Word(new WordForm("*γεν",	"to become, to be", ROOT), WEAK)
             .addForm(new WordForm("γίνομαι",	"I become, I am ", PRESENT, DEPONENT))
             .addForm(new WordForm("γενήσομαι", "I will become ", FUTURE, DEPONENT))
             .addForm(new WordForm("ἐγένομην", "I became ", AORIST, DEPONENT))
             .addForm(new WordForm("γέγονα", "I have become ", SECOND_PERFECT))
             .addForm(new WordForm("γεγένημαι", "I have been made, caused to happen ", MIDDLE, PASSIVE, PERFECT))
-            .addForm(new WordForm("ἐγενήθην", "I happened, became ", PASSIVE, AORIST)),
+            .addForm(new WordForm("ἐγενήθην", "I happened, became ", PASSIVE, AORIST))
+            .addForm(new WordForm("γενεά", "genus, generation, age", FEMININE))
+            .addForm(new WordForm("γενεᾶς", "genus, generation, age", FEMININE, GENITIVE)),
         // 668
         new Word(new WordForm("διά", "on account of", ACCUSATIVE), OK)
             .addForm(new WordForm("διά", "through", GENITIVE)),
@@ -251,30 +253,16 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἦλθον", "I came/went", SECOND_AORIST))
             .addForm(new WordForm("ἐλήλυθα", "I have come/gone ", SECOND_PERFECT)),
         // 579
-        new Word(new WordForm("τίς", "who? what?", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
-            .addForm(new WordForm("τίνος", "who? what?", MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τίνι", "who? what?", MASCULINE, DATIVE, SINGULAR))
-            .addForm(new WordForm("τίνα", "who? what?", MASCULINE, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τίς", "who? what?", FEMININE, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("τίνος", "who? what?", FEMININE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τίνι", "who? what?", FEMININE, DATIVE, SINGULAR))
-            .addForm(new WordForm("τίνα", "who? what?", FEMININE, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τί", "who? what?", NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("τίνος", "who? what?", NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τίνι", "who? what?", NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("τί", "who? what?", NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τίνες", "who? what?", MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τίνων", "who? what?", MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("τίσι", "who? what?", MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("τίνας", "who? what?", MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("τίνες", "who? what?", FEMININE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τίνων", "who? what?", FEMININE, GENITIVE, PLURAL))
-            .addForm(new WordForm("τίσι", "who? what?", FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("τίνας", "who? what?", FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("τίνα", "who? what?", NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τίνων", "who? what?", NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("τίσι", "who? what?", NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("τίνα", "who? what?", NEUTER, ACCUSATIVE, PLURAL)),
+        new Word(new WordForm("τίς", "who? what?", MASCULINE, FEMININE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("τίνος", "who? what?", MASCULINE, FEMININE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τίνι", "who? what?", MASCULINE, FEMININE, NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("τίνα", "who? what?", MASCULINE, FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τί", "who? what?", NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τίνες", "who? what?", MASCULINE, FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τίνων", "who? what?", MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("τίσι", "who? what?", MASCULINE, FEMININE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("τίνας", "who? what?", MASCULINE, FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τίνα", "who? what?", NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
         // 572
         new Word(new WordForm("*ποιε", "to do, to make", ROOT), STRONG)
             .addForm(new WordForm("ποιω", "I do, I make ", PRESENT))
@@ -286,30 +274,16 @@ class GreekBuilderHelperVocab {
         new Word(new WordForm("ἄνθρωπος", "human being", MASCULINE), STRONG)
             .addForm(new WordForm("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE)),
         // 538
-        new Word(new WordForm("τις", "someone something", MASCULINE, NOMINATIVE, SINGULAR), STRONG)
-            .addForm(new WordForm("τινος", "someone something", MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τινα", "someone something", MASCULINE, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τινι", "someone something", MASCULINE, DATIVE, SINGULAR))
-            .addForm(new WordForm("τις", "someone something", FEMININE, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("τινος", "someone something", FEMININE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τινι", "someone something", FEMININE, DATIVE, SINGULAR))
-            .addForm(new WordForm("τινα", "someone something", FEMININE, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τι", "someone something", NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("τινος", "someone something", NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("τινι", "someone something", NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("τι", "someone something", NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("τινες", "someone something", MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τινων", "someone something", MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("τισι", "someone something", MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("τινας", "someone something", MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("τινες", "someone something", FEMININE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τινων", "someone something", FEMININE, GENITIVE, PLURAL))
-            .addForm(new WordForm("τισι", "someone something", FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("τινας", "someone something", FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("τινα", "someone something", NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("τινων", "someone something", NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("τισι", "someone something", NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("τινα", "someone something", NEUTER, ACCUSATIVE, PLURAL)),
+        new Word(new WordForm("τις", "someone something", MASCULINE, FEMININE, NOMINATIVE, SINGULAR), STRONG)
+            .addForm(new WordForm("τινος", "someone something", MASCULINE, FEMININE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("τινι", "someone something", MASCULINE, FEMININE, NEUTER, DATIVE, SINGULAR))
+            .addForm(new WordForm("τινα", "someone something", MASCULINE, FEMININE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τι", "someone something", NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("τινες", "someone something", MASCULINE, FEMININE, NOMINATIVE, PLURAL))
+            .addForm(new WordForm("τινων", "someone something", MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("τισι", "someone something", MASCULINE, FEMININE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("τινας", "someone something", MASCULINE, FEMININE, ACCUSATIVE, PLURAL))
+            .addForm(new WordForm("τινα", "someone something", NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
         // 531
         new Word(new WordForm("Χριστός", "Christ", MASCULINE), STRONG)
             .addForm(new WordForm("Χριστοῦ", "Christ", MASCULINE, GENITIVE)),
@@ -1279,7 +1253,11 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἐπέγνωκα", "I have understood, recognized ἐπιγινώσκω", PERFECT))
             .addForm(new WordForm("ἐπεγινώσθην", "I was understood, recognized ἐπιγινώσκω", PASSIVE, AORIST)),
         new Word(new WordForm("κατοικῶ", "I dwell, settle, inhabit κατοικέω", PRESENT), ZERO)
-            .addForm(new WordForm("κατῷκησα", "I dwelt, settled, inhabited κατοικέω", AORIST))
+            .addForm(new WordForm("κατῷκησα", "I dwelt, settled, inhabited κατοικέω", AORIST)),
+        // 43
+        new Word(new WordForm("σπέρμα", "seed, descendant", NEUTER), OK)
+            .addForm(new WordForm("σπέρματος", "seed, descendant", NEUTER, GENITIVE))
+        // Haven't done verbs yet
 
 
     );
