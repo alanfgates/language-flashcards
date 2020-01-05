@@ -345,10 +345,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 15632
         new Word(new WordForm("בְּ", "in, at, with"), STRONG),
         // 10970
-        new Word(new WordForm("אֶת–", "definite direct object marker"), STRONG)
-            .addForm(new WordForm("אֵת", "definite direct object marker"))
-            .addForm(new WordForm("אֵת", "with")) // 898
-            .addForm(new WordForm("אֶת–", "with")),
+        new Word(new WordForm("אֶת–", "definite direct object marker OR with"), WEAK)
+            .addForm(new WordForm("אֵת", "definite direct object marker OR with"))
+            .addForm(new WordForm("אֹתַי", "direct object marker with pronominal suffix 'me', NOT with")) // 898
+            .addForm(new WordForm("אִתִּי", "with me, NOT direct object marker")),
         // 7586
         new Word(new WordForm("מִן", "from"), STRONG),
         // 5778
@@ -370,26 +370,23 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("בֶּן", "son of", MASCULINE, CONSTRUCT))
             .addForm(new WordForm("בָּנִים", "sons", MASCULINE, PLURAL)),
         // 4795
-        new Word(new WordForm("אֲנִי", "I, myself", NOMINATIVE), WEAK)
+        new Word(new WordForm("אֲנִי", "I, myself", NOMINATIVE), OK)
             .addForm(new WordForm("אָנֹכִי", "I, myself", NOMINATIVE))
-            .addForm(new WordForm("אֲנַחְנוּ", "we", NOMINATIVE))
-            .addForm(new WordForm("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR))
+            .addForm(new WordForm("אֲנַחְנוּ", "we", NOMINATIVE)),
+
+        new Word(new WordForm("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR), WEAK)
             .addForm(new WordForm("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR))
             .addForm(new WordForm("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL))
-            .addForm(new WordForm("הוּא", "he", NOMINATIVE))
-            .addForm(new WordForm("הוּא", "that", MASCULINE))
-            .addForm(new WordForm("הִיא", "she", NOMINATIVE))
-            .addForm(new WordForm("הִיא", "that", FEMININE))
-            .addForm(new WordForm("הִוא", "she", NOMINATIVE))
-            .addForm(new WordForm("הֵם", "they", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵם", "those", MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵמָּה", "they", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵמָּה", "those", MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵן", "they", NOMINATIVE, FEMININE, PLURAL))
-            .addForm(new WordForm("הֵנָּה", "they", NOMINATIVE, FEMININE, PLURAL))
-            .addForm(new WordForm("הֵן", "those", FEMININE, PLURAL))
-            .addForm(new WordForm("הֵנָּה", "those", FEMININE, PLURAL)),
+            .addForm(new WordForm("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL)),
+
+        new Word(new WordForm("הוּא", "he, that", NOMINATIVE), WEAK)
+            .addForm(new WordForm("הִיא", "she, that", NOMINATIVE))
+            .addForm(new WordForm("הִוא", "she, that", NOMINATIVE))
+            .addForm(new WordForm("הֵם", "they, those", NOMINATIVE, MASCULINE, PLURAL))
+            .addForm(new WordForm("הֵמָּה", "they, those", NOMINATIVE, MASCULINE, PLURAL))
+            .addForm(new WordForm("הֵן", "they, those", NOMINATIVE, FEMININE, PLURAL))
+            .addForm(new WordForm("הֵנָּה", "they, those", NOMINATIVE, FEMININE, PLURAL)),
+
         // 4487
         new Word(new WordForm("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"), STRONG),
         new Word(new WordForm("כִּי–אִם", "but, except"), ZERO),
@@ -1071,8 +1068,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE), ZERO),
         new Word(new WordForm("שָׂרַף", "he completely burned, destroyed"), ZERO),
         // 115
-        new Word(new WordForm("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַל", PIEL), ZERO)
-            .addForm(new WordForm("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַל", HIPHIL)),
+        new Word(new WordForm("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַר", PIEL), ZERO)
+            .addForm(new WordForm("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַר", HIPHIL)),
         // 114
         new Word(new WordForm("בָּכָה", "he wept (in grief or joy)"), ZERO),
         new Word(new WordForm("מִגְרָשׁ", "common land, open land, pasture", MASCULINE), ZERO),
@@ -1086,7 +1083,13 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("עַמּוּד", "pillar, column", MASCULINE), ZERO),
         // 111
         new Word(new WordForm("שַׁבָּת", "Sabbath, rest period", MASCULINE), OK),
-        new Word(new WordForm("הוֹדוּ", "he praised, he confessed - " + "יָדָה" + " - he cast", HIPHIL), ZERO),
+        new Word(new WordForm("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL), ZERO)
+            .addForm(new WordForm("הוֹדִינוּ", "we praised, gave thanks", HIPHIL, PERFECT, FIRST_PERSON, PLURAL))
+            .addForm(new WordForm("אוֹדֶה", "I will praise, give thanks", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR))
+            .addForm(new WordForm("יוֹדוּ", "they will praise, give thanks", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL))
+            .addForm(new WordForm("הוֹדוּ", "praise!, give thanks!", HIPHIL, IMPERATIVE, MASCULINE, PLURAL))
+            .addForm(new WordForm("הוֹדוֹת", "to praise, give thanks", HIPHIL, INFINITIVE_CONSTRUCT))
+            .addForm(new WordForm("מוֹדֶה", "praising, giving thanks", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR)),
         // 110
         new Word(new WordForm("עָפָר", "dry earth, dust", MASCULINE), ZERO),
         // 109
@@ -1923,9 +1926,22 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king\n" +
             "* simple action: more common in verbs where qal form is not attested in OT\n" +
             "* declarative: the subject declares a certain condition:  רָשַׁע he was guily הִרְשִׁיע he declared someone guilty\n" +
-            "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great")
+            "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great"),
 
-        // TODO continue ch 31 p355
+        new GrammarRule("Hiphil weak verbs:\n" +
+            "                      Perfect                           Imperative   Infinitive   Infinitive\n" +
+            "             Perfect  msc 2 sng  Imperfect  Imperative  fem sng      Construct    Absolute    Participle\n" +
+            "Strong         " + "מַקְטִיל       הַקְטֵל         הַקְטִיל        הַקְטִילי      הַקְטֵל        יַקְטִיל      הִקְטַלְתָּ      הִקְטִיל"+ "\n" +
+            "I-Gutteral     " + "מַעֲמִיד       הַעֲמֵד         הַעֲמִיד        הַעֲמִידי      הַעֲמֵד        יַעֲמִיד      הֶעֱמַדְתָּ      הֶעֱמִיד"+ "\n" +
+            "III-" + "מַשְׁלִיחַ       הַשְׁלֵחַ         הַשְׁלִיחַ        הַשְׁלִיחִי      חַשְׁלַח        יַשְׁלִיחַ      הִשְׁלַחְתָּ      הִשְׁלִיחַ        ע/ח" + "\n" +
+            "III-" + "מַמְצִיא       הַמְצֵא         הַמְצִיא        הַמְצִיאִי      הַמְצֵא        יַמְצִיא      הִמְצֵאתָ      הִמְצִיא          א" + "\n" +
+            "III-" + "מַגְלֶה        הַגְלֵה         הַגְלוֹת        *           הַגְלֵה        יַגְלֶה       הִגְלִיתָ      הִגְלָה           ה" + "\n" +
+            "I-" + "מַצִּיל        הַצֵּל          הַצִּיל         הַצִּילִי       הַצֵּל         יַצִּיל       הִצַּלְתָּ       הִצִּיל             נ" + "\n" +
+            "I-" + "מוֹשִׁיב       הוֹשֵׁב         הוֹשִׁיב        הוֹשִׁיבִי      הוֹשֵׁב        יוֹשִׁיב      הוֹשַׁבְתָּ      הוֹשִׁיב            י" + "\n" +
+            "Biconsonental   " + "מֵקִים        הָקֵם          הָקִים         הָקִימִי       הָקֵם         יָקִים       הֲקִימוֹתָ     הֵקִים" + "\n" +
+            "* No example given for III-ה imperative feminine singular, I don't know why.")
+
+        // TODO continue ch 32 p368
         );
   }
 }

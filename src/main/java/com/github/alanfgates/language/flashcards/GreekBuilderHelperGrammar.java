@@ -112,7 +112,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λύονται", "they loosen themselves/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
         // Athematic indicative middle present
-        new Word(new WordForm("δίδομαι", "I give myself/am given - stem διδο", ATHEMATIC, INDICATIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR), WEAK, "athematic indicative middle/passive present"),
+        new Word(new WordForm("δίδομαι", "I give myself/am given - stem διδο", ATHEMATIC, ATHEMATIC, INDICATIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR), WEAK, "athematic indicative middle/passive present"),
+        // TODO add full conjugation
 
         // Indicative Middle Future
         new Word(new WordForm("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, SINGULAR), OK, "indicative middle future")
@@ -219,7 +220,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λάβωσιν", "they might receive", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic subjunctive active second aorist
-        new Word(new WordForm("δῶ", "I might give - stem δω", SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive active second aorist"),
+        new Word(new WordForm("δῶ", "I might give - stem δω", ATHEMATIC, SUBJUNCTIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive active second aorist"),
+        // TODO add full conjugation
 
         // Subjunctive middle present
         new Word(new WordForm("λύωμαι", "I might be loosening myself/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR), OK, "subjunctive middle/passive present")
@@ -230,7 +232,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λύωνται", "they might be loosening themselves/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
         // Athematic subjunctive middle present
-        new Word(new WordForm("διδῶμαι", "I might be giving myself/be given - stem διδω", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive middle/passive present"),
+        new Word(new WordForm("διδῶμαι", "I might be giving myself/be given - stem διδω", ATHEMATIC, SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive middle/passive present"),
+        // TODO add full conjugation
 
         // Subjunctive middle aorist
         new Word(new WordForm("λύσωμαι", "I might loosen myself", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR), OK, "subjunctive middle aorist")
@@ -249,7 +252,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("γένωνται", "they might become", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic subjunctive middle second aorist
-        new Word(new WordForm("δῶμαι", "I might give myself - stem δω", SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive middle second aorist"),
+        new Word(new WordForm("δῶμαι", "I might give myself - stem δω", ATHEMATIC, SUBJUNCTIVE, MIDDLE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive middle second aorist"),
+        // TODO add full conjugation
 
         // Subjunctive passive aorist
         new Word(new WordForm("λυθῶ", "I might be loosened", SUBJUNCTIVE, PASSIVE, AORIST, FIRST_PERSON, SINGULAR), OK, "subjunctive passive aorist")
@@ -270,7 +274,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("γραφῶσιν", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic subjunctive passive second aorist
-        new Word(new WordForm("δοθῶ", "I might be given - stem δο", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive passive second aorist"),
+        new Word(new WordForm("δοθῶ", "I might be given - stem δο", ATHEMATIC, SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR), WEAK, "athematic subjunctive passive second aorist"),
+        // TODO add full conjugation
 
         // Imperative active present
         new Word(new WordForm("λῦε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR), WEAK, "imperative active present")
@@ -294,7 +299,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λαβέτωσαν", "let them take!", IMPERATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic imperative active second aorist
-        new Word(new WordForm("δότε", "give! - stem δο", IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative active second aorist"),
+        new Word(new WordForm("δότε", "give! - stem δο", ATHEMATIC, IMPERATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative active second aorist"),
+        // TODO add full conjugation
 
         // Imperative middle present
         new Word(new WordForm("λύου", "keep loosing yourself/being loosened!", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR), WEAK, "imperative middle/passive present")
@@ -303,7 +309,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λυέσθωσαν", "let them keep loosing themselves!/being loosened", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
         // Athematic imperative middle present
-        new Word(new WordForm("δίδοσθε", "keep giving yourselves!/being given - stem διδο", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL), WEAK, "athematic imperative middle/passive present"),
+        new Word(new WordForm("δίδοσθε", "keep giving yourselves!/being given - stem διδο", ATHEMATIC, IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL), WEAK, "athematic imperative middle/passive present"),
+        // TODO add full conjugation
 
         // Imperative middle aorist
         new Word(new WordForm("λῦσαι", "loose yourself!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR), WEAK, "imperative middle aorist")
@@ -318,7 +325,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("γενέσθωσαν", "let them become!", IMPERATIVE, MIDDLE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic imperative middle second aorist
-        new Word(new WordForm("δόσθε", "give yourselves! - stem δο", IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative middle second aorist"),
+        new Word(new WordForm("δόσθε", "give yourselves! - stem δο", ATHEMATIC, IMPERATIVE, MIDDLE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative middle second aorist"),
+        // TODO add full conjugation
 
         // Imperative passive aorist
         new Word(new WordForm("λύθητι", "be loosed!", IMPERATIVE, PASSIVE, AORIST, SECOND_PERSON, SINGULAR), WEAK, "imperative passive aorist")
@@ -333,7 +341,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("γραφήτωσαν", "let them be written!", IMPERATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL)),
 
         // Athematic imperative passive second aorist
-        new Word(new WordForm("δόθητε", "be given! - stem δο", IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative passive second aorist"),
+        new Word(new WordForm("δόθητε", "be given! - stem δο", ATHEMATIC, IMPERATIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL), WEAK, "athematic imperative passive second aorist"),
+        // TODO add full conjugation
 
         // Infinitive active
         new Word(new WordForm("λύειν", "to continually loosen", INFINITIVE, ACTIVE, PRESENT), WEAK, "infinitive active")
@@ -342,8 +351,9 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λελυκέναι", "to have loosened", INFINITIVE, ACTIVE, PERFECT)),
 
         // Athematic infinitive active
-        new Word(new WordForm("διδόναι", "to keep giving - stem διδο", INFINITIVE, ACTIVE, PRESENT), WEAK, "athematic infinitive active")
-            .addForm(new WordForm("δοῦναι", "to give - stem δο", INFINITIVE, ACTIVE, SECOND_AORIST)),
+        new Word(new WordForm("διδόναι", "to keep giving - stem διδο", ATHEMATIC, INFINITIVE, ACTIVE, PRESENT), WEAK, "athematic infinitive active")
+            .addForm(new WordForm("δοῦναι", "to give - stem δο", ATHEMATIC, INFINITIVE, ACTIVE, SECOND_AORIST)),
+        // TODO add full conjugation
 
         // Infinitive middle
         new Word(new WordForm("λύεσθαι", "to continually loosen oneself", INFINITIVE, MIDDLE, PRESENT), WEAK, "infinitive middle")
@@ -352,8 +362,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λελύσθαι", "to have loosened oneself", INFINITIVE, MIDDLE, PERFECT)),
 
         // Athematic infinitive middle
-        new Word(new WordForm("δίδοσθαι", "to keep giving oneself - stem διδο", INFINITIVE, MIDDLE, PRESENT), WEAK, "athematic infinitive middle")
-            .addForm(new WordForm("δόσθαι", "to give oneself - stem δο", INFINITIVE, MIDDLE, SECOND_AORIST)),
+        new Word(new WordForm("δίδοσθαι", "to keep giving oneself - stem διδο", ATHEMATIC, INFINITIVE, MIDDLE, PRESENT), WEAK, "athematic infinitive middle")
+            .addForm(new WordForm("δόσθαι", "to give oneself - stem δο", ATHEMATIC, INFINITIVE, MIDDLE, SECOND_AORIST)),
 
         // Infinitive passive
         new Word(new WordForm("λύεσθαι", "to continually have been loosened", INFINITIVE, PASSIVE, PRESENT), WEAK, "infinitive passive")
@@ -362,8 +372,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λελῦσθαι", "to have been loosened", INFINITIVE, PASSIVE, PERFECT)),
 
         // Athematic infinitive passive
-        new Word(new WordForm("δίδοσθαι", "to keep being given - stem διδο", INFINITIVE, PASSIVE, PRESENT), WEAK, "athematic infinitive passive")
-            .addForm(new WordForm("δοθῆναι", "to be given - stem δο", INFINITIVE, PASSIVE, SECOND_AORIST)),
+        new Word(new WordForm("δίδοσθαι", "to keep being given - stem διδο", ATHEMATIC, INFINITIVE, PASSIVE, PRESENT), WEAK, "athematic infinitive passive")
+            .addForm(new WordForm("δοθῆναι", "to be given - stem δο", ATHEMATIC, INFINITIVE, PASSIVE, SECOND_AORIST)),
 
         // Participle active present
         new Word(new WordForm("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle active present")
@@ -514,7 +524,8 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("λυόμενα", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL)),
 
         // Athematic participle middle present
-        new Word(new WordForm("διδόμενος", "giving oneself/being given - stem διδο", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle middle/passive present"),
+        new Word(new WordForm("διδόμενος", "giving oneself/being given - stem διδο", ATHEMATIC, PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle middle/passive present"),
+        // TODO add full conjugation
 
         // Participle middle aorist
         new Word(new WordForm("λυσάμενος", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle middle aorist")
@@ -621,7 +632,8 @@ class GreekBuilderHelperGrammar {
         // No verb occurring 50 or more times in the NT has 2nd passive participle
 
         // Athematic participle passive second aorist
-        new Word(new WordForm("δοθείς", "being given - stem δο", PARTICIPLE, PASSIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle passive second aorist"),
+        new Word(new WordForm("δοθείς", "being given - stem δο", ATHEMATIC, PARTICIPLE, PASSIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle passive second aorist"),
+        // TODO add full conjugation
 
 
         // Optative Active Present

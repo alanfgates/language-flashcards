@@ -1004,11 +1004,11 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἤνεγκα", "I carried, bore, produced φέρω ", AORIST))
             .addForm(new WordForm("ἐνήνοχα", "I have carried, bore, produced φέρω ", PERFECT))
             .addForm(new WordForm("ἠνέχθην", "I was carried, born, produced φέρω ", PASSIVE, AORIST)),
-        new Word(new WordForm("ἀπολύω", "I release + *λυ", PRESENT), WEAK)
-            .addForm(new WordForm("ἀπολύσω", "I will release ἀπολύω + *λυ", FUTURE))
-            .addForm(new WordForm("ἀπέλυσα", "I released ἀπολύω + *λυ", AORIST))
-            .addForm(new WordForm("ἀπολέλυμαι", "I have been released ἀπολύω + *λυ", MIDDLE, PASSIVE, PERFECT))
-            .addForm(new WordForm("ἀπελύθην", "I was released ἀπολύω + *λυ", PASSIVE, AORIST)),
+        new Word(new WordForm("ἀπολύω", "I release απο + *λυ", PRESENT), WEAK)
+            .addForm(new WordForm("ἀπολύσω", "I will release ἀπολύω απο + *λυ", FUTURE))
+            .addForm(new WordForm("ἀπέλυσα", "I released ἀπολύω απο + *λυ", AORIST))
+            .addForm(new WordForm("ἀπολέλυμαι", "I have been released ἀπολύω απο + *λυ", MIDDLE, PASSIVE, PERFECT))
+            .addForm(new WordForm("ἀπελύθην", "I was released ἀπολύω απο + *λυ", PASSIVE, AORIST)),
         new Word(new WordForm("καπρός", "fruit, crop, result", MASCULINE), ZERO)
             .addForm(new WordForm("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE)),
         new Word(new WordForm("*φη", "to say ", ROOT), WEAK)
