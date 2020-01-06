@@ -1122,9 +1122,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Vowels:\n" +
             "              a     e      i    o     u\n " +
-            "long    " + " ָ      ֵ           ֹ      " + "\n" +
-            "short   " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
-            "reduced " + " ֲ      ֱ           ֳ       "),
+            "long         " + " ָ      ֵ           ֹ      " + "\n" +
+            "short        " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
+            "reduced      " + " ֲ      ֱ           ֳ       "),
 
         new GrammarRule("Rules of Syllabification p18\n" +
           "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
@@ -1345,11 +1345,11 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Type 2 pronominal suffixes (plural nouns, some prepositions) (א in\n" +
             "all cases just to give letter to put vowel under).  All type 2 have י in them.\n" +
             "        singular           plural\n" +
-            "1p" +  " ֵינוּ                 ַי    " + "\n" +
-            "2pm" + " ֵיכֶם                ֶיךָ    " + "\n" +
-            "2pf" + " ֵיכֶן                ַיִך:   " + "\n" +
-            "3pm" + " ֵיהֶם                ָיו    " + "\n" +
-            "3pf" + " ֵיהֶן                 ֶיהָ   " + "\n"),
+            "1p      " +  " ֵינוּ                 ַי    " + "\n" +
+            "2pm     " + " ֵיכֶם                ֶיךָ    " + "\n" +
+            "2pf     " + " ֵיכֶן                ַיִך:   " + "\n" +
+            "3pm     " + " ֵיהֶם                ָיו    " + "\n" +
+            "3pf     " + " ֵיהֶן                 ֶיהָ   " + "\n"),
 
         new GrammarRule("Distinguishing similar words with pronominal suffixes:\n" +
             " * Direct object marker and אֵת/אֶת are the same alone but differ with pronominal\n" +
@@ -1638,22 +1638,23 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " Pual:         423\n" +
             " Hophal:       396\n"),
 
-        new GrammarRule("Uses of הִנֵּה\n:" +
+        new GrammarRule("Uses of הִנֵּה:\n" +
             "* add emphasis or stress (demonstrative interjection):\n" +
-            "x הִנֵּה עֵיר יְהוָה אֶל–יְרֵאָיו Behold, the eye of the LORD is upon those who fear him\n" +
+            "  הִנֵּה עֵיר יְהוָה אֶל–יְרֵאָיו" + "  Behold, the eye of the LORD is upon those who fear him\n" +
             "* indicate the immediate presence of someone or something with an emphasis on\n" +
             "  immediacy or urgency:\n" +
-            "x וַהִנֵּה אָנֹכִי עִמָּך And he said, behold, here I am\n" +
+            "  וַהִנֵּה אָנֹכִי עִמָּך" + "  And he said, behold, here I am\n" +
             "* may be used to introduce a fact or situation on which a subsequent statement is based\n" +
             "  Behold, I have listened to all that you have said to me and [therefore] I have\n" +
             "  caused a king to reign over you"),
 
+        // TODO check the thing about the dagesh, I'm not sure that's right
         new GrammarRule("Waw consecutive is וַ with dagesh in following letter.\n" +
             "Imperfect can still take non-consecutive waw to mean simple and, וְ\n" +
             "Waw consecutive imperfect chain can start with וַיְהִי (and it was) meaning 'after'\n" +
             "Waw consecutive perfect chain can start with וְהִיִה 'and it will be'\n" +
             "Waw consecutive perfect used after imperative to continue imperative chain\n" +
-            "and should be translated as imperative\n" +
+            "    and should be translated as imperative\n" +
             "Perfect prefixed with waw in chain of perfects NOT waw consecutive"),
 
         new GrammarRule("Qal imperative strong verb:\n" +
@@ -1881,7 +1882,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Indirect object usually marked with לְ or -אֶל"),
 
         new GrammarRule("Verb tense and sentance order:\n" +
-            "* When a perfect verb is describing a completely action it is usually proceeded\n" +
+            "* When a perfect verb is describing a completed action it is usually proceeded\n" +
             "    by a time clause or other explanatory clause.\n" +
             "* A consecutive perfect is normally the first word in its clause.\n" +
             "* A regular imperfect is not normally the first word in the clause.\n" +
