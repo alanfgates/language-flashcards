@@ -14,20 +14,27 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
-abstract class BaseLanguageBuilder implements LanguageBuilder {
+class RandomGenerator {
 
-  @Override
-  public List<Word> buildWords() {
-    return buildAllWords();
+  private static RandomGenerator self = new RandomGenerator();
+
+  private Random rand;
+
+  private RandomGenerator() {
+    rand = new Random();
   }
 
-  private List<Word> buildAllWords() {
-    List<Word> words = new ArrayList<>(buildGrammarWords());
-    words.addAll(buildVocabWords());
-    return words;
+  static RandomGenerator get() {
+    return self;
   }
+
+  int getRandom(int bound) {
+    return rand.nextInt(bound);
+  }
+
+
+
 
 }

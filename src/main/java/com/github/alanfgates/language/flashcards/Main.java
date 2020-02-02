@@ -32,8 +32,6 @@ public class Main {
     options.addOption("G", "grammar-rule", true, "Show a particular grammar rule, for debugging.");
     options.addOption("h", "help", false, "You're looking at it.");
     options.addOption("s", "shuffle", false, "Shuffle the cards.  This puts all of the cards back in the deck");
-    options.addOption("S", "shuffle-with-fixed-size", true, "Shuffle the cards, fixing the daily test size per the provided argument." +
-        "\nThis puts all of the cards back in the deck");
     options.addOption("t", "test", false, "Do daily test");
 
     try {
@@ -47,9 +45,6 @@ public class Main {
         deck.findRule(cli.getOptionValue("G"));
       } else if (cli.hasOption("s")) {
         CardDeck deck = new CardDeck();
-        deck.storeDeck(filename);
-      } else if (cli.hasOption("S")) {
-        CardDeck deck = new CardDeck(Integer.parseInt(cli.getOptionValue("S")));
         deck.storeDeck(filename);
       } else if (cli.hasOption("t")) {
         CardDeck deck = new CardDeck(filename);
