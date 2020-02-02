@@ -894,6 +894,7 @@ class GreekBuilderHelperVocab {
         new Word(new WordForm("*πεμπ", "to send ", ROOT), WEAK)
             .addForm(new WordForm("πέμπω", "I send ", PRESENT))
             .addForm(new WordForm("πέμψω", "I will send ", FUTURE))
+            // TODO Check, I suspect this should be ἔπεμψα instead.
             .addForm(new WordForm("ἕπεμψα", "I sent ", AORIST))
             .addForm(new WordForm("ἐπέμφθην", "I was sent ", PASSIVE, AORIST)),
         new Word(new WordForm("ὑπο + *αγ", "to go away, to draw off ", ROOT), WEAK)
@@ -1009,6 +1010,7 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἀπέλυσα", "I released ἀπολύω απο + *λυ", AORIST))
             .addForm(new WordForm("ἀπολέλυμαι", "I have been released ἀπολύω απο + *λυ", MIDDLE, PASSIVE, PERFECT))
             .addForm(new WordForm("ἀπελύθην", "I was released ἀπολύω απο + *λυ", PASSIVE, AORIST)),
+        // TODO I think this is a typo, I think it should be καρπος
         new Word(new WordForm("καπρός", "fruit, crop, result", MASCULINE), ZERO)
             .addForm(new WordForm("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE)),
         new Word(new WordForm("*φη", "to say ", ROOT), WEAK)
@@ -1182,7 +1184,7 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("παρελήμφθην", "I was taken along, was taken over ", PASSIVE, AORIST)),
         new Word(new WordForm("*φανερο", "to reveal, make known", ROOT), ZERO)
             .addForm(new WordForm("φανερῶ", "I reveal, make known ", PRESENT))
-            .addForm(new WordForm("φανερώσω", "I reveal, make known φανερῶ ", FUTURE))
+            .addForm(new WordForm("φανερώσω", "I will reveal, make known φανερῶ ", FUTURE))
             .addForm(new WordForm("ἐφανέρωσα", "I revealed, made known φανερῶ ", AORIST))
             .addForm(new WordForm("ἐφανερώθην", "I was revealed, made known φανερῶ ", PASSIVE, AORIST))
             .addForm(new WordForm("πεφανέρωμαι", "I have been revealed, made known φανερῶ ", MIDDLE, PASSIVE, PERFECT)),

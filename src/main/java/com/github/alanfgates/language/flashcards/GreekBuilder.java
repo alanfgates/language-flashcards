@@ -198,6 +198,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "the present but not in the aorist.\n" +
             "75% of middle forms in the NT are deponent."),
 
+        // TODO map out all the stem usage, as I'm pretty weak at this.
         new GrammarRule("Future stems:\n" +
             " * Future active has its own stems.\n" +
             " * Future middle uses future active tense stem.\n" +
