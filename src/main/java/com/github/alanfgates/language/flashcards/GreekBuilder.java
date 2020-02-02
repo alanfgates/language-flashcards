@@ -541,6 +541,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* Participles can take objects and prepositional phrases\n" +
             "* Participles are negated with μη"),
 
+        // TODO, cover active vs middle/passive here
         new GrammarRule("Present (continuous) participle breakdown:\n" +
             "Present tense stem + connecting vowel + participle morpheme + case ending\n" +
             "πιστευ             + ο                + ντ                  + ες\n" +
@@ -582,7 +583,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   Wait! Let's see if Elijah comes _to save_ him\n" +
             "8. Result:  can indciate the result of the finite verb:\n" +
             "   ἵνα τους δυο κτισῆ ἐν αὐτῳ εἰς ἕνα καινον ἄνθρωπον _ποιων_ εἰρηνην\n" +
-            "   In order ot create in himself one new man out of the two, _thus making peace_"),
+            "   In order to create in himself one new man out of the two, _thus making peace_"),
 
         new GrammarRule("Participles are often translated as indicatives for several reasons:\n" +
             "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)\n" +
