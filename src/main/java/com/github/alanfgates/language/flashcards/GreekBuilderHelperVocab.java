@@ -1073,7 +1073,7 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἠσπασάμην", "I greeted, saluted ἀσπάζομαι ", AORIST, DEPONENT)),
         new Word(new WordForm("λίθος", "stone", MASCULINE), WEAK)
             .addForm(new WordForm("λίθου", "stone", MASCULINE, GENITIVE)),
-        new Word(new WordForm("διδάσκαλος ου", "teacher", MASCULINE), STRONG)
+        new Word(new WordForm("διδάσκαλος", "teacher", MASCULINE), STRONG)
             .addForm(new WordForm("διδάσκαλου", "teacher", MASCULINE, GENITIVE)),
         new Word(new WordForm("χαρά", "joy", FEMININE), WEAK)
             .addForm(new WordForm("χαρᾶς", "joy", FEMININE, GENITIVE)),
@@ -1225,17 +1225,17 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("κεκάθικα", "I have set, sat, appointed, sat down, settled καθίζω", PERFECT)),
         new Word(new WordForm("σταυρῶ", "I crucify", PRESENT), ZERO)
             .addForm(new WordForm("σταυρώσω", "I will crucify σταυρῶ", FUTURE))
-            .addForm(new WordForm("ἐσταύρωσα", "I crucifid σταυρῶ", AORIST))
-            .addForm(new WordForm("ἐσταυρώθην", "I was crucifid σταυρῶ", PASSIVE, AORIST))
-            .addForm(new WordForm("ἐσταύρωμαι", "I have been crucifid σταυρῶ", MIDDLE, PASSIVE, PERFECT)),
+            .addForm(new WordForm("ἐσταύρωσα", "I crucified σταυρῶ", AORIST))
+            .addForm(new WordForm("ἐσταυρώθην", "I was crucified σταυρῶ", PASSIVE, AORIST))
+            .addForm(new WordForm("ἐσταύρωμαι", "I have been crucified σταυρῶ", MIDDLE, PASSIVE, PERFECT)),
         new Word(new WordForm("μικρός", "small, little", ADJECTIVE, MASCULINE), WEAK)
             .addForm(new WordForm("μικρά", "small, little", ADJECTIVE, FEMININE))
             .addForm(new WordForm("μικρόν", "small, little", ADJECTIVE, NEUTER)),
         // 45
-        new Word(new WordForm("θλῖψις", "trouble that inflicts distress, oppression, afflication, tribulation", FEMININE), ZERO)
-            .addForm(new WordForm("θλῖψεως", "trouble that inflicts distress, oppression, afflication, tribulation", FEMININE, GENITIVE)),
-        new Word(new WordForm("ναός", "temple, diety's palace", MASCULINE), ZERO)
-            .addForm(new WordForm("ναοῦ", "temple, diety's palace", MASCULINE, GENITIVE)),
+        new Word(new WordForm("θλῖψις", "trouble that inflicts distress, oppression, affliction, tribulation", FEMININE), ZERO)
+            .addForm(new WordForm("θλῖψεως", "trouble that inflicts distress, oppression, affliction, tribulation", FEMININE, GENITIVE)),
+        new Word(new WordForm("ναός", "temple, deity's palace", MASCULINE), ZERO)
+            .addForm(new WordForm("ναοῦ", "temple, deity's palace", MASCULINE, GENITIVE)),
         new Word(new WordForm("ἀπαγγέλλω", "I tell, bring news, report", PRESENT), ZERO)
             .addForm(new WordForm("ἀπαγγελῶ", "I will tell, bring news, report ἀπαγγέλλω", FUTURE))
             .addForm(new WordForm("ἀπήγγειλα", "I told, brought news, reported ἀπαγγέλλω", AORIST))
