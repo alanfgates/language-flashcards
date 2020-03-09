@@ -339,7 +339,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Reflexive middle:  the subject does the action and receives it.\n" +
             "   Ἰουδας ... ἀπελθων ἀπηγξατο Judas went out and hung himself"),
 
-        new GrammarRule("Pluperfect describe an action in the past that was completed and who's effect are felt in the past"),
+        new GrammarRule("Pluperfect describes an action in the past that was completed and who's effect are felt in the past"),
 
         new GrammarRule("Participle aspect:\n" +
             "Present participle describes a continuous action\n" +
@@ -494,17 +494,17 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  Literally: for me the live Christ and the die gain, better: for me to live is Christ, and to die is gain\n" +
             "* to complete a finite verb and are called 'complementary infinitive':\n" +
             "  ἤρξαντο λαλειν ἑτερπαις γλωσσαις They begin to speak in tongues\n" +
-            "* δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive" +
+            "* δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive\n" +
             "* to report indirect discourse."),
 
         new GrammarRule("Infinitive and prepositions:\n" +
             "* δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
             "  αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
-            "  But Jesus on his part did not entrust himself to them, _because he knew_ all people" +
+            "  But Jesus on his part did not entrust himself to them, _because he knew_ all people\n" +
             "* εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
             "  παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +
             "  They will deliver him over to the Gentiles _to be mocked and flogged and crucified_\n" +
-            "  Purpose can also be expressed with no preposition and article in genitive" +
+            "  Purpose can also be expressed with no preposition and article in genitive\n" +
             "* προ plus article in genitive plus infinitive means 'before'\n" +
             "* ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
             "* μετα plus article in accusative plus infinitive means 'after'\n" +
@@ -522,7 +522,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * μή plus present imperative = prohibiting a continuous action\n" +
             "   μή μεριμνᾶτε τῇ ψυχῇ ὑμῶν do not worry about your life\n" +
             " * μή plus aorist imperative = prohibiting an undefinted action\n" +
-            "   μή γνώτω ἡ ἀριστερά σου τί ποιεῖ ἡ δεξιά σου Do not let your left hand know what your right hand is doing"+
+            "   μή γνώτω ἡ ἀριστερά σου τί ποιεῖ ἡ δεξιά σου Do not let your left hand know what your right hand is doing\n"+
             " * μή plus aorist subjunctive = stronger form of no than οὐ plus indicative\n" +
             "   μή φοβηθῇς παραλαβεῖν Μαρῖαν τὴν γυναῖκά σου Do not be afraid to take Mary home as your wife\n" +
             " * οὐ μή plus aorist subjunctive = very strong no\n" +
@@ -534,8 +534,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Athematic verb rules\n" +
             "* 1: they reduplicate their initial stem letter to form the present, inserting a ι between.\n" +
             "  (This appears to apply to the imperfect as well, I assume because the imperfect is formed from the present stem)\n" +
-            "* 2: they do not ordinarily use a connecting vowel in the present indicative." +
-            "* 3 they use different personal endings in present active indicative, but the same endings \" +\n" +
+            "* 2: they do not ordinarily use a connecting vowel in the present indicative.\n" +
+            "* 3 they use different personal endings in present active indicative, but the same endings\n" +
             "    everywhere else, e.g.: *δο\n" +
             "    1sg  διδω    μι         δίδωμι\n" +
             "    2sg  διδω    ς          δίδως\n" +
@@ -609,11 +609,38 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   ὁ θεὸς ἀγάπη ἐστίν God is love (focusing not on that God loves, but that he is the very essence of love\n" +
             " * also not used when the substantive is not specific"),
 
-        new GrammarRule("Koine Greek is VSO")
+        new GrammarRule("Koine Greek is VSO"),
+
+        // From Greek Grammar Beyond the Basics, Wallace
+
+        new GrammarRule("Break down of case based words in the the NT:\n" +
+            "               Total    Percentage    Nouns    Pronouns    Articles     Participles    Adjectives\n" +
+            "Nominative    24,618            31     7794        3145        6009            4621          3049\n" +
+            "Genitive      19,613            25     7681        4986        5028             743          1195\n" +
+            "Dative        12,173            15     4375        3565        2944             353           936\n" +
+            "Accusative    23,105            29     8815        5009        5889             957          2435\n" +
+            "Vocative         317            <1      292           0           0               1            24\n"),
+
+        new GrammarRule("Predicate Nominative:\n" +
+            "* Usually used with verbs εἰμί, γίνομαι, ὑπάρχω but can occur with some transitive verbs in passive as well.\n" +
+            "* Most commonly asserts that subject is a subset of predicate nominative:\n" +
+            "  Ὁ λόγος γάρ ὁ τοῦ σταυροῦ τοῖς μὲν ἀπολλθμένοις μωρία ἐστιν\n" +
+            "  'The word of the cross is foolishness' means the this teaching is a foolish teaching, not that all foolish teaching\n" +
+            "  is the word the of cross.\n" +
+            "* Less frequenty it indicates equality: οὗτος ἐστιν ὁ υἱός ὁ ἀγαπητός This is my beloved son\n" +
+            "* Since Greek is not as word order dependent as English, subject does not have to come first.  How to distinguish:\n" +
+            "  In general, the subject is the known entity.  This knownness can be marked in three ways:\n" +
+            "  * The subject will be a pronoun or implied in the verb:  οὗτος ἐστιν ὁ υἱός ὁ ἀγαπητός\n" +
+            "  * The subject will be articular:  πνεῦμα ὁ θεός\n" +
+            "  * The subject will be a proper name.\n" +
+            "  * If both nouns are so marked, pronouns have the greatest priority.  This generally marks an equality condition\n" +
+            "    as opposed to a subset condition.\n" +
+            "* Εἰς plus accusative is occasionally replaces predicate nominative.  This is based on Hebrew usage and is most often\n" +
+            "  found in LXX quotes.")
+
+        // continue on p48 III
 
 
-        // Continue with 36.5 page 334
-        // Figure out what to do with 25.23
 
 
     );

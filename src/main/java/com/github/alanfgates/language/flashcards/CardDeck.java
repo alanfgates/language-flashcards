@@ -29,22 +29,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.function.BiFunction;
 
 class CardDeck implements Serializable {
 
-  private static int MAX_CARDS_TO_TEST = 50;
-  private static int MIN_CARDS_TO_TEST = 10;
-  private static int PCT_RETIRED_TO_TRACK = 20;
-  private static double ASSUMED_PCT_RETIRED = 0.6;
+  private static final int MAX_CARDS_TO_TEST = 50;
+  private static final int MIN_CARDS_TO_TEST = 10;
+  private static final int PCT_RETIRED_TO_TRACK = 20;
+  private static final double ASSUMED_PCT_RETIRED = 0.6;
 
   private LinkedList<Word> cards;
   private Map<String, List<GrammarRule>> rules;
   private Deque<Double> percentRetired;
+  private Map<String, Integer> missCounts;
 
   /**
    * Build the card deck from source, with each word appearing once
@@ -52,7 +52,6 @@ class CardDeck implements Serializable {
   CardDeck() {
     rules = new HashMap<>();
     cards = new LinkedList<>();
-    Set<String> seen = new HashSet<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
       for (Word w : builder.buildWords()) {
@@ -88,6 +87,8 @@ class CardDeck implements Serializable {
     cards = c.getCards();
     rules = c.getRules();
     percentRetired = c.getCardsRetired();
+    missCounts = c.getMissCounts();
+    if (missCounts == null) missCounts = new HashMap<>();
   }
 
   void daily() throws IOException {
@@ -105,6 +106,7 @@ class CardDeck implements Serializable {
       if (f.test(input)) {
         succeeded++;
       } else {
+        missCounts.compute(f.getWordForms().get(0).getOther(), (s, count) -> count == null ? 1 : count + 1);
         failed++;
       }
       if (f.needToDoAgain()) doAgain.add(f);
@@ -126,7 +128,7 @@ class CardDeck implements Serializable {
   void storeDeck(String filename) throws IOException {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
-    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired));
+    mapper.writeValue(new File(filename), new Container(cards, rules, percentRetired, missCounts));
   }
 
   void findRule(String pattern) {
@@ -216,17 +218,19 @@ class CardDeck implements Serializable {
   }
 
   static class Container {
-    LinkedList<Word> cards;
-    Map<String, List<GrammarRule>> rules;
-    Deque<Double> percentRetired;
+    private LinkedList<Word> cards;
+    private Map<String, List<GrammarRule>> rules;
+    private Deque<Double> percentRetired;
+    private Map<String, Integer> missCounts;
 
     public Container() {
     }
 
-    Container(LinkedList<Word> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired) {
+    Container(LinkedList<Word> cards, Map<String, List<GrammarRule>> rules, Deque<Double> percentRetired, Map<String, Integer> missCounts) {
       this.cards = cards;
       this.rules = rules;
       this.percentRetired = percentRetired;
+      this.missCounts = missCounts;
     }
 
     public LinkedList<Word> getCards() {
@@ -251,6 +255,15 @@ class CardDeck implements Serializable {
 
     public Container setCardsRetired(Deque<Double> cardsRetired) {
       this.percentRetired = cardsRetired;
+      return this;
+    }
+
+    public Map<String, Integer> getMissCounts() {
+      return missCounts;
+    }
+
+    public Container setMissCounts(Map<String, Integer> missCounts) {
+      this.missCounts = missCounts;
       return this;
     }
   }

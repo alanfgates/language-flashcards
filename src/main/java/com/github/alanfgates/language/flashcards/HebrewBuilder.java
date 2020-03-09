@@ -1632,7 +1632,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "\n    And he took the _in order to slaughter_ his son\n" +
             "  * can be inceptive (often with היה), meaning it indicates something that is about to happen:\n    " +
             "וַיְהִי הַשֶּׁמֶשׁ ––לָבוֹא––  " + "    The sun was about _to set_\n" +
-            "  * can be used to denote sequence of verbal actions or obligation or necessity.  These are less common." +
+            "  * can be used to denote sequence of verbal actions or obligation or necessity.  These are less common.\n" +
             "* with or without ל\n" +
             "  * can act as a verbal noun:  " + "טוֹב ––לְהֹדוֹת–– לַיהוָה " + "It is good _to praise_ the LORD\n" +
             "  * can be complementary.  That is, it works to explain, clarify, or complement a preceding action or statement.\n" +
@@ -1711,7 +1711,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "                " + "בְּנוּיוֹת         בְּנוּיָה"),
 
         new GrammarRule("Participles, because they behave like nouns, can take a definite article,\n" +
-            "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur construct chain in the construct state."),
+            "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur in a construct chain in the construct state."),
 
         new GrammarRule("Standard Hebrew word order is VSO\n" +
             "In the object section, direct and indirect object can come in any order\n" +
@@ -1775,7 +1775,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים" +
             "\n    Now the serpent was more crafty than any creature that the LORD God had made"),
 
-        new GrammarRule("Adverbs of time: עַתָּה (now), (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
+        new GrammarRule("Adverbs of time: עַתָּה (now), אָז (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
             "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect.\n" +
             "Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside).\n" +
             "Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually).\n" +
