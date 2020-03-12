@@ -377,31 +377,26 @@ class GreekBuilderHelperGrammar {
 
         // Participle active present
         new Word(new WordForm("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle active present")
-            .addForm(new WordForm("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λύοντες", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λύοντων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λύοντων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λύοντας", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λύουσα", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("λύουσα", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR), OK, "participle active present")
             .addForm(new WordForm("λυούσης", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λυούσῃ", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λύουσαν", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λύουσαι", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λυουσῶν", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λυούσαις", "looseninp", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυούσας", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λύοντων", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λυούσας", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Athematic participle active present
         new Word(new WordForm("διδούς", "giving - stem διδο", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle active present")
@@ -410,59 +405,49 @@ class GreekBuilderHelperGrammar {
 
         // Participle active aorist
         new Word(new WordForm("λύσας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle active aorist")
-            .addForm(new WordForm("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λύσαντες", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυσάντων", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λύσασι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("λύσασιν", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λυσάντων", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λύσασι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("λύσασιν", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λύσαντας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λύσασα", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("λύσασα", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR), OK, "participle active aorist")
             .addForm(new WordForm("λυσάσης", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λυσάσῃ", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λύσασαν", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λύσασαι", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λυσασῶν", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λυσάσαις", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυσάσας", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυσάντων", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λύσασι", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λύσασιν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λυσάσας", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Participle active second aorist
         new Word(new WordForm("βαλών", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle active second aorist")
-            .addForm(new WordForm("βαλόντος", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("βαλόντι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("βαλόντος", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("βαλόντι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("βαλόντες", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("βαλόντων", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("βαλόντων", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("βαλόντας", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("βαλοῦσα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("βαλόν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("βαλοῦσα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR), OK, "participle active second aorist")
             .addForm(new WordForm("βαλούσης", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("βαλούσῃ", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("βαλοῦσαν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("βαλοῦσαι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("βαλουσῶν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("βαλούσαις", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("βαλούσας", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("βαλόν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("βαλόντος", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("βαλόντι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("βαλόν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("βαλόντων", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("βαλούσας", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Athematic participle active second aorist
         new Word(new WordForm("δούς", "giving - stem δο", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle active second aorist")
@@ -471,57 +456,48 @@ class GreekBuilderHelperGrammar {
 
         // Participle active perfect
         new Word(new WordForm("λελυκώς", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle active perfect")
-            .addForm(new WordForm("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λελυκότες", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λελυκότας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λελυκυῖα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+    new Word(new WordForm("λελυκυῖα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR), OK, "participle active perfect")
             .addForm(new WordForm("λελυκυῖας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λελυκυῖᾳ", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λελυκυῖαν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λελυκυῖαι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λελυκυιων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λελυκυῖαις", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυκυίας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λελυκυίας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Participle middle present
         new Word(new WordForm("λυόμενος", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle middle/passive present")
-            .addForm(new WordForm("λυομένου", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυομένῳ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λυομένου", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λυομένῳ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυόμενοι", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυομένοις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λυομένοις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λυομένους", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυομένη", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λυόμενα", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+    new Word(new WordForm("λυομένη", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR), OK, "participle middle/passive present")
             .addForm(new WordForm("λυομένης", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λυομένῃ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λυομένην", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυόμεναι", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λυομέναις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυομένας", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λυομένου", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυομένῳ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λυόμενα", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυομένοις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λυόμενα", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λυομένας", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Athematic participle middle present
         new Word(new WordForm("διδόμενος", "giving oneself/being given - stem διδο", ATHEMATIC, PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle middle/passive present"),
@@ -529,29 +505,25 @@ class GreekBuilderHelperGrammar {
 
         // Participle middle aorist
         new Word(new WordForm("λυσάμενος", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle middle aorist")
-            .addForm(new WordForm("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυσάμενοι", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λυσαμένους", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένη", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+    new Word(new WordForm("λυσαμένη", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, SINGULAR), OK, "participle middle aorist")
             .addForm(new WordForm("λυσαμένης", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λυσαμένῃ", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λυσαμένην", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυσάμεναι", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λυσαμέναις", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένας", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λυσαμένας", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // Participle middle second aorist
         new Word(new WordForm("γενόμενος", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle middle second aorist")
@@ -562,72 +534,63 @@ class GreekBuilderHelperGrammar {
             .addForm(new WordForm("γενομένων", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL))
             .addForm(new WordForm("γενομένοις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("γενομένους", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("γενομένη", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("γενομένη", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR), OK, "participle middle second aorist")
             .addForm(new WordForm("γενομένης", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("γενομένῃ", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("γενομένην", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("γενόμεναι", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("γενομέναις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("γενομένας", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("γενομένας", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, ACCUSATIVE, PLURAL)),
 
         // Athematic participle middle second aorist
         new Word(new WordForm("δόμενος", "giving oneself - stem δο", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR), WEAK, "athematic participle middle second aorist"),
 
-        // Participle middle perfect
+        // Participle middle/passive perfect
         new Word(new WordForm("λελυμένος", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle middle/passive perfect")
-            .addForm(new WordForm("λελυμένου", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λελυμένῳ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λελυμένου", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λελυμένῳ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λελυμένοι", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λελυμένοις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λελυμένοις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λελυμένους", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένη", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λελυμένα", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("λελυμένη", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR), OK, "participle middle/passive perfect")
             .addForm(new WordForm("λελυμένης", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λελυμένῃ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λελυμένην", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λελυμέναι", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λελυμέναις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένας", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λελυμένου", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λελυμένῳ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λελυμένα", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λελυμένοις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λελυμένα", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λελυμένας", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL)),
 
         // Participle passive aorist
         new Word(new WordForm("λυθείς", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR), OK, "participle passive aorist")
-            .addForm(new WordForm("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, SINGULAR))
+            .addForm(new WordForm("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR))
+            .addForm(new WordForm("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR))
             .addForm(new WordForm("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυθέντες", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL))
+            .addForm(new WordForm("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL))
+            .addForm(new WordForm("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
+            .addForm(new WordForm("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL))
             .addForm(new WordForm("λυθέντας", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR))
+            .addForm(new WordForm("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR))
+            .addForm(new WordForm("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL)),
+
+        new Word(new WordForm("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR), OK, "participle passive aorist")
             .addForm(new WordForm("λυθείσης", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, SINGULAR))
             .addForm(new WordForm("λυθείσῃ", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, DATIVE, SINGULAR))
             .addForm(new WordForm("λυθεῖσαν", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, SINGULAR))
             .addForm(new WordForm("λυθεῖσαι", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, PLURAL))
             .addForm(new WordForm("λυθεισῶν", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, PLURAL))
             .addForm(new WordForm("λυθείσαις", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, DATIVE, PLURAL))
-            .addForm(new WordForm("λυθείσας", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL))
-            .addForm(new WordForm("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR))
-            .addForm(new WordForm("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, SINGULAR))
-            .addForm(new WordForm("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, SINGULAR))
-            .addForm(new WordForm("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR))
-            .addForm(new WordForm("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, PLURAL))
-            .addForm(new WordForm("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, PLURAL))
-            .addForm(new WordForm("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL))
-            .addForm(new WordForm("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL)),
+            .addForm(new WordForm("λυθείσας", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, ACCUSATIVE, PLURAL)),
+
 
         // No verb occurring 50 or more times in the NT has 2nd passive participle
 

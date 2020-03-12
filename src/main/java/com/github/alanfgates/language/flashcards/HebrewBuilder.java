@@ -423,7 +423,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 50524
         new Word(new WordForm("וְ", "and, but, also, even"), STRONG),
         // 23968
-        new Word(new WordForm("הַ", "the"), STRONG),
+        new Word(new WordForm("הַ", "the"), OK),
         // 20435
         new Word(new WordForm("לְ", "to"), STRONG),
         // 15632
@@ -487,7 +487,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 2579
         new Word(new WordForm("בָּא", "he came, entered - בּוֹא"), OK),
         // 2530
-        new Word(new WordForm("מֶלֶך", "king", MASCULINE), OK)
+        new Word(new WordForm("מֶלֶך", "king", MASCULINE), WEAK)
             .addForm(new WordForm("מְלָכִים", "kings", MASCULINE, PLURAL))
             .addForm(new WordForm("מָלַךּ", "he reigned")) // 350
             .addForm(new WordForm("מַמְלָכָה", "kingdom, reign, dominion", FEMININE)), // 117
@@ -1657,27 +1657,79 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "  of that verb (no example given because I don't understand the examples)"),
 
         // I'm not drunk, this spacing makes it come out right in the display
-        new GrammarRule("Qal weak verbs:\n" +
-            "                                                Infinitive   Infinitive          \n" +
-            "                Perfect  Imperfect  Imperative   Construct     Absolute    Participle\n" +
-            "Strong              " + "קֹטֵל           קָטוֹל         קְטֹל         קְטֹל         יִקְטֹל       קָטַל" + "\n" +
-            "I-" + "אֱמֹר         אֱמֹר         יֶאֱסֹר                           א" + "\n" +
-            "I-" + "יֹאמַר                           א" + "\n" +
-            "I-" + "חֲזַק         יֶחֱזַק                           ח" + "\n" +
-            "I-" + "לֶכֶת         לֵך          יֵלֵך                            י" + "\n" +
-            "I-" + "רַשׁ          יִירַשׁ                           י" + "\n" +
-            "I-" + "נְפֹל         יִפֹּל                            נ" + "\n" +
-            "I-" + "קַח          יִקַּח                            נ" + "\n" +
-            "I-" + "עֲמֹד                     יַעֲמֹד                           ע" + "\n" +
-            "II-Gutteral                   " + "בְּחֹר         בְּחַר         יִבְחַר" + "\n" +
-            "III-" + "מְצֹא         מְצָא         יִמְצָא       מָצָא               א" + "\n" +
-            "III-" + "בֹּנֶה           בָּנֹה          בְּנוֹת        בְּנֵה         יִבְנֶה       בָּנָה               ה" + "\n" +
-            "III-" + "שֹׁמֵעַ                        שְׁלֹחַ         שְׁלַח         יִשְׁלַח                       ע/ח" + "\n" +
-            "Biconsonental        " + "קָם            קוֹם          קוּם         קוּם         יָקוּם       קָם" + "\n" +
-            "Biconsonental                 " + "בוֹא          בוֹא                     יָבוֹא" + "\n" +
-            "Biconsonental                 " + "שׂוֹם          שׂים                     יָשִׂים" + "\n" +
-            "Geminate            " + "סֹב          יָסֹב        סָבַב" + "\n" +
-            "Geminate                       " + "יֵתַם" + "\n" +
+
+        new GrammarRule("Qal weak verbs:  Perfect\n" +
+            "Strong              " + "קָטַל" + "\n" +
+            "III-" + "מָצָא               א" + "\n" +
+            "III-" + "בָּנָה               ה" + "\n" +
+            "Biconsonental        " + "קָם" + "\n" +
+            "Geminate            " + "סָבַב" + "\n" +
+            ""),
+
+        new GrammarRule("Qal weak verbs:  Imperfect\n" +
+            "Strong              " + "יִקְטֹל" + "\n" +
+            "I-" + "יֶאֱסֹר                 א" + "\n" +
+            "I-" + "יֹאמַר                 א" + "\n" +
+            "I-" + "יֶחֱזַק                 ח" + "\n" +
+            "I-" + "יֵלֵך                  י" + "\n" +
+            "I-" + "יִירַשׁ                 י" + "\n" +
+            "I-" + "יִפֹּל                  נ" + "\n" +
+            "I-" + "יִקַּח                  נ" + "\n" +
+            "I-" + "יַעֲמֹד                 ע" + "\n" +
+            "II-Gutteral         " + "יִבְחַר" + "\n" +
+            "III-" + "יִמְצָאָ               א" + "\n" +
+            "III-" + "יִבְנֶה               ה" + "\n" +
+            "III-" + "יִשְׁלַח             ע/ח" + "\n" +
+            "Biconsonental       " + "יָקוּם" + "\n" +
+            "Biconsonental       " + "יָבוֹא" + "\n" +
+            "Biconsonental       " + "יָשִׂים" + "\n" +
+            "Geminate             " + "יָסֹב" + "\n" +
+            "Geminate             " + "יֵתַם" + "\n" +
+            ""),
+
+        new GrammarRule("Qal weak verbs:  Imperative\n" +
+            "Strong              " + "קְטֹל" + "\n" +
+            "I-" + "אֱמֹר                 א" + "\n" +
+            "I-" + "חֲזַק                 ח" + "\n" +
+            "I-" + "לֵך                  י" + "\n" +
+            "I-" + "רַשׁ                  י" + "\n" +
+            "I-" + "נְפֹל                 נ" + "\n" +
+            "I-" + "קַח                  נ" + "\n" +
+            "II-Gutteral         " + "בְּחַר" + "\n" +
+            "III-" + "מְצָא               א" + "\n" +
+            "III-" + "בְּנֵה               ה" + "\n" +
+            "III-" + "שְׁלַח             ע/ח" + "\n" +
+            "Biconsonental       " + "קוּם" + "\n" +
+            "Geminate             " + "סֹב" + "\n" +
+            ""),
+
+        new GrammarRule("Qal weak verbs: Infinitive Construct\n" +
+            "Strong              " + "קְטֹל" + "\n" +
+            "I-" + "אֱמֹר                 א" + "\n" +
+            "I-" + "לֶכֶת                 י" + "\n" +
+            "I-" + "עֲמֹד                 ע" + "\n" +
+            "II-Gutteral         " + "בְּחֹר" + "\n" +
+            "III-" + "מְצֹא               א" + "\n" +
+            "III-" + "בְּנוֹת              ה" + "\n" +
+            "III-" + "שְׁלֹחַ             ע/ח" + "\n" +
+            "Biconsonental       " + "קוּם" + "\n" +
+            "Biconsonental       " + "בוֹא" + "\n" +
+            "Biconsonental       " + "שׂים" + "\n" +
+            ""),
+
+        new GrammarRule("Qal weak verbs:  Infinitive Absolute\n" +
+            "Strong              " + "קָטוֹל" + "\n" +
+            "III-" + "בָּנֹה                ה" + "\n" +
+            "Biconsonental        " + "קוֹם" + "\n" +
+            "Biconsonental        " + "בוֹא" + "\n" +
+            "Biconsonental        " + "שׂוֹם" + "\n" +
+            ""),
+
+        new GrammarRule("Qal weak verbs:  Participle\n" +
+            "Strong              " + "קֹטֵל" + "\n" +
+            "III-" + "בֹּנֶה               ה" + "\n" +
+            "III-" + "שֹׁמֵעַ             ע/ח" + "\n" +
+            "Biconsonental        " + "קָם" + "\n" +
             ""),
 
     new GrammarRule("Participle יֵשׁ:\n" +
@@ -1784,19 +1836,56 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Nipal can be passive, reflexive, reciprocal (they heard each other),\n" +
             "or middle where no agency is specified and the subject and object are the same (the gate opened)"),
 
-        new GrammarRule("Niphal weak verbs:\n" +
-            "                                         Infinitive   Infinitive          \n" +
-            "         Perfect  Imperfect  Imperative  Construct    Absolute    Participle\n" +
-            "Strong      " + "נִקְטָל          נִקְטוֹל       הִקָּטֵל       הִקְּטֵל        יִקָּטֵל       נִקְטַל" + "\n" +
-            "Strong                                                   " + "הִקָּטוֹל" + "\n" +
-            "III-" + "נִמְצָא          נִמְצוֹא       הִמָּצֵא       הִמָּצֵא        יִמָּצֵא       נִמְצָא       א" + "\n" +
-            "III-" + "נִבְנֶה          נִבְנֹה        הִבָּנוֹת      הִבָּנֵה        יִבָּנֶה       נִבְנָה       ה" + "\n" +
-            "III-" + "הִבָּנֵה                                          נִבְנֵיתָ      ה" + "\n" +
-            "II-Gutteral " + "נֶעֱזָב          נַעֳזוֹב       הֵעָזֵב       הֵעָזֵב        יֵעָזֵב       נֶעֱזַב" + "\n" +
-            "II-Gutteral                                              " + "הֵעָזוֹב" + "\n" +
-            "III-" + "נִצָּל           הִנָּצֵל        הִנָּצֵל       הִנָּצֵל        יִנָּצֵל       נִצַּל        נ" + "\n" +
-            "III-" + "נִצּוֹל                                                     נ" + "\n" +
-            "III-" + "נוֹשָׁב                      הִוָּשֵׁב       הִוָּשֵׁב        יִוָּשֵׁב       נוֹשַׁב       י"),
+        new GrammarRule("Niphal weak verbs:  Perfect\n" +
+            "Strong          " + "נִקְטַל" + "\n" +
+            "III-" + "נִמְצָא           א" + "\n" +
+            "III-" + "נִבְנָה           ה" + "\n" +
+            "II-Gutteral     " + "נֶעֱזַב" + "\n" +
+            "III-" + "נִצַּל            נ" + "\n" +
+            "III-" + "נוֹשַׁב           י"),
+
+        new GrammarRule("Niphal weak verbs:  Imperfect \n" +
+            "Strong          " + "יִקָּטֵל" + "\n" +
+            "III-" + "יִמָּצֵא           א" + "\n" +
+            "III-" + "יִבָּנֶה           ה" + "\n" +
+            "II-Gutteral     " + "יֵעָזֵב" + "\n" +
+            "III-" + "יִנָּצֵל           נ" + "\n" +
+            "III-" + "יִוָּשֵׁב           י"),
+
+        new GrammarRule("Niphal weak verbs:  Imperative\n" +
+            "Strong          " + "הִקְּטֵל" + "\n" +
+            "III-" + "הִמָּצֵא           א" + "\n" +
+            "III-" + "הִבָּנֵה           ה" + "\n" +
+            "II-Gutteral     " + "הֵעָזֵב" + "\n" +
+            "III-" + "הִנָּצֵל           נ" + "\n" +
+            "III-" + "הִוָּשֵׁבב           י"),
+
+        new GrammarRule("Niphal weak verbs:  Infinitive Construct\n" +
+            "Strong           " + "הִקָּטֵל" + "\n" +
+            "III-" + "הִמָּצֵא            א" + "\n" +
+            "III-" + "הִבָּנוֹת           ה" + "\n" +
+            "II-Gutteral      " + "הֵעָזֵב" + "\n" +
+            "III-" + "הִנָּצֵל            נ" + "\n" +
+            "III-" + "הִוָּשֵׁב            י"),
+
+        new GrammarRule("Niphal weak verbs:  Infinitive Absolute\n" +
+            "Strong           " + "נִקְטוֹל" + "\n" +
+            "Strong           " + "הִקָּטוֹל" + "\n" +
+            "III-" + "נִמְצוֹא            א" + "\n" +
+            "III-" + "נִבְנֹה             ה" + "\n" +
+            "III-" + "הִבָּנֵה             ה" + "\n" +
+            "II-Gutteral      " + "נַעֳזוֹב" + "\n" +
+            "II-Gutteral      " + "הֵעָזוֹב" + "\n" +
+            "III-" + "הִנָּצֵל             נ" + "\n" +
+            "III-" + "נִצּוֹל             נ" + "\n" +
+            "III-" + "נוֹשָׁב             י"),
+
+        new GrammarRule("Niphal weak verbs:  Participle\n" +
+            "Strong           " + "נִקְטָל" + "\n" +
+            "III-" + "נִמְצָא            א" + "\n" +
+            "III-" + "נִבְנֶה            ה" + "\n" +
+            "II-Gutteral      " + "נֶעֱזָב" + "\n" +
+            "III-" + "נִצָּל             נ" + "\n"),
 
         new GrammarRule("Meaning of the Piel steam:\n" +
             "  * intensive - can intensify the meaning of the qal stem\n" +
@@ -1807,34 +1896,85 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "    In this case the verb does not have an intensive meaning\n" +
             "  * iterative - often occurs with physical movement"),
 
-        new GrammarRule("Piel weak verbs:\n" +
-            "                                           Infinitive   Infinitive          \n" +
-            "           Perfect  Imperfect  Imperative  Construct    Absolute    Participle\n" +
-            "Strong         " + "מְקַטֵּל        קַטֵּל          קַטֵּל         קַטֵּל         יְקַטֵּל       קֵטֵּל" + "\n" +
-            "III-" + "מְשַׁלֵּחַ        שַׁלֵּחַ          שַׁלַּח         שַׁלַּח         יְשַׁלַּח       שִׁלַּח        ע/ח" + "\n" +
-            "III-" + "מְמַצֵּא        מַצֵּא          מַצֵּא         מַצֵּא         יְמַצֵּא       מִצֵא          א" + "\n" +
-            "III-" + "מְגַלֶּה        גַּלֵּה          גַּלּוֹת        גַּלֵה         יְגַלֶּה       גִּלָּה          ה" + "\n" +
-            "Geminate       " + "מְהַלֵּל        הַלֵּל          הַלֵּל         הַלֵּל         יְהַלֵּל       הֵלֵּל" + "\n" +
-            "II-Gutteral    " + "מְנַחֵם        נַחֵם          נַחֵם         נַחֵם         יְנַחֵם       נִחַם" + "\n" +
-            "virtual\n" +
-            "doubling\n" +
-            "II-Gutteral    " + "מְבָרֵך        בָּרֵך          בָּרֵך         בָּרֵך         יְבָרֵך       בֵּרֵך" + "\n" +
-            "compensatory\n" +
-            "lengthening"),
+        new GrammarRule("Piel weak verbs:  Perfect\n" +
+            "Strong         " + "קֵטֵּל" + "\n" +
+            "III-" + "שִׁלַּח        ע/ח" + "\n" +
+            "III-" + "מִצֵא          א" + "\n" +
+            "III-" + "גִּלָּה          ה" + "\n" +
+            "Geminate       " + "הֵלֵּל" + "\n" +
+            "II-Gutteral    " + "נִחַם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "בֵּרֵך" + " (compensatory lengthening)\n"),
+
+        new GrammarRule("Piel weak verbs:  Imperfect\n" +
+            "Strong         " + "יְקַטֵּל" + "\n" +
+            "III-" + "יְשַׁלַּח        ע/ח" + "\n" +
+            "III-" + "יְמַצֵּא          א" + "\n" +
+            "III-" + "יְגַלֶּה          ה" + "\n" +
+            "Geminate       " + "יְהַלֵּל" + "\n" +
+            "II-Gutteral    " + "יְנַחֵם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "יְבָרֵך" + " (compensatory lengthening)"),
+
+        new GrammarRule("Piel weak verbs:  Imperative\n" +
+            "Strong         " + "קַטֵּל" + "\n" +
+            "III-" + "שַׁלַּח        ע/ח" + "\n" +
+            "III-" + "מַצֵּא          א" + "\n" +
+            "III-" + "גַּלֵה          ה" + "\n" +
+            "Geminate       " + "הַלֵּל" + "\n" +
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+
+        new GrammarRule("Piel weak verbs: Infinitive Construct\n" +
+            "Strong         " + "קַטֵּל" + "\n" +
+            "III-" + "שַׁלַּח        ע/ח" + "\n" +
+            "III-" + "מַצֵּא          א" + "\n" +
+            "III-" + "גַּלּוֹת          ה" + "\n" +
+            "Geminate       " + "הַלֵּל" + "\n" +
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+
+        new GrammarRule("Piel weak verbs:  Infinitive Absolute\n" +
+            "Strong         " + "קַטֵּל" + "\n" +
+            "III-" + "שַׁלֵּחַ        ע/ח" + "\n" +
+            "III-" + "מַצֵּא          א" + "\n" +
+            "III-" + "גַּלֵּה          ה" + "\n" +
+            "Geminate       " + "הַלֵּל" + "\n" +
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+
+        new GrammarRule("Piel weak verbs: Participle\n" +
+            "Strong         " + "מְקַטֵּל" + "\n" +
+            "III-" + "מְשַׁלֵּחַַ        ע/ח" + "\n" +
+            "III-" + "מְמַצֵּא          א" + "\n" +
+            "III-" + "מְגַלֶּה          ה" + "\n" +
+            "Geminate       " + "מְהַלֵּל" + "\n" +
+            "II-Gutteral    " + "מְנַחֵם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "מְבָרֵך" + " (compensatory lengthening)"),
 
         new GrammarRule("Pual steam is passive counterpart of Piel, indicates intensive action in passive voice"),
 
-        new GrammarRule("Pual weak verbs:\n" +
-            "           Perfect  Imperfect  Participle\n" +
-            "Strong         " + "מְקֻטָּל         יְקֻטַּל       קֻטַּל" + "\n" +
-            "III-" + "מְמֻצָּא        יְמֻצָּא       מֻצָא          א" + "\n" +
-            "III-" + "מְגֻלֶּה        יְגֻלֶּה       גֻּלָּה          ה" + "\n" +
-            "II-Gutteral    " + "מְנֻחָם        יְנֻחַם       נֻחַם" + "\n" +
-            "virtual\n" +
-            "doubling\n" +
-            "II-Gutteral    " + "מְבֹרָך        יְבֹרַך       בֹּרַך" + "\n" +
-            "compensatory\n" +
-            "lengthening"),
+        new GrammarRule("Pual weak verbs:  Perfect\n" +
+            "Strong         " + "קֻטַּל" + "\n" +
+            "III-" + "מֻצָא          א" + "\n" +
+            "III-" + "גֻּלָּה          ה" + "\n" +
+            "II-Gutteral    " + "נֻחַם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "בֹּרַך" + " (compensatory lengthening)\n" +
+            ""),
+
+        new GrammarRule("Pual weak verbs:  Imperfect\n" +
+            "Strong         " + "יְקֻטַּל" + "\n" +
+            "III-" + "יְמֻצָּא          א" + "\n" +
+            "III-" + "יְגֻלֶּה          ה" + "\n" +
+            "II-Gutteral    " + "יְנֻחַם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "יְבֹרַך" + " (compensatory lengthening)\n" +
+            ""),
+
+        new GrammarRule("Pual weak verbs: Participle\n" +
+            "Strong         " + "מְקֻטָּל" + "\n" +
+            "III-" + "מְמֻצָּא          א" + "\n" +
+            "III-" + "מְגֻלֶּה          ה" + "\n" +
+            "II-Gutteral    " + "מְנֻחָם" + " (virtual doubling)\n" +
+            "II-Gutteral    " + "מְבֹרָך" + " (compensatory lengthening)\n" +
+            ""),
 
         new GrammarRule("Hiphil stem, most common derived stem.  Meaning can be:\n" +
             "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king\n" +
@@ -1843,31 +1983,102 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great"),
 
         new GrammarRule("Hiphil weak verbs:\n" +
-            "                      Perfect                           Imperative   Infinitive   Infinitive\n" +
-            "             Perfect  msc 2 sng  Imperfect  Imperative  fem sng      Construct    Absolute    Participle\n" +
-            "Strong         " + "מַקְטִיל       הַקְטֵל         הַקְטִיל        הַקְטִילי      הַקְטֵל        יַקְטִיל      הִקְטַלְתָּ      הִקְטִיל"+ "\n" +
-            "I-Gutteral     " + "מַעֲמִיד       הַעֲמֵד         הַעֲמִיד        הַעֲמִידי      הַעֲמֵד        יַעֲמִיד      הֶעֱמַדְתָּ      הֶעֱמִיד"+ "\n" +
-            "III-" + "מַשְׁלִיחַ       הַשְׁלֵחַ         הַשְׁלִיחַ        הַשְׁלִיחִי      חַשְׁלַח        יַשְׁלִיחַ      הִשְׁלַחְתָּ      הִשְׁלִיחַ        ע/ח" + "\n" +
-            "III-" + "מַמְצִיא       הַמְצֵא         הַמְצִיא        הַמְצִיאִי      הַמְצֵא        יַמְצִיא      הִמְצֵאתָ      הִמְצִיא          א" + "\n" +
-            "III-" + "מַגְלֶה        הַגְלֵה         הַגְלוֹת        *           הַגְלֵה        יַגְלֶה       הִגְלִיתָ      הִגְלָה           ה" + "\n" +
-            "I-" + "מַצִּיל        הַצֵּל          הַצִּיל         הַצִּילִי       הַצֵּל         יַצִּיל       הִצַּלְתָּ       הִצִּיל             נ" + "\n" +
-            "I-" + "מוֹשִׁיב       הוֹשֵׁב         הוֹשִׁיב        הוֹשִׁיבִי      הוֹשֵׁב        יוֹשִׁיב      הוֹשַׁבְתָּ      הוֹשִׁיב            י" + "\n" +
-            "Biconsonental   " + "מֵקִים        הָקֵם          הָקִים         הָקִימִי       הָקֵם         יָקִים       הֲקִימוֹתָ     הֵקִים" + "\n" +
-            "* No example given for III-ה imperative feminine singular, I don't know why."),
+            "                      Perfect\n" +
+            "             Perfect  msc 2 sng\n" +
+            "Strong         " + "הִקְטַלְתָּ      הִקְטִיל"+ "\n" +
+            "I-Gutteral     " + "הֶעֱמַדְתָּ      הֶעֱמִיד"+ "\n" +
+            "III-" + "הִשְׁלַחְתָּ      הִשְׁלִיחַ        ע/ח" + "\n" +
+            "III-" + "הִמְצֵאתָ      הִמְצִיא          א" + "\n" +
+            "III-" + "הִגְלִיתָ      הִגְלָה           ה" + "\n" +
+            "I-" + "הִצַּלְתָּ       הִצִּיל             נ" + "\n" +
+            "I-" + "הוֹשַׁבְתָּ      הוֹשִׁיב            י" + "\n" +
+            "Biconsonental   " + "הֲקִימוֹתָ     הֵקִים" + "\n"),
+
+        new GrammarRule("Hiphil weak verbs:  Imperfect  \n" +
+            "Strong         " + "יַקְטִיל"+ "\n" +
+            "I-Gutteral     " + "יַעֲמִיד"+ "\n" +
+            "III-" + "יַשְׁלִיחַ        ע/ח" + "\n" +
+            "III-" + "יַמְצִיא          א" + "\n" +
+            "III-" + "יַגְלֶה           ה" + "\n" +
+            "I-" + "יַצִּיל             נ" + "\n" +
+            "I-" + "יוֹשִׁיב            י" + "\n" +
+            "Biconsonental   " + "יָקִים" + "\n"),
+
+        new GrammarRule("Hiphil weak verbs:\n" +
+            "                          Imperative\n" +
+            "               Imperative  fem sng\n" +
+            "Strong         " + "הַקְטִילי      הַקְטֵל"+ "\n" +
+            "I-Gutteral     " + "הַעֲמִידי      הַעֲמֵד"+ "\n" +
+            "III-" + "הַשְׁלִיחִי      חַשְׁלַחַ        ע/ח" + "\n" +
+            "III-" + "הַמְצִיאִי      הַמְצֵא          א" + "\n" +
+            "III-" + "הַגְלֵה           ה" + "        No example given for III-ה imperative feminine singular, I don't know why.\n" +
+            "I-" + "הַצִּילִי       הַצֵּל             נ" + "\n" +
+            "I-" + "הוֹשִׁיבִי      הוֹשֵׁב            י" + "\n" +
+            "Biconsonental   " + "הָקִימִי       הָקֵם" + "\n" +
+            ""),
+
+        new GrammarRule("Hiphil weak verbs:  Infinitive Construct\n" +
+            "Strong         " + "הַקְטִיל"+ "\n" +
+            "I-Gutteral     " + "הַעֲמִיד"+ "\n" +
+            "III-" + "הַשְׁלִיחַַ        ע/ח" + "\n" +
+            "III-" + "הַמְצִיא          א" + "\n" +
+            "III-" + "הַגְלוֹת          ה" + "\n" +
+            "I-" + "הַצִּיל             נ" + "\n" +
+            "I-" + "הוֹשִׁיב            י" + "\n" +
+            "Biconsonental   " + "הָקִים" + "\n"),
+
+        new GrammarRule("Hiphil weak verbs:  Infinitive Absolute\n" +
+            "Strong         " + "הַקְטֵל"+ "\n" +
+            "I-Gutteral     " + "הַעֲמֵד"+ "\n" +
+            "III-" + "הַשְׁלֵחַַַ        ע/ח" + "\n" +
+            "III-" + "הַמְצֵא          א" + "\n" +
+            "III-" + "הַגְלֵה          ה" + "\n" +
+            "I-" + "הַצֵּל             נ" + "\n" +
+            "I-" + "הוֹשֵׁב            י" + "\n" +
+            "Biconsonental   " + "הָקֵם" + "\n"),
+
+        new GrammarRule("Hiphil weak verbs:  Participle\n" +
+            "Strong         " + "מַקְטִיל"+ "\n" +
+            "I-Gutteral     " + "מַעֲמִיד"+ "\n" +
+            "III-" + "מַשְׁלִיחַַַַ        ע/ח" + "\n" +
+            "III-" + "מַמְצִיא          א" + "\n" +
+            "III-" + "מַגְלֶה          ה" + "\n" +
+            "I-" + "מַצִּיל             נ" + "\n" +
+            "I-" + "מוֹשִׁיב            י" + "\n" +
+            "Biconsonental   " + "מֵקִים" + "\n"),
 
         new GrammarRule("Hophal stem, least common derived stem, is causative action in the passive voice (so passive of Hiphil). \n" +
             "It occurs much more frequently in the weak form (250 times) versus strong form (50 times)."),
 
-        new GrammarRule("Hophal weak verbs:\n" +
-            "                  Perfect  Imperfect  Participle\n" +
-            "Strong (u-class)     " + "מֻקְטָל        יֻקְטַל       הֻקְטַל"+ "\n" +
-            "Strong (o-class)     " + "מָקְטָל        יָקְטַל       הָקְטַל"+ "\n" +
-            "I-Gutteral           " + "מָעֳמָד        יָעֳמַד       הָעֳמַד"+ "\n" +
-            "III-" + "מָגְלֶה        יָגְלֶה       הָגְלָה                ה" + "\n" +
-            "I-" + "מֻצָּל         יֻצַּל        הֻצַּל                   נ" + "\n" +
-            "I-" + "מוּשָׁב        יוּשַׁב       הוּשַׁב                  י" + "\n" +
-            "Biconsonental        " + "מוּקָם        יוּקַם       הוּקַם" + "\n" +
-            "Geminate             " + "מוּסָב        יוּסַב       הוּסַב"),
+        new GrammarRule("Hophal weak verbs: Perfect\n" +
+            "Strong (u-class)     " + "הֻקְטַל"+ "\n" +
+            "Strong (o-class)     " + "הָקְטַל"+ "\n" +
+            "I-Gutteral           " + "הָעֳמַד"+ "\n" +
+            "III-" + "הָגְלָה                ה" + "\n" +
+            "I-" + "הֻצַּל                   נ" + "\n" +
+            "I-" + "הוּשַׁב                  י" + "\n" +
+            "Biconsonental        " + "הוּקַם" + "\n" +
+            "Geminate             " + "הוּסַב"),
+
+        new GrammarRule("Hophal weak verbs:  Imperfect\n" +
+            "Strong (u-class)     " + "יֻקְטַל"+ "\n" +
+            "Strong (o-class)     " + "יָקְטַל"+ "\n" +
+            "I-Gutteral           " + "יָעֳמַד"+ "\n" +
+            "III-" + "יָגְלֶהה               ה" + "\n" +
+            "I-" + "יֻצַּל                   נ" + "\n" +
+            "I-" + "יוּשַׁב                  י" + "\n" +
+            "Biconsonental        " + "יוּקַם" + "\n" +
+            "Geminate             " + "יוּסַב"),
+
+        new GrammarRule("Hophal weak verbs: Participle\n" +
+            "Strong (u-class)     " + "מֻקְטָל"+ "\n" +
+            "Strong (o-class)     " + "מָקְטָל"+ "\n" +
+            "I-Gutteral           " + "מָעֳמָד"+ "\n" +
+            "III-" + "מָגְלֶה                ה" + "\n" +
+            "I-" + "מֻצָּל                   נ" + "\n" +
+            "I-" + "מוּשָׁב                  י" + "\n" +
+            "Biconsonental        " + "מוּקָם" + "\n" +
+            "Geminate             " + "מוּסָב"),
 
         new GrammarRule("Hithpael stem indicates intensive, reflexive or reciprocal action"),
 
@@ -1879,14 +2090,46 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "When the first consonant of the verbal root is ת ,ט ,ד ,ז then the ת of the prefix will assimilate, becoming a dagesh forte\n" +
             "טָמֵּא" + " becomes " + "הִטַּמֵּא"),
 
-        new GrammarRule("Hithpael weak verbs:\n" +
-            "                                             Infinitive   Infinitive\n" +
-            "             Perfect  Imperfect  Imperative   Construct     Absolute    Participle\n" +
-            "Strong         " + "מִתְקַטֵּל         הִתְקַטֵּל        הִתְקַטֵּל       הִתְקַטֵּל       יִתְקַטֵּל      הִתְקַטֵּל"+ "\n" +
-            "Geminate       " + "מִתְפַּלֵּל         הִתְפַּלֵּל        הִתְפַּלֵּל       הִתְפַּלֵּל       יִתְפַּלֵּל      הִתְפַּלֵּל" + "\n" +
-            "III-" + "מִתְגַּלֶּה                      הִתְגַּלּוֹת      הִתְגַּלֵּה       יִתְגַּלֶּה      הִתְגַּלָּה          ה" + "\n" +
-            "II-Gutteral    " + "מִתְנַחֵם         הִתְנַחֵם        הִתְנַחֵם       הִתְנַחֵם       יִתְנַחֵם      הִתְנַחֵם"+ "\n" +
-            "II-Gutteral    " + "מִתְבָּרֵך         הִתְבָּרֵך        הִתְבָּרֵך       הִתְבָּרֵך       יִתְבָּרֵך      הִתְבָּרֵך"+ "\n")
+        new GrammarRule("Hithpael weak verbs:  Perfect\n" +
+            "Strong         " + "הִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "הִתְפַּלֵּל" + "\n" +
+            "III-" + "הִתְגַּלָּה          ה" + "\n" +
+            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+
+        new GrammarRule("Hithpael weak verbs:  Imperfect\n" +
+            "Strong         " + "יִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "יִתְפַּלֵּל" + "\n" +
+            "III-" + "יִתְגַּלֶּה          ה" + "\n" +
+            "II-Gutteral    " + "יִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "יִתְבָּרֵך"+ "\n"),
+
+        new GrammarRule("Hithpael weak verbs:  Imperative\n" +
+            "Strong         " + "הִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "הִתְפַּלֵּל" + "\n" +
+            "III-" + "הִתְגַּלֵּה          ה" + "\n" +
+            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+
+        new GrammarRule("Hithpael weak verbs:  Infinitive Construct\n" +
+            "Strong         " + "הִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "הִתְפַּלֵּל" + "\n" +
+            "III-" + "הִתְגַּלּוֹת         ה" + "\n" +
+            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+
+        new GrammarRule("Hithpael weak verbs:  Infinitive Absolute\n" +
+            "Strong         " + "הִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "הִתְפַּלֵּל" + "\n" +
+            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+
+        new GrammarRule("Hithpael weak verbs:  Participle\n" +
+            "Strong         " + "מִתְקַטֵּל"+ "\n" +
+            "Geminate       " + "מִתְפַּלֵּל" + "\n" +
+            "III-" + "מִתְגַּלֶּה          ה" + "\n" +
+            "II-Gutteral    " + "מִתְנַחֵם"+ "\n" +
+            "II-Gutteral    " + "מִתְבָּרֵך"+ "\n")
 
 
     );
