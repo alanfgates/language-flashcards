@@ -368,7 +368,7 @@ class GreekBuilderHelperGrammar {
         // Infinitive passive
         new Word(new WordForm("λύεσθαι", "to continually have been loosened", INFINITIVE, PASSIVE, PRESENT), WEAK, "infinitive passive")
             .addForm(new WordForm("λυθῆναι", "to have been loosened", INFINITIVE, PASSIVE, AORIST))
-            .addForm(new WordForm("γραφῆναι", "to have received", INFINITIVE, PASSIVE, SECOND_AORIST))
+            .addForm(new WordForm("γραφῆναι", "to have been written", INFINITIVE, PASSIVE, SECOND_AORIST))
             .addForm(new WordForm("λελῦσθαι", "to have been loosened", INFINITIVE, PASSIVE, PERFECT)),
 
         // Athematic infinitive passive

@@ -157,9 +157,9 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἔστωσαν", "let them be!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)),
 
         // 2357
-        new Word(new WordForm("*λεγ", "to say", ROOT), STRONG),
-        new Word(new WordForm("*ιπ", "to say ", ROOT, SECOND_AORIST), STRONG),
-        new Word(new WordForm("*ερ", "to say ", ROOT, FUTURE, PERFECT, PASSIVE, AORIST), STRONG)
+        new Word(new WordForm("*λεγ", "to say", ROOT), STRONG)
+            .addForm(new WordForm("*ιπ", "to say ", ROOT, SECOND_AORIST))
+            .addForm(new WordForm("*ερ", "to say ", ROOT, FUTURE, PERFECT, PASSIVE, AORIST))
             .addForm(new WordForm("λέγω", "I say ", PRESENT))
             .addForm(new WordForm("ἐρῶ", "I will say ", FUTURE))
             .addForm(new WordForm("εἶπον", "I said ", SECOND_AORIST))
@@ -219,6 +219,7 @@ class GreekBuilderHelperVocab {
         new Word(new WordForm("κύριος", "lord", MASCULINE), STRONG)
             .addForm(new WordForm("κύριου", "lord", MASCULINE, GENITIVE)),
         // 708
+        // TODO add subjunctive, because it's pretty different
         new Word(new WordForm("*σεχ",	"to have", ROOT), OK)
             .addForm(new WordForm("ἔχω",	"I have ", PRESENT))
             .addForm(new WordForm("ἕξω",	"I will have ", FUTURE))
@@ -301,13 +302,13 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("μετά", "with", GENITIVE)),
         // 455
         new Word(new WordForm("*ορα",	"to see ", ROOT), OK)
+            .addForm(new WordForm("*οπ",	"to see ", ROOT))
+            .addForm(new WordForm("*ιδ",	"to see ", ROOT))
             .addForm(new WordForm("ὁρω",	"I see ", PRESENT))
-            .addForm(new WordForm("ἑώρακα",	"I have seen ", PERFECT)),
-        new Word(new WordForm("*οπ",	"to see ", ROOT), WEAK)
             .addForm(new WordForm("ὄψομαι",	"I will see ", FUTURE, DEPONENT))
+            .addForm(new WordForm("εἶδον",	"I saw ", SECOND_AORIST))
+            .addForm(new WordForm("ἑώρακα",	"I have seen ", PERFECT))
             .addForm(new WordForm("ὤφθην",	"I was seen ", PASSIVE, AORIST)),
-        new Word(new WordForm("*ιδ",	"to see ", ROOT), WEAK)
-            .addForm(new WordForm("εἶδον",	"I saw ", SECOND_AORIST)),
         // 428
         new Word(new WordForm("*ακου", "to hear ", ROOT), STRONG)
             .addForm(new WordForm("ἀκούω", "I hear ", PRESENT))
@@ -1010,9 +1011,8 @@ class GreekBuilderHelperVocab {
             .addForm(new WordForm("ἀπέλυσα", "I released ἀπολύω απο + *λυ", AORIST))
             .addForm(new WordForm("ἀπολέλυμαι", "I have been released ἀπολύω απο + *λυ", MIDDLE, PASSIVE, PERFECT))
             .addForm(new WordForm("ἀπελύθην", "I was released ἀπολύω απο + *λυ", PASSIVE, AORIST)),
-        // TODO I think this is a typo, I think it should be καρπος
-        new Word(new WordForm("καπρός", "fruit, crop, result", MASCULINE), ZERO)
-            .addForm(new WordForm("καπροῦ", "fruit, crop, result", MASCULINE, GENITIVE)),
+        new Word(new WordForm("καρπός", "fruit, crop, result", MASCULINE), ZERO)
+            .addForm(new WordForm("καρποῦ", "fruit, crop, result", MASCULINE, GENITIVE)),
         new Word(new WordForm("*φη", "to say ", ROOT), WEAK)
             .addForm(new WordForm("φημί", "I say ", PRESENT))
             .addForm(new WordForm("ἔφη", "I said ", AORIST)),

@@ -212,13 +212,13 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Verb roots and stems,\n" +
             " * Pattern 1: root not modified.  Example: *ἀκου\n" +
             " * Pattern 2: different roots in different stems\n" +
-            " * Pattern 3: verbs with roots ending in a liquid (λ, μ, ν, ρ)"),
-
-        new GrammarRule("Liquid verbs:\n" +
-            " * Tense formative for future is εσ instead of just σ but σ often drops out\n" +
-            "   when placed between two vowels resulting in future without σ.\n" +
-            "   The contracted vowels always have a circumflex (except in 1st plural middle).\n" +
-            "   For example: μεν + εσ + ω = μεν + ε + ω = μενῶ"),
+            "   * Verbs that have second aorists are normally verbs that alter their\n" +
+            "     root in the formation of their present tense stem.\n" +
+            " * Pattern 3: verbs with roots ending in a liquid (λ, μ, ν, ρ)\n" +
+            "   * Tense formative for future is εσ instead of just σ but σ often drops out\n" +
+            "     when placed between two vowels resulting in future without σ.\n" +
+            "     The contracted vowels always have a circumflex (except in 1st plural middle).\n" +
+            "     For example: μεν + εσ + ω = μεν + ε + ω = μενῶ"),
 
         new GrammarRule("Common verb root modifications:\n" +
             " * When the present tense stem ends in ιζω or αζω the root generally ends in a\n" +
@@ -230,9 +230,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Some roots add a iota in the present stem: *αρ -> αἴρω\n" +
             " * Some roots add σκ or ισκ to form the present: *γνω -> γινωσκω\n" +
             " * Some stem vowels ablaut."),
-
-        new GrammarRule("Verbs that have second aorists are normally verbs that alter their\n" +
-            "root in the formation of their present tense stem."),
 
         new GrammarRule("Augments for imperfect and aorist:\n" +
             "* If the word begins with a consonant, an ε is prepended.\n" +
@@ -352,6 +349,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "Aorist: describes an action occurring before the main verb\n" +
             "Aspect always trumps relative time."),
 
+        // TODO Put Greek examples for the active and passive participles below.
         new GrammarRule("Participles have two basic types:\n" +
             "Adverbial:  action described by the participle is primary directed towards the verb\n" +
             "  e.g.: While studying his Greek, Ian fell asleep\n" +
@@ -636,10 +634,44 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  * If both nouns are so marked, pronouns have the greatest priority.  This generally marks an equality condition\n" +
             "    as opposed to a subset condition.\n" +
             "* Εἰς plus accusative is occasionally replaces predicate nominative.  This is based on Hebrew usage and is most often\n" +
-            "  found in LXX quotes.")
+            "  found in LXX quotes."),
 
-        // continue on p48 III
+        new GrammarRule("Nominative in Simple Apposition:\n" +
+            "An appositional construction involves:\n" +
+            "1. two adjacent substantives;\n" +
+            "2. in the same case;\n" +
+            "3. which refer to the same person or thing;\n" +
+            "4. and have the same syntatical relation to the rest of the clause.\n" +
+            "ὁ μάρτθσ ὁ πιστός, -ὁ πρωτότοκος- τῶν νεκρῶν the faithful witness, -the firstborn- from the dead.\n" +
+            "When the first noun is a proper name it is generally anarthrous and the appositional noun is articular:\n" +
+            "ἐν ἇις καὶ Μαρία -ἡ Μαγδαληνή- among them also was Mary -the Magdalene-."),
 
+        new GrammarRule("Nominative Absolute:\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            "The use of the nominative case in introductory material (such as titles, headings, salutations, and addresses)\n" +
+            "which are not to be construed as sentences.\n" +
+            "-Ἀρχὴ- τοῦ εὐαγγελίου Ἰησοῦ Χριστοῦ\n" +
+            "-Παῦλος- δοῦλος Χριστοῦ Ἰησοῦ"),
+
+        new GrammarRule("Nominativus Pendens:\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            ""),  // TODO fill out, p 51
+
+        new GrammarRule("Parenthetic Nominative:\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            ""),  // TODO fill out, p 53
+
+        new GrammarRule("Nominative in Proverbial Expressions:\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            ""),  // TODO fill out, p 54
+
+        new GrammarRule("Nominative for Vocative (aka Nominative of Address):\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            ""),  // TODO fill out, p 56
+
+        new GrammarRule("Nominative of Exclamation:\n" +
+            "(subcase of independent nominative, meaning the substantive is grammatically unrelated to the rest of the sentance.)\n" +
+            "")  // TODO fill out, p 59
 
 
 

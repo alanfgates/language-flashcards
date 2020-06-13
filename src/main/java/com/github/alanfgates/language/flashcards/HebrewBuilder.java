@@ -173,9 +173,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL)),
 
         // Niphal Infinitive
-        new Word(new WordForm("הִקָּטֵל", "to kill", NIPHAL, INFINITIVE_CONSTRUCT), WEAK),
-        new Word(new WordForm("נִקְטוֹל", "to kill", NIPHAL, INFINITIVE_ABSOLUTE), ZERO, "Niphal infinitive absolute")
-            .addForm(new WordForm("הִקָּטוֹל", "to kill", NIPHAL, INFINITIVE_ABSOLUTE)),
+        new Word(new WordForm("הִקָּטֵל", "to be kill", NIPHAL, INFINITIVE_CONSTRUCT), WEAK),
+        new Word(new WordForm("נִקְטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE), ZERO, "Niphal infinitive absolute")
+            .addForm(new WordForm("הִקָּטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE)),
 
         // Niphal Participle
         new Word(new WordForm("נִקְטָל", "being killed", NIPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Niphal participle")
@@ -260,7 +260,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("נַקְטִיל", "we will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, PLURAL))
             .addForm(new WordForm("תַּקְטִילוּ", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
             .addForm(new WordForm("תַּקְטֵלְנָה", "you/they will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("תַּקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+            .addForm(new WordForm("יַקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
 
         new Word(new WordForm("הַקְטֵל", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR), ZERO, "Hiphil imperative")
             .addForm(new WordForm("הַקְטִילִי", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, SINGULAR))
@@ -317,8 +317,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("יָקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
 
         new Word(new WordForm("מֻקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO)
-            .addForm(new WordForm("מֻקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מֻקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR))
+            .addForm(new WordForm("מֻקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR))
+            .addForm(new WordForm("מֻקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL))
             .addForm(new WordForm("מֻקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL)),
 
         new Word(new WordForm("מָקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO)
@@ -1066,10 +1066,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             .addForm(new WordForm("שְׁמֹנִים", "eighty")),
         // 146
         new Word(new WordForm("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"), ZERO),
-        new Word(new WordForm("הִלֵּל", "he praised – הָלַל", PIEL), ZERO)
-            .addForm(new WordForm("הוּלָּל", "he was praised – הָלַל", PUAL))
-        // TODO why does this start with y, that doesn't seem right.
-            .addForm(new WordForm("יִתְהַלִּל", "he boasted about himself – הָלַל", HITHPAEL)),
+        new Word(new WordForm("הִלֵּל", "he praised – הָלַל", PIEL), ZERO),
         // 144
         new Word(new WordForm("רָדַף", "he pursued, followed after, persecuted"), ZERO),
         // 143
@@ -1167,13 +1164,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word(new WordForm("עַמּוּד", "pillar, column", MASCULINE), ZERO),
         // 111
         new Word(new WordForm("שַׁבָּת", "Sabbath, rest period", MASCULINE), OK),
-        new Word(new WordForm("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL), ZERO)
-            .addForm(new WordForm("הוֹדִינוּ", "we praised, gave thanks", HIPHIL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("אוֹדֶה", "I will praise, give thanks", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR))
-            .addForm(new WordForm("יוֹדוּ", "they will praise, give thanks", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הוֹדוּ", "praise!, give thanks!", HIPHIL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הוֹדוֹת", "to praise, give thanks", HIPHIL, INFINITIVE_CONSTRUCT))
-            .addForm(new WordForm("מוֹדֶה", "praising, giving thanks", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR)),
+        new Word(new WordForm("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL), ZERO),
         // 110
         new Word(new WordForm("עָפָר", "dry earth, dust", MASCULINE), ZERO),
         // 109
@@ -1479,7 +1470,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "   gender of the adjective can sometimes determine which noun it modifies, sometimes\n" +
             "   you must use context.  This applies to demonstratives adjectives (this, that) as well.\n" +
             " * Substantive adjectives functioning as a noun can form part of the construct chain.\n" +
-            " * Inseparable prepositions can be attached to construct nouns." +
+            " * Inseparable prepositions can be attached to construct nouns.\n" +
             " * A noun can be made superlative by placing it in a construct chain\n" +
             "   with the construct noun singular and the absolute noun plural and definite:\n" +
             "   e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
@@ -1743,7 +1734,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "* can express non-existence: אֵין לוֹ בֵּן he had no son\n" +
             "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD"),
 
-        new GrammarRule("Participles can be " +
+        new GrammarRule("Participles can be\n" +
             " * attributive, meaning they can directly modify a noun:\n    " +
             "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
             " the people dwelling [or who dwell] in the land\n" +
@@ -1841,32 +1832,32 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "III-" + "נִמְצָא           א" + "\n" +
             "III-" + "נִבְנָה           ה" + "\n" +
             "II-Gutteral     " + "נֶעֱזַב" + "\n" +
-            "III-" + "נִצַּל            נ" + "\n" +
-            "III-" + "נוֹשַׁב           י"),
+            "I-" + "נִצַּל              נ" + "\n" +
+            "I-" + "נוֹשַׁב             י"),
 
         new GrammarRule("Niphal weak verbs:  Imperfect \n" +
             "Strong          " + "יִקָּטֵל" + "\n" +
             "III-" + "יִמָּצֵא           א" + "\n" +
             "III-" + "יִבָּנֶה           ה" + "\n" +
             "II-Gutteral     " + "יֵעָזֵב" + "\n" +
-            "III-" + "יִנָּצֵל           נ" + "\n" +
-            "III-" + "יִוָּשֵׁב           י"),
+            "I-" + "יִנָּצֵל             נ" + "\n" +
+            "I-" + "יִוָּשֵׁב             י"),
 
         new GrammarRule("Niphal weak verbs:  Imperative\n" +
             "Strong          " + "הִקְּטֵל" + "\n" +
             "III-" + "הִמָּצֵא           א" + "\n" +
             "III-" + "הִבָּנֵה           ה" + "\n" +
             "II-Gutteral     " + "הֵעָזֵב" + "\n" +
-            "III-" + "הִנָּצֵל           נ" + "\n" +
-            "III-" + "הִוָּשֵׁבב           י"),
+            "I-" + "הִנָּצֵל             נ" + "\n" +
+            "I-" + "הִוָּשֵׁב             י"),
 
         new GrammarRule("Niphal weak verbs:  Infinitive Construct\n" +
             "Strong           " + "הִקָּטֵל" + "\n" +
             "III-" + "הִמָּצֵא            א" + "\n" +
             "III-" + "הִבָּנוֹת           ה" + "\n" +
             "II-Gutteral      " + "הֵעָזֵב" + "\n" +
-            "III-" + "הִנָּצֵל            נ" + "\n" +
-            "III-" + "הִוָּשֵׁב            י"),
+            "I-" + "הִנָּצֵל              נ" + "\n" +
+            "I-" + "הִוָּשֵׁב              י"),
 
         new GrammarRule("Niphal weak verbs:  Infinitive Absolute\n" +
             "Strong           " + "נִקְטוֹל" + "\n" +
@@ -1876,16 +1867,16 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "III-" + "הִבָּנֵה             ה" + "\n" +
             "II-Gutteral      " + "נַעֳזוֹב" + "\n" +
             "II-Gutteral      " + "הֵעָזוֹב" + "\n" +
-            "III-" + "הִנָּצֵל             נ" + "\n" +
-            "III-" + "נִצּוֹל             נ" + "\n" +
-            "III-" + "נוֹשָׁב             י"),
+            "I-" + "הִנָּצֵל               נ" + "\n" +
+            "I-" + "נִצּוֹל               נ" + "\n" +
+            "I-" + "נוֹשָׁב               י"),
 
         new GrammarRule("Niphal weak verbs:  Participle\n" +
             "Strong           " + "נִקְטָל" + "\n" +
             "III-" + "נִמְצָא            א" + "\n" +
             "III-" + "נִבְנֶה            ה" + "\n" +
             "II-Gutteral      " + "נֶעֱזָב" + "\n" +
-            "III-" + "נִצָּל             נ" + "\n"),
+            "I-" + "נִצָּל               נ" + "\n"),
 
         new GrammarRule("Meaning of the Piel steam:\n" +
             "  * intensive - can intensify the meaning of the qal stem\n" +
