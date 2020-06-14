@@ -14,98 +14,150 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Word implements Serializable {
-  public enum Competence { STRONG, OK, WEAK, ZERO };
-
-  // Flashcards can have more than one word due to homonyms or because one conjugation may represent multiple tenses, moods, etc.
-  private List<WordForm> wordForms;
-  private int needToGetRight;
-  private Competence competence;
-  private String comment;
-
+@JsonSerialize(using = Word.Serializer.class)
+@JsonDeserialize(using = Word.Deserializer.class)
+public class Word {
+  private String english;
+  private String other;
+  private Enum[] modifiers;
 
   // For Jackson
   public Word() {
   }
 
-  Word(WordForm word, Competence competence) {
-    this(word, competence, null);
-  }
-
-  Word(WordForm word, Competence competence, String comment) {
-    this.wordForms = new ArrayList<>();
-    wordForms.add(word);
-    needToGetRight = 1;
-    this.competence = competence;
-    this.comment = comment;
-  }
-
-  Word addForm(WordForm word) {
-    wordForms.add(word);
-    return this;
+  public Word(String other, String english, Enum... modifiers) {
+    this.english = english;
+    this.other = other;
+    this.modifiers = modifiers;
   }
 
   boolean test(BufferedReader input) throws IOException {
-    int index = RandomGenerator.get().getRandom(wordForms.size());
-    wordForms.get(index).showFront();
+    showFront();
     input.readLine();
-    wordForms.get(index).flipOver();
-    if (comment != null) System.out.println(comment);
-    if (wordForms.size() > 1) {
-      System.out.println("Other forms of the word:");
-      for (WordForm form : wordForms) form.flipOver();
-    }
+    flipOver();
     System.out.println("Success?[y]");
     String answer = input.readLine();
-    if (answer.length() == 0 || answer.toLowerCase().startsWith("y")) {
-      needToGetRight--;
-      return true;
-    } else {
-      needToGetRight++;
-      return false;
-    }
+    return (answer.length() == 0 || answer.toLowerCase().startsWith("y"));
   }
 
-  boolean needToDoAgain() {
-    return needToGetRight > 0;
+  public String getEnglish() {
+    return english;
   }
 
-  public List<WordForm> getWordForms() {
-    return wordForms;
-  }
-
-  public void setWordForms(List<WordForm> wordForms) {
-    this.wordForms = wordForms;
-  }
-
-  public int getNeedToGetRight() {
-    return needToGetRight;
-  }
-
-  public Word setNeedToGetRight(int needToGetRight) {
-    this.needToGetRight = needToGetRight;
+  public Word setEnglish(String english) {
+    this.english = english;
     return this;
   }
 
-  public Competence getCompetence() {
-    return competence;
+  public String getOther() {
+    return other;
   }
 
-  public void setCompetence(Competence competence) {
-    this.competence = competence;
+  public Word setOther(String other) {
+    this.other = other;
+    return this;
   }
 
-  public String getComment() {
-    return comment;
+  public Enum[] getModifiers() {
+    return modifiers;
   }
 
-  public void setComment(String comment) {
-    this.comment = comment;
+  public Word setModifiers(Enum[] modifiers) {
+    this.modifiers = modifiers;
+    return this;
+  }
+
+  private void showFront() {
+    System.out.println(other);
+  }
+
+  private void flipOver() {
+    StringBuilder buf = new StringBuilder(other)
+        .append(" : ")
+        .append(english)
+        .append(" - ");
+    boolean first = true;
+    for (Enum modifier : modifiers) {
+      if (first) first = false;
+      else buf .append(", ");
+      buf.append(modifier.name().toLowerCase().replace('_', ' '));
+    }
+    System.out.println(buf.toString());
+  }
+
+  public static class Serializer extends StdSerializer<Word> {
+    public Serializer() {
+      super(Word.class);
+    }
+
+    @Override
+    public void serialize(Word word, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+      jsonGenerator.writeStartObject();
+      jsonGenerator.writeStringField("english", word.getEnglish());
+      jsonGenerator.writeStringField("other", word.getOther());
+      jsonGenerator.writeArrayFieldStart("modifiers");
+      for (Enum e : word.getModifiers()) jsonGenerator.writeString(e.name());
+      jsonGenerator.writeEndArray();
+      jsonGenerator.writeEndObject();
+
+    }
+  }
+
+  public static class Deserializer extends StdDeserializer<Word> {
+    private List<Class<? extends Enum>> enums;
+    public Deserializer() {
+      super(Word.class);
+      enums = new ArrayList<>();
+      enums.add(Declension.class);
+      enums.add(Gender.class);
+      enums.add(Mood.class);
+      enums.add(Number.class);
+      enums.add(Other.class);
+      enums.add(PartOfSpeech.class);
+      enums.add(Person.class);
+      enums.add(Tense.class);
+      enums.add(VerbRoot.class);
+      enums.add(Voice.class);
+    }
+
+    @Override
+    public Word deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+      JsonNode node = jsonParser.getCodec().readTree(jsonParser);
+      List<Enum> modifiers = new ArrayList<>();
+      Iterator<JsonNode> iter = node.get("modifiers").elements();
+      while (iter.hasNext()) {
+        String val = iter.next().asText();
+        // This is kludgy, but I don't know a better way
+        try {
+          for (Class<? extends Enum> e : enums) {
+            modifiers.add(Enum.valueOf(e, val));
+            break;
+          }
+        } catch (IllegalArgumentException e) {
+          // NOP
+        }
+      }
+      return new Word()
+          .setEnglish(node.get("english").asText())
+          .setOther(node.get("other").asText())
+          .setModifiers(modifiers.toArray(new Enum[0]));
+    }
   }
 }

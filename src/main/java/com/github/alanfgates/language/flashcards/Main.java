@@ -23,7 +23,7 @@ import org.apache.commons.cli.ParseException;
 import java.io.IOException;
 
 public class Main {
-  private static final String FILENAME = "./cards.json";
+  private static final String FILENAME = "./cardsV2.json";
 
   public static void main(String[] args) {
     Options options = new Options();

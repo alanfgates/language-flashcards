@@ -26,7 +26,6 @@ import static com.github.alanfgates.language.flashcards.Person.*;
 import static com.github.alanfgates.language.flashcards.Tense.*;
 import static com.github.alanfgates.language.flashcards.VerbRoot.*;
 import static com.github.alanfgates.language.flashcards.Voice.*;
-import static com.github.alanfgates.language.flashcards.Word.Competence.*;
 
 public class HebrewBuilder extends BaseLanguageBuilder {
 
@@ -40,379 +39,379 @@ public class HebrewBuilder extends BaseLanguageBuilder {
     return Arrays.asList(
         // VERBS
         // Qal perfect
-        new Word(new WordForm("קָטַלְתִּי", "I killed", PERFECT, FIRST_PERSON, SINGULAR), OK, "Qal perfect")
-            .addForm(new WordForm("קָטַלְתָּ", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קָטַלְתְּ", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קָטַל", "he killed", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קָטְלָה", "she killed", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קָטַלְנוּ", "we killed", QAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קְטַלְתֶּם", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטַלְתֶּן", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("קָטְלוּ", "they killed", QAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("קָטַלְתִּי", "I killed", PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קָטַלְתָּ", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קָטַלְתְּ", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קָטַל", "he killed", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קָטְלָה", "she killed", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קָטַלְנוּ", "we killed", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קְטַלְתֶּם", "you killed", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קְטַלְתֶּן", "you killed", QAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קָטְלוּ", "they killed", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // To be
-        new Word(new WordForm("הָיִיתִי", "I was", QAL, PERFECT, FIRST_PERSON, SINGULAR), WEAK, "'to be' perfect")
-            .addForm(new WordForm("הָיִיתָ", "you were", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הָיָה", "he was", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הָיְתָה", "she was", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הָיִינוּ", "we were", QAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("הֱיִיתֶם", "you were", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הָיוּ", "they were", QAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("הָיִיתִי", "I was", QAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("הָיִיתָ", "you were", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("הָיָה", "he was", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הָיְתָה", "she was", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("הָיִינוּ", "we were", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("הֱיִיתֶם", "you were", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("הָיוּ", "they were", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // To give
-        new Word(new WordForm("נָתַתִּי", "I gave", QAL, PERFECT, FIRST_PERSON, SINGULAR), WEAK, "'to give' perfect")
-            .addForm(new WordForm("נָתַתָּ", "you gave", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("נָתַן", "he gave", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("נָתְנָה", "she gave", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נָתַנּוּ", "we gave", QAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("נְתַתֶּם", "you gave", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("נָתְנוּ", "they gave", QAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("נָתַתִּי", "I gave", QAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("נָתַתָּ", "you gave", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("נָתַן", "he gave", QAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("נָתְנָה", "she gave", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נָתַנּוּ", "we gave", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("נְתַתֶּם", "you gave", QAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("נָתְנוּ", "they gave", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // Qal Imperfect
-        new Word(new WordForm("אֶקְטֹל", "I will kill", QAL, IMPERFECT, FIRST_PERSON, SINGULAR), OK, "Qal imperfect")
-            .addForm(new WordForm("תִּקְטֹל", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּקְטְלִי", "you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקְטֹל", "he will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּקְטֹל", "she will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִקְטֹל", "we will kill", QAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תִּקְטְלוּ", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקְטֹלְנָה", "you/they will kill", QAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֶקְטֹל", "I will kill", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּקְטֹל", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקְטְלִי", "you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטֹל", "he will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקְטֹל", "she will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטֹל", "we will kill", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּקְטְלוּ", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּקְטֹלְנָה", "you/they will kill", QAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // to be - imperfect
-        new Word(new WordForm("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR), WEAK, "'to be', imperfect")
-            .addForm(new WordForm("תִּהְיֶה", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("יִהְיֶה", "he will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּהְיֶה", "she will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִהְיֶה", "we will be", QAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תִּהְיוּ", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("יִהְיוּ", "they will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּהְיֶה", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("יִהְיֶה", "he will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּהְיֶה", "she will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִהְיֶה", "we will be", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּהְיוּ", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("יִהְיוּ", "they will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // to give - imperfect
-        new Word(new WordForm("אֶתֵּן", "I will give", QAL, IMPERFECT, FIRST_PERSON, SINGULAR), WEAK, "'to give' imperfect")
-            .addForm(new WordForm("תִּתֵּן", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("יִתֵּן", "he will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּתֵּן", "she will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִתֵּן", "we will give", QAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תִּתְּנוּ", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֶתֵּן", "I will give", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּתֵּן", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("יִתֵּן", "he will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתֵּן", "she will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִתֵּן", "we will give", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּתְּנוּ", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // Qal Imperative
-        new Word(new WordForm("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR), OK, "Qal imperative")
-            .addForm(new WordForm("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL)),
+        new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
 
         // Qal various odd important ones
-        new Word(new WordForm("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR), ZERO),
-        new Word(new WordForm("קַח", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR), ZERO),
-        new Word(new WordForm("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR), ZERO),
-        new Word(new WordForm("הֱיֵה", "be!", IMPERATIVE, MASCULINE, SINGULAR), ZERO),
-        new Word(new WordForm("עֲלֵה", "go up!", IMPERATIVE, MASCULINE, SINGULAR), ZERO),
+        new Word("תֵּן", "give!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַח", "take!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("לֵך", "go/walk!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הֱיֵה", "be!", IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("עֲלֵה", "go up!", IMPERATIVE, MASCULINE, SINGULAR),
 
         // Qal Cohortative
-        new Word(new WordForm("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR), WEAK, "Qal cohortative")
-            .addForm(new WordForm("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, SINGULAR))
-            .addForm(new WordForm("נִקְטֹל", "let us kill", QAL, COHORTATIVE, PLURAL))
-            .addForm(new WordForm("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, PLURAL)),
+        new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR),
+        new Word("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, SINGULAR),
+        new Word("נִקְטֹל", "let us kill", QAL, COHORTATIVE, PLURAL),
+        new Word("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, PLURAL),
 
         // Qal Jussive
-        new Word(new WordForm("יִקְטֹל", "let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR), WEAK, "Qal Jussive")
-            .addForm(new WordForm("תִּקְטֹל", "let her kill", QAL, JUSSIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, FEMININE, PLURAL)),
+        new Word("יִקְטֹל", "let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR),
+        new Word("תִּקְטֹל", "let her kill", QAL, JUSSIVE, FEMININE, SINGULAR),
+        new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, MASCULINE, PLURAL),
+        new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, FEMININE, PLURAL),
 
         // Qal Infinitive Construct
-        new Word(new WordForm("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT), ZERO),
-        new Word(new WordForm("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT), ZERO),
-        new Word(new WordForm("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT), ZERO),
-        new Word(new WordForm("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT), ZERO),
+        new Word("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT),
+        new Word("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT),
+        new Word("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT),
+        new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT),
 
         // Qal Infinitive Absolute
-        new Word(new WordForm("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE), ZERO),
+        new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
 
         // Qal Active Participle
-        new Word(new WordForm("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR), WEAK, "Qal active participle")
-            .addForm(new WordForm("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL)),
+        new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
+        new Word("קֹטְלִים", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, PLURAL),
+        new Word("קֹטֶלֶת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
+        new Word("קֹטְלָה", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, SINGULAR),
+        new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
 
         // Qal Passive Participle
-        new Word(new WordForm("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR), WEAK, "Qal passive participle")
-            .addForm(new WordForm("קְטוּלָה", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("קְטוּלִים", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטוּלוֹת", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, PLURAL)),
+        new Word("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
+        new Word("קְטוּלָה", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, SINGULAR),
+        new Word("קְטוּלִים", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, PLURAL),
+        new Word("קְטוּלוֹת", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, PLURAL),
 
         // Niphal Perfect
-        new Word(new WordForm("נִקְטַלְתִּי", "I was killed", NIPHAL, PERFECT, FIRST_PERSON, SINGULAR), OK, "Niphal perfect")
-            .addForm(new WordForm("נִקְטַלְתָּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("נִקְטַלְתְּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִקְטַל", "he was killed", NIPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("נִקְטְלָה", "she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("נִקְטְלוּ", "they were killed", NIPHAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("נִקְטַלְתִּי", "I was killed", NIPHAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("נִקְטַלְתָּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("נִקְטַלְתְּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטַל", "he was killed", NIPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("נִקְטְלָה", "she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("נִקְטְלוּ", "they were killed", NIPHAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // Niphal Imperfect
-        new Word(new WordForm("אֶקָּטֵל", "I will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR), OK, "Niphal imperfect")
-            .addForm(new WordForm("תִּקָּטֵל", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּקָּטְלִי", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקָּטֵל", "he will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּקָּטַלְנָה", "you/they will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֶקָּטֵל", "I will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּקָּטֵל", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטְלִי", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִקָּטֵל", "he will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּקָּטַלְנָה", "you/they will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // Niphal Imperative
-        new Word(new WordForm("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR), WEAK, "Niphal imperative")
-            .addForm(new WordForm("הִקָּטְלִי", "be killed!", NIPHAL, IMPERATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִקָּטְלְוּ", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL)),
+        new Word("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הִקָּטְלִי", "be killed!", NIPHAL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("הִקָּטְלְוּ", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL),
 
         // Niphal Infinitive
-        new Word(new WordForm("הִקָּטֵל", "to be kill", NIPHAL, INFINITIVE_CONSTRUCT), WEAK),
-        new Word(new WordForm("נִקְטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE), ZERO, "Niphal infinitive absolute")
-            .addForm(new WordForm("הִקָּטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE)),
+        new Word("הִקָּטֵל", "to be kill", NIPHAL, INFINITIVE_CONSTRUCT),
+        new Word("נִקְטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
+        new Word("הִקָּטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
 
         // Niphal Participle
-        new Word(new WordForm("נִקְטָל", "being killed", NIPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Niphal participle")
-            .addForm(new WordForm("נִקְטֶלֶת", "being killed", NIPHAL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִקְטָלִים", "being killed", NIPHAL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("נִקְטָלוֹת", "being killed", NIPHAL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("נִקְטָל", "being killed", NIPHAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("נִקְטֶלֶת", "being killed", NIPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("נִקְטָלִים", "being killed", NIPHAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("נִקְטָלוֹת", "being killed", NIPHAL, PARTICIPLE, FEMININE, PLURAL),
 
         // Piel
-        new Word(new WordForm("קִטַּלְתִּי", "I slaughtered", PIEL, PERFECT, FIRST_PERSON, SINGULAR), OK, "Piel perfect")
-            .addForm(new WordForm("קִטַּלְתָּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קִטַּלְתְּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קִטֵּל", "he slaughtered", PIEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קִטְּלָה", "she slaughtered", PIEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קִטַּלְנוּ", "we slaughtered", PIEL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קִטַּלְתֶּם", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קִטֵַּלְתֶּן", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("קִטְּלוּ", "they slaughtered", PIEL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("קִטַּלְתִּי", "I slaughtered", PIEL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קִטַּלְתָּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קִטַּלְתְּ", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קִטֵּל", "he slaughtered", PIEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קִטְּלָה", "she slaughtered", PIEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קִטַּלְנוּ", "we slaughtered", PIEL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קִטַּלְתֶּם", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קִטֵַּלְתֶּן", "you slaughtered", PIEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קִטְּלוּ", "they slaughtered", PIEL, PERFECT, THIRD_PERSON, PLURAL),
 
-        new Word(new WordForm("אֲקַטֵּל", "I will slaughter", PIEL, IMPERFECT, FIRST_PERSON, SINGULAR), OK, "Piel imperfect")
-            .addForm(new WordForm("תְּקַטֵּל", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תְּקַטְּלִי", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יְקַטֵּל", "he will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תְּקַטֵּל", "she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נְקַטֵּל", "we will slaughter", PIEL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תְּקַטְּלוּ", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תְּקַטֵּלְנָה", "you/they will slaughter", PIEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֲקַטֵּל", "I will slaughter", PIEL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תְּקַטֵּל", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקַטְּלִי", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יְקַטֵּל", "he will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקַטֵּל", "she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נְקַטֵּל", "we will slaughter", PIEL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תְּקַטְּלוּ", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תְּקַטֵּלְנָה", "you/they will slaughter", PIEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("קַטֵּל", "slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR), WEAK, "Piel imperative")
-            .addForm(new WordForm("קַטְּלִי", "slaughter!", PIEL, IMPERATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("קַטְּלוּ", "slaughter!", PIEL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("קַטֵּלְנָה", "slaughter!", PIEL, IMPERATIVE, FEMININE, PLURAL)),
+        new Word("קַטֵּל", "slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַטְּלִי", "slaughter!", PIEL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("קַטְּלוּ", "slaughter!", PIEL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("קַטֵּלְנָה", "slaughter!", PIEL, IMPERATIVE, FEMININE, PLURAL),
 
-        new Word(new WordForm("קַטֵּל", "to slaughter", PIEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE), ZERO),
+        new Word("קַטֵּל", "to slaughter", PIEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE),
 
-        new Word(new WordForm("מְקַטֵּל", "slaughtering", PIEL, PARTICIPLE, MASCULINE, SINGULAR), OK, "Piel participle")
-            .addForm(new WordForm("מְקַטֶּלֶת", "slaughtering", PIEL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מְקַטְּלִים", "slaughtering", PIEL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מְקַטְּלוֹת", "slaughtering", PIEL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מְקַטֵּל", "slaughtering", PIEL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מְקַטֶּלֶת", "slaughtering", PIEL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מְקַטְּלִים", "slaughtering", PIEL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מְקַטְּלוֹת", "slaughtering", PIEL, PARTICIPLE, FEMININE, PLURAL),
 
-        new Word(new WordForm("קֻטַּלְתִּי", "I was slaughtered", PUAL, PERFECT, FIRST_PERSON, SINGULAR), ZERO, "Pual perfect")
-            .addForm(new WordForm("קֻטַּלְתָּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קֻטַּלְתְּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קֻטַּל", "he was slaughtered", PUAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קֻטְּלָה", "she was slaughtered", PUAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קֻטַּלְנוּ", "we were slaughtered", PUAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קֻטַּלְתֶּם", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קֻטַּלְתֶּן", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("קֻטְּלוּ", "they were slaughtered", PUAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("קֻטַּלְתִּי", "I was slaughtered", PUAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קֻטַּלְתָּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קֻטַּלְתְּ", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קֻטַּל", "he was slaughtered", PUAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קֻטְּלָה", "she was slaughtered", PUAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קֻטַּלְנוּ", "we were slaughtered", PUAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קֻטַּלְתֶּם", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קֻטַּלְתֶּן", "you were slaughtered", PUAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קֻטְּלוּ", "they were slaughtered", PUAL, PERFECT, THIRD_PERSON, PLURAL),
 
-        new Word(new WordForm("אֲקֻטַּל", "I will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, SINGULAR), ZERO, "Pual imperfect")
-            .addForm(new WordForm("תְּקֻטַּל", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תְּקֻטְּלִי", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יְקֻטַּל", "he will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תְּקֻטַּל", "she will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נְקֻטַּל", "we will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תְּקֻטְּלוּ", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תְּקֻטַּלְנָה", "you/they will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יְקֻטְּלוּ", "they will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֲקֻטַּל", "I will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תְּקֻטַּל", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקֻטְּלִי", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יְקֻטַּל", "he will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקֻטַּל", "she will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נְקֻטַּל", "we will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תְּקֻטְּלוּ", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תְּקֻטַּלְנָה", "you/they will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יְקֻטְּלוּ", "they will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("מְקֻטָּל", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Pual participle")
-            .addForm(new WordForm("מְקֻטֶּלֶת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מְקֻטָּלִים", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מְקֻטָּלוֹת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מְקֻטָּל", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מְקֻטֶּלֶת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מְקֻטָּלִים", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מְקֻטָּלוֹת", "being slaughtered", PUAL, PARTICIPLE, FEMININE, PLURAL),
 
         // Hiphil
-        new Word(new WordForm("הִקְטַלְתִּי", "I caused to kill", HIPHIL, PERFECT, FIRST_PERSON, SINGULAR), WEAK, "Hiphil perfect")
-            .addForm(new WordForm("הִקְטַלְתָּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הִקְטַלְתְּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִקְטִיל", "he caused to kill", HIPHIL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הִקְטִילָה", "she caused to kill", HIPHIL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִקְטַלְְנוּ", "we caused to kill", HIPHIL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("הִקְטַלְתֶּם", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הִקְטַלְתֶּן", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("הִקְטִילוּ", "they caused to kill", HIPHIL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("הִקְטַלְתִּי", "I caused to kill", HIPHIL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("הִקְטַלְתָּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("הִקְטַלְתְּ", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("הִקְטִיל", "he caused to kill", HIPHIL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הִקְטִילָה", "she caused to kill", HIPHIL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("הִקְטַלְְנוּ", "we caused to kill", HIPHIL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("הִקְטַלְתֶּם", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("הִקְטַלְתֶּן", "you caused to kill", HIPHIL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("הִקְטִילוּ", "they caused to kill", HIPHIL, PERFECT, THIRD_PERSON, PLURAL),
 
-        new Word(new WordForm("אַקְטִיל", "I will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR), WEAK, "Hiphil imperfect")
-            .addForm(new WordForm("תַּקְטִיל", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תַּקְטִילִי", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יַקְטִיל", "he will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תַּקְטִיל", "she will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נַקְטִיל", "we will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תַּקְטִילוּ", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תַּקְטֵלְנָה", "you/they will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יַקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אַקְטִיל", "I will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תַּקְטִיל", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תַּקְטִילִי", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יַקְטִיל", "he will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תַּקְטִיל", "she will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נַקְטִיל", "we will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תַּקְטִילוּ", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תַּקְטֵלְנָה", "you/they will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יַקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("הַקְטֵל", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR), ZERO, "Hiphil imperative")
-            .addForm(new WordForm("הַקְטִילִי", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("הַקְטִילוּ", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הַקְטֵלְנָה", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, PLURAL)),
+        new Word("הַקְטֵל", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הַקְטִילִי", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("הַקְטִילוּ", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("הַקְטֵלְנָה", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, PLURAL),
 
-        new Word(new WordForm("הַקְטִיל", "to cause to kill", HIPHIL, INFINITIVE_CONSTRUCT), ZERO),
-        new Word(new WordForm("הַקְטֵל", "to cause to kill", HIPHIL, INFINITIVE_ABSOLUTE), ZERO),
+        new Word("הַקְטִיל", "to cause to kill", HIPHIL, INFINITIVE_CONSTRUCT),
+        new Word("הַקְטֵל", "to cause to kill", HIPHIL, INFINITIVE_ABSOLUTE),
 
-        new Word(new WordForm("מַקְטִיל", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR), ZERO, "Hiphil participle")
-            .addForm(new WordForm("מַקְטֶלֶת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מַקְטִילִים", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מַקְטִילוֹת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מַקְטִיל", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מַקְטֶלֶת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מַקְטִילִים", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מַקְטִילוֹת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, PLURAL),
 
         // Hophal
-        new Word(new WordForm("הֻקְטַלְתִּי", "I was made to kill", HOPHAL, PERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("הֻקְטַלְתָּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הֻקְטַלְתְּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הֻקְטַל", "he was made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הֻקְטְלָה", "she was made to kill", HOPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הֻקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֻקְטַלְתֶּם", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֻקְטַלְתֶּן", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("הֻקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("הֻקְטַלְתִּי", "I was made to kill", HOPHAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("הֻקְטַלְתָּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("הֻקְטַלְתְּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("הֻקְטַל", "he was made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הֻקְטְלָה", "she was made to kill", HOPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("הֻקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, MASCULINE, PLURAL),
+        new Word("הֻקְטַלְתֶּם", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("הֻקְטַלְתֶּן", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("הֻקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("הָקְטַלְתִּי", "I was made to kill", HOPHAL, PERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("הָקְטַלְתָּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הָקְטַלְתְּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הָקְטַל", "he was made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הָקְטְלָה", "she was made to kill", HOPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הָקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הָקְטַלְתֶּם", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הָקְטַלְתֶּן", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("הָקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("הָקְטַלְתִּי", "I was made to kill", HOPHAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("הָקְטַלְתָּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("הָקְטַלְתְּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("הָקְטַל", "he was made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הָקְטְלָה", "she was made to kill", HOPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("הָקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, MASCULINE, PLURAL),
+        new Word("הָקְטַלְתֶּם", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("הָקְטַלְתֶּן", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("הָקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("אֻקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("תֻּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תֻּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יֻקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תֻּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נֻקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תֻּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תֻּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יֻקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֻקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תֻּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תֻּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יֻקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תֻּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נֻקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תֻּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תֻּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יֻקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("אָקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("תָּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תָּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יָקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תָּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נָקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תָּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תָּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יָקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אָקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תָּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תָּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יָקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תָּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נָקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תָּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תָּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יָקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("מֻקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO)
-            .addForm(new WordForm("מֻקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מֻקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מֻקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מֻקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מֻקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מֻקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מֻקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL),
 
-        new Word(new WordForm("מָקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR), ZERO)
-            .addForm(new WordForm("מָקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מָקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מָקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מָקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מָקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מָקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מָקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL),
 
         // Hithpael
-        new Word(new WordForm("הִתְקַטַּלְתִּי", "I killed myself", HITHPAEL, PERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("הִתְקַטַּלְתָּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הִתְקַטַּלְתְּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִתְקַטֵּל", "he killed himself", HITHPAEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("הִתְקַטְּלָה", "she killed herself", HITHPAEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִתְקַטַּלְנוּ", "we killed ourselves", HITHPAEL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("הִתְקַטַּלְתֶּם", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("הִתְקַטַּלְתֶּן", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("הִתְקַטְּלוּ", "they killed themselves", HITHPAEL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("הִתְקַטַּלְתִּי", "I killed myself", HITHPAEL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("הִתְקַטַּלְתָּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("הִתְקַטַּלְתְּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("הִתְקַטֵּל", "he killed himself", HITHPAEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הִתְקַטְּלָה", "she killed herself", HITHPAEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("הִתְקַטַּלְנוּ", "we killed ourselves", HITHPAEL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("הִתְקַטַּלְתֶּם", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("הִתְקַטַּלְתֶּן", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("הִתְקַטְּלוּ", "they killed themselves", HITHPAEL, PERFECT, THIRD_PERSON, PLURAL),
 
-        new Word(new WordForm("אֶתְקַטֵּל", "I will kill myself", HITHPAEL, IMPERFECT, FIRST_PERSON, SINGULAR), ZERO)
-            .addForm(new WordForm("תִּתְקַטֵּל", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּתְקַטְּלִי", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִתְקַטֵּל", "he will kill himself", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("תִּתְקַטֵּל", "she will kill herself", HITHPAEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("נִתְקַטֵּל", "we will kill ourselves", HITHPAEL, IMPERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("תִּתְקַטְּלוּ", "you will kill yourselves", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("תִּתְקַטֵּלְנָה", "you/they will kill yourselves/themselves", HITHPAEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("יִתְקַטֵּלוּ", "they will kill themselves", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)),
+        new Word("אֶתְקַטֵּל", "I will kill myself", HITHPAEL, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("תִּתְקַטֵּל", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתְקַטְּלִי", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִתְקַטֵּל", "he will kill himself", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתְקַטֵּל", "she will kill herself", HITHPAEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("נִתְקַטֵּל", "we will kill ourselves", HITHPAEL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("תִּתְקַטְּלוּ", "you will kill yourselves", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("תִּתְקַטֵּלְנָה", "you/they will kill yourselves/themselves", HITHPAEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("יִתְקַטֵּלוּ", "they will kill themselves", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word(new WordForm("הִתְקַטֵּל", "kill yourself", HITHPAEL, IMPERATIVE, MASCULINE, SINGULAR), ZERO)
-            .addForm(new WordForm("הִתְקַטְּלִי", "kill yourself", HITHPAEL, IMPERATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("הִתְקַטְּלוּ", "kill yourselves", HITHPAEL, IMPERATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הִתְקַטֵּלְנָה", "kill yourselves", HITHPAEL, IMPERATIVE, FEMININE, PLURAL)),
+        new Word("הִתְקַטֵּל", "kill yourself", HITHPAEL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הִתְקַטְּלִי", "kill yourself", HITHPAEL, IMPERATIVE, FEMININE, SINGULAR),
+        new Word("הִתְקַטְּלוּ", "kill yourselves", HITHPAEL, IMPERATIVE, MASCULINE, PLURAL),
+        new Word("הִתְקַטֵּלְנָה", "kill yourselves", HITHPAEL, IMPERATIVE, FEMININE, PLURAL),
 
-        new Word(new WordForm("הִתְקַטֵּל", "to kill oneself", HITHPAEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE), ZERO),
+        new Word("הִתְקַטֵּל", "to kill oneself", HITHPAEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE),
 
-        new Word(new WordForm("מִתְקַטֵּל", "killing oneself", HITHPAEL, PARTICIPLE, MASCULINE, SINGULAR), ZERO)
-            .addForm(new WordForm("מִתְקַטֶּלֶת", "killing oneself", HITHPAEL, PARTICIPLE, FEMININE, SINGULAR))
-            .addForm(new WordForm("מִתְקַטְּלִים", "killing oneself", HITHPAEL, PARTICIPLE, MASCULINE, PLURAL))
-            .addForm(new WordForm("מִתְקַטֵּלוֹת", "killing oneself", HITHPAEL, PARTICIPLE, FEMININE, PLURAL)),
+        new Word("מִתְקַטֵּל", "killing oneself", HITHPAEL, PARTICIPLE, MASCULINE, SINGULAR),
+        new Word("מִתְקַטֶּלֶת", "killing oneself", HITHPAEL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מִתְקַטְּלִים", "killing oneself", HITHPAEL, PARTICIPLE, MASCULINE, PLURAL),
+        new Word("מִתְקַטֵּלוֹת", "killing oneself", HITHPAEL, PARTICIPLE, FEMININE, PLURAL),
         //----------------------------------------------------------------------------------------
         // PRONOMINAL SUFFIXES
-        new Word(new WordForm("סוּסִי", "my horse"), WEAK, "Singular pronominal suffixes")
-            .addForm(new WordForm("סוּסְךָ", "your horse", MASCULINE, SINGULAR))
-            .addForm(new WordForm("סוּסֵך", "your horse", FEMININE, SINGULAR))
-            .addForm(new WordForm("סוּסוֹ", "his horse"))
-            .addForm(new WordForm("סוּסָהּ", "her horse"))
-            .addForm(new WordForm("סוּסֵנוּ", "our horse"))
-            .addForm(new WordForm("סוּסְכֶם", "your horse", MASCULINE, PLURAL))
-            .addForm(new WordForm("סוּסְכֶן", "your horse", FEMININE, PLURAL))
-            .addForm(new WordForm("סוּסָם", "their horse", MASCULINE))
-            .addForm(new WordForm("סוּסָן", "their horse", FEMININE)),
+        new Word("סוּסִי", "my horse"),
+        new Word("סוּסְךָ", "your horse", MASCULINE, SINGULAR),
+        new Word("סוּסֵך", "your horse", FEMININE, SINGULAR),
+        new Word("סוּסוֹ", "his horse"),
+        new Word("סוּסָהּ", "her horse"),
+        new Word("סוּסֵנוּ", "our horse"),
+        new Word("סוּסְכֶם", "your horse", MASCULINE, PLURAL),
+        new Word("סוּסְכֶן", "your horse", FEMININE, PLURAL),
+        new Word("סוּסָם", "their horse", MASCULINE),
+        new Word("סוּסָן", "their horse", FEMININE),
 
-        new Word(new WordForm("סוּסַי", "my horses"), WEAK, "Plural pronominal suffixes")
-            .addForm(new WordForm("סוּסֶיךָ", "your horses", MASCULINE, SINGULAR))
-            .addForm(new WordForm("סוּסַיִך", "your horses", FEMININE, SINGULAR))
-            .addForm(new WordForm("סוּסָיו", "his horses"))
-            .addForm(new WordForm("סוּסֶיהָ", "her horses"))
-            .addForm(new WordForm("סוּסֵינוּ", "our horses"))
-            .addForm(new WordForm("סוּסֵיכֶם", "your horses", MASCULINE, PLURAL))
-            .addForm(new WordForm("סוּסֵיכֶן", "your horses", FEMININE, PLURAL))
-            .addForm(new WordForm("סוּסֵיהֶם", "their horses", MASCULINE))
-            .addForm(new WordForm("סוּסֵיהֶן", "their horses", FEMININE)),
+        new Word("סוּסַי", "my horses"),
+        new Word("סוּסֶיךָ", "your horses", MASCULINE, SINGULAR),
+        new Word("סוּסַיִך", "your horses", FEMININE, SINGULAR),
+        new Word("סוּסָיו", "his horses"),
+        new Word("סוּסֶיהָ", "her horses"),
+        new Word("סוּסֵינוּ", "our horses"),
+        new Word("סוּסֵיכֶם", "your horses", MASCULINE, PLURAL),
+        new Word("סוּסֵיכֶן", "your horses", FEMININE, PLURAL),
+        new Word("סוּסֵיהֶם", "their horses", MASCULINE),
+        new Word("סוּסֵיהֶן", "their horses", FEMININE),
 
         // Qal perfect with pronominal suffixes
-        new Word(new WordForm("קְטָלַנִי", "he killed me", PRONOMINAL_SUFFIX, FIRST_PERSON, SINGULAR), WEAK, "Verb with pronominal suffixes")
-            .addForm(new WordForm("קְטָלְךָ", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קְטָלֵך", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קְטָלוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קְטָלָהוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קְטָלָהּ", "he killed her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קְטָלָנוּ", "he killed us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קְטָלְכֶם", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטָלְכֶן", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, PLURAL))
-            .addForm(new WordForm("קְטָלָם", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, PLURAL))
-            .addForm(new WordForm("קְטָלָן", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, PLURAL)),
+        new Word("קְטָלַנִי", "he killed me", PRONOMINAL_SUFFIX, FIRST_PERSON, SINGULAR),
+        new Word("קְטָלְךָ", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלֵך", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("קְטָלוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלָהוֹ", "he killed him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלָהּ", "he killed her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קְטָלָנוּ", "he killed us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
+        new Word("קְטָלְכֶם", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, PLURAL),
+        new Word("קְטָלְכֶן", "he killed you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, PLURAL),
+        new Word("קְטָלָם", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("קְטָלָן", "he killed them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, PLURAL),
 
-          new Word((new WordForm("קְטַלְתִּיו", "I killed him", QAL, PERFECT, FIRST_PERSON, SINGULAR)), WEAK)
-            .addForm(new WordForm("קְטַלְתָּהוּ", "you killed him", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("קְטָלַתְהוּ", "she killed him", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("קְטַלְנוּהוּ", "we killed him", QAL, PERFECT, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL)),
+        new Word("קְטַלְתִּיו", "I killed him", QAL, PERFECT, FIRST_PERSON, SINGULAR),
+        new Word("קְטַלְתָּהוּ", "you killed him", QAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("קְטָלַתְהוּ", "she killed him", QAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("קְטַלְנוּהוּ", "we killed him", QAL, PERFECT, FIRST_PERSON, PLURAL),
+        new Word("קְטַלְוּהוּ", "they killed him", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
-          new Word((new WordForm("יִקְטְלֵנִי", "he will kill me", PRONOMINAL_SUFFIX, FIRST_PERSON, MASCULINE, SINGULAR)), WEAK)
-            .addForm(new WordForm("יִקְטָלְךָ", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלֵך", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלֶנָּה", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR))
-            .addForm(new WordForm("יִקְטְלוּנוּ", "they will kill us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL))
-            .addForm(new WordForm("יִקְטְלֵכֶם", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, PLURAL))
-            .addForm(new WordForm("יִקְטְלֵכֶן", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE))
-            .addForm(new WordForm("יִקְטְלֵם", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, PLURAL))
-            .addForm(new WordForm("יִקְטְלֵן", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE))
+        new Word("יִקְטְלֵנִי", "he will kill me", PRONOMINAL_SUFFIX, FIRST_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטָלְךָ", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלֵך", "he will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטְלֵהוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטְלֶנָּה", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        new Word("יִקְטְלוּנוּ", "they will kill us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
+        new Word("יִקְטְלֵכֶם", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, PLURAL),
+        new Word("יִקְטְלֵכֶן", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE),
+        new Word("יִקְטְלֵם", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, PLURAL),
+        new Word("יִקְטְלֵן", "they will kill them", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE)
     );
   }
 
@@ -421,781 +420,781 @@ public class HebrewBuilder extends BaseLanguageBuilder {
     return Arrays.asList(
         // VOCABULARY, with frequency noted in comments
         // 50524
-        new Word(new WordForm("וְ", "and, but, also, even"), STRONG),
+        new Word("וְ", "and, but, also, even"),
         // 23968
-        new Word(new WordForm("הַ", "the"), OK),
+        new Word("הַ", "the"),
         // 20435
-        new Word(new WordForm("לְ", "to"), STRONG),
+        new Word("לְ", "to"),
         // 15632
-        new Word(new WordForm("בְּ", "in, at, with"), STRONG),
+        new Word("בְּ", "in, at, with"),
         // 10970
-        new Word(new WordForm("אֶת–", "definite direct object marker OR with"), WEAK)
-            .addForm(new WordForm("אֵת", "definite direct object marker OR with"))
-            .addForm(new WordForm("אֹתַי", "direct object marker with pronominal suffix 'me', NOT with")) // 898
-            .addForm(new WordForm("אִתִּי", "with me, NOT direct object marker")),
+        new Word("אֶת–", "definite direct object marker OR with"),
+        new Word("אֵת", "definite direct object marker OR with"),
+        new Word("אֹתַי", "direct object marker with pronominal suffix 'me', NOT with"), // 898
+        new Word("אִתִּי", "with me, NOT direct object marker"),
         // 7586
-        new Word(new WordForm("מִן", "from"), STRONG),
+        new Word("מִן", "from"),
         // 5778
-        new Word(new WordForm("עַל", "upon, over, above"), STRONG),
+        new Word("עַל", "upon, over, above"),
         // 5518
-        new Word(new WordForm("אֶל", "to, toward"), STRONG),
+        new Word("אֶל", "to, toward"),
         // 5518
-        new Word(new WordForm("לֹא", "no, not, used with perfect, used with imperfect = never"), STRONG),
+        new Word("לֹא", "no, not, used with perfect, used with imperfect = never"),
         // 5503
-        new Word(new WordForm("אֲשֶׁר", "who, whom, that, which (relative pronoun)"), STRONG),
+        new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)"),
         // 5415
-        new Word(new WordForm("כֹּל", "all"), STRONG)
-            .addForm(new WordForm("כָּל", "all of", CONSTRUCT)),
+        new Word("כֹּל", "all"),
+        new Word("כָּל", "all of", CONSTRUCT),
         // 5317
-        new Word(new WordForm("אָמַר", "he said"), STRONG),
+        new Word("אָמַר", "he said"),
 
         // 4942
-        new Word(new WordForm("בֵּן", "son", MASCULINE), STRONG)
-            .addForm(new WordForm("בֶּן", "son of", MASCULINE, CONSTRUCT))
-            .addForm(new WordForm("בָּנִים", "sons", MASCULINE, PLURAL)),
+        new Word("בֵּן", "son", MASCULINE),
+        new Word("בֶּן", "son of", MASCULINE, CONSTRUCT),
+        new Word("בָּנִים", "sons", MASCULINE, PLURAL),
         // 4795
-        new Word(new WordForm("אֲנִי", "I, myself", NOMINATIVE), OK)
-            .addForm(new WordForm("אָנֹכִי", "I, myself", NOMINATIVE))
-            .addForm(new WordForm("אֲנַחְנוּ", "we", NOMINATIVE)),
+        new Word("אֲנִי", "I, myself", NOMINATIVE),
+        new Word("אָנֹכִי", "I, myself", NOMINATIVE),
+        new Word("אֲנַחְנוּ", "we", NOMINATIVE),
 
-        new Word(new WordForm("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR), WEAK)
-            .addForm(new WordForm("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL)),
+        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR),
+        new Word("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR),
+        new Word("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL),
 
-        new Word(new WordForm("הוּא", "he, that", NOMINATIVE), WEAK)
-            .addForm(new WordForm("הִיא", "she, that", NOMINATIVE))
-            .addForm(new WordForm("הִוא", "she, that", NOMINATIVE))
-            .addForm(new WordForm("הֵם", "they, those", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵמָּה", "they, those", NOMINATIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("הֵן", "they, those", NOMINATIVE, FEMININE, PLURAL))
-            .addForm(new WordForm("הֵנָּה", "they, those", NOMINATIVE, FEMININE, PLURAL)),
+        new Word("הוּא", "he, that", NOMINATIVE),
+        new Word("הִיא", "she, that", NOMINATIVE),
+        new Word("הִוא", "she, that", NOMINATIVE),
+        new Word("הֵם", "they, those", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("הֵמָּה", "they, those", NOMINATIVE, MASCULINE, PLURAL),
+        new Word("הֵן", "they, those", NOMINATIVE, FEMININE, PLURAL),
+        new Word("הֵנָּה", "they, those", NOMINATIVE, FEMININE, PLURAL),
 
         // 4487
-        new Word(new WordForm("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"), STRONG),
-        new Word(new WordForm("כִּי–אִם", "but, except"), ZERO),
+        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"),
+        new Word("כִּי–אִם", "but, except"),
         // 2909
-        new Word(new WordForm("כְּ", "as, like"), STRONG),
+        new Word("כְּ", "as, like"),
         // 2632
-        new Word(new WordForm("עָשַׂה", "he did, he made"), STRONG)
-            .addForm(new WordForm("מַעֲשֶׂה", "work, deed", MASCULINE)) // 235
-            .addForm(new WordForm("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL)),
+        new Word("עָשַׂה", "he did, he made"),
+        new Word("מַעֲשֶׂה", "work, deed", MASCULINE), // 235
+        new Word("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL),
         // 2602
-        new Word(new WordForm("אֱלֹהִים", "God", MASCULINE), STRONG)
-            .addForm(new WordForm("אֱלֹהִים", "gods", MASCULINE, PLURAL))
-            .addForm(new WordForm("אֵל", "god", MASCULINE)), // 236
+        new Word("אֱלֹהִים", "God", MASCULINE),
+        new Word("אֱלֹהִים", "gods", MASCULINE, PLURAL),
+        new Word("אֵל", "god", MASCULINE), // 236
         // 2579
-        new Word(new WordForm("בָּא", "he came, entered - בּוֹא"), OK),
+        new Word("בָּא", "he came, entered - בּוֹא"),
         // 2530
-        new Word(new WordForm("מֶלֶך", "king", MASCULINE), WEAK)
-            .addForm(new WordForm("מְלָכִים", "kings", MASCULINE, PLURAL))
-            .addForm(new WordForm("מָלַךּ", "he reigned")) // 350
-            .addForm(new WordForm("מַמְלָכָה", "kingdom, reign, dominion", FEMININE)), // 117
+        new Word("מֶלֶך", "king", MASCULINE),
+        new Word("מְלָכִים", "kings", MASCULINE, PLURAL),
+        new Word("מָלַךּ", "he reigned"), // 350
+        new Word("מַמְלָכָה", "kingdom, reign, dominion", FEMININE), // 117
         // 2529
-        new Word(new WordForm("זֶה",	"this", MASCULINE), OK)
-            .addForm(new WordForm("זֹאת", "this", FEMININE))
-            .addForm(new WordForm("אֵלָה", "these")),
+        new Word("זֶה",	"this", MASCULINE),
+        new Word("זֹאת", "this", FEMININE),
+        new Word("אֵלָה", "these"),
         // 2505
-        new Word(new WordForm("אֶרֶץ", "land, earth", FEMININE), STRONG)
-            .addForm(new WordForm("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL)),
+        new Word("אֶרֶץ", "land, earth", FEMININE),
+        new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
         // 2303
-        new Word(new WordForm("יוֹם", "day", MASCULINE), WEAK)
-            .addForm(new WordForm("יָמִים", "days", MASCULINE, PLURAL)),
+        new Word("יוֹם", "day", MASCULINE),
+        new Word("יָמִים", "days", MASCULINE, PLURAL),
         // 2187
-        new Word(new WordForm("אִיש", "man", MASCULINE), WEAK)
-            .addForm(new WordForm("אֲנָשִׁים", "men", MASCULINE, PLURAL)),
+        new Word("אִיש", "man", MASCULINE),
+        new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
         // 2128
-        new Word(new WordForm("פָּנִים", "face, faces", MASCULINE, SINGULAR, PLURAL), OK)
-            .addForm(new WordForm("פְּנֵי", "before, in the presence of")),
+        new Word("פָּנִים", "face, faces", MASCULINE, SINGULAR, PLURAL),
+        new Word("פְּנֵי", "before, in the presence of"),
         // 2046
-        new Word(new WordForm("בַּיִת", "house", MASCULINE), OK)
-            .addForm(new WordForm("בֵּּּית", "house of", MASCULINE, CONSTRUCT))
-            .addForm(new WordForm("בָּתִּים", "houses", MASCULINE, PLURAL)),
+        new Word("בַּיִת", "house", MASCULINE),
+        new Word("בֵּּּית", "house of", MASCULINE, CONSTRUCT),
+        new Word("בָּתִּים", "houses", MASCULINE, PLURAL),
         // 1867
-        new Word(new WordForm("עַם", "people, nation", MASCULINE), OK)
-            .addForm(new WordForm("עַמִּים", "peoples, nations", MASCULINE, PLURAL)),
+        new Word("עַם", "people, nation", MASCULINE),
+        new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
         // 1627
-        new Word(new WordForm("יָד", "hand, (metaphorically) side, power", FEMININE), STRONG)
-            .addForm(new WordForm("יַד", "hand of", FEMININE, CONSTRUCT))
-            .addForm(new WordForm("יָדַיִם", "hands", FEMININE, DUAL)),
+        new Word("יָד", "hand, (metaphorically) side, power", FEMININE),
+        new Word("יַד", "hand of", FEMININE, CONSTRUCT),
+        new Word("יָדַיִם", "hands", FEMININE, DUAL),
         // 1554
-        new Word(new WordForm("הָלַךּ",	"he walked"), STRONG),
+        new Word("הָלַךּ",	"he walked"),
         // 1494
-        new Word(new WordForm("דָּבָר", "word, speech", MASCULINE), STRONG)
-            .addForm(new WordForm("דְּבָרִים", "words, speeches", MASCULINE, PLURAL))
-            .addForm(new WordForm("דִּבֶּר",	"he spoke", PIEL)), // 1135
+        new Word("דָּבָר", "word, speech", MASCULINE),
+        new Word("דְּבָרִים", "words, speeches", MASCULINE, PLURAL),
+        new Word("דִּבֶּר",	"he spoke", PIEL), // 1135
         // 1310
-        new Word(new WordForm("רָאָה", "he saw"), WEAK)
-            .addForm(new WordForm("מַרְאֶה", "sight, appearance", MASCULINE)),  // 103
+        new Word("רָאָה", "he saw"),
+        new Word("מַרְאֶה", "sight, appearance", MASCULINE),  // 103
         // 1263
-        new Word(new WordForm("עַד", "until, as far as"), OK),
+        new Word("עַד", "until, as far as"),
         // 1210
-        new Word(new WordForm("אָב", "father", MASCULINE), STRONG)
-            .addForm(new WordForm("אֲבִי", "father of", MASCULINE, CONSTRUCT))
-            .addForm(new WordForm("אָבוֹת", "fathers", MASCULINE, PLURAL)),
+        new Word("אָב", "father", MASCULINE),
+        new Word("אֲבִי", "father of", MASCULINE, CONSTRUCT),
+        new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
         // 1165
-        new Word(new WordForm("שָׁמַע",	 "he heard"), STRONG),
+        new Word("שָׁמַע",	 "he heard"),
         // 1119
-        new Word(new WordForm("ָה", "to, toward, directional ending"), WEAK),
+        new Word("ָה", "to, toward, directional ending"),
         // 1094
-        new Word(new WordForm("עִיר", "city", FEMININE), STRONG)
-            .addForm(new WordForm("עָרִים", "cities", FEMININE, PLURAL)),
+        new Word("עִיר", "city", FEMININE),
+        new Word("עָרִים", "cities", FEMININE, PLURAL),
         // 1087
-        new Word(new WordForm("יָשַׁב",	"he sat, he dwelt"), STRONG),
+        new Word("יָשַׁב",	"he sat, he dwelt"),
         // 1075
-        new Word(new WordForm("יָצָא", 	"he went out"), STRONG),
-        new Word(new WordForm("שָׁב", "he returned"), STRONG),
+        new Word("יָצָא", 	"he went out"),
+        new Word("שָׁב", "he returned"),
         // 1070
-        new Word(new WordForm("אִם", "if"), STRONG),
+        new Word("אִם", "if"),
         // 1061
-        new Word(new WordForm("הִנַּה", "behold, here I am, I am ready"), STRONG),
+        new Word("הִנַּה", "behold, here I am, I am ready"),
         // 1048
-        new Word(new WordForm("עִם", "with"), OK),
+        new Word("עִם", "with"),
         // 976
-        new Word(new WordForm("אֶחָד", "one", MASCULINE), WEAK)
-            .addForm(new WordForm("אַחַת", "one", FEMININE)),
+        new Word("אֶחָד", "one", MASCULINE),
+        new Word("אַחַת", "one", FEMININE),
         // 966
-        new Word(new WordForm("לָקַח", "he took"), OK),
+        new Word("לָקַח", "he took"),
         // 952
-        new Word(new WordForm("יָדַע", "he knew"), STRONG),
+        new Word("יָדַע", "he knew"),
         // 896
-        new Word(new WordForm("עַיִן", "eye, spring", FEMININE), STRONG)
-            .addForm(new WordForm("עֵינַים", "eyes", FEMININE, DUAL))
-            .addForm(new WordForm("עֲיָנֹת", "springs", FEMININE, PLURAL)),
+        new Word("עַיִן", "eye, spring", FEMININE),
+        new Word("עֵינַים", "eyes", FEMININE, DUAL),
+        new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 894
-        new Word(new WordForm("עָלָה", "he went up"), STRONG),
+        new Word("עָלָה", "he went up"),
         // 879
-        new Word(new WordForm("שָׁנָה", "year", FEMININE), OK)
-            .addForm(new WordForm("שָׁנִים", "years", FEMININE, PLURAL)),
+        new Word("שָׁנָה", "year", FEMININE),
+        new Word("שָׁנִים", "years", FEMININE, PLURAL),
         // 864
-        new Word(new WordForm("שֵׁם", "name", MASCULINE), OK)
-            .addForm(new WordForm("שֵׁמוֹת", "names", MASCULINE, PLURAL)),
+        new Word("שֵׁם", "name", MASCULINE),
+        new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
         // 853 (601 for לב and 252 for לבב )
-        new Word(new WordForm("לֵב", "heart", MASCULINE), STRONG)
-            .addForm(new WordForm("לִבּוֹת", "hearts", MASCULINE, PLURAL))
-            .addForm(new WordForm("לֵבָב", "heart", MASCULINE))
-            .addForm(new WordForm("לְבָבוֹת", "hearts", MASCULINE, PLURAL)),
+        new Word("לֵב", "heart", MASCULINE),
+        new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
+        new Word("לֵבָב", "heart", MASCULINE),
+        new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
         // 847
-        new Word(new WordForm("שָׁלַח", "he sent, stretched out"), STRONG)
-            .addForm(new WordForm("הִשְׁלְִיך", "he threw, flung, cast - שָׁלַך", HIPHIL)), // 127
+        new Word("שָׁלַח", "he sent, stretched out"),
+        new Word("הִשְׁלְִיך", "he threw, flung, cast - שָׁלַך", HIPHIL), // 127
         // 845
-        new Word(new WordForm("מֵת", "he died - מוּת"), WEAK)
-            .addForm(new WordForm("מָוֶת", "death, dying", MASCULINE)), // 153
+        new Word("מֵת", "he died - מוּת"),
+        new Word("מָוֶת", "death, dying", MASCULINE), // 153
         // 835
-        new Word(new WordForm("שָׁם", "there"), OK),
+        new Word("שָׁם", "there"),
         // 814
-        new Word(new WordForm("אָכַל", "he ate"), OK),
+        new Word("אָכַל", "he ate"),
         // 803
-        new Word(new WordForm("עֶבֶד", "servant, slave", MASCULINE), STRONG)
-            .addForm(new WordForm("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL))
-            .addForm(new WordForm("עָבַד", "he worked, he served")) // 289
-            .addForm(new WordForm("עֲבֹדָה", "work, labor, service, worship", FEMININE)), // 147
+        new Word("עֶבֶד", "servant, slave", MASCULINE),
+        new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
+        new Word("עָבַד", "he worked, he served"), // 289
+        new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE), // 147
         // 783
-        new Word(new WordForm("אַיִן", "nothing, there is not"), OK)
-            .addForm(new WordForm("אֵין", "nothing, there is not")),
+        new Word("אַיִן", "nothing, there is not"),
+        new Word("אֵין", "nothing, there is not"),
         // 781
-        new Word(new WordForm("אִשָּׁה", "woman, wife", FEMININE), WEAK)
-            .addForm(new WordForm("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT))
-            .addForm(new WordForm("נָשׁים", "women, wives", FEMININE, PLURAL))
-            .addForm(new WordForm("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT)),
+        new Word("אִשָּׁה", "woman, wife", FEMININE),
+        new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
+        new Word("נָשׁים", "women, wives", FEMININE, PLURAL),
+        new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT),
         // 774
-        new Word(new WordForm("אָדוֹן", "lord, master", MASCULINE), STRONG)
-            .addForm(new WordForm("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL)),
+        new Word("אָדוֹן", "lord, master", MASCULINE),
+        new Word("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL),
         // 769
-        new Word(new WordForm("שְׁנַיִם", "two", MASCULINE), WEAK)
-            .addForm(new WordForm("שְׁתַּים", "two", FEMININE))
-            .addForm(new WordForm("שֵׁנִי", "second", MASCULINE))
-            .addForm(new WordForm("שֵׁנִית", "second", FEMININE)),
-        new Word(new WordForm("גַּם", "also"), STRONG),
+        new Word("שְׁנַיִם", "two", MASCULINE),
+        new Word("שְׁתַּים", "two", FEMININE),
+        new Word("שֵׁנִי", "second", MASCULINE),
+        new Word("שֵׁנִית", "second", FEMININE),
+        new Word("גַּם", "also"),
         // 757
-        new Word(new WordForm("נֶפֶש", "soul, person", FEMININE), STRONG)
-            .addForm(new WordForm("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL)),
+        new Word("נֶפֶש", "soul, person", FEMININE),
+        new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
         // 754
-        new Word(new WordForm("מָה", "what?"), WEAK)
-            .addForm(new WordForm("מַה", "what?"))
-            .addForm(new WordForm("מֶה", "what?")),
+        new Word("מָה", "what?"),
+        new Word("מַה", "what?"),
+        new Word("מֶה", "what?"),
         // 750
-        new Word(new WordForm("כֹּהַן", "priest", MASCULINE), OK)
-            .addForm(new WordForm("כֹהֲנִים", "priests", MASCULINE, PLURAL)),
+        new Word("כֹּהַן", "priest", MASCULINE),
+        new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
-        new Word(new WordForm("הֲ", "indicates interrogative, prefixed to first word in the sentence"), WEAK),
+        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence"),
         // 743
-        new Word(new WordForm("כֵּן", "so, thus"), OK),
+        new Word("כֵּן", "so, thus"),
         // 736
-        new Word(new WordForm("קָרָא", "he called"), WEAK)
-            .addForm(new WordForm("קָרָא", "he encountered, he met")), // 139 I don't think these roots are related
+        new Word("קָרָא", "he called"),
+        new Word("קָרָא", "he encountered, he met"), // 139 I don't think these roots are related
         // 729
-        new Word(new WordForm("אַל", "no, not (with imperfect) not at this time"), STRONG),
+        new Word("אַל", "no, not (with imperfect) not at this time"),
         // 712
-        new Word(new WordForm("דֶּרֶךּ", "way, road", MASCULINE, FEMININE), OK)
-            .addForm(new WordForm("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL)),
+        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE),
+        new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
         // 707
-        new Word(new WordForm("אַחַר", "after"), OK),
+        new Word("אַחַר", "after"),
         // 658
-        new Word(new WordForm("נָשָׂא", "he lifted, carried, took"), WEAK),
+        new Word("נָשָׂא", "he lifted, carried, took"),
         // 629
-        new Word(new WordForm("אָח", "brother", MASCULINE), OK)
-            .addForm(new WordForm("אֲחִי", "brother of", MASCULINE, CONSTRUCT))
-            .addForm(new WordForm("אַחִים", "brothers", MASCULINE, PLURAL))
-            .addForm(new WordForm("אָחוֹת", "sister", FEMININE)), // 119
+        new Word("אָח", "brother", MASCULINE),
+        new Word("אֲחִי", "brother of", MASCULINE, CONSTRUCT),
+        new Word("אַחִים", "brothers", MASCULINE, PLURAL),
+        new Word("אָחוֹת", "sister", FEMININE), // 119
         // 627
-        new Word(new WordForm("קָם", "he arose, stood - קוּם"), OK)
-            .addForm(new WordForm("מָקוֹם", "place", MASCULINE)) // 401
-            .addForm(new WordForm("מְקוֹמוֹת", "places", MASCULINE, PLURAL)),
+        new Word("קָם", "he arose, stood - קוּם"),
+        new Word("מָקוֹם", "place", MASCULINE), // 401
+        new Word("מְקוֹמוֹת", "places", MASCULINE, PLURAL),
         // 606
-        new Word(new WordForm("שָׁלשׁ", "three", MASCULINE), OK)
-            .addForm(new WordForm("שְׁלֹשִׁים", "thirty"))
-            .addForm(new WordForm("שְׁלִישִׁי", "third")),
+        new Word("שָׁלשׁ", "three", MASCULINE),
+        new Word("שְׁלֹשִׁים", "thirty"),
+        new Word("שְׁלִישִׁי", "third"),
         // 600
-        new Word(new WordForm("רֹאשׁ", "head", MASCULINE), OK)
-            .addForm(new WordForm("רָאשִׁים", "heads", MASCULINE, PLURAL)),
+        new Word("רֹאשׁ", "head", MASCULINE),
+        new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
         // 588
-        new Word(new WordForm("בַּת", "daughter", FEMININE), STRONG)
-            .addForm(new WordForm("בָּנוֹת", "daughters", FEMININE, PLURAL)),
+        new Word("בַּת", "daughter", FEMININE),
+        new Word("בָּנוֹת", "daughters", FEMININE, PLURAL),
         // 583
-        new Word(new WordForm("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL), OK)
-            .addForm(new WordForm("מֵי", "water", MASCULINE, SINGULAR, PLURAL, CONSTRUCT)),
-        new Word(new WordForm("מֵאָה", "hundred"), WEAK),
+        new Word("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL),
+        new Word("מֵי", "water", MASCULINE, SINGULAR, PLURAL, CONSTRUCT),
+        new Word("מֵאָה", "hundred"),
         // 577
-        new Word(new WordForm("כֹּה", "thus, here"), OK),
+        new Word("כֹּה", "thus, here"),
         // 560
-        new Word(new WordForm("גּוֹי", "nation", MASCULINE), OK)
-            .addForm(new WordForm("גּוֹיִם", "nations", MASCULINE, PLURAL)),
+        new Word("גּוֹי", "nation", MASCULINE),
+        new Word("גּוֹיִם", "nations", MASCULINE, PLURAL),
         // 559
-        new Word(new WordForm("הַר", "mountain", MASCULINE), OK)
-            .addForm(new WordForm("הָרִים", "mountains", MASCULINE, PLURAL)),
+        new Word("הַר", "mountain", MASCULINE),
+        new Word("הָרִים", "mountains", MASCULINE, PLURAL),
         // 554
-        new Word(new WordForm("עָבַר", "he passed over, passed through, passed by"), OK),
+        new Word("עָבַר", "he passed over, passed through, passed by"),
         // 545
-        new Word(new WordForm("אָדָם", "a man, humankind", MASCULINE), STRONG)
-            .addForm(new WordForm("אֲדָמָה", "land, ground, earth", FEMININE))
-            .addForm(new WordForm("אֲדָמוֹת", "lands, grounds", FEMININE, PLURAL)),
+        new Word("אָדָם", "a man, humankind", MASCULINE),
+        new Word("אֲדָמָה", "land, ground, earth", FEMININE),
+        new Word("אֲדָמוֹת", "lands, grounds", FEMININE, PLURAL),
         // 528
-        new Word(new WordForm("שָׂם", "he put, set - שִׂים"), OK),
+        new Word("שָׂם", "he put, set - שִׂים"),
         // 526
-        new Word(new WordForm("גָּדוֹל", "great"), WEAK)
-            .addForm(new WordForm("גָּדַל", "he grew up, became great, strong, wealthy, important")), // 117
+        new Word("גָּדוֹל", "great"),
+        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"), // 117
         // 524
-        new Word(new WordForm("עָמַד", "he stood"), OK),
+        new Word("עָמַד", "he stood"),
         // 511
-        new Word(new WordForm("תַּחַת", "under, instead of"), WEAK),
+        new Word("תַּחַת", "under, instead of"),
         // 508
-        new Word(new WordForm("חָמַשׁ", "five", MASCULINE), WEAK)
-            .addForm(new WordForm("חֲמִשִּׁים", "fifty")),
+        new Word("חָמַשׁ", "five", MASCULINE),
+        new Word("חֲמִשִּׁים", "fifty"),
         // 505
-        new Word(new WordForm("קוֹל", "voice, sound", MASCULINE), OK)
-            .addForm(new WordForm("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL)),
+        new Word("קוֹל", "voice, sound", MASCULINE),
+        new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
         // 501
-        new Word(new WordForm("הִכָּה", "he hit - נכה (he smote)", HIPHIL), WEAK),
+        new Word("הִכָּה", "he hit - נכה (he smote)", HIPHIL),
         // 498
-        new Word(new WordForm("פֶה", "mouth", MASCULINE), WEAK)
-            .addForm(new WordForm("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT))
-            .addForm(new WordForm("פִּיּוֹת", "mouths", MASCULINE, PLURAL)),
+        new Word("פֶה", "mouth", MASCULINE),
+        new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT),
+        new Word("פִּיּוֹת", "mouths", MASCULINE, PLURAL),
         // 496
-        new Word(new WordForm("צָבָא", "host, army, war, service", MASCULINE), OK)
-            .addForm(new WordForm("צְבָאוֹת", "hosts, armies, wars, services", MASCULINE, PLURAL)),
+        new Word("צָבָא", "host, army, war, service", MASCULINE),
+        new Word("צְבָאוֹת", "hosts, armies, wars, services", MASCULINE, PLURAL),
         // 496
-        new Word(new WordForm("צִוָּה", "he commanded"), OK),
+        new Word("צִוָּה", "he commanded"),
         // 495
-        new Word(new WordForm("יָלַד", "he bore, he begat"), OK),
+        new Word("יָלַד", "he bore, he begat"),
         // 494
-        new Word(new WordForm("אֶלֶף", "thousand"), WEAK),
+        new Word("אֶלֶף", "thousand"),
         // 492
-        new Word(new WordForm("עֶשֶׁר", "ten", MASCULINE), WEAK)
-            .addForm(new WordForm("עֲשָׂרָה", "ten", FEMININE))
-            .addForm(new WordForm("עֶשְׂרִים", "twenty")),
+        new Word("עֶשֶׁר", "ten", MASCULINE),
+        new Word("עֲשָׂרָה", "ten", FEMININE),
+        new Word("עֶשְׂרִים", "twenty"),
         // 491
-        new Word(new WordForm("שֶׁבַע", "seven", MASCULINE), OK)
-            .addForm(new WordForm("שִׁבְעִים", "seventy"))
-            .addForm(new WordForm("שָׁבַע", "he swore")), // 186
+        new Word("שֶׁבַע", "seven", MASCULINE),
+        new Word("שִׁבְעִים", "seventy"),
+        new Word("שָׁבַע", "he swore"), // 186
         // 491
-        new Word(new WordForm("עוֹד", "again, still, long"), OK),
+        new Word("עוֹד", "again, still, long"),
         // 470
-        new Word(new WordForm("קֹדֶש", "holiness, apartness, sacredness", MASCULINE), WEAK)
-            .addForm(new WordForm("קֳדָשִׁים", "holiness, apartness, sacredness", MASCULINE, PLURAL))
-            .addForm(new WordForm("קָדַשׁ", "he was consecrated, he consecrated")), // 171
+        new Word("קֹדֶש", "holiness, apartness, sacredness", MASCULINE),
+        new Word("קֳדָשִׁים", "holiness, apartness, sacredness", MASCULINE, PLURAL),
+        new Word("קָדַשׁ", "he was consecrated, he consecrated"), // 171
         // 469
-        new Word(new WordForm("שָׁמַר", "he guarded, watched, preserved"), OK),
+        new Word("שָׁמַר", "he guarded, watched, preserved"),
         // 457
-        new Word(new WordForm("מָצַה", "he found, reached, obtained"), OK),
+        new Word("מָצַה", "he found, reached, obtained"),
         // 456
-        new Word(new WordForm("אַרְבַּע", "four", MASCULINE), OK)
-            .addForm(new WordForm("אַרְבָּעִים", "forty"))
-            .addForm(new WordForm("רְבִיעִי", "fourth", MASCULINE)),
+        new Word("אַרְבַּע", "four", MASCULINE),
+        new Word("אַרְבָּעִים", "forty"),
+        new Word("רְבִיעִי", "fourth", MASCULINE),
         // 439
-        new Word(new WordForm("עוֹלָם", "forever", MASCULINE), OK)
-            .addForm(new WordForm("עוֹלָמִים", "forever", MASCULINE, PLURAL)),
+        new Word("עוֹלָם", "forever", MASCULINE),
+        new Word("עוֹלָמִים", "forever", MASCULINE, PLURAL),
         // 435
-        new Word(new WordForm("נָפַל", "he fell"), OK),
-        new Word(new WordForm("עַתָּה", "now"), OK)
-            .addForm(new WordForm("עַת", "time, point in time", FEMININE)), // 296
+        new Word("נָפַל", "he fell"),
+        new Word("עַתָּה", "now"),
+        new Word("עַת", "time, point in time", FEMININE), // 296
         // 424
-        new Word(new WordForm("מִשְׁפָת", "judgement, law", MASCULINE), OK)
-            .addForm(new WordForm("מִשׁפָּטִים", "judgements, laws", MASCULINE, PLURAL))
-            .addForm(new WordForm("שָׁפַת", "he judged")), // 204
-        new Word(new WordForm("מִי", "who?"), WEAK),
+        new Word("מִשְׁפָת", "judgement, law", MASCULINE),
+        new Word("מִשׁפָּטִים", "judgements, laws", MASCULINE, PLURAL),
+        new Word("שָׁפַת", "he judged"), // 204
+        new Word("מִי", "who?"),
         // 421
-        new Word(new WordForm("שַׂר", "prince, chief", MASCULINE), OK)
-            .addForm(new WordForm("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL)),
-        new Word(new WordForm("שָׁמַיִם", "heavens, sky", MASCULINE, SINGULAR, PLURAL), OK)
-            .addForm(new WordForm("שְׁמֵי", "heavens, sky", MASCULINE, CONSTRUCT)),
+        new Word("שַׂר", "prince, chief", MASCULINE),
+        new Word("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL),
+        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, SINGULAR, PLURAL),
+        new Word("שְׁמֵי", "heavens, sky", MASCULINE, CONSTRUCT),
         // 420
-        new Word(new WordForm("תָּוֶךּ", "midst"), WEAK),
+        new Word("תָּוֶךּ", "midst"),
         // 413
-        new Word(new WordForm("חֶרֶב", "sword", FEMININE), OK)
-            .addForm(new WordForm("חֲרָבוֹת", "swords", FEMININE, PLURAL)),
+        new Word("חֶרֶב", "sword", FEMININE),
+        new Word("חֲרָבוֹת", "swords", FEMININE, PLURAL),
         // 409
-        new Word(new WordForm("רַב", "great, many", MASCULINE), WEAK)
-            .addForm(new WordForm("רַבָּה", "great, many", FEMININE))
-            .addForm(new WordForm("רָבָה", "he was(became) great/many"))
-            .addForm(new WordForm("רֹב", "multitude, greatness", NOUN, MASCULINE)), // 150
-        new Word(new WordForm("בַּין", "between"), WEAK)
-            .addForm(new WordForm("בִּין", "he discerned, understood")), // 171
+        new Word("רַב", "great, many", MASCULINE),
+        new Word("רַבָּה", "great, many", FEMININE),
+        new Word("רָבָה", "he was(became) great/many"),
+        new Word("רֹב", "multitude, greatness", NOUN, MASCULINE), // 150
+        new Word("בַּין", "between"),
+        new Word("בִּין", "he discerned, understood"), // 171
         // 405
-        new Word(new WordForm("נָא", "please, now"), OK),
+        new Word("נָא", "please, now"),
         // 403
-        new Word(new WordForm("כֶּסֶף", "silver, money", MASCULINE), OK),
-        new Word(new WordForm("מִזְבֵּחַ", "alter", MASCULINE), OK)
-            .addForm(new WordForm("מִזְבְּחוֹת", "alters", MASCULINE, PLURAL)),
+        new Word("כֶּסֶף", "silver, money", MASCULINE),
+        new Word("מִזְבֵּחַ", "alter", MASCULINE),
+        new Word("מִזְבְּחוֹת", "alters", MASCULINE, PLURAL),
         // 396
-        new Word(new WordForm("יָם", "sea", MASCULINE), WEAK)
-            .addForm(new WordForm("יַמִּים", "seas", MASCULINE, PLURAL)),
+        new Word("יָם", "sea", MASCULINE),
+        new Word("יַמִּים", "seas", MASCULINE, PLURAL),
         // 389
-        new Word(new WordForm("זָהָב", "gold", MASCULINE), OK),
+        new Word("זָהָב", "gold", MASCULINE),
         // 382
-        new Word(new WordForm("יָרַד", "he went down"), STRONG),
+        new Word("יָרַד", "he went down"),
         // 377
-        new Word(new WordForm("בָּנָה", "he built"), OK),
-        new Word(new WordForm("אַשׁ", "fire", FEMININE), OK),
+        new Word("בָּנָה", "he built"),
+        new Word("אַשׁ", "fire", FEMININE),
         // 376
-        new Word(new WordForm("נְאֻם", "utterance", MASCULINE), OK),
+        new Word("נְאֻם", "utterance", MASCULINE),
         // 373
-        new Word(new WordForm("שַׁעַר", "gate", MASCULINE), OK)
-            .addForm(new WordForm("שְׁעָרִים", "gates", MASCULINE, PLURAL)),
-        new Word(new WordForm("טוֹב", "good", ADJECTIVE, MASCULINE, SINGULAR), STRONG)
-            .addForm(new WordForm("טוֹבָה", "good", ADJECTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("שַׁעַר", "gate", MASCULINE),
+        new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
+        new Word("טוֹב", "good", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("טוֹבָה", "good", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
         // 371
-        new Word(new WordForm("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL), OK),
+        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL),
         // 363
-        new Word(new WordForm("רוּחַ", "spirit, breath, wind", FEMININE), STRONG)
-            .addForm(new WordForm("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL)),
+        new Word("רוּחַ", "spirit, breath, wind", FEMININE),
+        new Word("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL),
         // 361
-        new Word(new WordForm("דָּם", "blood", MASCULINE), OK)
-            .addForm(new WordForm("דָּמִים", "bloods", MASCULINE, PLURAL)),
+        new Word("דָּם", "blood", MASCULINE),
+        new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
-        new Word(new WordForm("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR), OK)
-            .addForm(new WordForm("רָעָה", "bad, evil", ADJECTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רָעָה", "bad, evil", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL),
         // 348
-        new Word(new WordForm("אֹהֶל", "tent", MASCULINE), OK)
-            .addForm(new WordForm("אֹהָלִים", "tents", MASCULINE, PLURAL)),
+        new Word("אֹהֶל", "tent", MASCULINE),
+        new Word("אֹהָלִים", "tents", MASCULINE, PLURAL),
         // 338
-        new Word(new WordForm("סָבִיב", "all around"), OK)
-            .addForm(new WordForm("סָבַב", "he turned around, went around, surrounded")), // 163
+        new Word("סָבִיב", "all around"),
+        new Word("סָבַב", "he turned around, went around, surrounded"), // 163
         // 330
-        new Word(new WordForm("עֵץ", "tree", MASCULINE), OK)
-            .addForm(new WordForm("עֵצִים", "trees", MASCULINE, PLURAL)),
+        new Word("עֵץ", "tree", MASCULINE),
+        new Word("עֵצִים", "trees", MASCULINE, PLURAL),
         // 327
-        new Word(new WordForm("בֵּרַךּ", "he blessed - ברך (he knelt, he blessed)", PIEL), OK),
+        new Word("בֵּרַךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
         // 325
-        new Word(new WordForm("כְּלִי", "utensil, weapon", MASCULINE), OK)
-            .addForm(new WordForm("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL)),
+        new Word("כְּלִי", "utensil, weapon", MASCULINE),
+        new Word("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL),
         // 321
-        new Word(new WordForm("שָׂדֶה", "open field, country", MASCULINE), STRONG)
-            .addForm(new WordForm("שָׂדוֹת", "open fields, country", MASCULINE, PLURAL)),
-        new Word(new WordForm("אוֹ", "or"), OK),
+        new Word("שָׂדֶה", "open field, country", MASCULINE),
+        new Word("שָׂדוֹת", "open fields, country", MASCULINE, PLURAL),
+        new Word("אוֹ", "or"),
         // 319
-        new Word(new WordForm("מִלְחָמָה", "war, battle", FEMININE), OK)
-            .addForm(new WordForm("מִלְחָמוֹת", "wars, battles", FEMININE, PLURAL))
-            .addForm(new WordForm("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL)), // 171
+        new Word("מִלְחָמָה", "war, battle", FEMININE),
+        new Word("מִלְחָמוֹת", "wars, battles", FEMININE, PLURAL),
+        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL), // 171
         // 318
-        new Word(new WordForm("יָרֵא", "he feared"), WEAK),
+        new Word("יָרֵא", "he feared"),
         // 317
-        new Word(new WordForm("עָנָה", "he answered"), OK),
-        new Word(new WordForm("נָבִיא", "prophet", MASCULINE), OK)
-            .addForm(new WordForm("נְבִיאִים", "prophets", MASCULINE, PLURAL))
-            .addForm(new WordForm("נִבָּא", "he prophisied - נָבָא", NIPHAL)), // 115
+        new Word("עָנָה", "he answered"),
+        new Word("נָבִיא", "prophet", MASCULINE),
+        new Word("נְבִיאִים", "prophets", MASCULINE, PLURAL),
+        new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL), // 115
         // 311
-        new Word(new WordForm("רָעָה", "evil, misery, distress", NOUN, FEMININE), WEAK),
+        new Word("רָעָה", "evil, misery, distress", NOUN, FEMININE),
         // 304
-        new Word(new WordForm("פָּקַד", "he attended to, appointed, mustered, visited"), WEAK),
-        new Word(new WordForm("מִשְׁפָּחָה", "family", FEMININE), OK)
-            .addForm(new WordForm("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL)),
+        new Word("פָּקַד", "he attended to, appointed, mustered, visited"),
+        new Word("מִשְׁפָּחָה", "family", FEMININE),
+        new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL),
         // 298
-        new Word(new WordForm("סָר", "he turned aside - סור"), WEAK),
-        new Word(new WordForm("חַטָּאת", "sin, sin offering", FEMININE), OK)
-            .addForm(new WordForm("חָטָא", "he sinned, he missed")), // 239
-        new Word(new WordForm("לֶחֶם", "bread, food", MASCULINE), STRONG),
-        new Word(new WordForm("מְאֹד", "very"),STRONG),
+        new Word("סָר", "he turned aside - סור"),
+        new Word("חַטָּאת", "sin, sin offering", FEMININE),
+        new Word("חָטָא", "he sinned, he missed"), // 239
+        new Word("לֶחֶם", "bread, food", MASCULINE),
+        new Word("מְאֹד", "very"),
         // 290
-        new Word(new WordForm("חָזַק", "he was strong"), OK),
+        new Word("חָזַק", "he was strong"),
         // 289
-        new Word(new WordForm("כָּרַת", "he cut off"), WEAK),
+        new Word("כָּרַת", "he cut off"),
         // 288
-        new Word(new WordForm("עֹלָה", "whole burnt offering", FEMININE), WEAK)
-            .addForm(new WordForm("עֹלוֹת", "whole burnt offerings", FEMININE, PLURAL)),
+        new Word("עֹלָה", "whole burnt offering", FEMININE),
+        new Word("עֹלוֹת", "whole burnt offerings", FEMININE, PLURAL),
         // 287
-        new Word(new WordForm("חָיָה", "he lived"), STRONG)
-            .addForm(new WordForm("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL)), // 268
+        new Word("חָיָה", "he lived"),
+        new Word("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL), // 268
         // 285
-        new Word(new WordForm("אֹיֵב", "enemy", MASCULINE), WEAK)
-            .addForm(new WordForm("אָיַב", "he was hostile")),
-        new Word(new WordForm("בְּרִית", "covenant", FEMININE), OK),
+        new Word("אֹיֵב", "enemy", MASCULINE),
+        new Word("אָיַב", "he was hostile"),
+        new Word("בְּרִית", "covenant", FEMININE),
         // 283
-        new Word(new WordForm("חֹדֶשׁ", "month, new moon", MASCULINE), WEAK)
-            .addForm(new WordForm("חֳדָשִׁים", "months, new moons", MASCULINE, PLURAL)),
+        new Word("חֹדֶשׁ", "month, new moon", MASCULINE),
+        new Word("חֳדָשִׁים", "months, new moons", MASCULINE, PLURAL),
         // 280
-        new Word(new WordForm("קָרַב", "he came near, he offered"), WEAK)
-            .addForm(new WordForm("קֶרֶב", "midst, inward part", MASCULINE)),
+        new Word("קָרַב", "he came near, he offered"),
+        new Word("קֶרֶב", "midst, inward part", MASCULINE),
         // 277
-        new Word(new WordForm("אַף", "nose, anger", MASCULINE), OK)
-            .addForm(new WordForm("אַפַּיִם", "noses, anger", MASCULINE, PLURAL)),
+        new Word("אַף", "nose, anger", MASCULINE),
+        new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
         // 274
-        new Word(new WordForm("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL), OK),
-        new Word(new WordForm("שַׁשׁ", "six", MASCULINE), WEAK)
-            .addForm(new WordForm("שׁשִּׁים", "sixty")),
+        new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL),
+        new Word("שַׁשׁ", "six", MASCULINE),
+        new Word("שׁשִּׁים", "sixty"),
         // 272
-        new Word(new WordForm("אֶבֶן", "stone", FEMININE), STRONG)
-            .addForm(new WordForm("אֲבָנִים", "stones", FEMININE, PLURAL)),
-        new Word(new WordForm("לְמַעַן", "because of, in order to, for the sake of"), OK),
+        new Word("אֶבֶן", "stone", FEMININE),
+        new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
+        new Word("לְמַעַן", "because of, in order to, for the sake of"),
         // 270
-        new Word(new WordForm("בָּשָׂר", "flesh, meat, skin", MASCULINE), OK)
-            .addForm(new WordForm("בְּשָׂרִים", "fleshes, meats, skins", MASCULINE, PLURAL)),
-        new Word(new WordForm("מִדְבָּר", "wilderness, desert, pasture", MASCULINE), STRONG),
+        new Word("בָּשָׂר", "flesh, meat, skin", MASCULINE),
+        new Word("בְּשָׂרִים", "fleshes, meats, skins", MASCULINE, PLURAL),
+        new Word("מִדְבָּר", "wilderness, desert, pasture", MASCULINE),
         // 264
-        new Word(new WordForm("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR), WEAK)
-            .addForm(new WordForm("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("רְשָׁעָה", "wicked", ADJECTIVE, FEMININE, SINGULAR)),
+        new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רְשָׁעָה", "wicked", ADJECTIVE, FEMININE, SINGULAR),
         // 252
-        new Word(new WordForm("מַטֶּה", "tribe, staff", MASCULINE), WEAK)
-            .addForm(new WordForm("מָטּוֹת", "tribes, staffs", MASCULINE, PLURAL)),
+        new Word("מַטֶּה", "tribe, staff", MASCULINE),
+        new Word("מָטּוֹת", "tribes, staffs", MASCULINE, PLURAL),
         // 251
-        new Word(new WordForm("רֶגֶל", "foot", FEMININE), OK)
-            .addForm(new WordForm("רַגְלַיִם", "feet", FEMININE, DUAL)),
+        new Word("רֶגֶל", "foot", FEMININE),
+        new Word("רַגְלַיִם", "feet", FEMININE, DUAL),
         // 250
-        new Word(new WordForm("מָלֵא", "he filled"), WEAK),
-        new Word(new WordForm("אַמָּה", "cubit, forearm", FEMININE), WEAK)
-            .addForm(new WordForm("אַמּוֹת", "cubits, forearms", FEMININE, PLURAL)),
+        new Word("מָלֵא", "he filled"),
+        new Word("אַמָּה", "cubit, forearm", FEMININE),
+        new Word("אַמּוֹת", "cubits, forearms", FEMININE, PLURAL),
         // 249
-        new Word(new WordForm("חֶסֶד", "loving kindness, steadfast love", MASCULINE), STRONG)
-            .addForm(new WordForm("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL)),
+        new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE),
+        new Word("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL),
         // 245
-        new Word(new WordForm("חַיַל", "strength, wealth, army", MASCULINE), WEAK)
-            .addForm(new WordForm("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL)),
+        new Word("חַיַל", "strength, wealth, army", MASCULINE),
+        new Word("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL),
         // 241
-        new Word(new WordForm("גְּבוּל", "border, boundary, territory", MASCULINE), WEAK),
+        new Word("גְּבוּל", "border, boundary, territory", MASCULINE),
         // 240
-        new Word(new WordForm("נַעַר", "boy, youth", MASCULINE), STRONG)
-            .addForm(new WordForm("נְעָרִים", "boys, youths", MASCULINE, PLURAL)),
+        new Word("נַעַר", "boy, youth", MASCULINE),
+        new Word("נְעָרִים", "boys, youths", MASCULINE, PLURAL),
         // 237
-        new Word(new WordForm("שָׁלוֹם", "peace, completeness", MASCULINE), WEAK)
-            .addForm(new WordForm("שָׁלֵם", "he was whole, complete")) // 116
-            .addForm(new WordForm("שִׁלַּם", "he repaid - שָׁלֵם", PIEL))
-            .addForm(new WordForm("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL)),
+        new Word("שָׁלוֹם", "peace, completeness", MASCULINE),
+        new Word("שָׁלֵם", "he was whole, complete"), // 116
+        new Word("שִׁלַּם", "he repaid - שָׁלֵם", PIEL),
+        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL),
         // 233
-        new Word(new WordForm("עָוֹן", "iniquity", MASCULINE), OK)
-            .addForm(new WordForm("עֲוֹנוֹת", "iniquities", MASCULINE, PLURAL)),
+        new Word("עָוֹן", "iniquity", MASCULINE),
+        new Word("עֲוֹנוֹת", "iniquities", MASCULINE, PLURAL),
         // 232
-        new Word(new WordForm("יָרַשׁ", "he inherited, he possessed, he dispossessed"), OK),
+        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed"),
         // 229
-        new Word(new WordForm("זֶרַע", "seed", MASCULINE), OK),
+        new Word("זֶרַע", "seed", MASCULINE),
         // 227
-        new Word(new WordForm("לַיְלָה", "night", MASCULINE), STRONG)
-            .addForm(new WordForm("לֵילוֹת", "nights", MASCULINE, PLURAL)),
+        new Word("לַיְלָה", "night", MASCULINE),
+        new Word("לֵילוֹת", "nights", MASCULINE, PLURAL),
         // 225
-        new Word(new WordForm("בִּקֵּשׁ", "he sought", PIEL), WEAK),
-        new Word(new WordForm("זָכַר", "he remembered"), OK),
-        new Word(new WordForm("כָּתַב", "he wrote"), WEAK),
+        new Word("בִּקֵּשׁ", "he sought", PIEL),
+        new Word("זָכַר", "he remembered"),
+        new Word("כָּתַב", "he wrote"),
         // 223
-        new Word(new WordForm("מוֹעַד", "appointed time, place", MASCULINE), OK)
-            .addForm(new WordForm("מוֹעֲדִים", "appointed times, places", MASCULINE, PLURAL)),
-        new Word(new WordForm("תּוֹרָה", "law, instruction", FEMININE), STRONG)
-            .addForm(new WordForm("תּוֹרוֹת", "laws, instructions", FEMININE, PLURAL)),
+        new Word("מוֹעַד", "appointed time, place", MASCULINE),
+        new Word("מוֹעֲדִים", "appointed times, places", MASCULINE, PLURAL),
+        new Word("תּוֹרָה", "law, instruction", FEMININE),
+        new Word("תּוֹרוֹת", "laws, instructions", FEMININE, PLURAL),
         // 222
-        new Word(new WordForm("נַחֲלָה", "possession", FEMININE), WEAK)
-            .addForm(new WordForm("נְחָלוֹת", "possessions", FEMININE, PLURAL)),
+        new Word("נַחֲלָה", "possession", FEMININE),
+        new Word("נְחָלוֹת", "possessions", FEMININE, PLURAL),
         // 220
-        new Word(new WordForm("אֵם", "mother", FEMININE), OK),
+        new Word("אֵם", "mother", FEMININE),
         // 219
-        new Word(new WordForm("נָכְוֹן", "he was firm, established, prepared", NIPHAL), WEAK),
+        new Word("נָכְוֹן", "he was firm, established, prepared", NIPHAL),
         // 217
-        new Word(new WordForm("אָהַב", "he loved"), OK),
-        new Word(new WordForm("שָׁתָה", "he drank"), WEAK),
+        new Word("אָהַב", "he loved"),
+        new Word("שָׁתָה", "he drank"),
         // 216
-        new Word(new WordForm("נָטָה", "he stretched out"), WEAK),
-        new Word(new WordForm("בֶּגֶד", "garmet", MASCULINE), OK)
-            .addForm(new WordForm("בְּגָדִים", "garmets", MASCULINE, PLURAL)),
+        new Word("נָטָה", "he stretched out"),
+        new Word("בֶּגֶד", "garmet", MASCULINE),
+        new Word("בְּגָדִים", "garmets", MASCULINE, PLURAL),
         // 215
-        new Word(new WordForm("יָסַף", "he added, he did again"), OK),
-        new Word(new WordForm("מַחֲנֶה", "camp", MASCULINE, FEMININE), WEAK)
-            .addForm(new WordForm("מַחַנוֹת", "camps", MASCULINE, FEMININE, PLURAL)),
+        new Word("יָסַף", "he added, he did again"),
+        new Word("מַחֲנֶה", "camp", MASCULINE, FEMININE),
+        new Word("מַחַנוֹת", "camps", MASCULINE, FEMININE, PLURAL),
         // 214
-        new Word(new WordForm("עָזַב", "he forsook, left"), WEAK),
+        new Word("עָזַב", "he forsook, left"),
         // 213
-        new Word(new WordForm("הִצִּיל", "he saved, delivered - נצל", HIPHIL), WEAK),
-        new Word(new WordForm("שָׁכַב", "he layed down, he had sex"), WEAK),
-        new Word(new WordForm("בֹּקֶר", "morning", MASCULINE), OK)
-            .addForm(new WordForm("בְּקָרִים", "mornings", MASCULINE, PLURAL)),
-        new Word(new WordForm("מַלְאָךּ", "messenger", MASCULINE), WEAK)
-            .addForm(new WordForm("מַלְאָכִים", "messengers", MASCULINE, PLURAL)),
+        new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL),
+        new Word("שָׁכַב", "he layed down, he had sex"),
+        new Word("בֹּקֶר", "morning", MASCULINE),
+        new Word("בְּקָרִים", "mornings", MASCULINE, PLURAL),
+        new Word("מַלְאָךּ", "messenger", MASCULINE),
+        new Word("מַלְאָכִים", "messengers", MASCULINE, PLURAL),
         // 211
-        new Word(new WordForm("מִנְחָה", "gift, tribute, offering", FEMININE), WEAK),
+        new Word("מִנְחָה", "gift, tribute, offering", FEMININE),
         // 208
-        new Word(new WordForm("כָּלָה", "he was complete, finished, he came to an end"), WEAK),
+        new Word("כָּלָה", "he was complete, finished, he came to an end"),
         // 206
-        new Word(new WordForm("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE), WEAK)
-            .addForm(new WordForm("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("צְדָקָה", "righteousness", FEMININE)), // 159
+        new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE),
+        new Word("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("צְדָקָה", "righteousness", FEMININE), // 159
         // 202
-        new Word(new WordForm("אֲרוֹן", "ark, chest", MASCULINE), WEAK),
+        new Word("אֲרוֹן", "ark, chest", MASCULINE),
         // 200
-        new Word(new WordForm("אָסַף", "he gathered"), OK),
+        new Word("אָסַף", "he gathered"),
         // 199
-        new Word(new WordForm("כָּבוֹד", "abundance, honor, glory", MASCULINE), WEAK)
-            .addForm(new WordForm("כָּבֵד", "he was heavy, he was honored")), // 114
+        new Word("כָּבוֹד", "abundance, honor, glory", MASCULINE),
+        new Word("כָּבֵד", "he was heavy, he was honored"), // 114
         // 195
-        new Word(new WordForm("רוּם", "he was high, exalted"), WEAK),
-        new Word(new WordForm("כַּף", "palm of the hand, sole of the foot", FEMININE), WEAK)
-            .addForm(new WordForm("כַּפוֹת", "palms of the hands, soles of the feet", FEMININE, PLURAL)),
+        new Word("רוּם", "he was high, exalted"),
+        new Word("כַּף", "palm of the hand, sole of the foot", FEMININE),
+        new Word("כַּפוֹת", "palms of the hands, soles of the feet", FEMININE, PLURAL),
         // 194
-        new Word(new WordForm("יָכוֹל", "he was able"), WEAK),
+        new Word("יָכוֹל", "he was able"),
         // 193
-        new Word(new WordForm("שֶׁמֶן", "fat, oil", MASCULINE), OK)
-            .addForm(new WordForm("שְמָנִים", "fats, oils", MASCULINE, PLURAL)),
+        new Word("שֶׁמֶן", "fat, oil", MASCULINE),
+        new Word("שְמָנִים", "fats, oils", MASCULINE, PLURAL),
         // 191
-        new Word(new WordForm("חֲצֵרִים", "settlements, villages", MASCULINE, SINGULAR, PLURAL), WEAK),
+        new Word("חֲצֵרִים", "settlements, villages", MASCULINE, SINGULAR, PLURAL),
         // 190
-        new Word(new WordForm("בְּהֵמָה", "beast", FEMININE), OK)
-            .addForm(new WordForm("בְּהֵמוֹת", "beasts", FEMININE, PLURAL)),
-        new Word(new WordForm("שָׁבֶט", "scepter, rod, tribe", MASCULINE), WEAK)
-            .addForm(new WordForm("שְׁבָטִים", "scepters, rods, tribes", MASCULINE, PLURAL)),
+        new Word("בְּהֵמָה", "beast", FEMININE),
+        new Word("בְּהֵמוֹת", "beasts", FEMININE, PLURAL),
+        new Word("שָׁבֶט", "scepter, rod, tribe", MASCULINE),
+        new Word("שְׁבָטִים", "scepters, rods, tribes", MASCULINE, PLURAL),
         // 188
-        new Word(new WordForm("אֹזֶן", "ear", FEMININE), WEAK)
-            .addForm(new WordForm("אָזְנַיִם", "ears", FEMININE, DUAL)),
+        new Word("אֹזֶן", "ear", FEMININE),
+        new Word("אָזְנַיִם", "ears", FEMININE, DUAL),
         // 187
-        new Word(new WordForm("גָלָה", "he removed, uncovered, departed"), ZERO),
-        new Word(new WordForm("סֵפֶר", "document, book", MASCULINE), WEAK)
-            .addForm(new WordForm("סְפָרִים", "documents, books", MASCULINE, PLURAL))
-            .addForm(new WordForm("מִסְפָּר", "number", NOUN, MASCULINE)) // 134
-            .addForm(new WordForm("סָפַר", "he counted")), // 107
-        new Word(new WordForm("רֵעַ", "friend, companion, fellow", MASCULINE), ZERO)
-            .addForm(new WordForm("רֵעִים", "friends, companions, fellows", MASCULINE, PLURAL)),
+        new Word("גָלָה", "he removed, uncovered, departed"),
+        new Word("סֵפֶר", "document, book", MASCULINE),
+        new Word("סְפָרִים", "documents, books", MASCULINE, PLURAL),
+        new Word("מִסְפָּר", "number", NOUN, MASCULINE), // 134
+        new Word("סָפַר", "he counted"), // 107
+        new Word("רֵעַ", "friend, companion, fellow", MASCULINE),
+        new Word("רֵעִים", "friends, companions, fellows", MASCULINE, PLURAL),
         // 185
-        new Word(new WordForm("אָבַד", "he perished, he vanished, he became lost"), ZERO),
+        new Word("אָבַד", "he perished, he vanished, he became lost"),
         // 184
-        new Word(new WordForm("מִצְוָה", "commandment", FEMININE), WEAK)
-            .addForm(new WordForm("מִצְוֹת", "commandments", FEMININE, PLURAL)),
+        new Word("מִצְוָה", "commandment", FEMININE),
+        new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
         // 183
-        new Word(new WordForm("בָּקָר", "cattle, herd, ox", MASCULINE), ZERO)
-            .addForm(new WordForm("בְּקָרִים", "herds, oxen", MASCULINE, PLURAL)),
+        new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
+        new Word("בְּקָרִים", "herds, oxen", MASCULINE, PLURAL),
         // 182
-        new Word(new WordForm("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE), OK)
-            .addForm(new WordForm("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("רִאשֹׁנָה", "first, former", ADJECTIVE, FEMININE))
-            .addForm(new WordForm("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
+        new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("רִאשֹׁנָה", "first, former", ADJECTIVE, FEMININE),
+        new Word("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL),
         // 179
-        new Word(new WordForm("זָקֵן", "old", ADJECTIVE, MASCULINE), OK)
-            .addForm(new WordForm("זְקֵנִים", "old", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("זְקֵנוֹת", "old", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("זָקֵן", "old", ADJECTIVE, MASCULINE),
+        new Word("זְקֵנִים", "old", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("זְקֵנוֹת", "old", ADJECTIVE, FEMININE, PLURAL),
         // 178
-        new Word(new WordForm("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL), ZERO),
-        new Word(new WordForm("שָֹפָה", "lip, language, edge, shore", FEMININE), ZERO)
-            .addForm(new WordForm("שְׂפָתַיִם", "lips, languages, edges, shores", FEMININE, DUAL)),
-        new Word(new WordForm("לָמָּה", "why?"), ZERO),
+        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL),
+        new Word("שָֹפָה", "lip, language, edge, shore", FEMININE),
+        new Word("שְׂפָתַיִם", "lips, languages, edges, shores", FEMININE, DUAL),
+        new Word("לָמָּה", "why?"),
         // 174
-        new Word(new WordForm("שָאַל", "he asked"), ZERO),
+        new Word("שָאַל", "he asked"),
         // 173
-        new Word(new WordForm("שָׁחָה", "he bowed down"), ZERO),
+        new Word("שָׁחָה", "he bowed down"),
         // 170
-        new Word(new WordForm("בָּחַר", "he chose, tested, examined"), ZERO),
+        new Word("בָּחַר", "he chose, tested, examined"),
         // 167
-        new Word(new WordForm("הָרַג", "he attacked, he slew"), ZERO),
-        new Word(new WordForm("רָעָה", "he pastured, tended, grazed"), ZERO),
-        new Word(new WordForm("דּוֹר", "period, generation, dwelling", MASCULINE), WEAK)
-            .addForm(new WordForm("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL)),
-        new Word(new WordForm("מְלָאכָה", "work, occupation", FEMININE), WEAK)
-            .addForm(new WordForm("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL)),
+        new Word("הָרַג", "he attacked, he slew"),
+        new Word("רָעָה", "he pastured, tended, grazed"),
+        new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
+        new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
+        new Word("מְלָאכָה", "work, occupation", FEMININE),
+        new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL),
         // 166
-        new Word(new WordForm("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR), WEAK)
-            .addForm(new WordForm("אֲחֵרִים", "another", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("אֲחֵרִים", "another", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL),
         // 165
-        new Word(new WordForm("דָּרַשׁ", "he sought, inquired, investigated, required, demanded"), ZERO),
+        new Word("דָּרַשׁ", "he sought, inquired, investigated, required, demanded"),
         // 164
-        new Word(new WordForm("חוּץ", "outside, street", NOUN, MASCULINE), ZERO),
-        new Word(new WordForm("פֶּתַח", "opening, doorway, entrace", MASCULINE), WEAK)
-            .addForm(new WordForm("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL))
-            .addForm(new WordForm("פָּתַח", "he opened")), // 136
+        new Word("חוּץ", "outside, street", NOUN, MASCULINE),
+        new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE),
+        new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
+        new Word("פָּתַח", "he opened"), // 136
         // 162
-        new Word(new WordForm("טָמֵא", "he was/became unclean"), ZERO),
-        new Word(new WordForm("זֶבַח", "sacrifice", NOUN, MASCULINE), ZERO),
+        new Word("טָמֵא", "he was/became unclean"),
+        new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
         // 161
-        new Word(new WordForm("אַיִל", "ram", NOUN, MASCULINE), ZERO),
-        new Word(new WordForm("בַּד", "alone"), ZERO),
-        new Word(new WordForm("אַך", "only, surely, nevertheless"), ZERO),
-        new Word(new WordForm("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE), OK),
+        new Word("אַיִל", "ram", NOUN, MASCULINE),
+        new Word("בַּד", "alone"),
+        new Word("אַך", "only, surely, nevertheless"),
+        new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
         // 160
-        new Word(new WordForm("נוּס", "he fled, he escaped"), ZERO),
-        new Word(new WordForm("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE), ZERO)
-            .addForm(new WordForm("גִּּבּוֹר", "mighty", ADJECTIVE)),
+        new Word("נוּס", "he fled, he escaped"),
+        new Word("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE),
+        new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
         // 156
-        new Word(new WordForm("שָׂמַח", "he rejoiced, he was glad"), ZERO),
+        new Word("שָׂמַח", "he rejoiced, he was glad"),
         // 153
-        new Word(new WordForm("צָפוֹן", "north, northern", FEMININE), ZERO),
-        new Word(new WordForm("כָּסָה", "he covered"), ZERO),
+        new Word("צָפוֹן", "north, northern", FEMININE),
+        new Word("כָּסָה", "he covered"),
         // 151
-        new Word(new WordForm("נֶגֶד", "opposite, in front of"), ZERO),
+        new Word("נֶגֶד", "opposite, in front of"),
         // 150
-        new Word(new WordForm("נָגַע", "he touched, struck, escaped"), ZERO),
+        new Word("נָגַע", "he touched, struck, escaped"),
         // 149
-        new Word(new WordForm("עֵדָה", "congregation, assembly", FEMININE), ZERO),
-        new Word(new WordForm("חָכְמָה", "wisdom", FEMININE), WEAK)
-            .addForm(new WordForm("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR))
-            .addForm(new WordForm("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL))
-            .addForm(new WordForm("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR))
-            .addForm(new WordForm("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL)),
+        new Word("עֵדָה", "congregation, assembly", FEMININE),
+        new Word("חָכְמָה", "wisdom", FEMININE),
+        new Word("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
+        new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
         // 148
-        new Word(new WordForm("שָׁבַר", "he broke (up), smashed"), ZERO),
-        new Word(new WordForm("שָׂנֵא", "he hated"), ZERO),
+        new Word("שָׁבַר", "he broke (up), smashed"),
+        new Word("שָׂנֵא", "he hated"),
         // 147
-        new Word(new WordForm("שְׁמֹנֶה", "eight", MASCULINE), ZERO)
-            .addForm(new WordForm("שְׁמֹנִים", "eighty")),
+        new Word("שְׁמֹנֶה", "eight", MASCULINE),
+        new Word("שְׁמֹנִים", "eighty"),
         // 146
-        new Word(new WordForm("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"), ZERO),
-        new Word(new WordForm("הִלֵּל", "he praised – הָלַל", PIEL), ZERO),
+        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"),
+        new Word("הִלֵּל", "he praised – הָלַל", PIEL),
         // 144
-        new Word(new WordForm("רָדַף", "he pursued, followed after, persecuted"), ZERO),
+        new Word("רָדַף", "he pursued, followed after, persecuted"),
         // 143
-        new Word(new WordForm("חָנָה", "he declined, camped, lay seige to"), ZERO),
+        new Word("חָנָה", "he declined, camped, lay seige to"),
         // 142
-        new Word(new WordForm("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL), ZERO)
-            .addForm(new WordForm("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL))
-            .addForm(new WordForm("הִשְׁהִית", "he destroyed", HIPHIL)),
+        new Word("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL),
+        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL),
+        new Word("הִשְׁהִית", "he destroyed", HIPHIL),
         // 141
-        new Word(new WordForm("אָז", "then, since, before"), ZERO),
-        new Word(new WordForm("יַיִן", "wine", MASCULINE), ZERO),
-        new Word(new WordForm("יָמִין", "right hand, south", FEMININE), ZERO),
-        new Word(new WordForm("כְּמוֹ", "like, as"), ZERO),
+        new Word("אָז", "then, since, before"),
+        new Word("יַיִן", "wine", MASCULINE),
+        new Word("יָמִין", "right hand, south", FEMININE),
+        new Word("כְּמוֹ", "like, as"),
         // 140
-        new Word(new WordForm("נוּחַ", "he rested, settled down"), ZERO)
-            .addForm(new WordForm("הֵנִיחַ", "he gave rest to, he set down", HIPHIL)),
+        new Word("נוּחַ", "he rested, settled down"),
+        new Word("הֵנִיחַ", "he gave rest to, he set down", HIPHIL),
         // 139
-        new Word(new WordForm("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"), ZERO),
-        new Word(new WordForm("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE), ZERO),
-        new Word(new WordForm("נְחֹשֶׁת", "copper, bronze", MASCULINE), ZERO),
+        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
+        new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
+        new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE),
         // 138
-        new Word(new WordForm("סוּס", "horse", MASCULINE), OK)
-            .addForm(new WordForm("סוּסִים", "horses", MASCULINE, PLURAL)),
+        new Word("סוּס", "horse", MASCULINE),
+        new Word("סוּסִים", "horses", MASCULINE, PLURAL),
         // 137
-        new Word(new WordForm("נַחַל", "stream, wadi", MASCULINE), ZERO),
+        new Word("נַחַל", "stream, wadi", MASCULINE),
         // 135
-        new Word(new WordForm("כִּסֵּא", "chair, throne", MASCULINE), ZERO),
-        new Word(new WordForm("הֵחֵל", "he began – חָלַל", HIPHIL), ZERO)
-            .addForm(new WordForm("נִחָל", "he was defiled – חָלַל", NIPHAL))
-            .addForm(new WordForm("חִלֵּל", "he polluted, profaned – חָלַל", PIEL)),
+        new Word("כִּסֵּא", "chair, throne", MASCULINE),
+        new Word("הֵחֵל", "he began – חָלַל", HIPHIL),
+        new Word("נִחָל", "he was defiled – חָלַל", NIPHAL),
+        new Word("חִלֵּל", "he polluted, profaned – חָלַל", PIEL),
         // 134
-        new Word(new WordForm("שֶׁמֶשׁ", "sun", MASCULINE), ZERO),
-        new Word(new WordForm("זָבַח", "he slaughtered, sacrificed"), ZERO),
-        new Word(new WordForm("פָּנָה", "he turned"), ZERO),
-        new Word(new WordForm("עֶרֶב", "evening, sunset", MASCULINE), ZERO),
+        new Word("שֶׁמֶשׁ", "sun", MASCULINE),
+        new Word("זָבַח", "he slaughtered, sacrificed"),
+        new Word("פָּנָה", "he turned"),
+        new Word("עֶרֶב", "evening, sunset", MASCULINE),
         // 133
-        new Word(new WordForm("קָבַר", "he buried"), ZERO),
-        new Word(new WordForm("אַף", "also, indeed, even"), ZERO),
-        new Word(new WordForm("פֶּן–", "lest, otherwise"), ZERO),
-        new Word(new WordForm("פַּר", "bull, ox, steer", MASCULINE), ZERO),
-        new Word(new WordForm("שָׁאַר", "he remained, was left over, survived"), ZERO),
-        new Word(new WordForm("שָׁכַן", "he settled, abode, dwelt, inhabited"), ZERO),
-        new Word(new WordForm("חוֹמָה", "wall", FEMININE), ZERO),
+        new Word("קָבַר", "he buried"),
+        new Word("אַף", "also, indeed, even"),
+        new Word("פֶּן–", "lest, otherwise"),
+        new Word("פַּר", "bull, ox, steer", MASCULINE),
+        new Word("שָׁאַר", "he remained, was left over, survived"),
+        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited"),
+        new Word("חוֹמָה", "wall", FEMININE),
         // 131
-        new Word(new WordForm("חֹק", "statute, appointed time, portion", MASCULINE), ZERO),
+        new Word("חֹק", "statute, appointed time, portion", MASCULINE),
         // 130
-        new Word(new WordForm("נָשִׂיא", "chief, leader, prince", MASCULINE), ZERO),
+        new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
         // 127
-        new Word(new WordForm("אֶמֶת", "truth, fidelity", FEMININE), WEAK),
-        new Word(new WordForm("קָבַץ", "he collected, gathered, assembled"), ZERO),
+        new Word("אֶמֶת", "truth, fidelity", FEMININE),
+        new Word("קָבַץ", "he collected, gathered, assembled"),
         // 126
-        new Word(new WordForm("כֹּחַ", "strength, power", MASCULINE), ZERO),
-        new Word(new WordForm("עֶצֶם", "bone, skeleton", FEMININE), ZERO),
+        new Word("כֹּחַ", "strength, power", MASCULINE),
+        new Word("עֶצֶם", "bone, skeleton", FEMININE),
         // 125
-        new Word(new WordForm("בּוֹשׁ", "he was ashamed"), ZERO),
-        new Word(new WordForm("נָגַשׁ", "he drew near, approached"), ZERO),
-        new Word(new WordForm("חֵמָה", "wrath, heat, poison", FEMININE), ZERO),
-        new Word(new WordForm("חֲצִי", "half, middle", MASCULINE), ZERO),
+        new Word("בּוֹשׁ", "he was ashamed"),
+        new Word("נָגַשׁ", "he drew near, approached"),
+        new Word("חֵמָה", "wrath, heat, poison", FEMININE),
+        new Word("חֲצִי", "half, middle", MASCULINE),
         // 124
-        new Word(new WordForm("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"), ZERO),
+        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
         // 123
-        new Word(new WordForm("קָהָל", "assembly, community, crowd", MASCULINE), ZERO),
+        new Word("קָהָל", "assembly, community, crowd", MASCULINE),
         // 121
-        new Word(new WordForm("לָכַד", "he took, captured, caught, seized"), ZERO),
+        new Word("לָכַד", "he took, captured, caught, seized"),
         // 120
-        new Word(new WordForm("אוֹר", "light, daylight, sunshine", MASCULINE), ZERO),
-        new Word(new WordForm("רֶכֶב", "chariot, upper millstone", MASCULINE), ZERO),
-        new Word(new WordForm("בְּכֹר", "firstborn", MASCULINE), ZERO),
+        new Word("אוֹר", "light, daylight, sunshine", MASCULINE),
+        new Word("רֶכֶב", "chariot, upper millstone", MASCULINE),
+        new Word("בְּכֹר", "firstborn", MASCULINE),
         // 119
-        new Word(new WordForm("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE), ZERO),
-        new Word(new WordForm("פְּרִי", "fruit, offspring", MASCULINE), ZERO),
-        new Word(new WordForm("נָהָר", "river, stream", MASCULINE), ZERO),
+        new Word("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE),
+        new Word("פְּרִי", "fruit, offspring", MASCULINE),
+        new Word("נָהָר", "river, stream", MASCULINE),
         // 118
-        new Word(new WordForm("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE), ZERO),
-        new Word(new WordForm("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE), ZERO),
-        new Word(new WordForm("בָּטַח", "to trust, be confident, rely upon"), ZERO),
+        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE),
+        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE),
+        new Word("בָּטַח", "to trust, be confident, rely upon"),
         // 117
-        new Word(new WordForm("יָטַב", "he was well, it went well with, it was pleasing"), ZERO),
-        new Word(new WordForm("שָׁפַך", "he poured, spilt, shed (blood)"), ZERO),
-        new Word(new WordForm("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE), ZERO),
-        new Word(new WordForm("שָׂרַף", "he completely burned, destroyed"), ZERO),
+        new Word("יָטַב", "he was well, it went well with, it was pleasing"),
+        new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
+        new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE),
+        new Word("שָׂרַף", "he completely burned, destroyed"),
         // 115
-        new Word(new WordForm("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַר", PIEL), ZERO)
-            .addForm(new WordForm("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַר", HIPHIL)),
+        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַר", PIEL),
+        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַר", HIPHIL),
         // 114
-        new Word(new WordForm("בָּכָה", "he wept (in grief or joy)"), ZERO),
-        new Word(new WordForm("מִגְרָשׁ", "common land, open land, pasture", MASCULINE), ZERO),
+        new Word("בָּכָה", "he wept (in grief or joy)"),
+        new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE),
         // 113
-        new Word(new WordForm("שֶׁקֶר", "deception, lie, disappointment", MASCULINE), ZERO),
+        new Word("שֶׁקֶר", "deception, lie, disappointment", MASCULINE),
         // 112
-        new Word(new WordForm("לָבַשׁ", "he put on a garmet, he clothed"), ZERO),
-        new Word(new WordForm("בִּלְתּי", "not (with infinitive), except"), ZERO)
-            .addForm(new WordForm("לְבִלְתּי", "not (with infinitive)")),
-        new Word(new WordForm("חָשַׁב", "he thought, accounted"), ZERO),
-        new Word(new WordForm("עַמּוּד", "pillar, column", MASCULINE), ZERO),
+        new Word("לָבַשׁ", "he put on a garmet, he clothed"),
+        new Word("בִּלְתּי", "not (with infinitive), except"),
+        new Word("לְבִלְתּי", "not (with infinitive)"),
+        new Word("חָשַׁב", "he thought, accounted"),
+        new Word("עַמּוּד", "pillar, column", MASCULINE),
         // 111
-        new Word(new WordForm("שַׁבָּת", "Sabbath, rest period", MASCULINE), OK),
-        new Word(new WordForm("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL), ZERO),
+        new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
+        new Word("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL),
         // 110
-        new Word(new WordForm("עָפָר", "dry earth, dust", MASCULINE), ZERO),
+        new Word("עָפָר", "dry earth, dust", MASCULINE),
         // 109
-        new Word(new WordForm("רַק", "only, still, but, however"), ZERO),
-        new Word(new WordForm("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", FEMININE), ZERO),
+        new Word("רַק", "only, still, but, however"),
+        new Word("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", FEMININE),
         // 108
-        new Word(new WordForm("נִחַם", "he was sorry, moved to pity, had compassion", NIPHAL), ZERO)
-            .addForm(new WordForm("נִחַם", "he comforted, consoled", PIEL)),
+        new Word("נִחַם", "he was sorry, moved to pity, had compassion", NIPHAL),
+        new Word("נִחַם", "he comforted, consoled", PIEL),
         // 107
-        new Word(new WordForm("כֶּבֶשׂ", "lamb, sheep", MASCULINE), ZERO),
+        new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE),
         // 106
-        new Word(new WordForm("בָּמָח", "(cultic) high place, hill", MASCULINE), ZERO),
-        new Word(new WordForm("נוֹתַר", "he was left over, he remained - יָתַר", NIPHAL), ZERO)
-            .addForm(new WordForm("הוֹתִיר", "he left - יָתַר", HIPHIL)),
+        new Word("בָּמָח", "(cultic) high place, hill", MASCULINE),
+        new Word("נוֹתַר", "he was left over, he remained - יָתַר", NIPHAL),
+        new Word("הוֹתִיר", "he left - יָתַר", HIPHIL),
         // 104
-        new Word(new WordForm("תָּמִיד", "continually"), ZERO),
-        new Word(new WordForm("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"), ZERO),
-        new Word(new WordForm("בַּעַד", "behind, through"), ZERO),
-        new Word(new WordForm("חֻקָּח", "statute, ordinance", MASCULINE), ZERO)
-            .addForm(new WordForm("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL)),
-        new Word(new WordForm("רָץ", "he ran רוּץ"), ZERO),
+        new Word("תָּמִיד", "continually"),
+        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"),
+        new Word("בַּעַד", "behind, through"),
+        new Word("חֻקָּח", "statute, ordinance", MASCULINE),
+        new Word("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL),
+        new Word("רָץ", "he ran רוּץ"),
         // 102
-        new Word(new WordForm("כִּפֶּר", "he covered over, pacified, made propitiation", PIEL), ZERO),
-        new Word(new WordForm("שָׁכַח", "he forgot"), ZERO),
+        new Word("כִּפֶּר", "he covered over, pacified, made propitiation", PIEL),
+        new Word("שָׁכַח", "he forgot"),
         // 101
-        new Word(new WordForm("רָעָב", "famine, hunger", MASCULINE), ZERO),
-        new Word(new WordForm("רֹחַב", "breadth, width", MASCULINE), ZERO),
-        new Word(new WordForm("מעַט", "a little, a few"), ZERO),
+        new Word("רָעָב", "famine, hunger", MASCULINE),
+        new Word("רֹחַב", "breadth, width", MASCULINE),
+        new Word("מעַט", "a little, a few"),
 
         // 100
-        new Word(new WordForm("יַעַן", "on account of"), ZERO)/*,
+        new Word("יַעַן", "on account of"),
 
         // 96
         new Word("יַחְדָּו", "together, united", ADVERB),
@@ -1236,7 +1235,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // 18
         new Word("רְבָבָה", "ten thousand")
-        */
 
 
     );
