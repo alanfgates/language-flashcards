@@ -1253,39 +1253,81 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "short        " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
             "reduced      " + " ֲ      ֱ           ֳ       "),
 
-        new GrammarRule("Rules of Syllabification\n" +
-          "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
-          "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant.\n" +
-          "  Hebrew words are usually accented on the last syllable.\n" +
-          "  3. Syllable classification\n" +
-          "     a. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic\n" +
-          "     b. Pretonic: syllable immediately before the tonic; first syllable above\n" +
-          "     c. Propretonic: syllable before the pretonic\n" +
-          "  4. Dagesh Forte letters count as two consonants for the purpose of syllabification."),
+        new GrammarRule("Rules of Syllabification (1/4)\n" +
+          "  1. Every syllable must begin with one consonant and have only one vowel.\n"),
 
-        new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters\n" +
-          " * The Dagesh is Forte if it is preceded by a vowel. אַתּה\n" +
-          " * The Dagesh is Lene if preceded by a consonant. מַלְכּה\n" +
-          " * The Dagesh is Lene at the beginning of the word unless the previous word ends in a vowel. דָּבָר"),
+        new GrammarRule("Rules of Syllabification (2/4)\n" +
+            "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant.\n" +
+            "  Hebrew words are usually accented on the last syllable.\n"),
 
-        new GrammarRule("Silent Schewa and Vocal Schewa\n" +
-          "The Vocal Schewa will always occur in an open syllable.\n" +
-          "The Silent Schewa will always come at the end of a closed syllable.\n" +
-          " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
-          "   * A Schewa is silent when immediately preceded by a short vowel. פַּרְעֹה\n" +
-          "   * The first of two contiguous Schewas is silent. מִשְׁפְּטֵי\n" +
-          "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n" +
-          " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
-          "   * Initial Schewa is always vocal. בְּרָכָה\n" +
-          "   * The second of two contiguous Schewas is vocal.\n" +
-          "   * A Schewa under any consonant with Daghesh Forte is vocal. הַמְּלָכִים\n" +
-          "   * A Schewa after an unaccented long vowel is vocal. כֹּתְבִים"),
+        new GrammarRule("Rules of Syllabification (3/4)\n" +
+            "  3. Syllable classification\n" +
+            "     a. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic\n" +
+            "     b. Pretonic: syllable immediately before the tonic; first syllable above\n" +
+            "     c. Propretonic: syllable before the pretonic\n"),
 
-        new GrammarRule("Qamets and Qamets Hatuf p22\n" +
+        new GrammarRule("Rules of Syllabification (4/4)\n" +
+            "  4. Dagesh Forte letters count as two consonants for the purpose of syllabification."),
+
+        new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters (1/3)\n" +
+          " * The Dagesh is Forte if it is preceded by a vowel. אַתּה\n"),
+
+        new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters (2/3)\n" +
+            " * The Dagesh is Lene if preceded by a consonant. מַלְכּה\n"),
+
+        new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters (3/3)\n" +
+            " * The Dagesh is Lene at the beginning of the word unless the previous word ends in a vowel. דָּבָר"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (1/9)\n" +
+            "The Vocal Schewa will always occur in an open syllable.\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (2/9)\n" +
+            "The Silent Schewa will always come at the end of a closed syllable.\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (3/9)\n" +
+            " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
+            "   * A Schewa is silent when immediately preceded by a short vowel. פַּרְעֹה\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (4/9)\n" +
+            " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
+            "   * The first of two contiguous Schewas is silent. מִשְׁפְּטֵי\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (5/9)\n" +
+            "The Silent Schewa will always come at the end of a closed syllable.\n" +
+            " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
+            "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (6/9)\n" +
+            " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
+            "   * Initial Schewa is always vocal. בְּרָכָה\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (7/9)\n" +
+            " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
+            "   * The second of two contiguous Schewas is vocal.\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (8/9)\n" +
+            " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
+            "   * A Schewa under any consonant with Daghesh Forte is vocal. הַמְּלָכִים\n"),
+
+        new GrammarRule("Silent Schewa and Vocal Schewa (9/9)\n" +
+            " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
+            "   * A Schewa after an unaccented long vowel is vocal. כֹּתְבִים"),
+
+        new GrammarRule("Qamets and Qamets Hatuf (1/4)\n" +
+            "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:\n" +
+            " * When in doubt, go with Qamets as it is much more frequent\n" +
+            " * Qamets Hatuf occurs only in closed and unaccented syllables. חָכְמָה (first syllable)\n"),
+
+        new GrammarRule("Qamets and Qamets Hatuf (2/4)\n" +
+            "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:\n" +
+            " * Qamets Hatuf occurs only in closed and unaccented syllables. חָכְמָה (first syllable)\n"),
+
+        new GrammarRule("Qamets and Qamets Hatuf (3/4)\n" +
+            "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:\n" +
+            " * Qamets prefers open, pretonic syllable or closed accented syllable. דָּבָר (both syllables)\n"),
+
+        new GrammarRule("Qamets and Qamets Hatuf (4/4)\n" +
           "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:\n" +
-          " * When in doubt, go with Qamets as it is much more frequent\n" +
-          " * Qamets Hatuf occurs only in closed and unaccented syllables. חָכְמָה (first syllable)\n" +
-          " * Qamets prefers open, pretonic syllable or closed accented syllable. דָּבָר (both syllables)\n" +
           " * Metheg, small vertical line to the left of the Qamets, sometimes used to clarify that it is a Qamets."),
 
         new GrammarRule("Furtive Pathach\n" +
@@ -1296,7 +1338,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
           "Most common Hebrew diphthong is" + " ַיִ  " + "\n" +
           "Syllables that contain a diphthong are considered to be closed because they end in a consontant."),
 
-        new GrammarRule("Vowel Syllable Preferences\n" +
+                        new GrammarRule("Vowel Syllable Preferences\n" +
           " * Short vowels prefer closed, unaccented syllables or open, accented syllables. Both syllables in עֶבֶד\n" +
           " * Long vowels prefer closed, accented syllables or open, pretonic syllables.  Both syllables in" + " דָּבָר\n" +
           " * Vocal Shewa and reduced hateph vowels prefer open, propretonic syllables.  The\n" +
