@@ -26,16 +26,28 @@ class GreekBuilderHelperGrammar {
         // VERB FORMS
         //
         // Indicative Active Present
-        new Word("λύω", "I loosen", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        new Word("λύω")
+            .addForm("I loosen", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR)
+            .addForm("I might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
         new Word("λύεις", "you loosen", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύει", "s/he loosens", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λύομεν", "we loosen", INDICATIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("λύετε", "you loosen", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
-        new Word("λύουσι", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
-        new Word("λύουσιν", "they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
+        new Word("λύετε")
+            .addForm("you loosen", INDICATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL)
+            .addForm("keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύουσι")
+            .addForm("they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("λύουσιν")
+            .addForm("they loosen", INDICATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
 
         // Indicative Active Future
-        new Word("λύσω", "I will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR),
+        new Word("λύσω")
+            .addForm("I will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, SINGULAR)
+            .addForm("I might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
         new Word("λύσεις", "you will loosen", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, SINGULAR),
         new Word("λύσει", "s/he will loosen", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, SINGULAR),
         new Word("λύσομεν", "we will loosen", INDICATIVE, ACTIVE, FUTURE, FIRST_PERSON, PLURAL),
@@ -44,13 +56,14 @@ class GreekBuilderHelperGrammar {
         new Word("λύσουσιν", "they will loosen", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
 
         // Indicative Active Imperfect
-        new Word("ἔλυον", "I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἔλυον")
+            .addForm("I was loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
         new Word("ἔλυες", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, SINGULAR),
         new Word("ἔλυε", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
         new Word("ἔλυεν", "s/he was loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, SINGULAR),
         new Word("ἐλύομεν", "we were loosening", INDICATIVE, ACTIVE, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("ἐλύετε", "you were loosening", INDICATIVE, ACTIVE, IMPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἔλυον", "they were loosening", INDICATIVE, ACTIVE, IMPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Active Aorist
         new Word("ἔλυσα", "I loosened", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
@@ -62,12 +75,13 @@ class GreekBuilderHelperGrammar {
         new Word("ἔλυσαν", "they loosened", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
 
         // Indicative Active Second Aorist
-        new Word("ἔβαλον", "I threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
+        new Word("ἔβαλον")
+            .addForm("I threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR)
+            .addForm("they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
         new Word("ἔβαλες", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
         new Word("ἔβαλε", "s/he threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
         new Word("ἐβάλομεν", "we threw", INDICATIVE, ACTIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("ἐβάλετε", "you threw", INDICATIVE, ACTIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
-        new Word("ἔβαλον", "they threw", INDICATIVE, ACTIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Indicative Active Perfect
         new Word("λέλυκα", "I have loosened", INDICATIVE, ACTIVE, PERFECT, FIRST_PERSON, SINGULAR),
@@ -80,12 +94,14 @@ class GreekBuilderHelperGrammar {
         new Word("λέλυκασιν", "they have loosened", INDICATIVE, ACTIVE, PERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Active Pluperfect
-        new Word("ἐλελύκειν", "I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("λελύκειν", "I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR),
+        new Word("ἐλελύκειν")
+            .addForm("I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκειν")
+            .addForm("I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
         new Word("ἐλελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
         new Word("λελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἐλελύκειν", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("λελύκειν", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
         new Word("ἐλελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
         new Word("λελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
         new Word("ἐλελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
@@ -97,10 +113,15 @@ class GreekBuilderHelperGrammar {
 
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself/am loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("λύῃ", "you loosen yourself/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        new Word("λύῃ")
+            .addForm("you loosen yourself/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR)
+            .addForm("s/he might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR)
+            .addForm("you might be loosening yourself/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λύεται", "s/he loosens her/himself/is loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λυόμεθα", "we loosen ourselves/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("λύεσθε", "you loosen yourselves/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        new Word("λύεσθε")
+            .addForm("you loosen yourselves/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL)
+            .addForm("keep loosing yourselves!/being loosened", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύονται", "they loosen themselves/are loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic indicative middle present
@@ -109,7 +130,10 @@ class GreekBuilderHelperGrammar {
 
         // Indicative Middle Future
         new Word("λύσομαι", "I will loosen myself", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, SINGULAR),
-        new Word("λύσῃ", "you will loosen yourself", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, SINGULAR),
+        new Word("λύσῃ")
+            .addForm("you will loosen yourself", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, SINGULAR)
+            .addForm("s/he might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR)
+            .addForm("you might loosen yourself", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
         new Word("λύσεται", "s/he will loosen her/himself", INDICATIVE, MIDDLE, FUTURE, THIRD_PERSON, SINGULAR),
         new Word("λυσόμεθα", "we will loosen ourselves", INDICATIVE, MIDDLE, FUTURE, FIRST_PERSON, PLURAL),
         new Word("λύσεσθε", "you will loosen yourselves", INDICATIVE, MIDDLE, FUTURE, SECOND_PERSON, PLURAL),
@@ -182,9 +206,9 @@ class GreekBuilderHelperGrammar {
         new Word("ἐγράφησαν", "they were written", INDICATIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
 
         // Subjunctive active present
-        new Word("λύω", "I might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
+        // for 1st p singular see indicative active present above
         new Word("λύῃς", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
-        new Word("λύῃ", "s/he might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
+        // for 3rd person singular see indicative middle present
         new Word("λύωμεν", "we might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύητε", "you might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("λύωσι", "they might be loosening", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
@@ -194,9 +218,9 @@ class GreekBuilderHelperGrammar {
         new Word("διδῶ", "I might be giving - stem διδω", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
 
         // Subjunctive active aorist
-        new Word("λύσω", "I might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
+        // for 1st p singular see indicative active future above
         new Word("λύσῃς", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
-        new Word("λύσῃ", "s/he might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
+        // for 3rd p singular see indicative middle future above
         new Word("λύσωμεν", "we might loosen", SUBJUNCTIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσητε", "you might loosen", SUBJUNCTIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λύσωσι", "they might loosen", SUBJUNCTIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
@@ -217,7 +241,7 @@ class GreekBuilderHelperGrammar {
 
         // Subjunctive middle present
         new Word("λύωμαι", "I might be loosening myself/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("λύῃ", "you might be loosening yourself/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        // for 2nd p singular see indicative middle future above
         new Word("λύηται", "s/he might be loosening her/himself/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("λυώμεθα", "we might be loosening ourselves/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, PLURAL),
         new Word("λύησθε", "you might be loosening yourselves/be loosened", SUBJUNCTIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
@@ -229,7 +253,7 @@ class GreekBuilderHelperGrammar {
 
         // Subjunctive middle aorist
         new Word("λύσωμαι", "I might loosen myself", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, SINGULAR),
-        new Word("λύσῃ", "you might loosen yourself", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        // for 2nd p singular see indicative middle future above
         new Word("λύσηται", "s/he might loosen her/himself", SUBJUNCTIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λυσώμεθα", "we might loosen ourselves", SUBJUNCTIVE, MIDDLE, AORIST, FIRST_PERSON, PLURAL),
         new Word("λύσησθε", "you might loosen yourselves", SUBJUNCTIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
@@ -259,7 +283,9 @@ class GreekBuilderHelperGrammar {
         // Subjunctive passive second aorist
         new Word("γραφῶ", "I might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, SINGULAR),
         new Word("γραφῇς", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, SINGULAR),
-        new Word("γραφῇ", "s/he might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR),
+        new Word("γραφῇ")
+            .addForm("s/he might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, SINGULAR)
+            .addForm("writing - root γραφή", FEMININE, DATIVE, SINGULAR, FIRST_DECLENSION),
         new Word("γραφῶμεν", "we might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, FIRST_PERSON, PLURAL),
         new Word("γραφῆτε", "you might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, SECOND_PERSON, PLURAL),
         new Word("γραφῶσι", "they might be written", SUBJUNCTIVE, PASSIVE, SECOND_AORIST, THIRD_PERSON, PLURAL),
@@ -272,7 +298,7 @@ class GreekBuilderHelperGrammar {
         // Imperative active present
         new Word("λῦε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λυέτω", "let him/her keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λύετε", "keep loosing!", IMPERATIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        // For 2nd p plural see indicative active present above
         new Word("λυέτωσαν", "let them keep loosing!", IMPERATIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic imperative active present
@@ -297,7 +323,7 @@ class GreekBuilderHelperGrammar {
         // Imperative middle present
         new Word("λύου", "keep loosing yourself/being loosened!", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("λυέσθω", "let him/her keep loosing him/herself!/being loosened", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, SINGULAR),
-        new Word("λύεσθε", "keep loosing yourselves!/being loosened", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, SECOND_PERSON, PLURAL),
+        // for 2nd p plural see indicative middle present above
         new Word("λυέσθωσαν", "let them keep loosing themselves!/being loosened", IMPERATIVE, MIDDLE, PASSIVE, PRESENT, THIRD_PERSON, PLURAL),
 
         // Athematic imperative middle present
@@ -305,7 +331,9 @@ class GreekBuilderHelperGrammar {
         // TODO add full conjugation
 
         // Imperative middle aorist
-        new Word("λῦσαι", "loose yourself!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("λῦσαι")
+            .addForm("loose yourself!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, SINGULAR)
+            .addForm("to loosen", INFINITIVE, ACTIVE, AORIST),
         new Word("λυσάσθω", "let him/her loose him/herself!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("λύσασθε", "loose yourselves!", IMPERATIVE, MIDDLE, AORIST, SECOND_PERSON, PLURAL),
         new Word("λυσάσθωσαν", "let them loose themselves!", IMPERATIVE, MIDDLE, AORIST, THIRD_PERSON, PLURAL),
@@ -338,7 +366,7 @@ class GreekBuilderHelperGrammar {
 
         // Infinitive active
         new Word("λύειν", "to continually loosen", INFINITIVE, ACTIVE, PRESENT),
-        new Word("λῦσαι", "to loosen", INFINITIVE, ACTIVE, AORIST),
+        // for active aorist see imperative middle aorist above
         new Word("λαβεῖν", "to receive", INFINITIVE, ACTIVE, SECOND_AORIST),
         new Word("λελυκέναι", "to have loosened", INFINITIVE, ACTIVE, PERFECT),
 
@@ -348,37 +376,50 @@ class GreekBuilderHelperGrammar {
         // TODO add full conjugation
 
         // Infinitive middle
-        new Word("λύεσθαι", "to continually loosen oneself", INFINITIVE, MIDDLE, PRESENT),
+        new Word("λύεσθαι")
+            .addForm("to continually loosen oneself", INFINITIVE, MIDDLE, PRESENT)
+            .addForm("to continually have been loosened", INFINITIVE, PASSIVE, PRESENT),
         new Word("λύσασθαι", "to loosen oneself", INFINITIVE, MIDDLE, AORIST),
         new Word("λαβέσθαι", "to receive oneself", INFINITIVE, MIDDLE, SECOND_AORIST),
         new Word("λελύσθαι", "to have loosened oneself", INFINITIVE, MIDDLE, PERFECT),
 
         // Athematic infinitive middle
-        new Word("δίδοσθαι", "to keep giving oneself - stem διδο", ATHEMATIC, INFINITIVE, MIDDLE, PRESENT),
+        new Word("δίδοσθαι")
+            .addForm("to keep giving oneself - stem διδο", ATHEMATIC, INFINITIVE, MIDDLE, PRESENT)
+            .addForm("to keep being given - stem διδο", ATHEMATIC, INFINITIVE, PASSIVE, PRESENT),
         new Word("δόσθαι", "to give oneself - stem δο", ATHEMATIC, INFINITIVE, MIDDLE, SECOND_AORIST),
 
         // Infinitive passive
-        new Word("λύεσθαι", "to continually have been loosened", INFINITIVE, PASSIVE, PRESENT),
+        // for present see infinitive middle above
         new Word("λυθῆναι", "to have been loosened", INFINITIVE, PASSIVE, AORIST),
         new Word("γραφῆναι", "to have been written", INFINITIVE, PASSIVE, SECOND_AORIST),
         new Word("λελῦσθαι", "to have been loosened", INFINITIVE, PASSIVE, PERFECT),
 
         // Athematic infinitive passive
-        new Word("δίδοσθαι", "to keep being given - stem διδο", ATHEMATIC, INFINITIVE, PASSIVE, PRESENT),
+        // for present see infinitive middle above
         new Word("δοθῆναι", "to be given - stem δο", ATHEMATIC, INFINITIVE, PASSIVE, SECOND_AORIST),
 
         // Participle active present
         new Word("λύων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λύοντος", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λύοντι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λύοντος")
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λύοντι")
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("λύοντα")
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
         new Word("λύοντες", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λύοντων", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λύουσι", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL),
-        new Word("λύουσιν", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λύοντων")
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        // for dative plural see imperative active present above
         new Word("λύοντας", "loosening", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λῦον", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λύοντα", "loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λῦον")
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
 
         new Word("λύουσα", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυούσης", "loosening", PARTICIPLE, ACTIVE, PRESENT, FEMININE, GENITIVE, SINGULAR),
@@ -397,16 +438,30 @@ class GreekBuilderHelperGrammar {
 
         // Participle active aorist
         new Word("λύσας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λύσαντος", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λύσαντι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λύσαντος")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("λύσαντι")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("λύσαντα")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
         new Word("λύσαντες", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λυσάντων", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λύσασι", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
-        new Word("λύσασιν", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λυσάντων")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("λύσασι")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λύσασιν")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, DATIVE, PLURAL),
         new Word("λύσαντας", "loosening", PARTICIPLE, ACTIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λῦσαν", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λύσαντα", "loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λῦσαν")
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, ACTIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
 
         new Word("λύσασα", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυσάσης", "loosening", PARTICIPLE, ACTIVE, AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -420,16 +475,30 @@ class GreekBuilderHelperGrammar {
 
         // Participle active second aorist
         new Word("βαλών", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("βαλόντος", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("βαλόντι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("βαλόντος")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("βαλόντι")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, SINGULAR)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("βαλόντα")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
         new Word("βαλόντες", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("βαλόντων", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("βαλοῦσι", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
-        new Word("βαλοῦσιν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("βαλόντων")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, GENITIVE, PLURAL)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("βαλοῦσι")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("βαλοῦσιν")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("βαλόντας", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("βαλόν", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("βαλόντα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("βαλόν")
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, NEUTER, ACCUSATIVE, SINGULAR),
 
         new Word("βαλοῦσα", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("βαλούσης", "throwing", PARTICIPLE, ACTIVE, SECOND_AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -448,16 +517,30 @@ class GreekBuilderHelperGrammar {
 
         // Participle active perfect
         new Word("λελυκώς", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λελυκότος", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λελυκότι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λελυκότος")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λελυκότι")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, SINGULAR)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, SINGULAR),
+        new Word("λελυκότα")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
         new Word("λελυκότες", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λελυκότων", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λελυκόσι", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL),
-        new Word("λελυκόσιν", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λελυκότων")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, GENITIVE, PLURAL)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, GENITIVE, PLURAL),
+        new Word("λελυκόσι")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL),
+        new Word("λελυκόσιν")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, DATIVE, PLURAL)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, DATIVE, PLURAL),
         new Word("λελυκότας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λελυκός", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λελυκότα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λελυκός")
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("having loosened", PARTICIPLE, ACTIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
 
     new Word("λελυκυῖα", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λελυκυῖας", "having loosened", PARTICIPLE, ACTIVE, PERFECT, FEMININE, GENITIVE, SINGULAR),
@@ -471,22 +554,34 @@ class GreekBuilderHelperGrammar {
 
         // Participle middle present
         new Word("λυόμενος", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λυομένου", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λυομένῳ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυομένου")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυομένῳ")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("λυόμενον")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("λυόμενοι", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λυομένοις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λυομένων")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, GENITIVE, PLURAL)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        new Word("λυομένοις")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("λυομένους", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λυόμενον", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λυόμενα", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λυόμενα")
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
 
-    new Word("λυομένη", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
+        new Word("λυομένη", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυομένης", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, GENITIVE, SINGULAR),
         new Word("λυομένῃ", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, DATIVE, SINGULAR),
         new Word("λυομένην", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, SINGULAR),
         new Word("λυόμεναι", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, NOMINATIVE, PLURAL),
-        new Word("λυομένων", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, GENITIVE, PLURAL),
         new Word("λυομέναις", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, DATIVE, PLURAL),
         new Word("λυομένας", "loosening/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
 
@@ -497,37 +592,62 @@ class GreekBuilderHelperGrammar {
 
         // Participle middle aorist
         new Word("λυσάμενος", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λυσαμένου", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λυσαμένῳ", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυσαμένου")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυσαμένῳ")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("λυσάμενον")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("λυσάμενοι", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λυσαμένοις", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λυσαμένων")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, GENITIVE, PLURAL),
+    new Word("λυσαμένοις")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, DATIVE, PLURAL),
         new Word("λυσαμένους", "loosening", PARTICIPLE, MIDDLE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λυσάμενον", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λυσάμενα", "loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λυσάμενα")
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, MIDDLE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
     new Word("λυσαμένη", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυσαμένης", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, SINGULAR),
         new Word("λυσαμένῃ", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, SINGULAR),
         new Word("λυσαμένην", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, SINGULAR),
         new Word("λυσάμεναι", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, NOMINATIVE, PLURAL),
-        new Word("λυσαμένων", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, GENITIVE, PLURAL),
         new Word("λυσαμέναις", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, DATIVE, PLURAL),
         new Word("λυσαμένας", "loosening", PARTICIPLE, MIDDLE, AORIST, FEMININE, ACCUSATIVE, PLURAL),
 
 
         // Participle middle second aorist
         new Word("γενόμενος", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("γενομένου", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("γενομένῳ", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("γενομένου")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("γενομένῳ")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, DATIVE, SINGULAR)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("γενόμενον")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("γενόμενοι", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("γενομένων", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL),
-        new Word("γενομένοις", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("γενομένων")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, GENITIVE, PLURAL)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, GENITIVE, PLURAL)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("γενομένοις")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, DATIVE, PLURAL),
         new Word("γενομένους", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("γενόμενον", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("γενόμενα", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("γενόμενα")
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, NEUTER, ACCUSATIVE, PLURAL),
 
         new Word("γενομένη", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("γενομένης", "becoming", PARTICIPLE, MIDDLE, SECOND_AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -542,37 +662,63 @@ class GreekBuilderHelperGrammar {
 
         // Participle middle/passive perfect
         new Word("λελυμένος", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λελυμένου", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λελυμένῳ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λελυμένου")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, GENITIVE, SINGULAR),
+        new Word("λελυμένῳ")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, DATIVE, SINGULAR),
+        new Word("λελυμένον")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, SINGULAR),
         new Word("λελυμένοι", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λελυμένοις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λελυμένων")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, GENITIVE, PLURAL)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, GENITIVE, PLURAL),
+        new Word("λελυμένοις")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, DATIVE, PLURAL),
         new Word("λελυμένους", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λελυμένον", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λελυμένα", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λελυμένα")
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, NEUTER, ACCUSATIVE, PLURAL),
 
         new Word("λελυμένη", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λελυμένης", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, GENITIVE, SINGULAR),
         new Word("λελυμένῃ", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, DATIVE, SINGULAR),
         new Word("λελυμένην", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, SINGULAR),
         new Word("λελυμέναι", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, NOMINATIVE, PLURAL),
-        new Word("λελυμένων", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, GENITIVE, PLURAL),
         new Word("λελυμέναις", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, DATIVE, PLURAL),
         new Word("λελυμένας", "loosening oneself/being loosened", PARTICIPLE, MIDDLE, PASSIVE, PERFECT, FEMININE, ACCUSATIVE, PLURAL),
 
         // Participle passive aorist
         new Word("λυθείς", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("λυθέντος", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, GENITIVE, SINGULAR),
-        new Word("λυθέντι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, SINGULAR),
-        new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("λυθέντος")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, SINGULAR),
+        new Word("λυθέντι")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, SINGULAR),
+        new Word("λυθέντα")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, PLURAL),
         new Word("λυθέντες", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("λυθέντων", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, GENITIVE, PLURAL),
-        new Word("λυθεῖσι", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
-        new Word("λυθεῖσιν", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, NEUTER, DATIVE, PLURAL),
+        new Word("λυθέντων")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, GENITIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, GENITIVE, PLURAL),
+        new Word("λυθεῖσι")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
+        new Word("λυθεῖσιν")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, DATIVE, PLURAL)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, DATIVE, PLURAL),
         new Word("λυθέντας", "loosening", PARTICIPLE, PASSIVE, AORIST, MASCULINE, ACCUSATIVE, PLURAL),
-        new Word("λυθέν", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("λυθέντα", "loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("λυθέν")
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("loosening", PARTICIPLE, PASSIVE, AORIST, NEUTER, ACCUSATIVE, SINGULAR),
 
         new Word("λυθεῖσα", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, NOMINATIVE, SINGULAR),
         new Word("λυθείσης", "loosening", PARTICIPLE, PASSIVE, AORIST, FEMININE, GENITIVE, SINGULAR),
@@ -662,39 +808,45 @@ class GreekBuilderHelperGrammar {
         new Word("λόγου", "word - root λόγο", MASCULINE, GENITIVE, SINGULAR, SECOND_DECLENSION),
         new Word("λόγῳ", "word - root λόγο", MASCULINE, DATIVE, SINGULAR, SECOND_DECLENSION),
         new Word("λόγον", "word - root λόγο", MASCULINE, ACCUSATIVE, SINGULAR, SECOND_DECLENSION),
-        new Word("λόγοι", "words - root λόγο", MASCULINE, NOMINATIVE, PLURAL, SECOND_DECLENSION),
-        new Word("λόγοι", "words - root λόγο", MASCULINE, VOCATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("λόγοι")
+            .addForm("words - root λόγο", MASCULINE, NOMINATIVE, PLURAL, SECOND_DECLENSION)
+            .addForm("words - root λόγο", MASCULINE, VOCATIVE, PLURAL, SECOND_DECLENSION),
         new Word("λόγων", "words - root λόγο", MASCULINE, GENITIVE, PLURAL, SECOND_DECLENSION),
         new Word("λόγοις", "words - root λόγο", MASCULINE, DATIVE, PLURAL, SECOND_DECLENSION),
         new Word("λόγους", "words - root λόγο", MASCULINE, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
 
-        new Word("γραφή", "writing - root γραφή", FEMININE, NOMINATIVE, SINGULAR, FIRST_DECLENSION),
-        new Word("γραφή", "writing - root γραφή", FEMININE, VOCATIVE, SINGULAR, FIRST_DECLENSION),
+        new Word("γραφή")
+            .addForm("writing - root γραφή", FEMININE, NOMINATIVE, SINGULAR, FIRST_DECLENSION)
+            .addForm("writing - root γραφή", FEMININE, VOCATIVE, SINGULAR, FIRST_DECLENSION),
         new Word("γραφῆς", "writing - root γραφή", FEMININE, GENITIVE, SINGULAR, FIRST_DECLENSION),
-        new Word("γραφῇ", "writing - root γραφή", FEMININE, DATIVE, SINGULAR, FIRST_DECLENSION),
+        // for dative singular see subjunctive passive second aorist above
         new Word("γραφήν", "writing - root γραφή", FEMININE, ACCUSATIVE, SINGULAR, FIRST_DECLENSION),
-        new Word("γραφαί", "writings - root γραφή", FEMININE, NOMINATIVE, PLURAL, FIRST_DECLENSION),
-        new Word("γραφαί", "writings - root γραφή", FEMININE, VOCATIVE, PLURAL, FIRST_DECLENSION),
+        new Word("γραφαί")
+            .addForm("writings - root γραφή", FEMININE, NOMINATIVE, PLURAL, FIRST_DECLENSION)
+            .addForm("writings - root γραφή", FEMININE, VOCATIVE, PLURAL, FIRST_DECLENSION),
         new Word("γραφῶν", "writings - root γραφή", FEMININE, GENITIVE, PLURAL, FIRST_DECLENSION),
         new Word("γραφαῖς", "writings - root γραφή", FEMININE, DATIVE, PLURAL, FIRST_DECLENSION),
         new Word("γραφάς", "writings - root γραφή", FEMININE, ACCUSATIVE, PLURAL, FIRST_DECLENSION),
 
-        new Word("ἔργον", "work - root ἔργο", NEUTER, NOMINATIVE, SINGULAR, SECOND_DECLENSION),
+        new Word("ἔργον")
+            .addForm("work - root ἔργο", NEUTER, NOMINATIVE, SINGULAR, SECOND_DECLENSION)
+            .addForm("work - root ἔργο", NEUTER, ACCUSATIVE, SINGULAR, SECOND_DECLENSION),
         new Word("ἔργου", "work - root ἔργο", NEUTER, GENITIVE, SINGULAR, SECOND_DECLENSION),
         new Word("ἔργῳ", "work - root ἔργο", NEUTER, DATIVE, SINGULAR, SECOND_DECLENSION),
-        new Word("ἔργον", "work - root ἔργο", NEUTER, ACCUSATIVE, SINGULAR, SECOND_DECLENSION),
-        new Word("ἔργα", "works - root ἔργο", NEUTER, NOMINATIVE, PLURAL, SECOND_DECLENSION),
+        new Word("ἔργα")
+            .addForm("works - root ἔργο", NEUTER, NOMINATIVE, PLURAL, SECOND_DECLENSION)
+            .addForm("works - root ἔργο", NEUTER, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
         new Word("ἔργων", "works - root ἔργο", NEUTER, GENITIVE, PLURAL, SECOND_DECLENSION),
         new Word("ἔργοις", "works - root ἔργο", NEUTER, DATIVE, PLURAL, SECOND_DECLENSION),
-        new Word("ἔργα", "works - root ἔργο", NEUTER, ACCUSATIVE, PLURAL, SECOND_DECLENSION),
 
         new Word("σάρξ", "flesh - root σάρκ", FEMININE, NOMINATIVE, SINGULAR, THIRD_DECLENSION),
         new Word("σάρκ", "flesh - root σάρκ", FEMININE, VOCATIVE, SINGULAR, THIRD_DECLENSION),
         new Word("σαρκός", "flesh - root σάρκ", FEMININE, GENITIVE, SINGULAR, THIRD_DECLENSION),
         new Word("σαρκί", "flesh - root σάρκ", FEMININE, DATIVE, SINGULAR, THIRD_DECLENSION),
         new Word("σάρκα", "flesh - root σάρκ", FEMININE, ACCUSATIVE, SINGULAR, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", FEMININE, NOMINATIVE, PLURAL, THIRD_DECLENSION),
-        new Word("σάρκες", "fleshes - root σάρκ", FEMININE, VOCATIVE, PLURAL, THIRD_DECLENSION),
+        new Word("σάρκες")
+            .addForm("fleshes - root σάρκ", FEMININE, NOMINATIVE, PLURAL, THIRD_DECLENSION)
+            .addForm("fleshes - root σάρκ", FEMININE, VOCATIVE, PLURAL, THIRD_DECLENSION),
         new Word("σαρκῶν", "fleshes - root σάρκ", FEMININE, GENITIVE, PLURAL, THIRD_DECLENSION),
         new Word("σαρξί", "fleshes - root σάρκ", FEMININE, DATIVE, PLURAL, THIRD_DECLENSION),
         new Word("σαρξίν", "fleshes - root σάρκ", FEMININE, DATIVE, PLURAL, THIRD_DECLENSION),

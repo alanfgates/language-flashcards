@@ -28,6 +28,8 @@ public class Main {
   public static void main(String[] args) {
     Options options = new Options();
 
+    options.addOption("d", "find-duplicates", false,
+        "Find duplicates in the decks.  This does not change the card deck.");
     options.addOption("f", "filename", true, "File to store deck in, defaults to " + FILENAME);
     options.addOption("G", "grammar-rule", true, "Show a particular grammar rule, for debugging.");
     options.addOption("h", "help", false, "You're looking at it.");
@@ -40,6 +42,9 @@ public class Main {
 
       if (cli.hasOption("h")) {
         usage(options);
+      } else if (cli.hasOption("d")) {
+        CardDeck deck = new CardDeck();
+        deck.findDuplicates();
       } else if (cli.hasOption("G")) {
         CardDeck deck = new CardDeck();
         deck.findRule(cli.getOptionValue("G"));

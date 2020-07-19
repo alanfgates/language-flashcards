@@ -16,20 +16,31 @@ package com.github.alanfgates.language.flashcards;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Word {
-  private String english;
   private String other;
-  private Classifier[] classifiers;
+  private List<Form> forms;
 
   // For Jackson
   public Word() {
   }
 
-  public Word(String other, String english, Classifier... classifiers) {
-    this.english = english;
+  Word(String other, String english, Classifier... classifiers) {
     this.other = other;
-    this.classifiers = classifiers;
+    forms = Collections.singletonList(new Form(english, classifiers));
+  }
+
+  Word(String other) {
+    this.other = other;
+    forms = new ArrayList<>();
+  }
+
+  Word addForm(String english, Classifier... classifiers) {
+    forms.add(new Form(english, classifiers));
+    return this;
   }
 
   boolean test(BufferedReader input) throws IOException {
@@ -41,15 +52,6 @@ public class Word {
     return (answer.length() == 0 || answer.toLowerCase().startsWith("y"));
   }
 
-  public String getEnglish() {
-    return english;
-  }
-
-  public Word setEnglish(String english) {
-    this.english = english;
-    return this;
-  }
-
   public String getOther() {
     return other;
   }
@@ -59,12 +61,12 @@ public class Word {
     return this;
   }
 
-  public Classifier[] getClassifiers() {
-    return classifiers;
+  public List<Form> getForms() {
+    return forms;
   }
 
-  public Word setClassifiers(Classifier[] classifiers) {
-    this.classifiers = classifiers;
+  public Word setForms(List<Form> forms) {
+    this.forms = forms;
     return this;
   }
 
@@ -74,15 +76,50 @@ public class Word {
 
   private void flipOver() {
     StringBuilder buf = new StringBuilder(other)
-        .append(" : ")
-        .append(english)
-        .append(" - ");
-    boolean first = true;
-    for (Classifier classifier : classifiers) {
-      if (first) first = false;
-      else buf .append(", ");
-      buf.append(classifier.name().toLowerCase().replace('_', ' '));
+        .append(" :\n");
+    for (Form form : forms) {
+      buf.append(form.english)
+          .append(" - ");
+      boolean first = true;
+      for (Classifier classifier : form.classifiers) {
+        if (first) first = false;
+        else buf .append(", ");
+        buf.append(classifier.name().toLowerCase().replace('_', ' '));
+      }
+      buf.append("\n");
     }
     System.out.println(buf.toString());
+  }
+
+  private static class Form {
+    String english;
+    Classifier[] classifiers;
+
+    public Form() {
+
+    }
+
+    Form(String english, Classifier[] classifiers) {
+      this.english = english;
+      this.classifiers = classifiers;
+    }
+
+    public String getEnglish() {
+      return english;
+    }
+
+    public Form setEnglish(String english) {
+      this.english = english;
+      return this;
+    }
+
+    public Classifier[] getClassifiers() {
+      return classifiers;
+    }
+
+    public Form setClassifiers(Classifier[] classifiers) {
+      this.classifiers = classifiers;
+      return this;
+    }
   }
 }

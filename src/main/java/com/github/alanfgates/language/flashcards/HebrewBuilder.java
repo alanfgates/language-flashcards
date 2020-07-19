@@ -60,36 +60,53 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נָתְנוּ", "they gave", QAL, PERFECT, THIRD_PERSON, PLURAL),
 
         // Qal Imperfect
-        new Word("אֶקְטֹל", "I will kill", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּקְטֹל", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("אֶקְטֹל")
+            .addForm("I will kill", QAL, IMPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("let me kill", QAL, COHORTATIVE, SINGULAR),
         new Word("תִּקְטְלִי", "you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("יִקְטֹל", "he will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּקְטֹל", "she will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("נִקְטֹל", "we will kill", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
+        new Word("יִקְטֹל")
+            .addForm("he will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR)
+            .addForm("let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR),
+        new Word("תִּקְטֹל")
+            .addForm("you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR)
+            .addForm("let her kill", QAL, JUSSIVE, FEMININE, SINGULAR),
+        new Word("נִקְטֹל")
+            .addForm("we will kill", QAL, IMPERFECT, FIRST_PERSON, PLURAL)
+            .addForm("let us kill", QAL, COHORTATIVE, PLURAL),
         new Word("תִּקְטְלוּ", "you will kill", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תִּקְטֹלְנָה", "you/they will kill", QAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
-        new Word("יִקְטְלוּ", "they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
+        new Word("תִּקְטֹלְנָה")
+            .addForm("you will kill", QAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will kill", QAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL)
+            .addForm("let them kill", QAL, JUSSIVE, FEMININE, PLURAL),
+        new Word("יִקְטְלוּ")
+            .addForm("they will kill", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL)
+            .addForm("let them kill", QAL, JUSSIVE, MASCULINE, PLURAL),
 
         // to be - imperfect
         new Word("אֶהְיֶה", "I will be", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּהְיֶה", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּהְיֶה")
+            .addForm("you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("יִהְיֶה", "he will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּהְיֶה", "she will be", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נִהְיֶה", "we will be", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תִּהְיוּ", "you will be", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("יִהְיוּ", "they will be", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // to give - imperfect
         new Word("אֶתֵּן", "I will give", QAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּתֵּן", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתֵּן")
+            .addForm("you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("יִתֵּן", "he will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּתֵּן", "she will give", QAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נִתֵּן", "we will give", QAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תִּתְּנוּ", "you will give", QAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("יִתְּנוּ", "they will give", QAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // Qal Imperative
-        new Word("קְטֹל", "kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קְטֹל")
+            .addForm("kill!", QAL, IMPERATIVE, MASCULINE, SINGULAR)
+            .addForm("to kill", QAL, INFINITIVE_CONSTRUCT),
         new Word("קִטְלִי", "kill!", QAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("קִטְלוּ", "kill!", QAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("קְטֹלְנָה", "kill!", QAL, IMPERATIVE, FEMININE, PLURAL),
@@ -102,25 +119,21 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עֲלֵה", "go up!", IMPERATIVE, MASCULINE, SINGULAR),
 
         // Qal Cohortative
-        new Word("אֶקְטֹל", "let me kill", QAL, COHORTATIVE, SINGULAR),
         new Word("אֶקְטְלָה", "let me kill", QAL, COHORTATIVE, SINGULAR),
-        new Word("נִקְטֹל", "let us kill", QAL, COHORTATIVE, PLURAL),
-        new Word("נִקְטְלָה", "let us kill", QAL, COHORTATIVE, PLURAL),
-
-        // Qal Jussive
-        new Word("יִקְטֹל", "let him kill", QAL, JUSSIVE, MASCULINE, SINGULAR),
-        new Word("תִּקְטֹל", "let her kill", QAL, JUSSIVE, FEMININE, SINGULAR),
-        new Word("יִקְטְלוּ", "let them kill", QAL, JUSSIVE, MASCULINE, PLURAL),
-        new Word("תִּקְטֹלְנָה", "let them kill", QAL, JUSSIVE, FEMININE, PLURAL),
+        new Word("נִקְטְלָה")
+            .addForm("let us kill", QAL, COHORTATIVE, PLURAL)
+            .addForm("she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
 
         // Qal Infinitive Construct
-        new Word("קְטֹל", "to kill", QAL, INFINITIVE_CONSTRUCT),
+        // See Imperative above
         new Word("נְתֹן", "to give", QAL, INFINITIVE_CONSTRUCT),
         new Word("תֵּת", "to give נתן", QAL, INFINITIVE_CONSTRUCT),
         new Word("לֶכֶת", "to walk הלך", QAL, INFINITIVE_CONSTRUCT),
 
         // Qal Infinitive Absolute
-        new Word("קָטוֹל", "to kill", QAL, INFINITIVE_ABSOLUTE),
+        new Word("קָטוֹל")
+            .addForm("to kill", QAL, INFINITIVE_ABSOLUTE)
+            .addForm("being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
 
         // Qal Active Participle
         new Word("קֹטֵל", "killing", QAL, PARTICIPLE, ACTIVE, MASCULINE, SINGULAR),
@@ -130,7 +143,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קֹטְלוֹת", "killing", QAL, PARTICIPLE, ACTIVE, FEMININE, PLURAL),
 
         // Qal Passive Participle
-        new Word("קָטוּל", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, SINGULAR),
+        // For masculine singular see infinitive absolute
         new Word("קְטוּלָה", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, SINGULAR),
         new Word("קְטוּלִים", "being killed", QAL, PARTICIPLE, PASSIVE, MASCULINE, PLURAL),
         new Word("קְטוּלוֹת", "being killed", QAL, PARTICIPLE, PASSIVE, FEMININE, PLURAL),
@@ -140,7 +153,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נִקְטַלְתָּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
         new Word("נִקְטַלְתְּ", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("נִקְטַל", "he was killed", NIPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("נִקְטְלָה", "she was killed", NIPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
+        // feminine 3rd person singular see qal cohortative above
         new Word("נִקְטַלְנוּ", "we were killed", NIPHAL, PERFECT, FIRST_PERSON, PLURAL),
         new Word("נִקְטַלְתֶּם", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("נִקְטַלְתֶּן", "you were killed", NIPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
@@ -148,23 +161,28 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         // Niphal Imperfect
         new Word("אֶקָּטֵל", "I will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּקָּטֵל", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּקָּטֵל")
+            .addForm("you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תִּקָּטְלִי", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יִקָּטֵל", "he will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּקָּטֵל", "she will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נִקָּטֵל", "we will be killed", NIPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תִּקָּטְלוּ", "you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תִּקָּטַלְנָה", "you/they will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תִּקָּטַלְנָה")
+            .addForm("you will be killed", NIPHAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יִקָּטְלוּ", "they will be killed", NIPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         // Niphal Imperative
-        new Word("הִקָּטֵל", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הִקָּטֵל")
+            .addForm("be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR)
+            .addForm("to be kill", NIPHAL, INFINITIVE_CONSTRUCT),
         new Word("הִקָּטְלִי", "be killed!", NIPHAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("הִקָּטְלְוּ", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL),
 
         // Niphal Infinitive
-        new Word("הִקָּטֵל", "to be kill", NIPHAL, INFINITIVE_CONSTRUCT),
+        // For infinitive construct see imperative
         new Word("נִקְטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
         new Word("הִקָּטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
 
@@ -186,21 +204,27 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קִטְּלוּ", "they slaughtered", PIEL, PERFECT, THIRD_PERSON, PLURAL),
 
         new Word("אֲקַטֵּל", "I will slaughter", PIEL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תְּקַטֵּל", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקַטֵּל")
+            .addForm("you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תְּקַטְּלִי", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יְקַטֵּל", "he will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תְּקַטֵּל", "she will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נְקַטֵּל", "we will slaughter", PIEL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תְּקַטְּלוּ", "you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תְּקַטֵּלְנָה", "you/they will slaughter", PIEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תְּקַטֵּלְנָה")
+            .addForm("you will slaughter", PIEL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יְקַטְּלוּ", "they will slaughter", PIEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word("קַטֵּל", "slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("קַטֵּל")
+            .addForm("slaughter!", PIEL, IMPERATIVE, MASCULINE, SINGULAR)
+            .addForm("to slaughter", PIEL, INFINITIVE_CONSTRUCT)
+            .addForm("to slaughter", PIEL, INFINITIVE_ABSOLUTE),
         new Word("קַטְּלִי", "slaughter!", PIEL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("קַטְּלוּ", "slaughter!", PIEL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("קַטֵּלְנָה", "slaughter!", PIEL, IMPERATIVE, FEMININE, PLURAL),
 
-        new Word("קַטֵּל", "to slaughter", PIEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE),
+        // infinitives see imperative above
 
         new Word("מְקַטֵּל", "slaughtering", PIEL, PARTICIPLE, MASCULINE, SINGULAR),
         new Word("מְקַטֶּלֶת", "slaughtering", PIEL, PARTICIPLE, FEMININE, SINGULAR),
@@ -218,13 +242,16 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קֻטְּלוּ", "they were slaughtered", PUAL, PERFECT, THIRD_PERSON, PLURAL),
 
         new Word("אֲקֻטַּל", "I will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תְּקֻטַּל", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תְּקֻטַּל")
+            .addForm("you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תְּקֻטְּלִי", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יְקֻטַּל", "he will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תְּקֻטַּל", "she will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נְקֻטַּל", "we will be slaughtered", PUAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תְּקֻטְּלוּ", "you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תְּקֻטַּלְנָה", "you/they will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תְּקֻטַּלְנָה")
+            .addForm("you will be slaughtered", PUAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יְקֻטְּלוּ", "they will be slaughtered", PUAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         new Word("מְקֻטָּל", "being slaughtered", PUAL, PARTICIPLE, MASCULINE, SINGULAR),
@@ -244,22 +271,27 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הִקְטִילוּ", "they caused to kill", HIPHIL, PERFECT, THIRD_PERSON, PLURAL),
 
         new Word("אַקְטִיל", "I will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תַּקְטִיל", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תַּקְטִיל")
+            .addForm("you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תַּקְטִילִי", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יַקְטִיל", "he will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תַּקְטִיל", "she will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נַקְטִיל", "we will cause to kill", HIPHIL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תַּקְטִילוּ", "you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תַּקְטֵלְנָה", "you/they will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תַּקְטֵלְנָה")
+            .addForm("you will cause to kill", HIPHIL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יַקְטִילוּ", "they will cause to kill", HIPHIL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word("הַקְטֵל", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR),
+        new Word("הַקְטֵל")
+            .addForm("cause to kill", HIPHIL, IMPERATIVE, MASCULINE, SINGULAR)
+            .addForm("to cause to kill", HIPHIL, INFINITIVE_ABSOLUTE),
         new Word("הַקְטִילִי", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("הַקְטִילוּ", "cause to kill", HIPHIL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("הַקְטֵלְנָה", "cause to kill", HIPHIL, IMPERATIVE, FEMININE, PLURAL),
 
         new Word("הַקְטִיל", "to cause to kill", HIPHIL, INFINITIVE_CONSTRUCT),
-        new Word("הַקְטֵל", "to cause to kill", HIPHIL, INFINITIVE_ABSOLUTE),
+        // infinitive absolute see imperative
 
         new Word("מַקְטִיל", "causing to kill", HIPHIL, PARTICIPLE, MASCULINE, SINGULAR),
         new Word("מַקְטֶלֶת", "causing to kill", HIPHIL, PARTICIPLE, FEMININE, SINGULAR),
@@ -288,23 +320,29 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הָקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         new Word("אֻקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תֻּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תֻּקְטַל")
+            .addForm("you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תֻּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יֻקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תֻּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נֻקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תֻּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תֻּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תֻּקְטַלְנָה")
+            .addForm("you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יֻקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         new Word("אָקְטַל", "I will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תָּקְטַל", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תָּקְטַל")
+            .addForm("you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תָּקְטְלִי", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יָקְטַל", "he will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תָּקְטַל", "she will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נָקְטַל", "we will be made to kill", HOPHAL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תָּקְטְלוּ", "you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תָּקְטַלְנָה", "you/they will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תָּקְטַלְנָה")
+            .addForm("you will be made to kill", HOPHAL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יָקְטַלוּ", "they will be made to kill", HOPHAL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
         new Word("מֻקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR),
@@ -321,29 +359,38 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הִתְקַטַּלְתִּי", "I killed myself", HITHPAEL, PERFECT, FIRST_PERSON, SINGULAR),
         new Word("הִתְקַטַּלְתָּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
         new Word("הִתְקַטַּלְתְּ", "you killed yourself", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
-        new Word("הִתְקַטֵּל", "he killed himself", HITHPAEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
+        new Word("הִתְקַטֵּל")
+            .addForm("he killed himself", HITHPAEL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR)
+            .addForm("kill yourself", HITHPAEL, IMPERATIVE, MASCULINE, SINGULAR)
+            .addForm("to kill oneself", HITHPAEL, INFINITIVE_CONSTRUCT)
+            .addForm("to kill oneself", HITHPAEL, INFINITIVE_ABSOLUTE),
         new Word("הִתְקַטְּלָה", "she killed herself", HITHPAEL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("הִתְקַטַּלְנוּ", "we killed ourselves", HITHPAEL, PERFECT, FIRST_PERSON, PLURAL),
         new Word("הִתְקַטַּלְתֶּם", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("הִתְקַטַּלְתֶּן", "you killed yourselves", HITHPAEL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
-        new Word("הִתְקַטְּלוּ", "they killed themselves", HITHPAEL, PERFECT, THIRD_PERSON, PLURAL),
+        new Word("הִתְקַטְּלוּ")
+            .addForm("they killed themselves", HITHPAEL, PERFECT, THIRD_PERSON, PLURAL)
+            .addForm("kill yourselves", HITHPAEL, IMPERATIVE, MASCULINE, PLURAL),
 
         new Word("אֶתְקַטֵּל", "I will kill myself", HITHPAEL, IMPERFECT, FIRST_PERSON, SINGULAR),
-        new Word("תִּתְקַטֵּל", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR),
+        new Word("תִּתְקַטֵּל")
+            .addForm("you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, SINGULAR)
+            .addForm("she will kill herself", HITHPAEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("תִּתְקַטְּלִי", "you will kill yourself", HITHPAEL, IMPERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("יִתְקַטֵּל", "he will kill himself", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
-        new Word("תִּתְקַטֵּל", "she will kill herself", HITHPAEL, IMPERFECT, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("נִתְקַטֵּל", "we will kill ourselves", HITHPAEL, IMPERFECT, FIRST_PERSON, PLURAL),
         new Word("תִּתְקַטְּלוּ", "you will kill yourselves", HITHPAEL, IMPERFECT, SECOND_PERSON, MASCULINE, PLURAL),
-        new Word("תִּתְקַטֵּלְנָה", "you/they will kill yourselves/themselves", HITHPAEL, IMPERFECT, SECOND_PERSON, THIRD_PERSON, FEMININE, PLURAL),
+        new Word("תִּתְקַטֵּלְנָה")
+            .addForm("you will kill yourselves/themselves", HITHPAEL, IMPERFECT, SECOND_PERSON, FEMININE, PLURAL)
+            .addForm("they will kill yourselves/themselves", HITHPAEL, IMPERFECT, THIRD_PERSON, FEMININE, PLURAL),
         new Word("יִתְקַטֵּלוּ", "they will kill themselves", HITHPAEL, IMPERFECT, THIRD_PERSON, MASCULINE, PLURAL),
 
-        new Word("הִתְקַטֵּל", "kill yourself", HITHPAEL, IMPERATIVE, MASCULINE, SINGULAR),
+        // Masculine singular see perfect above
         new Word("הִתְקַטְּלִי", "kill yourself", HITHPAEL, IMPERATIVE, FEMININE, SINGULAR),
-        new Word("הִתְקַטְּלוּ", "kill yourselves", HITHPAEL, IMPERATIVE, MASCULINE, PLURAL),
+        // Masculine plural see perfect above
         new Word("הִתְקַטֵּלְנָה", "kill yourselves", HITHPAEL, IMPERATIVE, FEMININE, PLURAL),
 
-        new Word("הִתְקַטֵּל", "to kill oneself", HITHPAEL, INFINITIVE_CONSTRUCT, INFINITIVE_ABSOLUTE),
+        // Both infinitives see perfect above
 
         new Word("מִתְקַטֵּל", "killing oneself", HITHPAEL, PARTICIPLE, MASCULINE, SINGULAR),
         new Word("מִתְקַטֶּלֶת", "killing oneself", HITHPAEL, PARTICIPLE, FEMININE, SINGULAR),
@@ -472,8 +519,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מַעֲשֶׂה", "work, deed", MASCULINE), // 235
         new Word("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL),
         // 2602
-        new Word("אֱלֹהִים", "God", MASCULINE),
-        new Word("אֱלֹהִים", "gods", MASCULINE, PLURAL),
+        new Word("אֱלֹהִים")
+            .addForm("God", MASCULINE)
+            .addForm("gods", MASCULINE, PLURAL),
         new Word("אֵל", "god", MASCULINE), // 236
         // 2579
         new Word("בָּא", "he came, entered - בּוֹא"),
@@ -613,8 +661,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 743
         new Word("כֵּן", "so, thus"),
         // 736
-        new Word("קָרָא", "he called"),
-        new Word("קָרָא", "he encountered, he met"), // 139 I don't think these roots are related
+        new Word("קָרָא")
+            .addForm("he called")
+            .addForm("he encountered, he met"), // 139 I don't think these roots are related
         // 729
         new Word("אַל", "no, not (with imperfect) not at this time"),
         // 712
@@ -763,7 +812,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 373
         new Word("שַׁעַר", "gate", MASCULINE),
         new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
-        new Word("טוֹב", "good", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("טוֹב")
+            .addForm("good", ADJECTIVE, MASCULINE, SINGULAR)
+            .addForm("he was good"),
         new Word("טוֹבָה", "good", ADJECTIVE, FEMININE, SINGULAR),
         new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
         new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
@@ -777,7 +828,10 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
         new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR),
-        new Word("רָעָה", "bad, evil", ADJECTIVE, FEMININE, SINGULAR),
+        new Word("רָעָה")
+            .addForm("bad, evil", ADJECTIVE, FEMININE, SINGULAR)
+            .addForm("evil, misery, distress", NOUN, FEMININE)
+            .addForm("he pastured, tended, grazed"),
         new Word("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL),
         // 348
@@ -809,8 +863,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("נָבִיא", "prophet", MASCULINE),
         new Word("נְבִיאִים", "prophets", MASCULINE, PLURAL),
         new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL), // 115
-        // 311
-        new Word("רָעָה", "evil, misery, distress", NOUN, FEMININE),
         // 304
         new Word("פָּקַד", "he attended to, appointed, mustered, visited"),
         new Word("מִשְׁפָּחָה", "family", FEMININE),
@@ -842,7 +894,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("קָרַב", "he came near, he offered"),
         new Word("קֶרֶב", "midst, inward part", MASCULINE),
         // 277
-        new Word("אַף", "nose, anger", MASCULINE),
+        new Word("אַף")
+            .addForm("nose, anger", MASCULINE)
+            .addForm("also, indeed, even"),
         new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
         // 274
         new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL),
@@ -929,7 +983,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL),
         new Word("שָׁכַב", "he layed down, he had sex"),
         new Word("בֹּקֶר", "morning", MASCULINE),
-        new Word("בְּקָרִים", "mornings", MASCULINE, PLURAL),
+        new Word("בְּקָרִים")
+            .addForm("mornings", MASCULINE, PLURAL)
+            .addForm("herds, oxen", MASCULINE, PLURAL),
         new Word("מַלְאָךּ", "messenger", MASCULINE),
         new Word("מַלְאָכִים", "messengers", MASCULINE, PLURAL),
         // 211
@@ -981,7 +1037,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
         // 183
         new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
-        new Word("בְּקָרִים", "herds, oxen", MASCULINE, PLURAL),
+        // For plural see "mornings" above
         // 182
         new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
         new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
@@ -1004,7 +1060,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("בָּחַר", "he chose, tested, examined"),
         // 167
         new Word("הָרַג", "he attacked, he slew"),
-        new Word("רָעָה", "he pastured, tended, grazed"),
         new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
         new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
         new Word("מְלָאכָה", "work, occupation", FEMININE),
@@ -1031,8 +1086,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
         // 160
         new Word("נוּס", "he fled, he escaped"),
-        new Word("גִּּבּוֹר", "mighty man, hero, warrior", MASCULINE),
-        new Word("גִּּבּוֹר", "mighty", ADJECTIVE),
+        new Word("גִּּבּוֹר")
+            .addForm("mighty man, hero, warrior", MASCULINE)
+            .addForm("mighty", ADJECTIVE),
         // 156
         new Word("שָׂמַח", "he rejoiced, he was glad"),
         // 153
@@ -1095,7 +1151,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("עֶרֶב", "evening, sunset", MASCULINE),
         // 133
         new Word("קָבַר", "he buried"),
-        new Word("אַף", "also, indeed, even"),
         new Word("פֶּן–", "lest, otherwise"),
         new Word("פַּר", "bull, ox, steer", MASCULINE),
         new Word("שָׁאַר", "he remained, was left over, survived"),
@@ -1151,7 +1206,6 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("לָבַשׁ", "he put on a garmet, he clothed"),
         new Word("בִּלְתּי", "not (with infinitive), except"),
         new Word("לְבִלְתּי", "not (with infinitive)"),
-        new Word("חָשַׁב", "he thought, accounted"),
         new Word("עַמּוּד", "pillar, column", MASCULINE),
         // 111
         new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
@@ -1162,8 +1216,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("רַק", "only, still, but, however"),
         new Word("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", FEMININE),
         // 108
-        new Word("נִחַם", "he was sorry, moved to pity, had compassion", NIPHAL),
-        new Word("נִחַם", "he comforted, consoled", PIEL),
+        new Word("נִחַם")
+            .addForm("he was sorry, moved to pity, had compassion", NIPHAL)
+            .addForm("he comforted, consoled", PIEL),
         // 107
         new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE),
         // 106
@@ -1223,7 +1278,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("יַחַד", "unitedness", MASCULINE, NOUN),
 
         // 44
-        new Word("טוֹב", "he was good"),
+        // טוֹב as a verb, see adjective form
 
         // 18
         new Word("רְבָבָה", "ten thousand")

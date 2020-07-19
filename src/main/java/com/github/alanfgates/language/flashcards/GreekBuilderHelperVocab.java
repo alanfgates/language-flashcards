@@ -23,29 +23,35 @@ class GreekBuilderHelperVocab {
   static List<Word> getVocab() {
     return Arrays.asList(
         new Word("ὁ", "the", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("τοῦ", "the", MASCULINE, GENITIVE, SINGULAR),
-        new Word("τῷ", "the", MASCULINE, DATIVE, SINGULAR),
+        new Word("τοῦ")
+            .addForm("the", MASCULINE, GENITIVE, SINGULAR)
+            .addForm("the", NEUTER, GENITIVE, SINGULAR),
+        new Word("τῷ")
+            .addForm("the", MASCULINE, DATIVE, SINGULAR)
+            .addForm("the", NEUTER, DATIVE, SINGULAR),
         new Word("τόν", "the", MASCULINE, ACCUSATIVE, SINGULAR),
         new Word("ὁι", "the", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", MASCULINE, GENITIVE, PLURAL),
-        new Word("τοῖς", "the", MASCULINE, DATIVE, PLURAL),
+        new Word("τῶν")
+            .addForm("the", MASCULINE, GENITIVE, PLURAL)
+            .addForm("the", FEMININE, GENITIVE, PLURAL)
+            .addForm("the", NEUTER, GENITIVE, PLURAL),
+        new Word("τοῖς")
+            .addForm("the", MASCULINE, DATIVE, PLURAL)
+            .addForm("the", NEUTER, DATIVE, PLURAL),
         new Word("τούς", "the", MASCULINE, ACCUSATIVE, PLURAL),
         new Word("ἡ", "the", FEMININE, NOMINATIVE, SINGULAR),
         new Word("τῆς", "the", FEMININE, GENITIVE, SINGULAR),
         new Word("τῇ", "the", FEMININE, DATIVE, SINGULAR),
         new Word("τήν", "the", FEMININE, ACCUSATIVE, SINGULAR),
         new Word("ἁι", "the", FEMININE, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", FEMININE, GENITIVE, PLURAL),
         new Word("ταῖς", "the", FEMININE, DATIVE, PLURAL),
         new Word("τάς", "the", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τό", "the", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("τοῦ", "the", NEUTER, GENITIVE, SINGULAR),
-        new Word("τῷ", "the", NEUTER, DATIVE, SINGULAR),
-        new Word("τό", "the", NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("τά", "the", NEUTER, NOMINATIVE, PLURAL),
-        new Word("τῶν", "the", NEUTER, GENITIVE, PLURAL),
-        new Word("τοῖς", "the", NEUTER, DATIVE, PLURAL),
-        new Word("τά", "the", NEUTER, ACCUSATIVE, PLURAL),
+        new Word("τό")
+            .addForm("the", NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("the", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("τά")
+            .addForm("the", NEUTER, NOMINATIVE, PLURAL)
+            .addForm("the", NEUTER, ACCUSATIVE, PLURAL),
         // 9164
         new Word("καί", "and"),
         // 5601
@@ -96,21 +102,38 @@ class GreekBuilderHelperVocab {
         new Word("ἔσεσθε", "You will be εἰμί", INDICATIVE, ACTIVE, FUTURE, SECOND_PERSON, PLURAL),
         new Word("ἔσονται", "They will be εἰμί", INDICATIVE, ACTIVE, FUTURE, THIRD_PERSON, PLURAL),
         new Word("ἤμην", "I was", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, SINGULAR),
-        new Word("ἦς", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR),
+        new Word("ἦς")
+            .addForm("you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, SINGULAR)
+            .addForm("you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
         new Word("ἦν", "s/he was", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, SINGULAR),
         new Word("ἦμεν", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
         new Word("ἤμεθα", "We were", INDICATIVE, ACTIVE, AORIST, FIRST_PERSON, PLURAL),
-        new Word("ἦτε", "you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL),
+        new Word("ἦτε")
+            .addForm("you were", INDICATIVE, ACTIVE, AORIST, SECOND_PERSON, PLURAL)
+            .addForm("you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
         new Word("ἦσαν", "They were", INDICATIVE, ACTIVE, AORIST, THIRD_PERSON, PLURAL),
 
         new Word("ὤν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR),
-        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR),
+        new Word("ὄντος")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, SINGULAR)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
+        new Word("ὄντι")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, SINGULAR)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
+        new Word("ὄντα")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
         new Word("ὄντες", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, NOMINATIVE, PLURAL),
-        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL),
-        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
-        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL),
+        new Word("ὄντων")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, GENITIVE, PLURAL)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
+        new Word("οὖσι")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
+        new Word("οὖσιν")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, DATIVE, PLURAL)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
         new Word("ὄντας", "being", PARTICIPLE, ACTIVE, PRESENT, MASCULINE, ACCUSATIVE, PLURAL),
 
         new Word("οὖσα", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, NOMINATIVE, SINGULAR),
@@ -122,21 +145,15 @@ class GreekBuilderHelperVocab {
         new Word("οὔσαις", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, DATIVE, PLURAL),
         new Word("οὔσας", "being", PARTICIPLE, ACTIVE, PRESENT, FEMININE, ACCUSATIVE, PLURAL),
 
-        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR),
-        new Word("ὄντος", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, SINGULAR),
-        new Word("ὄντι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, SINGULAR),
-        new Word("ὄν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, PLURAL),
-        new Word("ὄντων", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, GENITIVE, PLURAL),
-        new Word("οὖσι", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
-        new Word("οὖσιν", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, DATIVE, PLURAL),
-        new Word("ὄντα", "being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, PLURAL),
+        new Word("ὄν")
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("being", PARTICIPLE, ACTIVE, PRESENT, NEUTER, ACCUSATIVE, SINGULAR),
 
         new Word("ὦ", "I might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, SINGULAR),
-        new Word("ἦς", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, SINGULAR),
+        // second person singular see indicative active aorist above
         new Word("ᾖ", "s/he might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, SINGULAR),
         new Word("ὦμεν", "we might be", SUBJUNCTIVE, ACTIVE, PRESENT, FIRST_PERSON, PLURAL),
-        new Word("ἦτε", "you might be", SUBJUNCTIVE, ACTIVE, PRESENT, SECOND_PERSON, PLURAL),
+        // second person plural see indicative active aorist above
         new Word("ὦσι", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
         new Word("ὦσιν", "they might be", SUBJUNCTIVE, ACTIVE, PRESENT, THIRD_PERSON, PLURAL),
 
@@ -165,34 +182,40 @@ class GreekBuilderHelperVocab {
         new Word("τοῦτο", "this", NEUTER),
         // 1365
         new Word("ὁς", "who, which", MASCULINE, NOMINATIVE, SINGULAR),
-        new Word("ὁυ", "who, which", MASCULINE, GENITIVE, SINGULAR),
-        new Word("ᾡ", "who, which", MASCULINE, DATIVE, SINGULAR),
+        new Word("ὁυ")
+            .addForm("who, which", MASCULINE, GENITIVE, SINGULAR)
+            .addForm("who, which", NEUTER, GENITIVE, SINGULAR),
+        new Word("ᾡ")
+            .addForm("who, which", MASCULINE, DATIVE, SINGULAR)
+            .addForm("who, which", NEUTER, DATIVE, SINGULAR),
         new Word("ὁν", "who, which", MASCULINE, ACCUSATIVE, SINGULAR),
         new Word("ἥ", "who, which", FEMININE, NOMINATIVE, SINGULAR),
         new Word("ἡς", "who, which", FEMININE, GENITIVE, SINGULAR),
         new Word("ᾑ", "who, which", FEMININE, DATIVE, SINGULAR),
         new Word("ἡν", "who, which", FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("ὅ", "who, which", NEUTER, NOMINATIVE, SINGULAR),
-        new Word("ὁυ", "who, which", NEUTER, GENITIVE, SINGULAR),
-        new Word("ᾡ", "who, which", NEUTER, DATIVE, SINGULAR),
-        new Word("ὅ", "who, which", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("ὅ")
+            .addForm("who, which", NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("who, which", NEUTER, ACCUSATIVE, SINGULAR),
         new Word("ὅι", "who, which", MASCULINE, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", MASCULINE, GENITIVE, PLURAL),
-        new Word("ὁις", "who, which", MASCULINE, DATIVE, PLURAL),
+        new Word("ὡν")
+            .addForm("who, which", MASCULINE, GENITIVE, PLURAL)
+            .addForm("who, which", FEMININE, GENITIVE, PLURAL)
+            .addForm("who, which", NEUTER, GENITIVE, PLURAL),
+        new Word("ὁις")
+            .addForm("who, which", MASCULINE, DATIVE, PLURAL)
+            .addForm("who, which", NEUTER, DATIVE, PLURAL),
         new Word("ὁυς", "who, which", MASCULINE, ACCUSATIVE, PLURAL),
         new Word("ἅι", "who, which", FEMININE, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", FEMININE, GENITIVE, PLURAL),
         new Word("ἁις", "who, which", FEMININE, DATIVE, PLURAL),
         new Word("ἁς", "who, which", FEMININE, ACCUSATIVE, PLURAL),
-        new Word("ἁ", "who, which", NEUTER, NOMINATIVE, PLURAL),
-        new Word("ὡν", "who, which", NEUTER, GENITIVE, PLURAL),
-        new Word("ὁις", "who, which", NEUTER, DATIVE, PLURAL),
-        new Word("ἁ", "who, which", NEUTER, ACCUSATIVE, PLURAL),
+        new Word("ἁ")
+            .addForm("who, which", NEUTER, NOMINATIVE, PLURAL)
+            .addForm("who, which", NEUTER, ACCUSATIVE, PLURAL),
         // 1318
         new Word("Θεός", "God", MASCULINE),
         new Word("Θεοῦ", "God", MASCULINE, GENITIVE),
         // 1297
-        new Word("ὅτι", "that, because"),
+        // for ὅτι see ὅστις below
         // 1283
         new Word("πᾶς", "all every each", MASCULINE),
         new Word("πᾶσα", "all every each", FEMININE),
@@ -203,9 +226,10 @@ class GreekBuilderHelperVocab {
         new Word("ἐκ", "out of, from", GENITIVE),
         new Word("ἐξ", "out of, from", GENITIVE),
         // 891
-        new Word("ἐπί", "onto", ACCUSATIVE),
-        new Word("ἐπί", "over", GENITIVE),
-        new Word("ἐπί", "at", DATIVE),
+        new Word("ἐπί")
+          .addForm("onto", ACCUSATIVE)
+          .addForm("over", GENITIVE)
+          .addForm("at", DATIVE),
         // 719
         new Word("κύριος", "lord", MASCULINE),
         new Word("κύριου", "lord", MASCULINE, GENITIVE),
@@ -229,8 +253,9 @@ class GreekBuilderHelperVocab {
         new Word("γενεά", "genus, generation, age", FEMININE),
         new Word("γενεᾶς", "genus, generation, age", FEMININE, GENITIVE),
         // 668
-        new Word("διά", "on account of", ACCUSATIVE),
-        new Word("διά", "through", GENITIVE),
+        new Word("διά")
+            .addForm("on account of", ACCUSATIVE)
+            .addForm("through", GENITIVE),
         // 663
         new Word("ἵνα", "in order that"),
         // 646
@@ -245,16 +270,39 @@ class GreekBuilderHelperVocab {
         new Word("ἦλθον", "I came/went", SECOND_AORIST),
         new Word("ἐλήλυθα", "I have come/gone ", SECOND_PERFECT),
         // 579
-        new Word("τίς", "who? what?", MASCULINE, FEMININE, NOMINATIVE, SINGULAR),
-        new Word("τίνος", "who? what?", MASCULINE, FEMININE, NEUTER, GENITIVE, SINGULAR),
-        new Word("τίνι", "who? what?", MASCULINE, FEMININE, NEUTER, DATIVE, SINGULAR),
-        new Word("τίνα", "who? what?", MASCULINE, FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("τί", "who? what?", NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("τίνες", "who? what?", MASCULINE, FEMININE, NOMINATIVE, PLURAL),
-        new Word("τίνων", "who? what?", MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL),
-        new Word("τίσι", "who? what?", MASCULINE, FEMININE, NEUTER, DATIVE, PLURAL),
-        new Word("τίνας", "who? what?", MASCULINE, FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τίνα", "who? what?", NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("τίς")
+            .addForm("who? what?", MASCULINE, NOMINATIVE, SINGULAR)
+            .addForm("who? what?", FEMININE, NOMINATIVE, SINGULAR),
+        new Word("τίνος")
+            .addForm("who? what?", MASCULINE, GENITIVE, SINGULAR)
+            .addForm("who? what?", FEMININE, GENITIVE, SINGULAR)
+            .addForm("who? what?", NEUTER, GENITIVE, SINGULAR),
+        new Word("τίνι")
+            .addForm("who? what?", MASCULINE, DATIVE, SINGULAR)
+            .addForm("who? what?", FEMININE, DATIVE, SINGULAR)
+            .addForm("who? what?", NEUTER, DATIVE, SINGULAR),
+        new Word("τίνα")
+            .addForm("who? what?", MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("who? what?", FEMININE, ACCUSATIVE, SINGULAR)
+            .addForm("who? what?", NEUTER, NOMINATIVE, PLURAL)
+            .addForm("who? what?", NEUTER, ACCUSATIVE, PLURAL),
+        new Word("τί")
+            .addForm("who? what?", NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("who? what?", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("τίνες")
+            .addForm("who? what?", MASCULINE, NOMINATIVE, PLURAL)
+            .addForm("who? what?", FEMININE, NOMINATIVE, PLURAL),
+        new Word("τίνων")
+            .addForm("who? what?", MASCULINE, GENITIVE, PLURAL)
+            .addForm("who? what?", FEMININE, GENITIVE, PLURAL)
+            .addForm("who? what?", NEUTER, GENITIVE, PLURAL),
+        new Word("τίσι")
+            .addForm("who? what?", MASCULINE, DATIVE, PLURAL)
+            .addForm("who? what?", FEMININE, DATIVE, PLURAL)
+            .addForm("who? what?", NEUTER, DATIVE, PLURAL),
+        new Word("τίνας")
+            .addForm("who? what?", MASCULINE, ACCUSATIVE, PLURAL)
+            .addForm("who? what?", FEMININE, ACCUSATIVE, PLURAL),
         // 572
         new Word("*ποιε", "to do, to make", ROOT),
         new Word("ποιω", "I do, I make ", PRESENT),
@@ -266,16 +314,39 @@ class GreekBuilderHelperVocab {
         new Word("ἄνθρωπος", "human being", MASCULINE),
         new Word("ἄνθρωποῦ", "human being", MASCULINE, GENITIVE),
         // 538
-        new Word("τις", "someone something", MASCULINE, FEMININE, NOMINATIVE, SINGULAR),
-        new Word("τινος", "someone something", MASCULINE, FEMININE, NEUTER, GENITIVE, SINGULAR),
-        new Word("τινι", "someone something", MASCULINE, FEMININE, NEUTER, DATIVE, SINGULAR),
-        new Word("τινα", "someone something", MASCULINE, FEMININE, ACCUSATIVE, SINGULAR),
-        new Word("τι", "someone something", NEUTER, NOMINATIVE, ACCUSATIVE, SINGULAR),
-        new Word("τινες", "someone something", MASCULINE, FEMININE, NOMINATIVE, PLURAL),
-        new Word("τινων", "someone something", MASCULINE, FEMININE, NEUTER, GENITIVE, PLURAL),
-        new Word("τισι", "someone something", MASCULINE, FEMININE, NEUTER, DATIVE, PLURAL),
-        new Word("τινας", "someone something", MASCULINE, FEMININE, ACCUSATIVE, PLURAL),
-        new Word("τινα", "someone something", NEUTER, NOMINATIVE, ACCUSATIVE, PLURAL),
+        new Word("τις")
+            .addForm("someone something", MASCULINE, NOMINATIVE, SINGULAR)
+            .addForm("someone something", FEMININE, NOMINATIVE, SINGULAR),
+        new Word("τινος")
+            .addForm("someone something", MASCULINE, GENITIVE, SINGULAR)
+            .addForm("someone something", FEMININE, GENITIVE, SINGULAR)
+            .addForm("someone something", NEUTER, GENITIVE, SINGULAR),
+        new Word("τινι")
+            .addForm("someone something", MASCULINE, DATIVE, SINGULAR)
+            .addForm("someone something", FEMININE, DATIVE, SINGULAR)
+            .addForm("someone something", NEUTER, DATIVE, SINGULAR),
+        new Word("τινα")
+            .addForm("someone something", MASCULINE, ACCUSATIVE, SINGULAR)
+            .addForm("someone something", FEMININE, ACCUSATIVE, SINGULAR)
+            .addForm("someone something", NEUTER, NOMINATIVE, PLURAL)
+            .addForm("someone something", NEUTER, ACCUSATIVE, PLURAL),
+        new Word("τι")
+            .addForm("someone something", NEUTER, NOMINATIVE, SINGULAR)
+            .addForm("someone something", NEUTER, ACCUSATIVE, SINGULAR),
+        new Word("τινες")
+            .addForm("someone something", MASCULINE, NOMINATIVE, PLURAL)
+            .addForm("someone something", FEMININE, NOMINATIVE, PLURAL),
+        new Word("τινων")
+            .addForm("someone something", MASCULINE, GENITIVE, PLURAL)
+            .addForm("someone something", FEMININE, GENITIVE, PLURAL)
+            .addForm("someone something", NEUTER, GENITIVE, PLURAL),
+        new Word("τισι")
+            .addForm("someone something", MASCULINE, DATIVE, PLURAL)
+            .addForm("someone something", FEMININE, DATIVE, PLURAL)
+            .addForm("someone something", NEUTER, DATIVE, PLURAL),
+    new Word("τινας")
+            .addForm("someone something", MASCULINE, ACCUSATIVE, PLURAL)
+            .addForm("someone something", FEMININE, ACCUSATIVE, PLURAL),
         // 531
         new Word("Χριστός", "Christ", MASCULINE),
         new Word("Χριστοῦ", "Christ", MASCULINE, GENITIVE),
@@ -286,11 +357,13 @@ class GreekBuilderHelperVocab {
         // 499
         new Word("οὖν", "therefore"),
         // 476
-        new Word("κατά", "according to", ACCUSATIVE),
-        new Word("κατά", "down from", GENITIVE),
+        new Word("κατά")
+            .addForm("according to", ACCUSATIVE)
+            .addForm("down from", GENITIVE),
         // 473
-        new Word("μετά", "after", ACCUSATIVE),
-        new Word("μετά", "with", GENITIVE),
+        new Word("μετά")
+            .addForm("after", ACCUSATIVE)
+            .addForm("with", GENITIVE),
         // 455
         new Word("*ορα",	"to see ", ROOT),
         new Word("*οπ",	"to see ", ROOT),
@@ -341,14 +414,16 @@ class GreekBuilderHelperVocab {
         new Word("ἤ", "or"),
         // 333
         new Word("ἐάν", "if"),
-        new Word("περί", "around", ACCUSATIVE),
-        new Word("περί", "concerning, about", GENITIVE),
+        new Word("περί")
+            .addForm("around", ACCUSATIVE)
+            .addForm("concerning, about", GENITIVE),
         // 324
         new Word("οἶδα", "I know", PRESENT),
         // 319
-        new Word("ἑαυτοῦ", "himself", MASCULINE, GENITIVE),
+        new Word("ἑαυτοῦ")
+            .addForm("himself", MASCULINE, GENITIVE)
+            .addForm("itself", NEUTER, GENITIVE),
         new Word("ἑαυτῆς", "herself", FEMININE, GENITIVE),
-        new Word("ἑαυτοῦ", "itself", NEUTER, GENITIVE),
         // 296
         new Word("*λαλε", "to speak ", ROOT),
         new Word("λαλω", "I speak ", PRESENT),
@@ -410,8 +485,9 @@ class GreekBuilderHelperVocab {
         new Word("ἀπεκρινἀμην", "I answered ", AORIST, DEPONENT),
         new Word("ἀπεκρίθην", "I was answered ", PASSIVE, AORIST),
         // 220
-        new Word("ὑπό", "under", ACCUSATIVE),
-        new Word("ὑπό", "by", GENITIVE),
+        new Word("ὑπό")
+            .addForm("under", ACCUSATIVE)
+            .addForm("by", GENITIVE),
         // 218
         new Word("ἐξέρχομαι", "I go out"),
         new Word("ἐξελεὐσομαι", "I will go out εξερχομαι", FUTURE),
@@ -440,9 +516,10 @@ class GreekBuilderHelperVocab {
         new Word("Ἰοὐδαῖα", "jewish", ADJECTIVE, FEMININE),
         new Word("Ἰοὐδαῖον", "jewish", ADJECTIVE, NEUTER),
         // 194
-        new Word("παρά", "alongside of", ACCUSATIVE),
-        new Word("παρά", "from", GENITIVE),
-        new Word("παρά", "in the presence of", DATIVE),
+        new Word("παρά")
+            .addForm("alongside of", ACCUSATIVE)
+            .addForm("from", GENITIVE)
+            .addForm("in the presence of", DATIVE),
         new Word("εισερχομαι", "I enter", PRESENT),
         new Word("εἰσελεύσομαι", "I will enter εισερχομαι", FUTURE),
         new Word("εἰσῆλθον", "I entered εισερχομαι", AORIST),
@@ -502,7 +579,9 @@ class GreekBuilderHelperVocab {
         // ?
         new Word("ὅστις", "whoever, everyone (ὅς + τις both parts decline)", ADJECTIVE, MASCULINE),
         new Word("ἥτις", "whoever, everyone (ἥ + τις both parts decline)", ADJECTIVE, FEMININE),
-        new Word("ὅτι", "whoever, everyone (ὅ + τις both parts decline)", ADJECTIVE, NEUTER),
+        new Word("ὅτι")
+            .addForm("whoever, everyone (ὅ + τις both parts decline)", ADJECTIVE, NEUTER)
+            .addForm("that, because"),
         // 159
         new Word("πρῶτος", "first", ADJECTIVE, MASCULINE),
         new Word("πρῶτη", "first", ADJECTIVE, FEMININE),
@@ -535,8 +614,9 @@ class GreekBuilderHelperVocab {
         new Word("πεπόρευμαι", "I have gone, lived ", MIDDLE, PASSIVE, PERFECT, DEPONENT),
         new Word("ἐπορεὐθην", "I went, lived ", PASSIVE, AORIST, DEPONENT),
         // 150
-        new Word("ὑπερ", "above", ACCUSATIVE),
-        new Word("ὑπερ", "in behalf of", GENITIVE),
+        new Word("ὑπερ")
+            .addForm("above", ACCUSATIVE)
+            .addForm("in behalf of", GENITIVE),
         // 148
         new Word("*καλεϝ", "to call ", ROOT),
         new Word("καλέω", "I call ", PRESENT),
@@ -768,7 +848,6 @@ class GreekBuilderHelperVocab {
         new Word("ἑτερος", "other, another", ADJECTIVE, MASCULINE),
         new Word("ἑτερα", "other, another", ADJECTIVE, FEMININE),
         new Word("ἑτερον", "other, another", ADJECTIVE, NEUTER),
-        new Word("οὐδέ", "and not, neither, nor, not even"),
         // 97
         new Word("ἀρτος", "bread", MASCULINE),
         new Word("ἀρτου", "bread", MASCULINE, GENITIVE),
@@ -986,9 +1065,10 @@ class GreekBuilderHelperVocab {
         new Word("πλοῖον", "ship, boat", NEUTER),
         new Word("πλοῖου", "ship, boat", NEUTER, GENITIVE),
         // 66
-        new Word("πρεσβύτερος", "elder", NOUN, MASCULINE),
+        new Word("πρεσβύτερος")
+            .addForm("elder", NOUN, MASCULINE)
+            .addForm("old", ADJECTIVE, MASCULINE),
         new Word("πρεσβύτερου", "elder", NOUN, MASCULINE, GENITIVE),
-        new Word("πρεσβύτερος", "old", ADJECTIVE, MASCULINE),
         new Word("πρεσβύτερα", "old", ADJECTIVE, FEMININE),
         new Word("πρεσβύτερον", "old", ADJECTIVE, NEUTER),
         new Word("*φερ", "to carry, bear, produce ", ROOT),
@@ -1102,8 +1182,9 @@ class GreekBuilderHelperVocab {
         new Word("κράξω", "I will cry out, call out κράζω ", FUTURE),
         new Word("ἔκραξα", "I cried out, called out κράζω ", AORIST),
         new Word("κέκραγα", "I have cried out, called out κράζω ", PERFECT),
-        new Word("λοιπός", "the rest, remainder", NOUN, MASCULINE),
-        new Word("λοιπός", "remaining", ADJECTIVE, MASCULINE),
+        new Word("λοιπός")
+            .addForm("the rest, remainder", NOUN, MASCULINE)
+            .addForm("remaining", ADJECTIVE, MASCULINE),
         new Word("λοιπή", "remaining", ADJECTIVE, FEMININE),
         new Word("λοιπόν", "remaining", ADJECTIVE, NEUTER),
         new Word("ἀρχή", "beginning; ruler", FEMININE),
@@ -1163,7 +1244,6 @@ class GreekBuilderHelperVocab {
         new Word("τυφλός", "blind", ADJECTIVE, MASCULINE),
         new Word("τυφλή", "blind", ADJECTIVE, FEMININE),
         new Word("τυφλόν", "blind", ADJECTIVE, NEUTER),
-        new Word("μηδέ", "nor, and not"),
         // 49
         new Word("ἔτος", "year", NEUTER),
         new Word("ἔτους", "year", NEUTER, GENITIVE),
