@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -33,10 +34,10 @@ import java.util.Map;
 class CardDeck {
   private static final int NUM_TO_TEST = 20;
 
-  private LinkedList<Word> initialCards;
-  private LinkedList<Word> repeatCards;
-  private List<Word> missedLastTime;
-  private Map<String, List<GrammarRule>> rules;
+  private final LinkedList<Word> initialCards;
+  private final LinkedList<Word> repeatCards;
+  private final List<Word> missedLastTime;
+  private final Map<String, List<GrammarRule>> rules;
 
   /**
    * Build the card deck from source, with each word appearing once
@@ -77,7 +78,6 @@ class CardDeck {
 
     doGrammarRules(input);
 
-    List<Word> doAgain = new ArrayList<>();
     int succeeded = 0;
     int failed = 0;
     // We will shuffle the repeatCards, do any cards we missed last time, then select NUM_TO_TEST/2 initial cards (if any are left) and up
@@ -93,6 +93,7 @@ class CardDeck {
       if (word.test(input)) {
         succeeded++;
       } else {
+        failed++;
         missedLastTime.add(word);
         repeatCards.add(word);
       }
@@ -125,6 +126,17 @@ class CardDeck {
     }
   }
 
+  void findDuplicates() {
+    Map<String, Integer> counts = new HashMap<>();
+    for (Word word : initialCards) {
+      counts.putIfAbsent(word.getOther(), 0);
+      counts.put(word.getOther(), counts.get(word.getOther()) + 1);
+    }
+    for (Map.Entry<String, Integer> e : counts.entrySet()) {
+      if (e.getValue() > 1) System.out.println(e.getKey() + ": " + e.getValue());
+    }
+  }
+
   private void printStatus() {
     StringBuilder buf = new StringBuilder("Remaining initial cards: ")
         .append(initialCards.size())
@@ -139,17 +151,11 @@ class CardDeck {
   }
 
   private void doGrammarRules(BufferedReader input) throws IOException {
-    // Only do one, pick from whichever has more entries
-    List<GrammarRule> most = Collections.emptyList();
-    String language = null;
-    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
-      if (e.getValue().size() > most.size()) {
-        language = e.getKey();
-        most = e.getValue();
-      }
-    }
-    if (language != null) {
-      showOneGrammarRule(input, language, most);
+    // Do all of one, then all of the other
+    Iterator<Map.Entry<String, List<GrammarRule>>> iter = rules.entrySet().iterator();
+    if (iter.hasNext()) {
+      Map.Entry<String, List<GrammarRule>> val = iter.next();
+      showOneGrammarRule(input, val.getKey(), val.getValue());
     }
   }
 

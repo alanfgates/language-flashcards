@@ -17,15 +17,7 @@ package com.github.alanfgates.language.flashcards;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.github.alanfgates.language.flashcards.Declension.*;
-import static com.github.alanfgates.language.flashcards.Gender.*;
-import static com.github.alanfgates.language.flashcards.Mood.*;
-import static com.github.alanfgates.language.flashcards.Number.*;
-import static com.github.alanfgates.language.flashcards.Other.*;
-import static com.github.alanfgates.language.flashcards.PartOfSpeech.*;
-import static com.github.alanfgates.language.flashcards.Person.*;
-import static com.github.alanfgates.language.flashcards.Tense.*;
-import static com.github.alanfgates.language.flashcards.Voice.*;
+import static com.github.alanfgates.language.flashcards.Classifier.*;
 
 class GreekBuilderHelperVocab {
   static List<Word> getVocab() {
