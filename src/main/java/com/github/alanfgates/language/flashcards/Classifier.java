@@ -1,5 +1,8 @@
-/*
- * The author licenses this file
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
@@ -14,7 +17,5 @@
  */
 package com.github.alanfgates.language.flashcards;
 
-public enum Tense {
-  PRESENT, FUTURE, SECOND_FUTURE, AORIST, SECOND_AORIST, PERFECT, IMPERFECT, PLUPERFECT,
-  SECOND_PERFECT, JUSSIVE, COHORTATIVE, ROOT
+public class Classifier {
 }
