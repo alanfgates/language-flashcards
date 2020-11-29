@@ -97,7 +97,7 @@ class CardDeck {
         missedLastTime.add(word);
         repeatCards.add(word);
       }
-      repeatCards.add(word);
+      if (word.isRepeatable()) repeatCards.add(word);
     }
     System.out.println("Total right: " + succeeded + ", wrong: " + failed +
         ", success rate: " + ((float)succeeded / (float)thisTime.size()));
@@ -140,6 +140,8 @@ class CardDeck {
   private void printStatus() {
     StringBuilder buf = new StringBuilder("Remaining initial cards: ")
         .append(initialCards.size())
+        .append(", repeat cards size: ")
+        .append(repeatCards.size())
         .append(", remaining rules: ");
     for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
       buf.append(e.getKey())

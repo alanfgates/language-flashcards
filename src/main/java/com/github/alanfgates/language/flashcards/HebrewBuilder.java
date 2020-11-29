@@ -176,15 +176,15 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // Niphal Imperative
         new Word("הִקָּטֵל")
             .addForm("be killed!", NIPHAL, IMPERATIVE, MASCULINE, SINGULAR)
-            .addForm("to be kill", NIPHAL, INFINITIVE_CONSTRUCT),
+            .addForm("to be killed", NIPHAL, INFINITIVE_CONSTRUCT),
         new Word("הִקָּטְלִי", "be killed!", NIPHAL, IMPERATIVE, FEMININE, SINGULAR),
         new Word("הִקָּטְלְוּ", "be killed!", NIPHAL, IMPERATIVE, MASCULINE, PLURAL),
         new Word("הִקָּטַלְנָה", "be killed!", NIPHAL, IMPERATIVE, FEMININE, PLURAL),
 
         // Niphal Infinitive
         // For infinitive construct see imperative
-        new Word("נִקְטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
-        new Word("הִקָּטוֹל", "to be kill", NIPHAL, INFINITIVE_ABSOLUTE),
+        new Word("נִקְטוֹל", "to be killed", NIPHAL, INFINITIVE_ABSOLUTE),
+        new Word("הִקָּטוֹל", "to be killed", NIPHAL, INFINITIVE_ABSOLUTE),
 
         // Niphal Participle
         new Word("נִקְטָל", "being killed", NIPHAL, PARTICIPLE, MASCULINE, SINGULAR),
@@ -446,6 +446,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("יִקְטְלֵנּוּ", "he will kill him", PRONOMINAL_SUFFIX, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("יִקְטְלָהּ", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
         new Word("יִקְטְלֶנָּה", "he will kill her", PRONOMINAL_SUFFIX, THIRD_PERSON, FEMININE, SINGULAR),
+        // TODO double check, why are these all they and above he yet they
+        // look the same minus the suffix
         new Word("יִקְטְלוּנוּ", "they will kill us", PRONOMINAL_SUFFIX, FIRST_PERSON, PLURAL),
         new Word("יִקְטְלֵכֶם", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, PLURAL),
         new Word("יִקְטְלֵכֶן", "they will kill you", PRONOMINAL_SUFFIX, SECOND_PERSON, FEMININE),
@@ -461,827 +463,827 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 50524
         new Word("וְ", "and, but, also, even"),
         // 23968
-        new Word("הַ", "the"),
+        new Word("הַ", "the").setRepeatable(true),
         // 20435
-        new Word("לְ", "to"),
+        new Word("לְ", "to").setRepeatable(true),
         // 15632
-        new Word("בְּ", "in, at, with"),
+        new Word("בְּ", "in, at, with").setRepeatable(true),
         // 10970
-        new Word("אֶת–", "definite direct object marker OR with"),
-        new Word("אֵת", "definite direct object marker OR with"),
-        new Word("אֹתַי", "direct object marker with pronominal suffix 'me', NOT with"), // 898
-        new Word("אִתִּי", "with me, NOT direct object marker"),
+        new Word("אֶת–", "definite direct object marker OR with").setRepeatable(true),
+        new Word("אֵת", "definite direct object marker OR with").setRepeatable(true),
+        new Word("אֹתַי", "direct object marker with pronominal suffix 'me', NOT with").setRepeatable(true), // 898
+        new Word("אִתִּי", "with me, NOT direct object marker").setRepeatable(true),
         // 7586
-        new Word("מִן", "from"),
+        new Word("מִן", "from").setRepeatable(true),
         // 5778
-        new Word("עַל", "upon, over, above"),
+        new Word("עַל", "upon, over, above").setRepeatable(true),
         // 5518
-        new Word("אֶל", "to, toward"),
+        new Word("אֶל", "to, toward").setRepeatable(true),
         // 5518
-        new Word("לֹא", "no, not, used with perfect, used with imperfect = never"),
+        new Word("לֹא", "no, not, used with perfect, used with imperfect = never").setRepeatable(true),
         // 5503
-        new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)"),
+        new Word("אֲשֶׁר", "who, whom, that, which (relative pronoun)").setRepeatable(true),
         // 5415
-        new Word("כֹּל", "all"),
+        new Word("כֹּל", "all").setRepeatable(true),
         new Word("כָּל", "all of", CONSTRUCT),
         // 5317
-        new Word("אָמַר", "he said"),
+        new Word("אָמַר", "he said").setRepeatable(true),
 
         // 4942
-        new Word("בֵּן", "son", MASCULINE),
+        new Word("בֵּן", "son", MASCULINE).setRepeatable(true),
         new Word("בֶּן", "son of", MASCULINE, CONSTRUCT),
         new Word("בָּנִים", "sons", MASCULINE, PLURAL),
         // 4795
-        new Word("אֲנִי", "I, myself", NOMINATIVE),
-        new Word("אָנֹכִי", "I, myself", NOMINATIVE),
-        new Word("אֲנַחְנוּ", "we", NOMINATIVE),
+        new Word("אֲנִי", "I, myself", NOMINATIVE).setRepeatable(true),
+        new Word("אָנֹכִי", "I, myself", NOMINATIVE).setRepeatable(true),
+        new Word("אֲנַחְנוּ", "we", NOMINATIVE).setRepeatable(true),
 
-        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR),
-        new Word("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR),
-        new Word("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL),
-        new Word("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL),
+        new Word("אַתָּה", "you", NOMINATIVE, MASCULINE, SINGULAR).setRepeatable(true),
+        new Word("אַתְּ", "you", NOMINATIVE, FEMININE, SINGULAR).setRepeatable(true),
+        new Word("אַתֶּם", "you", NOMINATIVE, MASCULINE, PLURAL).setRepeatable(true),
+        new Word("אַתֵּנָה", "you", NOMINATIVE, FEMININE, PLURAL).setRepeatable(true),
 
-        new Word("הוּא", "he, that", NOMINATIVE),
-        new Word("הִיא", "she, that", NOMINATIVE),
-        new Word("הִוא", "she, that", NOMINATIVE),
-        new Word("הֵם", "they, those", NOMINATIVE, MASCULINE, PLURAL),
-        new Word("הֵמָּה", "they, those", NOMINATIVE, MASCULINE, PLURAL),
-        new Word("הֵן", "they, those", NOMINATIVE, FEMININE, PLURAL),
-        new Word("הֵנָּה", "they, those", NOMINATIVE, FEMININE, PLURAL),
+        new Word("הוּא", "he, that", NOMINATIVE).setRepeatable(true),
+        new Word("הִיא", "she, that", NOMINATIVE).setRepeatable(true),
+        new Word("הִוא", "she, that", NOMINATIVE).setRepeatable(true),
+        new Word("הֵם", "they, those", NOMINATIVE, MASCULINE, PLURAL).setRepeatable(true),
+        new Word("הֵמָּה", "they, those", NOMINATIVE, MASCULINE, PLURAL).setRepeatable(true),
+        new Word("הֵן", "they, those", NOMINATIVE, FEMININE, PLURAL).setRepeatable(true),
+        new Word("הֵנָּה", "they, those", NOMINATIVE, FEMININE, PLURAL).setRepeatable(true),
 
         // 4487
-        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly"),
-        new Word("כִּי–אִם", "but, except"),
+        new Word("כִּי", "that, because; (adversative) but, except; (emphatic) indeed, truly").setRepeatable(true),
+        new Word("כִּי–אִם", "but, except").setRepeatable(true),
         // 2909
-        new Word("כְּ", "as, like"),
+        new Word("כְּ", "as, like").setRepeatable(true),
         // 2632
-        new Word("עָשַׂה", "he did, he made"),
-        new Word("מַעֲשֶׂה", "work, deed", MASCULINE), // 235
+        new Word("עָשַׂה", "he did, he made").setRepeatable(true),
+        new Word("מַעֲשֶׂה", "work, deed", MASCULINE).setRepeatable(true), // 235
         new Word("מַעֲשִׂים", "works, deeds", MASCULINE, PLURAL),
         // 2602
         new Word("אֱלֹהִים")
             .addForm("God", MASCULINE)
             .addForm("gods", MASCULINE, PLURAL),
-        new Word("אֵל", "god", MASCULINE), // 236
+        new Word("אֵל", "god", MASCULINE).setRepeatable(true), // 236
         // 2579
-        new Word("בָּא", "he came, entered - בּוֹא"),
+        new Word("בָּא", "he came, entered - בּוֹא").setRepeatable(true),
         // 2530
-        new Word("מֶלֶך", "king", MASCULINE),
+        new Word("מֶלֶך", "king", MASCULINE).setRepeatable(true),
         new Word("מְלָכִים", "kings", MASCULINE, PLURAL),
-        new Word("מָלַךּ", "he reigned"), // 350
+        new Word("מָלַךּ", "he reigned").setRepeatable(true), // 350
         new Word("מַמְלָכָה", "kingdom, reign, dominion", FEMININE), // 117
         // 2529
-        new Word("זֶה",	"this", MASCULINE),
+        new Word("זֶה",	"this", MASCULINE).setRepeatable(true),
         new Word("זֹאת", "this", FEMININE),
-        new Word("אֵלָה", "these"),
+        new Word("אֵלָה", "these").setRepeatable(true),
         // 2505
-        new Word("אֶרֶץ", "land, earth", FEMININE),
+        new Word("אֶרֶץ", "land, earth", FEMININE).setRepeatable(true),
         new Word("אֲרָצוֹת", "lands, earths", FEMININE, PLURAL),
         // 2303
-        new Word("יוֹם", "day", MASCULINE),
+        new Word("יוֹם", "day", MASCULINE).setRepeatable(true),
         new Word("יָמִים", "days", MASCULINE, PLURAL),
         // 2187
-        new Word("אִיש", "man", MASCULINE),
-        new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL),
+        new Word("אִיש", "man", MASCULINE).setRepeatable(true),
+        new Word("אֲנָשִׁים", "men", MASCULINE, PLURAL).setRepeatable(true),
         // 2128
-        new Word("פָּנִים", "face, faces", MASCULINE, SINGULAR, PLURAL),
-        new Word("פְּנֵי", "before, in the presence of"),
+        new Word("פָּנִים", "face, faces", MASCULINE, SINGULAR, PLURAL).setRepeatable(true),
+        new Word("פְּנֵי", "before, in the presence of").setRepeatable(true),
         // 2046
-        new Word("בַּיִת", "house", MASCULINE),
+        new Word("בַּיִת", "house", MASCULINE).setRepeatable(true),
         new Word("בֵּּּית", "house of", MASCULINE, CONSTRUCT),
         new Word("בָּתִּים", "houses", MASCULINE, PLURAL),
         // 1867
-        new Word("עַם", "people, nation", MASCULINE),
+        new Word("עַם", "people, nation", MASCULINE).setRepeatable(true),
         new Word("עַמִּים", "peoples, nations", MASCULINE, PLURAL),
         // 1627
-        new Word("יָד", "hand, (metaphorically) side, power", FEMININE),
+        new Word("יָד", "hand, (metaphorically) side, power", FEMININE).setRepeatable(true),
         new Word("יַד", "hand of", FEMININE, CONSTRUCT),
         new Word("יָדַיִם", "hands", FEMININE, DUAL),
         // 1554
-        new Word("הָלַךּ",	"he walked"),
+        new Word("הָלַךּ",	"he walked").setRepeatable(true),
         // 1494
-        new Word("דָּבָר", "word, speech", MASCULINE),
+        new Word("דָּבָר", "word, speech", MASCULINE).setRepeatable(true),
         new Word("דְּבָרִים", "words, speeches", MASCULINE, PLURAL),
-        new Word("דִּבֶּר",	"he spoke", PIEL), // 1135
+        new Word("דִּבֶּר",	"he spoke", PIEL).setRepeatable(true), // 1135
         // 1310
-        new Word("רָאָה", "he saw"),
-        new Word("מַרְאֶה", "sight, appearance", MASCULINE),  // 103
+        new Word("רָאָה", "he saw").setRepeatable(true),
+        new Word("מַרְאֶה", "sight, appearance", MASCULINE).setRepeatable(true),  // 103
         // 1263
-        new Word("עַד", "until, as far as"),
+        new Word("עַד", "until, as far as").setRepeatable(true),
         // 1210
-        new Word("אָב", "father", MASCULINE),
+        new Word("אָב", "father", MASCULINE).setRepeatable(true),
         new Word("אֲבִי", "father of", MASCULINE, CONSTRUCT),
         new Word("אָבוֹת", "fathers", MASCULINE, PLURAL),
         // 1165
-        new Word("שָׁמַע",	 "he heard"),
+        new Word("שָׁמַע",	 "he heard").setRepeatable(true),
         // 1119
-        new Word("ָה", "to, toward, directional ending"),
+        new Word("ָה", "to, toward, directional ending").setRepeatable(true),
         // 1094
-        new Word("עִיר", "city", FEMININE),
+        new Word("עִיר", "city", FEMININE).setRepeatable(true),
         new Word("עָרִים", "cities", FEMININE, PLURAL),
         // 1087
-        new Word("יָשַׁב",	"he sat, he dwelt"),
+        new Word("יָשַׁב",	"he sat, he dwelt").setRepeatable(true),
         // 1075
-        new Word("יָצָא", 	"he went out"),
-        new Word("שָׁב", "he returned"),
+        new Word("יָצָא", 	"he went out").setRepeatable(true),
+        new Word("שָׁב", "he returned").setRepeatable(true),
         // 1070
-        new Word("אִם", "if"),
+        new Word("אִם", "if").setRepeatable(true),
         // 1061
-        new Word("הִנַּה", "behold, here I am, I am ready"),
+        new Word("הִנַּה", "behold, here I am, I am ready").setRepeatable(true),
         // 1048
-        new Word("עִם", "with"),
+        new Word("עִם", "with").setRepeatable(true),
         // 976
-        new Word("אֶחָד", "one", MASCULINE),
+        new Word("אֶחָד", "one", MASCULINE).setRepeatable(true),
         new Word("אַחַת", "one", FEMININE),
         // 966
-        new Word("לָקַח", "he took"),
+        new Word("לָקַח", "he took").setRepeatable(true),
         // 952
-        new Word("יָדַע", "he knew"),
+        new Word("יָדַע", "he knew").setRepeatable(true),
         // 896
-        new Word("עַיִן", "eye, spring", FEMININE),
+        new Word("עַיִן", "eye, spring", FEMININE).setRepeatable(true),
         new Word("עֵינַים", "eyes", FEMININE, DUAL),
         new Word("עֲיָנֹת", "springs", FEMININE, PLURAL),
         // 894
-        new Word("עָלָה", "he went up"),
+        new Word("עָלָה", "he went up").setRepeatable(true),
         // 879
-        new Word("שָׁנָה", "year", FEMININE),
+        new Word("שָׁנָה", "year", FEMININE).setRepeatable(true),
         new Word("שָׁנִים", "years", FEMININE, PLURAL),
         // 864
-        new Word("שֵׁם", "name", MASCULINE),
+        new Word("שֵׁם", "name", MASCULINE).setRepeatable(true),
         new Word("שֵׁמוֹת", "names", MASCULINE, PLURAL),
         // 853 (601 for לב and 252 for לבב )
-        new Word("לֵב", "heart", MASCULINE),
+        new Word("לֵב", "heart", MASCULINE).setRepeatable(true),
         new Word("לִבּוֹת", "hearts", MASCULINE, PLURAL),
-        new Word("לֵבָב", "heart", MASCULINE),
+        new Word("לֵבָב", "heart", MASCULINE).setRepeatable(true),
         new Word("לְבָבוֹת", "hearts", MASCULINE, PLURAL),
         // 847
-        new Word("שָׁלַח", "he sent, stretched out"),
-        new Word("הִשְׁלְִיך", "he threw, flung, cast - שָׁלַך", HIPHIL), // 127
+        new Word("שָׁלַח", "he sent, stretched out").setRepeatable(true),
+        new Word("הִשְׁלְִיך", "he threw, flung, cast - שָׁלַך", HIPHIL).setRepeatable(true), // 127
         // 845
-        new Word("מֵת", "he died - מוּת"),
-        new Word("מָוֶת", "death, dying", MASCULINE), // 153
+        new Word("מֵת", "he died - מוּת").setRepeatable(true),
+        new Word("מָוֶת", "death, dying", MASCULINE).setRepeatable(true), // 153
         // 835
-        new Word("שָׁם", "there"),
+        new Word("שָׁם", "there").setRepeatable(true),
         // 814
-        new Word("אָכַל", "he ate"),
+        new Word("אָכַל", "he ate").setRepeatable(true),
         // 803
-        new Word("עֶבֶד", "servant, slave", MASCULINE),
+        new Word("עֶבֶד", "servant, slave", MASCULINE).setRepeatable(true),
         new Word("עֲבָדִים", "servants, slaves", MASCULINE, PLURAL),
-        new Word("עָבַד", "he worked, he served"), // 289
-        new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE), // 147
+        new Word("עָבַד", "he worked, he served").setRepeatable(true), // 289
+        new Word("עֲבֹדָה", "work, labor, service, worship", FEMININE).setRepeatable(true), // 147
         // 783
-        new Word("אַיִן", "nothing, there is not"),
+        new Word("אַיִן", "nothing, there is not").setRepeatable(true),
         new Word("אֵין", "nothing, there is not"),
         // 781
-        new Word("אִשָּׁה", "woman, wife", FEMININE),
-        new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT),
-        new Word("נָשׁים", "women, wives", FEMININE, PLURAL),
-        new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT),
+        new Word("אִשָּׁה", "woman, wife", FEMININE).setRepeatable(true),
+        new Word("אֵשֶׁת", "woman, wife", FEMININE, SINGULAR, CONSTRUCT).setRepeatable(true),
+        new Word("נָשׁים", "women, wives", FEMININE, PLURAL).setRepeatable(true),
+        new Word("נְשֵׁי", "women, wives", FEMININE, PLURAL, CONSTRUCT).setRepeatable(true),
         // 774
-        new Word("אָדוֹן", "lord, master", MASCULINE),
+        new Word("אָדוֹן", "lord, master", MASCULINE).setRepeatable(true),
         new Word("אֲדֹנִים", "lords, masters", MASCULINE, PLURAL),
         // 769
-        new Word("שְׁנַיִם", "two", MASCULINE),
-        new Word("שְׁתַּים", "two", FEMININE),
-        new Word("שֵׁנִי", "second", MASCULINE),
-        new Word("שֵׁנִית", "second", FEMININE),
-        new Word("גַּם", "also"),
+        new Word("שְׁנַיִם", "two", MASCULINE).setRepeatable(true),
+        new Word("שְׁתַּים", "two", FEMININE).setRepeatable(true),
+        new Word("שֵׁנִי", "second", MASCULINE).setRepeatable(true),
+        new Word("שֵׁנִית", "second", FEMININE).setRepeatable(true),
+        new Word("גַּם", "also").setRepeatable(true),
         // 757
-        new Word("נֶפֶש", "soul, person", FEMININE),
+        new Word("נֶפֶש", "soul, person", FEMININE).setRepeatable(true),
         new Word("נְפָשׁוֹת", "souls, persons", FEMININE, PLURAL),
         // 754
-        new Word("מָה", "what?"),
-        new Word("מַה", "what?"),
-        new Word("מֶה", "what?"),
+        new Word("מָה", "what?").setRepeatable(true),
+        new Word("מַה", "what?").setRepeatable(true),
+        new Word("מֶה", "what?").setRepeatable(true),
         // 750
-        new Word("כֹּהַן", "priest", MASCULINE),
+        new Word("כֹּהַן", "priest", MASCULINE).setRepeatable(true),
         new Word("כֹהֲנִים", "priests", MASCULINE, PLURAL),
         // 748
-        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence"),
+        new Word("הֲ", "indicates interrogative, prefixed to first word in the sentence").setRepeatable(true),
         // 743
-        new Word("כֵּן", "so, thus"),
+        new Word("כֵּן", "so, thus").setRepeatable(true),
         // 736
-        new Word("קָרָא")
+        new Word("קָרָא").setRepeatable(true)
             .addForm("he called")
             .addForm("he encountered, he met"), // 139 I don't think these roots are related
         // 729
-        new Word("אַל", "no, not (with imperfect) not at this time"),
+        new Word("אַל", "no, not (with imperfect) not at this time").setRepeatable(true),
         // 712
-        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE),
+        new Word("דֶּרֶךּ", "way, road", MASCULINE, FEMININE).setRepeatable(true),
         new Word("דֶּרָכִים", "ways, roads", MASCULINE, FEMININE, PLURAL),
         // 707
-        new Word("אַחַר", "after"),
+        new Word("אַחַר", "after").setRepeatable(true),
         // 658
-        new Word("נָשָׂא", "he lifted, carried, took"),
+        new Word("נָשָׂא", "he lifted, carried, took").setRepeatable(true),
         // 629
-        new Word("אָח", "brother", MASCULINE),
+        new Word("אָח", "brother", MASCULINE).setRepeatable(true),
         new Word("אֲחִי", "brother of", MASCULINE, CONSTRUCT),
         new Word("אַחִים", "brothers", MASCULINE, PLURAL),
         new Word("אָחוֹת", "sister", FEMININE), // 119
         // 627
-        new Word("קָם", "he arose, stood - קוּם"),
+        new Word("קָם", "he arose, stood - קוּם").setRepeatable(true),
         new Word("מָקוֹם", "place", MASCULINE), // 401
-        new Word("מְקוֹמוֹת", "places", MASCULINE, PLURAL),
+        new Word("מְקוֹמוֹת", "places", MASCULINE, PLURAL).setRepeatable(true),
         // 606
-        new Word("שָׁלשׁ", "three", MASCULINE),
+        new Word("שָׁלשׁ", "three", MASCULINE).setRepeatable(true),
         new Word("שְׁלֹשִׁים", "thirty"),
         new Word("שְׁלִישִׁי", "third"),
         // 600
-        new Word("רֹאשׁ", "head", MASCULINE),
+        new Word("רֹאשׁ", "head", MASCULINE).setRepeatable(true),
         new Word("רָאשִׁים", "heads", MASCULINE, PLURAL),
         // 588
-        new Word("בַּת", "daughter", FEMININE),
+        new Word("בַּת", "daughter", FEMININE).setRepeatable(true),
         new Word("בָּנוֹת", "daughters", FEMININE, PLURAL),
         // 583
-        new Word("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL),
+        new Word("מָיִם", "water, waters", MASCULINE, SINGULAR, PLURAL).setRepeatable(true),
         new Word("מֵי", "water", MASCULINE, SINGULAR, PLURAL, CONSTRUCT),
-        new Word("מֵאָה", "hundred"),
+        new Word("מֵאָה", "hundred").setRepeatable(true),
         // 577
-        new Word("כֹּה", "thus, here"),
+        new Word("כֹּה", "thus, here").setRepeatable(true),
         // 560
-        new Word("גּוֹי", "nation", MASCULINE),
+        new Word("גּוֹי", "nation", MASCULINE).setRepeatable(true),
         new Word("גּוֹיִם", "nations", MASCULINE, PLURAL),
         // 559
-        new Word("הַר", "mountain", MASCULINE),
+        new Word("הַר", "mountain", MASCULINE).setRepeatable(true),
         new Word("הָרִים", "mountains", MASCULINE, PLURAL),
         // 554
-        new Word("עָבַר", "he passed over, passed through, passed by"),
+        new Word("עָבַר", "he passed over, passed through, passed by").setRepeatable(true),
         // 545
-        new Word("אָדָם", "a man, humankind", MASCULINE),
-        new Word("אֲדָמָה", "land, ground, earth", FEMININE),
+        new Word("אָדָם", "a man, humankind", MASCULINE).setRepeatable(true),
+        new Word("אֲדָמָה", "land, ground, earth", FEMININE).setRepeatable(true),
         new Word("אֲדָמוֹת", "lands, grounds", FEMININE, PLURAL),
         // 528
-        new Word("שָׂם", "he put, set - שִׂים"),
+        new Word("שָׂם", "he put, set - שִׂים").setRepeatable(true),
         // 526
-        new Word("גָּדוֹל", "great"),
-        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important"), // 117
+        new Word("גָּדוֹל", "great").setRepeatable(true),
+        new Word("גָּדַל", "he grew up, became great, strong, wealthy, important").setRepeatable(true), // 117
         // 524
-        new Word("עָמַד", "he stood"),
+        new Word("עָמַד", "he stood").setRepeatable(true),
         // 511
-        new Word("תַּחַת", "under, instead of"),
+        new Word("תַּחַת", "under, instead of").setRepeatable(true),
         // 508
-        new Word("חָמַשׁ", "five", MASCULINE),
+        new Word("חָמַשׁ", "five", MASCULINE).setRepeatable(true),
         new Word("חֲמִשִּׁים", "fifty"),
         // 505
-        new Word("קוֹל", "voice, sound", MASCULINE),
+        new Word("קוֹל", "voice, sound", MASCULINE).setRepeatable(true),
         new Word("קֹלוֹת", "voices, sounds", MASCULINE, PLURAL),
         // 501
-        new Word("הִכָּה", "he hit - נכה (he smote)", HIPHIL),
+        new Word("הִכָּה", "he hit - נכה (he smote)", HIPHIL).setRepeatable(true),
         // 498
-        new Word("פֶה", "mouth", MASCULINE),
-        new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT),
+        new Word("פֶה", "mouth", MASCULINE).setRepeatable(true),
+        new Word("פִּי", "mouth", MASCULINE, SINGULAR, CONSTRUCT).setRepeatable(true),
         new Word("פִּיּוֹת", "mouths", MASCULINE, PLURAL),
         // 496
-        new Word("צָבָא", "host, army, war, service", MASCULINE),
+        new Word("צָבָא", "host, army, war, service", MASCULINE).setRepeatable(true),
         new Word("צְבָאוֹת", "hosts, armies, wars, services", MASCULINE, PLURAL),
         // 496
-        new Word("צִוָּה", "he commanded"),
+        new Word("צִוָּה", "he commanded").setRepeatable(true),
         // 495
-        new Word("יָלַד", "he bore, he begat"),
+        new Word("יָלַד", "he bore, he begat").setRepeatable(true),
         // 494
-        new Word("אֶלֶף", "thousand"),
+        new Word("אֶלֶף", "thousand").setRepeatable(true),
         // 492
-        new Word("עֶשֶׁר", "ten", MASCULINE),
-        new Word("עֲשָׂרָה", "ten", FEMININE),
-        new Word("עֶשְׂרִים", "twenty"),
+        new Word("עֶשֶׁר", "ten", MASCULINE).setRepeatable(true),
+        new Word("עֲשָׂרָה", "ten", FEMININE).setRepeatable(true),
+        new Word("עֶשְׂרִים", "twenty").setRepeatable(true),
         // 491
-        new Word("שֶׁבַע", "seven", MASCULINE),
+        new Word("שֶׁבַע", "seven", MASCULINE).setRepeatable(true),
         new Word("שִׁבְעִים", "seventy"),
-        new Word("שָׁבַע", "he swore"), // 186
+        new Word("שָׁבַע", "he swore").setRepeatable(true), // 186
         // 491
-        new Word("עוֹד", "again, still, long"),
+        new Word("עוֹד", "again, still, long").setRepeatable(true),
         // 470
-        new Word("קֹדֶש", "holiness, apartness, sacredness", MASCULINE),
+        new Word("קֹדֶש", "holiness, apartness, sacredness", MASCULINE).setRepeatable(true),
         new Word("קֳדָשִׁים", "holiness, apartness, sacredness", MASCULINE, PLURAL),
-        new Word("קָדַשׁ", "he was consecrated, he consecrated"), // 171
+        new Word("קָדַשׁ", "he was consecrated, he consecrated").setRepeatable(true), // 171
         // 469
-        new Word("שָׁמַר", "he guarded, watched, preserved"),
+        new Word("שָׁמַר", "he guarded, watched, preserved").setRepeatable(true),
         // 457
-        new Word("מָצַה", "he found, reached, obtained"),
+        new Word("מָצַה", "he found, reached, obtained").setRepeatable(true),
         // 456
-        new Word("אַרְבַּע", "four", MASCULINE),
+        new Word("אַרְבַּע", "four", MASCULINE).setRepeatable(true),
         new Word("אַרְבָּעִים", "forty"),
         new Word("רְבִיעִי", "fourth", MASCULINE),
         // 439
-        new Word("עוֹלָם", "forever", MASCULINE),
+        new Word("עוֹלָם", "forever", MASCULINE).setRepeatable(true),
         new Word("עוֹלָמִים", "forever", MASCULINE, PLURAL),
         // 435
-        new Word("נָפַל", "he fell"),
-        new Word("עַתָּה", "now"),
-        new Word("עַת", "time, point in time", FEMININE), // 296
+        new Word("נָפַל", "he fell").setRepeatable(true),
+        new Word("עַתָּה", "now").setRepeatable(true),
+        new Word("עַת", "time, point in time", FEMININE).setRepeatable(true), // 296
         // 424
-        new Word("מִשְׁפָת", "judgement, law", MASCULINE),
+        new Word("מִשְׁפָת", "judgement, law", MASCULINE).setRepeatable(true),
         new Word("מִשׁפָּטִים", "judgements, laws", MASCULINE, PLURAL),
-        new Word("שָׁפַת", "he judged"), // 204
-        new Word("מִי", "who?"),
+        new Word("שָׁפַת", "he judged").setRepeatable(true), // 204
+        new Word("מִי", "who?").setRepeatable(true),
         // 421
-        new Word("שַׂר", "prince, chief", MASCULINE),
+        new Word("שַׂר", "prince, chief", MASCULINE).setRepeatable(true),
         new Word("שָׂרִים", "princes, chiefs", MASCULINE, PLURAL),
-        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, SINGULAR, PLURAL),
+        new Word("שָׁמַיִם", "heavens, sky", MASCULINE, SINGULAR, PLURAL).setRepeatable(true),
         new Word("שְׁמֵי", "heavens, sky", MASCULINE, CONSTRUCT),
         // 420
-        new Word("תָּוֶךּ", "midst"),
+        new Word("תָּוֶךּ", "midst").setRepeatable(true),
         // 413
-        new Word("חֶרֶב", "sword", FEMININE),
+        new Word("חֶרֶב", "sword", FEMININE).setRepeatable(true),
         new Word("חֲרָבוֹת", "swords", FEMININE, PLURAL),
         // 409
-        new Word("רַב", "great, many", MASCULINE),
+        new Word("רַב", "great, many", MASCULINE).setRepeatable(true),
         new Word("רַבָּה", "great, many", FEMININE),
         new Word("רָבָה", "he was(became) great/many"),
-        new Word("רֹב", "multitude, greatness", NOUN, MASCULINE), // 150
+        new Word("רֹב", "multitude, greatness", NOUN, MASCULINE).setRepeatable(true), // 150
         new Word("בַּין", "between"),
         new Word("בִּין", "he discerned, understood"), // 171
         // 405
-        new Word("נָא", "please, now"),
+        new Word("נָא", "please, now").setRepeatable(true),
         // 403
-        new Word("כֶּסֶף", "silver, money", MASCULINE),
-        new Word("מִזְבֵּחַ", "alter", MASCULINE),
+        new Word("כֶּסֶף", "silver, money", MASCULINE).setRepeatable(true),
+        new Word("מִזְבֵּחַ", "alter", MASCULINE).setRepeatable(true),
         new Word("מִזְבְּחוֹת", "alters", MASCULINE, PLURAL),
         // 396
-        new Word("יָם", "sea", MASCULINE),
+        new Word("יָם", "sea", MASCULINE).setRepeatable(true),
         new Word("יַמִּים", "seas", MASCULINE, PLURAL),
         // 389
-        new Word("זָהָב", "gold", MASCULINE),
+        new Word("זָהָב", "gold", MASCULINE).setRepeatable(true),
         // 382
-        new Word("יָרַד", "he went down"),
+        new Word("יָרַד", "he went down").setRepeatable(true),
         // 377
-        new Word("בָּנָה", "he built"),
-        new Word("אַשׁ", "fire", FEMININE),
+        new Word("בָּנָה", "he built").setRepeatable(true),
+        new Word("אַשׁ", "fire", FEMININE).setRepeatable(true),
         // 376
-        new Word("נְאֻם", "utterance", MASCULINE),
+        new Word("נְאֻם", "utterance", MASCULINE).setRepeatable(true),
         // 373
-        new Word("שַׁעַר", "gate", MASCULINE),
+        new Word("שַׁעַר", "gate", MASCULINE).setRepeatable(true),
         new Word("שְׁעָרִים", "gates", MASCULINE, PLURAL),
-        new Word("טוֹב")
+        new Word("טוֹב").setRepeatable(true)
             .addForm("good", ADJECTIVE, MASCULINE, SINGULAR)
             .addForm("he was good"),
         new Word("טוֹבָה", "good", ADJECTIVE, FEMININE, SINGULAR),
         new Word("טוֹבִים", "good", ADJECTIVE, MASCULINE, PLURAL),
         new Word("טוֹבוֹת", "good", ADJECTIVE, FEMININE, PLURAL),
         // 371
-        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL),
+        new Word("הִגִיד", "he told, declared - נגד (be conspicuous)", HIPHIL).setRepeatable(true),
         // 363
-        new Word("רוּחַ", "spirit, breath, wind", FEMININE),
+        new Word("רוּחַ", "spirit, breath, wind", FEMININE).setRepeatable(true),
         new Word("רוּחוֹת", "spirits, breaths, winds", FEMININE, PLURAL),
         // 361
-        new Word("דָּם", "blood", MASCULINE),
+        new Word("דָּם", "blood", MASCULINE).setRepeatable(true),
         new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
-        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR),
-        new Word("רָעָה")
+        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR).setRepeatable(true),
+        new Word("רָעָה").setRepeatable(true)
             .addForm("bad, evil", ADJECTIVE, FEMININE, SINGULAR)
             .addForm("evil, misery, distress", NOUN, FEMININE)
             .addForm("he pastured, tended, grazed"),
         new Word("רָעִים", "bad, evil", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רָעוֹת", "bad, evil", ADJECTIVE, FEMININE, PLURAL),
         // 348
-        new Word("אֹהֶל", "tent", MASCULINE),
+        new Word("אֹהֶל", "tent", MASCULINE).setRepeatable(true),
         new Word("אֹהָלִים", "tents", MASCULINE, PLURAL),
         // 338
-        new Word("סָבִיב", "all around"),
-        new Word("סָבַב", "he turned around, went around, surrounded"), // 163
+        new Word("סָבִיב", "all around").setRepeatable(true),
+        new Word("סָבַב", "he turned around, went around, surrounded").setRepeatable(true), // 163
         // 330
-        new Word("עֵץ", "tree", MASCULINE),
+        new Word("עֵץ", "tree", MASCULINE).setRepeatable(true),
         new Word("עֵצִים", "trees", MASCULINE, PLURAL),
         // 327
-        new Word("בֵּרַךּ", "he blessed - ברך (he knelt, he blessed)", PIEL),
+        new Word("בֵּרַךּ", "he blessed - ברך (he knelt, he blessed)", PIEL).setRepeatable(true),
         // 325
-        new Word("כְּלִי", "utensil, weapon", MASCULINE),
+        new Word("כְּלִי", "utensil, weapon", MASCULINE).setRepeatable(true),
         new Word("כֵּלִים", "utensils, weapons", MASCULINE, PLURAL),
         // 321
-        new Word("שָׂדֶה", "open field, country", MASCULINE),
+        new Word("שָׂדֶה", "open field, country", MASCULINE).setRepeatable(true),
         new Word("שָׂדוֹת", "open fields, country", MASCULINE, PLURAL),
-        new Word("אוֹ", "or"),
+        new Word("אוֹ", "or").setRepeatable(true),
         // 319
-        new Word("מִלְחָמָה", "war, battle", FEMININE),
+        new Word("מִלְחָמָה", "war, battle", FEMININE).setRepeatable(true),
         new Word("מִלְחָמוֹת", "wars, battles", FEMININE, PLURAL),
-        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL), // 171
+        new Word("נִלְחַם", "he engaged in battle (reciprocal), waged war – לחם", NIPHAL).setRepeatable(true), // 171
         // 318
-        new Word("יָרֵא", "he feared"),
+        new Word("יָרֵא", "he feared").setRepeatable(true),
         // 317
-        new Word("עָנָה", "he answered"),
-        new Word("נָבִיא", "prophet", MASCULINE),
+        new Word("עָנָה", "he answered").setRepeatable(true),
+        new Word("נָבִיא", "prophet", MASCULINE).setRepeatable(true),
         new Word("נְבִיאִים", "prophets", MASCULINE, PLURAL),
-        new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL), // 115
+        new Word("נִבָּא", "he prophisied - נָבָא", NIPHAL).setRepeatable(true), // 115
         // 304
-        new Word("פָּקַד", "he attended to, appointed, mustered, visited"),
-        new Word("מִשְׁפָּחָה", "family", FEMININE),
+        new Word("פָּקַד", "he attended to, appointed, mustered, visited").setRepeatable(true),
+        new Word("מִשְׁפָּחָה", "family", FEMININE).setRepeatable(true),
         new Word("מִשְׁפָּחוֹת", "families", FEMININE, PLURAL),
         // 298
-        new Word("סָר", "he turned aside - סור"),
-        new Word("חַטָּאת", "sin, sin offering", FEMININE),
-        new Word("חָטָא", "he sinned, he missed"), // 239
-        new Word("לֶחֶם", "bread, food", MASCULINE),
-        new Word("מְאֹד", "very"),
+        new Word("סָר", "he turned aside - סור").setRepeatable(true),
+        new Word("חַטָּאת", "sin, sin offering", FEMININE).setRepeatable(true),
+        new Word("חָטָא", "he sinned, he missed").setRepeatable(true), // 239
+        new Word("לֶחֶם", "bread, food", MASCULINE).setRepeatable(true),
+        new Word("מְאֹד", "very").setRepeatable(true),
         // 290
-        new Word("חָזַק", "he was strong"),
+        new Word("חָזַק", "he was strong").setRepeatable(true),
         // 289
-        new Word("כָּרַת", "he cut off"),
+        new Word("כָּרַת", "he cut off").setRepeatable(true),
         // 288
-        new Word("עֹלָה", "whole burnt offering", FEMININE),
+        new Word("עֹלָה", "whole burnt offering", FEMININE).setRepeatable(true),
         new Word("עֹלוֹת", "whole burnt offerings", FEMININE, PLURAL),
         // 287
-        new Word("חָיָה", "he lived"),
+        new Word("חָיָה", "he lived").setRepeatable(true),
         new Word("חַיִּים", "life, lives", MASCULINE, SINGULAR, PLURAL), // 268
         // 285
-        new Word("אֹיֵב", "enemy", MASCULINE),
-        new Word("אָיַב", "he was hostile"),
-        new Word("בְּרִית", "covenant", FEMININE),
+        new Word("אֹיֵב", "enemy", MASCULINE).setRepeatable(true),
+        new Word("אָיַב", "he was hostile").setRepeatable(true),
+        new Word("בְּרִית", "covenant", FEMININE).setRepeatable(true),
         // 283
-        new Word("חֹדֶשׁ", "month, new moon", MASCULINE),
+        new Word("חֹדֶשׁ", "month, new moon", MASCULINE).setRepeatable(true),
         new Word("חֳדָשִׁים", "months, new moons", MASCULINE, PLURAL),
         // 280
-        new Word("קָרַב", "he came near, he offered"),
-        new Word("קֶרֶב", "midst, inward part", MASCULINE),
+        new Word("קָרַב", "he came near, he offered").setRepeatable(true),
+        new Word("קֶרֶב", "midst, inward part", MASCULINE).setRepeatable(true),
         // 277
-        new Word("אַף")
+        new Word("אַף").setRepeatable(true)
             .addForm("nose, anger", MASCULINE)
             .addForm("also, indeed, even"),
         new Word("אַפַּיִם", "noses, anger", MASCULINE, PLURAL),
         // 274
-        new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL),
-        new Word("שַׁשׁ", "six", MASCULINE),
+        new Word("צֹאן", "flock, sheep", FEMININE, SINGULAR, PLURAL).setRepeatable(true),
+        new Word("שַׁשׁ", "six", MASCULINE).setRepeatable(true),
         new Word("שׁשִּׁים", "sixty"),
         // 272
-        new Word("אֶבֶן", "stone", FEMININE),
+        new Word("אֶבֶן", "stone", FEMININE).setRepeatable(true),
         new Word("אֲבָנִים", "stones", FEMININE, PLURAL),
-        new Word("לְמַעַן", "because of, in order to, for the sake of"),
+        new Word("לְמַעַן", "because of, in order to, for the sake of").setRepeatable(true),
         // 270
-        new Word("בָּשָׂר", "flesh, meat, skin", MASCULINE),
+        new Word("בָּשָׂר", "flesh, meat, skin", MASCULINE).setRepeatable(true),
         new Word("בְּשָׂרִים", "fleshes, meats, skins", MASCULINE, PLURAL),
-        new Word("מִדְבָּר", "wilderness, desert, pasture", MASCULINE),
+        new Word("מִדְבָּר", "wilderness, desert, pasture", MASCULINE).setRepeatable(true),
         // 264
-        new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("רָשָׁע", "wicked", ADJECTIVE, MASCULINE, SINGULAR).setRepeatable(true),
         new Word("רְשָׁעִים", "wicked", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רְשָׁעָה", "wicked", ADJECTIVE, FEMININE, SINGULAR),
         // 252
-        new Word("מַטֶּה", "tribe, staff", MASCULINE),
+        new Word("מַטֶּה", "tribe, staff", MASCULINE).setRepeatable(true),
         new Word("מָטּוֹת", "tribes, staffs", MASCULINE, PLURAL),
         // 251
-        new Word("רֶגֶל", "foot", FEMININE),
+        new Word("רֶגֶל", "foot", FEMININE).setRepeatable(true),
         new Word("רַגְלַיִם", "feet", FEMININE, DUAL),
         // 250
-        new Word("מָלֵא", "he filled"),
-        new Word("אַמָּה", "cubit, forearm", FEMININE),
+        new Word("מָלֵא", "he filled").setRepeatable(true),
+        new Word("אַמָּה", "cubit, forearm", FEMININE).setRepeatable(true),
         new Word("אַמּוֹת", "cubits, forearms", FEMININE, PLURAL),
         // 249
-        new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE),
+        new Word("חֶסֶד", "loving kindness, steadfast love", MASCULINE).setRepeatable(true),
         new Word("חֲסָדִים", "loving kindnesses, steadfast loves", MASCULINE, PLURAL),
         // 245
-        new Word("חַיַל", "strength, wealth, army", MASCULINE),
+        new Word("חַיַל", "strength, wealth, army", MASCULINE).setRepeatable(true),
         new Word("חֲיָלִים", "armies,strengths, wealths", MASCULINE, PLURAL),
         // 241
-        new Word("גְּבוּל", "border, boundary, territory", MASCULINE),
+        new Word("גְּבוּל", "border, boundary, territory", MASCULINE).setRepeatable(true),
         // 240
-        new Word("נַעַר", "boy, youth", MASCULINE),
+        new Word("נַעַר", "boy, youth", MASCULINE).setRepeatable(true),
         new Word("נְעָרִים", "boys, youths", MASCULINE, PLURAL),
         // 237
-        new Word("שָׁלוֹם", "peace, completeness", MASCULINE),
-        new Word("שָׁלֵם", "he was whole, complete"), // 116
-        new Word("שִׁלַּם", "he repaid - שָׁלֵם", PIEL),
-        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL),
+        new Word("שָׁלוֹם", "peace, completeness", MASCULINE).setRepeatable(true),
+        new Word("שָׁלֵם", "he was whole, complete").setRepeatable(true), // 116
+        new Word("שִׁלַּם", "he repaid - שָׁלֵם", PIEL).setRepeatable(true),
+        new Word("הִשְׁלִים", "he made peace - שָׁלֵם", HIPHIL).setRepeatable(true),
         // 233
-        new Word("עָוֹן", "iniquity", MASCULINE),
+        new Word("עָוֹן", "iniquity", MASCULINE).setRepeatable(true),
         new Word("עֲוֹנוֹת", "iniquities", MASCULINE, PLURAL),
         // 232
-        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed"),
+        new Word("יָרַשׁ", "he inherited, he possessed, he dispossessed").setRepeatable(true),
         // 229
-        new Word("זֶרַע", "seed", MASCULINE),
+        new Word("זֶרַע", "seed", MASCULINE).setRepeatable(true),
         // 227
-        new Word("לַיְלָה", "night", MASCULINE),
+        new Word("לַיְלָה", "night", MASCULINE).setRepeatable(true),
         new Word("לֵילוֹת", "nights", MASCULINE, PLURAL),
         // 225
-        new Word("בִּקֵּשׁ", "he sought", PIEL),
-        new Word("זָכַר", "he remembered"),
-        new Word("כָּתַב", "he wrote"),
+        new Word("בִּקֵּשׁ", "he sought", PIEL).setRepeatable(true),
+        new Word("זָכַר", "he remembered").setRepeatable(true),
+        new Word("כָּתַב", "he wrote").setRepeatable(true),
         // 223
-        new Word("מוֹעַד", "appointed time, place", MASCULINE),
+        new Word("מוֹעַד", "appointed time, place", MASCULINE).setRepeatable(true),
         new Word("מוֹעֲדִים", "appointed times, places", MASCULINE, PLURAL),
-        new Word("תּוֹרָה", "law, instruction", FEMININE),
+        new Word("תּוֹרָה", "law, instruction", FEMININE).setRepeatable(true),
         new Word("תּוֹרוֹת", "laws, instructions", FEMININE, PLURAL),
         // 222
-        new Word("נַחֲלָה", "possession", FEMININE),
+        new Word("נַחֲלָה", "possession", FEMININE).setRepeatable(true),
         new Word("נְחָלוֹת", "possessions", FEMININE, PLURAL),
         // 220
-        new Word("אֵם", "mother", FEMININE),
+        new Word("אֵם", "mother", FEMININE).setRepeatable(true),
         // 219
-        new Word("נָכְוֹן", "he was firm, established, prepared", NIPHAL),
+        new Word("נָכְוֹן", "he was firm, established, prepared", NIPHAL).setRepeatable(true),
         // 217
-        new Word("אָהַב", "he loved"),
-        new Word("שָׁתָה", "he drank"),
+        new Word("אָהַב", "he loved").setRepeatable(true),
+        new Word("שָׁתָה", "he drank").setRepeatable(true),
         // 216
-        new Word("נָטָה", "he stretched out"),
-        new Word("בֶּגֶד", "garmet", MASCULINE),
+        new Word("נָטָה", "he stretched out").setRepeatable(true),
+        new Word("בֶּגֶד", "garmet", MASCULINE).setRepeatable(true),
         new Word("בְּגָדִים", "garmets", MASCULINE, PLURAL),
         // 215
-        new Word("יָסַף", "he added, he did again"),
-        new Word("מַחֲנֶה", "camp", MASCULINE, FEMININE),
+        new Word("יָסַף", "he added, he did again").setRepeatable(true),
+        new Word("מַחֲנֶה", "camp", MASCULINE, FEMININE).setRepeatable(true),
         new Word("מַחַנוֹת", "camps", MASCULINE, FEMININE, PLURAL),
         // 214
-        new Word("עָזַב", "he forsook, left"),
+        new Word("עָזַב", "he forsook, left").setRepeatable(true),
         // 213
-        new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL),
-        new Word("שָׁכַב", "he layed down, he had sex"),
-        new Word("בֹּקֶר", "morning", MASCULINE),
-        new Word("בְּקָרִים")
+        new Word("הִצִּיל", "he saved, delivered - נצל", HIPHIL).setRepeatable(true),
+        new Word("שָׁכַב", "he layed down, he had sex").setRepeatable(true),
+        new Word("בֹּקֶר", "morning", MASCULINE).setRepeatable(true),
+        new Word("בְּקָרִים").setRepeatable(true)
             .addForm("mornings", MASCULINE, PLURAL)
             .addForm("herds, oxen", MASCULINE, PLURAL),
-        new Word("מַלְאָךּ", "messenger", MASCULINE),
+        new Word("מַלְאָךּ", "messenger", MASCULINE).setRepeatable(true),
         new Word("מַלְאָכִים", "messengers", MASCULINE, PLURAL),
         // 211
-        new Word("מִנְחָה", "gift, tribute, offering", FEMININE),
+        new Word("מִנְחָה", "gift, tribute, offering", FEMININE).setRepeatable(true),
         // 208
-        new Word("כָּלָה", "he was complete, finished, he came to an end"),
+        new Word("כָּלָה", "he was complete, finished, he came to an end").setRepeatable(true),
         // 206
-        new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE),
+        new Word("צַדּיק", "just, righteous", ADJECTIVE, MASCULINE).setRepeatable(true),
         new Word("צַדִּיקִים", "just, righteous", ADJECTIVE, MASCULINE, PLURAL),
         new Word("צְדָקָה", "righteousness", FEMININE), // 159
         // 202
-        new Word("אֲרוֹן", "ark, chest", MASCULINE),
+        new Word("אֲרוֹן", "ark, chest", MASCULINE).setRepeatable(true),
         // 200
-        new Word("אָסַף", "he gathered"),
+        new Word("אָסַף", "he gathered").setRepeatable(true),
         // 199
         new Word("כָּבוֹד", "abundance, honor, glory", MASCULINE),
         new Word("כָּבֵד", "he was heavy, he was honored"), // 114
         // 195
-        new Word("רוּם", "he was high, exalted"),
-        new Word("כַּף", "palm of the hand, sole of the foot", FEMININE),
+        new Word("רוּם", "he was high, exalted").setRepeatable(true),
+        new Word("כַּף", "palm of the hand, sole of the foot", FEMININE).setRepeatable(true),
         new Word("כַּפוֹת", "palms of the hands, soles of the feet", FEMININE, PLURAL),
         // 194
-        new Word("יָכוֹל", "he was able"),
+        new Word("יָכוֹל", "he was able").setRepeatable(true),
         // 193
-        new Word("שֶׁמֶן", "fat, oil", MASCULINE),
+        new Word("שֶׁמֶן", "fat, oil", MASCULINE).setRepeatable(true),
         new Word("שְמָנִים", "fats, oils", MASCULINE, PLURAL),
         // 191
-        new Word("חֲצֵרִים", "settlements, villages", MASCULINE, SINGULAR, PLURAL),
+        new Word("חֲצֵרִים", "settlements, villages", MASCULINE, SINGULAR, PLURAL).setRepeatable(true),
         // 190
-        new Word("בְּהֵמָה", "beast", FEMININE),
+        new Word("בְּהֵמָה", "beast", FEMININE).setRepeatable(true),
         new Word("בְּהֵמוֹת", "beasts", FEMININE, PLURAL),
-        new Word("שָׁבֶט", "scepter, rod, tribe", MASCULINE),
+        new Word("שָׁבֶט", "scepter, rod, tribe", MASCULINE).setRepeatable(true),
         new Word("שְׁבָטִים", "scepters, rods, tribes", MASCULINE, PLURAL),
         // 188
-        new Word("אֹזֶן", "ear", FEMININE),
+        new Word("אֹזֶן", "ear", FEMININE).setRepeatable(true),
         new Word("אָזְנַיִם", "ears", FEMININE, DUAL),
         // 187
-        new Word("גָלָה", "he removed, uncovered, departed"),
-        new Word("סֵפֶר", "document, book", MASCULINE),
+        new Word("גָלָה", "he removed, uncovered, departed").setRepeatable(true),
+        new Word("סֵפֶר", "document, book", MASCULINE).setRepeatable(true),
         new Word("סְפָרִים", "documents, books", MASCULINE, PLURAL),
-        new Word("מִסְפָּר", "number", NOUN, MASCULINE), // 134
-        new Word("סָפַר", "he counted"), // 107
-        new Word("רֵעַ", "friend, companion, fellow", MASCULINE),
+        new Word("מִסְפָּר", "number", NOUN, MASCULINE).setRepeatable(true), // 134
+        new Word("סָפַר", "he counted").setRepeatable(true), // 107
+        new Word("רֵעַ", "friend, companion, fellow", MASCULINE).setRepeatable(true),
         new Word("רֵעִים", "friends, companions, fellows", MASCULINE, PLURAL),
         // 185
-        new Word("אָבַד", "he perished, he vanished, he became lost"),
+        new Word("אָבַד", "he perished, he vanished, he became lost").setRepeatable(true),
         // 184
-        new Word("מִצְוָה", "commandment", FEMININE),
+        new Word("מִצְוָה", "commandment", FEMININE).setRepeatable(true),
         new Word("מִצְוֹת", "commandments", FEMININE, PLURAL),
         // 183
-        new Word("בָּקָר", "cattle, herd, ox", MASCULINE),
+        new Word("בָּקָר", "cattle, herd, ox", MASCULINE).setRepeatable(true),
         // For plural see "mornings" above
         // 182
-        new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE),
+        new Word("רִאשׁוֹן", "first, former", ADJECTIVE, MASCULINE).setRepeatable(true),
         new Word("רִאשֹׁנִים", "first, former", ADJECTIVE, MASCULINE, PLURAL),
         new Word("רִאשֹׁנָה", "first, former", ADJECTIVE, FEMININE),
         new Word("רִאשֹׁנוֹת", "first, former", ADJECTIVE, FEMININE, PLURAL),
         // 179
-        new Word("זָקֵן", "old", ADJECTIVE, MASCULINE),
+        new Word("זָקֵן", "old", ADJECTIVE, MASCULINE).setRepeatable(true),
         new Word("זְקֵנִים", "old", ADJECTIVE, MASCULINE, PLURAL),
         new Word("זְקֵנוֹת", "old", ADJECTIVE, FEMININE, PLURAL),
         // 178
-        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL),
-        new Word("שָֹפָה", "lip, language, edge, shore", FEMININE),
+        new Word("הוֹשִׁיעַ", "he saved, delivered - ישׁע", HIPHIL).setRepeatable(true),
+        new Word("שָֹפָה", "lip, language, edge, shore", FEMININE).setRepeatable(true),
         new Word("שְׂפָתַיִם", "lips, languages, edges, shores", FEMININE, DUAL),
-        new Word("לָמָּה", "why?"),
+        new Word("לָמָּה", "why?").setRepeatable(true),
         // 174
-        new Word("שָאַל", "he asked"),
+        new Word("שָאַל", "he asked").setRepeatable(true),
         // 173
-        new Word("שָׁחָה", "he bowed down"),
+        new Word("שָׁחָה", "he bowed down").setRepeatable(true),
         // 170
-        new Word("בָּחַר", "he chose, tested, examined"),
+        new Word("בָּחַר", "he chose, tested, examined").setRepeatable(true),
         // 167
-        new Word("הָרַג", "he attacked, he slew"),
-        new Word("דּוֹר", "period, generation, dwelling", MASCULINE),
+        new Word("הָרַג", "he attacked, he slew").setRepeatable(true),
+        new Word("דּוֹר", "period, generation, dwelling", MASCULINE).setRepeatable(true),
         new Word("דּוֹרִים", "periods, generations, dwellings", MASCULINE, PLURAL),
-        new Word("מְלָאכָה", "work, occupation", FEMININE),
+        new Word("מְלָאכָה", "work, occupation", FEMININE).setRepeatable(true),
         new Word("מַלְאֲכוֹת", "works, occupations", FEMININE, PLURAL),
         // 166
-        new Word("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR),
+        new Word("אַחֵר", "another", ADJECTIVE, MASCULINE, SINGULAR).setRepeatable(true),
         new Word("אֲחֵרִים", "another", ADJECTIVE, MASCULINE, PLURAL),
         new Word("אַחֶרֶת", "another", ADJECTIVE, FEMININE, SINGULAR),
         new Word("אֲחֵרוֹת", "another", ADJECTIVE, FEMININE, PLURAL),
         // 165
-        new Word("דָּרַשׁ", "he sought, inquired, investigated, required, demanded"),
+        new Word("דָּרַשׁ", "he sought, inquired, investigated, required, demanded").setRepeatable(true),
         // 164
-        new Word("חוּץ", "outside, street", NOUN, MASCULINE),
-        new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE),
+        new Word("חוּץ", "outside, street", NOUN, MASCULINE).setRepeatable(true),
+        new Word("פֶּתַח", "opening, doorway, entrace", MASCULINE).setRepeatable(true),
         new Word("פְּתָחִים", "openings, doorways, entraces", MASCULINE, PLURAL),
-        new Word("פָּתַח", "he opened"), // 136
+        new Word("פָּתַח", "he opened").setRepeatable(true), // 136
         // 162
-        new Word("טָמֵא", "he was/became unclean"),
-        new Word("זֶבַח", "sacrifice", NOUN, MASCULINE),
+        new Word("טָמֵא", "he was/became unclean").setRepeatable(true),
+        new Word("זֶבַח", "sacrifice", NOUN, MASCULINE).setRepeatable(true),
         // 161
-        new Word("אַיִל", "ram", NOUN, MASCULINE),
-        new Word("בַּד", "alone"),
-        new Word("אַך", "only, surely, nevertheless"),
-        new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE),
+        new Word("אַיִל", "ram", NOUN, MASCULINE).setRepeatable(true),
+        new Word("בַּד", "alone").setRepeatable(true),
+        new Word("אַך", "only, surely, nevertheless").setRepeatable(true),
+        new Word("בַּעַל", "owner, master, husband, (divine title) Baal", MASCULINE).setRepeatable(true),
         // 160
-        new Word("נוּס", "he fled, he escaped"),
-        new Word("גִּּבּוֹר")
+        new Word("נוּס", "he fled, he escaped").setRepeatable(true),
+        new Word("גִּּבּוֹר").setRepeatable(true)
             .addForm("mighty man, hero, warrior", MASCULINE)
             .addForm("mighty", ADJECTIVE),
         // 156
-        new Word("שָׂמַח", "he rejoiced, he was glad"),
+        new Word("שָׂמַח", "he rejoiced, he was glad").setRepeatable(true),
         // 153
-        new Word("צָפוֹן", "north, northern", FEMININE),
-        new Word("כָּסָה", "he covered"),
+        new Word("צָפוֹן", "north, northern", FEMININE).setRepeatable(true),
+        new Word("כָּסָה", "he covered").setRepeatable(true),
         // 151
-        new Word("נֶגֶד", "opposite, in front of"),
+        new Word("נֶגֶד", "opposite, in front of").setRepeatable(true),
         // 150
-        new Word("נָגַע", "he touched, struck, escaped"),
+        new Word("נָגַע", "he touched, struck, escaped").setRepeatable(true),
         // 149
-        new Word("עֵדָה", "congregation, assembly", FEMININE),
-        new Word("חָכְמָה", "wisdom", FEMININE),
+        new Word("עֵדָה", "congregation, assembly", FEMININE).setRepeatable(true),
+        new Word("חָכְמָה", "wisdom", FEMININE).setRepeatable(true),
         new Word("חָכָם", "wise", ADJECTIVE, MASCULINE, SINGULAR),
         new Word("חֲכָמִים", "wise", ADJECTIVE, MASCULINE, PLURAL),
         new Word("חֲכָמָה", "wise", ADJECTIVE, FEMININE, SINGULAR),
         new Word("חֲכְמוֹת", "wise", ADJECTIVE, FEMININE, PLURAL),
         // 148
-        new Word("שָׁבַר", "he broke (up), smashed"),
-        new Word("שָׂנֵא", "he hated"),
+        new Word("שָׁבַר", "he broke (up), smashed").setRepeatable(true),
+        new Word("שָׂנֵא", "he hated").setRepeatable(true),
         // 147
-        new Word("שְׁמֹנֶה", "eight", MASCULINE),
+        new Word("שְׁמֹנֶה", "eight", MASCULINE).setRepeatable(true),
         new Word("שְׁמֹנִים", "eighty"),
         // 146
-        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched"),
-        new Word("הִלֵּל", "he praised – הָלַל", PIEL),
+        new Word("נָסַע", "he pulled out, pulled up, set out, started out, departed, journeyed, marched").setRepeatable(true),
+        new Word("הִלֵּל", "he praised – הָלַל", PIEL).setRepeatable(true),
         // 144
-        new Word("רָדַף", "he pursued, followed after, persecuted"),
+        new Word("רָדַף", "he pursued, followed after, persecuted").setRepeatable(true),
         // 143
-        new Word("חָנָה", "he declined, camped, lay seige to"),
+        new Word("חָנָה", "he declined, camped, lay seige to").setRepeatable(true),
         // 142
-        new Word("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL),
-        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL),
-        new Word("הִשְׁהִית", "he destroyed", HIPHIL),
+        new Word("נִשְׁחַת", "he was corrupt, spoiled", NIPHAL).setRepeatable(true),
+        new Word("שִׁחֵת", "he was spoiled, wiped out, ruined", PIEL).setRepeatable(true),
+        new Word("הִשְׁהִית", "he destroyed", HIPHIL).setRepeatable(true),
         // 141
-        new Word("אָז", "then, since, before"),
-        new Word("יַיִן", "wine", MASCULINE),
-        new Word("יָמִין", "right hand, south", FEMININE),
-        new Word("כְּמוֹ", "like, as"),
+        new Word("אָז", "then, since, before").setRepeatable(true),
+        new Word("יַיִן", "wine", MASCULINE).setRepeatable(true),
+        new Word("יָמִין", "right hand, south", FEMININE).setRepeatable(true),
+        new Word("כְּמוֹ", "like, as").setRepeatable(true),
         // 140
-        new Word("נוּחַ", "he rested, settled down"),
-        new Word("הֵנִיחַ", "he gave rest to, he set down", HIPHIL),
+        new Word("נוּחַ", "he rested, settled down").setRepeatable(true),
+        new Word("הֵנִיחַ", "he gave rest to, he set down", HIPHIL).setRepeatable(true),
         // 139
-        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed"),
-        new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE),
-        new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE),
+        new Word("שֶׁ", "who, whom, that, which (relative pronoun), prefixed").setRepeatable(true),
+        new Word("מִשְׁכָּן", "dwelling place, tabernacle", MASCULINE).setRepeatable(true),
+        new Word("נְחֹשֶׁת", "copper, bronze", MASCULINE).setRepeatable(true),
         // 138
-        new Word("סוּס", "horse", MASCULINE),
+        new Word("סוּס", "horse", MASCULINE).setRepeatable(true),
         new Word("סוּסִים", "horses", MASCULINE, PLURAL),
         // 137
-        new Word("נַחַל", "stream, wadi", MASCULINE),
+        new Word("נַחַל", "stream, wadi", MASCULINE).setRepeatable(true),
         // 135
-        new Word("כִּסֵּא", "chair, throne", MASCULINE),
-        new Word("הֵחֵל", "he began – חָלַל", HIPHIL),
-        new Word("נִחָל", "he was defiled – חָלַל", NIPHAL),
-        new Word("חִלֵּל", "he polluted, profaned – חָלַל", PIEL),
+        new Word("כִּסֵּא", "chair, throne", MASCULINE).setRepeatable(true),
+        new Word("הֵחֵל", "he began – חָלַל", HIPHIL).setRepeatable(true),
+        new Word("נִחָל", "he was defiled – חָלַל", NIPHAL).setRepeatable(true),
+        new Word("חִלֵּל", "he polluted, profaned – חָלַל", PIEL).setRepeatable(true),
         // 134
-        new Word("שֶׁמֶשׁ", "sun", MASCULINE),
-        new Word("זָבַח", "he slaughtered, sacrificed"),
-        new Word("פָּנָה", "he turned"),
-        new Word("עֶרֶב", "evening, sunset", MASCULINE),
+        new Word("שֶׁמֶשׁ", "sun", MASCULINE).setRepeatable(true),
+        new Word("זָבַח", "he slaughtered, sacrificed").setRepeatable(true),
+        new Word("פָּנָה", "he turned").setRepeatable(true),
+        new Word("עֶרֶב", "evening, sunset", MASCULINE).setRepeatable(true),
         // 133
-        new Word("קָבַר", "he buried"),
-        new Word("פֶּן–", "lest, otherwise"),
-        new Word("פַּר", "bull, ox, steer", MASCULINE),
-        new Word("שָׁאַר", "he remained, was left over, survived"),
-        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited"),
-        new Word("חוֹמָה", "wall", FEMININE),
+        new Word("קָבַר", "he buried").setRepeatable(true),
+        new Word("פֶּן–", "lest, otherwise").setRepeatable(true),
+        new Word("פַּר", "bull, ox, steer", MASCULINE).setRepeatable(true),
+        new Word("שָׁאַר", "he remained, was left over, survived").setRepeatable(true),
+        new Word("שָׁכַן", "he settled, abode, dwelt, inhabited").setRepeatable(true),
+        new Word("חוֹמָה", "wall", FEMININE).setRepeatable(true),
         // 131
-        new Word("חֹק", "statute, appointed time, portion", MASCULINE),
+        new Word("חֹק", "statute, appointed time, portion", MASCULINE).setRepeatable(true),
         // 130
-        new Word("נָשִׂיא", "chief, leader, prince", MASCULINE),
+        new Word("נָשִׂיא", "chief, leader, prince", MASCULINE).setRepeatable(true),
         // 127
-        new Word("אֶמֶת", "truth, fidelity", FEMININE),
-        new Word("קָבַץ", "he collected, gathered, assembled"),
+        new Word("אֶמֶת", "truth, fidelity", FEMININE).setRepeatable(true),
+        new Word("קָבַץ", "he collected, gathered, assembled").setRepeatable(true),
         // 126
-        new Word("כֹּחַ", "strength, power", MASCULINE),
-        new Word("עֶצֶם", "bone, skeleton", FEMININE),
+        new Word("כֹּחַ", "strength, power", MASCULINE).setRepeatable(true),
+        new Word("עֶצֶם", "bone, skeleton", FEMININE).setRepeatable(true),
         // 125
-        new Word("בּוֹשׁ", "he was ashamed"),
-        new Word("נָגַשׁ", "he drew near, approached"),
-        new Word("חֵמָה", "wrath, heat, poison", FEMININE),
-        new Word("חֲצִי", "half, middle", MASCULINE),
+        new Word("בּוֹשׁ", "he was ashamed").setRepeatable(true),
+        new Word("נָגַשׁ", "he drew near, approached").setRepeatable(true),
+        new Word("חֵמָה", "wrath, heat, poison", FEMININE).setRepeatable(true),
+        new Word("חֲצִי", "half, middle", MASCULINE).setRepeatable(true),
         // 124
-        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed"),
+        new Word("חָשַׁב", "he thought, considered, devised, planned, valued, esteemed").setRepeatable(true),
         // 123
-        new Word("קָהָל", "assembly, community, crowd", MASCULINE),
+        new Word("קָהָל", "assembly, community, crowd", MASCULINE).setRepeatable(true),
         // 121
-        new Word("לָכַד", "he took, captured, caught, seized"),
+        new Word("לָכַד", "he took, captured, caught, seized").setRepeatable(true),
         // 120
-        new Word("אוֹר", "light, daylight, sunshine", MASCULINE),
-        new Word("רֶכֶב", "chariot, upper millstone", MASCULINE),
-        new Word("בְּכֹר", "firstborn", MASCULINE),
+        new Word("אוֹר", "light, daylight, sunshine", MASCULINE).setRepeatable(true),
+        new Word("רֶכֶב", "chariot, upper millstone", MASCULINE).setRepeatable(true),
+        new Word("בְּכֹר", "firstborn", MASCULINE).setRepeatable(true),
         // 119
-        new Word("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE),
-        new Word("פְּרִי", "fruit, offspring", MASCULINE),
-        new Word("נָהָר", "river, stream", MASCULINE),
+        new Word("יָשָׁר", "straight, right (correct, not direction)", MASCULINE, ADJECTIVE).setRepeatable(true),
+        new Word("פְּרִי", "fruit, offspring", MASCULINE).setRepeatable(true),
+        new Word("נָהָר", "river, stream", MASCULINE).setRepeatable(true),
         // 118
-        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE),
-        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE),
-        new Word("בָּטַח", "to trust, be confident, rely upon"),
+        new Word("פַּעַם", "beat (noun), foot, anvil, time (as in music, keeping time)", FEMININE).setRepeatable(true),
+        new Word("תּוֹעֵבָה", "abomination, abhorence, offensive thing", FEMININE).setRepeatable(true),
+        new Word("בָּטַח", "to trust, be confident, rely upon").setRepeatable(true),
         // 117
-        new Word("יָטַב", "he was well, it went well with, it was pleasing"),
-        new Word("שָׁפַך", "he poured, spilt, shed (blood)"),
-        new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE),
-        new Word("שָׂרַף", "he completely burned, destroyed"),
+        new Word("יָטַב", "he was well, it went well with, it was pleasing").setRepeatable(true),
+        new Word("שָׁפַך", "he poured, spilt, shed (blood)").setRepeatable(true),
+        new Word("לָשׁוֹן", "tongue, language", MASCULINE, FEMININE).setRepeatable(true),
+        new Word("שָׂרַף", "he completely burned, destroyed").setRepeatable(true),
         // 115
-        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַר", PIEL),
-        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַר", HIPHIL),
+        new Word("קִטֵּר", "he made sacrifices smoke (he offered a burned sacrifice) - קָטַר", PIEL).setRepeatable(true),
+        new Word("הִקְטִיר", "he made sacrifices smoke, he caused to smoke (in worship) - קָטַר", HIPHIL).setRepeatable(true),
         // 114
-        new Word("בָּכָה", "he wept (in grief or joy)"),
-        new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE),
+        new Word("בָּכָה", "he wept (in grief or joy)").setRepeatable(true),
+        new Word("מִגְרָשׁ", "common land, open land, pasture", MASCULINE).setRepeatable(true),
         // 113
-        new Word("שֶׁקֶר", "deception, lie, disappointment", MASCULINE),
+        new Word("שֶׁקֶר", "deception, lie, disappointment", MASCULINE).setRepeatable(true),
         // 112
-        new Word("לָבַשׁ", "he put on a garmet, he clothed"),
-        new Word("בִּלְתּי", "not (with infinitive), except"),
-        new Word("לְבִלְתּי", "not (with infinitive)"),
-        new Word("עַמּוּד", "pillar, column", MASCULINE),
+        new Word("לָבַשׁ", "he put on a garmet, he clothed").setRepeatable(true),
+        new Word("בִּלְתּי", "not (with infinitive), except").setRepeatable(true),
+        new Word("לְבִלְתּי", "not (with infinitive)").setRepeatable(true),
+        new Word("עַמּוּד", "pillar, column", MASCULINE).setRepeatable(true),
         // 111
-        new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE),
-        new Word("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL),
+        new Word("שַׁבָּת", "Sabbath, rest period", MASCULINE).setRepeatable(true),
+        new Word("הוֹדוּ", "they praised, gave thanks - " + "יָדָה" + " - he cast", HIPHIL, PERFECT, THIRD_PERSON, PLURAL).setRepeatable(true),
         // 110
-        new Word("עָפָר", "dry earth, dust", MASCULINE),
+        new Word("עָפָר", "dry earth, dust", MASCULINE).setRepeatable(true),
         // 109
-        new Word("רַק", "only, still, but, however"),
-        new Word("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", FEMININE),
+        new Word("רַק", "only, still, but, however").setRepeatable(true),
+        new Word("כָּנָף", "wing, edge (uses dual for wings, standard feminine plural for edges)", FEMININE).setRepeatable(true),
         // 108
-        new Word("נִחַם")
+        new Word("נִחַם").setRepeatable(true)
             .addForm("he was sorry, moved to pity, had compassion", NIPHAL)
             .addForm("he comforted, consoled", PIEL),
         // 107
-        new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE),
+        new Word("כֶּבֶשׂ", "lamb, sheep", MASCULINE).setRepeatable(true),
         // 106
-        new Word("בָּמָח", "(cultic) high place, hill", MASCULINE),
-        new Word("נוֹתַר", "he was left over, he remained - יָתַר", NIPHAL),
-        new Word("הוֹתִיר", "he left - יָתַר", HIPHIL),
+        new Word("בָּמָח", "(cultic) high place, hill", MASCULINE).setRepeatable(true),
+        new Word("נוֹתַר", "he was left over, he remained - יָתַר", NIPHAL).setRepeatable(true),
+        new Word("הוֹתִיר", "he left - יָתַר", HIPHIL).setRepeatable(true),
         // 104
-        new Word("תָּמִיד", "continually"),
-        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged"),
-        new Word("בַּעַד", "behind, through"),
-        new Word("חֻקָּח", "statute, ordinance", MASCULINE),
+        new Word("תָּמִיד", "continually").setRepeatable(true),
+        new Word("גָּאַל", "he redeemed, delivered, acted as kinsman, avenged").setRepeatable(true),
+        new Word("בַּעַד", "behind, through").setRepeatable(true),
+        new Word("חֻקָּח", "statute, ordinance", MASCULINE).setRepeatable(true),
         new Word("חֻקּוֹת", "statutes, ordinances", MASCULINE, PLURAL),
-        new Word("רָץ", "he ran רוּץ"),
+        new Word("רָץ", "he ran רוּץ").setRepeatable(true),
         // 102
-        new Word("כִּפֶּר", "he covered over, pacified, made propitiation", PIEL),
-        new Word("שָׁכַח", "he forgot"),
+        new Word("כִּפֶּר", "he covered over, pacified, made propitiation", PIEL).setRepeatable(true),
+        new Word("שָׁכַח", "he forgot").setRepeatable(true),
         // 101
-        new Word("רָעָב", "famine, hunger", MASCULINE),
-        new Word("רֹחַב", "breadth, width", MASCULINE),
-        new Word("מעַט", "a little, a few"),
+        new Word("רָעָב", "famine, hunger", MASCULINE).setRepeatable(true),
+        new Word("רֹחַב", "breadth, width", MASCULINE).setRepeatable(true),
+        new Word("מעַט", "a little, a few").setRepeatable(true),
 
         // 100
-        new Word("יַעַן", "on account of"),
+        new Word("יַעַן", "on account of").setRepeatable(true),
 
         // 96
-        new Word("יַחְדָּו", "together, united", ADVERB),
+        new Word("יַחְדָּו", "together, united", ADVERB).setRepeatable(true),
 
         // 94
-        new Word("טָהֵר", "to be clean, pure"),
+        new Word("טָהֵר", "to be clean, pure").setRepeatable(true),
 
         // 82
-        new Word("פֹּה", "here, at this place"),
+        new Word("פֹּה", "here, at this place").setRepeatable(true),
 
         // 78
-        new Word("תֵּשַׁע", "nine", MASCULINE),
+        new Word("תֵּשַׁע", "nine", MASCULINE).setRepeatable(true),
         new Word("תִּשְׁעִים", "ninety"),
 
         // 74
-        new Word("חָפֵץ", "he delighted in, desired, was willing"),
+        new Word("חָפֵץ", "he delighted in, desired, was willing").setRepeatable(true),
 
         // 71
-        new Word("שָׁבַת", "he stopped, ceased, rested"),
+        new Word("שָׁבַת", "he stopped, ceased, rested").setRepeatable(true),
 
         // 64
         new Word("תָּמַם", "he be(came) complete, came to an end, ceased, was consumed, was spent, " +
-            "was burned out"),
+            "was burned out").setRepeatable(true),
         new Word("אָרַר", "he cursed"),
 
         // 63
-        new Word("אָחַז", "he seized, grasped, took"),
-        new Word("יָצַר", "he formed, fashioned, shaped, created"),
+        new Word("אָחַז", "he seized, grasped, took").setRepeatable(true),
+        new Word("יָצַר", "he formed, fashioned, shaped, created").setRepeatable(true),
 
         // 60
-        new Word("בָּעַר", "he burned up, consumed"),
+        new Word("בָּעַר", "he burned up, consumed").setRepeatable(true),
 
         // 46
-        new Word("יַחַד", "unitedness", MASCULINE, NOUN),
+        new Word("יַחַד", "unitedness", MASCULINE, NOUN).setRepeatable(true),
 
         // 44
         // טוֹב as a verb, see adjective form
 
         // 18
-        new Word("רְבָבָה", "ten thousand")
+        new Word("רְבָבָה", "ten thousand").setRepeatable(true)
 
 
     );
@@ -1497,6 +1499,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Conjuncton ו (and, but, also, even) 5/9\n" +
             " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן\n"),
 
+        // TODO these last four look like they are for the article, not 'and'
         new GrammarRule("Conjuncton ו (and, but, also, even) 6/9\n" +
             " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day\n"),
 
@@ -1618,7 +1621,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             " * When attached to a noun they indicate possessive.\n"),
 
         new GrammarRule("Pronominal suffixes: 2/4\n" +
-            " * When attached to a preposition or the definite direct object marker they are objective\n."),
+            " * When attached to a preposition or the definite direct object marker they are objective.\n"),
 
         new GrammarRule("Pronominal suffixes: 3/4\n" +
             " * Come in types 1 and 2:\n" +
@@ -1811,6 +1814,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Imperfect      " + "יִקְטֹל    יִקְטַן    יִכְבַּד" + "\n" +
             "No idea why the dagesh jumps from consontant כ to ב in כבד imperfect."),
 
+        // TODO these need examples
         new GrammarRule("Strong verbs have three strong consonants.  Weak verbs classified as follows: 1/8\n" +
             " * I-Guttural\n"),
 

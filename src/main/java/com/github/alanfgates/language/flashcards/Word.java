@@ -23,6 +23,7 @@ import java.util.List;
 public class Word {
   private String other;
   private List<Form> forms;
+  private boolean repeatable; // Indicates it should be put in the repeat pile even when it succeeds
 
   // For Jackson
   public Word() {
@@ -40,6 +41,15 @@ public class Word {
 
   Word addForm(String english, Classifier... classifiers) {
     forms.add(new Form(english, classifiers));
+    return this;
+  }
+
+  public boolean isRepeatable() {
+    return repeatable;
+  }
+
+  public Word setRepeatable(boolean repeatable) {
+    this.repeatable = repeatable;
     return this;
   }
 

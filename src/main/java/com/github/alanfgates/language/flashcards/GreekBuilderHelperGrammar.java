@@ -95,21 +95,21 @@ class GreekBuilderHelperGrammar {
 
         // Indicative Active Pluperfect
         new Word("ἐλελύκειν")
-            .addForm("I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
-            .addForm("s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+            .addForm("I had loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("s/he had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
         new Word("λελύκειν")
-            .addForm("I had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
-            .addForm("s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("λελύκεις", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
-        new Word("ἐλελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("λελύκει", "s/he had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
-        new Word("ἐλελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
-        new Word("λελύκειμεν", "we had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
-        new Word("ἐλελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
+            .addForm("I had loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, SINGULAR)
+            .addForm("s/he had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκεις", "you had loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("λελύκεις", "you had loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, SINGULAR),
+        new Word("ἐλελύκει", "s/he had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("λελύκει", "s/he had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, SINGULAR),
+        new Word("ἐλελύκειμεν", "we had loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("λελύκειμεν", "we had loosened", INDICATIVE, ACTIVE, PLUPERFECT, FIRST_PERSON, PLURAL),
+        new Word("ἐλελύκειτε", "you had loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
         new Word("λελύκειτε", "you had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, SECOND_PERSON, PLURAL),
-        new Word("ἐλελύκεισαν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
-        new Word("λελύκεισαν", "they had been loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("ἐλελύκεισαν", "they had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
+        new Word("λελύκεισαν", "they had loosened", INDICATIVE, ACTIVE, PLUPERFECT, THIRD_PERSON, PLURAL),
 
         // Indicative Middle Present
         new Word("λύομαι", "I loosen myself/am loosened", INDICATIVE, MIDDLE, PASSIVE, PRESENT, FIRST_PERSON, SINGULAR),
