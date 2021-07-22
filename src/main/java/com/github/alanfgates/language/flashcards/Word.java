@@ -17,7 +17,6 @@ package com.github.alanfgates.language.flashcards;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Word {
@@ -31,7 +30,8 @@ public class Word {
 
   Word(String other, String english, Classifier... classifiers) {
     this.other = other;
-    forms = Collections.singletonList(new Form(english, classifiers));
+    forms = new ArrayList<>();
+    forms.add(new Form(english, classifiers));
   }
 
   Word(String other) {
@@ -98,7 +98,7 @@ public class Word {
       }
       buf.append("\n");
     }
-    System.out.println(buf.toString());
+    System.out.println(buf);
   }
 
   private static class Form {

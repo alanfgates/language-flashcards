@@ -1330,8 +1330,34 @@ class GreekBuilderHelperVocab {
         new Word("κατῷκησα", "I dwelt, settled, inhabited - κατοικέω", AORIST),
         // 43
         new Word("σπέρμα", "seed, descendant", NEUTER).setRepeatable(true),
-        new Word("σπέρματος", "seed, descendant", NEUTER, GENITIVE)
-        // Haven't done verbs yet
+        new Word("σπέρματος", "seed, descendant", NEUTER, GENITIVE),
+        new Word("σεαυτοῦ", "yourself", SINGULAR),
+        new Word("ἁμαρτάνω", "I sin - root ἁμαρτ ?", PRESENT).setRepeatable(true),
+        new Word("ἁμαρτήσω", "I will sin - ἁμαρτάνω root ἁμαρτ ?", FUTURE),
+        new Word("ἡμάρτησα", "I sinned - ἁμαρτάνω root ἁμαρτ ?", AORIST),
+        new Word("ἡμάτηκα", "I have sinned - ἁμαρτάνω root ἁμαρτ ?", PERFECT),
+        new Word("δέω", "I tie, bind - root δε ?", PRESENT),
+        new Word("δήσω", "I will tie, bind - δέω root δε ?", FUTURE),
+        new Word("ἔδησα", "I tied, bound - δέω root δε ?", AORIST),
+        new Word("δέδεκα", "I have tied, bound - δέω root δε ?", PERFECT),
+        new Word("δέδεμαι", "I have been tied, bound - δέω root δε ?", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐδέθην", "I was tied, bound - δέω root δε ?", PASSIVE, AORIST),
+        new Word("διέρχομαι", "I pass through - δια ερχομαι", PRESENT, DEPONENT),
+        new Word("διελεύσομαι", "I will pass through - δια ερχομαι", FUTURE, DEPONENT),
+        new Word("διῆλθον", "I passed through - δια ερχομαι", AORIST),
+        new Word("διελήλυθα", "I have passed through - δια ερχομαι", PERFECT),
+        new Word("θαυμάζω", "I marvel - root θαυμαστ ?", PRESENT),
+        new Word("ἐθαύμασα", "I marvelled - θαυμάζω root θαυμαστ ?", AORIST),
+        new Word("ἐθαυμάσθην", "I have been marvelled at - θαυμάζω root θαυμαστ ?", PASSIVE, AORIST),
+        new Word("θεραπεύω", "I serve (a divinity), heal - root θεραπευ ?", PRESENT),
+        new Word("θεραπεύσω", "I will serve (a divinity), heal - θεραπεύω root θεραπευ ?", FUTURE),
+        new Word("ἐθεράπευσα", "I served (a divinity), healed - θεραπεύω root θεραπευ ?", AORIST),
+        new Word("τεθεράπευμαι", "I have healed - θεραπεύω root θεραπευ ?", MIDDLE, PASSIVE, PERFECT),
+        new Word("ἐθεραπεύθην", "I was healed - θεραπεύω root θεραπευ ?", PASSIVE, AORIST),
+        new Word("φωνῶ", "I call, cry out - root φωνε ?", PRESENT),
+        new Word("φωνἠσω", "I will call, cry out - φωνῶ root φωνε ?", FUTURE),
+        new Word("ἐφώνησα", "I called, cried out - φωνῶ root φωνε ?", AORIST),
+        new Word("ἐφωνήθην", "I was called - φωνῶ root φωνε ?", PASSIVE, AORIST)
 
 
     );

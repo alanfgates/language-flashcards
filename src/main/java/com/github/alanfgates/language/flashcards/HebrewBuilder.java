@@ -304,7 +304,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("הֻקְטַלְתְּ", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, SINGULAR),
         new Word("הֻקְטַל", "he was made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, SINGULAR),
         new Word("הֻקְטְלָה", "she was made to kill", HOPHAL, PERFECT, THIRD_PERSON, FEMININE, SINGULAR),
-        new Word("הֻקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, MASCULINE, PLURAL),
+        new Word("הֻקְטַלְנוּ", "we were made to kill", HOPHAL, PERFECT, FIRST_PERSON, PLURAL),
         new Word("הֻקְטַלְתֶּם", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, MASCULINE, PLURAL),
         new Word("הֻקְטַלְתֶּן", "you were made to kill", HOPHAL, PERFECT, SECOND_PERSON, FEMININE, PLURAL),
         new Word("הֻקְטְלוּ", "they were made to kill", HOPHAL, PERFECT, THIRD_PERSON, MASCULINE, PLURAL),
@@ -351,8 +351,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("מֻקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL),
 
         new Word("מָקְטָל", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, SINGULAR),
-        new Word("מָקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL),
-        new Word("מָקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מָקְטֶלֶת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, SINGULAR),
+        new Word("מָקְטָלִים", "being made to kill", HOPHAL, PARTICIPLE, MASCULINE, PLURAL),
         new Word("מָקְטָלוֹת", "being made to kill", HOPHAL, PARTICIPLE, FEMININE, PLURAL),
 
         // Hithpael
@@ -829,7 +829,8 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("דָּם", "blood", MASCULINE).setRepeatable(true),
         new Word("דָּמִים", "bloods", MASCULINE, PLURAL),
         // 357
-        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR).setRepeatable(true),
+        new Word("רַע", "bad, evil", ADJECTIVE, MASCULINE, SINGULAR).setRepeatable(true)
+            .addForm("he was bad/evil"), // 97 times
         new Word("רָעָה").setRepeatable(true)
             .addForm("bad, evil", ADJECTIVE, FEMININE, SINGULAR)
             .addForm("evil, misery, distress", NOUN, FEMININE)
@@ -1163,7 +1164,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         // 130
         new Word("נָשִׂיא", "chief, leader, prince", MASCULINE).setRepeatable(true),
         // 127
-        new Word("אֶמֶת", "truth, fidelity", FEMININE).setRepeatable(true),
+        new Word("אֶמֶת", "truth, fidelity", FEMININE).setRepeatable(true), // see 96 for verb form
         new Word("קָבַץ", "he collected, gathered, assembled").setRepeatable(true),
         // 126
         new Word("כֹּחַ", "strength, power", MASCULINE).setRepeatable(true),
@@ -1241,12 +1242,21 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new Word("רָעָב", "famine, hunger", MASCULINE).setRepeatable(true),
         new Word("רֹחַב", "breadth, width", MASCULINE).setRepeatable(true),
         new Word("מעַט", "a little, a few").setRepeatable(true),
-
         // 100
         new Word("יַעַן", "on account of").setRepeatable(true),
-
+        new Word("הֵן", "behold").setRepeatable(true),
+        // 99
+        new Word("עוֹר", "skin", MASCULINE).setRepeatable(true),
+        // 98
+        new Word("שֵׁרֵת", "he served, he ministered to", PIEL).setRepeatable(true),
+        // 97
+        new Word("שָׂבַע", "he was filled, satisfied").setRepeatable(true),
+        // for רעע see רע above
         // 96
         new Word("יַחְדָּו", "together, united", ADVERB).setRepeatable(true),
+        new Word("אָמַן", "he confirmed, supported").setRepeatable(true),
+        new Word("נֶאֱמַן", "he was made firm - root אמן", NIPHAL),
+        new Word("הֶאֱמִין", "he trusted, believed - root אמן", HIPHIL),
 
         // 94
         new Word("טָהֵר", "to be clean, pure").setRepeatable(true),
@@ -1373,50 +1383,46 @@ public class HebrewBuilder extends BaseLanguageBuilder {
           " 4. Some nouns go through irregular stem change in the plural:  אנשים איש  נשים אשה\n" +
           " 5. Some feminine pluralizations will appear with defective spelling תֹ instead of וֹת"),
 
-        new GrammarRule("Patterns of Pluralization 1/5\n" +
-            " 1. Pluralization with no change: some nouns do not change their vowels when being\n" +
-            "    made plural.  Often happens with monosyllabic words with an unchangeable long\n" +
-            "    vowel: שִׁיר to שִׁירִים Also happens with two syllable words with shewa or hateph\n" +
-            "    pathach in first syllable and unchangeable long vowel in second: חֳלוֹם to חֳלוֹמוֹת and רְהוֹב to רְהוֹבוֹת\n"),
+        new GrammarRule("Patterns of Pluralization 1/4\n" +
+          " 1. Pluralization with no change: some nouns do not change their vowels when being\n" +
+          "    made plural.  Often happens with monosyllabic words with an unchangeable long\n" +
+          "    vowel: שִׁיר to שִׁירִים \n" +
+          "    Also happens with two syllable words with shewa or hateph\n" +
+          "    pathach in first syllable and unchangeable long vowel in second:\n" +
+          "    חֳלוֹם to חֳלוֹמוֹת and רְהוֹב to רְהוֹבוֹת\n"),
 
-        new GrammarRule("Patterns of Pluralization 2/5\n" +
-            " 2. Two syllable nouns that are accented on the final syllable and have Qamets or\n" +
-            "    Tsere pretonic syllable will experience propretonic reduction.  Qamets/Tsere will\n" +
-            "    be replaced by Shewa.  דָּבָר -> דְּבָרִים and לֵבָב -> לְבָבוֹת\n" +
-            "    If the initial consonant is gutteral it will move to Hateph Patach.  עָנָן –> עֲנָנִים\n" +
-            "    Nouns with vowel letters do not experience propretonic reduction.\n"),
+        new GrammarRule("Patterns of Pluralization 2/4\n" +
+          " 2. Two syllable nouns that are accented on the final syllable and have Qamets or\n" +
+          "    Tsere pretonic syllable will experience propretonic reduction.  Qamets/Tsere will\n" +
+          "    be replaced by Shewa.  דָּבָר -> דְּבָרִים and לֵבָב -> לְבָבוֹת\n" +
+          "    If the initial consonant is gutteral it will move to Hateph Patach.  עָנָן –> עֲנָנִים\n" +
+          "    Nouns with vowel letters do not experience propretonic reduction.\n"),
 
-        new GrammarRule("Patterns of Pluralization 3/5\n" +
-            " 3. Segholate nouns are nouns with accent on the first syllable, so called because in\n" +
-            "    most cases one or both vowels are a Seghol.  These pluralize with a Shewa in the\n" +
-            "    first syllable (or Hateph vowel for gutturals) and a Qamets in the second:  מֶלֶךּ –> מְלָכִים and חֶרֶב –> חֲרָבוֹת\n"),
+        new GrammarRule("Patterns of Pluralization 3/4\n" +
+          " 3. Segholate nouns are nouns with accent on the first syllable, so called because in\n" +
+          "    most cases one or both vowels are a Seghol.  These pluralize with a Shewa in the\n" +
+          "    first syllable (or Hateph vowel for gutturals) and a Qamets in the second:  מֶלֶךּ –> מְלָכִים and חֶרֶב –> חֲרָבוֹת\n"),
 
-        new GrammarRule("Patterns of Pluralization 4/5\n" +
-            " 4. Pluralization of Geminate nouns.  Geminate nouns appear to have only 2 root\n" +
-            "    consonants (e.g. עַם).  Actually they originally had 3, with the third duplicating\n" +
-            "    the second.  These pluralize with Dageshe Forte in the second \n" +
-            "    consonant. עַם –> עַמִּים  Not all biconsonantal nouns are geminate, for example אָב\n"),
-
-        new GrammarRule("Patterns of Pluralization 5/5\n" +
+        new GrammarRule("Patterns of Pluralization 4/4\n" +
+          " 4. Pluralization of Geminate nouns.  Geminate nouns appear to have only 2 root\n" +
+          "    consonants (e.g. עַם).  Actually they originally had 3, with the third duplicating\n" +
+          "    the second.  These pluralize with Dageshe Forte in the second \n" +
+          "    consonant. עַם –> עַמִּים  Not all biconsonantal nouns are geminate, for example אָב\n" +
           " 5. Irregular pluralization.  Many nouns are irregular in their pluralization."),
 
-        new GrammarRule("The Rules of Shewa 1/2\n" +
-            " 1. Hebrew does not allow two contiguous vocal schewas.  If prefixing a preposition\n" +
-            "    with a shewa to a word that starts with a schewa, first schewa becomes a\n" +
-            "    hireq. נְבִיאִם plus לְ becomes לִנְבִיאִם\n" +
-            "    Exception: If the syllable begins with י, after combining the י does not take a\n" +
-            "      shewa: יְהוּדָה plus לְ becomes לָיהוּדָה.\n"),
-
-        new GrammarRule("The Rules of Shewa 2/2\n" +
+        new GrammarRule("The Rules of Shewa\n" +
+          " 1. Hebrew does not allow two contiguous vocal schewas.  If prefixing a preposition\n" +
+          "    with a shewa to a word that starts with a schewa, first schewa becomes a\n" +
+          "    hireq. נְבִיאִם plus לְ becomes לִנְבִיאִם\n" +
+          "    Exception: If the syllable begins with י, after combining the י does not take a\n" +
+          "      shewa: יְהוּדָה plus לְ becomes לָיהוּדָה.\n" +
           " 2. Vocal schewa cannot proceed a guttural with a reduced vowel.  The first vocal\n" +
           "    schewa converts to the short vowel that corresponds to the reduced vowel it\n" +
           "    proceeds.  חֲלוֹם plus בְּ becomes בַּחֲלוֹם\n" +
           "    Exception: In אֱלֹהִים  the shortened vowel under א  is removed.  Thus אֱלֹהִים plus לְ becomes לֵאלֹהִים"),
 
-        new GrammarRule("Definite Article 1/6\n" +
-            " * Definite Article is הַ plus a Dagesh Forte in the first consonant of the noun\n"),
-
         new GrammarRule("Definite Article\n" +
+            " * Definite Article is הַ plus a Dagesh Forte in the first consonant of the noun\n" + 
             " * When the first consonant is a בגדכפת consonant the Dagesh Lene in the בגדכפת becomes a Dagesh Forte\n" +
             " * When first consontant is a guttural, Dagesh Forte is rejected\n" +
             "   * When the first consonant is א or ע or ר the Patach lengthens to a Qamets, הָ\n" +
@@ -1814,7 +1820,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "Biconsonental        " + "קָם" + "\n" +
             ""),
 
-        new GrammarRule("Participle יֵשׁ:" +
+        new GrammarRule("Participle יֵשׁ:\n" +
             "* Is not inflected\n" +
             "* Can express existence: יֵשׁ מֶלֶך there is a king, or a king is\n" +
             "* Followed by preposition לְ indicates possession: יֶשׁ–לִי תִקְוָה I have hope"),
@@ -1828,13 +1834,9 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Participles can be attributive, predicative, or substantive 1/3\n" +
             " * attributive, meaning they can directly modify a noun:\n    " +
             "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
-            " the people dwelling [or who dwell] in the land\n"),
-
-        new GrammarRule("Participles can be attributive, predicative, or substantive 2/3\n" +
+            " the people dwelling [or who dwell] in the land\n" +
             " * predicative, meaning they assert or predicate something about the noun:\n    " +
-            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "  And the mountain was burning with fire\n"),
-
-        new GrammarRule("Participles can be attributive, predicative, or substantive 3/3\n" +
+            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "  And the mountain was burning with fire\n" +
             " * substantive, meaning they act as a noun.  In this situation they can take a direct object, be part of a\n" +
             "   construct chain, or take a pronominal suffix.\n    " +
             "הַיּוֹשֶׁבֶת בַּגַּנִּים " + "the one who dwells in the gardens"),
@@ -1852,31 +1854,19 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "In the object section, direct and indirect object can come in any order\n" +
             "Indirect object usually marked with לְ or -אֶל"),
 
-        new GrammarRule("Verb tense and sentance order: 1/5\n" +
+        new GrammarRule("Verb tense and sentance order: \n" +
             "* When a perfect verb is describing a completed action it is usually proceeded\n" +
-            "    by a time clause or other explanatory clause.\n"),
-
-        new GrammarRule("Verb tense and sentance order: 2/5\n" +
-            "* A consecutive perfect is normally the first word in its clause.\n"),
-
-        new GrammarRule("Verb tense and sentance order: 3/5\n" +
-            "* A regular imperfect is not normally the first word in the clause.\n"),
-
-        new GrammarRule("Verb tense and sentance order: 4/5\n" +
-            "* A consecutive imperfect is always the first word in its clause\n"),
-
-        new GrammarRule("Verb tense and sentance order: 5/5\n" +
+            "    by a time clause or other explanatory clause.\n" +
+            "* A consecutive perfect is normally the first word in its clause.\n" +
+            "* A regular imperfect is not normally the first word in the clause.\n" +
+            "* A consecutive imperfect is always the first word in its clause\n" +
             "* A jussive or cohortative (aka volitional imperfect) is normally the first word in its clause."),
 
-        new GrammarRule("Sequences with volational conjugations:\n 1/3" +
+        new GrammarRule("Sequences with volational conjugations:\n" +
             "* Imperatives can occur in succession, possibly linked by ו.  This linkage can consequential or sequential:\n" +
-            "  e.g.  עֲלֵח וּקְבֹר אֶת–אָבִיךָ Go up and bury your father.\n"),
-
-        new GrammarRule("Sequences with volational conjugations:\n 2/3" +
+            "  e.g.  עֲלֵח וּקְבֹר אֶת–אָבִיךָ Go up and bury your father.\n" +
             "* An imperative may be followed by a consecutive perfect.  The perfect may carry the full force of the imperative:\n" +
-            "  e.g. לֵך וְאָמַרְתָּ אֶל–עַבְדִּי Go and say to my servant...\n"),
-
-        new GrammarRule("Sequences with volational conjugations:\n 3/3" +
+            "  e.g. לֵך וְאָמַרְתָּ אֶל–עַבְדִּי Go and say to my servant...\n" +
             "* An imperative may be followed by an imperfect or cohortative, creating a purpose or result clause:\n" +
             "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king."),
 
@@ -1905,32 +1895,19 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "גַּם כִּי–אֵלֵך צַלְמָוֶת לֹא–אִירָא רָע" +
             "\nEven though I walk through the valley of the shadow of death, I will not fear evil"),
 
-        new GrammarRule("ו:"  + " can be conjunctive or disjunctive 1/6\n" +
-            "* Conjunctive is usually prefixed to a verb and links clauses sequentially, temporally, logically, or consequentially.\n"),
-
-        new GrammarRule("ו:" + " can be conjunctive or disjunctive 2/6\n" +
-            "* Disjunctive is prefixed to a non-verb and is non-sequential; it introduces some kind of break in the narrative.\n"),
-
-        new GrammarRule("ו:" + " can be conjunctive or disjunctive 3/6\n" +
+        new GrammarRule("ו:"  + " can be conjunctive or disjunctive\n" +
+            "* Conjunctive is usually prefixed to a verb and links clauses sequentially, temporally, logically, or consequentially.\n" +
+            "* Disjunctive is prefixed to a non-verb and is non-sequential; it introduces some kind of break in the narrative.\n" +
             "  Disjunctive meaning can be:\n" +
             "  * parenthetical, provides a parenthetical explanation or comment:\n    " +
             "וְהֵם לֹא יָדְעוּ כִּי שֹׁמֵעַ יוֹסֵף כִּי הַמֵּלִיץ בֵּינֹתָם" +
-            "\n    Now they did not know that Joseph was understanding them, for there was an interpreter between them.\n"),
-
-        new GrammarRule("ו:" + " can be conjunctive or disjunctive 4/6\n" +
-            "* Disjunctive meaning can be:\n" +
+            "\n    Now they did not know that Joseph was understanding them, for there was an interpreter between them.\n" +
             "  * circumstantial, gives circumstantial information\n    " +
             "וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ => וְאֵין אִישׁ מֵאַנְשֵׁי חַבַּית שָׁם בַּבָּיִת" +
-            "\n    And one day, he went into the house to do his work, => and none of the household servants were there in the house\n"),
-
-        new GrammarRule("ו:" + " can be conjunctive or disjunctive 5/6\n" +
-            "* Disjunctive meaning can be:\n" +
+            "\n    And one day, he went into the house to do his work, => and none of the household servants were there in the house\n" +
             "  * contrastive, gives a contrasting idea\n    " +
             "וַיִּשַׁע יְהוָה אֶל–הֶבֶל וְאֶל–מִנְחָתוֹ => וְאֶל–קַיִן וְאֶל–מִנְחָתוֹ לֹא שָׁעָה" +
-            "\n    The LORD looked favorably on Abel and his offering, => but on Cain and his offering he did not look favorably\n"),
-
-        new GrammarRule("ו:" + " can be conjunctive or disjunctive 6/6\n" +
-            "* Disjunctive meaning can be:\n" +
+            "\n    The LORD looked favorably on Abel and his offering, => but on Cain and his offering he did not look favorably\n" +
             "  * introductory, begins a new narrative or introduces a new idea or theme\n    " +
             "וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים" +
             "\n    Now the serpent was more crafty than any creature that the LORD God had made"),
@@ -2000,7 +1977,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("Piel perfect weak verbs:  Second gutturals do not take dagesh, vowel changes vary.\n" +
             "Final gutterals cause vowel changes as well.\n" +
-            "Strong         " + "קֵטֵּל" + "\n" +
+            "Strong         " + "קִטֵּל" + "\n" +
             "III-" + "שִׁלַּח        ע/ח" + "\n" +
             "III-" + "מִצֵא          א" + "\n" +
             "III-" + "גִּלָּה          ה" + "\n" +
@@ -2102,7 +2079,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Hiphil imperfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
             "Strong         " + "יַקְטִיל"+ "\n" +
-            "I-Gutteral     " + "יַעֲמִיד"+
+            "I-Gutteral     " + "יַעֲמִיד"+ "\n" +
             "III-" + "יַשְׁלִיחַ        ע/ח" + "\n" +
             "III-" + "יַמְצִיא          א" + "\n" +
             "III-" + "יַגְלֶה           ה" + "\n" +
@@ -2225,17 +2202,17 @@ public class HebrewBuilder extends BaseLanguageBuilder {
             "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
             "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
 
-        new GrammarRule("Hithpael weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+        new GrammarRule("Hithpael infinitive construct weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
             "Strong         " + "הִתְקַטֵּל"+ "\n" +
             "III-" + "הִתְגַּלּוֹת         ה" + "\n" +
             "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
 
-        new GrammarRule("Hithpael weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+        new GrammarRule("Hithpael infinitive absolute weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
             "Strong         " + "הִתְקַטֵּל"+ "\n" +
             "Geminate       " + "הִתְפַּלֵּל" + "\n" +
             "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
 
-        new GrammarRule("Hithpael weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+        new GrammarRule("Hithpael participle weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
             "Strong         " + "מִתְקַטֵּל"+ "\n" +
             "III-" + "מִתְגַּלֶּה          ה" + "\n" +
             "II-Gutteral    " + "מִתְנַחֵם"+ "\n" +

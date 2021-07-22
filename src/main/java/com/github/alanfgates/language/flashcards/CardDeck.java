@@ -26,13 +26,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 class CardDeck {
-  private static final int NUM_TO_TEST = 20;
+  private static final int NUM_TO_TEST_INITIAL = 10;
+  private static final int NUM_TO_TEST_RETRY   = 15;
 
   private final LinkedList<Word> initialCards;
   private final LinkedList<Word> repeatCards;
@@ -80,14 +80,14 @@ class CardDeck {
 
     int succeeded = 0;
     int failed = 0;
-    // We will shuffle the repeatCards, do any cards we missed last time, then select NUM_TO_TEST/2 initial cards (if any are left) and up
-    // to NUM_TO_TEST cards from the repeat pile.  If we successfully answer a card, it will be put back in the repeat once.  If we miss
+    // We will shuffle the repeatCards, do any cards we missed last time, then select NUM_TO_TEST_INITAL initial cards (if any are left) and up
+    // to NUM_TO_TEST_RETRY cards from the repeat pile.  If we successfully answer a card, it will be put back in the repeat once.  If we miss
     // it will be put back in the missedLastTime pile and in the repeat pile twice.
     List<Word> thisTime = new ArrayList<>(missedLastTime);
     missedLastTime.clear();
     Collections.shuffle(repeatCards);
-    for (int i = 0; i < Math.min(NUM_TO_TEST / 2, initialCards.size()); i++) thisTime.add(initialCards.remove(i));
-    for (int i = 0; i < Math.min(NUM_TO_TEST / 2, repeatCards.size()); i++) thisTime.add(repeatCards.remove(i));
+    for (int i = 0; i < Math.min(NUM_TO_TEST_INITIAL, initialCards.size()); i++) thisTime.add(initialCards.remove(i));
+    for (int i = 0; i < Math.min(NUM_TO_TEST_RETRY, repeatCards.size()); i++) thisTime.add(repeatCards.remove(i));
 
     for (Word word : thisTime) {
       if (word.test(input)) {
@@ -149,15 +149,15 @@ class CardDeck {
           .append(e.getValue().size())
           .append(" ");
     }
-    System.out.println(buf.toString());
+    System.out.println(buf);
   }
 
   private void doGrammarRules(BufferedReader input) throws IOException {
-    // Do all of one, then all of the other
-    Iterator<Map.Entry<String, List<GrammarRule>>> iter = rules.entrySet().iterator();
-    if (iter.hasNext()) {
-      Map.Entry<String, List<GrammarRule>> val = iter.next();
-      showOneGrammarRule(input, val.getKey(), val.getValue());
+    // Do all of one set of rules, then all of the next
+    for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
+      if (e.getValue().isEmpty()) continue;
+      showOneGrammarRule(input, e.getKey(), e.getValue());
+      return;
     }
   }
 

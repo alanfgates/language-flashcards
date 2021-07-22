@@ -42,14 +42,12 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   consonantal stems are in the third.\n" +
             "2. Every neuter word has the same form in the nominative and accusative.\n" +
             "3. Almost all neuter words end in α in the nominative and accusative plural.\n" +
-            "4. In the dative singular, the ι subscripts if possible."),
-
-        new GrammarRule("Nouns rules: 2/3\n" +
+            "4. In the dative singular, the ι subscripts if possible." +
             "5. Vowels often change their length ('ablaut’).\n" +
             "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
             "8. A tau cannot stand at the end of the word and will drop off"),
 
-        new GrammarRule("Nouns rules: 3/3\n" +
+        new GrammarRule("Nouns rules: 2/2\n" +
             "7. Square of stops\n" +
             "   Labial           Unvoiced π  Voiced β  Aspirates φ  Labial + σ = ψ\n" +
             "   Velar (Palatals) Unvoiced κ  Voiced γ  Aspirates χ  Velar + σ = ξ\n" +
@@ -100,17 +98,13 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * The means or instrument by which an action is accomplished:  For it is by grace\n" +
             "    you have been saved Τῃ γαρ χαριτι εστε σεσωσμενοι"),
 
-        new GrammarRule("Adjectives can be attributive, substantival, or predicative 1/3\n" +
+        new GrammarRule("Adjectives can be attributive, substantival, or predicative\n" +
             " * Attributive - gives a quality or attribute to the word it modifies: ο αγαθος\n" +
             "   λογος εστιν - in this situation adjective agrees with word it modifies in case,\n" +
-            "   number, and gender."),
-
-        new GrammarRule("Adjectives can be attributive, substantival, or predicative 2/3\n" +
+            "   number, and gender." +
             " * Substantival - when an adjective functions as a noun: ο αγαθος εστιν “the good\n" +
             "   (person) is” - in this situation case is determined by its function (subject,\n" +
-            "   object, etc.) its gender and number by what it stands for."),
-
-        new GrammarRule("Adjectives can be attributive, substantival, or predicative 3/3\n" +
+            "   object, etc.) its gender and number by what it stands for." +
             " * Predicate - asserts (predicates) something about the subject. ο ανθρωπος αγαθος\n" +
             "   verb ειμι may be implied"),
 
@@ -211,12 +205,10 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   If the second vowel of the dipthong is a ι it subscripts if possible.\n"),
 
         new GrammarRule("A deponent verb is one that is middle or passive in form but active\n" +
-            "in meaning.  It does not take a middle or passive meaning."),
-
-        new GrammarRule("Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in\n" +
-            "the present but not in the aorist.)"),
-
-        new GrammarRule("75% of middle forms in the NT are deponent."),
+            "in meaning.  It does not take a middle or passive meaning.\n" + 
+            "Verbs can be deponent in one tense but not in another (e.g. ἔρχομαι is deponent in\n" +
+            "the present but not in the aorist.)\n" +
+            "75% of middle forms in the NT are deponent."),
 
         new GrammarRule("Separating γινομαι, γενναω and γινωσκω:\n" +
             " * γινομαι will always have a vowel between the γ and the ν.  Usually an ε.\n" +
@@ -278,9 +270,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
 
         new GrammarRule("In a compound verb the augment comes after the preposition.\n" +
             "* If the preposition ends in a vowel it does not contract with the augment\n" +
-            "* If the preposition ends in a vowel it does not contract with the augment\n" +
             "  * Usually the final vowel of the preposition drops off.\n" +
-            "* If the preposition ends in a vowel it does not contract with the augment\n" +
             "  * Sometimes it remains but does not contract.\n" +
             "* When a compound verb with a preposition that ends in κ augments the κ\n" +
             "  changes to ξ."),
@@ -327,13 +317,11 @@ public class GreekBuilder extends BaseLanguageBuilder {
             " * Liquid verbs use α/ε as a tense formative rather than σα."),
 
         new GrammarRule("Perfect tense describes an action that was brought to completion\n" +
-            "and whose effects are felt in the present (consummative, extensive)."),
-
-        new GrammarRule("Perfect tense can be translated with have/has or present, e.g.\n" +
-            "τον δρομον τετεκεκα I have finished the race"),
-
-        new GrammarRule("Perfect tense can also be intensive, stressing the resulting state of an action:\n" +
-            "ἀφεωνται σοι αἱ ἁμαρτιαι σου your sins are forgiven you"),
+            "and whose effects are felt in the present (consummative, extensive).\n" +
+            " * can be translated with have/has or present, e.g.\n" +
+            "   τον δρομον τετεκεκα I have finished the race\n"+
+            " * can also be intensive, stressing the resulting state of an action:\n" +
+            "   ἀφεωνται σοι αἱ ἁμαρτιαι σου your sins are forgiven you"),
 
         new GrammarRule("Perfect tense reduplication: 1/2\n" +
             " * If the word starts with a single consonant, that consonant is doubled with\n" +
@@ -388,53 +376,41 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* Participles can take objects and prepositional phrases\n" +
             "* Participles are negated with μη"),
 
-        new GrammarRule("Participal exegesis: 1/8\n" +
+        new GrammarRule("Participal exegesis: 1/3\n" +
             "1. Temporal:  the aorist participle can describe an action occurring before the time\n" +
             "   of the finite verb, while the present participle can describe something happening\n" +
             "   at the same time as the action of the main verb:\n" +
             "   νηστεύσας ... ὕστερον ἐπείνασεν after fasting, ... he was hungry\n" +
-            "   συναλιζόμενας παρήγγειλεν αὐτοις while staying with them he charged them."),
-
-        new GrammarRule("Participal exegesis: 2/8\n" +
+            "   συναλιζόμενας παρήγγειλεν αὐτοις while staying with them he charged them.\n" +
             "2. Manner:  can indicate the manner in which the action of the finite verb occurs:\n" +
             "   ἀκουσας δε ὁ νεακισκος τον λογον ἀπηλθεν _λυπουμενος_\n" +
             "   When the young man heard this, he went away _sad_"),
 
-        new GrammarRule("Participal exegesis: 3/8\n" +
+        new GrammarRule("Participal exegesis: 2/3\n" +
             "3. Means:  can indicate the means by which the action of the finite verb occurs:\n" +
-            "   κοπιωμεν _ἐργαζομενοι_ ταις ἰδιας χερσιν We toil _working_ with our own hands"),
-
-        new GrammarRule("Participal exegesis: 4/8\n" +
+            "   κοπιωμεν _ἐργαζομενοι_ ταις ἰδιας χερσιν We toil _working_ with our own hands\n" +
             "4. Cause:  can indicate the cause or reason or ground of the action of the finite verb:\n" +
             "   ἠγαλλιασατο πανοικει _πεπιστευκως_ τῳ θεῳ\n" +
-            "   He was filled with joy, along with his entire household, _because he had come to believe_ in God."),
-
-        new GrammarRule("Participal exegesis: 5/8\n" +
+            "   He was filled with joy, along with his entire household, _because he had come to believe_ in God.\n" +
             "5. Conditional: can indicate a condition that must be fulfilled if the action of the\n" +
             "   finite verb is to be accomplished:\n" +
             "   παντα ὅσα ἄν αἰτηστε ... _πιστευοντες_ λημψεσθε\n" +
             "   And whatever you ask in prayer, you will receive, _if you have faith_"),
 
-        new GrammarRule("Participal exegesis: 6/8\n" +
+        new GrammarRule("Participal exegesis: 3/3\n" +
             "6. Concessive:  can indicate that the action of the finite verb is true despite the\n" +
             "   action of the participle:\n" +
             "   Και ὑμας _ὄντας_ νεκρους τοις παραπτωμασιν\n" +
-            "   And _although you were dead_ in your transgressions"),
-
-        new GrammarRule("Participal exegesis: 7/8\n" +
+            "   And _although you were dead_ in your transgressions\n" +
             "7. Purpose: can indicate the purpose of the finite verb (often translated as infinitive:\n" +
             "   ἄφες ἴδωμεν εἰ ἔρχεται Ἠλιας _σωσων_ αὐτον\n" +
-            "   Wait! Let's see if Elijah comes _to save_ him"),
-
-        new GrammarRule("Participal exegesis: 8/8\n" +
+            "   Wait! Let's see if Elijah comes _to save_ him\n" +
             "8. Result:  can indciate the result of the finite verb:\n" +
             "   ἵνα τους δυο κτισῆ ἐν αὐτῳ εἰς ἕνα καινον ἄνθρωπον _ποιων_ εἰρηνην\n" +
             "   In order to create in himself one new man out of the two, _thus making peace_"),
 
-        new GrammarRule("Participles are often translated as indicatives for several reasons: 1/2\n" +
-            "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)"),
-
-        new GrammarRule("Participles are often translated as indicatives for several reasons: 2/2\n" +
+        new GrammarRule("Participles are often translated as indicatives for several reasons:\n" +
+            "* Breaking up of long sentances (e.g. Eph 1:3-14 is one sentance in Greek)\n" +
             "* Greek likes aorist participle before the main verb where English prefers two\n" +
             "  finite verbs: εὐθυς _ἀφεντες_ τα δικτυα ἠκολουθησαν αὐτῳ\n" +
             "  Immediately _they left_ their nets and followed him."),
@@ -450,9 +426,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* attributive - acting as an adjective\n" +
             "* substantival - acting as a noun"),
 
-        new GrammarRule("Adverbial participle is always anarthrous (no definite article)"),
-
-        new GrammarRule("Adjectival participle is usually articular (has definite article)."),
+        new GrammarRule("Adverbial participle is always anarthrous (no definite article)\n" +
+            "Adjectival participle is usually articular (has definite article)."),
 
         new GrammarRule("For both adverbial and adjectival participles, relative time still applies,\n" +
             "so aorist still implies the participle is describing someone/something that acted before the main verb."),
@@ -461,16 +436,13 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "related to the rest of the sentance, that is it does not modify any other words in the sentance.\n" +
             "_ταυτα αὐτου λαλουντος_ πολλοι ἐπιστευσαν εἰς αὐτον\n" +
             "_While he was saying these things_ many believed in him\n" +
-            "This is called a genitive absolute (I assume because the participle is in the genitive case)"),
-
-        new GrammarRule("The genitive absolute can have a 'subject' such as he in the above example and and object\n" +
+            "This is called a genitive absolute (I assume because the participle is in the genitive case)\n" +
+            "The genitive absolute can have a 'subject' such as he in the above example and and object\n" +
             "such as these things in the above, or other modifiers"),
 
-        new GrammarRule("Subjunctive describes possibility or probability."),
-
-        new GrammarRule("Subjunctive has aspect, so present tense indicates continuous action while aorist indicates undefined."),
-
-        new GrammarRule("Perfect subjunctive (very rare) indicates completed action with continuing consequences."),
+        new GrammarRule("Subjunctive describes possibility or probability.\n" +
+            "Subjunctive has aspect, so present tense indicates continuous action while aorist indicates undefined.\n" +
+            "Perfect subjunctive (very rare) indicates completed action with continuing consequences."),
 
         new GrammarRule("οὐ μή plus subjunctive indicates emphatic denial of a future possibility, e.g. Jesus'\n" +
             "words in Jn 10:28 οὐ μή ἀπόλωνται they [his sheep] will by no means perish."),
@@ -510,12 +482,10 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "3. If the question being with μή the inquistor expects a negative answer:\n" +
             "   μή πάντες ἀπόστολοι;  Are all apostles?"),
 
-        new GrammarRule("Infinitive is a verbal noun."),
-
-        new GrammarRule("Infinitive is viewed as singular neuter and can take a definite articule in singular neuter, the case\n" +
-            "of which is determined by the function of the infinitive in the sentance."),
-
-        new GrammarRule("Infinitive can have a direct object and adverbial modifiers."),
+        new GrammarRule("* Infinitive is a verbal noun.\n" + 
+            "* Infinitive is viewed as singular neuter and can take a definite article in singular neuter, the case\n" +
+            "   of which is determined by the function of the infinitive in the sentance.\n" +
+            "* Infinitive can have a direct object and adverbial modifiers."),
 
         new GrammarRule("Infinitive 'tenses': 1/3\n" +
             "* present: continuous Οὐδεὶς δύναται δυσὶ κυρίος δουλεύειν No one is able to serve two masters.\n" +
@@ -542,44 +512,32 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "* δει, ἐξεστιν (it is lawful), μελλω, δυναμαι, ἀρχομαι will always be followed by an infinitive\n" +
             "* to report indirect discourse."),
 
-        new GrammarRule("Infinitive and prepositions: 1/6\n" +
+        new GrammarRule("Infinitive and prepositions: 1/2\n" +
             "* δια plus article in the accusative plus infinitive means 'because', indicates reason\n" +
             "  αὐτος δε Ἰησους ουκ ἐπιστευεν αὐτον αὐτοις _δια το αὐτον γινωσκειν_ παντες\n" +
-            "  But Jesus on his part did not entrust himself to them, _because he knew_ all people"),
-
-        new GrammarRule("Infinitive and prepositions: 2/6\n" +
+            "  But Jesus on his part did not entrust himself to them, _because he knew_ all people\n" +
             "* εις or προς plus article in the accusative plus infinitive means 'in order that', indicates purpose\n" +
             "  παραδοσουσιν αὐτον τοις ἐθνεσιν _εις το ἐμπαιξαι και μαστιγωσαι και σταυρωσαι_\n" +
             "  They will deliver him over to the Gentiles _to be mocked and flogged and crucified_\n" +
-            "  Purpose can also be expressed with no preposition and article in genitive"),
-
-        new GrammarRule("Infinitive and prepositions: 3/6\n" +
+            "  Purpose can also be expressed with no preposition and article in genitive\n" +
             "* προ plus article in genitive plus infinitive means 'before'"),
 
-        new GrammarRule("Infinitive and prepositions: 4/6\n" +
-            "* ἐν plus article in dative plus infinitive means 'when' or 'while'"),
-
-        new GrammarRule("Infinitive and prepositions: 5/6\n" +
+        new GrammarRule("Infinitive and prepositions: 2/2\n" +
+            "* ἐν plus article in dative plus infinitive means 'when' or 'while'\n" +
             "* μετα plus article in accusative plus infinitive means 'after'\n" +
-            "  ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path"),
-
-        new GrammarRule("Infinitive and prepositions: 6/6\n" +
+            "  ἐν τῳ σπειρειν αὐτον ἁ μεν ἐπεσεν παρα την ὁδον As he sowed some seeds fell along the path\n" +
             "* ὡστε plus infinitive indicates result:\n" +
             "  ἐπλησαν ἀμφοτερα τα πλοια _ὡστε βυθιζεσθαι_ αὐτα They filled both boats so full that they began to sink"),
 
-        new GrammarRule("Imperative conveys command or request (as in 'give us this day our daily bread'). 1/2\n" +
-            "Present imperative conveys a continuous command or a general precept (always ...)"),
-
-        new GrammarRule("Imperative conveys command or request (as in 'give us this day our daily bread'). 2/2\n" +
+        new GrammarRule("Imperative conveys command or request (as in 'give us this day our daily bread').\n" +
+            "Present imperative conveys a continuous command or a general precept (always ...)\n" +
             "Aorist applies to a particular situation."),
 
-        new GrammarRule("Forms of negation: 1/2\n" +
+        new GrammarRule("Forms of negation: \n" +
             " * οὐ with future indicative = simple negation\n" +
             "   οὐ μοιχεύσεις you shall not commit adultery\n" +
             " * οὐ μή plus aorist subjunctive = very strong no\n" +
-            "   οἱ λόγοι μου οὐ παρέλθωσιν  My words will by no means [or never, but without time reference] pass away"),
-
-        new GrammarRule("Forms of negation: 2/2\n" +
+            "   οἱ λόγοι μου οὐ παρέλθωσιν  My words will by no means [or never, but without time reference] pass away\n" +
             " * μή plus present imperative = prohibiting a continuous action\n" +
             "   μή μεριμνᾶτε τῇ ψυχῇ ὑμῶν do not worry about your life\n" +
             " * μή plus aorist imperative = prohibiting an undefined action\n" +
