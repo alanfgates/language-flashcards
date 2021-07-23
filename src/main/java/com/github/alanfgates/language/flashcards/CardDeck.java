@@ -31,12 +31,11 @@ import java.util.List;
 import java.util.Map;
 
 class CardDeck {
-  private static final int NUM_TO_TEST_INITIAL = 10;
-  private static final int NUM_TO_TEST_RETRY   = 15;
+  private static final int NUM_TO_TEST_INITIAL = 11;
+  private static final int[] REPEAT_DAYS = new int[] {0, 1, 2, 3, 4, 9, 14, 19, 24, 29, 39, 49};
 
   private final LinkedList<Word> initialCards;
-  private final LinkedList<Word> repeatCards;
-  private final List<Word> missedLastTime;
+  private final LinkedList<List<Word>> repeatCards;
   private final Map<String, List<GrammarRule>> rules;
 
   /**
@@ -46,7 +45,6 @@ class CardDeck {
     rules = new HashMap<>();
     initialCards = new LinkedList<>();
     repeatCards = new LinkedList<>();
-    missedLastTime = new ArrayList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
       initialCards.addAll(builder.buildWords());
@@ -69,7 +67,6 @@ class CardDeck {
     Container c = reader.readValue(new File(filename));
     initialCards = c.getInitialCards();
     repeatCards = c.getRepeatCards();
-    missedLastTime = c.getMissedLastTime();
     rules = c.getRules();
   }
 
@@ -80,29 +77,29 @@ class CardDeck {
 
     int succeeded = 0;
     int failed = 0;
-    // We will shuffle the repeatCards, do any cards we missed last time, then select NUM_TO_TEST_INITAL initial cards (if any are left) and up
-    // to NUM_TO_TEST_RETRY cards from the repeat pile.  If we successfully answer a card, it will be put back in the repeat once.  If we miss
-    // it will be put back in the missedLastTime pile and in the repeat pile twice.
-    List<Word> thisTime = new ArrayList<>(missedLastTime);
-    missedLastTime.clear();
-    Collections.shuffle(repeatCards);
-    for (int i = 0; i < Math.min(NUM_TO_TEST_INITIAL, initialCards.size()); i++) thisTime.add(initialCards.remove(i));
-    for (int i = 0; i < Math.min(NUM_TO_TEST_RETRY, repeatCards.size()); i++) thisTime.add(repeatCards.remove(i));
 
+    // We do the next NUM_TO_TEST_INITIAL cards from the deck, plus the next entry from repeat cards
+    List<Word> thisTime = new ArrayList<>();
+    for (int i = 0; i < Math.min(NUM_TO_TEST_INITIAL, initialCards.size()); i++) thisTime.add(initialCards.remove(i));
+    if (repeatCards.size() > 0) thisTime.addAll(repeatCards.removeFirst());
+
+    // These will be the days we'll repeat things
     for (Word word : thisTime) {
       if (word.test(input)) {
         succeeded++;
       } else {
         failed++;
-        missedLastTime.add(word);
-        repeatCards.add(word);
+        for (int day : REPEAT_DAYS) {
+          while (repeatCards.size() <= day) repeatCards.add(new ArrayList<>());
+          List<Word> words = repeatCards.get(day);
+          if (!words.contains(word)) words.add(word);
+        }
       }
-      if (word.isRepeatable()) repeatCards.add(word);
     }
     System.out.println("Total right: " + succeeded + ", wrong: " + failed +
         ", success rate: " + ((float)succeeded / (float)thisTime.size()));
     printStatus();
-    if (rules.isEmpty()) {
+    if (rules.isEmpty() && initialCards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
     }
   }
@@ -112,7 +109,6 @@ class CardDeck {
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
     mapper.writeValue(new File(filename), new Container()
         .setInitialCards(initialCards)
-        .setMissedLastTime(missedLastTime)
         .setRepeatCards(repeatCards)
         .setRules(rules));
   }
@@ -140,8 +136,6 @@ class CardDeck {
   private void printStatus() {
     StringBuilder buf = new StringBuilder("Remaining initial cards: ")
         .append(initialCards.size())
-        .append(", repeat cards size: ")
-        .append(repeatCards.size())
         .append(", remaining rules: ");
     for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
       buf.append(e.getKey())
@@ -170,20 +164,10 @@ class CardDeck {
 
   static class Container {
     private LinkedList<Word> initialCards;
-    private LinkedList<Word> repeatCards;
-    private List<Word> missedLastTime;
+    private LinkedList<List<Word>> repeatCards;
     private Map<String, List<GrammarRule>> rules;
 
     public Container() {
-    }
-
-    public Map<String, List<GrammarRule>> getRules() {
-      return rules;
-    }
-
-    public Container setRules(Map<String, List<GrammarRule>> rules) {
-      this.rules = rules;
-      return this;
     }
 
     public LinkedList<Word> getInitialCards() {
@@ -195,21 +179,22 @@ class CardDeck {
       return this;
     }
 
-    public LinkedList<Word> getRepeatCards() {
+    public LinkedList<List<Word>> getRepeatCards() {
       return repeatCards;
     }
 
-    public Container setRepeatCards(LinkedList<Word> repeatCards) {
+    public Container setRepeatCards(LinkedList<List<Word>> repeatCards) {
       this.repeatCards = repeatCards;
       return this;
     }
 
-    public List<Word> getMissedLastTime() {
-      return missedLastTime;
+    public Map<String, List<GrammarRule>> getRules() {
+      return rules;
     }
 
-    public Container setMissedLastTime(List<Word> missedLastTime) {
-      this.missedLastTime = missedLastTime;
+    public Container setRules(
+        Map<String, List<GrammarRule>> rules) {
+      this.rules = rules;
       return this;
     }
   }

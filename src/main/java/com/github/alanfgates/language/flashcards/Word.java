@@ -22,7 +22,6 @@ import java.util.List;
 public class Word {
   private String other;
   private List<Form> forms;
-  private boolean repeatable; // Indicates it should be put in the repeat pile even when it succeeds
 
   // For Jackson
   public Word() {
@@ -44,13 +43,18 @@ public class Word {
     return this;
   }
 
-  public boolean isRepeatable() {
-    return repeatable;
+  @Deprecated
+  public Word setRepeatable(boolean repeatable) {
+    return this;
   }
 
-  public Word setRepeatable(boolean repeatable) {
-    this.repeatable = repeatable;
-    return this;
+  @Override
+  public boolean equals(Object o) {
+    if (o instanceof Word) {
+      Word other = (Word)o;
+      return this.other.equals(other.other);
+    }
+    return false;
   }
 
   boolean test(BufferedReader input) throws IOException {
