@@ -42,7 +42,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   consonantal stems are in the third.\n" +
             "2. Every neuter word has the same form in the nominative and accusative.\n" +
             "3. Almost all neuter words end in α in the nominative and accusative plural.\n" +
-            "4. In the dative singular, the ι subscripts if possible." +
+            "4. In the dative singular, the ι subscripts if possible.\n" +
             "5. Vowels often change their length ('ablaut’).\n" +
             "6. In the genitive and dative, the masculine and neuter will always be identical.\n" +
             "8. A tau cannot stand at the end of the word and will drop off"),
@@ -66,8 +66,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Uses of Genitive 2/2\n" +
             " * objective, receiving the action of the head noun: The blasphemy against the\n" +
             "   Spirit will not be forgiven η του πνευματος βλασφημια ουκ αφεθησεται\n" +
-            " * plenary, being both subjective and objective: For the love of Christ compels us η\n" +
-            "   γαρ αγαπη του Χριστου συνεχει ημας\n" +
+            " * plenary, being both subjective and objective: For the love of Christ compels us\n" +
+            "   η γαρ αγαπη του Χριστου συνεχει ημας\n" +
             " * relationship: Simon, son of John Σιμων Ιωαννου\n" +
             " * partitive, where the subject is a part of the whole, which is genitive: some of\n" +
             "   the branches τινες των κλαδων"),
@@ -101,10 +101,10 @@ public class GreekBuilder extends BaseLanguageBuilder {
         new GrammarRule("Adjectives can be attributive, substantival, or predicative\n" +
             " * Attributive - gives a quality or attribute to the word it modifies: ο αγαθος\n" +
             "   λογος εστιν - in this situation adjective agrees with word it modifies in case,\n" +
-            "   number, and gender." +
+            "   number, and gender.\n" +
             " * Substantival - when an adjective functions as a noun: ο αγαθος εστιν “the good\n" +
             "   (person) is” - in this situation case is determined by its function (subject,\n" +
-            "   object, etc.) its gender and number by what it stands for." +
+            "   object, etc.) its gender and number by what it stands for.\n" +
             " * Predicate - asserts (predicates) something about the subject. ο ανθρωπος αγαθος\n" +
             "   verb ειμι may be implied"),
 
@@ -288,7 +288,8 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   Κατα δε ἑορτην _ἀπελυεν_ αὐτοις ἑνα δεσμιον\n" +
             "   Now at the feast _he used to release_ for them any one prisoner\n" +
             " * Can be used to describe a wish (voluntative)\n" +
-            "   _ηὐχομην_ γαρ ἀναθεμα εἰναι αὐτος ἐγω For _I could wish_ that I myself were accursed\n" +
+            "   _ηὐχομην_ γαρ ἀναθεμα εἰναι αὐτος ἐγω\n" +
+            "   For _I could wish_ that I myself were accursed\n" +
             " * Can be used to describe an attempt (conative)\n" +
             "   και ἐπορθουν αὐτην and I tried to destroy it\n" +
             " * Can describe something almost done (tendential)\n" +
@@ -324,8 +325,6 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "   ἀφεωνται σοι αἱ ἁμαρτιαι σου your sins are forgiven you"),
 
         new GrammarRule("Perfect tense reduplication: 1/2\n" +
-            " * If the word starts with a single consonant, that consonant is doubled with\n" +
-            "   and ε placed between.\n" +
             " * If the word starts with a single consonant, that consonant is doubled with\n" +
             "   and ε placed between.\n" +
             "   * φ goes to π   χ goes to κ    θ goes to τ\n" +
@@ -437,7 +436,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "_ταυτα αὐτου λαλουντος_ πολλοι ἐπιστευσαν εἰς αὐτον\n" +
             "_While he was saying these things_ many believed in him\n" +
             "This is called a genitive absolute (I assume because the participle is in the genitive case)\n" +
-            "The genitive absolute can have a 'subject' such as he in the above example and and object\n" +
+            "The genitive absolute can have a 'subject' such as he in the above example and object\n" +
             "such as these things in the above, or other modifiers"),
 
         new GrammarRule("Subjunctive describes possibility or probability.\n" +
@@ -458,7 +457,7 @@ public class GreekBuilder extends BaseLanguageBuilder {
             "  τίς σοι ἔδωκεν τήν ἐξουσίαν ταύτην ἵνα ταῦτα _ποιῇς_;\n" +
             "  Who gave you authority that _you do_ these things? \n" +
             "* Can also indicate content of the preceeding verb:\n" +
-            "  ἐκήρθξαν ἵνα μετανοῶσιν they preached that they should repent" +
+            "  ἐκήρθξαν ἵνα μετανοῶσιν they preached that they should repent\n" +
             "* ἵνα μή plus subjunctive can be translated as 'lest'\n" +
             "  οἱ πατέπρες, μή ἐρεθίζετε τὰ τέκνα ὑμῶν, _ἵνα μή ἀθυμῶσιν_\n" +
             "  Fathers, do not provoke your children, _lest they become discouraged_"),

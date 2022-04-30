@@ -2061,7 +2061,7 @@ public class HebrewBuilder extends BaseLanguageBuilder {
         new GrammarRule("Hiphil stem, most common derived stem.  Meaning can be: \n" +
             "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king\n"+
             "* simple action: more common in verbs where qal form is not attested in OT\n"+
-            "* declarative: the subject declares a certain condition:  רָשַׁע he was guily הִרְשִׁיע he declared someone guilty\n"+
+            "* declarative: the subject declares a certain condition:  רָשַׁע he was guilty הִרְשִׁיע he declared someone guilty\n"+
             "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great"),
 
         new GrammarRule("Hiphil perfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun " +

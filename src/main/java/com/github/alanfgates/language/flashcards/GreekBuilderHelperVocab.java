@@ -1348,7 +1348,7 @@ class GreekBuilderHelperVocab {
         new Word("διελήλυθα", "I have passed through - δια ερχομαι", PERFECT),
         new Word("θαυμάζω", "I marvel - root θαυμαστ ?", PRESENT),
         new Word("ἐθαύμασα", "I marvelled - θαυμάζω root θαυμαστ ?", AORIST),
-        new Word("ἐθαυμάσθην", "I have been marvelled at - θαυμάζω root θαυμαστ ?", PASSIVE, AORIST),
+        new Word("ἐθαυμάσθην", "I was marvelled at - θαυμάζω root θαυμαστ ?", PASSIVE, AORIST),
         new Word("θεραπεύω", "I serve (a divinity), heal - root θεραπευ ?", PRESENT),
         new Word("θεραπεύσω", "I will serve (a divinity), heal - θεραπεύω root θεραπευ ?", FUTURE),
         new Word("ἐθεράπευσα", "I served (a divinity), healed - θεραπεύω root θεραπευ ?", AORIST),

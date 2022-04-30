@@ -32,7 +32,7 @@ import java.util.Map;
 
 class CardDeck {
   private static final int NUM_TO_TEST_INITIAL = 11;
-  private static final int[] REPEAT_DAYS = new int[] {0, 1, 2, 3, 4, 9, 14, 19, 24, 29, 39, 49};
+  private static final int[] REPEAT_DAYS = new int[] {0, 1, 2, 3, 4, 9, 19, 24, 49};
 
   private final LinkedList<Word> initialCards;
   private final LinkedList<List<Word>> repeatCards;
