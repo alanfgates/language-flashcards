@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-  private static final String FILENAME = "./cardsV2.json";
+  private static final String FILENAME = "./cardsV4.json";
 
   public static void main(String[] args) {
     Options options = new Options();

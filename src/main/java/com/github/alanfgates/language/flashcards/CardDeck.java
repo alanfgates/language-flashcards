@@ -26,34 +26,45 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 class CardDeck {
   private static final int NUM_TO_TEST_INITIAL = 11;
-  private static final int[] REPEAT_DAYS = new int[] {0, 1, 2, 3, 4, 9, 19, 24, 49};
 
-  private final LinkedList<Word> initialCards;
-  private final LinkedList<List<Word>> repeatCards;
+  private final LinkedList<Word> cards;
   private final Map<String, List<GrammarRule>> rules;
+  private int today;
 
   /**
    * Build the card deck from source, with each word appearing once
    */
   CardDeck() {
     rules = new HashMap<>();
-    initialCards = new LinkedList<>();
-    repeatCards = new LinkedList<>();
+    cards = new LinkedList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      initialCards.addAll(builder.buildWords());
+      cards.addAll(builder.buildWords());
       // Have to make a copy of the rules list because Arrays.asList returns an implementation of
       // List that doesn't support remove.
       rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
     }
-    Collections.shuffle(initialCards);
-    printStatus();
+    Collections.shuffle(cards);
+    // Now need to set first day for each of the cards
+    int day = 0;
+    int cardsToday = 0;
+    for (Word card : cards) {
+      if (cardsToday++ >= NUM_TO_TEST_INITIAL) {
+        cardsToday = 0;
+        day++;
+      }
+      card.setFirstDay(day);
+    }
+    printStatus(day);
   }
 
   /**
@@ -65,9 +76,9 @@ class CardDeck {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     ObjectReader reader = mapper.readerFor(Container.class);
     Container c = reader.readValue(new File(filename));
-    initialCards = c.getInitialCards();
-    repeatCards = c.getRepeatCards();
+    cards = c.getCards();
     rules = c.getRules();
+    today = c.getDay();
   }
 
   void daily() throws IOException {
@@ -78,28 +89,32 @@ class CardDeck {
     int succeeded = 0;
     int failed = 0;
 
-    // We do the next NUM_TO_TEST_INITIAL cards from the deck, plus the next entry from repeat cards
-    List<Word> thisTime = new ArrayList<>();
-    for (int i = 0; i < Math.min(NUM_TO_TEST_INITIAL, initialCards.size()); i++) thisTime.add(initialCards.remove(i));
-    if (repeatCards.size() > 0) thisTime.addAll(repeatCards.removeFirst());
-
-    // These will be the days we'll repeat things
-    for (Word word : thisTime) {
-      if (word.test(input)) {
-        succeeded++;
-      } else {
-        failed++;
-        for (int day : REPEAT_DAYS) {
-          while (repeatCards.size() <= day) repeatCards.add(new ArrayList<>());
-          List<Word> words = repeatCards.get(day);
-          if (!words.contains(word)) words.add(word);
+    // Go through all the cards, testing each one that indicates it should be done today, removing any that are
+    // completely finished
+    Word card;
+    SortedSet<Integer> lastDays = new TreeSet<>();
+    for (Iterator<Word> iter = cards.iterator(); iter.hasNext(); ) {
+      card = iter.next();
+      if (card.shouldTest(today)) {
+        if (card.test(input)) {
+          succeeded++;
+          if (card.done(today)) {
+            iter.remove();
+          }
+        } else {
+          failed++;
+          card.missed(today);
         }
       }
+      lastDays.add(card.lastTestDay());
     }
-    System.out.println("Total right: " + succeeded + ", wrong: " + failed +
-        ", success rate: " + ((float)succeeded / (float)thisTime.size()));
-    printStatus();
-    if (rules.isEmpty() && initialCards.isEmpty()) {
+
+    System.out.println("Right:  " + succeeded);
+    System.out.println("Wrong:  " + failed);
+    System.out.println("Success rate:  " + ((float)succeeded / (float)(succeeded + failed)));
+    printStatus(lastDays.last());
+    today++;
+    if (rules.isEmpty() && cards.isEmpty()) {
       System.out.println("Congratulations, you have finished the deck!");
     }
   }
@@ -108,8 +123,8 @@ class CardDeck {
     ObjectMapper mapper = new ObjectMapper(new JsonFactory());
     mapper.enable(SerializationFeature.INDENT_OUTPUT);
     mapper.writeValue(new File(filename), new Container()
-        .setInitialCards(initialCards)
-        .setRepeatCards(repeatCards)
+        .setCards(cards)
+        .setDay(today)
         .setRules(rules));
   }
 
@@ -124,7 +139,7 @@ class CardDeck {
 
   void findDuplicates() {
     Map<String, Integer> counts = new HashMap<>();
-    for (Word word : initialCards) {
+    for (Word word : cards) {
       counts.putIfAbsent(word.getOther(), 0);
       counts.put(word.getOther(), counts.get(word.getOther()) + 1);
     }
@@ -133,9 +148,9 @@ class CardDeck {
     }
   }
 
-  private void printStatus() {
-    StringBuilder buf = new StringBuilder("Remaining initial cards: ")
-        .append(initialCards.size())
+  private void printStatus(int lastDay) {
+    StringBuilder buf = new StringBuilder("Remaining cards: ")
+        .append(cards.size())
         .append(", remaining rules: ");
     for (Map.Entry<String, List<GrammarRule>> e : rules.entrySet()) {
       buf.append(e.getKey())
@@ -143,6 +158,7 @@ class CardDeck {
           .append(e.getValue().size())
           .append(" ");
     }
+    System.out.println("Best case remaining test days: " + (lastDay - today));
     System.out.println(buf);
   }
 
@@ -163,28 +179,28 @@ class CardDeck {
   }
 
   static class Container {
-    private LinkedList<Word> initialCards;
-    private LinkedList<List<Word>> repeatCards;
+    private LinkedList<Word> cards;
     private Map<String, List<GrammarRule>> rules;
+    private int day;
 
     public Container() {
     }
 
-    public LinkedList<Word> getInitialCards() {
-      return initialCards;
+    public LinkedList<Word> getCards() {
+      return cards;
     }
 
-    public Container setInitialCards(LinkedList<Word> initialCards) {
-      this.initialCards = initialCards;
+    public Container setCards(LinkedList<Word> cards) {
+      this.cards = cards;
       return this;
     }
 
-    public LinkedList<List<Word>> getRepeatCards() {
-      return repeatCards;
+    public int getDay() {
+      return day;
     }
 
-    public Container setRepeatCards(LinkedList<List<Word>> repeatCards) {
-      this.repeatCards = repeatCards;
+    public Container setDay(int day) {
+      this.day = day;
       return this;
     }
 

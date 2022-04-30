@@ -17,11 +17,18 @@ package com.github.alanfgates.language.flashcards;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Word {
+  private static final int[] REPEAT_DAYS = new int[] {1, 2, 3, 4, 5, 10, 25, 50};
+
   private String other;
   private List<Form> forms;
+  private SortedSet<Integer> testDays; // days word should be tested
 
   // For Jackson
   public Word() {
@@ -43,11 +50,6 @@ public class Word {
     return this;
   }
 
-  @Deprecated
-  public Word setRepeatable(boolean repeatable) {
-    return this;
-  }
-
   @Override
   public boolean equals(Object o) {
     if (o instanceof Word) {
@@ -57,6 +59,14 @@ public class Word {
     return false;
   }
 
+  boolean shouldTest(int today) {
+    return testDays.contains(today);
+  }
+
+  boolean done(int today) {
+    return testDays.last() <= today;
+  }
+
   boolean test(BufferedReader input) throws IOException {
     showFront();
     input.readLine();
@@ -64,6 +74,23 @@ public class Word {
     System.out.println("Success?[y]");
     String answer = input.readLine();
     return (answer.length() == 0 || answer.toLowerCase().startsWith("y"));
+  }
+
+  void setFirstDay(int day) {
+    assert testDays == null;
+    testDays = new TreeSet<>(Collections.singleton(day));
+  }
+
+  void missed(int today) {
+    // remove any previous future days and reset it
+    testDays = new TreeSet<>();
+    for (int repeatDay : REPEAT_DAYS) {
+      testDays.add(repeatDay + today);
+    }
+  }
+
+  int lastTestDay() {
+    return testDays.last();
   }
 
   public String getOther() {
@@ -81,6 +108,15 @@ public class Word {
 
   public Word setForms(List<Form> forms) {
     this.forms = forms;
+    return this;
+  }
+
+  public SortedSet<Integer> getTestDays() {
+    return testDays;
+  }
+
+  public Word setTestDays(SortedSet<Integer> testDays) {
+    this.testDays = testDays;
     return this;
   }
 
