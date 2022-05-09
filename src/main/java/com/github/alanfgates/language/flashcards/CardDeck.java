@@ -34,7 +34,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 class CardDeck {
-  private static final int NUM_TO_TEST_INITIAL = 11;
+  private static final int NUM_TO_TEST_INITIAL = 10;
 
   private final LinkedList<Word> cards;
   private final Map<String, List<GrammarRule>> rules;
@@ -48,17 +48,19 @@ class CardDeck {
     cards = new LinkedList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
     for (LanguageBuilder builder : builders) {
-      cards.addAll(builder.buildWords());
-      // Have to make a copy of the rules list because Arrays.asList returns an implementation of
-      // List that doesn't support remove.
-      rules.put(builder.getLanguageName(), new ArrayList<>(builder.buildRules()));
+      cards.addAll(builder.buildVocabWords());
+      cards.addAll(builder.getGrammarWords());
+    }
+    for (LanguageBuilder builder : builders) {
+      rules.put(builder.getLanguageName(),
+          GrammarRule.getSomeGrammarRules(builder.buildRules(), (cards.size() / NUM_TO_TEST_INITIAL) / builders.length));
     }
     Collections.shuffle(cards);
     // Now need to set first day for each of the cards
     int day = 0;
     int cardsToday = 0;
     for (Word card : cards) {
-      if (cardsToday++ >= NUM_TO_TEST_INITIAL) {
+      if (++cardsToday >= NUM_TO_TEST_INITIAL) {
         cardsToday = 0;
         day++;
       }

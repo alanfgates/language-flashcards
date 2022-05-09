@@ -15,19 +15,26 @@
 package com.github.alanfgates.language.flashcards;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 abstract class BaseLanguageBuilder implements LanguageBuilder {
 
+  abstract List<Word> buildGrammarWords();
+
   @Override
-  public List<Word> buildWords() {
-    return buildAllWords();
-  }
-
-  private List<Word> buildAllWords() {
+  public List<Word> getGrammarWords() {
+    // abstract list doesn't support remove
     List<Word> words = new ArrayList<>(buildGrammarWords());
-    words.addAll(buildVocabWords());
-    return words;
+    Collections.shuffle(words);
+    Random rand = new Random();
+    List<Word> selectedWords = new ArrayList<>(words.size() / 4);
+    while (selectedWords.size() < words.size() / 4) {
+      int selection = rand.nextInt(words.size());
+      selectedWords.add(words.get(selection));
+      words.remove(selection);
+    }
+    return selectedWords;
   }
-
 }

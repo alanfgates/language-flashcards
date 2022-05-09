@@ -21,16 +21,11 @@ public interface LanguageBuilder {
   String getLanguageName();
 
   /**
-   * Build all the words, each word only occurring once
-   * @return all the words, in one list
-   */
-  List<Word> buildWords();
-
-  /**
    * Build all the words that are grammar oriented, such as verb forms, etc.
+   * @param numWords number of grammar words to get
    * @return grammar words
    */
-  List<Word> buildGrammarWords();
+  List<Word> getGrammarWords();
 
   /**
    * Build all the words that are vocabulary

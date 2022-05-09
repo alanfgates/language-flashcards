@@ -14,6 +14,7 @@
  */
 package com.github.alanfgates.language.flashcards;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -1301,922 +1302,878 @@ public class HebrewBuilder extends BaseLanguageBuilder {
 
   @Override
   public List<GrammarRule> buildRules() {
-    return Arrays.asList(
-        new GrammarRule("Alphabet:\n" +
+    List<GrammarRule> allRules = new ArrayList<>();
+    allRules.add(new GrammarRule("Alphabet:\n" +
             "אבגדהוזחטיכלמנסעפצקרשׂשׁת" + "\n" +
-            "Gutturals:  אעהח"),
+            "Gutturals:  אעהח"));
 
-        new GrammarRule("Vowels:\n" +
+    allRules.add(new GrammarRule("Vowels:\n" +
             "              a     e      i    o     u\n " +
             "long         " + " ָ      ֵ           ֹ      " + "\n" +
             "short        " + " ַ      ֶ      ִ     ָ      ֻ " + "\n" +
-            "reduced      " + " ֲ      ֱ           ֳ       "),
+            "reduced      " + " ֲ      ֱ           ֳ       "));
 
-        new GrammarRule("Rules of Syllabification\n" +
-            "  1. Every syllable must begin with one consonant and have only one vowel.\n" +
+    allRules.addAll(new GrammarRuleSet("Rules of Syllabification",
+            "  1. Every syllable must begin with one consonant and have only one vowel.",
             "  2. Syllables are either open or closed.  Open end in a vowel, closed in a consonant.\n" +
-            "  Hebrew words are usually accented on the last syllable.\n" +
-            "  3. Dagesh Forte letters count as two consonants for the purpose of syllabification."),
+            "  Hebrew words are usually accented on the last syllable.",
+            "  3. Dagesh Forte letters count as two consonants for the purpose of syllabification.").toGrammarRules());
 
 
-        new GrammarRule("Syllable classification\n" +
-            "     a. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic\n" +
-            "     b. Pretonic: syllable immediately before the tonic; first syllable above\n" +
-            "     c. Propretonic: syllable before the pretonic\n"),
+    allRules.addAll(new GrammarRuleSet("Syllable classification",
+            "     a. Tonic: accented syllable (the one with the “tone”) דָבָר second syllable is tonic",
+            "     b. Pretonic: syllable immediately before the tonic; first syllable above",
+            "     c. Propretonic: syllable before the pretonic\n").toGrammarRules());
 
-        new GrammarRule("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters\n" +
-            " * The Dagesh is Forte if it is preceded by a vowel. אַתּה\n" +
-            " * The Dagesh is Lene if preceded by a consonant. מַלְכּה\n" +
-            " * The Dagesh is Lene at the beginning of the word unless the previous word ends in a vowel. דָּבָר"),
+    allRules.addAll(new GrammarRuleSet("Differentiating Dagesh Forte and Dagesh Lene in בגדכפת letters",
+            " * The Dagesh is Forte if it is preceded by a vowel. אַתּה",
+            " * The Dagesh is Lene if preceded by a consonant. מַלְכּה",
+            " * The Dagesh is Lene at the beginning of the word unless the previous word ends in a vowel. דָּבָר").toGrammarRules());
 
-        new GrammarRule("Silent Schewa and Vocal Schewa (1/2)\n" +
-            "The Vocal Schewa will always occur in an open syllable.\n" +
+    allRules.addAll(new GrammarRuleSet("Silent Schewa and Vocal Schewa",
+            "The Vocal Schewa will always occur in an open syllable.",
             " * The Schewa is vocal if not immediately preceded by a short vowel.  Implies:\n" +
             "   * Initial Schewa is always vocal. בְּרָכָה\n" +
             "   * The second of two contiguous Schewas is vocal.\n" +
             "   * A Schewa under any consonant with Daghesh Forte is vocal. הַמְּלָכִים\n" +
-            "   * A Schewa after an unaccented long vowel is vocal. כֹּתְבִים"),
-
-        new GrammarRule("Silent Schewa and Vocal Schewa (2/2)\n" +
+            "   * A Schewa after an unaccented long vowel is vocal. כֹּתְבִים",
             "The Silent Schewa will always come at the end of a closed syllable.\n" +
             " * The Schewa is silent if the previous vowel is short.  Implies:\n" +
             "   * A Schewa is silent when immediately preceded by a short vowel. פַּרְעֹה\n" +
             "   * The first of two contiguous Schewas is silent. מִשְׁפְּטֵי\n" +
-            "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n"),
+            "   * A Schewa at the end of a word is silent. כָּתַבְתְּ\n").toGrammarRules());
 
+    allRules.addAll(new GrammarRuleSet("Qamets and Qamets Hatuf \n" +
+            "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:",
+            " * When in doubt, go with Qamets as it is much more frequent",
+            " * Qamets Hatuf occurs only in closed and unaccented syllables. חָכְמָה (first syllable)",
+            " * Qamets prefers open, pretonic syllable or closed accented syllable. דָּבָר (both syllables)",
+            " * Metheg, small vertical line to the left of the Qamets, sometimes used to clarify that it is a Qamets.").toGrammarRules());
 
-        new GrammarRule("Qamets and Qamets Hatuf \n" +
-            "Both little T, Qamets long as in father, Qamets Hatuf short as in ‘lot’.  Rules for distinguishing:\n" +
-            " * When in doubt, go with Qamets as it is much more frequent\n" +
-            " * Qamets Hatuf occurs only in closed and unaccented syllables. חָכְמָה (first syllable)\n" +
-            " * Qamets prefers open, pretonic syllable or closed accented syllable. דָּבָר (both syllables)\n" +
-            " * Metheg, small vertical line to the left of the Qamets, sometimes used to clarify that it is a Qamets."),
-
-        new GrammarRule("Furtive Pathach\n" +
+    allRules.add(new GrammarRule("Furtive Pathach\n" +
           " When a word ends in ח or ע , a Pathach (horizontal line) may appear beneath this\n" +
-          "consonant and must be pronounced before the guttural rather than after."),
+          "consonant and must be pronounced before the guttural rather than after."));
 
-        new GrammarRule("Diphthong\n" +
+    allRules.add(new GrammarRule("Diphthong\n" +
           "Most common Hebrew diphthong is" + " ַיִ  " + "\n" +
-          "Syllables that contain a diphthong are considered to be closed because they end in a consontant."),
+          "Syllables that contain a diphthong are considered to be closed because they end in a consontant."));
 
-        new GrammarRule("Vowel Syllable Preferences \n" +
-            " * Short vowels prefer closed, unaccented syllables or open, accented syllables. Both syllables in עֶבֶד\n" +
-            " * Long vowels prefer closed, accented syllables or open, pretonic syllables.  Both syllables in" + " דָּבָר\n" +
+    allRules.addAll(new GrammarRuleSet("Vowel Syllable Preferences",
+            " * Short vowels prefer closed, unaccented syllables or open, accented syllables. Both syllables in עֶבֶד",
+            " * Long vowels prefer closed, accented syllables or open, pretonic syllables.  Both syllables in" + " דָּבָר\n" ,
             " * Vocal Shewa and reduced hateph vowels prefer open, propretonic syllables.  The\n" +
-            "   reduced vowels appear with guttural consonants in the open, propretonic position.\n" +
-            "   First syllable in דְּבָרִים  and אֱלֹהִים"),
+            "   reduced vowels appear with guttural consonants in the open, propretonic position.",
+            "   First syllable in דְּבָרִים  and אֱלֹהִים").toGrammarRules());
 
-        new GrammarRule("Gender Endings 1/2\n" +
-            "Masculine Singular: anything\n" +
+    allRules.addAll(new GrammarRuleSet("Gender Endings",
+            "Masculine Singular: anything",
             "Feminine Singular: " + " ָה ַת ֶת  ִית וּת" + "\n" +
             "Masculine Plural: " + " ִים " + "\n" +
             "Feminine Plural: וֹת\n" +
             "Masculine Dual:" + " ַים " + "\n" +
-            "Feminine Dual: תַיִם or same as masculine\n"),
-
-        new GrammarRule("Gender Endings 2/2\n" +
+            "Feminine Dual: תַיִם or same as masculine\n",
           "Exceptions to Gender Ending Rules\n" +
           " 1. Some feminine nouns are endingless.\n" +
           " 2. Some nouns use plural endings from the other gender (e.g. אב שנה)\n" +
           " 3. Special dual nouns: שָׁמַיִם מִצְרַיִם מַיִם  These are always dual.\n" +
           " 4. Some nouns go through irregular stem change in the plural:  אנשים איש  נשים אשה\n" +
-          " 5. Some feminine pluralizations will appear with defective spelling תֹ instead of וֹת"),
+          " 5. Some feminine pluralizations will appear with defective spelling תֹ instead of וֹת").toGrammarRules());
 
-        new GrammarRule("Patterns of Pluralization 1/4\n" +
+    allRules.addAll(new GrammarRuleSet("Patterns of Pluralization",
           " 1. Pluralization with no change: some nouns do not change their vowels when being\n" +
           "    made plural.  Often happens with monosyllabic words with an unchangeable long\n" +
           "    vowel: שִׁיר to שִׁירִים \n" +
           "    Also happens with two syllable words with shewa or hateph\n" +
           "    pathach in first syllable and unchangeable long vowel in second:\n" +
-          "    חֳלוֹם to חֳלוֹמוֹת and רְהוֹב to רְהוֹבוֹת\n"),
-
-        new GrammarRule("Patterns of Pluralization 2/4\n" +
+          "    חֳלוֹם to חֳלוֹמוֹת and רְהוֹב to רְהוֹבוֹת\n",
           " 2. Two syllable nouns that are accented on the final syllable and have Qamets or\n" +
           "    Tsere pretonic syllable will experience propretonic reduction.  Qamets/Tsere will\n" +
           "    be replaced by Shewa.  דָּבָר -> דְּבָרִים and לֵבָב -> לְבָבוֹת\n" +
           "    If the initial consonant is gutteral it will move to Hateph Patach.  עָנָן –> עֲנָנִים\n" +
-          "    Nouns with vowel letters do not experience propretonic reduction.\n"),
-
-        new GrammarRule("Patterns of Pluralization 3/4\n" +
+          "    Nouns with vowel letters do not experience propretonic reduction.\n",
           " 3. Segholate nouns are nouns with accent on the first syllable, so called because in\n" +
           "    most cases one or both vowels are a Seghol.  These pluralize with a Shewa in the\n" +
-          "    first syllable (or Hateph vowel for gutturals) and a Qamets in the second:  מֶלֶךּ –> מְלָכִים and חֶרֶב –> חֲרָבוֹת\n"),
-
-        new GrammarRule("Patterns of Pluralization 4/4\n" +
+          "    first syllable (or Hateph vowel for gutturals) and a Qamets in the second:  מֶלֶךּ –> מְלָכִים and חֶרֶב –> חֲרָבוֹת\n",
           " 4. Pluralization of Geminate nouns.  Geminate nouns appear to have only 2 root\n" +
           "    consonants (e.g. עַם).  Actually they originally had 3, with the third duplicating\n" +
           "    the second.  These pluralize with Dageshe Forte in the second \n" +
           "    consonant. עַם –> עַמִּים  Not all biconsonantal nouns are geminate, for example אָב\n" +
-          " 5. Irregular pluralization.  Many nouns are irregular in their pluralization."),
+          " 5. Irregular pluralization.  Many nouns are irregular in their pluralization.").toGrammarRules());
 
-        new GrammarRule("The Rules of Shewa\n" +
+    allRules.addAll(new GrammarRuleSet("The Rules of Shewa",
           " 1. Hebrew does not allow two contiguous vocal schewas.  If prefixing a preposition\n" +
           "    with a shewa to a word that starts with a schewa, first schewa becomes a\n" +
           "    hireq. נְבִיאִם plus לְ becomes לִנְבִיאִם\n" +
           "    Exception: If the syllable begins with י, after combining the י does not take a\n" +
-          "      shewa: יְהוּדָה plus לְ becomes לָיהוּדָה.\n" +
+          "      shewa: יְהוּדָה plus לְ becomes לָיהוּדָה.",
           " 2. Vocal schewa cannot proceed a guttural with a reduced vowel.  The first vocal\n" +
           "    schewa converts to the short vowel that corresponds to the reduced vowel it\n" +
           "    proceeds.  חֲלוֹם plus בְּ becomes בַּחֲלוֹם\n" +
-          "    Exception: In אֱלֹהִים  the shortened vowel under א  is removed.  Thus אֱלֹהִים plus לְ becomes לֵאלֹהִים"),
+          "    Exception: In אֱלֹהִים  the shortened vowel under א  is removed.  Thus אֱלֹהִים plus לְ becomes לֵאלֹהִים").toGrammarRules());
 
-        new GrammarRule("Definite Article\n" +
-            " * Definite Article is הַ plus a Dagesh Forte in the first consonant of the noun\n" + 
-            " * When the first consonant is a בגדכפת consonant the Dagesh Lene in the בגדכפת becomes a Dagesh Forte\n" +
-            " * When first consontant is a guttural, Dagesh Forte is rejected\n" +
-            "   * When the first consonant is א or ע or ר the Patach lengthens to a Qamets, הָ\n" +
+    allRules.addAll(new GrammarRuleSet("Definite Article",
+            " * Definite Article is הַ plus a Dagesh Forte in the first consonant of the noun",
+            " * When the first consonant is a בגדכפת consonant the Dagesh Lene in the בגדכפת becomes a Dagesh Forte",
+            " * When first consontant is a guttural, Dagesh Forte is rejected",
+            "   * When the first consonant is א or ע or ר the Patach lengthens to a Qamets, הָ",
             "   * When the first consonant is ה or ח the Dagesh Forte is dropped.  This is\n" +
-            "     referred to as \"virtual doubling\"\n" +
+            "     referred to as \"virtual doubling\"",
             "   * Before nouns that begin with an unaccented עָ or הָ or חָ (last can also be\n" +
-            "     accented), the definite article becomes Seghol הֶ\n" +
-            " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ"),
+            "     accented), the definite article becomes Seghol הֶ",
+            " * A few words change their initial vowel to Qamets, e.g. אֶרֶצ becomes הָאָרֶצ").toGrammarRules());
 
-        new GrammarRule("Additional meanings of the definite article:\n" +
-            " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day\n" +
-            " * Vocative, indicating direct address: ויקרא לאמר המלך - And he called saying the[O] king\n" +
-            " * Superlative with an adjective: הטוב והישׁר - the good[best] and the upright[most upright]\n" +
-            " * Possessive pronoun: ולקח דוד הכנור - And David took the[his] harp"),
+    allRules.addAll(new GrammarRuleSet("Additional meanings of the definite article:",
+            " * Demonstrative (this/that): אנכי מצוך היום - I am commanding you the[this] day",
+            " * Vocative, indicating direct address: ויקרא לאמר המלך - And he called saying the[O] king",
+            " * Superlative with an adjective: הטוב והישׁר - the good[best] and the upright[most upright]",
+            " * Possessive pronoun: ולקח דוד הכנור - And David took the[his] harp").toGrammarRules());
 
-        new GrammarRule("Conjunction ו (and, but, also, even) \n" +
-            " * Most frequently spelled וְ\n" +
+    allRules.addAll(new GrammarRuleSet("Conjunction ו (and, but, also, even)",
+            " * Most frequently spelled וְ",
             " * Becomes Shureq וּ \n" +
             "   * before ב, מ, פ (bump rule), ב פ loose Dagesh lene in this case בּיִת becomes וּבַיִת \n" +
-            "   * before a vocal Shewa נְעָרִים becomes וּנְעָרִים\n" +
+            "   * before a vocal Shewa נְעָרִים becomes וּנְעָרִים",
             " * Before Hateph vowel, conjunction takes the corresponding short vowel אֲנָשׁים becomes וַאֲנָשׁים  \n" +
-            "   * Exception, does not apply to אלהים\n" +
-            " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן\n"),
+            "   * Exception, does not apply to אלהים",
+            " * May be spelled with Qamets before monosyllabic words or words with initial accent צֹאן becomes וָצֹאן\n").toGrammarRules());
 
-        new GrammarRule("Inseparable prepositions: \n" +
-            "* Before most consonants will appear with a vocal Shewa ּּּבְשָדֶה\n" +
-            "* Before a Hateph vowel will take the corresponding short vowel כַּאֲנָשִׁים\n" +
-            "* Before a vocal Shewa will take a Hireq לִנְבִיאִים\n" +
-            "* When combined with a definite article replaces the ה and takes its vowel ּבַשָּׂדֶה\n"),
+    allRules.addAll(new GrammarRuleSet("Inseparable prepositions",
+            "* Before most consonants will appear with a vocal Shewa ּּּבְשָדֶה",
+            "* Before a Hateph vowel will take the corresponding short vowel כַּאֲנָשִׁים",
+            "* Before a vocal Shewa will take a Hireq לִנְבִיאִים",
+            "* When combined with a definite article replaces the ה and takes its vowel ּבַשָּׂדֶה\n").toGrammarRules());
 
-        new GrammarRule("The preposition מִן" + "\n" +
-            " * Frequently is joined to its object via a Maqqef (-)\n" +
+    allRules.addAll(new GrammarRuleSet("The preposition מִן",
+            " * Frequently is joined to its object via a Maqqef (-)",
             " * Can occur as an inseparable preposition, in which case the first consontant of\n" +
-            "   the noun to which it is prefixed usually takes a dagesh forte: מִמֶּלֶך\n" +
+            "   the noun to which it is prefixed usually takes a dagesh forte: מִמֶּלֶך",
             "   * When the first letter is a begadkephat letter with a dagesh lene, the dagesh\n" +
             "     lene becomes a dagesh forte\n" +
             "   * When the first letter is a gutteral, the hireq under מ lengthens to a tsere\n" +
             "     e.g. מֵאִישׁ\n" +
-            "   * When the first letter is ח there is not usually vowel lengthening.\n"),
-
-        new GrammarRule("The preposition מִן" + " special uses beyond \"from\"\n" +
-            "   * Comparative use: applied to adjective to make it comparative\n" +
+            "   * When the first letter is ח there is not usually vowel lengthening.\n",
+            "   * (Beyond from) Comparative use: applied to adjective to make it comparative\n" +
             "     e.g. טוֹבָה חָכְמָה מִזָּהָב wisdom is better than gold\n" +
-            "   * Superlative use: used with כּל to express superlative\n" +
+            "   * (Beyond from) Superlative use: used with כּל to express superlative\n" +
             "     e.g. עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה the most clever living thing of the field\n" +
-            "   * Partitive use: Can mean a part of something: מֵהָאֲנָשִׁים some of the men"),
+            "   * (Beyond from) Partitive use: Can mean a part of something: מֵהָאֲנָשִׁים some of the men").toGrammarRules());
 
-        new GrammarRule("Preposition plus פנה (face)\n" +
-            "   * before, in the precense of: לִפְנֵי\n" +
-            "   * away from, out from, from before, on account of: מִפְּנֵי and מִלִּפְנֵי\n" +
-            "   * in the face, in the sight of, before, up against, opposite to: עַלֿֿ-פְּנֵי\n"),
+    allRules.addAll(new GrammarRuleSet("Preposition plus פנה (face)",
+            "   * before, in the precense of: לִפְנֵי",
+            "   * away from, out from, from before, on account of: מִפְּנֵי and מִלִּפְנֵי",
+            "   * in the face, in the sight of, before, up against, opposite to: עַלֿֿ-פְּנֵי\n").toGrammarRules());
 
-        new GrammarRule("Preposition plus דבר\n" +
-            "   * on account of עַל-דְּבַר"),
+    allRules.add(new GrammarRule("Preposition plus דבר\n" +
+            "   * on account of עַל-דְּבַר"));
 
-        new GrammarRule("Adjectives can be attributive, predictive, or substantive:\n" +
+    allRules.addAll(new GrammarRuleSet("Adjectives can be attributive, predictive, or substantive",
             " * Attributive: modifies a noun.  Attributive adjectives follow the noun they\n" +
-            "   modify and agree in gender, number, and definiteness.\n"),
-
-        new GrammarRule("Adjectives can be attributive, predictive, or substantive:\n" +
+            "   modify and agree in gender, number, and definiteness.\n",
             " * Predicative: asserts something about the noun, e.g. the book is big.\n" +
             "   No verb is used.  Predicative adjectives agree with the noun in gender and number\n" +
-            "   but not definiteness.  They may proceed or follow the noun.\n"),
-
-        new GrammarRule("Adjectives can be attributive, predictive, or substantive:\n" +
-            " * Substantive: no noun present, stands for those who have the trait (e.g. the wise)"),
+            "   but not definiteness.  They may proceed or follow the noun.",
+            " * Substantive: no noun present, stands for those who have the trait (e.g. the wise)").toGrammarRules());
 
         // TODO - need to understand the difference in how these are translated.
-        new GrammarRule("Demonstratives as adjectives and pronouns: \n" +
+    allRules.addAll(new GrammarRuleSet("Demonstratives as adjectives and pronouns",
             " * When a demonstrative is functioning as an adjective, it will follow the noun\n" +
             "   it modifies and agree in gender, number, and definiteness. האיש הזה\n" +
             "   * Attributive adjective (if present) will be between the noun and the following\n" +
-            "     demonstrative: האיש הטוב הזה\n" +
+            "     demonstrative: האיש הטוב הזה",
             " * When a demonstrative is functioning as a pronoun, it will precede the noun and\n" +
             "   agree in gender and number but not definiteness. זה האיש\n" +
-            "   * Attributive adjective (if present) will still follow the noun: זה האיש הטוב"),
+            "   * Attributive adjective (if present) will still follow the noun: זה האיש הטוב").toGrammarRules());
 
-        new GrammarRule("Spelling for interrogative particle הֲ" + " \n" +
-            " * Prefixed to a guttural consonant or any consonant with a shewa: הַ\n" +
-            " * Prefixed to a guttural consonant followed by a qamets: הֶ"),
+    allRules.addAll(new GrammarRuleSet("Spelling for interrogative particle הֲ",
+            " * Prefixed to a guttural consonant or any consonant with a shewa: הַ",
+            " * Prefixed to a guttural consonant followed by a qamets: הֶ").toGrammarRules());
 
-        new GrammarRule("Disambiguating the definite article and the interrogative particle: \n" +
-            " * The interrogative particle does not usually have a dagesh forte in the next consonant\n" +
-            " * The interrogative particle is often attached to a verb or another particle\n" +
-            " * The definite article is never spelled with a hateph patach"),
+    allRules.addAll(new GrammarRuleSet("Disambiguating the definite article and the interrogative particle",
+            " * The interrogative particle does not usually have a dagesh forte in the next consonant",
+            " * The interrogative particle is often attached to a verb or another particle",
+            " * The definite article is never spelled with a hateph patach").toGrammarRules());
 
-        new GrammarRule("Pronominal suffixes: \n" +
-            " * When attached to a noun they indicate possessive.\n" +
-            " * When attached to a preposition or the definite direct object marker they are objective.\n" +
+    allRules.addAll(new GrammarRuleSet("Pronominal suffixes",
+            " * When attached to a noun they indicate possessive.",
+            " * When attached to a preposition or the definite direct object marker they are objective.",
             " * Come in types 1 and 2:\n" +
             "   * Type 1 is used with singular nouns, some prepositions, and the direct object marker.\n" +
-            "   * Type 2 is used with plural nouns and some prepositions.\n"),
+            "   * Type 2 is used with plural nouns and some prepositions.\n").toGrammarRules());
 
-        new GrammarRule("Spelling changes for pronominal suffixes:\n" +
-            " * Singular nouns can take plural pronominal suffixes (e.g. my horses) and vice versa.\n" +
-            " * When attached to masculine (or feminine endingless) plural nouns, the ים is dropped\n" +
+    allRules.addAll(new GrammarRuleSet("Spelling changes for pronominal suffixes",
+            " * Singular nouns can take plural pronominal suffixes (e.g. my horses) and vice versa.",
+            " * When attached to masculine (or feminine endingless) plural nouns, the ים is dropped",
             " * Nouns ending segol ה (e.g. שָׂדֶה ) will drop the segol ה before adding the\n" +
-            "   pronominal suffix: שׂדִי my field\n" +
+            "   pronominal suffix: שׂדִי my field",
             " * Feminine singular nouns ending in patach ה the ה changes to ת before the ending\n" +
-            "   is applied.\n" +
+            "   is applied.",
             " * Many monosyllabic nouns add י to their stem before a pronominal suffix.  Can be\n" +
-            "   distinguished in the singular (type 1) by the hireq before the י\n"),
-
-        new GrammarRule("Spelling changes for pronominal suffixes:\n" +
+            "   distinguished in the singular (type 1) by the hireq before the י\n",
             " * The preposition כְּ changes to כָּמוֹ in singular and first person plural when\n" +
-            "   taking a pronominal suffix.\n" +
+            "   taking a pronominal suffix.",
             " * The preposition מִן changes to מִמֶ in singular and first person plural when\n" +
-            "   taking a pronominal suffix.\n"),
+            "   taking a pronominal suffix.\n").toGrammarRules());
 
-        new GrammarRule("Distinguishing similar words with pronominal suffixes: \n" +
+    allRules.addAll(new GrammarRuleSet("Distinguishing similar words with pronominal suffixes",
             " * Direct object marker and אֵת/אֶת are the same alone but differ with pronominal\n" +
             "   suffix.  Direct object marker has a holem: אֹתֵי while the preposition has hireq\n" +
-            "   and dagesh forte: אִתִּי\n"),
-
-        new GrammarRule("Distinguishing similar words with pronominal suffixes: \n" +
+            "   and dagesh forte: אִתִּי",
             " * Preposition עִם and noun עַם both keep their first vowels throughout, both add\n" +
-            "   dagesh forte in mem."),
+            "   dagesh forte in mem.").toGrammarRules());
 
-        new GrammarRule("Construct chains: 1/2\n" +
-            " * Roughly equivalent to Greek genitive case.\n" +
-            " * Last noun in the chain is in an absolute state, all others are in construct state.\n" +
-            " * No other words can come between the nouns in a construct chain.\n" +
+    allRules.addAll(new GrammarRuleSet("Construct chains",
+            " * Roughly equivalent to Greek genitive case.",
+            " * Last noun in the chain is in an absolute state, all others are in construct state.",
+            " * No other words can come between the nouns in a construct chain.",
             " * A construct chain is either entirely definite or entirely indefinite.  When\n" +
             "   definite only the absolute noun takes the definite article or has a\n" +
-            "   pronominal suffix or is a proper noun.\n"),
-
-        new GrammarRule("Construct chains: 2/2\n" +
+            "   pronominal suffix or is a proper noun.",
             " * Adjectives that modify any noun in the chain come after the chain.  Number and\n" +
             "   gender of the adjective can sometimes determine which noun it modifies, sometimes\n" +
-            "   you must use context.  This applies to demonstratives adjectives (this, that) as well.\n" +
-            " * Substantive adjectives functioning as a noun can form part of the construct chain.\n" +
-            " * Inseparable prepositions can be attached to construct nouns.\n" +
+            "   you must use context.  This applies to demonstratives adjectives (this, that) as well.",
+            " * Substantive adjectives functioning as a noun can form part of the construct chain.",
+            " * Inseparable prepositions can be attached to construct nouns.",
             " * A noun can be made superlative by placing it in a construct chain\n" +
             "   with the construct noun singular and the absolute noun plural and definite:\n" +
-            "   e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."),
+            "   e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place].").toGrammarRules());
 
-        new GrammarRule("Spelling in construct state: \n" +
+    allRules.addAll(new GrammarRuleSet("Spelling in construct state",
             " * A construct noun surrenders its primary accent.  A construct chain is pronounced\n" +
             "   as a single word, with the accent on the absolute noun.  This is sometimes\n" +
-            "   marked with a maqqef (-).\n" +
-            " * Masculine plural and both dual endings change to" + " ֵי " + " e.g. אֱלֹהִים changes to אֱלֹהֵי \n" +
+            "   marked with a maqqef (-).",
+            " * Masculine plural and both dual endings change to" + " ֵי " + " e.g. אֱלֹהִים changes to אֱלֹהֵי ",
             " * Vowel reduction:\n" +
             "   * Qamets (and sometimes tsere) change to patach in a final closed syllable:\n" +
             "     e.g. מִשְׁפָּט changes to מִשְׁפַּט\n" +
             "   * Qamets or tsere change to vocal shewa in open, unaccented syllable:\n" +
             "     (or a hateph vowel under a gutteral): נָבִִיא changes to נְבִיא \n" +
             " * Feminine singular nouns ending in" + " ָה " + "changes to" + " ַת " + "\n" +
-            "   e.g. תּוֹרָה becomes תּוֹרַת\n" +
-            " * Some monosyllabic nouns add a hireq yod in the contruct state."),
+            "   e.g. תּוֹרָה becomes תּוֹרַת",
+            " * Some monosyllabic nouns add a hireq yod in the contruct state.").toGrammarRules());
 
-        new GrammarRule("Cardinal numbers: \n" +
+    allRules.addAll(new GrammarRuleSet("Cardinal numbers",
             " * 'one' acts as an adjective and comes after the noun and agrees in gender and\n" +
-            "   definiteness.  Can be used in a construct in which case it means 'one of'.\n" +
+            "   definiteness.  Can be used in a construct in which case it means 'one of'.",
             " * 'two' is a noun, agrees in gender with the modified noun, and can be used in\n" +
-            "   absolute or construct state with no change in meaning.\n" +
+            "   absolute or construct state with no change in meaning.",
             " * 3-10 are nouns but take opposite gender from what they are modifying.  Can also\n" +
-            "   be absolute or construct.\n" +
-            " * 2-10 can have a pronominal suffix, meaning 'x of y', e.g. שְׁנֵיהֶם 'two of them'"),
+            "   be absolute or construct.",
+            " * 2-10 can have a pronominal suffix, meaning 'x of y', e.g. שְׁנֵיהֶם 'two of them'",
+            " * 11-19: x 10, e.g. אַחַתּי עָשָׂר is 11",
+            " * 11-19: 10 agrees with modified noun in gender, while other number is opposite.",
+            " * 20: Masculine plural of 10",
+            " * 30-90: Masculine plural of 3-9",
+            " * 21-99: x and y: עֶשְׂרִים וְאַחַת twenty and one\n",
+            " * 200: one hundred dual: מָאתַים",
+            " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred",
+            " * 2000: one thousand dual: אַלְפַּיִם",
+            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֶלֶף",
+            " * 20,000: ten thousand dual: רִבּוֹתַיִם",
+            " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת").toGrammarRules());
 
-        new GrammarRule("Patterns of cardinal numbers 10-100: \n" +
-            " * 11-19: x 10, e.g. אַחַתּי עָשָׂר is 11\n" +
-            " * 11-19: 10 agrees with modified noun in gender, while other number is opposite.\n" +
-            " * 20: Masculine plural of 10\n" +
-            " * 30-90: Masculine plural of 3-9\n" +
-            " * 21-99: x and y: עֶשְׂרִים וְאַחַת twenty and one\n"),
-
-        new GrammarRule("Patterns of cardinal numbers above 100:\n" +
-            " * 200: one hundred dual: מָאתַים\n" +
-            " * 300-900: x 100, e.g. שְׁלֹשׁ מֵאוֹת three hundred\n" +
-            " * 2000: one thousand dual: אַלְפַּיִם\n" +
-            " * 3000-9000: x 1000, e.g. שְׁלֹשֶׁת אֶלֶף\n" +
-            " * 20,000: ten thousand dual: רִבּוֹתַיִם\n" +
-            " * 30,000-90,000: x 10,000, e.g. שְׁלֹשׁ רִבּוֹת"),
-
-        new GrammarRule("Ordinal numbers: \n" +
+    allRules.addAll(new GrammarRuleSet("Ordinal numbers",
             " * Classified as adjectives, when attributive they follow the noun they modify\n" +
-            "   and usually agree in gender and definiteness.\n" +
-            " * For ordinals greater than tenth, cardinal numbers are used."),
+            "   and usually agree in gender and definiteness.",
+            " * For ordinals greater than tenth, cardinal numbers are used.").toGrammarRules());
 
-        new GrammarRule("Basic verbal stem meaning:\n" +
+    allRules.add(new GrammarRule("Basic verbal stem meaning:\n" +
             "           Simple    Intensive   Causative\n" +
             "Active     qal       piel        hiphil\n" +
             "Passive    niphal    pual        hophal\n" +
-            "Reflexive  niphal    hithpael"),
+            "Reflexive  niphal    hithpael"));
 
-        new GrammarRule("Hebrew verb conjugations: \n" +
-            " * Perfect:  completed action, state of being.\n" +
-            " * Imperfect:  incomplete action, habitual or customary actions, subjunctive.\n" +
-            " * Imperative: direct command, sometimes request, second person only.\n" +
-            " * Cohortative: wish, request, or command, can express purpose or result, first person only\n" +
-            " * Jussive:  mild command or strong wish, third person only\n" +
-            " * Infinitive construct: like an English infinitive, a verbal noun.\n" +
+    allRules.addAll(new GrammarRuleSet("Hebrew verb conjugations:",
+            " * Perfect:  completed action, state of being.",
+            " * Imperfect:  incomplete action, habitual or customary actions, subjunctive.",
+            " * Imperative: direct command, sometimes request, second person only.",
+            " * Cohortative: wish, request, or command, can express purpose or result, first person only",
+            " * Jussive:  mild command or strong wish, third person only",
+            " * Infinitive construct: like an English infinitive, a verbal noun.",
             " * Infinitive absolute: used with other verbs to emphasize or intensify action or to\n" +
-            "   express contemporaneous action.  Can be used as an imperative.\n" +
-            " * Participle:  verbal adjective."),
+            "   express contemporaneous action.  Can be used as an imperative.",
+            " * Participle:  verbal adjective.").toGrammarRules());
 
         // TODO need to align these so they look better; probably don't need every declination; add some examples from imperfect.
-        new GrammarRule("Stative verbs often have tsere (..) or holem (o) in second vowel.\n" +
+    allRules.add(new GrammarRule("Stative verbs often have tsere (..) or holem (o) in second vowel.\n" +
             "In the imperfect they have pathach (_) instead of holem in the second vowel.\n" +
             "           Tsere    Holem    Strong\n" +
             "           Stative  Stative    Verb\n" +
             "Perfect        " + "קָטַל     קָטֹן      כָּבֵד" + "\n" +
             "Imperfect      " + "יִקְטֹל    יִקְטַן    יִכְבַּד" + "\n" +
-            "No idea why the dagesh jumps from consontant כ to ב in כבד imperfect."),
+            "No idea why the dagesh jumps from consontant כ to ב in כבד imperfect."));
 
         // TODO these need examples
-        new GrammarRule("Strong verbs have three strong consonants.  Weak verbs classified as follows: \n" +
-            " * I-Guttural\n" +
-            " * II-Guttural\n" +
-            " * III-Guttural, broken into III-ח/ע, III-א, and III-ה (really III-י but י changes to ה in many forms)\n" +
-            " * I-י\n" +
-            " * I-נ\n" +
-            " * Doubly weak (two of the above)\n" +
-            " * Biconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect\n" +
-            " * Geminate - identical 2nd and 3rd consonants."),
+    allRules.addAll(new GrammarRuleSet("Strong verbs have three strong consonants.",
+            " * I-Guttural",
+            " * II-Guttural",
+            " * III-Guttural, broken into III-ח/ע, III-א, and III-ה (really III-י but י changes to ה in many forms)",
+            " * I-י",
+            " * I-נ",
+            " * Doubly weak (two of the above)",
+            " * Biconsonantal (also called hollow or II-ו/י) these drop middle letter in perfect",
+            " * Geminate - identical 2nd and 3rd consonants.").toGrammarRules());
 
-        new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
+    allRules.add(new GrammarRule("Verb frequencies:  72K total verbs in OT\n" +
             " Qal:       50,699\n" +
             " Hiphil:     9,496\n" +
             " Piel:       6,473\n" +
             " Niphal:     4,138\n" +
             " Hithpael:     842\n" +
             " Pual:         423\n" +
-            " Hophal:       396\n"),
+            " Hophal:       396\n"));
 
-        new GrammarRule("Uses of הִנֵּה:" + " \n" +
+   allRules.addAll(new GrammarRuleSet("Uses of הִנֵּה:",
             "* add emphasis or stress (demonstrative interjection):\n" +
-            "  " + "הִנֵּה עֵיר יְהוָה אֶל–יְרֵאָיו" + "  Behold, the eye of the LORD is upon those who fear him\n" +
+            "  " + "הִנֵּה עֵיר יְהוָה אֶל–יְרֵאָיו" + "  Behold, the eye of the LORD is upon those who fear him",
             "* indicate the immediate presence of someone or something with an emphasis on\n" +
             "  immediacy or urgency:\n" +
-            "  " + "וַהִנֵּה אָנֹכִי עִמָּך" + "  And he said, behold, here I am\n" +
+            "  " + "וַהִנֵּה אָנֹכִי עִמָּך" + "  And he said, behold, here I am",
             "* may be used to introduce a fact or situation on which a subsequent statement is based\n" +
             "  Behold, I have listened to all that you have said to me and [therefore] I have\n" +
-            "  caused a king to reign over you"),
+            "  caused a king to reign over you").toGrammarRules());
 
         // TODO check the thing about the dagesh, I'm not sure that's right
-        new GrammarRule("Waw consecutive is וַ with dagesh in following letter.\n " +
-            "*  Imperfect can still take non-consecutive waw to mean simple and, וְ\n" +
-            "*  Waw consecutive imperfect chain can start with וַיְהִי (and it was) meaning 'after'\n" +
-            "*  Waw consecutive perfect chain can start with וְהִיִה 'and it will be'\n" +
+   allRules.addAll(new GrammarRuleSet("Waw consecutive is וַ with dagesh in following letter.",
+            "*  Imperfect can still take non-consecutive waw to mean simple and, וְ",
+            "*  Waw consecutive imperfect chain can start with וַיְהִי (and it was) meaning 'after'",
+            "*  Waw consecutive perfect chain can start with וְהִיִה 'and it will be'",
             "*  Waw consecutive perfect used after imperative to continue imperative chain\n" +
-            "   and should be translated as imperative\n" +
-            "*  Perfect prefixed with waw in chain of perfects NOT waw consecutive"),
+            "   and should be translated as imperative",
+            "*  Perfect prefixed with waw in chain of perfects NOT waw consecutive").toGrammarRules());
 
-        new GrammarRule("Imperative is not negated, instead use negative with imperfect \n" +
-            "*  To express permanent prohibition: לֹא plus imperfect\n" +
-            "*  To express temporary prohibition: אַל plus imperfect.\n" +
-            "*  Cohortative and jussive negated with אַל, a milder form of prohibition than לֹא"),
+   allRules.addAll(new GrammarRuleSet("Imperative is not negated, instead use negative with imperfect",
+            "*  To express permanent prohibition: לֹא plus imperfect",
+            "*  To express temporary prohibition: אַל plus imperfect.",
+            "*  Cohortative and jussive negated with אַל, a milder form of prohibition than לֹא").toGrammarRules());
 
-        new GrammarRule("Imperative sometimes followed by נָא, which can be translated \"please\""),
+    allRules.add(new GrammarRule("Imperative sometimes followed by נָא, which can be translated \"please\""));
 
-        new GrammarRule("Cohortative expresses a wish, request, or command, but only in first person.  Often \n" +
-            "translated with 'let me' or 'may we'."),
+    allRules.add(new GrammarRule("Cohortative expresses a wish, request, or command, but only in first person.  Often \n" +
+            "translated with 'let me' or 'may we'."));
 
-        new GrammarRule("When verb with imperfect first person form begins a clause, it is generally cohortative."),
+    allRules.add(new GrammarRule("When verb with imperfect first person form begins a clause, it is generally cohortative."));
 
-        new GrammarRule("Jussive expresses a wish, request, or command, but only in third person.  Often \n" +
-            "translated with 'let him' or 'may she'."),
+    allRules.addAll(new GrammarRuleSet("Jussive expresses a wish, request, or command, but only in third person",
+        "Often translated with 'let him' or 'may she'.",
+        "When verb with imperfect third person form begins a clause, it is generally jussive.\n" +
+        "In general jussive is same as 3 person imperfect.",
+        "In some weak verb forms, especially III-ה and hiphil final consonant is often dropped in jussive").toGrammarRules());
 
-        new GrammarRule("When verb with imperfect third person form begins a clause, it is generally jussive.\n" +
-            "In general jussive is same as 3 person imperfect."),
-
-        new GrammarRule("In some weak verb forms, especially III-ה and hiphil final consonant is often dropped in jussive"),
-
-        new GrammarRule("Pronominal suffixes on verbs can be used to express a pronoun as the direct object of\n" +
+    allRules.add(new GrammarRule("Pronominal suffixes on verbs can be used to express a pronoun as the direct object of\n" +
             "the verb.  This can also be done by attaching the pronoun to the direct object marker את\n" +
-            "Type 1 pronominal suffixes are used."),
+            "Type 1 pronominal suffixes are used."));
 
-        new GrammarRule("Pronominal suffixes on imperfect weak III-ה verbs drop the ה\n:" +
-            "יִרְאֶה" + "  +  " + "נָּה" + "  becomes " + "יִרְאֶנָּה" + "  he will see her"),
+    allRules.add(new GrammarRule("Pronominal suffixes on imperfect weak III-ה verbs drop the ה\n:" +
+            "יִרְאֶה" + "  +  " + "נָּה" + "  becomes " + "יִרְאֶנָּה" + "  he will see her"));
 
-        new GrammarRule("Pronominal suffixes on imperative same as imperfect except 2ms for is קָטְל instead of קְטְל\n\n" +
-            "2fs imperative with pronominal suffix very rare and 2fp not attested\n" +
-            "קָטְלֵ הוּ" + "      kill him!\n"),
+    allRules.add(new GrammarRule("Pronominal suffixes on imperative same as imperfect except 2ms for is קָטְל instead" +
+        " of קְטְל\n\n2fs imperative with pronominal suffix very rare and 2fp not attested\n" +
+            "קָטְלֵ הוּ" + "      kill him!\n"));
 
-        new GrammarRule("Infinitives (both construct and absolute) are verbal nouns"),
+    allRules.add(new GrammarRule("Infinitives (both construct and absolute) are verbal nouns"));
 
-        new GrammarRule("Infinitive is negated with לְבִלְתּי "),
+    allRules.add(new GrammarRule("Infinitive is negated with לְבִלְתּי "));
 
-        new GrammarRule("Infinitive construct functions much like the English infinitive"),
+    allRules.addAll(new GrammarRuleSet("Infinitive construct functions much like the English infinitive",
+        "Can take pronominal suffixes.  These suffixes can serve as the\n" +
+        "  'subject' or object of the infinitive, e.g. קָטְלוֹ can mean 'his killing' or 'killing him'",
+        "* with ל " +
+        "   can indicate purpose, intention, or result:\n    " +
+        "וַיִּקַּה אֶת–הַמַּאֲכֶלֶת ––לִשְׁחט—— אֶת–בּנו  " +
+        "\n    And he took the _in order to slaughter_ his son",
+        "* with ל " +
+        "  can be inceptive (often with היה), meaning it indicates something that is about to happen:\n    " +
+        "וַיְהִי הַשֶּׁמֶשׁ ––לָבוֹא––  " + "    The sun was about _to set_",
+        "* with ל " +
+        "  can be used to denote sequence of verbal actions or obligation or necessity.  These are less common.\n",
+        "* can act as a verbal noun:  " + "טוֹב ––לְהֹדוֹת–– לַיהוָה " + "It is good _to praise_ the LORD",
+        "* can be complementary.  That is, it works to explain, clarify, or complement a preceding action or statement.\n" +
+        "  In such cases the best English translation is often a finite verb:\n  " +
+        "וְשָׁמַרְתָּ אֶת–מִצְוֹת יְהוָה אֱלֹהֶיךָ ––לָלֶכֶת–– בִּדְרָכָיו  " +
+        "\n  And you shall observe the commandments of the LORD your God _by walking_ in his ways.",
+        "* with בְּ or כְּ and often a pronominal suffix indicate temporality (while, when).  Often these are paired \n" +
+        "  with וַיְהִי (and he was) or וְהָיָה (and he will be) (remember waw consecutive) to indicate perfect or imperfect.\n  " +
+        "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " + "When they were in the field").toGrammarRules());
 
-        new GrammarRule("Infinitive constructs can take pronominal suffixes.  These suffixes can serve as the\n" +
-            "'subject' or object of the infinitive, e.g. קָטְלוֹ can mean 'his killing' or 'killing him'"),
-
-        new GrammarRule("Infinitive construct 1/3\n" +
-            "* with ל \n" +
-            "  * can indicate purpose, intention, or result:\n    " +
-            "וַיִּקַּה אֶת–הַמַּאֲכֶלֶת ––לִשְׁחט—— אֶת–בּנו  " +
-            "\n    And he took the _in order to slaughter_ his son\n" +
-            "  * can be inceptive (often with היה), meaning it indicates something that is about to happen:\n    " +
-            "וַיְהִי הַשֶּׁמֶשׁ ––לָבוֹא––  " + "    The sun was about _to set_\n" +
-            "  * can be used to denote sequence of verbal actions or obligation or necessity.  These are less common.\n"),
-
-        new GrammarRule("Infinitive construct 2/3\n" +
-            "* can act as a verbal noun:  " + "טוֹב ––לְהֹדוֹת–– לַיהוָה " + "It is good _to praise_ the LORD\n" +
-            "* can be complementary.  That is, it works to explain, clarify, or complement a preceding action or statement.\n" +
-            "  In such cases the best English translation is often a finite verb:\n  " +
-            "וְשָׁמַרְתָּ אֶת–מִצְוֹת יְהוָה אֱלֹהֶיךָ ––לָלֶכֶת–– בִּדְרָכָיו  " +
-            "\n  And you shall observe the commandments of the LORD your God _by walking_ in his ways.\n"),
-
-        new GrammarRule("Infinitive construct 3/3\n" +
-            "* with בְּ or כְּ and often a pronominal suffix indicate temporality (while, when).  Often these are paired \n" +
-            "  with וַיְהִי (and he was) or וְהָיָה (and he will be) (remember waw consecutive) to indicate perfect or imperfect.\n  " +
-            "וַיְהִ בִּהְיוֹתָם בַּשָּׂדֶה  " + "When they were in the field"),
-
-        new GrammarRule("Common uses of infinitive absolute: \n" +
+    allRules.addAll(new GrammarRuleSet("Common uses of infinitive absolute:",
             "* Emphatic:  will immediately precede (rarely follow) a im/perfect of the same\n" +
-            "  root to emphasize the verb:" + "  אָמוֹר אָמַרְתִּי " + "I have surely said\n" +
+            "  root to emphasize the verb:" + "  אָמוֹר אָמַרְתִּי " + "I have surely said",
             "* Imperatival:  can stand alone and function as imperative:\n" +
-            "  זָכוֹר אֶת–הַיּוֹם הַזֶּה " + "  Remember this day!\n" +
+            "  זָכוֹר אֶת–הַיּוֹם הַזֶּה " + "  Remember this day!",
             "* Contemporaneous action: two infinitives absolutes and a im/perfect of the same\n" +
             "  root as one infinitive expresses contemporary action:\n" +
-            "  וַיֵּלֶך הָלוֹך וְאָכֹל " + " and they walked, eating as they went\n" +
+            "  וַיֵּלֶך הָלוֹך וְאָכֹל " + " and they walked, eating as they went",
             "* Complementary: may complement the main verb and carry the temporal value\n" +
             // TODO figure out the examples
-            "  of that verb (no example given because I don't understand the examples)"),
+            "  of that verb (no example given because I don't understand the examples)").toGrammarRules());
 
         // I'm not drunk, this spacing makes it come out right in the display
-        new GrammarRule("Qal perfect weak verbs, some switch to double kamatz, biconsonental just have single kamatz:\n" +
-            "Strong              " + "קָטַל" + "\n" +
-            "III-" + "מָצָא               א" + "\n" +
-            "III-" + "בָּנָה               ה" + "\n" +
-            "Biconsonental        " + "קָם" + "\n" +
-            ""),
+    allRules.addAll(new GrammarRuleSet("Qal perfect weak verbs, some switch to double kamatz, biconsonental just have single kamatz:\n" +
+            "Strong              " + "קָטַל" ,
+            "III-" + "מָצָא               א" ,
+            "III-" + "בָּנָה               ה" ,
+            "Biconsonental        " + "קָם" ).toGrammarRules());
 
-        new GrammarRule("Qal imperfect weak verbs.  Many switch second vowel to patach (though these often have\n " +
+    allRules.addAll(new GrammarRuleSet("Qal imperfect weak verbs.  Many switch second vowel to patach (though these often have\n " +
             "forms where they retain the holem.  Where necessary schwa changes to shortened vowel under initial\n" +
             "guttural.  Final guttural causes changes in the second vowel.  Biconsonentals maintain their middle long vowel.\n" +
-            "Strong              " + "יִקְטֹל" + "\n" +
-            "I-" + "יֶאֱסֹר                 א" + "\n" +
-            "I-" + "יֹאמַר                 א" + "\n" +
-            "I-" + "יֶחֱזַק                 ח" + "\n" +
-            "I-" + "יֵלֵך                  י" + "\n" +
-            "I-" + "יִירַשׁ                 י" + "\n" +
-            "I-" + "יִפֹּל                  נ" + "\n" +
-            "I-" + "יִקַּח                  נ" + "\n" +
-            "I-" + "יַעֲמֹד                 ע" + "\n" +
-            "II-Gutteral         " + "יִבְחַר" + "\n" +
-            "III-" + "יִמְצָאָ               א" + "\n" +
-            "III-" + "יִבְנֶה               ה" + "\n" +
-            "III-" + "יִשְׁלַח             ע/ח" + "\n" +
-            "Biconsonental       " + "יָקוּם" + "\n" +
-            "Biconsonental       " + "יָבוֹא" + "\n" +
-            "Biconsonental       " + "יָשִׂים" + "\n" +
-            "Geminate             " + "יָסֹב" + "\n" +
-            "Geminate             " + "יֵתַם" + "\n" +
-            ""),
+            "Strong              " + "יִקְטֹל" ,
+            "I-" + "יֶאֱסֹר                 א" ,
+            "I-" + "יֹאמַר                 א" ,
+            "I-" + "יֶחֱזַק                 ח" ,
+            "I-" + "יֵלֵך                  י" ,
+            "I-" + "יִירַשׁ                 י" ,
+            "I-" + "יִפֹּל                  נ" ,
+            "I-" + "יִקַּח                  נ" ,
+            "I-" + "יַעֲמֹד                 ע" ,
+            "II-Gutteral         " + "יִבְחַר" ,
+            "III-" + "יִמְצָאָ               א" ,
+            "III-" + "יִבְנֶה               ה" ,
+            "III-" + "יִשְׁלַח             ע/ח" ,
+            "Biconsonental       " + "יָקוּם" ,
+            "Biconsonental       " + "יָבוֹא" ,
+            "Biconsonental       " + "יָשִׂים" ,
+            "Geminate             " + "יָסֹב" ,
+            "Geminate             " + "יֵתַם" ).toGrammarRules());
 
-        new GrammarRule("Qal imperative weak verbs.  Many switch second vowel to patach (though these often have\n" +
+    allRules.addAll(new GrammarRuleSet("Qal imperative weak verbs.  Many switch second vowel to patach (though these often have\n" +
             "forms where they retain the holem.  Initial yodh and nun disappear.  Biconsonental all have holem\n" +
             "waw as middle vowel.\n" +
-            "Strong              " + "קְטֹל" + "\n" +
-            "I-" + "אֱמֹר                 א" + "\n" +
-            "I-" + "חֲזַק                 ח" + "\n" +
-            "I-" + "לֵך                  י" + "\n" +
-            "I-" + "רַשׁ                  י" + "\n" +
-            "I-" + "נְפֹל                 נ" + "\n" +
-            "I-" + "קַח                  נ" + "\n" +
-            "II-Gutteral         " + "בְּחַר" + "\n" +
-            "III-" + "מְצָא               א" + "\n" +
-            "III-" + "בְּנֵה               ה" + "\n" +
-            "III-" + "שְׁלַח             ע/ח" + "\n" +
-            "Biconsonental       " + "קוּם" + "\n" +
-            "Geminate             " + "סֹב" + "\n" +
-            ""),
+            "Strong              " + "קְטֹל" ,
+            "I-" + "אֱמֹר                 א" ,
+            "I-" + "חֲזַק                 ח" ,
+            "I-" + "לֵך                  י" ,
+            "I-" + "רַשׁ                  י" ,
+            "I-" + "נְפֹל                 נ" ,
+            "I-" + "קַח                  נ" ,
+            "II-Gutteral         " + "בְּחַר" ,
+            "III-" + "מְצָא               א" ,
+            "III-" + "בְּנֵה               ה" ,
+            "III-" + "שְׁלַח             ע/ח" ,
+            "Biconsonental       " + "קוּם" ,
+            "Geminate             " + "סֹב" ).toGrammarRules());
 
-        new GrammarRule("Qal infinitive construct weak verbs.  Initial yodh drops the yodh and add taw at the end.\n" +
+    allRules.addAll(new GrammarRuleSet("Qal infinitive construct weak verbs.  Initial yodh drops the yodh and add taw at the end.\n" +
             "Initial gutturals change initial schwa to shortened vowel.  Final heh changes to holem waw taw.\n" +
             "Final heth gets a patach.  Biconsonental verbs keep their middle long vowel.\n" +
-            "Strong              " + "קְטֹל" + "\n" +
-            "I-" + "אֱמֹר                 א" + "\n" +
-            "I-" + "לֶכֶת                 י" + "\n" +
-            "I-" + "עֲמֹד                 ע" + "\n" +
-            "III-" + "בְּנוֹת              ה" + "\n" +
-            "III-" + "שְׁלֹחַ             ע/ח" + "\n" +
-            "Biconsonental       " + "קוּם" + "\n" +
-            "Biconsonental       " + "בוֹא" + "\n" +
-            "Biconsonental       " + "שׂים" + "\n" +
-            ""),
+            "Strong              " + "קְטֹל" ,
+            "I-" + "אֱמֹר                 א" ,
+            "I-" + "לֶכֶת                 י" ,
+            "I-" + "עֲמֹד                 ע" ,
+            "III-" + "בְּנוֹת              ה" ,
+            "III-" + "שְׁלֹחַ             ע/ח" ,
+            "Biconsonental       " + "קוּם" ,
+            "Biconsonental       " + "בוֹא" ,
+            "Biconsonental       " + "שׂים" ).toGrammarRules());
 
-        new GrammarRule("Qal infinitive absolute weak verbs.  Final heh has holem rather than holem waw.\n" +
+    allRules.addAll(new GrammarRuleSet("Qal infinitive absolute weak verbs.  Final heh has holem rather than holem waw.\n" +
             "Biconsonental all have holem waw for middle vowel.\n" +
-            "Strong              " + "קָטוֹל" + "\n" +
-            "III-" + "בָּנֹה                ה" + "\n" +
-            "Biconsonental        " + "קוֹם" + "\n" +
-            "Biconsonental        " + "בוֹא" + "\n" +
-            "Biconsonental        " + "שׂוֹם" + "\n" +
-            ""),
+            "Strong              " + "קָטוֹל" ,
+            "III-" + "בָּנֹה                ה" ,
+            "Biconsonental        " + "קוֹם" ,
+            "Biconsonental        " + "בוֹא" ,
+            "Biconsonental        " + "שׂוֹם" ).toGrammarRules());
 
-        new GrammarRule("Qal participle weak verbs.  Final heh second vowel changes to segol.  Final guttural\n" +
+    allRules.addAll(new GrammarRuleSet("Qal participle weak verbs.  Final heh second vowel changes to segol.  Final guttural\n" +
             "third vowel, patach added to guttural.  Biconsonentals drop their middle vowel.\n" +
-            "Strong              " + "קֹטֵל" + "\n" +
-            "III-" + "בֹּנֶה               ה" + "\n" +
-            "III-" + "שֹׁמֵעַ             ע/ח" + "\n" +
-            "Biconsonental        " + "קָם" + "\n" +
-            ""),
+            "Strong              " + "קֹטֵל" ,
+            "III-" + "בֹּנֶה               ה" ,
+            "III-" + "שֹׁמֵעַ             ע/ח" ,
+            "Biconsonental        " + "קָם" ).toGrammarRules());
 
-        new GrammarRule("Participle יֵשׁ:\n" +
-            "* Is not inflected\n" +
-            "* Can express existence: יֵשׁ מֶלֶך there is a king, or a king is\n" +
-            "* Followed by preposition לְ indicates possession: יֶשׁ–לִי תִקְוָה I have hope"),
+    allRules.addAll(new GrammarRuleSet("Participle יֵשׁ:",
+            "* Is not inflected",
+            "* Can express existence: יֵשׁ מֶלֶך there is a king, or a king is",
+            "* Followed by preposition לְ indicates possession: יֶשׁ–לִי תִקְוָה I have hope").toGrammarRules());
 
-        new GrammarRule("Participle אֵין (sometimes spelled אַיִן)\n" +
-            "* Is not inflected\n" +
-            "* Can take pronominal suffixes\n" +
-            "* can express non-existence: אֵין לוֹ בֵּן he had no son\n" +
-            "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD"),
+    allRules.addAll(new GrammarRuleSet("Participle אֵין (sometimes spelled אַיִן)",
+            "* Is not inflected",
+            "* Can take pronominal suffixes",
+            "* can express non-existence: אֵין לוֹ בֵּן he had no son",
+            "* Can negate a verbless clause: אֵינָם יְרֵאִים אֶת–יְהוָה They do not fear the LORD").toGrammarRules());
 
-        new GrammarRule("Participles can be attributive, predicative, or substantive 1/3\n" +
+    allRules.addAll(new GrammarRuleSet("Participles can be attributive, predicative, or substantive",
             " * attributive, meaning they can directly modify a noun:\n    " +
             "הָעָם הֵיֹּשֵׁב בָּאָרֶץ " +
-            " the people dwelling [or who dwell] in the land\n" +
+            " the people dwelling [or who dwell] in the land",
             " * predicative, meaning they assert or predicate something about the noun:\n    " +
-            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "  And the mountain was burning with fire\n" +
+            "וְהָהָר בֹּעֵר בָּאֵשׁ " + "  And the mountain was burning with fire",
             " * substantive, meaning they act as a noun.  In this situation they can take a direct object, be part of a\n" +
-            "   construct chain, or take a pronominal suffix.\n    " +
-            "הַיּוֹשֶׁבֶת בַּגַּנִּים " + "the one who dwells in the gardens"),
+            "   construct chain, or take a pronominal suffix.",
+            "הַיּוֹשֶׁבֶת בַּגַּנִּים " + "the one who dwells in the gardens").toGrammarRules());
 
-        new GrammarRule("Qal passive participle.  All but III-ה follow the strong pattern\n" +
+    allRules.add(new GrammarRule("Qal passive participle.  All but III-ה follow the strong pattern\n" +
             "III-ה verb:\n" +
             "             Singular         Plural\n" +
             "                 " + "בְּנוּיִים         בָּנוּי" + "\n" +
-            "                " + "בְּנוּיוֹת         בְּנוּיָה"),
+            "                " + "בְּנוּיוֹת         בְּנוּיָה"));
 
-        new GrammarRule("Participles, because they behave like nouns, can take a definite article,\n" +
-            "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur in a construct chain in the construct state."),
+    allRules.add(    new GrammarRule("Participles, because they behave like nouns, can take a definite article,\n" +
+            "prepositional prefix (ל, ב, כ), or pronominal suffix.  They may also occur in a construct chain in the construct state."));
 
-        new GrammarRule("Standard Hebrew word order is VSO\n" +
+    allRules.add(    new GrammarRule("Standard Hebrew word order is VSO\n" +
             "In the object section, direct and indirect object can come in any order\n" +
-            "Indirect object usually marked with לְ or -אֶל"),
+            "Indirect object usually marked with לְ or -אֶל"));
 
-        new GrammarRule("Verb tense and sentance order: \n" +
+    allRules.addAll(new GrammarRuleSet("Verb tense and sentance order: \n" +
             "* When a perfect verb is describing a completed action it is usually proceeded\n" +
             "    by a time clause or other explanatory clause.\n" +
             "* A consecutive perfect is normally the first word in its clause.\n" +
             "* A regular imperfect is not normally the first word in the clause.\n" +
             "* A consecutive imperfect is always the first word in its clause\n" +
-            "* A jussive or cohortative (aka volitional imperfect) is normally the first word in its clause."),
+            "* A jussive or cohortative (aka volitional imperfect) is normally the first word in its clause.").toGrammarRules());
 
-        new GrammarRule("Sequences with volational conjugations:\n" +
+    allRules.addAll(new GrammarRuleSet("Sequences with volational conjugations:\n" +
             "* Imperatives can occur in succession, possibly linked by ו.  This linkage can consequential or sequential:\n" +
             "  e.g.  עֲלֵח וּקְבֹר אֶת–אָבִיךָ Go up and bury your father.\n" +
             "* An imperative may be followed by a consecutive perfect.  The perfect may carry the full force of the imperative:\n" +
             "  e.g. לֵך וְאָמַרְתָּ אֶל–עַבְדִּי Go and say to my servant...\n" +
             "* An imperative may be followed by an imperfect or cohortative, creating a purpose or result clause:\n" +
-            "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king."),
+            "  e.g. בֹּא הֵנָּה וְאֶשְׁלְחָה אֹתְךָ אֶל–הַמֶּלֶך Come here so that I may send you to the king.").toGrammarRules());
 
-        new GrammarRule("Conditional clauses, if/then protasis/apodosis.  Protasis often begins with one of\n" +
+    allRules.addAll(new GrammarRuleSet("Conditional clauses, if/then protasis/apodosis.  Protasis often begins with one of\n" +
             "אִם כִּי הֵן אֲשֶׁר" +
             "\n and the apodosis often begins with וְ\n" +
             "אִם–תֵּלְכִי עִמִּי וְהָלָכְתִּי" +
-            "\n if you go with her, then I will go"),
+            "\n if you go with her, then I will go").toGrammarRules());
 
-        new GrammarRule("Causal clause, indicates cause of another clause.  Often begins with כִּי or אֲשֶׁר\n" +
+    allRules.add(new GrammarRule("Causal clause, indicates cause of another clause.  Often begins with כִּי or אֲשֶׁר\n" +
             "קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי" +
-            "\n You will [must] be holy because I am holy"),
+            "\n You will [must] be holy because I am holy"));
 
-        new GrammarRule("Purpose clause, indicates the purpose of the action of the subject of another clause.\n" +
+    allRules.add(new GrammarRule("Purpose clause, indicates the purpose of the action of the subject of another clause.\n" +
             "Can begin with לְמַעַן so that, בּעֲבוּר so that,  אֲשֶׁר so that, לְבִלְתִּי so that not, or לְמַעַן לֹא so that not\n" +
             "וְשָׁמַרְתָּ לַעֲשׂוֹת אֲשֶׁר יִיטַב לְךָ " +
-            "\nAnd you will be careful to do so that it will go well with you."),
+            "\nAnd you will be careful to do so that it will go well with you."));
 
-        new GrammarRule("A result clause states something that is true because of another clause.\n" +
+    allRules.add(new GrammarRule("A result clause states something that is true because of another clause.\n" +
             "Often begins with Waw consecutive verb or כִּי\n" +
             "וַיֹּאמֶר יוֹאָב יָקֻמוּ וַיָּקֻמוּ" +
-            "\nAnd Joab said, 'Let them arise!', so they arose"),
+            "\nAnd Joab said, 'Let them arise!', so they arose"));
 
-        new GrammarRule("A concessive clause states something that might be thought to prevent another clause, but does not.\n" +
+    allRules.add(new GrammarRule("A concessive clause states something that might be thought to prevent another clause, but does not.\n" +
             "Often marked by אִם, or גַּם or גַּם כִּי or וְ or כִּי or עַל, all of which can be transalted 'although', or 'even though'\n" +
             "גַּם כִּי–אֵלֵך צַלְמָוֶת לֹא–אִירָא רָע" +
-            "\nEven though I walk through the valley of the shadow of death, I will not fear evil"),
+            "\nEven though I walk through the valley of the shadow of death, I will not fear evil"));
 
-        new GrammarRule("ו:"  + " can be conjunctive or disjunctive\n" +
-            "* Conjunctive is usually prefixed to a verb and links clauses sequentially, temporally, logically, or consequentially.\n" +
-            "* Disjunctive is prefixed to a non-verb and is non-sequential; it introduces some kind of break in the narrative.\n" +
-            "  Disjunctive meaning can be:\n" +
-            "  * parenthetical, provides a parenthetical explanation or comment:\n    " +
+    allRules.addAll(new GrammarRuleSet("ו:"  + " can be conjunctive or disjunctive",
+            "* Conjunctive is usually prefixed to a verb and links clauses sequentially, temporally, logically, or consequentially.",
+            "* Disjunctive is prefixed to a non-verb and is non-sequential; it introduces some kind of break in the narrative.",
+            "  Disjunctive meaning can be parenthetical, provides a parenthetical explanation or comment:\n    " +
             "וְהֵם לֹא יָדְעוּ כִּי שֹׁמֵעַ יוֹסֵף כִּי הַמֵּלִיץ בֵּינֹתָם" +
-            "\n    Now they did not know that Joseph was understanding them, for there was an interpreter between them.\n" +
-            "  * circumstantial, gives circumstantial information\n    " +
+            "\n    Now they did not know that Joseph was understanding them, for there was an interpreter between them.",
+            "  Disjunctive meaning can be circumstantial, gives circumstantial information\n    " +
             "וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ => וְאֵין אִישׁ מֵאַנְשֵׁי חַבַּית שָׁם בַּבָּיִת" +
-            "\n    And one day, he went into the house to do his work, => and none of the household servants were there in the house\n" +
-            "  * contrastive, gives a contrasting idea\n    " +
+            "\n    And one day, he went into the house to do his work, => and none of the household servants were there in the house",
+            "  Disjunctive meaning can be contrastive, gives a contrasting idea\n    " +
             "וַיִּשַׁע יְהוָה אֶל–הֶבֶל וְאֶל–מִנְחָתוֹ => וְאֶל–קַיִן וְאֶל–מִנְחָתוֹ לֹא שָׁעָה" +
-            "\n    The LORD looked favorably on Abel and his offering, => but on Cain and his offering he did not look favorably\n" +
-            "  * introductory, begins a new narrative or introduces a new idea or theme\n    " +
+            "\n    The LORD looked favorably on Abel and his offering, => but on Cain and his offering he did not look favorably",
+            "  Disjunctive meaning can be introductory, begins a new narrative or introduces a new idea or theme\n    " +
             "וְהַנָּחָשׁ הָיָה עָרוּם מִכֹּל חַיַּת הַשָּׂדֶה אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים" +
-            "\n    Now the serpent was more crafty than any creature that the LORD God had made"),
+            "\n    Now the serpent was more crafty than any creature that the LORD God had made").toGrammarRules());
 
-        new GrammarRule("Adverbs of time: עַתָּה (now), אָז (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
-            "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect.\n"),
+    allRules.add(new GrammarRule("Adverbs of time: עַתָּה (now), אָז (then), טֶרֶם (also as בְּטֶרֶם) (before).\n" +
+            "Both עַתָּה and אָז can be followed by an imperfect that should be translated as a perfect.\n"));
 
-        new GrammarRule("Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside).\n"),
+    allRules.add(new GrammarRule("Adverbs of place: פֹּה, חֵנָּח (here), שָׁם (there), הוּץ (outside)."));
 
-        new GrammarRule("Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually).\n"),
+    allRules.add(new GrammarRule("Adverbs of degree: מְאֹד (very), עוֹד (again), תָּמִיד (continually).\n"));
 
-        new GrammarRule("Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."),
+    allRules.add(new GrammarRule("Adverbs of manner: יַחְדָּו (together), פִּתְאֹם (suddenly)."));
 
-        new GrammarRule("Niphal can be passive, reflexive, reciprocal (they heard each other),\n" +
-            "or middle where no agency is specified and the subject and object are the same (the gate opened)"),
+    allRules.add(new GrammarRule("Niphal can be passive, reflexive, reciprocal (they heard each other),\n" +
+            "or middle where no agency is specified and the subject and object are the same (the gate opened)"));
 
-        new GrammarRule("Niphal perfect weak verbs.  Final gutterals cause the last vowel to change to patach.\n" +
+    allRules.addAll(new GrammarRuleSet("Niphal perfect weak verbs.  Final gutterals cause the last vowel to change to patach.\n" +
             "Initial gutterals cause second vowel to shift from schwa to shortened vowel.  Initial nun drops off.\n" +
             "Initial yodh converts to waw.\n" +
-            "Strong          " + "נִקְטַל" + "\n" +
-            "III-" + "נִמְצָא           א" + "\n" +
-            "III-" + "נִבְנָה           ה" + "\n" +
-            "II-Gutteral     " + "נֶעֱזַב" + "\n" +
-            "I-" + "נִצַּל              נ" +  "\n" +
-            "I-" + "נוֹשַׁב             י"),
+            "Strong          " + "נִקְטַל" ,
+            "III-" + "נִמְצָא           א" ,
+            "III-" + "נִבְנָה           ה" ,
+            "II-Gutteral     " + "נֶעֱזַב" ,
+            "I-" + "נִצַּל              נ" ,
+            "I-" + "נוֹשַׁב             י").toGrammarRules());
 
-        new GrammarRule("Niphal imperfect weak verbs:  Second vowel changes in final heh.\n" +
-            "Strong          " + "יִקָּטֵל" + "\n" +
-            "III-" + "יִבָּנֶה           ה" ),
+    allRules.addAll(new GrammarRuleSet("Niphal imperfect weak verbs:  Second vowel changes in final heh.\n" +
+            "Strong          " + "יִקָּטֵל" ,
+            "III-" + "יִבָּנֶה           ה" ).toGrammarRules());
 
-        new GrammarRule("Niphal imperative weak verbs.  In many cases schwa under initial consonant changes \n" +
+    allRules.addAll(new GrammarRuleSet("Niphal imperative weak verbs.  In many cases schwa under initial consonant changes \n" +
             "to kamatz.\n" +
-            "Strong          " + "הִקְּטֵל" + "\n" +
-            "III-" + "הִמָּצֵא           א" + "\n" +
-            "III-" + "הִבָּנֵה           ה" + "\n" +
-            "II-Gutteral     " + "הֵעָזֵב" + "\n" +
-            "I-" + "הִנָּצֵל             נ" + "\n" +
-            "I-" + "הִוָּשֵׁב             י"),
+            "Strong          " + "הִקְּטֵל" ,
+            "III-" + "הִמָּצֵא           א" ,
+            "III-" + "הִבָּנֵה           ה" ,
+            "II-Gutteral     " + "הֵעָזֵב" ,
+            "I-" + "הִנָּצֵל             נ" ,
+            "I-" + "הִוָּשֵׁב             י").toGrammarRules());
 
-        new GrammarRule("Niphal infinitive construct weak verbs.  Final heh changes to holem waw taw.\n" +
-            "Strong           " + "הִקָּטֵל" + "\n" +
-            "III-" + "הִבָּנוֹת           ה" ),
+    allRules.addAll(new GrammarRuleSet("Niphal infinitive construct weak verbs.  Final heh changes to holem waw taw.\n" +
+            "Strong           " + "הִקָּטֵל" ,
+            "III-" + "הִבָּנוֹת           ה" ).toGrammarRules());
 
-        new GrammarRule("Niphal infinitive absolute weak verbs.  Final heh holem waw changes to just holem.\n" +
+    allRules.addAll(new GrammarRuleSet("Niphal infinitive absolute weak verbs.  Final heh holem waw changes to just holem.\n" +
             "Secong gutturals cause initial hireq to change.  Initial yodh changes to holem waw.\n" +
-            "Strong           " + "נִקְטוֹל" + "\n" +
-            "Strong           " + "הִקָּטוֹל" + "\n" +
-            "III-" + "נִבְנֹה             ה" + "\n" +
-            "III-" + "הִבָּנֵה             ה" + "\n" +
-            "II-Gutteral      " + "נַעֳזוֹב" + "\n" +
-            "II-Gutteral      " + "הֵעָזוֹב" + "\n" +
-            "I-" + "נוֹשָׁב               י"),
+            "Strong           " + "נִקְטוֹל" ,
+            "Strong           " + "הִקָּטוֹל" ,
+            "III-" + "נִבְנֹה             ה" ,
+            "III-" + "הִבָּנֵה             ה" ,
+            "II-Gutteral      " + "נַעֳזוֹב" ,
+            "II-Gutteral      " + "הֵעָזוֹב" ,
+            "I-" + "נוֹשָׁב               י").toGrammarRules());
 
-        new GrammarRule("Niphal participle weak verbs:  Vowel changes in final heh and second guttural.\n" +
-            "Strong           " + "נִקְטָל" + "\n" +
-            "III-" + "נִבְנֶה            ה" + "\n" +
-            "II-Gutteral      " + "נֶעֱזָב" ),
+    allRules.addAll(new GrammarRuleSet("Niphal participle weak verbs:  Vowel changes in final heh and second guttural.\n" +
+            "Strong           " + "נִקְטָל" ,
+            "III-" + "נִבְנֶה            ה" ,
+            "II-Gutteral      " + "נֶעֱזָב" ).toGrammarRules());
 
-        new GrammarRule("Meaning of the Piel steam: \n" +
-            "  * intensive - can intensify the meaning of the qal stem\n" +
+    allRules.addAll(new GrammarRuleSet("Meaning of the Piel steam",
+            "  * intensive - can intensify the meaning of the qal stem",
             "  * factitive - turns an intransitive verb transitive\n" +
-            "    e.g. " + "קָדַשׁ" + " he is holy, " + "קִדַּשׁ" + " he sanctified\n" +
+            "    e.g. " + "קָדַשׁ" + " he is holy, " + "קִדַּשׁ" + " he sanctified",
             "  * denominitive - taking a noun or adjective stem and making it a verb\n" +
             "    e.g. " + "דָּבָר" + " word " + "דִּבֵּר" + " he spoke\n" +
-            "    In this case the verb does not have an intensive meaning\n" +
-            "  * iterative - often occurs with physical movement"),
+            "    In this case the verb does not have an intensive meaning",
+            "  * iterative - often occurs with physical movement").toGrammarRules());
 
-        new GrammarRule("Piel perfect weak verbs:  Second gutturals do not take dagesh, vowel changes vary.\n" +
+    allRules.addAll(new GrammarRuleSet("Piel perfect weak verbs:  Second gutturals do not take dagesh, vowel changes vary.\n" +
             "Final gutterals cause vowel changes as well.\n" +
-            "Strong         " + "קִטֵּל" + "\n" +
-            "III-" + "שִׁלַּח        ע/ח" + "\n" +
-            "III-" + "מִצֵא          א" + "\n" +
-            "III-" + "גִּלָּה          ה" + "\n" +
-            "II-Gutteral    " + "נִחַם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "בֵּרֵך" + " (compensatory lengthening)\n"),
+            "Strong         " + "קִטֵּל" ,
+            "III-" + "שִׁלַּח        ע/ח" ,
+            "III-" + "מִצֵא          א" ,
+            "III-" + "גִּלָּה          ה" ,
+            "II-Gutteral    " + "נִחַם" + " (virtual doubling)\n" ,
+            "II-Gutteral    " + "בֵּרֵך" + " (compensatory lengthening)\n").toGrammarRules());
 
-        new GrammarRule("Piel imperfect weak verbs.  Final guttural causes vowel changes.  Second gutturals\n" +
+    allRules.addAll(new GrammarRuleSet("Piel imperfect weak verbs.  Final guttural causes vowel changes.  Second gutturals\n" +
             "do not take a dagesh.\n" +
-            "Strong         " + "יְקַטֵּל" + "\n" +
-            "III-" + "יְשַׁלַּח        ע/ח" + "\n" +
-            "III-" + "יְמַצֵּא          א" + "\n" +
-            "III-" + "יְגַלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "יְנַחֵם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "יְבָרֵך" + " (compensatory lengthening)"),
+            "Strong         " + "יְקַטֵּל" ,
+            "III-" + "יְשַׁלַּח        ע/ח" ,
+            "III-" + "יְמַצֵּא          א" ,
+            "III-" + "יְגַלֶּה          ה" ,
+            "II-Gutteral    " + "יְנַחֵם" ,
+            "II-Gutteral    " + "יְבָרֵך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Piel imperative weak verbs.  Final guttural causes vowel changes.  Second gutturals\n" +
+    allRules.addAll(new GrammarRuleSet("Piel imperative weak verbs.  Final guttural causes vowel changes.  Second gutturals\n" +
             "do not take a dagesh.\n" +
-            "Strong         " + "קַטֵּל" + "\n" +
-            "III-" + "שַׁלַּח        ע/ח" + "\n" +
-            "III-" + "מַצֵּא          א" + "\n" +
-            "III-" + "גַּלֵה          ה" + "\n" +
-            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+            "Strong         " + "קַטֵּל" ,
+            "III-" + "שַׁלַּח        ע/ח" ,
+            "III-" + "מַצֵּא          א" ,
+            "III-" + "גַּלֵה          ה" ,
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" ,
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Piel infinitive construct weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Piel infinitive construct weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "קַטֵּל" + "\n" +
-            "III-" + "שַׁלַּח        ע/ח" + "\n" +
-            "III-" + "מַצֵּא          א" + "\n" +
-            "III-" + "גַּלּוֹת          ה" + "\n" +
-            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+            "Strong         " + "קַטֵּל" ,
+            "III-" + "שַׁלַּח        ע/ח" ,
+            "III-" + "מַצֵּא          א" ,
+            "III-" + "גַּלּוֹת          ה" ,
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" ,
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Piel infinitive absolute weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Piel infinitive absolute weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "קַטֵּל" + "\n" +
-            "III-" + "שַׁלֵּחַ        ע/ח" + "\n" +
-            "III-" + "מַצֵּא          א" + "\n" +
-            "III-" + "גַּלֵּה          ה" + "\n" +
-            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)"),
+            "Strong         " + "קַטֵּל" ,
+            "III-" + "שַׁלֵּחַ        ע/ח" ,
+            "III-" + "מַצֵּא          א" ,
+            "III-" + "גַּלֵּה          ה" ,
+            "II-Gutteral    " + "נַחֵם" + " (virtual doubling)\n" ,
+            "II-Gutteral    " + "בָּרֵך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Piel participle weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Piel participle weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "מְקַטֵּל" + "\n" +
-            "III-" + "מְשַׁלֵּחַַ        ע/ח" + "\n" +
-            "III-" + "מְמַצֵּא          א" + "\n" +
-            "III-" + "מְגַלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "מְנַחֵם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "מְבָרֵך" + " (compensatory lengthening)"),
+            "Strong         " + "מְקַטֵּל" ,
+            "III-" + "מְשַׁלֵּחַַ        ע/ח" ,
+            "III-" + "מְמַצֵּא          א" ,
+            "III-" + "מְגַלֶּה          ה" ,
+            "II-Gutteral    " + "מְנַחֵם" + " (virtual doubling)\n" ,
+            "II-Gutteral    " + "מְבָרֵך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Pual steam is passive counterpart of Piel, indicates intensive action in passive voice"),
+    allRules.add(    new GrammarRule("Pual steam is passive counterpart of Piel, indicates intensive action in passive voice"));
 
-        new GrammarRule("Pual perfect weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Pual perfect weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "קֻטַּל" + "\n" +
-            "III-" + "מֻצָא          א" + "\n" +
-            "III-" + "גֻּלָּה          ה" + "\n" +
-            "II-Gutteral    " + "נֻחַם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "בֹּרַך" + " (compensatory lengthening)\n" +
-            ""),
+            "Strong         " + "קֻטַּל" ,
+            "III-" + "מֻצָא          א" ,
+            "III-" + "גֻּלָּה          ה" ,
+            "II-Gutteral    " + "נֻחַם" + " (virtual doubling)" ,
+            "II-Gutteral    " + "בֹּרַך" + " (compensatory lengthening)").toGrammarRules());
 
-        new GrammarRule("Pual imperfect weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Pual imperfect weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "יְקֻטַּל" + "\n" +
-            "III-" + "יְמֻצָּא          א" + "\n" +
-            "III-" + "יְגֻלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "יְנֻחַם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "יְבֹרַך" + " (compensatory lengthening)\n" +
-            ""),
+            "Strong         " + "יְקֻטַּל" ,
+            "III-" + "יְמֻצָּא          א" ,
+            "III-" + "יְגֻלֶּה          ה" ,
+            "II-Gutteral    " + "יְנֻחַם" + " (virtual doubling)" ,
+            "II-Gutteral    " + "יְבֹרַך" + " (compensatory lengthening)" ).toGrammarRules());
 
-        new GrammarRule("Pual participle weak verbs.  Final guttural causes vowel changes.  Second\n" +
+    allRules.addAll(new GrammarRuleSet("Pual participle weak verbs.  Final guttural causes vowel changes.  Second\n" +
             "gutturals do not take a dagesh.\n" +
-            "Strong         " + "מְקֻטָּל" + "\n" +
-            "III-" + "מְמֻצָּא          א" + "\n" +
-            "III-" + "מְגֻלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "מְנֻחָם" + " (virtual doubling)\n" +
-            "II-Gutteral    " + "מְבֹרָך" + " (compensatory lengthening)\n" +
-            ""),
+            "Strong         " + "מְקֻטָּל" ,
+            "III-" + "מְמֻצָּא          א" ,
+            "III-" + "מְגֻלֶּה          ה" ,
+            "II-Gutteral    " + "מְנֻחָם" + " (virtual doubling)" ,
+            "II-Gutteral    " + "מְבֹרָך" + " (compensatory lengthening)" ).toGrammarRules());
 
-        new GrammarRule("Hiphil stem, most common derived stem.  Meaning can be: \n" +
-            "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king\n"+
-            "* simple action: more common in verbs where qal form is not attested in OT\n"+
-            "* declarative: the subject declares a certain condition:  רָשַׁע he was guilty הִרְשִׁיע he declared someone guilty\n"+
-            "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great"),
+    allRules.addAll(new GrammarRuleSet("Hiphil stem, most common derived stem.  Meaning can be",
+            "* causative: Causing something to occur: מָלַך he reigned, הִמְלִיך he corronated, he made a king",
+            "* simple action: more common in verbs where qal form is not attested in OT",
+            "* declarative: the subject declares a certain condition:  רָשַׁע he was guilty הִרְשִׁיע he declared someone guilty",
+            "* factitive: makes an intransitive verb transitive, similar to piel: גָּדַל to be great הִגְדִיל he made him/her/it great").toGrammarRules());
 
-        new GrammarRule("Hiphil perfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun " +
+    allRules.addAll(new GrammarRuleSet("Hiphil perfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun " +
             "drops.\nInitial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
             "                      Perfect\n" +
             "             Perfect  msc 2 sng\n" +
-            "Strong         " + "הִקְטַלְתָּ      הִקְטִיל"+ "\n" +
-            "I-Gutteral     " + "הֶעֱמַדְתָּ      הֶעֱמִיד"+ "\n" +
-            "III-" + "הִשְׁלַחְתָּ      הִשְׁלִיחַ        ע/ח" + "\n" +
-            "III-" + "הִגְלִיתָ      הִגְלָה           ה" + "\n" +
-            "I-" + "הִצַּלְתָּ       הִצִּיל             נ" + "\n" +
-            "I-" + "הוֹשַׁבְתָּ      הוֹשִׁיב            י" + "\n" +
-            "Biconsonental   " + "הֲקִימוֹתָ     הֵקִים" + "\n"),
+            "Strong         " + "הִקְטַלְתָּ      הִקְטִיל",
+            "I-Gutteral     " + "הֶעֱמַדְתָּ      הֶעֱמִיד",
+            "III-" + "הִשְׁלַחְתָּ      הִשְׁלִיחַ        ע/ח" ,
+            "III-" + "הִגְלִיתָ      הִגְלָה           ה" ,
+            "I-" + "הִצַּלְתָּ       הִצִּיל             נ" ,
+            "I-" + "הוֹשַׁבְתָּ      הוֹשִׁיב            י" ,
+            "Biconsonental   " + "הֲקִימוֹתָ     הֵקִים" + "\n").toGrammarRules());
 
-        new GrammarRule("Hiphil imperfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
+    allRules.addAll(new GrammarRuleSet("Hiphil imperfect weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
-            "Strong         " + "יַקְטִיל"+ "\n" +
-            "I-Gutteral     " + "יַעֲמִיד"+ "\n" +
-            "III-" + "יַשְׁלִיחַ        ע/ח" + "\n" +
-            "III-" + "יַמְצִיא          א" + "\n" +
-            "III-" + "יַגְלֶה           ה" + "\n" +
-            "I-" + "יַצִּיל             נ" + "\n" +
-            "I-" + "יוֹשִׁיב            י" + "\n" +
-            "Biconsonental   " + "יָקִים" + "\n"),
+            "Strong         " + "יַקְטִיל",
+            "I-Gutteral     " + "יַעֲמִיד",
+            "III-" + "יַשְׁלִיחַ        ע/ח" ,
+            "III-" + "יַמְצִיא          א" ,
+            "III-" + "יַגְלֶה           ה" ,
+            "I-" + "יַצִּיל             נ" ,
+            "I-" + "יוֹשִׁיב            י" ,
+            "Biconsonental   " + "יָקִים" + "\n").toGrammarRules());
 
-        new GrammarRule("Hiphil imperative weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
+    allRules.addAll(new GrammarRuleSet("Hiphil imperative weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
             "                          Imperative\n" +
             "               Imperative  fem sng\n" +
-            "Strong         " + "הַקְטִילי      הַקְטֵל"+ "\n" +
-            "I-Gutteral     " + "הַעֲמִידי      הַעֲמֵד"+ "\n" +
-            "III-" + "הַשְׁלִיחִי      חַשְׁלַחַ        ע/ח" + "\n" +
-            "III-" + "הַמְצִיאִי      הַמְצֵא          א" + "\n" +
-            "III-" + "הַגְלֵה           ה" + "        No example given for III-ה imperative feminine singular, I don't know why.\n" +
-            "I-" + "הַצִּילִי       הַצֵּל             נ" + "\n" +
-            "I-" + "הוֹשִׁיבִי      הוֹשֵׁב            י" + "\n" +
-            "Biconsonental   " + "הָקִימִי       הָקֵם" + "\n" +
-            ""),
+            "Strong         " + "הַקְטִילי      הַקְטֵל",
+            "I-Gutteral     " + "הַעֲמִידי      הַעֲמֵד",
+            "III-" + "הַשְׁלִיחִי      חַשְׁלַחַ        ע/ח" ,
+            "III-" + "הַמְצִיאִי      הַמְצֵא          א" ,
+            "III-" + "הַגְלֵה           ה" + "        No example given for III-ה imperative feminine singular, I don't know why.\n" ,
+            "I-" + "הַצִּילִי       הַצֵּל             נ" ,
+            "I-" + "הוֹשִׁיבִי      הוֹשֵׁב            י" ,
+            "Biconsonental   " + "הָקִימִי       הָקֵם" ).toGrammarRules());
 
-        new GrammarRule("Hiphil infinitive construct weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
+    allRules.addAll(new GrammarRuleSet("Hiphil infinitive construct weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
-            "Strong         " + "הַקְטִיל"+ "\n" +
-            "I-Gutteral     " + "הַעֲמִיד"+ "\n" +
-            "III-" + "הַשְׁלִיחַַ        ע/ח" + "\n" +
-            "III-" + "הַמְצִיא          א" + "\n" +
-            "III-" + "הַגְלוֹת          ה" + "\n" +
-            "I-" + "הַצִּיל             נ" + "\n" +
-            "I-" + "הוֹשִׁיב            י" + "\n" +
-            "Biconsonental   " + "הָקִים" + "\n"),
+            "Strong         " + "הַקְטִיל",
+            "I-Gutteral     " + "הַעֲמִיד",
+            "III-" + "הַשְׁלִיחַַ        ע/ח" ,
+            "III-" + "הַמְצִיא          א" ,
+            "III-" + "הַגְלוֹת          ה" ,
+            "I-" + "הַצִּיל             נ" ,
+            "I-" + "הוֹשִׁיב            י" ,
+            "Biconsonental   " + "הָקִים" + "\n").toGrammarRules());
 
-        new GrammarRule("Hiphil infinitive absolute weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
+    allRules.addAll(new GrammarRuleSet("Hiphil infinitive absolute weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel drops out.\n" +
-            "Strong         " + "הַקְטֵל"+ "\n" +
-            "I-Gutteral     " + "הַעֲמֵד"+ "\n" +
-            "III-" + "הַשְׁלֵחַַַ        ע/ח" + "\n" +
-            "III-" + "הַמְצֵא          א" + "\n" +
-            "III-" + "הַגְלֵה          ה" + "\n" +
-            "I-" + "הַצֵּל             נ" + "\n" +
-            "I-" + "הוֹשֵׁב            י" + "\n" +
-            "Biconsonental   " + "הָקֵם" + "\n"),
+            "Strong         " + "הַקְטֵל",
+            "I-Gutteral     " + "הַעֲמֵד",
+            "III-" + "הַשְׁלֵחַַַ        ע/ח" ,
+            "III-" + "הַמְצֵא          א" ,
+            "III-" + "הַגְלֵה          ה" ,
+            "I-" + "הַצֵּל             נ" ,
+            "I-" + "הוֹשֵׁב            י" ,
+            "Biconsonental   " + "הָקֵם" + "\n").toGrammarRules());
 
-        new GrammarRule("Hiphil participle weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
+    allRules.addAll(new GrammarRuleSet("Hiphil participle weak verbs.  Initial and final gutturals cause vowel changes.  Initial nun drops.\n" +
             "Initial yodh converts to holem waw.  Biconsonental middle vowel assimilates with yodh.\n" +
-            "Strong         " + "מַקְטִיל"+ "\n" +
-            "I-Gutteral     " + "מַעֲמִיד"+ "\n" +
-            "III-" + "מַשְׁלִיחַַַַ        ע/ח" + "\n" +
-            "III-" + "מַמְצִיא          א" + "\n" +
-            "III-" + "מַגְלֶה          ה" + "\n" +
-            "I-" + "מַצִּיל             נ" + "\n" +
-            "I-" + "מוֹשִׁיב            י" + "\n" +
-            "Biconsonental   " + "מֵקִים" + "\n"),
+            "Strong         " + "מַקְטִיל",
+            "I-Gutteral     " + "מַעֲמִיד",
+            "III-" + "מַשְׁלִיחַַַַ        ע/ח" ,
+            "III-" + "מַמְצִיא          א" ,
+            "III-" + "מַגְלֶה          ה" ,
+            "I-" + "מַצִּיל             נ" ,
+            "I-" + "מוֹשִׁיב            י" ,
+            "Biconsonental   " + "מֵקִים" + "\n").toGrammarRules());
 
-        new GrammarRule("Hophal stem, least common derived stem, is causative action in the passive voice (so passive of Hiphil). \n" +
-            "It occurs much more frequently in the weak form (250 times) versus strong form (50 times)."),
+    allRules.add(new GrammarRule("Hophal stem, least common derived stem, is causative action in the passive voice " +
+            "(so passive of Hiphil). \n" +
+            "It occurs much more frequently in the weak form (250 times) versus strong form (50 times)."));
 
-        new GrammarRule("Hophal perfect weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
+    allRules.addAll(new GrammarRuleSet("Hophal perfect weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
             "drops off.  Initial yodh changes to holem waw.  Biconsonental take holem waw between heh and inital\n" +
             "vowel.\n" +
-            "Strong (u-class)     " + "הֻקְטַל" + "\n" +
-            "Strong (o-class)     " + "הָקְטַל" + "\n" +
-            "I-Gutteral           " + "הָעֳמַד" + "\n" +
-            "III-" + "הָגְלָה                ה" + "\n" +
-            "I-" + "הֻצַּל                   נ" + "\n" +
-            "I-" + "הוּשַׁב                  י" + "\n" +
-            "Biconsonental        " + "הוּקַם" + "\n" +
-            "Geminate             " + "הוּסַב"),
+            "Strong (u-class)     " + "הֻקְטַל" ,
+            "Strong (o-class)     " + "הָקְטַל" ,
+            "I-Gutteral           " + "הָעֳמַד" ,
+            "III-" + "הָגְלָה                ה" ,
+            "I-" + "הֻצַּל                   נ" ,
+            "I-" + "הוּשַׁב                  י" ,
+            "Biconsonental        " + "הוּקַם" ,
+            "Geminate             " + "הוּסַב").toGrammarRules());
 
-        new GrammarRule("Hophal imperfect weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
+    allRules.addAll(new GrammarRuleSet("Hophal imperfect weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
             "drops off.  Initial yodh changes to holem waw.  Biconsonental take holem waw between heh and inital\n" +
             "vowel.\n" +
-            "Strong (u-class)     " + "יֻקְטַל"+ "\n" +
-            "Strong (o-class)     " + "יָקְטַל"+ "\n" +
-            "I-Gutteral           " + "יָעֳמַד" + "\n" +
-            "III-" + "יָגְלֶהה               ה" + "\n" +
-            "I-" + "יֻצַּל                   נ" + "\n" +
-            "I-" + "יוּשַׁב                  י" + "\n" +
-            "Biconsonental        " + "יוּקַם" + "\n" +
-            "Geminate             " + "יוּסַב"),
+            "Strong (u-class)     " + "יֻקְטַל",
+            "Strong (o-class)     " + "יָקְטַל",
+            "I-Gutteral           " + "יָעֳמַד" ,
+            "III-" + "יָגְלֶהה               ה" ,
+            "I-" + "יֻצַּל                   נ" ,
+            "I-" + "יוּשַׁב                  י" ,
+            "Biconsonental        " + "יוּקַם" ,
+            "Geminate             " + "יוּסַב").toGrammarRules());
 
-        new GrammarRule("Hophal participle weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
+    allRules.addAll(new GrammarRuleSet("Hophal participle weak verbs.  Initial and final guttural cause vowel changes.  Initial nun\n" +
             "drops off.  Initial yodh changes to holem waw.  Biconsonental take holem waw between heh and inital\n" +
             "vowel.\n" +
-            "Strong (u-class)     " + "מֻקְטָל"+ "\n" +
-            "Strong (o-class)     " + "מָקְטָל"+ "\n" +
-            "I-Gutteral           " + "מָעֳמָד" + "\n" +
-            "III-" + "מָגְלֶה                ה" + "\n" +
-            "I-" + "מֻצָּל                   נ" + "\n" +
-            "I-" + "מוּשָׁב                  י" + "\n" +
-            "Biconsonental        " + "מוּקָם" + "\n" +
-            "Geminate             " + "מוּסָב"),
+            "Strong (u-class)     " + "מֻקְטָל",
+            "Strong (o-class)     " + "מָקְטָל",
+            "I-Gutteral           " + "מָעֳמָד" ,
+            "III-" + "מָגְלֶה                ה" ,
+            "I-" + "מֻצָּל                   נ" ,
+            "I-" + "מוּשָׁב                  י" ,
+            "Biconsonental        " + "מוּקָם" ,
+            "Geminate             " + "מוּסָב").toGrammarRules());
 
-        new GrammarRule("Hithpael stem indicates intensive, reflexive or reciprocal action"),
+    allRules.add(    new GrammarRule("Hithpael stem indicates intensive, reflexive or reciprocal action"));
 
-        new GrammarRule("When a verbal root start with צ ,ש ,ס then the ת of the Hithpael prefix will metathesize (switch places) with\n" +
-            "the first consonant.\n" +
-            "שָׁמַר" + " becomes " + "הִשְׁתַּמֵּר" + "\n" +
+    allRules.addAll(new GrammarRuleSet("When a verbal root start with צ ,ש ,ס then the ת of the Hithpael prefix will metathesize (switch places) with\n" +
+            "the first consonant.",
+            "שָׁמַר" + " becomes " + "הִשְׁתַּמֵּר" ,
             "When it is a צ the ת will also transform to a ט.\n" +
-            "צָדֵק" + " becomes " + "הִצְטַדֵּק" + "\n" +
+            "צָדֵק" + " becomes " + "הִצְטַדֵּק" ,
             "When the first consonant of the verbal root is ת ,ט ,ד ,ז then the ת of the prefix will assimilate, becoming a dagesh forte\n" +
-            "טָמֵּא" + " becomes " + "הִטַּמֵּא" + "\n" +
-            "Notice how the consonants switch places but not the vowel points.\n"),
+            "טָמֵּא" + " becomes " + "הִטַּמֵּא" ,
+            "Notice how the consonants switch places but not the vowel points.\n").toGrammarRules());
 
-        new GrammarRule("Hithpael perfect weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "הִתְקַטֵּל"+ "\n" +
-            "III-" + "הִתְגַּלָּה          ה" + "\n" +
-            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
-            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+    allRules.addAll(new GrammarRuleSet("Hithpael perfect weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "הִתְקַטֵּל",
+            "III-" + "הִתְגַּלָּה          ה" ,
+            "II-Gutteral    " + "הִתְנַחֵם",
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n").toGrammarRules());
 
-        new GrammarRule("Hithpael imperfect weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "יִתְקַטֵּל"+ "\n" +
-            "III-" + "יִתְגַּלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "יִתְנַחֵם"+ "\n" +
-            "II-Gutteral    " + "יִתְבָּרֵך"+ "\n"),
+    allRules.addAll(new GrammarRuleSet("Hithpael imperfect weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "יִתְקַטֵּל",
+            "III-" + "יִתְגַּלֶּה          ה" ,
+            "II-Gutteral    " + "יִתְנַחֵם",
+            "II-Gutteral    " + "יִתְבָּרֵך"+ "\n").toGrammarRules());
 
-        new GrammarRule("Hithpael imperative weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "הִתְקַטֵּל"+ "\n" +
-            "III-" + "הִתְגַּלֵּה          ה" + "\n" +
-            "II-Gutteral    " + "הִתְנַחֵם"+ "\n" +
-            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+    allRules.addAll(new GrammarRuleSet("Hithpael imperative weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "הִתְקַטֵּל",
+            "III-" + "הִתְגַּלֵּה          ה" ,
+            "II-Gutteral    " + "הִתְנַחֵם",
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n").toGrammarRules());
 
-        new GrammarRule("Hithpael infinitive construct weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "הִתְקַטֵּל"+ "\n" +
-            "III-" + "הִתְגַּלּוֹת         ה" + "\n" +
-            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+    allRules.addAll(new GrammarRuleSet("Hithpael infinitive construct weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "הִתְקַטֵּל",
+            "III-" + "הִתְגַּלּוֹת         ה" ,
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n").toGrammarRules());
 
-        new GrammarRule("Hithpael infinitive absolute weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "הִתְקַטֵּל"+ "\n" +
-            "Geminate       " + "הִתְפַּלֵּל" + "\n" +
-            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n"),
+    allRules.addAll(new GrammarRuleSet("Hithpael infinitive absolute weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "הִתְקַטֵּל",
+            "Geminate       " + "הִתְפַּלֵּל" ,
+            "II-Gutteral    " + "הִתְבָּרֵך"+ "\n").toGrammarRules());
 
-        new GrammarRule("Hithpael participle weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
-            "Strong         " + "מִתְקַטֵּל"+ "\n" +
-            "III-" + "מִתְגַּלֶּה          ה" + "\n" +
-            "II-Gutteral    " + "מִתְנַחֵם"+ "\n" +
-            "II-Gutteral    " + "מִתְבָּרֵך"+ "\n")
-    );
+   allRules.addAll(new GrammarRuleSet("Hithpael participle weak verbs.  Second and third gutturals can cause vowel shifts.\n" +
+            "Strong         " + "מִתְקַטֵּל",
+            "III-" + "מִתְגַּלֶּה          ה" ,
+            "II-Gutteral    " + "מִתְנַחֵם",
+            "II-Gutteral    " + "מִתְבָּרֵך"+ "\n").toGrammarRules());
+    return allRules;
   }
 }

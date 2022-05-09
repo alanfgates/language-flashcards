@@ -15,6 +15,9 @@
 package com.github.alanfgates.language.flashcards;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GrammarRule implements Serializable {
   private String rule;
@@ -43,5 +46,15 @@ public class GrammarRule implements Serializable {
   @Override
   public String toString() {
     return rule;
+  }
+
+  static List<GrammarRule> getSomeGrammarRules(List<GrammarRule> rules, int numRules) {
+    Random rand = new Random();
+    int start = rand.nextInt(numRules);
+    List<GrammarRule> toUse = new ArrayList<>(numRules);
+    for (int i = start; i < start + numRules; i++) {
+      toUse.add(rules.get(i % rules.size()));
+    }
+    return toUse;
   }
 }

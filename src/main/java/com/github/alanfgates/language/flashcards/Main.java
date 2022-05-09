@@ -62,8 +62,6 @@ public class Main {
         CardDeck deck = new CardDeck(filename);
         deck.daily();
         deck.storeDeck(filename);
-      } else if (cli.hasOption("y")) {
-        dumpYaml(cli.getOptionValue("y"));
       } else {
         System.err.println("I'm not really sure what you're looking for here, my friend.");
         usage(options);
@@ -79,31 +77,5 @@ public class Main {
   private static void usage(Options options) {
     HelpFormatter formatter = new HelpFormatter();
     formatter.printHelp("langtest", options);
-  }
-
-  private static void dumpYaml(String filename) throws IOException {
-    Map<String, LanguageContainer> languages = new HashMap<>();
-    languages.put("Greek", new LanguageContainer(new GreekBuilder()));
-    languages.put("Hebrew", new LanguageContainer(new HebrewBuilder()));
-    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-    mapper.writeValue(new File(filename), languages);
-  }
-
-  private static class LanguageContainer {
-    private final List<Word> words;
-    private final List<GrammarRule> rules;
-
-    LanguageContainer(LanguageBuilder builder) {
-      words = builder.buildWords();
-      rules = builder.buildRules();
-    }
-
-    public List<Word> getWords() {
-      return words;
-    }
-
-    public List<GrammarRule> getRules() {
-      return rules;
-    }
   }
 }
