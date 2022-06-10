@@ -29,8 +29,9 @@ abstract class BaseLanguageBuilder implements LanguageBuilder {
     List<Word> words = new ArrayList<>(buildGrammarWords());
     Collections.shuffle(words);
     Random rand = new Random();
-    List<Word> selectedWords = new ArrayList<>(words.size() / 4);
-    while (selectedWords.size() < words.size() / 4) {
+    int originalSize = words.size() / 4;
+    List<Word> selectedWords = new ArrayList<>(originalSize);
+    while (selectedWords.size() < originalSize) {
       int selection = rand.nextInt(words.size());
       selectedWords.add(words.get(selection));
       words.remove(selection);
