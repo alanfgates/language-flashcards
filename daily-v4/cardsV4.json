@@ -7,13 +7,6 @@
     } ],
     "testDays" : [ 13, 14, 15, 16, 17, 22, 37, 62 ]
   }, {
-    "other" : "δυναμεως",
-    "forms" : [ {
-      "english" : "power, ability",
-      "classifiers" : [ "FEMININE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 3, 4, 5, 6, 7, 12, 27, 52 ]
-  }, {
     "other" : "נוּחַ",
     "forms" : [ {
       "english" : "he rested, settled down",
@@ -235,14 +228,14 @@
       "english" : "bull, ox, steer",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 20, 21, 22, 23, 24, 29, 44, 69 ]
+    "testDays" : [ 45, 46, 47, 48, 49, 54, 69, 94 ]
   }, {
     "other" : "מִשְׁפָת",
     "forms" : [ {
       "english" : "judgement, law",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 20, 21, 22, 23, 24, 29, 44, 69 ]
+    "testDays" : [ 45, 46, 47, 48, 49, 54, 69, 94 ]
   }, {
     "other" : "*κραγ",
     "forms" : [ {
@@ -273,7 +266,7 @@
       "english" : "he covered",
       "classifiers" : [ ]
     } ],
-    "testDays" : [ 26, 27, 28, 29, 30, 35, 50, 75 ]
+    "testDays" : [ 51, 52, 53, 54, 55, 60, 75, 100 ]
   }, {
     "other" : "λύεται",
     "forms" : [ {
@@ -404,13 +397,6 @@
     } ],
     "testDays" : [ 43, 44, 45, 46, 47, 52, 67, 92 ]
   }, {
-    "other" : "דָּמִים",
-    "forms" : [ {
-      "english" : "bloods",
-      "classifiers" : [ "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 43, 44, 45, 46, 47, 52, 67, 92 ]
-  }, {
     "other" : "λύῃς",
     "forms" : [ {
       "english" : "you might be loosening",
@@ -418,717 +404,138 @@
     } ],
     "testDays" : [ 43, 44, 45, 46, 47, 52, 67, 92 ]
   }, {
-    "other" : "ἡμας",
-    "forms" : [ {
-      "english" : "us",
-      "classifiers" : [ "ACCUSATIVE", "PLURAL" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "*λαβ",
-    "forms" : [ {
-      "english" : "to take, to receive ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "Ἱεροσόλυμα",
-    "forms" : [ {
-      "english" : "Jerusalem",
-      "classifiers" : [ "NEUTER" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "μετά",
-    "forms" : [ {
-      "english" : "after",
-      "classifiers" : [ "ACCUSATIVE" ]
-    }, {
-      "english" : "with",
-      "classifiers" : [ "GENITIVE" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
     "other" : "ὁσος",
     "forms" : [ {
       "english" : "as/how much/great/far/long",
       "classifiers" : [ "ADJECTIVE", "MASCULINE" ]
     } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "λέλυκεν",
-    "forms" : [ {
-      "english" : "s/he has loosened",
-      "classifiers" : [ "INDICATIVE", "ACTIVE", "PERFECT", "THIRD_PERSON", "SINGULAR" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "ἀνοίγω",
-    "forms" : [ {
-      "english" : "I open, unlock, disclose - root ανα + *οιγω",
-      "classifiers" : [ "PRESENT" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "*δακ",
-    "forms" : [ {
-      "english" : "to teach ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "שְׁנַיִם",
-    "forms" : [ {
-      "english" : "two",
-      "classifiers" : [ "MASCULINE" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "λύοντες",
-    "forms" : [ {
-      "english" : "loosening",
-      "classifiers" : [ "PARTICIPLE", "ACTIVE", "PRESENT", "MASCULINE", "NOMINATIVE", "PLURAL" ]
-    } ],
-    "testDays" : [ 43 ]
-  }, {
-    "other" : "שָׁבַת",
-    "forms" : [ {
-      "english" : "he stopped, ceased, rested",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "תַּקְטִילִי",
-    "forms" : [ {
-      "english" : "you will cause to kill",
-      "classifiers" : [ "HIPHIL", "IMPERFECT", "SECOND_PERSON", "FEMININE", "SINGULAR" ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "τόπος",
-    "forms" : [ {
-      "english" : "place, position; opportunity; passage",
-      "classifiers" : [ "MASCULINE" ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "*αἰτε",
-    "forms" : [ {
-      "english" : "to ask ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "נִבָּא",
-    "forms" : [ {
-      "english" : "he prophisied - נָבָא",
-      "classifiers" : [ "NIPHAL" ]
-    } ],
-    "testDays" : [ 44 ]
+    "testDays" : [ 44, 45, 46, 47, 48, 53, 68, 93 ]
   }, {
     "other" : "יָמִין",
     "forms" : [ {
       "english" : "right hand, south",
       "classifiers" : [ "FEMININE" ]
     } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "כֹּל",
-    "forms" : [ {
-      "english" : "all",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "ἔσπαρμαι",
-    "forms" : [ {
-      "english" : "I have been sown - σπείρω root *σπερ",
-      "classifiers" : [ "MIDDLE", "PASSIVE", "PERFECT" ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "πληρώσω",
-    "forms" : [ {
-      "english" : "I will fill - πληρω root *πληρο",
-      "classifiers" : [ "FUTURE" ]
-    } ],
-    "testDays" : [ 44 ]
-  }, {
-    "other" : "עַת",
-    "forms" : [ {
-      "english" : "time, point in time",
-      "classifiers" : [ "FEMININE" ]
-    } ],
-    "testDays" : [ 44 ]
+    "testDays" : [ 45, 46, 47, 48, 49, 54, 69, 94 ]
   }, {
     "other" : "מָטּוֹת",
     "forms" : [ {
       "english" : "tribes, staffs",
       "classifiers" : [ "MASCULINE", "PLURAL" ]
     } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "רִאשֹׁנוֹת",
-    "forms" : [ {
-      "english" : "first, former",
-      "classifiers" : [ "ADJECTIVE", "FEMININE", "PLURAL" ]
-    } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "חֲכָמִים",
-    "forms" : [ {
-      "english" : "wise",
-      "classifiers" : [ "ADJECTIVE", "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "חֹק",
-    "forms" : [ {
-      "english" : "statute, appointed time, portion",
-      "classifiers" : [ "MASCULINE" ]
-    } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "יָמִים",
-    "forms" : [ {
-      "english" : "days",
-      "classifiers" : [ "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "קְטַלְתֶּם",
-    "forms" : [ {
-      "english" : "you killed",
-      "classifiers" : [ "QAL", "PERFECT", "SECOND_PERSON", "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "ἐπερωτάω",
-    "forms" : [ {
-      "english" : "I ask - root επι + *ερωτα",
-      "classifiers" : [ "PRESENT" ]
-    } ],
-    "testDays" : [ 45 ]
+    "testDays" : [ 46, 47, 48, 49, 50, 55, 70, 95 ]
   }, {
     "other" : "בַּעַד",
     "forms" : [ {
       "english" : "behind, through",
       "classifiers" : [ ]
     } ],
-    "testDays" : [ 45 ]
+    "testDays" : [ 46, 47, 48, 49, 50, 55, 70, 95 ]
   }, {
     "other" : "רֹחַב",
     "forms" : [ {
       "english" : "breadth, width",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 45 ]
-  }, {
-    "other" : "צֹאן",
-    "forms" : [ {
-      "english" : "flock, sheep",
-      "classifiers" : [ "FEMININE", "SINGULAR", "PLURAL" ]
-    } ],
-    "testDays" : [ 45 ]
+    "testDays" : [ 46, 47, 48, 49, 50, 55, 70, 95 ]
   }, {
     "other" : "שֶׁמֶשׁ",
     "forms" : [ {
       "english" : "sun",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "γένησθε",
-    "forms" : [ {
-      "english" : "you might become",
-      "classifiers" : [ "SUBJUNCTIVE", "MIDDLE", "SECOND_AORIST", "SECOND_PERSON", "PLURAL" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "בֹּקֶר",
-    "forms" : [ {
-      "english" : "morning",
-      "classifiers" : [ "MASCULINE" ]
-    } ],
-    "testDays" : [ 46 ]
+    "testDays" : [ 47, 48, 49, 50, 51, 56, 71, 96 ]
   }, {
     "other" : "רְשָׁעָה",
     "forms" : [ {
       "english" : "wicked",
       "classifiers" : [ "ADJECTIVE", "FEMININE", "SINGULAR" ]
     } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "ἀποθανοῦμαι",
-    "forms" : [ {
-      "english" : "I will die - ἀποθνῃσκω root απο + *θαν",
-      "classifiers" : [ "FUTURE", "DEPONENT" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "אֲרוֹן",
-    "forms" : [ {
-      "english" : "ark, chest",
-      "classifiers" : [ "MASCULINE" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "μακαρία",
-    "forms" : [ {
-      "english" : "blessed, happy",
-      "classifiers" : [ "ADJECTIVE", "FEMININE" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "προσηυξάμην",
-    "forms" : [ {
-      "english" : "I prayed - προσεύχομαι root προσ + *ευχ",
-      "classifiers" : [ "AORIST", "DEPONENT" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "ἐβαπτίσθην",
-    "forms" : [ {
-      "english" : "I was baptized, washed, dipped - βαπτίζω root *βαπτιδ",
-      "classifiers" : [ "PASSIVE", "AORIST" ]
-    } ],
-    "testDays" : [ 46 ]
-  }, {
-    "other" : "ποδός",
-    "forms" : [ {
-      "english" : "foot",
-      "classifiers" : [ "MASCULINE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 46 ]
+    "testDays" : [ 47, 48, 49, 50, 51, 56, 71, 96 ]
   }, {
     "other" : "ἠνέχθην",
     "forms" : [ {
       "english" : "I was carried, born, produced - φέρω  root ?",
       "classifiers" : [ "PASSIVE", "AORIST" ]
     } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "קִטְּלוּ",
-    "forms" : [ {
-      "english" : "they slaughtered",
-      "classifiers" : [ "PIEL", "PERFECT", "THIRD_PERSON", "PLURAL" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "ὄντι",
-    "forms" : [ {
-      "english" : "being",
-      "classifiers" : [ "PARTICIPLE", "ACTIVE", "PRESENT", "MASCULINE", "DATIVE", "SINGULAR" ]
-    }, {
-      "english" : "being",
-      "classifiers" : [ "PARTICIPLE", "ACTIVE", "PRESENT", "NEUTER", "DATIVE", "SINGULAR" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "θλῖψις",
-    "forms" : [ {
-      "english" : "trouble that inflicts distress, oppression, affliction, tribulation",
-      "classifiers" : [ "FEMININE" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "נָגַע",
-    "forms" : [ {
-      "english" : "he touched, struck, escaped",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "רָשָׁע",
-    "forms" : [ {
-      "english" : "wicked",
-      "classifiers" : [ "ADJECTIVE", "MASCULINE", "SINGULAR" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "*ορα",
-    "forms" : [ {
-      "english" : "to see ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "*πι",
-    "forms" : [ {
-      "english" : "to drink ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "οὖσιν",
-    "forms" : [ {
-      "english" : "being",
-      "classifiers" : [ "PARTICIPLE", "ACTIVE", "PRESENT", "MASCULINE", "DATIVE", "PLURAL" ]
-    }, {
-      "english" : "being",
-      "classifiers" : [ "PARTICIPLE", "ACTIVE", "PRESENT", "NEUTER", "DATIVE", "PLURAL" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "δύναμαι",
-    "forms" : [ {
-      "english" : "I am able - root *δυν",
-      "classifiers" : [ "PRESENT", "DEPONENT" ]
-    } ],
-    "testDays" : [ 47 ]
-  }, {
-    "other" : "λύησθε",
-    "forms" : [ {
-      "english" : "you might be loosening yourselves/be loosened",
-      "classifiers" : [ "SUBJUNCTIVE", "MIDDLE", "PASSIVE", "PRESENT", "SECOND_PERSON", "PLURAL" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "יָשַׁב",
-    "forms" : [ {
-      "english" : "he sat, he dwelt",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "ἐκάθισα",
-    "forms" : [ {
-      "english" : "I set, sat, appointed, sat down, settled - καθίζω",
-      "classifiers" : [ "AORIST" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "נִקְטוֹל",
-    "forms" : [ {
-      "english" : "to be killed",
-      "classifiers" : [ "NIPHAL", "INFINITIVE_ABSOLUTE" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "ἕν",
-    "forms" : [ {
-      "english" : "one",
-      "classifiers" : [ "NEUTER" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "ἐντολῆς",
-    "forms" : [ {
-      "english" : "commandment",
-      "classifiers" : [ "FEMININE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "ἔσχατος",
-    "forms" : [ {
-      "english" : "last",
-      "classifiers" : [ "ADJECTIVE", "MASCULINE" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "παρελήμφθην",
-    "forms" : [ {
-      "english" : "I was taken along, was taken over ",
-      "classifiers" : [ "PASSIVE", "AORIST" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "τίνας",
-    "forms" : [ {
-      "english" : "who? what?",
-      "classifiers" : [ "MASCULINE", "ACCUSATIVE", "PLURAL" ]
-    }, {
-      "english" : "who? what?",
-      "classifiers" : [ "FEMININE", "ACCUSATIVE", "PLURAL" ]
-    } ],
-    "testDays" : [ 48 ]
-  }, {
-    "other" : "עֵינַים",
-    "forms" : [ {
-      "english" : "eyes",
-      "classifiers" : [ "FEMININE", "DUAL" ]
-    } ],
-    "testDays" : [ 48 ]
+    "testDays" : [ 48, 49, 50, 51, 52, 57, 72, 97 ]
   }, {
     "other" : "δέω",
     "forms" : [ {
       "english" : "I tie, bind - root δε ?",
       "classifiers" : [ "PRESENT" ]
     } ],
-    "testDays" : [ 49 ]
+    "testDays" : [ 51, 52, 53, 54, 55, 60, 75, 100 ]
   }, {
     "other" : "ἦρα",
     "forms" : [ {
       "english" : "I took up - αἴρω root *αρ",
       "classifiers" : [ "AORIST" ]
     } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "פְּתָחִים",
-    "forms" : [ {
-      "english" : "openings, doorways, entraces",
-      "classifiers" : [ "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "טוֹבָה",
-    "forms" : [ {
-      "english" : "good",
-      "classifiers" : [ "ADJECTIVE", "FEMININE", "SINGULAR" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "ἠθέλησα",
-    "forms" : [ {
-      "english" : "I wanted - θέλω root *εθελε",
-      "classifiers" : [ "AORIST" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "ἄνθρωποῦ",
-    "forms" : [ {
-      "english" : "human being",
-      "classifiers" : [ "MASCULINE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "זָקֵן",
-    "forms" : [ {
-      "english" : "old",
-      "classifiers" : [ "ADJECTIVE", "MASCULINE" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "θρόνου",
-    "forms" : [ {
-      "english" : "throne",
-      "classifiers" : [ "MASCULINE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "*ερωτα",
-    "forms" : [ {
-      "english" : "to ask",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "ἀνέῳζα",
-    "forms" : [ {
-      "english" : "I opened, unlocked, disclosed - ἀνοίγω root ανα + *οιγω",
-      "classifiers" : [ "AORIST" ]
-    } ],
-    "testDays" : [ 49 ]
-  }, {
-    "other" : "ἐπληρώθην",
-    "forms" : [ {
-      "english" : "I was filled - πληρω root *πληρο",
-      "classifiers" : [ "PASSIVE", "AORIST" ]
-    } ],
-    "testDays" : [ 50 ]
+    "testDays" : [ 50, 51, 52, 53, 54, 59, 74, 99 ]
   }, {
     "other" : "שִׁחֵת",
     "forms" : [ {
       "english" : "he was spoiled, wiped out, ruined",
       "classifiers" : [ "PIEL" ]
     } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "ἔλυσας",
-    "forms" : [ {
-      "english" : "you loosened",
-      "classifiers" : [ "INDICATIVE", "ACTIVE", "AORIST", "SECOND_PERSON", "SINGULAR" ]
-    } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "הִנַּה",
-    "forms" : [ {
-      "english" : "behold, here I am, I am ready",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "ἀπεστάλην",
-    "forms" : [ {
-      "english" : "I was sent - ἀποστέλλω root απο + *στελ",
-      "classifiers" : [ "PASSIVE", "SECOND_AORIST" ]
-    } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "ἥ",
-    "forms" : [ {
-      "english" : "who, which",
-      "classifiers" : [ "FEMININE", "NOMINATIVE", "SINGULAR" ]
-    } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "ὅμοιος",
-    "forms" : [ {
-      "english" : "of the same nature, like, similar",
-      "classifiers" : [ "ADJECTIVE", "MASCULINE" ]
-    } ],
-    "testDays" : [ 50 ]
+    "testDays" : [ 53, 54, 55, 56, 57, 62, 77, 102 ]
   }, {
     "other" : "ἑώρακα",
     "forms" : [ {
       "english" : "I have seen - ὁρω root *ορα",
       "classifiers" : [ "PERFECT" ]
     } ],
-    "testDays" : [ 50 ]
+    "testDays" : [ 51, 52, 53, 54, 55, 60, 75, 100 ]
   }, {
     "other" : "אַחַת",
     "forms" : [ {
       "english" : "one",
       "classifiers" : [ "FEMININE" ]
     } ],
-    "testDays" : [ 50 ]
-  }, {
-    "other" : "קְטָלְכֶם",
-    "forms" : [ {
-      "english" : "he killed you",
-      "classifiers" : [ "PRONOMINAL_SUFFIX", "SECOND_PERSON", "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 50 ]
+    "testDays" : [ 51, 52, 53, 54, 55, 60, 75, 100 ]
   }, {
     "other" : "בָּטַח",
     "forms" : [ {
       "english" : "to trust, be confident, rely upon",
       "classifiers" : [ ]
     } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "ἐγράφην",
-    "forms" : [ {
-      "english" : "I was written - γραφω root *γραφ",
-      "classifiers" : [ "PASSIVE", "AORIST" ]
-    } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "סוּסְכֶן",
-    "forms" : [ {
-      "english" : "your horse",
-      "classifiers" : [ "FEMININE", "PLURAL" ]
-    } ],
-    "testDays" : [ 51 ]
+    "testDays" : [ 52, 53, 54, 55, 56, 61, 76, 101 ]
   }, {
     "other" : "πᾶς",
     "forms" : [ {
       "english" : "all every each",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "מִשְׁפָּחָה",
-    "forms" : [ {
-      "english" : "family",
-      "classifiers" : [ "FEMININE" ]
-    } ],
-    "testDays" : [ 51 ]
+    "testDays" : [ 53, 54, 55, 56, 57, 62, 77, 102 ]
   }, {
     "other" : "ἐφανέρωσα",
     "forms" : [ {
       "english" : "I revealed, made known - φανερῶ root *φανερο",
       "classifiers" : [ "AORIST" ]
     } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "גָּדַל",
-    "forms" : [ {
-      "english" : "he grew up, became great, strong, wealthy, important",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "εὐ + *αγγελιδ",
-    "forms" : [ {
-      "english" : "to bring good news",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "*μεν",
-    "forms" : [ {
-      "english" : "to remain ",
-      "classifiers" : [ "ROOT" ]
-    } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "τόπου",
-    "forms" : [ {
-      "english" : "place, position; opportunity; passage",
-      "classifiers" : [ "MASCULINE", "GENITIVE" ]
-    } ],
-    "testDays" : [ 51 ]
-  }, {
-    "other" : "εὐθύς",
-    "forms" : [ {
-      "english" : "immediately",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 52 ]
+    "testDays" : [ 52, 53, 54, 55, 56, 61, 76, 101 ]
   }, {
     "other" : "כֹּחַ",
     "forms" : [ {
       "english" : "strength, power",
       "classifiers" : [ "MASCULINE" ]
     } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "אַתֶּם",
-    "forms" : [ {
-      "english" : "you",
-      "classifiers" : [ "NOMINATIVE", "MASCULINE", "PLURAL" ]
-    } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "πεσοῦμαι",
-    "forms" : [ {
-      "english" : "I will fall - πίπτω root *πετ",
-      "classifiers" : [ "FUTURE" ]
-    } ],
-    "testDays" : [ 52 ]
+    "testDays" : [ 53, 54, 55, 56, 57, 62, 77, 102 ]
   }, {
     "other" : "יַעַן",
     "forms" : [ {
       "english" : "on account of",
       "classifiers" : [ ]
     } ],
-    "testDays" : [ 52 ]
+    "testDays" : [ 53, 54, 55, 56, 57, 62, 77, 102 ]
   }, {
     "other" : "ἐγερῶ",
     "forms" : [ {
       "english" : "I will raise - ἐγείρω root *εγερ",
       "classifiers" : [ "FUTURE" ]
     } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "ἐτέθην",
-    "forms" : [ {
-      "english" : "I was put - τίθημι root *θε",
-      "classifiers" : [ "PASSIVE", "AORIST" ]
-    } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "אוֹ",
-    "forms" : [ {
-      "english" : "or",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "שָׁם",
-    "forms" : [ {
-      "english" : "there",
-      "classifiers" : [ ]
-    } ],
-    "testDays" : [ 52 ]
-  }, {
-    "other" : "τυφλή",
-    "forms" : [ {
-      "english" : "blind",
-      "classifiers" : [ "ADJECTIVE", "FEMININE" ]
-    } ],
-    "testDays" : [ 52 ]
+    "testDays" : [ 53, 54, 55, 56, 57, 62, 77, 102 ]
   }, {
     "other" : "מֵת",
     "forms" : [ {
@@ -10026,26 +9433,6 @@
   } ],
   "rules" : {
     "Hebrew" : [ {
-      "rule" : "Construct chains\n * Substantive adjectives functioning as a noun can form part of the construct chain."
-    }, {
-      "rule" : "Construct chains\n * Inseparable prepositions can be attached to construct nouns."
-    }, {
-      "rule" : "Construct chains\n * A noun can be made superlative by placing it in a construct chain\n   with the construct noun singular and the absolute noun plural and definite:\n   e.g. קֹדֶשׁ הַקֱּדָשִׁים the holy of holies, or the most holy [place]."
-    }, {
-      "rule" : "Spelling in construct state\n * A construct noun surrenders its primary accent.  A construct chain is pronounced\n   as a single word, with the accent on the absolute noun.  This is sometimes\n   marked with a maqqef (-)."
-    }, {
-      "rule" : "Spelling in construct state\n * Masculine plural and both dual endings change to ֵי  e.g. אֱלֹהִים changes to אֱלֹהֵי "
-    }, {
-      "rule" : "Spelling in construct state\n * Vowel reduction:\n   * Qamets (and sometimes tsere) change to patach in a final closed syllable:\n     e.g. מִשְׁפָּט changes to מִשְׁפַּט\n   * Qamets or tsere change to vocal shewa in open, unaccented syllable:\n     (or a hateph vowel under a gutteral): נָבִִיא changes to נְבִיא \n * Feminine singular nouns ending in ָה changes to ַת \n   e.g. תּוֹרָה becomes תּוֹרַת"
-    }, {
-      "rule" : "Spelling in construct state\n * Some monosyllabic nouns add a hireq yod in the contruct state."
-    }, {
-      "rule" : "Cardinal numbers\n * 'one' acts as an adjective and comes after the noun and agrees in gender and\n   definiteness.  Can be used in a construct in which case it means 'one of'."
-    }, {
-      "rule" : "Cardinal numbers\n * 'two' is a noun, agrees in gender with the modified noun, and can be used in\n   absolute or construct state with no change in meaning."
-    }, {
-      "rule" : "Cardinal numbers\n * 3-10 are nouns but take opposite gender from what they are modifying.  Can also\n   be absolute or construct."
-    }, {
       "rule" : "Cardinal numbers\n * 2-10 can have a pronominal suffix, meaning 'x of y', e.g. שְׁנֵיהֶם 'two of them'"
     }, {
       "rule" : "Cardinal numbers\n * 11-19: x 10, e.g. אַחַתּי עָשָׂר is 11"
@@ -10294,5 +9681,5 @@
       "rule" : "Verb roots and stems\nSome roots add a iota in the present stem: *αρ -> αἴρω"
     } ]
   },
-  "day" : 43
+  "day" : 53
 }
