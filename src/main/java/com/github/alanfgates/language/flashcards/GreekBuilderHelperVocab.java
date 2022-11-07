@@ -1335,7 +1335,7 @@ class GreekBuilderHelperVocab {
         new Word("ἁμαρτάνω", "I sin - root ἁμαρτ ?", PRESENT),
         new Word("ἁμαρτήσω", "I will sin - ἁμαρτάνω root ἁμαρτ ?", FUTURE),
         new Word("ἡμάρτησα", "I sinned - ἁμαρτάνω root ἁμαρτ ?", AORIST),
-        new Word("ἡμάτηκα", "I have sinned - ἁμαρτάνω root ἁμαρτ ?", PERFECT),
+        new Word("ἡμάρτηκα", "I have sinned - ἁμαρτάνω root ἁμαρτ ?", PERFECT),
         new Word("δέω", "I tie, bind - root δε ?", PRESENT),
         new Word("δήσω", "I will tie, bind - δέω root δε ?", FUTURE),
         new Word("ἔδησα", "I tied, bound - δέω root δε ?", AORIST),
