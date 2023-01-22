@@ -30,11 +30,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 class CardDeck {
-  private static final int NUM_TO_TEST_INITIAL = 10;
+  private static final int NUM_TO_TEST_INITIAL = 15;
 
   private final LinkedList<Word> cards;
   private final Map<String, List<GrammarRule>> rules;
@@ -43,14 +44,25 @@ class CardDeck {
   /**
    * Build the card deck from source, with each word appearing once
    */
-  CardDeck() {
+  CardDeck(double nonCorePercent) {
     rules = new HashMap<>();
-    cards = new LinkedList<>();
     LanguageBuilder[] builders = new LanguageBuilder[] {new GreekBuilder(), new HebrewBuilder()};
+    // Put core words in one list, as we'll test on all of them, and non-core in another where we test only on some
+    List<Word> core = new ArrayList<>();
+    List<Word> nonCore = new ArrayList<>();
+    Random rand = new Random();
     for (LanguageBuilder builder : builders) {
-      cards.addAll(builder.buildVocabWords());
-      cards.addAll(builder.getGrammarWords());
+      List<Word> vocab = builder.buildVocabWords();
+      for (Word w : vocab) {
+        if (w.isCore() || rand.nextDouble() < nonCorePercent) {
+          core.add(w);
+        }
+      }
+      // Grammar words are always nonCore
+      nonCore.addAll(builder.getGrammarWords());
     }
+    cards = new LinkedList<>(core);
+    cards.addAll(nonCore);
     for (LanguageBuilder builder : builders) {
       rules.put(builder.getLanguageName(),
           GrammarRule.getSomeGrammarRules(builder.buildRules(), (cards.size() / NUM_TO_TEST_INITIAL) / builders.length));

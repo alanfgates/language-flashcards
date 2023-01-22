@@ -27,6 +27,7 @@ public class Word {
 
   private String other;
   private List<Form> forms;
+  private boolean core;
   private SortedSet<Integer> testDays; // days word should be tested
 
   // For Jackson
@@ -34,14 +35,24 @@ public class Word {
   }
 
   Word(String other, String english, Classifier... classifiers) {
+    this(other, english, false, classifiers);
+  }
+
+  Word(String other, String english, boolean core, Classifier... classifiers) {
     this.other = other;
     forms = new ArrayList<>();
     forms.add(new Form(english, classifiers));
+    this.core = core;
   }
 
   Word(String other) {
+    this(other, false);
+  }
+
+  Word(String other, boolean core) {
     this.other = other;
     forms = new ArrayList<>();
+    this.core = core;
   }
 
   Word addForm(String english, Classifier... classifiers) {
@@ -98,6 +109,20 @@ public class Word {
 
   public Word setOther(String other) {
     this.other = other;
+    return this;
+  }
+
+  public boolean isCore() {
+    return core;
+  }
+
+  // For Jackson
+  public boolean getCore() {
+    return core;
+  }
+
+  public Word setCore(boolean core) {
+    this.core = core;
     return this;
   }
 

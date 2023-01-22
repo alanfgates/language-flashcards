@@ -38,6 +38,7 @@ public class Main {
         "Find duplicates in the decks.  This does not change the card deck.");
     options.addOption("f", "filename", true, "File to store deck in, defaults to " + FILENAME);
     options.addOption("G", "grammar-rule", true, "Show a particular grammar rule, for debugging.");
+    options.addOption("n", "non-core", false, "Percent of non-core words to include, 0.0<=x<=1.0. Default, 0.1");
     options.addOption("h", "help", false, "You're looking at it.");
     options.addOption("s", "shuffle", false, "Shuffle the cards.  This puts all of the cards back in the deck");
     options.addOption("t", "test", false, "Do daily test");
@@ -46,17 +47,22 @@ public class Main {
     try {
       CommandLine cli = new GnuParser().parse(options, args);
       String filename = cli.getOptionValue("f", FILENAME);
+      double pctNonCore = Double.parseDouble(cli.getOptionValue("n", "0.1"));
+      if (pctNonCore > 1.0) {
+        System.err.println("non-core must be 0<=x<=1.0");
+        return;
+      }
 
       if (cli.hasOption("h")) {
         usage(options);
       } else if (cli.hasOption("d")) {
-        CardDeck deck = new CardDeck();
+        CardDeck deck = new CardDeck(0.0);
         deck.findDuplicates();
       } else if (cli.hasOption("G")) {
-        CardDeck deck = new CardDeck();
+        CardDeck deck = new CardDeck(0.0);
         deck.findRule(cli.getOptionValue("G"));
       } else if (cli.hasOption("s")) {
-        CardDeck deck = new CardDeck();
+        CardDeck deck = new CardDeck(pctNonCore);
         deck.storeDeck(filename);
       } else if (cli.hasOption("t")) {
         CardDeck deck = new CardDeck(filename);
